@@ -19,9 +19,7 @@
     <link rel="stylesheet" href="CSS/floating-labels.css">
     <link rel="stylesheet" href="CSS/sticky-footer.css">
     <!-- Custom styles for this template -->
-    
-    <link rel="stylesheet" href="CSS/jquery-ui.css">
-    
+    <link rel="stylesheet" href="CSS/jquery-ui.css"> 
     <link rel="stylesheet" href="CSS/main.css">
     
   </head>
@@ -29,14 +27,14 @@
   <body>
    <?php
 	$form = new form();
-	$text_user = new textfield('user_user','','form-control','User');
-	$text_pass = new pass('user_pass','form-control','Password','');
+	$text_user = new textfield('user_user','inputEmail','form-control','Email address');
+	$text_pass = new pass('user_pass','form-control','Password','inputPassword');
 	$submit = new buttonok('Login','','btn btn-lg btn-primary btn-block col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12','');
 	echo $form->open('','','form-signin','check_login.php','');
     ?>
 
       <div class="text-center mb-4">
-        <img class="mb-4" src="https://getbootstrap.com/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
+<!--         <img class="mb-4" src="https://getbootstrap.com/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72"> -->
         <h1 class="h3 mb-3 font-weight-normal">เข้าสู่ระบบ</h1>
       </div>
 
