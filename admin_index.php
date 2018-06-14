@@ -28,7 +28,7 @@
     <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
       <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">Intranet</a>
       <p class="navbar-nav px-3">หัวข้อ</p>
-      <button type="button" id="popup" class="btn btn-lg btn-danger" data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?">Click to toggle popover</button>
+      <button type="button" id="popup" class="btn btn-lg btn-danger" data-toggle="popover" title="Popover title" data-placement="bottom" data-content="And here's some amazing content. It's very engaging. Right?">Click to toggle popover</button>
       <ul class="navbar-nav px-3">
         <li class="nav-item text-nowrap">
           <a class="nav-link" href="logout.php">ออกจากระบบ</a>
@@ -59,12 +59,10 @@
                   ระบบจองห้องประชุม
                 </a>
               <!-- sub menu -->
-                <a class="nav-link dropcon" href="#">
-                  <span data-feather="database"></span>
+                <a class="nav-link dropcon ml-4" href="#">
                   ระบบจองห้องประชุม sub
                 </a>
-                <a class="nav-link dropcon" href="#">
-                  <span data-feather="database"></span>
+                <a class="nav-link dropcon ml-4" href="#">
                   ระบบจองห้องประชุม sub
                 </a>
               <!-- end sub menu -->
@@ -75,12 +73,10 @@
                  ระบบแจ้งซ่อมคอมพิวเตอร์
                 </a>
                 <!-- sub menu -->
-                <a class="nav-link dropcs" href="#">
-                  <span data-feather="database"></span>
+                <a class="nav-link dropcs ml-4" href="#">
                    ระบบแจ้งซ่อมคอมพิวเตอร์ sub
                 </a>
-                <a class="nav-link dropcs" href="#">
-                  <span data-feather="database"></span>
+                <a class="nav-link dropcs ml-4" href="#">
                    ระบบแจ้งซ่อมคอมพิวเตอร์ sub
                 </a>
               <!-- end sub menu -->
@@ -91,12 +87,10 @@
                   ระบบรายงานจำนวนผู้เข้าชม
                 </a>
                 <!-- sub menu -->
-                <a class="nav-link droptrs" href="#">
-                  <span data-feather="database"></span>
+                <a class="nav-link droptrs ml-4" href="#">
                    ระบบรายงานจำนวนผู้เข้าชม sub
                 </a>
-                <a class="nav-link droptrs" href="#">
-                  <span data-feather="database"></span>
+                <a class="nav-link droptrs ml-4" href="#">
                    ระบบรายงานจำนวนผู้เข้าชม sub
                 </a>
               <!-- end sub menu -->
@@ -107,12 +101,10 @@
                   ระบบฐานความรู้
                 </a>
                   <!-- sub menu -->
-                <a class="nav-link dropknow" href="#">
-                  <span data-feather="database"></span>
+                <a class="nav-link dropknow ml-4" href="#">
                    ระบบฐานความรู้ sub
                 </a>
-                <a class="nav-link dropknow" href="#">
-                  <span data-feather="database"></span>
+                <a class="nav-link dropknow ml-4" href="#">
                    ระบบฐานความรู้ sub
                 </a>
               <!-- end sub menu -->
@@ -123,12 +115,10 @@
                   ระบบผู้ใข้
                 </a>
                    <!-- sub menu -->
-                <a class="nav-link dropuser" id="confer" href="#">
-                  <span data-feather="database"></span>
+                <a class="nav-link dropuser ml-4" href="#">
                    ระบบผู้ใข้ sub
                 </a>
-                <a class="nav-link dropuser" id="confer" href="#">
-                  <span data-feather="database"></span>
+                <a class="nav-link dropuser ml-4" href="#">
                    ระบบผู้ใข้ sub
                 </a>
               <!-- end sub menu -->
