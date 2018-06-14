@@ -1,5 +1,5 @@
 <!-- JavaScript Includes -->
-<script src="jquery/jquery-3.2.1.js"></script>
+<script src="jquery/jquery-3.3.1.min.js"></script>
 <script src="jquery/moment.min.js"></script>
 
 <!-- <script src="jquery/jquery.min.js"></script> -->
@@ -19,7 +19,7 @@
 <!-- ปิดไว้ก่อนกุงง -->
 <!-- <script src="jquery/modal.js"></script> -->
 <script src="jquery/tooltip.js"></script>
-<script src="jquery/popover.js"></script>
+<!-- <script src="jquery/popover.js"></script> -->
 <script src="jquery/button.js"></script>
 <!-- <script src="jquery/tab.js"></script> -->
 <script src="jquery/jquery.quicksearch.js"></script>
