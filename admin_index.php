@@ -31,7 +31,7 @@
       <button type="button" id="popup" class="btn btn-lg btn-danger" data-toggle="popover" title="Popover title" data-placement="bottom" data-content="And here's some amazing content. It's very engaging. Right?">Click to toggle popover</button>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <img src="images/noimage.png" width="30" height="30">
+          <img src="images/noimage.png" class="rounded-circle" width="30" height="30">
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="#">Action</a>
