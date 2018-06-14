@@ -28,7 +28,7 @@
     <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
       <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">Intranet</a>
       <p class="navbar-nav px-3">หัวข้อ</p>
-      <button type="button" id="popover" class="btn btn-lg btn-danger" data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?">Click to toggle popover</button>
+      <button type="button" id="popup" class="btn btn-lg btn-danger" data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?">Click to toggle popover</button>
       <ul class="navbar-nav px-3">
         <li class="nav-item text-nowrap">
           <a class="nav-link" href="logout.php">ออกจากระบบ</a>
@@ -142,7 +142,7 @@
     feather.replace()
       
     $(function() {
-  $('[data-toggle="popover"]').popover()
+  $('#popup').popover()
 })
     </script>
 
