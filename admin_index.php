@@ -50,38 +50,88 @@
               <li class="nav-item">
                 <a class="nav-link" href="#">
                     <span data-feather="log-in"></span>
-                  เข้าระบบอินเตอร์เน็ต
+                  ระบบฝากไฟล์
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">
-                    <span data-feather="database"></span>
-                  ระบบ ZPO Data Center
+                <a class="nav-link" id="confer" href="#">
+                  <span data-feather="database"></span>
+                  ระบบจองห้องประชุม
                 </a>
+              <!-- sub menu -->
+                <a class="nav-link dropcon" href="#">
+                  <span data-feather="database"></span>
+                  ระบบจองห้องประชุม sub
+                </a>
+                <a class="nav-link dropcon" href="#">
+                  <span data-feather="database"></span>
+                  ระบบจองห้องประชุม sub
+                </a>
+              <!-- end sub menu -->
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link" id="cs" href="#">
                     <span data-feather="mail"></span>
-                  อีเมล์
+                 ระบบแจ้งซ่อมคอมพิวเตอร์
                 </a>
+                <!-- sub menu -->
+                <a class="nav-link dropcs" href="#">
+                  <span data-feather="database"></span>
+                   ระบบแจ้งซ่อมคอมพิวเตอร์ sub
+                </a>
+                <a class="nav-link dropcs" href="#">
+                  <span data-feather="database"></span>
+                   ระบบแจ้งซ่อมคอมพิวเตอร์ sub
+                </a>
+              <!-- end sub menu -->
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link" id="trs" href="#">
                     <span data-feather="cpu"></span>
-                  ระบบแจ้งซ่อมคอมพิวเตอร์ออนไลน์
+                  ระบบรายงานจำนวนผู้เข้าชม
                 </a>
+                <!-- sub menu -->
+                <a class="nav-link droptrs" href="#">
+                  <span data-feather="database"></span>
+                   ระบบรายงานจำนวนผู้เข้าชม sub
+                </a>
+                <a class="nav-link droptrs" href="#">
+                  <span data-feather="database"></span>
+                   ระบบรายงานจำนวนผู้เข้าชม sub
+                </a>
+              <!-- end sub menu -->
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link" id ="know" href="#">
                      <span data-feather="calendar"></span>
-                  ระบบจองห้องประชุมออนไลน์
+                  ระบบฐานความรู้
                 </a>
+                  <!-- sub menu -->
+                <a class="nav-link dropknow" href="#">
+                  <span data-feather="database"></span>
+                   ระบบฐานความรู้ sub
+                </a>
+                <a class="nav-link dropknow" href="#">
+                  <span data-feather="database"></span>
+                   ระบบฐานความรู้ sub
+                </a>
+              <!-- end sub menu -->
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link" id="user" href="#">
                   <span data-feather="bar-chart"></span>
-                  ระบบรายงานจำนวนผู้เข้าชมสวนสัตว์
+                  ระบบผู้ใข้
                 </a>
+                   <!-- sub menu -->
+                <a class="nav-link dropuser" id="confer" href="#">
+                  <span data-feather="database"></span>
+                   ระบบผู้ใข้ sub
+                </a>
+                <a class="nav-link dropuser" id="confer" href="#">
+                  <span data-feather="database"></span>
+                   ระบบผู้ใข้ sub
+                </a>
+              <!-- end sub menu -->
               </li>
             </ul>
 
@@ -137,10 +187,88 @@
     <!-- Icons -->
     <script>
     feather.replace()
-      
-    $(function() {
-  $('#popup').popover()
-})
+    $(function() { $('#popup').popover()});
+    $('.dropcon').hide();
+	$('.dropcs').hide();
+	$('.droptrs').hide();
+	$('.dropknow').hide();
+	$('.dropuser').hide();
+    var count = 0;
+    var count2 = 0;
+    var count3 = 0;
+    var count4 = 0;
+	var count5 = 0;
+    $('#confer').on('click' ,function(){
+	    count++;
+	    $('.dropcs').hide();
+		$('.droptrs').hide();
+		$('.dropknow').hide();
+		$('.dropuser').hide();
+	    if(count % 2 != 0){
+			$('.dropcon').show('slow');
+		}
+		else{
+			$('.dropcon').hide('slow');
+		}
+    });
+    // แจ้งซ่อม
+    $('#cs').on('click' ,function(){
+	    count2++;
+	    $('.dropcon').hide();
+		$('.droptrs').hide();
+		$('.dropknow').hide();
+		$('.dropuser').hide();
+	    if(count2 % 2 != 0){
+			$('.dropcs').show('slow');
+		}
+		else{
+			$('.dropcs').hide('slow');
+		}
+    });
+    // รายงานผู้เข้าชม
+	$('#trs').on('click' ,function(){
+	    count3++;
+	    $('.dropcon').hide();
+		$('.dropcs').hide();
+		$('.dropknow').hide();
+		$('.dropuser').hide();
+	    if(count3 % 2 != 0){
+			$('.droptrs').show('slow');
+		}
+		else{
+			$('.droptrs').hide('slow');
+		}
+    });
+    // ฐานความรู้
+	$('#know').on('click' ,function(){
+	    count4++;
+	    $('.dropcon').hide();
+		$('.dropcs').hide();
+		$('.droptrs').hide();
+		$('.dropuser').hide();
+	    if(count4 % 2 != 0){
+			$('.dropknow').show('slow');
+		}
+		else{
+			$('.dropknow').hide('slow');
+		}
+    });
+    //  ผู้ใช้
+	$('#user').on('click' ,function(){
+	    count5++;
+	    $('.dropcon').hide();
+		$('.dropcs').hide();
+		$('.droptrs').hide();
+		$('.dropknow').hide();
+
+	    if(count5 % 2 != 0){
+			$('.dropuser').show('slow');
+		}
+		else{
+			$('.dropuser').hide('slow');
+		}
+    });
+
     </script>
 
   </body>
