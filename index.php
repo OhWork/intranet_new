@@ -48,11 +48,40 @@ session_start();
     </nav>
 
     <main role="main" class="container">
+        <div class="row">
+        <div class="col-xl-3 col-lg-4 col-md-5 col-sm-12 col-12">
+            <?php include('menu_main.php'); ?> 
+        </div>
+        
+    <div class="col-xl-9 col-lg-8 col-md-7 col-sm-12 col-12">
       <div class="jumbotron">
-        <h1>Navbar example</h1>
-        <p class="lead">This example is a quick exercise to illustrate how fixed to top navbar works. As you scroll, it will remain fixed to the top of your browser's viewport.</p>
-        <a class="btn btn-lg btn-primary" href="../../components/navbar/" role="button">View navbar docs &raquo;</a>
+        <h3>ข่าวสารภายในองค์การสวนสัตว์</h3>
+        <div class="container marketing">
+
+        <!-- Three columns of text below the carousel -->
+        <div class="row">
+          <div class="col-lg-4">
+            <img class="img-thumbnail" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
+            <h4>Heading</h4>
+            <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
+            <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+          </div><!-- /.col-lg-4 -->
+          <div class="col-lg-4">
+            <img class="img-thumbnail" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
+            <h4>Heading</h4>
+            <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
+            <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+          </div><!-- /.col-lg-4 -->
+          <div class="col-lg-4">
+            <img class="img-thumbnail" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
+            <h4>Heading</h4>
+            <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+            <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+          </div><!-- /.col-lg-4 -->
+        </div><!-- /.row -->
       </div>
+    </div>
+    </div>
     </main>
 
         
@@ -60,38 +89,7 @@ session_start();
         
         
         
-        
-        <div class="wrapper">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                	<header><img src="images/Header.jpg" style="width: 100%;"></header>
-                </div>
-                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                <div class="row">
-                    <div class="col-xl-3 col-lg-4 col-md-5 col-sm-12 col-12">
-                    <?php include_once 'menu_main.php';
-                    ?>
-					<div class="box-login">
-					<?php
-						$form = new form();
-						$text_user = new textfield('user_user','','form-control','User');
-						$text_pass = new pass('user_pass','form-control','Password','');
-						$submit = new buttonok('Login','','btn btn-lg btn-primary btn-block','');
-
-						echo "<legend><h4 class='form-signin-heading'><center>Login</center></h2>";
-						echo $form->open('form-signin','','','check_login.php','');
-						echo $text_user.'<br />';
-						echo $text_pass.'<br />';
-						echo $submit;
-						echo $form->close();
-						echo "</legend>";
-					?>
-					</div>
-                    </div>
-                    <div class="col-xl-9 col-lg-8 col-md-7 col-sm-12 col-12"><?php include_once 'content.php';?></div>
-				</div>
-                </div>
+    
             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 indexftp">
                     <center>
                         <div class="indexft"><a href="http://www.zoothailand.org" target="_blank"><img src="images/Logo/ZPO.png"/></a></div>
@@ -138,6 +136,7 @@ $('#Modal').on('show.bs.modal', function (event) {
                 }
             });
     })
+    feather.replace()
 </script>
 </html>
 <?php

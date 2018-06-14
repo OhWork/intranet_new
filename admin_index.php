@@ -19,15 +19,19 @@
 
     <!-- Custom styles for this template -->
     <link href="css/dashboard.css" rel="stylesheet">
+    <?php 
+        include 'inc_js.php';
+    ?>
   </head>
 
   <body>
     <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
       <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">Intranet</a>
       <p class="navbar-nav px-3">หัวข้อ</p>
+      <button type="button" id="popover" class="btn btn-lg btn-danger" data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?">Click to toggle popover</button>
       <ul class="navbar-nav px-3">
         <li class="nav-item text-nowrap">
-          <a class="nav-link" href="#">ออกจากระบบ</a>
+          <a class="nav-link" href="logout.php">ออกจากระบบ</a>
         </li>
       </ul>
     </nav>
@@ -116,7 +120,7 @@
         <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
           <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
             <h1 class="h2">Dashboard</h1>
-
+                
           </div>
         </main>
       </div>
@@ -134,9 +138,12 @@
 ?>
 
     <!-- Icons -->
-    <script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>
     <script>
-      feather.replace()
+    feather.replace()
+      
+    $(function() {
+  $('[data-toggle="popover"]').popover()
+})
     </script>
 
   </body>
