@@ -17,6 +17,18 @@
                   <span data-feather="home"></span>
                   หน้าหลัก <span class="sr-only">(current)</span>
                 </a>
+              </li> 
+              <li class="nav-item">
+                <a class="nav-link" href="https://172.16.0.1:4100/logon.shtml?redirect=http://192.168.0.1/">
+                    <span data-feather="log-in"></span>
+                  เข้าระบบอินเตอร์เน็ต
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="http://mail.zoothailand.org">
+                    <span data-feather="mail"></span>
+                อีเมล์
+                </a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">
@@ -29,14 +41,6 @@
                   <span data-feather="calendar"></span>
                   ระบบจองห้องประชุม
                 </a>
-              <!-- sub menu -->
-                <a class="nav-link dropcon ml-4" href="#">
-                  ระบบจองห้องประชุม sub
-                </a>
-                <a class="nav-link dropcon ml-4" href="#">
-                  ระบบจองห้องประชุม sub
-                </a>
-              <!-- end sub menu -->
               </li>
               <li class="nav-item">
                 <a class="nav-link" id="cs" href="#">
@@ -54,15 +58,18 @@
               </li>
               <li class="nav-item">
                 <a class="nav-link" id="trs" href="#">
-                    <span data-feather="cpu"></span>
+                    <span data-feather="bar-chart"></span>
                   ระบบรายงานจำนวนผู้เข้าชม
                 </a>
                 <!-- sub menu -->
-                <a class="nav-link droptrs ml-4" href="#">
-                   ระบบรายงานจำนวนผู้เข้าชม sub
+                <a class="nav-link droptrs ml-4" href="trs_index.php?url=trs_showallzoo.php">
+                   รายงานจำนวนผู้เข้าชมของสวนสัตว์
                 </a>
-                <a class="nav-link droptrs ml-4" href="#">
-                   ระบบรายงานจำนวนผู้เข้าชม sub
+                <a class="nav-link droptrs ml-4" href="trs_index.php?url2=trs_showallzoo_old.php">
+                   รายงานจำนวนผู้เข้าชมของสวนสัตว์แบบเก่า
+                </a>
+                <a class="nav-link droptrs ml-4" href="trs_index.php?url2=trs_showallvehicle.php">
+                   รายงานจำนวนยานพาหนะ
                 </a>
               <!-- end sub menu -->
               </li>
