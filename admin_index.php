@@ -28,7 +28,71 @@
     <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
       <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">Intranet</a>
       <p class="navbar-nav px-3">หัวข้อ</p>
-      <button type="button" id="popup" class="btn btn-lg btn-danger" data-toggle="popover" title="Popover title" data-placement="bottom" data-content="And here's some amazing content. It's very engaging. Right?">Click to toggle popover</button>
+<!--       <button type="button" id="popup" class="btn btn-lg btn-secondary" data-toggle="popover" title="ระบบ" data-placement="bottom" data-content="And here's some amazing content. It's very engaging. Right?"> <span data-feather="archive"></span></button> -->
+    <li class="nav-item dropdown show"><a href="#" data-toggle="dropdown" role="button" aria-expanded="true" class="nav-link dropdown-toggle"><span data-feather="archive"></span></a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <div class="list">
+                      <div class="content">
+                        <div class="row">
+                             <div class="collapse" id="collapseMenu">
+                                <?php if($_SESSION['systemallow_drive'] == 1){ ?>
+                    				<div class='menubox'>
+                    					<a href='filemanager/dialog.php'>
+                    						<img src='images/icons/data.png'>
+                    					</a>
+                    				</div>
+                    			<?php }
+                    				  if($_SESSION['systemallow_news'] == 1){ ?>
+                    				<div class='menubox'>
+                    					<a href="admin_index.php?url=admin_news_index.php&user_id=<?php echo $_SESSION['user_id']; ?>">
+                    						<img src='images/icons/News.png'>
+                    					</a>
+                    				</div>
+                    			<?php }
+                    				if($_SESSION['systemallow_confer'] == 1){ ?>
+                    				<div class='menubox'>
+                    					<a href="admin_index.php?url=admin_cf_index.php">
+                    						<img src='images/icons/conference.png'>
+                    					</a>
+                    				</div>
+                    			<?php }
+                    				if($_SESSION['systemallow_service'] == 1){ ?>
+                    				<div class='menubox'>
+                    					<a href='admin_index.php?url=admin_cs_index.php'>
+                    						<img src='images/icons/comservice.png'>
+                    					</a>
+                    				</div>
+                    			<?php }
+                    				if($_SESSION['systemallow_touristreport'] == 1){ ?>
+                    				<div class='menubox'>
+                    					<a href='admin_index.php?url=admin_trs_index.php'>
+                    							<img src='images/icons/trsreport.png'>
+                    					</a>
+                    				</div>
+                    			<?php }
+                        			if($_SESSION['systemallow_km'] == 1){ ?>
+                    				<div class='menubox'>
+                    					<a href='admin_index.php?url=admin_km_index.php'>
+                    						<img src='images/icons/knowledge.png'>
+                    					</a>
+                    				</div>
+                    			<?php }
+                    				if($_SESSION['systemallow_admin'] == 1){ ?>
+                    				<div class='menubox'>
+                    					<a href='admin_index.php?url=admin_user_index.php'>
+                    						<img src='images/icons/admincs.png'>
+                    					</a>
+                    				</div>
+                    			<?php } ?>
+                             </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="footer"> <a href="#">More</a></div>
+                  </li>
+                </ul>
+              </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <img src="images/noimage.png" class="rounded-circle" width="30" height="30">
@@ -183,87 +247,6 @@
     <script>
     feather.replace()
     $(function() { $('#popup').popover()});
-    $('.dropcon').hide();
-	$('.dropcs').hide();
-	$('.droptrs').hide();
-	$('.dropknow').hide();
-	$('.dropuser').hide();
-    var count = 0;
-    var count2 = 0;
-    var count3 = 0;
-    var count4 = 0;
-	var count5 = 0;
-    $('#confer').on('click' ,function(){
-	    count++;
-	    $('.dropcs').hide();
-		$('.droptrs').hide();
-		$('.dropknow').hide();
-		$('.dropuser').hide();
-	    if(count % 2 != 0){
-			$('.dropcon').show('slow');
-		}
-		else{
-			$('.dropcon').hide('slow');
-		}
-    });
-    // แจ้งซ่อม
-    $('#cs').on('click' ,function(){
-	    count2++;
-	    $('.dropcon').hide();
-		$('.droptrs').hide();
-		$('.dropknow').hide();
-		$('.dropuser').hide();
-	    if(count2 % 2 != 0){
-			$('.dropcs').show('slow');
-		}
-		else{
-			$('.dropcs').hide('slow');
-		}
-    });
-    // รายงานผู้เข้าชม
-	$('#trs').on('click' ,function(){
-	    count3++;
-	    $('.dropcon').hide();
-		$('.dropcs').hide();
-		$('.dropknow').hide();
-		$('.dropuser').hide();
-	    if(count3 % 2 != 0){
-			$('.droptrs').show('slow');
-		}
-		else{
-			$('.droptrs').hide('slow');
-		}
-    });
-    // ฐานความรู้
-	$('#know').on('click' ,function(){
-	    count4++;
-	    $('.dropcon').hide();
-		$('.dropcs').hide();
-		$('.droptrs').hide();
-		$('.dropuser').hide();
-	    if(count4 % 2 != 0){
-			$('.dropknow').show('slow');
-		}
-		else{
-			$('.dropknow').hide('slow');
-		}
-    });
-    //  ผู้ใช้
-	$('#user').on('click' ,function(){
-	    count5++;
-	    $('.dropcon').hide();
-		$('.dropcs').hide();
-		$('.droptrs').hide();
-		$('.dropknow').hide();
-
-	    if(count5 % 2 != 0){
-			$('.dropuser').show('slow');
-		}
-		else{
-			$('.dropuser').hide('slow');
-		}
-    });
-
     </script>
 
   </body>
