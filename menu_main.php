@@ -37,7 +37,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" id="confer" href="#">
+                <a class="nav-link" id="confer" href="cf_index.php">
                   <span data-feather="calendar"></span>
                   ระบบจองห้องประชุม
                 </a>
