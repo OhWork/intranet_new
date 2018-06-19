@@ -16,7 +16,7 @@
 					<span data-feather="home"></span>
 					หน้าหลัก <span class="sr-only">(current)</span>
 					</a>
-				</li> 
+				</li>
 				<li class="nav-item">
 					<a class="nav-link" href="https://172.16.0.1:4100/logon.shtml?redirect=http://192.168.0.1/">
                     <span data-feather="log-in"></span>
@@ -30,7 +30,7 @@
 					</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="#">
+					<a class="nav-link" href="filemanager/dialog.php">
                     <span data-feather="database"></span>
 					ระบบฝากไฟล์
 					</a>
@@ -41,35 +41,39 @@
 					ระบบจองห้องประชุม
 					</a>
 				</li>
-				<li class="nav-item">
-					<a class="nav-link" id="cs" href="#">
+				<li data-toggle="collapse" data-target="#cs" class="collapsed">
+					<a class="nav-link" href="#">
                     <span data-feather="cpu"></span>
 					ระบบแจ้งซ่อมคอมพิวเตอร์
 					</a>
                 <!-- sub menu -->
-					<a class="nav-link dropcs ml-4" href="cs_index.php?url=cs_add_problem.php">
+                <ul class="sub-menu collapse" id="cs">
+					<a class="nav-link" href="cs_index.php?url=cs_add_problem.php">
 						แบบฟอร์มแจ้งซ่อม
 					</a>
-					<a class="nav-link dropcs ml-4" href="cs_index.php?url2=cs_show_problem.php&subpage=1">
+					<a class="nav-link" href="cs_index.php?url2=cs_show_problem.php&subpage=1">
 						รายการแจ้งซ่อม
 					</a>
+                </ul>
 				<!-- end sub menu -->
 				</li>
-				<li class="nav-item">
-					<a class="nav-link" id="trs" href="#">
+				<li data-toggle="collapse" data-target="#trs" class="collapsed">
+					<a class="nav-link" href="#">
                     <span data-feather="bar-chart"></span>
 					ระบบรายงานจำนวนผู้เข้าชม
 					</a>
                 <!-- sub menu -->
-					<a class="nav-link droptrs ml-4" href="trs_index.php?url=trs_showallzoo.php">
+                <ul class="sub-menu collapse" id="trs">
+					<a class="nav-link" href="trs_index.php?url=trs_showallzoo.php">
 					รายงานจำนวนผู้เข้าชมของสวนสัตว์
 					</a>
-					<a class="nav-link droptrs ml-4" href="trs_index.php?url2=trs_showallzoo_old.php">
+					<a class="nav-link" href="trs_index.php?url2=trs_showallzoo_old.php">
 					รายงานจำนวนผู้เข้าชมของสวนสัตว์แบบเก่า
 					</a>
-					<a class="nav-link droptrs ml-4" href="trs_index.php?url2=trs_showallvehicle.php">
+					<a class="nav-link" href="trs_index.php?url2=trs_showallvehicle.php">
 					รายงานจำนวนยานพาหนะ
 					</a>
+                </ul>
 				<!-- end sub menu -->
 				</li>
             </ul>
