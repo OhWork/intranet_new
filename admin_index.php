@@ -122,74 +122,84 @@
                   ระบบฝากไฟล์
                 </a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" id="confer" href="#">
+              <li data-toggle="collapse" data-target="#confer" class="collapsed">
+                <a class="nav-link" href="#">
                   <span data-feather="database"></span>
                   ระบบจองห้องประชุม
                 </a>
               <!-- sub menu -->
-                <a class="nav-link dropcon ml-4" href="#">
-                  ระบบจองห้องประชุม sub
-                </a>
-                <a class="nav-link dropcon ml-4" href="#">
-                  ระบบจองห้องประชุม sub
-                </a>
+              <ul class="sub-menu collapse" id="confer">
+	                <a class="nav-link" href="#">
+	                  ระบบจองห้องประชุม sub
+	                </a>
+	                <a class="nav-link" href="#">
+	                  ระบบจองห้องประชุม sub
+	                </a>
+              </ul>
               <!-- end sub menu -->
               </li>
-              <li class="nav-item">
-                <a class="nav-link" id="cs" href="#">
+              <li data-toggle="collapse" data-target="#cs" class="collapsed">
+                <a class="nav-link" href="#">
                     <span data-feather="mail"></span>
                  ระบบแจ้งซ่อมคอมพิวเตอร์
                 </a>
                 <!-- sub menu -->
-                <a class="nav-link dropcs ml-4" href="#">
-                   ระบบแจ้งซ่อมคอมพิวเตอร์ sub
-                </a>
-                <a class="nav-link dropcs ml-4" href="#">
-                   ระบบแจ้งซ่อมคอมพิวเตอร์ sub
-                </a>
+                <ul class="sub-menu collapse" id="cs">
+	                <a class="nav-link" href="#">
+	                   ระบบแจ้งซ่อมคอมพิวเตอร์ sub
+	                </a>
+	                <a class="nav-link" href="#">
+	                   ระบบแจ้งซ่อมคอมพิวเตอร์ sub
+	                </a>
+                </ul>
               <!-- end sub menu -->
               </li>
-              <li class="nav-item">
-                <a class="nav-link" id="trs" href="#">
+              <li data-toggle="collapse" data-target="#trs" class="collapsed">
+                <a class="nav-link"href="#">
                     <span data-feather="cpu"></span>
                   ระบบรายงานจำนวนผู้เข้าชม
                 </a>
                 <!-- sub menu -->
-                <a class="nav-link droptrs ml-4" href="#">
-                   ระบบรายงานจำนวนผู้เข้าชม sub
-                </a>
-                <a class="nav-link droptrs ml-4" href="#">
-                   ระบบรายงานจำนวนผู้เข้าชม sub
-                </a>
+                <ul class="sub-menu collapse" id="trs">
+	                <a class="nav-link" href="#">
+	                   ระบบรายงานจำนวนผู้เข้าชม sub
+	                </a>
+	                <a class="nav-link" href="#">
+	                   ระบบรายงานจำนวนผู้เข้าชม sub
+	                </a>
+                </ul>
               <!-- end sub menu -->
               </li>
-              <li class="nav-item">
-                <a class="nav-link" id ="know" href="#">
+              <li data-toggle="collapse" data-target="#know" class="collapsed">
+                <a class="nav-link" href="#">
                      <span data-feather="calendar"></span>
                   ระบบฐานความรู้
                 </a>
                   <!-- sub menu -->
-                <a class="nav-link dropknow ml-4" href="#">
-                   ระบบฐานความรู้ sub
-                </a>
-                <a class="nav-link dropknow ml-4" href="#">
-                   ระบบฐานความรู้ sub
-                </a>
+                <ul class="sub-menu collapse" id="know">
+	                <a class="nav-link dropknow ml-4" href="#">
+	                   ระบบฐานความรู้ sub
+	                </a>
+	                <a class="nav-link dropknow ml-4" href="#">
+	                   ระบบฐานความรู้ sub
+	                </a>
+                </ul>
               <!-- end sub menu -->
               </li>
-              <li class="nav-item">
-                <a class="nav-link" id="user" href="#">
+             <li data-toggle="collapse" data-target="#user" class="collapsed">
+                <a class="nav-link" href="#">
                   <span data-feather="bar-chart"></span>
                   ระบบผู้ใข้
                 </a>
                    <!-- sub menu -->
-                <a class="nav-link dropuser ml-4" href="#">
-                   ระบบผู้ใข้ sub
-                </a>
-                <a class="nav-link dropuser ml-4" href="#">
-                   ระบบผู้ใข้ sub
-                </a>
+                <ul class="sub-menu collapse" id="user">
+	                <a class="nav-link dropuser ml-4" href="#">
+	                   ระบบผู้ใข้ sub
+	                </a>
+	                <a class="nav-link dropuser ml-4" href="#">
+	                   ระบบผู้ใข้ sub
+	                </a>
+                </ul>
               <!-- end sub menu -->
               </li>
             </ul>
