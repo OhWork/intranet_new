@@ -15,7 +15,7 @@
     <title>Intranet</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="CSS/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="css/dashboard.css" rel="stylesheet">
@@ -27,23 +27,23 @@
   <body>
     <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
       <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">Intranet</a>
-      <p class="navbar-nav px-3">หัวข้อ</p>
-            <li class="nav-item dropdown">
+      <p class="navbar-nav px-3 text-white col">หัวข้อ</p>
+            <li class="nav-item dropdown col float-right">
                 <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"><span data-feather="grid"></span></a>
-                <div class="dropdown-menu">
+                <div class="dropdown-menu be-connections">
                     <div class="list">
-                        <div class="content">
+                        <div class="content ml-1 mr-1">
                                     <div class="row">
                                       <div class="col"><a href="#" class="connection-item"><img src='images/icons/comservice.png'></a></div>
                                       <div class="col"><a href="#" class="connection-item"><img src='images/icons/conference.png'></a></div>
                                       <div class="col"><a href="#" class="connection-item"><img src='images/icons/trsreport.png'></a></div>
                                     </div>
-                                    <div class="row">
+                                    <div class="row mt-1">
                                       <div class="col"><a href="#" class="connection-item"><img src='images/icons/knowledge.png'></a></div>
                                       <div class="col"><a href="#" class="connection-item"><img src='images/icons/admincs.png'></a></div>
                                       <div class="col"><a href="#" class="connection-item"><img src='images/icons/data.png'></a></div>
                                     </div>
-                                    <div class="row">
+									<div class="row mt-1">
                                       <div class="col"><a href="#" class="connection-item"><img src='images/icons/News.png'></a></div>
                                       <div class="col"></div>
                                       <div class="col"></div>
@@ -53,6 +53,7 @@
                     <div class="footer"> <a href="#">More</a></div>
                 </div>
             </li>
+
         <a class="nav-link" href="logout.php"><span data-feather="log-out"></span>ออกจากระบบ</a>
 
 	 </nav>
