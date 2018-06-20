@@ -39,9 +39,14 @@
                                       <div class="col"><a href="#" class="connection-item"><img src='images/icons/trsreport.png'></a></div>
                                     </div>
                                     <div class="row">
-                                      <div class="col"><a href="#" class="connection-item"><img src="assets/img/dribbble.png" alt="Dribbble"><span>Dribbble</span></a></div>
-                                      <div class="col"><a href="#" class="connection-item"><img src="assets/img/mail_chimp.png" alt="Mail Chimp"><span>Mail Chimp</span></a></div>
-                                      <div class="col"><a href="#" class="connection-item"><img src="assets/img/dropbox.png" alt="Dropbox"><span>Dropbox</span></a></div>
+                                      <div class="col"><a href="#" class="connection-item"><img src='images/icons/knowledge.png'></a></div>
+                                      <div class="col"><a href="#" class="connection-item"><img src='images/icons/admincs.png'></a></div>
+                                      <div class="col"><a href="#" class="connection-item"><img src='images/icons/data.png'></a></div>
+                                    </div>
+                                    <div class="row">
+                                      <div class="col"><a href="#" class="connection-item"><img src='images/icons/News.png'></a></div>
+                                      <div class="col"></div>
+                                      <div class="col"></div>
                                     </div>
                         </div>
                     </div>
