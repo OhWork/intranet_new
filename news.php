@@ -26,7 +26,7 @@
 //             include_once 'cs_viewdetail.php';
 		?>
 -->
-<div class="col-xl-9 col-lg-8 col-md-7 col-sm-12 col-12">
+
       <div class="jumbotron">
         <h3>ข่าวสารภายในองค์การสวนสัตว์</h3>
         <div class="container marketing">
@@ -53,7 +53,6 @@
           </div><!-- /.col-lg-4 -->
         </div><!-- /.row -->
       </div>
-    </div>
     </div>
 <script>
 $('tr[data-href]').on("click", function() {

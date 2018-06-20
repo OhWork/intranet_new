@@ -28,82 +28,28 @@
     <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
       <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">Intranet</a>
       <p class="navbar-nav px-3">หัวข้อ</p>
-<!--       <button type="button" id="popup" class="btn btn-lg btn-secondary" data-toggle="popover" title="ระบบ" data-placement="bottom" data-content="And here's some amazing content. It's very engaging. Right?"> <span data-feather="archive"></span></button> -->
-    <li class="nav-item dropdown show"><a href="#" data-toggle="dropdown" role="button" aria-expanded="true" class="nav-link dropdown-toggle"><span data-feather="archive"></span></a>
-                <ul class="dropdown-menu">
-                  <li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"><span data-feather="grid"></span></a>
+                <div class="dropdown-menu">
                     <div class="list">
-                      <div class="content">
-                        <div class="row">
-                             <div class="collapse" id="collapseMenu">
-                                <?php if($_SESSION['systemallow_drive'] == 1){ ?>
-                    				<div class='menubox'>
-                    					<a href='filemanager/dialog.php'>
-                    						<img src='images/icons/data.png'>
-                    					</a>
-                    				</div>
-                    			<?php }
-                    				  if($_SESSION['systemallow_news'] == 1){ ?>
-                    				<div class='menubox'>
-                    					<a href="admin_index.php?url=admin_news_index.php&user_id=<?php echo $_SESSION['user_id']; ?>">
-                    						<img src='images/icons/News.png'>
-                    					</a>
-                    				</div>
-                    			<?php }
-                    				if($_SESSION['systemallow_confer'] == 1){ ?>
-                    				<div class='menubox'>
-                    					<a href="admin_index.php?url=admin_cf_index.php">
-                    						<img src='images/icons/conference.png'>
-                    					</a>
-                    				</div>
-                    			<?php }
-                    				if($_SESSION['systemallow_service'] == 1){ ?>
-                    				<div class='menubox'>
-                    					<a href='admin_index.php?url=admin_cs_index.php'>
-                    						<img src='images/icons/comservice.png'>
-                    					</a>
-                    				</div>
-                    			<?php }
-                    				if($_SESSION['systemallow_touristreport'] == 1){ ?>
-                    				<div class='menubox'>
-                    					<a href='admin_index.php?url=admin_trs_index.php'>
-                    							<img src='images/icons/trsreport.png'>
-                    					</a>
-                    				</div>
-                    			<?php }
-                        			if($_SESSION['systemallow_km'] == 1){ ?>
-                    				<div class='menubox'>
-                    					<a href='admin_index.php?url=admin_km_index.php'>
-                    						<img src='images/icons/knowledge.png'>
-                    					</a>
-                    				</div>
-                    			<?php }
-                    				if($_SESSION['systemallow_admin'] == 1){ ?>
-                    				<div class='menubox'>
-                    					<a href='admin_index.php?url=admin_user_index.php'>
-                    						<img src='images/icons/admincs.png'>
-                    					</a>
-                    				</div>
-                    			<?php } ?>
-                             </div>
+                        <div class="content">
+                                    <div class="row">
+                                      <div class="col"><a href="#" class="connection-item"><img src='images/icons/comservice.png'></a></div>
+                                      <div class="col"><a href="#" class="connection-item"><img src='images/icons/conference.png'></a></div>
+                                      <div class="col"><a href="#" class="connection-item"><img src='images/icons/trsreport.png'></a></div>
+                                    </div>
+                                    <div class="row">
+                                      <div class="col"><a href="#" class="connection-item"><img src="assets/img/dribbble.png" alt="Dribbble"><span>Dribbble</span></a></div>
+                                      <div class="col"><a href="#" class="connection-item"><img src="assets/img/mail_chimp.png" alt="Mail Chimp"><span>Mail Chimp</span></a></div>
+                                      <div class="col"><a href="#" class="connection-item"><img src="assets/img/dropbox.png" alt="Dropbox"><span>Dropbox</span></a></div>
+                                    </div>
                         </div>
-                      </div>
                     </div>
                     <div class="footer"> <a href="#">More</a></div>
-                  </li>
-                </ul>
-              </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <img src="images/noimage.png" class="rounded-circle" width="30" height="30">
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Something else here</a>
-        </div>
-      </li>
+                </div>
+            </li>
+        <a class="nav-link" href="logout.php"><span data-feather="log-out"></span>ออกจากระบบ</a>
+
 	 </nav>
     <div class="container-fluid">
       <div class="row">

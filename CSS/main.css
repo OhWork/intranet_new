@@ -977,3 +977,11 @@
 .list-group {
 	display:inline;
 }
+.be-connections .connection-item {
+    border-radius: 3px;
+    line-height: 34px;
+    text-align: center;
+    padding: 15px 0 9px;
+    display: block;
+    border: 1px solid transparent;
+    color: #737373;
