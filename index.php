@@ -50,7 +50,7 @@ session_start();
 			<div class="row">
 				<?php include('menu_main.php'); ?>
 				<?php include('content.php'); ?>
-				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" style="padding-left:350px;">
+				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 blocklogo">
 					<center>
 						<div class="indexft"><a href="http://www.zoothailand.org" target="_blank"><img src="images/Logo/ZPO.png"/></a></div>
 						<div class="indexft"><a href="http://www.dusitzoo.org" target="_blank"><img src="images/Logo/Dusitzoo.png"></a></div>

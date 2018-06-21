@@ -985,3 +985,10 @@
     display: block;
     border: 1px solid transparent;
     color: #737373;
+}
+.blockshow {
+	padding-left: 270px;
+}
+.blocklogo {
+	padding-left: 450px;
+}
