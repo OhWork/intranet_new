@@ -28,6 +28,7 @@
     <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
       <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">Intranet</a>
       <p class="navbar-nav px-3 text-white col">หัวข้อ</p>
+<!--
             <li class="nav-item dropdown col float-right">
                 <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"><span data-feather="grid"></span></a>
                 <div class="dropdown-menu be-connections">
@@ -53,6 +54,7 @@
                     <div class="footer"> <a href="#">More</a></div>
                 </div>
             </li>
+-->
 
         <a class="nav-link" href="logout.php"><span data-feather="log-out"></span>ออกจากระบบ</a>
 
@@ -98,10 +100,19 @@
                 <!-- sub menu -->
                 <ul class="sub-menu collapse" id="cs">
 	                <a class="nav-link" href="#">
-	                   ระบบแจ้งซ่อมคอมพิวเตอร์ sub
+	                   รายการแจ้งดำเนินการใหม่
 	                </a>
 	                <a class="nav-link" href="#">
-	                   ระบบแจ้งซ่อมคอมพิวเตอร์ sub
+	                   IP-Address
+	                </a>
+	                <a class="nav-link" href="#">
+	                   IP-อุปกรณ์
+	                </a>
+	                <a class="nav-link" href="#">
+	                   รายงาน
+	                </a>
+	                <a class="nav-link" href="#">
+	                   ตั้งค่า
 	                </a>
                 </ul>
               <!-- end sub menu -->
@@ -156,6 +167,7 @@
               </li>
             </ul>
 
+<!--
             <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
               <span>Saved reports</span>
             </h6>
@@ -185,6 +197,7 @@
                 </a>
               </li>
             </ul>
+-->
           </div>
         </nav>
 
