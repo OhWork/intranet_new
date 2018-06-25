@@ -99,21 +99,58 @@
                 </a>
                 <!-- sub menu -->
                 <ul class="sub-menu collapse" id="cs">
-	                <a class="nav-link" href="#">
-	                   รายการแจ้งดำเนินการใหม่
-	                </a>
-	                <a class="nav-link" href="#">
-	                   IP-Address
-	                </a>
-	                <a class="nav-link" href="#">
-	                   IP-อุปกรณ์
-	                </a>
-	                <a class="nav-link" href="#">
-	                   รายงาน
-	                </a>
-	                <a class="nav-link" href="#">
-	                   ตั้งค่า
-	                </a>
+	                <div class="nav-item">
+		                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		                   รายการแจ้งดำเนินการใหม่
+		                </a>
+		                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+				          <a class="dropdown-item" href="#">รายการแจ้งดำเนินการใหม่</a>
+				          <a class="dropdown-item" href="#">รายงานระหว่างการดำเนินการ</a>
+				          <a class="dropdown-item" href="#">รานงานการดำเนินการเสร็จ</a>
+				        </div>
+	                </div>
+	                <div class="nav-item">
+		                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		                   IP-Address
+		                </a>
+		                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+				          <a class="dropdown-item" href="#">องค์การสวนสัตว์</a>
+				          <a class="dropdown-item" href="#">สวนสัตว์ดุสิต</a>
+				          <a class="dropdown-item" href="#">สวนสัตว์เขาเขียว</a>
+				          <a class="dropdown-item" href="#">สวนสัตว์นคราชสีมา</a>
+				          <a class="dropdown-item" href="#">สวนสัตว์สงขลา</a>
+				          <a class="dropdown-item" href="#">สวนสัตว์อุบลราชธานี</a>
+				          <a class="dropdown-item" href="#">สวนขอนแก่น</a>
+				          <a class="dropdown-item" href="#">โครงการคชอาณาจักร</a>
+				        </div>
+	                </div>
+	                <div class="nav-item">
+		                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		                   IP-อุปกรณ์
+		                </a>
+		                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+				          <a class="dropdown-item" href="#">Server</a>
+				        </div>
+	                </div>
+			        <div class="nav-item">
+		               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		                   รายงาน
+		                </a>
+		                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+				          <a class="dropdown-item" href="#">รายงานการซ่อมบริการ</a>
+				          <a class="dropdown-item" href="#">รายงานการบริการ</a>
+				          <a class="dropdown-item" href="#">สรุป IP</a>
+				        </div>
+			        </div>
+			        <div class="nav-item">
+		                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		                   ตั้งค่า
+		                </a>
+		                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+				          <a class="dropdown-item" href="#">เพิ่มชนิอุปกรณ์</a>
+				          <a class="dropdown-item" href="#">เพิ่ืมรายการปัญหา</a>
+				        </div>
+			        </div>
                 </ul>
               <!-- end sub menu -->
               </li>
