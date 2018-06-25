@@ -40,7 +40,7 @@
 
       <div class="form-label-group">
         <?php echo $text_user; ?>
-        <label for="inputEmail">Email address</label>
+        <label for="inputEmail">User</label>
       </div>
 
       <div class="form-label-group">
