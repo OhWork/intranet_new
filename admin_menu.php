@@ -99,13 +99,13 @@
               </li>
               <?php }
 				  if($_SESSION['systemallow_news'] == 1){ ?>
-            <li data-toggle="collapse" data-target="#confer" class="collapsed">
+            <li data-toggle="collapse" data-target="#new" class="collapsed">
                 <a class="nav-link" href="#">
                   <span data-feather="database"></span>
                   ระบบข่าว
                 </a>
               <!-- sub menu -->
-              <ul class="sub-menu collapse" id="confer">
+              <ul class="sub-menu collapse" id="new">
 	                <a class="nav-link" href="#">
 	                  ระบบจองห้องประชุม sub
 	                </a>
