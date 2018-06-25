@@ -90,12 +90,32 @@
                   หน้าหลัก <span class="sr-only">(current)</span>
                 </a>
               </li>
+              <?php if($_SESSION['systemallow_drive'] == 1){ ?>
               <li class="nav-item">
                 <a class="nav-link" href="#">
                     <span data-feather="log-in"></span>
                   ระบบฝากไฟล์
                 </a>
               </li>
+              <?php }
+				  if($_SESSION['systemallow_news'] == 1){ ?>
+            <li data-toggle="collapse" data-target="#confer" class="collapsed">
+                <a class="nav-link" href="#">
+                  <span data-feather="database"></span>
+                  ระบบข่าว
+                </a>
+              <!-- sub menu -->
+              <ul class="sub-menu collapse" id="confer">
+	                <a class="nav-link" href="#">
+	                  ระบบจองห้องประชุม sub
+	                </a>
+	                <a class="nav-link" href="#">
+	                  ระบบจองห้องประชุม sub
+	                </a>
+              </ul>
+              <!-- end sub menu -->
+              </li>
+              <?php } ?>
               <li data-toggle="collapse" data-target="#confer" class="collapsed">
                 <a class="nav-link" href="#">
                   <span data-feather="database"></span>
