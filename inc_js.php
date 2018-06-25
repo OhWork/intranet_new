@@ -35,7 +35,7 @@
 <!-- <script src="jquery/datatables.js"></script> -->
 <!-- <script src="jquery/jstree.min.js"></script> -->
 <!-- <script src="jquery/jquery.datetimepicker.js"></script> -->
-<script src="jquery/bootstrap-datepicker-thai.js"></script>
+<!-- <script src="jquery/bootstrap-datepicker-thai.js"></script> -->
 <script src="jquery/jquery.validate.js"></script>
 <script src="jquery/jquery.fancybox.min.js"></script>
 <script src="jquery/select2.min.js"></script>
