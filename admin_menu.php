@@ -164,25 +164,25 @@
 							<a class="dropdown-item" href="admin_index.php?url=cs_show_ip.php&id=11">สวนสัตว์ดุสิต</a>
 						<?php }
 						if($user_zoo == 10 || $user_zoo == 12){?>
-							<a class="dropdown-item" href="admin_index.php?url=admin_cs_index.php&url2=cs_show_ip.php&id=12">สวนสัตว์เปิดเขาเขียว</a>
+							<a class="dropdown-item" href="admin_index.php?url=cs_show_ip.php&id=12">สวนสัตว์เปิดเขาเขียว</a>
 						<?php }
 						if($user_zoo == 10 || $user_zoo == 13){?>
-							<a class="dropdown-item" href="admin_index.php?url=admin_cs_index.php&url2=cs_show_ip.php&id=13">สวนสัตว์เชียงใหม่</a>
+							<a class="dropdown-item" href="admin_index.php?url=cs_show_ip.php&id=13">สวนสัตว์เชียงใหม่</a>
 						<?php }
 						if($user_zoo == 10 || $user_zoo == 14){?>
-							<a class="dropdown-item" href="admin_index.php?url=admin_cs_index.php&url2=cs_show_ip.php&id=14">สวนสัตว์นครราชสีมา</a>
+							<a class="dropdown-item" href="admin_index.php?url=cs_show_ip.php&id=14">สวนสัตว์นครราชสีมา</a>
 						<?php }
 						if($user_zoo == 10 || $user_zoo == 15){?>
-							<a class="dropdown-item" href="admin_index.php?url=admin_cs_index.php&url2=cs_show_ip.php&id=15">สวนสัตว์สงขลา</a>
+							<a class="dropdown-item" href="admin_index.php?url=cs_show_ip.php&id=15">สวนสัตว์สงขลา</a>
 						<?php }
 						if($user_zoo == 10 || $user_zoo == 16){?>
-							<a class="dropdown-item" href="admin_index.php?url=admin_cs_index.php&url2=cs_show_ip.php&id=16">สวนสัตว์อุบลราชธานี</a>
+							<a class="dropdown-item" href="admin_index.php?url=cs_show_ip.php&id=16">สวนสัตว์อุบลราชธานี</a>
 						<?php }
 						if($user_zoo == 10 || $user_zoo == 17){?>
-							<a class="dropdown-item" href="admin_index.php?url=admin_cs_index.php&url2=cs_show_ip.php&id=17">สวนสัตว์ขอนแก่น</a>
+							<a class="dropdown-item" href="admin_index.php?url=cs_show_ip.php&id=17">สวนสัตว์ขอนแก่น</a>
 						<?php }
 						if($user_zoo == 10 || $user_zoo == 18){?>
-							<a class="dropdown-item" href="admin_index.php?url=admin_cs_index.php&url2=cs_show_ip.php&id=18">โครงการคชอาณาจักร</a>
+							<a class="dropdown-item" href="admin_index.php?url=cs_show_ip.php&id=18">โครงการคชอาณาจักร</a>
 						<?php }?>
 				        </div>
 	                </div>
