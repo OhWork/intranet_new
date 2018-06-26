@@ -107,10 +107,10 @@
               <!-- sub menu -->
               <ul class="sub-menu collapse" id="new">
 	                <a class="nav-link" href="#">
-	                  ระบบจองห้องประชุม sub
+	                  ระบบข่าว sub
 	                </a>
 	                <a class="nav-link" href="#">
-	                  ระบบจองห้องประชุม sub
+	                  ระบบข่าว sub
 	                </a>
               </ul>
               <!-- end sub menu -->
@@ -124,17 +124,17 @@
               <!-- sub menu -->
               <ul class="sub-menu collapse" id="confer">
 	                <a class="nav-link" href="#">
-	                  ระบบจองห้องประชุม sub
+	                  จัดการห้องประชุม
 	                </a>
 	                <a class="nav-link" href="#">
-	                  ระบบจองห้องประชุม sub
+	                  จัดการห้องประชุมทางไกล
 	                </a>
               </ul>
               <!-- end sub menu -->
               </li>
               <li data-toggle="collapse" data-target="#cs" class="collapsed">
                 <a class="nav-link" href="#">
-                    <span data-feather="mail"></span>
+                    <span data-feather="cpu"></span>
                  ระบบแจ้งซ่อมคอมพิวเตอร์
                 </a>
                 <!-- sub menu -->
@@ -144,9 +144,9 @@
 		                   รายการแจ้งดำเนินการใหม่
 		                </a>
 		                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-				          <a class="dropdown-item" href="#">รายการแจ้งดำเนินการใหม่</a>
-				          <a class="dropdown-item" href="#">รายงานระหว่างการดำเนินการ</a>
-				          <a class="dropdown-item" href="#">รานงานการดำเนินการเสร็จ</a>
+				          <a class="dropdown-item" href="admin_index.php?url=cs_show_fixproblem.php"><span data-feather="chevron-right"></span>รายการแจ้งดำเนินการใหม่</a>
+				          <a class="dropdown-item" href="admin_index.php?url=cs_show_waitfixproblem.php"><span data-feather="chevron-right"></span>รายงานระหว่างการดำเนินการ</a>
+				          <a class="dropdown-item" href="admin_index.php?url=cs_show_completefixproblem.php"><span data-feather="chevron-right"></span>รานงานการดำเนินการเสร็จ</a>
 				        </div>
 	                </div>
 	                <div class="nav-item">
@@ -154,20 +154,49 @@
 		                   IP-Address
 		                </a>
 		                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-				          <a class="dropdown-item" href="#">องค์การสวนสัตว์</a>
-				          <a class="dropdown-item" href="#">สวนสัตว์ดุสิต</a>
-				          <a class="dropdown-item" href="#">สวนสัตว์เขาเขียว</a>
-				          <a class="dropdown-item" href="#">สวนสัตว์นคราชสีมา</a>
-				          <a class="dropdown-item" href="#">สวนสัตว์สงขลา</a>
-				          <a class="dropdown-item" href="#">สวนสัตว์อุบลราชธานี</a>
-				          <a class="dropdown-item" href="#">สวนขอนแก่น</a>
-				          <a class="dropdown-item" href="#">โครงการคชอาณาจักร</a>
+				          <a class="dropdown-item" href="#"><span data-feather="chevron-right"></span>องค์การสวนสัตว์</a>
+				          <a class="dropdown-item" href="#"><span data-feather="chevron-right"></span>สวนสัตว์ดุสิต</a>
+				          <a class="dropdown-item" href="#"><span data-feather="chevron-right"></span>สวนสัตว์เขาเขียว</a>
+				          <a class="dropdown-item" href="#"><span data-feather="chevron-right"></span>สวนสัตว์นคราชสีมา</a>
+				          <a class="dropdown-item" href="#"><span data-feather="chevron-right"></span>สวนสัตว์สงขลา</a>
+				          <a class="dropdown-item" href="#"><span data-feather="chevron-right"></span>สวนสัตว์อุบลราชธานี</a>
+				          <a class="dropdown-item" href="#"><span data-feather="chevron-right"></span>สวนขอนแก่น</a>
+				          <a class="dropdown-item" href="#"><span data-feather="chevron-right"></span>โครงการคชอาณาจักร</a>
 				        </div>
 	                </div>
 	                <div class="nav-item">
 		                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 		                   IP-อุปกรณ์
 		                </a>
+		                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+		                <?php if($user_zoo == 10){?>
+							<a class="dropdown-item" href="admin_index.php?url=cs_show_ip.php&id=1">องค์การสวนสัตว์</a>
+						<?php }
+						if($user_zoo == 10 || $user_zoo == 11){?>
+							<a class="dropdown-item" href="admin_index.php?url=admin_cs_index.php&url2=cs_show_ip.php&id=11">สวนสัตว์ดุสิต</a>
+						<?php }
+						if($user_zoo == 10 || $user_zoo == 12){?>
+							<a class="dropdown-item" href="admin_index.php?url=admin_cs_index.php&url2=cs_show_ip.php&id=12">สวนสัตว์เปิดเขาเขียว</a>
+						<?php }
+						if($user_zoo == 10 || $user_zoo == 13){?>
+							<a class="dropdown-item" href="admin_index.php?url=admin_cs_index.php&url2=cs_show_ip.php&id=13">สวนสัตว์เชียงใหม่</a>
+						<?php }
+						if($user_zoo == 10 || $user_zoo == 14){?>
+							<a class="dropdown-item" href="admin_index.php?url=admin_cs_index.php&url2=cs_show_ip.php&id=14">สวนสัตว์นครราชสีมา</a>
+						<?php }
+						if($user_zoo == 10 || $user_zoo == 15){?>
+							<a class="dropdown-item" href="admin_index.php?url=admin_cs_index.php&url2=cs_show_ip.php&id=15">สวนสัตว์สงขลา</a>
+						<?php }
+						if($user_zoo == 10 || $user_zoo == 16){?>
+							<a class="dropdown-item" href="admin_index.php?url=admin_cs_index.php&url2=cs_show_ip.php&id=16">สวนสัตว์อุบลราชธานี</a>
+						<?php }
+						if($user_zoo == 10 || $user_zoo == 17){?>
+							<a class="dropdown-item" href="admin_index.php?url=admin_cs_index.php&url2=cs_show_ip.php&id=17">สวนสัตว์ขอนแก่น</a>
+						<?php }
+						if($user_zoo == 10 || $user_zoo == 18){?>
+							<a class="dropdown-item" href="admin_index.php?url=admin_cs_index.php&url2=cs_show_ip.php&id=18">โครงการคชอาณาจักร</a>
+						<?php }?>
+						</div>
 		                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
 				          <a class="dropdown-item" href="#">Server</a>
 				        </div>
@@ -177,19 +206,21 @@
 		                   รายงาน
 		                </a>
 		                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-				          <a class="dropdown-item" href="#">รายงานการซ่อมบริการ</a>
-				          <a class="dropdown-item" href="#">รายงานการบริการ</a>
-				          <a class="dropdown-item" href="#">สรุป IP</a>
+				          <a class="dropdown-item" href="#"><span data-feather="chevron-right"></span>รายงานการซ่อมบริการ</a>
+				          <a class="dropdown-item" href="#"><span data-feather="chevron-right"></span>รายงานการบริการ</a>
+				          <a class="dropdown-item" href="#"><span data-feather="chevron-right"></span>สรุป IP</a>
 				        </div>
 			        </div>
 			        <div class="nav-item">
 		                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 		                   ตั้งค่า
 		                </a>
+<!--
 		                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-				          <a class="dropdown-item" href="#">เพิ่มชนิอุปกรณ์</a>
-				          <a class="dropdown-item" href="#">เพิ่ืมรายการปัญหา</a>
+				          <a class="dropdown-item" href="#">เพิ่มชนิดอุปกรณ์</a>
+				          <a class="dropdown-item" href="#">เพิ่มรายการปัญหา</a>
 				        </div>
+-->
 			        </div>
                 </ul>
               <!-- end sub menu -->
@@ -228,16 +259,22 @@
               </li>
              <li data-toggle="collapse" data-target="#user" class="collapsed">
                 <a class="nav-link" href="#">
-                  <span data-feather="bar-chart"></span>
+                  <span data-feather="user"></span>
                   ระบบผู้ใข้
                 </a>
                    <!-- sub menu -->
                 <ul class="sub-menu collapse" id="user">
-	                <a class="nav-link dropuser ml-4" href="#">
-	                   ระบบผู้ใข้ sub
+	                <a class="nav-link dropuser" href="#">
+	                   <span data-feather="chevron-right"></span>รายการผู้ใช้
 	                </a>
-	                <a class="nav-link dropuser ml-4" href="#">
-	                   ระบบผู้ใข้ sub
+	                <a class="nav-link dropuser" href="#">
+	                   <span data-feather="chevron-right"></span>รายการฝ่าย
+	                </a>
+	                <a class="nav-link dropuser" href="#">
+	                   <span data-feather="chevron-right"></span>Log-การใช้งาน
+	                </a>
+	                <a class="nav-link dropuser" href="#">
+	                   <span data-feather="settings"></span>ตั้งค่า
 	                </a>
                 </ul>
               <!-- end sub menu -->
