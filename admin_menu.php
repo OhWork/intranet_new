@@ -191,10 +191,7 @@
 		                   IP-อุปกรณ์
 		                </a>
 		                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-		                <a class="dropdown-item" href="#"><span data-feather="chevron-right"></span>รายงานการซ่อมบริการ</a>
-						</div>
-		                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-				          <a class="dropdown-item" href="#">Server</a>
+				          <a class="dropdown-item" href="admin_index.php?url=admin_cs_index.php&url2=cs_show_iptools.php&id=1">Server</a>
 				        </div>
 	                </div>
 			        <div class="nav-item">
