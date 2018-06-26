@@ -1,4 +1,6 @@
-<?php if (!empty($_SESSION['user_name'])): ?>
+<?php if (!empty($_SESSION['user_name'])): 
+        $user_zoo = $_SESSION['subzoo_zoo_zoo_id'];
+?>
 <!--
 <div class="row">
     <div class="col-md-12">
@@ -154,26 +156,12 @@
 		                   IP-Address
 		                </a>
 		                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-				          <a class="dropdown-item" href="#"><span data-feather="chevron-right"></span>องค์การสวนสัตว์</a>
-				          <a class="dropdown-item" href="#"><span data-feather="chevron-right"></span>สวนสัตว์ดุสิต</a>
-				          <a class="dropdown-item" href="#"><span data-feather="chevron-right"></span>สวนสัตว์เขาเขียว</a>
-				          <a class="dropdown-item" href="#"><span data-feather="chevron-right"></span>สวนสัตว์นคราชสีมา</a>
-				          <a class="dropdown-item" href="#"><span data-feather="chevron-right"></span>สวนสัตว์สงขลา</a>
-				          <a class="dropdown-item" href="#"><span data-feather="chevron-right"></span>สวนสัตว์อุบลราชธานี</a>
-				          <a class="dropdown-item" href="#"><span data-feather="chevron-right"></span>สวนขอนแก่น</a>
-				          <a class="dropdown-item" href="#"><span data-feather="chevron-right"></span>โครงการคชอาณาจักร</a>
-				        </div>
-	                </div>
-	                <div class="nav-item">
-		                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-		                   IP-อุปกรณ์
-		                </a>
-		                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-		                <?php if($user_zoo == 10){?>
+				        <?php
+    				          if($user_zoo == 10){?>
 							<a class="dropdown-item" href="admin_index.php?url=cs_show_ip.php&id=1">องค์การสวนสัตว์</a>
 						<?php }
 						if($user_zoo == 10 || $user_zoo == 11){?>
-							<a class="dropdown-item" href="admin_index.php?url=admin_cs_index.php&url2=cs_show_ip.php&id=11">สวนสัตว์ดุสิต</a>
+							<a class="dropdown-item" href="admin_index.php?url=cs_show_ip.php&id=11">สวนสัตว์ดุสิต</a>
 						<?php }
 						if($user_zoo == 10 || $user_zoo == 12){?>
 							<a class="dropdown-item" href="admin_index.php?url=admin_cs_index.php&url2=cs_show_ip.php&id=12">สวนสัตว์เปิดเขาเขียว</a>
@@ -196,6 +184,14 @@
 						if($user_zoo == 10 || $user_zoo == 18){?>
 							<a class="dropdown-item" href="admin_index.php?url=admin_cs_index.php&url2=cs_show_ip.php&id=18">โครงการคชอาณาจักร</a>
 						<?php }?>
+				        </div>
+	                </div>
+	                <div class="nav-item">
+		                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		                   IP-อุปกรณ์
+		                </a>
+		                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+		                <a class="dropdown-item" href="#"><span data-feather="chevron-right"></span>รายงานการซ่อมบริการ</a>
 						</div>
 		                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
 				          <a class="dropdown-item" href="#">Server</a>

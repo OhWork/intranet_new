@@ -14,19 +14,27 @@
 
     <title>Intranet</title>
 
-    <!-- Bootstrap core CSS -->
-    <link href="CSS/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Custom styles for this template -->
-    <link href="css/dashboard.css" rel="stylesheet">
-    <?php 
-        include 'inc_js.php';
-        include 'form/main_form.php';
-        include 'form/gridview.php';
-        include 'database/db_tools.php';
-        include 'connect.php';
-    ?>
-  </head>
+         <?php
+            include_once 'inc_js.php';
+            include_once 'database/db_tools.php';
+            include_once 'connect.php';
+            include_once 'form/main_form.php';
+            include_once 'form/gridview.php';
+            include_once 'clearsession.php';
+        ?>
+         <!-- Bootstrap core CSS -->
+        <link rel="stylesheet" href="CSS/bootstrap.css">
+        <!-- Custom styles for this template -->
+        <link rel="stylesheet" href="css/dashboard.css">
+		<link rel="stylesheet" href="CSS/jquery.dataTables.css">
+        <link rel="stylesheet" href="CSS/bootstrap-datetimepicker-standalone.css">
+        <link rel="stylesheet" href="CSS/bootstrap-datetimepicker.css">
+        <link rel="stylesheet" href="CSS/jquery.mapify.css">
+        <link rel="stylesheet" href="CSS/jquery.datetimepicker.css">
+        <link rel="stylesheet" href="CSS/main.css">
+        <link rel="stylesheet" href="CSS/print.css" media="print">
+        <link rel="stylesheet" href="CSS/font-awesome.css">  </head>
 
   <body>
     <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
