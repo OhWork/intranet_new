@@ -139,9 +139,9 @@
                  ระบบแจ้งซ่อมคอมพิวเตอร์
                 </a>
                 <!-- sub menu -->
-                <ul class="sub-menu collapse" id="cs">
+                <ul class="sub-menu collapse on-sub" id="cs">
 		                <a class="nav-link collapsed" href="#cscase" data-toggle="collapse" data-target="#cscase">
-							ระบบแจ้งซ่อมคอมพิวเตอร์<span data-feather="chevrons-down"></span>
+							ระบบแจ้งซ่อมคอมพิวเตอร์<span data-feather="chevron-right"></span>
 		                </a>
 		                <ul class="sub-menu collapse" id="cscase">
 				          <a class="dropdown-item" href="admin_index.php?url=cs_show_fixproblem.php"><span data-feather="chevron-right"></span>รายการแจ้งดำเนินการใหม่</a>
@@ -196,7 +196,7 @@
 		                </a>
 		                <ul class="sub-menu collapse" id="csreport">
 				          <a class="dropdown-item" href="#"><span data-feather="chevron-right"></span>รายงานการซ่อมบริการ</a>
-				            
+
 				          <a class="dropdown-item" href="admin_index.php?url=cs_totalserviceadmin.php"><span data-feather="chevron-right"></span>รายงานการบริการ</a>
 				          <a class="dropdown-item" href="#"><span data-feather="chevron-right"></span>รายงานสรุปไอพีที่ใช้</a>
 				                        <?php if($user_zoo == 10){?>
@@ -242,23 +242,24 @@
                 </ul>
               <!-- end sub menu -->
 <!--               </li> -->
-              <li data-toggle="collapse" data-target="#trs" class="collapsed">
-                <a class="nav-link"href="#">
+              <a class="nav-link collapsed" href="#trs" data-toggle="collapse" data-target="#trs">
                     <span data-feather="chart"></span>
                   ระบบรายงานจำนวนผู้เข้าชม
                 </a>
                 <!-- sub menu -->
                 <ul class="sub-menu collapse" id="trs">
-	                <a class="nav-link" href="#">
+	               <div class="nav-item">
+	                <a class="nav-link collapsed py-1" href="#trsreport" data-toggle="collapse" data-target="#trsreport">
 	                   รายงานจำนวนผู้เข้าชมสวนสัตว์
 	                </a>
+	                <ul class="sub-menu collapse" id="trsreport">
 	                   <?php
                                       if($user_zoo == 7 || $user_zoo == 10 || $user_zoo == 11){?>
                                         <a class="dropdown-item" href="admin_index.php?url=admin_trs_index.php&url2=trs_showtotalzoo.php&zoo=11">สวนสัตว์ดุสิต</a>
                                          <?php }
                                       if($user_zoo == 7 || $user_zoo == 10 || $user_zoo == 12){?>
                                         <a class="dropdown-item" href="admin_index.php?url=admin_trs_index.php&url2=trs_showtotalzoo.php&zoo=12">สวนสัตว์เปิดเขาเขียว</a>
-                                         <?php } 
+                                         <?php }
                                       if($user_zoo == 7 || $user_zoo == 10 || $user_zoo == 13){?>
                                         <a class="dropdown-item" href="admin_index.php?url=admin_trs_index.php&url2=trs_showtotalzoo.php&zoo=13">สวนสัตว์เชียงใหม่</a>
                                          <?php }
@@ -267,7 +268,7 @@
                                          <?php }
                                        if($user_zoo == 7 || $user_zoo == 10 || $user_zoo == 15){?>
                                         <a class="dropdown-item" href="admin_index.php?url=admin_trs_index.php&url2=trs_showtotalzoo.php&zoo=15">สวนสัตว์สงขลา</a>
-                                         <?php }       
+                                         <?php }
                                       if($user_zoo == 7 || $user_zoo == 10 || $user_zoo == 16){?>
                                         <a class="dropdown-item" href="admin_index.php?url=admin_trs_index.php&url2=trs_showtotalzoo.php&zoo=16">สวนสัตว์อุบลราชธานี</a>
                                          <?php }
@@ -277,17 +278,19 @@
                                       if($user_zoo == 7 || $user_zoo == 10 || $user_zoo == 18){?>
                                         <a class="dropdown-item" href="admin_index.php?url=admin_trs_index.php&url2=trs_showtotalzoo.php&zoo=?">โครงการคชอาณาจักร</a>
                                         <?php }?>
-                        
-	                <a class="nav-link" href="#">
+	                </ul>
+	               </div>
+	                <a class="nav-link collapsed py-1" href="#trsreportold" data-toggle="collapse" data-target="#trsreportold">
 	                   รายงานจำนวนผู้เข้าชมสวนสัตว์เก่า(ตุลาคม 2559 - กันยายน 2560)
 	                </a>
+	                <ul class="sub-menu collapse" id="trsreportold">
 	                    <?php
                                       if($user_zoo == 7 || $user_zoo == 10 || $user_zoo == 11){?>
                                         <a class="dropdown-item" href="admin_index.php?url=admin_trs_index.php&url2=trs_showtotalzoo_old.php&zoo=11">สวนสัตว์ดุสิต</a>
                                          <?php }
                                       if($user_zoo == 7 || $user_zoo == 10 || $user_zoo == 12){?>
                                         <a class="dropdown-item" href="admin_index.php?url=admin_trs_index.php&url2=trs_showtotalzoo_old.php&zoo=12">สวนสัตว์เปิดเขาเขียว</a>
-                                         <?php } 
+                                         <?php }
                                       if($user_zoo == 7 || $user_zoo == 10 || $user_zoo == 13){?>
                                         <a class="dropdown-item" href="admin_index.php?url=admin_trs_index.php&url2=trs_showtotalzoo_old.php&zoo=13">สวนสัตว์เชียงใหม่</a>
                                          <?php }
@@ -296,7 +299,7 @@
                                          <?php }
                                        if($user_zoo == 7 || $user_zoo == 10 || $user_zoo == 15){?>
                                         <a class="dropdown-item" href="admin_index.php?url=admin_trs_index.php&url2=trs_showtotalzoo_old.php&zoo=15">สวนสัตว์สงขลา</a>
-                                         <?php }       
+                                         <?php }
                                       if($user_zoo == 7 || $user_zoo == 10 || $user_zoo == 16){?>
                                         <a class="dropdown-item" href="admin_index.php?url=admin_trs_index.php&url2=trs_showtotalzoo_old.php&zoo=16">สวนสัตว์อุบลราชธานี</a>
                                          <?php }
@@ -306,6 +309,7 @@
                                       if($user_zoo == 7 || $user_zoo == 10 || $user_zoo == 18){?>
                                         <a class="dropdown-item" href="admin_index.php?url=admin_trs_index.php&url2=trs_showtotalzoo_old.php&zoo=?">โครงการคชอาณาจักร</a>
                                         <?php }?>
+	                </ul>
                 </ul>
               <!-- end sub menu -->
               </li>
@@ -427,3 +431,10 @@
           </div>
         </nav>
 <?php endif; ?>
+<script>
+	$(".on-sub").on('click', function (e) {
+
+// 		feather.replace({ class: 'foo bar', 'stroke-width': 1 })
+//             e.stopPropagation();
+        });
+</script>
