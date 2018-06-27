@@ -244,16 +244,16 @@
 <!--               </li> -->
               <li data-toggle="collapse" data-target="#trs" class="collapsed">
                 <a class="nav-link"href="#">
-                    <span data-feather="cpu"></span>
+                    <span data-feather="chart"></span>
                   ระบบรายงานจำนวนผู้เข้าชม
                 </a>
                 <!-- sub menu -->
                 <ul class="sub-menu collapse" id="trs">
 	                <a class="nav-link" href="#">
-	                   ระบบรายงานจำนวนผู้เข้าชม sub
+	                   รายงานจำนวนผู้เข้าชมสวนสัตว์
 	                </a>
 	                <a class="nav-link" href="#">
-	                   ระบบรายงานจำนวนผู้เข้าชม sub
+	                   รายงานจำนวนผู้เข้าชมสวนสัตว์เก่า(ตุลาคม 2559 - กันยายน 2560)
 	                </a>
                 </ul>
               <!-- end sub menu -->
