@@ -252,9 +252,60 @@
 	                <a class="nav-link" href="#">
 	                   รายงานจำนวนผู้เข้าชมสวนสัตว์
 	                </a>
+	                   <?php
+                                      if($user_zoo == 7 || $user_zoo == 10 || $user_zoo == 11){?>
+                                        <a class="dropdown-item" href="admin_index.php?url=admin_trs_index.php&url2=trs_showtotalzoo.php&zoo=11">สวนสัตว์ดุสิต</a>
+                                         <?php }
+                                      if($user_zoo == 7 || $user_zoo == 10 || $user_zoo == 12){?>
+                                        <a class="dropdown-item" href="admin_index.php?url=admin_trs_index.php&url2=trs_showtotalzoo.php&zoo=12">สวนสัตว์เปิดเขาเขียว</a>
+                                         <?php } 
+                                      if($user_zoo == 7 || $user_zoo == 10 || $user_zoo == 13){?>
+                                        <a class="dropdown-item" href="admin_index.php?url=admin_trs_index.php&url2=trs_showtotalzoo.php&zoo=13">สวนสัตว์เชียงใหม่</a>
+                                         <?php }
+                                      if($user_zoo == 7 || $user_zoo == 10 || $user_zoo == 14){?>
+                                        <a class="dropdown-item" href="admin_index.php?url=admin_trs_index.php&url2=trs_showtotalzoo.php&zoo=14">สวนสัตว์นครราชสีมา</a>
+                                         <?php }
+                                       if($user_zoo == 7 || $user_zoo == 10 || $user_zoo == 15){?>
+                                        <a class="dropdown-item" href="admin_index.php?url=admin_trs_index.php&url2=trs_showtotalzoo.php&zoo=15">สวนสัตว์สงขลา</a>
+                                         <?php }       
+                                      if($user_zoo == 7 || $user_zoo == 10 || $user_zoo == 16){?>
+                                        <a class="dropdown-item" href="admin_index.php?url=admin_trs_index.php&url2=trs_showtotalzoo.php&zoo=16">สวนสัตว์อุบลราชธานี</a>
+                                         <?php }
+                                      if($user_zoo == 7 || $user_zoo == 10 || $user_zoo == 17){?>
+                                        <a class="dropdown-item" href="admin_index.php?url=admin_trs_index.php&url2=trs_showtotalzoo.php&zoo=17">สวนสัตว์ขอนแก่น</a>
+                                         <?php }
+                                      if($user_zoo == 7 || $user_zoo == 10 || $user_zoo == 18){?>
+                                        <a class="dropdown-item" href="admin_index.php?url=admin_trs_index.php&url2=trs_showtotalzoo.php&zoo=?">โครงการคชอาณาจักร</a>
+                                        <?php }?>
+                        
 	                <a class="nav-link" href="#">
 	                   รายงานจำนวนผู้เข้าชมสวนสัตว์เก่า(ตุลาคม 2559 - กันยายน 2560)
 	                </a>
+	                    <?php
+                                      if($user_zoo == 7 || $user_zoo == 10 || $user_zoo == 11){?>
+                                        <a class="dropdown-item" href="admin_index.php?url=admin_trs_index.php&url2=trs_showtotalzoo_old.php&zoo=11">สวนสัตว์ดุสิต</a>
+                                         <?php }
+                                      if($user_zoo == 7 || $user_zoo == 10 || $user_zoo == 12){?>
+                                        <a class="dropdown-item" href="admin_index.php?url=admin_trs_index.php&url2=trs_showtotalzoo_old.php&zoo=12">สวนสัตว์เปิดเขาเขียว</a>
+                                         <?php } 
+                                      if($user_zoo == 7 || $user_zoo == 10 || $user_zoo == 13){?>
+                                        <a class="dropdown-item" href="admin_index.php?url=admin_trs_index.php&url2=trs_showtotalzoo_old.php&zoo=13">สวนสัตว์เชียงใหม่</a>
+                                         <?php }
+                                      if($user_zoo == 7 || $user_zoo == 10 || $user_zoo == 14){?>
+                                        <a class="dropdown-item" href="admin_index.php?url=admin_trs_index.php&url2=trs_showtotalzoo_old.php&zoo=14">สวนสัตว์นครราชสีมา</a>
+                                         <?php }
+                                       if($user_zoo == 7 || $user_zoo == 10 || $user_zoo == 15){?>
+                                        <a class="dropdown-item" href="admin_index.php?url=admin_trs_index.php&url2=trs_showtotalzoo_old.php&zoo=15">สวนสัตว์สงขลา</a>
+                                         <?php }       
+                                      if($user_zoo == 7 || $user_zoo == 10 || $user_zoo == 16){?>
+                                        <a class="dropdown-item" href="admin_index.php?url=admin_trs_index.php&url2=trs_showtotalzoo_old.php&zoo=16">สวนสัตว์อุบลราชธานี</a>
+                                         <?php }
+                                      if($user_zoo == 7 || $user_zoo == 10 || $user_zoo == 17){?>
+                                        <a class="dropdown-item" href="admin_index.php?url=admin_trs_index.php&url2=trs_showtotalzoo_old.php&zoo=17">สวนสัตว์ขอนแก่น</a>
+                                         <?php }
+                                      if($user_zoo == 7 || $user_zoo == 10 || $user_zoo == 18){?>
+                                        <a class="dropdown-item" href="admin_index.php?url=admin_trs_index.php&url2=trs_showtotalzoo_old.php&zoo=?">โครงการคชอาณาจักร</a>
+                                        <?php }?>
                 </ul>
               <!-- end sub menu -->
               </li>
