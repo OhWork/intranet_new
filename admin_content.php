@@ -10,7 +10,7 @@
 	if(!empty($url)){
 		include_once $url;
 }else{
-    include_once 'admin_mainmenu.php';
+//     include_once 'admin_mainmenu.php';
 }
     
 ?>

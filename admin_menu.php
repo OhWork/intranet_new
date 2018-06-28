@@ -232,18 +232,18 @@
 		                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 		                   ตั้งค่า
 		                </a>
-<!--
+
 		                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
 				          <a class="dropdown-item" href="#">เพิ่มชนิดอุปกรณ์</a>
 				          <a class="dropdown-item" href="#">เพิ่มรายการปัญหา</a>
 				        </div>
--->
+
 			        </div>
                 </ul>
               <!-- end sub menu -->
 <!--               </li> -->
               <a class="nav-link collapsed" href="#trs" data-toggle="collapse" data-target="#trs">
-                    <span data-feather="chart"></span>
+                    <span data-feather="bar-chart"></span>
                   ระบบรายงานจำนวนผู้เข้าชม
                 </a>
                 <!-- sub menu -->

@@ -19,6 +19,7 @@
     } );
 } );
 </script>
+<h4>รายงานดำเนินการเสร็จ</h4>
   <!-- Nav tabs -->
   <nav class="nav nav-tabs" role="tablist" style="margin-top: 16px;width:100%">
       <?php if($user_zoo == 10){?>
