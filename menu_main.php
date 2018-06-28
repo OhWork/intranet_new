@@ -41,20 +41,26 @@
 					ระบบจองห้องประชุม
 					</a>
 				</li>
-				<li data-toggle="collapse" data-target="#cs" class="collapsed">
-					<a class="nav-link" href="#">
+				<li class="nav-item">
+					<a class="nav-link collapsed" href="#cs" data-toggle="collapse" data-target="#cs">
                     <span data-feather="cpu"></span>
 					ระบบแจ้งซ่อมคอมพิวเตอร์
 					</a>
+					
+				<ul class="sub-menu collapse on-sub" id="cs">
+		                <a class="nav-link collapsed" href="#cscase" data-toggle="collapse" data-target="#cscase">
+							ระบบแจ้งซ่อมคอมพิวเตอร์<span data-feather="chevron-right"></span>
+		                </a>
                 <!-- sub menu -->
-                <ul class="sub-menu collapse" id="cs">
-					<a class="nav-link" href="cs_index.php?url=cs_add_problem.php">
+                <li class="sub-menu collapse" id="cscase">
+					<a class="dropdown-item" href="cs_index.php?url=cs_add_problem.php">
 						แบบฟอร์มแจ้งซ่อม
 					</a>
-					<a class="nav-link" href="cs_index.php?url2=cs_show_problem.php&subpage=1">
+					<a class="dropdown-item" href="cs_index.php?url2=cs_show_problem.php&subpage=1">
 						รายการแจ้งซ่อม
 					</a>
-                </ul>
+                </li>
+				</ul>
 				<!-- end sub menu -->
 				</li>
 				<li data-toggle="collapse" data-target="#trs" class="collapsed">
