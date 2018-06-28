@@ -240,8 +240,7 @@
               </li>
               <?php }
 				if($_SESSION['systemallow_admin'] == 1){ ?>
-             <li data-toggle="collapse" data-target="#user" class="collapsed">
-                <a class="nav-link" href="#">
+                <a class="nav-link collapsed py-1" href="#user" data-toggle="collapse" data-target="#user">
                   <span data-feather="user"></span>
                   ระบบผู้ใข้
                 </a>
@@ -256,9 +255,12 @@
 	                <a class="nav-link dropuser" href="#">
 	                   <span data-feather="chevron-right"></span>Log-การใช้งาน
 	                </a>
-	                <a class="nav-link dropuser" href="#">
-	                   <span data-feather="settings"></span>ตั้งค่า
-	                </a>
+	                <a class="nav-link collapsed py-1" href="#usersetting" data-toggle="collapse" data-target="#usersetting"><span data-feather="settings"></span>ตั้งค่า</a>
+		               <ul class="sub-menu collapse" id="usersetting">
+			              <a class="dropdown-item" href="#">จัดการผู้ใช้</a>
+				          <a class="dropdown-item" href="#">จัดการฝ่าย</a>
+				          <a class="dropdown-item" href="#">จัดการสวนสัตว์</a>
+		               </ul>
                 </ul>
               <!-- end sub menu -->
               </li>
