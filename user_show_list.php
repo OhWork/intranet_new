@@ -34,7 +34,7 @@
 			$grid->pr = 'user_id';
 			$grid->header = array('<b><center>User</center></b>','<b><center>ชื่อ</center></b>','<b><center>นามสกุล</center></b>','<b><center>ฝ่าย</center></b>','<b><center>สังกัด</center></b>','<b><center>#</center></b>');
 			$grid->width = array('12%','15%','15%','25%','25%','8%');
-			$grid->edit = 'admin_index.php?url=admin_user_index.php&url2=user_add_user.php';
+			$grid->edit = 'admin_index.php?url=user_add_user.php';
 			$grid->name = 'table';
 			$grid->edittxt ='แก้ไข';
 			$grid->renderFromDB($columns,$rs);

@@ -31,12 +31,6 @@
             <div class="col-md-12" style="float: left;margin-top: 10px;">
                 <div class="col-md-2" style="float: left;"><a href="admin_index.php?url=user_add_zoo.php" class="btn btn-success">เพิ่มสวนสัตว์</a>
                 </div>
-                <div class="col-md-6" style="float: left;"><?php echo $selectzoo->selectFromTB('zoo','zoo_id','zoo_name',$r['typetools_typetools_id']);?>
-                </div>
-                <div class="col-md-2" style="float: left;"><?php echo $button; ?>
-                </div>
-                <div class="col-md-2" style="float: left;">
-                </div>
             </div>
             <div class="col-md-12" style="float: left;margin-top: 10px;">            
         <?php

@@ -59,7 +59,7 @@
 			$grid->pr = 'subzoo_id';
 			$grid->header = array('<b><center>ฝ่าย</center></b>','<b><center>ลำดับ</center></b>','<b><center>#</center></b>');
 			$grid->width = array('80%','10%','10%');
-			$grid->edit = 'admin_index.php?url=admin_user_index.php&url2=user_add_division.php';
+			$grid->edit = 'admin_index.php?url=user_add_division.php';
 			$grid->name = 'table';
 			$grid->edittxt ='แก้ไข';
 			$grid->renderFromDB($columns,$rs);
