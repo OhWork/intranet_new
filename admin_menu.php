@@ -39,7 +39,7 @@
 				if($_SESSION['systemallow_confer'] == 1){ ?>
               <li data-toggle="collapse" data-target="#confer" class="collapsed">
                 <a class="nav-link" href="#">
-                  <span data-feather="database"></span>
+                  <span data-feather="calendar"></span>
                   ระบบจองห้องประชุม
                 </a>
               <!-- sub menu -->
