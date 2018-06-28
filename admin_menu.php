@@ -94,8 +94,8 @@
               </li>
               <?php if($_SESSION['systemallow_drive'] == 1){ ?>
               <li class="nav-item">
-                <a class="nav-link" href="#">
-                    <span data-feather="log-in"></span>
+                <a class="nav-link" href="filemanager/dialog.php">
+                    <span data-feather="database"></span>
                   ระบบฝากไฟล์
                 </a>
               </li>
@@ -117,7 +117,8 @@
               </ul>
               <!-- end sub menu -->
               </li>
-              <?php } ?>
+             <?php }
+				if($_SESSION['systemallow_confer'] == 1){ ?>
               <li data-toggle="collapse" data-target="#confer" class="collapsed">
                 <a class="nav-link" href="#">
                   <span data-feather="database"></span>
@@ -133,6 +134,8 @@
 	                </a>
               </ul>
               <!-- end sub menu -->
+              <?php }
+				if($_SESSION['systemallow_service'] == 1){ ?>
               </li>
 					<a class="nav-link collapsed" href="#cs" data-toggle="collapse" data-target="#cs">
                     <span data-feather="cpu"></span>
@@ -241,6 +244,8 @@
 			        </div>
                 </ul>
               <!-- end sub menu -->
+              <?php }
+				if($_SESSION['systemallow_touristreport'] == 1){ ?>
 <!--               </li> -->
               <a class="nav-link collapsed" href="#trs" data-toggle="collapse" data-target="#trs">
                     <span data-feather="bar-chart"></span>
@@ -313,6 +318,8 @@
                 </ul>
               <!-- end sub menu -->
               </li>
+              <?php }
+    			if($_SESSION['systemallow_km'] == 1){ ?>
               <li data-toggle="collapse" data-target="#know" class="collapsed">
                 <a class="nav-link" href="#">
                      <span data-feather="calendar"></span>
@@ -329,6 +336,8 @@
                 </ul>
               <!-- end sub menu -->
               </li>
+              <?php }
+				if($_SESSION['systemallow_admin'] == 1){ ?>
              <li data-toggle="collapse" data-target="#user" class="collapsed">
                 <a class="nav-link" href="#">
                   <span data-feather="user"></span>
@@ -351,6 +360,7 @@
                 </ul>
               <!-- end sub menu -->
               </li>
+              <?php } ?>
             </ul>
 
 <!--
