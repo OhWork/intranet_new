@@ -18,7 +18,7 @@
 					</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" id="confer" href="cf_index.php"><span data-feather="calendar"></span>ระบบจองห้องประชุม</a>
+					<a class="nav-link" id="confer" href="index.php?url=cf_listcfr.php"><span data-feather="calendar"></span>ระบบจองห้องประชุม</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link collapsed py-1" href="#cs" data-toggle="collapse" data-target="#cs"><span data-feather="cpu"></span>ระบบแจ้งซ่อมคอมพิวเตอร์</a>

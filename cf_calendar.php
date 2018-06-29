@@ -218,17 +218,17 @@
 							?>
 							<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mrgcfmenu">
 								<div class="row">
-									<a id="roomzpo1" class="btn btn-info col-12 pcfmenu" href="cf_index.php?url2=cf_calendar.php&id=1" at='1'>ห้องประชุม 1</a>
+									<a id="roomzpo1" class="btn btn-info col-12 pcfmenu" href="index.php?url=cf_calendar.php&id=1" at='1'>ห้องประชุม 1</a>
 								</div>
 							</div>
 							<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" style="margin-top:8px;">
 								<div class="row">
-									<a id="roomzpo2" class="btn btn-info col-12 pcfmenu" href="cf_index.php?url2=cf_calendar.php&id=2" at='2'>ห้องประชุม 2</a>
+									<a id="roomzpo2" class="btn btn-info col-12 pcfmenu" href="index.php?url=cf_calendar.php&id=2" at='2'>ห้องประชุม 2</a>
 								</div>
 							</div>
 							<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" style="margin-top:8px;">
 								<div class="row">
-									<a id="roomzpo3" class="btn btn-info col-12 pcfmenu" href="cf_index.php?url2=cf_calendar.php&id=3" at='3'>ห้องประชุม 3</a>
+									<a id="roomzpo3" class="btn btn-info col-12 pcfmenu" href="index.php?url=cf_calendar.php&id=3" at='3'>ห้องประชุม 3</a>
 								</div>
 							</div>
 							<?php
@@ -239,22 +239,22 @@
 							?>
 							<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mrgcfmenu">
 								<div class="row">
-									<a id="roomdusit1" class="btn btn-info col-12 pcfmenu" href="cf_index.php?url2=cf_calendar.php&id=4" at='4'>ห้องประชุมเก้งเผือก</a>
+									<a id="roomdusit1" class="btn btn-info col-12 pcfmenu" href="index.php?url=cf_calendar.php&id=4" at='4'>ห้องประชุมเก้งเผือก</a>
 								</div>
 							</div>
 							<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" style="margin-top:8px;">
 								<div class="row">
-									<a id="roomdusit2" class="btn btn-info col-12 pcfmenu" href="cf_index.php?url2=cf_calendar.php&id=5" at='5'>ห้องประชุมกวางดาว</a>
+									<a id="roomdusit2" class="btn btn-info col-12 pcfmenu" href="index.php?url=cf_calendar.php&id=5" at='5'>ห้องประชุมกวางดาว</a>
 								</div>
 							</div>
 							<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" style="margin-top:8px;">
 								<div class="row">
-									<a id="roomdusit3" class="btn btn-info col-12 pcfmenu" href="cf_index.php?url2=cf_calendar.php&id=6" at='6'>ห้องประชุมมะลิ</a>
+									<a id="roomdusit3" class="btn btn-info col-12 pcfmenu" href="index.php?url=cf_calendar.php&id=6" at='6'>ห้องประชุมมะลิ</a>
 								</div>
 							</div>
 							<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12v" style="margin-top:8px;">
 								<div class="row">
-									<a id="roomdusit4" class="btn btn-info col-12 pcfmenu" href="cf_index.php?url2=cf_calendar.php&id=7" at='7'>ห้องประชุมสักทอง</a>
+									<a id="roomdusit4" class="btn btn-info col-12 pcfmenu" href="index.php?url=cf_calendar.php&id=7" at='7'>ห้องประชุมสักทอง</a>
 								</div>
 							</div>
 							<?php
@@ -265,12 +265,12 @@
 							?>
 							<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mrgcfmenu">
 								<div class="row">
-									<a id="roomkorach1" class="btn btn-info col-12 pcfmenu" href="cf_index.php?url2=cf_calendar.php&id=8" at='4'>ห้องประชุมฝ่ายบริหาร</a>
+									<a id="roomkorach1" class="btn btn-info col-12 pcfmenu" href="index.php?url=cf_calendar.php&id=8" at='4'>ห้องประชุมฝ่ายบริหาร</a>
 								</div>
 							</div>
 							<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" style="margin-top:8px;">
 								<div class="row">
-									<a id="roomkorach2" class="btn btn-info col-12 pcfmenu" href="cf_index.php?url2=cf_calendar.php&id=9" at='5'>ห้องประชุมโรงบาลสัตว์</a>
+									<a id="roomkorach2" class="btn btn-info col-12 pcfmenu" href="index.php?url=cf_calendar.php&id=9" at='5'>ห้องประชุมโรงบาลสัตว์</a>
 								</div>
 							</div>
 							<?php
@@ -281,7 +281,7 @@
 							?>
 							<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mrgcfmenu">
 								<div class="row">
-									<a id="roomkhonkean1" class="btn btn-info col-12 pcfmenu" href="cf_index.php?url2=cf_calendar.php&id=10" at='4'>ห้องประชุมฝ่ายบริหารงานทั่วไป</a>
+									<a id="roomkhonkean1" class="btn btn-info col-12 pcfmenu" href="index.php?url=cf_calendar.php&id=10" at='4'>ห้องประชุมฝ่ายบริหารงานทั่วไป</a>
 								</div>
 							</div>
 
@@ -293,7 +293,7 @@
 							?>
 							<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mrgcfmenu">
 								<div class="row">
-									<a id="roomchangmai1" class="btn btn-info col-12 pcfmenu" href="cf_index.php?url2=cf_calendar.php&id=11" at='4'>ห้องประชุมชั้น 2 อาคารบริการนักท่องเที่ยว</a>
+									<a id="roomchangmai1" class="btn btn-info col-12 pcfmenu" href="index.php?url=cf_calendar.php&id=11" at='4'>ห้องประชุมชั้น 2 อาคารบริการนักท่องเที่ยว</a>
 								</div>
 							</div>
 
@@ -307,17 +307,17 @@
 								<div class="row">
 									<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" style="margin-top:8px;">
 										<div class="row">
-											<a id="roomubon1" class="btn btn-info col-12 pcfmenu" href="cf_index.php?url2=cf_calendar.php&id=12" at='4'>ห้องประชุมอาคารสำนักงาน</a>
+											<a id="roomubon1" class="btn btn-info col-12 pcfmenu" href="index.php?url=cf_calendar.php&id=12" at='4'>ห้องประชุมอาคารสำนักงาน</a>
 										</div>
 									</div>
 									<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" style="margin-top:8px;">
 										<div class="row">
-											<a id="roomubon2" class="btn btn-info col-12 pcfmenu" href="cf_index.php?url2=cf_calendar.php&id=16" at='4'>ห้องประชุม 2</a>
+											<a id="roomubon2" class="btn btn-info col-12 pcfmenu" href="index.php?url=cf_calendar.php&id=16" at='4'>ห้องประชุม 2</a>
 										</div>
 									</div>
 									<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" style="margin-top:8px;">
 										<div class="row">
-											<a id="roomubon3" class="btn btn-info col-12 pcfmenu" href="cf_index.php?url2=cf_calendar.php&id=18" at='4'>ห้องประชุม 1 (ห้องประชุมใหญ่)</a>
+											<a id="roomubon3" class="btn btn-info col-12 pcfmenu" href="index.php?url=cf_calendar.php&id=18" at='4'>ห้องประชุม 1 (ห้องประชุมใหญ่)</a>
 										</div>
 									</div>
 								</div>
@@ -331,7 +331,7 @@
 							?>
 							<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mrgcfmenu">
 								<div class="row">
-									<a id="roomsongkhla1" class="btn btn-info col-12 pcfmenu" href="cf_index.php?url2=cf_calendar.php&id=13" at='4'>ห้องประชุมนกเงือก</a>
+									<a id="roomsongkhla1" class="btn btn-info col-12 pcfmenu" href="index.php?url=cf_calendar.php&id=13" at='4'>ห้องประชุมนกเงือก</a>
 								</div>
 							</div>
 
@@ -345,17 +345,17 @@
 								<div class="row">
 									<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" style="margin-top:8px;">
 										<div class="row">
-											<a id="roomkkoz1" class="btn btn-info col-12 pcfmenu" href="cf_index.php?url2=cf_calendar.php&id=15" at='4'>ห้องประชุมบาหลี</a>
+											<a id="roomkkoz1" class="btn btn-info col-12 pcfmenu" href="index.php?url=cf_calendar.php&id=15" at='4'>ห้องประชุมบาหลี</a>
 										</div>
 									</div>
 									<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" style="margin-top:8px;">
 										<div class="row">
-											<a id="roomkkoz2" class="btn btn-info col-12 pcfmenu" href="cf_index.php?url2=cf_calendar.php&id=19" at='4'>ห้องประชุมบำรุงสัตว์</a>
+											<a id="roomkkoz2" class="btn btn-info col-12 pcfmenu" href="index.php?url=cf_calendar.php&id=19" at='4'>ห้องประชุมบำรุงสัตว์</a>
 										</div>
 									</div>
 									<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" style="margin-top:8px;">
 										<div class="row">
-											<a id="roomkkoz3" class="btn btn-info col-12 pcfmenu" href="cf_index.php?url2=cf_calendar.php&id=20" at='4'>ห้องประชุมศูนย์บริการนักท่องเที่ยว(ห้องม่วง)</a>
+											<a id="roomkkoz3" class="btn btn-info col-12 pcfmenu" href="index.php?url=cf_calendar.php&id=20" at='4'>ห้องประชุมศูนย์บริการนักท่องเที่ยว(ห้องม่วง)</a>
 										</div>
 									</div>
 								</div>
@@ -369,7 +369,7 @@
 							?>
 							<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mrgcfmenu">
 								<div class="row">
-									<a id="roomsr1" class="btn btn-info col-12 pcfmenu" href="cf_index.php?url2=cf_calendar.php&id=17" at='4'>ห้องประชุมคชอาณาจักร</a>
+									<a id="roomsr1" class="btn btn-info col-12 pcfmenu" href="index.php?url=cf_calendar.php&id=17" at='4'>ห้องประชุมคชอาณาจักร</a>
 								</div>
 							</div>
 							<?php
@@ -377,7 +377,7 @@
 							?>
 							<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mrgcfmenuok">
 								<div class="row">
-									<a href="cf_index.php?url2=cf_addday.php&id=<?php echo $id;?>" class="btn btn-success col-md-12" id="submitbutton">> คลิกเพื่อจอง <</a>
+									<a href="index.php?url=cf_addday.php&id=<?php echo $id;?>" class="btn btn-success col-md-12" id="submitbutton">> คลิกเพื่อจอง <</a>
 								</div>
 							</div>
 							<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 cfstatus">

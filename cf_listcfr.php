@@ -26,7 +26,7 @@
 											<div class="row">
 												<div class="col-xl-5 col-lg-5 col-md-5 col-sm-3"></div>
 												<div class="btn col-xl-7 col-lg-7 col-md-7 col-sm-9 col-12">
-													<a class="btn btn-info col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" href="cf_index.php?url2=cf_calendar.php&id=1">
+													<a class="btn btn-info col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" href="index.php?url=cf_calendar.php&id=1">
 													คลิกเพื่อจองห้องประชุม
 													</a>
 												</div>
@@ -68,7 +68,7 @@
 											<div class="row">
 												<div class="col-xl-5 col-lg-5 col-md-5 col-sm-3"></div>
 												<div class="btn col-xl-7 col-lg-7 col-md-7 col-sm-9 col-12">
-													<a class="btn btn-info col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" href="cf_index.php?url2=cf_calendar.php&id=4">
+													<a class="btn btn-info col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" href="index.php?url=cf_calendar.php&id=4">
 													คลิกเพื่อจองห้องประชุม
 													</a>
 												</div>
@@ -105,7 +105,7 @@
 											<div class='row'>
 												<div class="col-xl-5 col-lg-5 col-md-5 col-sm-3"></div>
 												<div class="btn col-xl-7 col-lg-7 col-md-7 col-sm-9 col-12">
-													<a class="btn btn-info col-md-12" href="cf_index.php?url2=cf_calendar.php&id=15">
+													<a class="btn btn-info col-md-12" href="index.php?url=cf_calendar.php&id=15">
 													คลิกเพื่อจองห้องประชุม
 													</a>
 												</div>
@@ -144,7 +144,7 @@
 											<div class='row'>
 												<div class="col-xl-5 col-lg-5 col-md-5 col-sm-3"></div>
 												<div class="btn col-xl-7 col-lg-7 col-md-7 col-sm-9 col-12">
-													<a class="btn btn-info col-md-12" href="cf_index.php?url2=cf_calendar.php&id=11">
+													<a class="btn btn-info col-md-12" href="index.php?url=cf_calendar.php&id=11">
 													คลิกเพื่อจองห้องประชุม
 													</a>
 												</div>
@@ -180,7 +180,7 @@
 											<div class='row'>
 												<div class="col-xl-5 col-lg-5 col-md-5 col-sm-3"></div>
 												<div class="btn col-xl-7 col-lg-7 col-md-7 col-sm-9 col-12">
-													<a class="btn btn-info col-md-12" href="cf_index.php?url2=cf_calendar.php&id=8">
+													<a class="btn btn-info col-md-12" href="index.php?url=cf_calendar.php&id=8">
 													คลิกเพื่อจองห้องประชุม
 													</a>
 												</div>
@@ -220,7 +220,7 @@
 											<div class='row'>
 												<div class="col-xl-5 col-lg-5 col-md-5 col-sm-3"></div>
 												<div class="btn col-xl-7 col-lg-7 col-md-7 col-sm-9 col-12">
-													<a class="btn btn-info col-md-12" href="cf_index.php?url2=cf_calendar.php&id=13">
+													<a class="btn btn-info col-md-12" href="index.php?url=cf_calendar.php&id=13">
 													คลิกเพื่อจองห้องประชุม
 													</a>
 												</div>
@@ -257,7 +257,7 @@
 											<div class='row'>
 												<div class="col-xl-5 col-lg-5 col-md-5 col-sm-3"></div>
 												<div class="btn col-xl-7 col-lg-7 col-md-7 col-sm-9 col-12">
-													<a class="btn btn-info col-md-12" href="cf_index.php?url2=cf_calendar.php&id=12">
+													<a class="btn btn-info col-md-12" href="index.php?url=cf_calendar.php&id=12">
 													คลิกเพื่อจองห้องประชุม
 													</a>
 												</div>
@@ -296,7 +296,7 @@
 											<div class='row'>
 												<div class="col-xl-5 col-lg-5 col-md-5 col-sm-3"></div>
 												<div class="btn col-xl-7 col-lg-7 col-md-7 col-sm-9 col-12">
-													<a class="btn btn-info col-md-12" href="cf_index.php?url2=cf_calendar.php&id=10">
+													<a class="btn btn-info col-md-12" href="index.php?url=cf_calendar.php&id=10">
 													คลิกเพื่อจองห้องประชุม
 													</a>
 												</div>
@@ -329,7 +329,7 @@
 											<div class='row'>
 												<div class="col-xl-5 col-lg-5 col-md-5 col-sm-3"></div>
 												<div class="btn col-xl-7 col-lg-7 col-md-7 col-sm-9 col-12">
-													<a class="btn btn-info col-md-12" href="cf_index.php?url2=cf_calendar.php&id=17">
+													<a class="btn btn-info col-md-12" href="index.php?url=cf_calendar.php&id=17">
 													คลิกเพื่อจองห้องประชุม
 													</a>
 												</div>
