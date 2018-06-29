@@ -24,21 +24,21 @@
 					<a class="nav-link collapsed py-1" href="#cs" data-toggle="collapse" data-target="#cs"><span data-feather="cpu"></span>ระบบแจ้งซ่อมคอมพิวเตอร์</a>
 					<ul class="sub-menu collapse on-sub" id="cs">
 	                <!-- sub menu -->
-						<a class="dropdown-item" href="cs_index.php?url=cs_add_problem.php">แบบฟอร์มแจ้งซ่อม</a>
-						<a class="dropdown-item" href="cs_index.php?url2=cs_show_problem.php&subpage=1">รายการแจ้งซ่อม</a>
+						<a class="dropdown-item" href="index.php?url=cs_add_problem.php">แบบฟอร์มแจ้งซ่อม</a>
+						<a class="dropdown-item" href="index.php?url=cs_show_problem.php&subpage=1">รายการแจ้งซ่อม</a>
 					</ul>
 				</li>
 				<li class="nav-item">
 				<a class="nav-link collapsed py-1" href="#trs" data-toggle="collapse" data-target="#trs"><span data-feather="bar-chart"></span>ระบบรายงานจำนวนผู้เข้าชม</a>
                 <!-- sub menu -->
 	                <ul class="sub-menu collapse" id="trs">
-						<a class="nav-link" href="trs_index.php?url=trs_showallzoo.php">
+						<a class="nav-link" href="index.php?url=trs_showallzoo.php">
 						รายงานจำนวนผู้เข้าชมของสวนสัตว์
 						</a>
-						<a class="nav-link" href="trs_index.php?url2=trs_showallzoo_old.php">
+						<a class="nav-link" href="index.php?url=trs_showallzoo_old.php">
 						รายงานจำนวนผู้เข้าชมของสวนสัตว์แบบเก่า
 						</a>
-						<a class="nav-link" href="trs_index.php?url2=trs_showallvehicle.php">
+						<a class="nav-link" href="index.php?url=trs_showallvehicle.php">
 						รายงานจำนวนยานพาหนะ
 						</a>
 	                </ul>
