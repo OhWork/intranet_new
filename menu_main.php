@@ -1,5 +1,5 @@
 <div class="list-group boxlefttop ">
-	<nav class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2 d-none d-md-block bg-light sidebar">
+	<nav class="d-none d-md-block bg-light sidebar">
         <div class="sidebar-sticky">
             <ul class="nav flex-column">
 				<li class="nav-item">
