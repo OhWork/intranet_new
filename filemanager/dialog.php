@@ -26,7 +26,7 @@ if(isset($_POST['submit'])){
 }else{
 
 $lang = $config['default_language'];
-$languages = include 'lang/languages.php';
+$languages = include 'filemanager/lang/languages.php';
 if (isset($_GET['lang']))
 {
 	$lang = strip_tags($_GET['lang']);
@@ -39,7 +39,7 @@ if (isset($_GET['lang']))
 		$_SESSION['RF']['language'] = $lang;
 	}
 }
-include 'include/utils.php';
+include 'filemanager/include/utils.php';
 
 if (isset($_GET['fldr'])
 	&& !empty($_GET['fldr'])
@@ -358,31 +358,31 @@ $get_params = http_build_query($get_params);
 	});
 		}
 	</script>
-	<script src="js/include.js?v=<?php echo $version; ?>"></script>
+	<script src="filemanager/js/include.js?v=<?php echo $version; ?>"></script>
 </head>
 <body>
 <!-- The Templates plugin is included to render the upload/download listings -->
-<script src="js/tmpl.min.js"></script>
+<script src="filemanager/js/tmpl.min.js"></script>
 <!-- The Load Image plugin is included for the preview images and image resizing functionality -->
-<script src="js/load-image.all.min.js"></script>
+<script src="filemanager/js/load-image.all.min.js"></script>
 <!-- The Canvas to Blob plugin is included for image resizing functionality -->
-<script src="js/canvas-to-blob.min.js"></script>
+<script src="filemanager/js/canvas-to-blob.min.js"></script>
 <!-- The Iframe Transport is required for browsers without support for XHR file uploads -->
-<script src="js/jquery.iframe-transport.js"></script>
+<script src="filemanager/js/jquery.iframe-transport.js"></script>
 <!-- The basic File Upload plugin -->
-<script src="js/jquery.fileupload.js"></script>
+<script src="filemanager/js/jquery.fileupload.js"></script>
 <!-- The File Upload processing plugin -->
-<script src="js/jquery.fileupload-process.js"></script>
+<script src="filemanager/js/jquery.fileupload-process.js"></script>
 <!-- The File Upload image preview & resize plugin -->
-<script src="js/jquery.fileupload-image.js"></script>
+<script src="filemanager/js/jquery.fileupload-image.js"></script>
 <!-- The File Upload audio preview plugin -->
-<script src="js/jquery.fileupload-audio.js"></script>
+<script src="filemanager/js/jquery.fileupload-audio.js"></script>
 <!-- The File Upload video preview plugin -->
-<script src="js/jquery.fileupload-video.js"></script>
+<script src="filemanager/js/jquery.fileupload-video.js"></script>
 <!-- The File Upload validation plugin -->
-<script src="js/jquery.fileupload-validate.js"></script>
+<script src="filemanager/js/jquery.fileupload-validate.js"></script>
 <!-- The File Upload user interface plugin -->
-<script src="js/jquery.fileupload-ui.js"></script>
+<script src="filemanager/js/jquery.fileupload-ui.js"></script>
 
 	<input type="hidden" id="ftp" value="<?php echo !!$ftp; ?>" />
 	<input type="hidden" id="popup" value="<?php echo $popup;?>" />
@@ -722,7 +722,7 @@ $files=$sorted;
 
 ?>
 <!-- header div start -->
-<div class="navbar navbar-fixed-top">
+<div class="navbar">
 	<div class="navbar-inner">
 		<div class="container-fluid">
 		<button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
@@ -806,7 +806,7 @@ $files=$sorted;
 
 	<!-- breadcrumb div start -->
 
-	<div class="row-fluid" style="margin-top : 170px">
+	<div class="row-fluid">
 	<?php
 		$link="dialog.php?".$get_params;
 	?>
@@ -1025,13 +1025,13 @@ if(!empty($_POST['searchall'])){
 				<a class="folder-link" href="dialog.php?<?php echo $get_params.rawurlencode($src)."&".($callback?'callback='.$callback."&":'').uniqid() ?>">
 					<div class="img-precontainer">
 							<div class="img-container directory"><span></span>
-							<img class="directory-img" data-src="img/<?php echo $icon_theme;?>/folder<?php if($file==".."){ echo "_back"; }?>.png" />
+							<img class="directory-img" data-src="filemanager/img/<?php echo $icon_theme;?>/folder<?php if($file==".."){ echo "_back"; }?>.png" />
 							</div>
 					</div>
 					<div class="img-precontainer-mini directory">
 							<div class="img-container-mini">
 							<span></span>
-							<img class="directory-img" data-src="img/<?php echo $icon_theme;?>/folder<?php if($file==".."){ echo "_back"; }?>.png" />
+							<img class="directory-img" data-src="filemanager/img/<?php echo $icon_theme;?>/folder<?php if($file==".."){ echo "_back"; }?>.png" />
 							</div>
 					</div>
 			<?php if($file==".."){ ?>
@@ -1154,10 +1154,10 @@ if(!empty($_POST['searchall'])){
 				$no_thumb=false;
 				if($src_thumb==""){
 					$no_thumb=true;
-					if(file_exists('img/'.$icon_theme.'/'.$file_array['extension'].".jpg")){
-						$src_thumb ='img/'.$icon_theme.'/'.$file_array['extension'].".jpg";
+					if(file_exists('filemanager/img/'.$icon_theme.'/'.$file_array['extension'].".jpg")){
+						$src_thumb ='filemanager/img/'.$icon_theme.'/'.$file_array['extension'].".jpg";
 					}else{
-						$src_thumb = "img/".$icon_theme."/default.jpg";
+						$src_thumb = "filemanager/img/".$icon_theme."/default.jpg";
 					}
 					$is_icon_thumb=true;
 				}
@@ -1296,7 +1296,7 @@ if(!empty($_POST['searchall'])){
 	<!-- loading div start -->
 	<div id="loading_container" style="display:none;">
 		<div id="loading" style="background-color:#000; position:fixed; width:100%; height:100%; top:0px; left:0px;z-index:100000"></div>
-		<img id="loading_animation" src="img/storing_animation.gif" alt="loading" style="z-index:10001; margin-left:-32px; margin-top:-32px; position:fixed; left:50%; top:50%"/>
+		<img id="loading_animation" src="filemanager/img/storing_animation.gif" alt="loading" style="z-index:10001; margin-left:-32px; margin-top:-32px; position:fixed; left:50%; top:50%"/>
 	</div>
 	<!-- loading div end -->
 

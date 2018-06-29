@@ -14,11 +14,11 @@
     				       if($countroomzpo[0] > 0){
         				       while ($showroomzpo = mysqli_fetch_array($rsroomzpo2,MYSQLI_ASSOC)){
     			        ?>
-    		            
+
     		                <a class="dropdown-item bnmenusub2" href="admin_index.php?url=cf_showroom.php&id=<?php echo $showroomzpo['confer_id'];?>">
         		                <?php echo $showroomzpo['confer_name'];?>
         		            </a>
-        		        
+
         		            <?php
             		          }
         			     }else{ ?>
@@ -33,11 +33,11 @@
     				       if($countroomzpo[0] > 0){
         				       while ($showroomzpo = mysqli_fetch_array($rsroomzpo2,MYSQLI_ASSOC)){
     			        ?>
-    		            
+
     		                <a class="dropdown-item bnmenusub2" href="admin_index.php?url=cf_showroom.php&id=<?php echo $showroomzpo['confer_id'];?>">
         		                <?php echo $showroomzpo['confer_name'];?>
         		            </a>
-        		        
+
         		            <?php
             		          }
         			     }else{ ?>
@@ -52,11 +52,11 @@
     				       if($countroomzpo[0] > 0){
         				       while ($showroomzpo = mysqli_fetch_array($rsroomzpo2,MYSQLI_ASSOC)){
     			        ?>
-    		            
+
     		                <a class="dropdown-item bnmenusub2" href="admin_index.php?url=cf_showroom.php&id=<?php echo $showroomzpo['confer_id'];?>">
         		                <?php echo $showroomzpo['confer_name'];?>
         		            </a>
-        		        
+
         		            <?php
             		          }
         			     }else{ ?>
@@ -71,11 +71,11 @@
     				       if($countroomzpo[0] > 0){
         				       while ($showroomzpo = mysqli_fetch_array($rsroomzpo2,MYSQLI_ASSOC)){
     			        ?>
-    		            
+
     		                <a class="dropdown-item bnmenusub2" href="admin_index.php?url=cf_showroom.php&id=<?php echo $showroomzpo['confer_id'];?>">
         		                <?php echo $showroomzpo['confer_name'];?>
         		            </a>
-        		        
+
         		            <?php
             		          }
         			     }else{ ?>
@@ -90,11 +90,11 @@
     				       if($countroomzpo[0] > 0){
         				       while ($showroomzpo = mysqli_fetch_array($rsroomzpo2,MYSQLI_ASSOC)){
     			        ?>
-    		            
+
     		                <a class="dropdown-item bnmenusub2" href="admin_index.php?url=cf_showroom.php&id=<?php echo $showroomzpo['confer_id'];?>">
         		                <?php echo $showroomzpo['confer_name'];?>
         		            </a>
-        		        
+
         		            <?php
             		          }
         			     }else{ ?>
@@ -109,11 +109,11 @@
     				       if($countroomzpo[0] > 0){
         				       while ($showroomzpo = mysqli_fetch_array($rsroomzpo2,MYSQLI_ASSOC)){
     			        ?>
-    		            
+
     		                <a class="dropdown-item bnmenusub2" href="admin_index.php?url=cf_showroom.php&id=<?php echo $showroomzpo['confer_id'];?>">
         		                <?php echo $showroomzpo['confer_name'];?>
         		            </a>
-        		        
+
         		            <?php
             		          }
         			     }else{ ?>
@@ -128,11 +128,11 @@
     				       if($countroomzpo[0] > 0){
         				       while ($showroomzpo = mysqli_fetch_array($rsroomzpo2,MYSQLI_ASSOC)){
     			        ?>
-    		            
+
     		                <a class="dropdown-item bnmenusub2" href="admin_index.php?url=cf_showroom.php&id=<?php echo $showroomzpo['confer_id'];?>">
         		                <?php echo $showroomzpo['confer_name'];?>
         		            </a>
-        		        
+
         		            <?php
             		          }
         			     }else{ ?>
@@ -147,11 +147,11 @@
     				       if($countroomzpo[0] > 0){
         				       while ($showroomzpo = mysqli_fetch_array($rsroomzpo2,MYSQLI_ASSOC)){
     			        ?>
-    		            
+
     		                <a class="dropdown-item bnmenusub2" href="admin_index.php?url=cf_showroom.php&id=<?php echo $showroomzpo['confer_id'];?>">
         		                <?php echo $showroomzpo['confer_name'];?>
         		            </a>
-        		        
+
         		            <?php
             		          }
         			     }else{ ?>
@@ -166,11 +166,11 @@
     				       if($countroomzpo[0] > 0){
         				       while ($showroomzpo = mysqli_fetch_array($rsroomzpo2,MYSQLI_ASSOC)){
     			        ?>
-    		            
+
     		                <a class="dropdown-item bnmenusub2" href="admin_index.php?url=cf_showroom.php&id=<?php echo $showroomzpo['confer_id'];?>">
         		                <?php echo $showroomzpo['confer_name'];?>
         		            </a>
-        		        
+
         		            <?php
             		          }
         			     }else{ ?>
@@ -181,7 +181,7 @@
     	            <a class="nav-link collapsed py-1" href="#cfo" data-toggle="collapse" data-target="#cfo">จัดการห้องประชุมทางไกล</a>
 
 	                <ul class="sub-menu collapse bnmenusub1" id="cfo">
-                    
+
 	                <a class="dropdown-item bnmenusub2" href="#cfosub" data-toggle="collapse" data-target="#cfosub"><span data-feather="chevron-right"></span>องค์การสวนสัตว์</a>
     	                <ul class="sub-menu collapse bnmenusub1" id="cfosub">
     	                <?php $rsroomzpo =$db->countTable('conferroom','zoo_zoo_id',3)->execute();
@@ -190,11 +190,11 @@
     				       if($countroomzpo[0] > 0){
         				       while ($showroomzpo = mysqli_fetch_array($rsroomzpo2,MYSQLI_ASSOC)){
     			        ?>
-    		            
+
     		                <a class="dropdown-item bnmenusub2" href="admin_index.php?url=cf_showroom_online.php&id=<?php echo $showroomzpo['confer_id'];?>">
         		                <?php echo $showroomzpo['confer_name'];?>
         		            </a>
-        		        
+
         		            <?php
             		          }
         			     }else{ ?>
@@ -209,11 +209,11 @@
     				       if($countroomzpo[0] > 0){
         				       while ($showroomzpo = mysqli_fetch_array($rsroomzpo2,MYSQLI_ASSOC)){
     			        ?>
-    		            
+
     		                <a class="dropdown-item bnmenusub2" href="admin_index.php?url=cf_showroom_online.php&id=<?php echo $showroomzpo['confer_id'];?>">
         		                <?php echo $showroomzpo['confer_name'];?>
         		            </a>
-        		        
+
         		            <?php
             		          }
         			     }else{ ?>
@@ -228,11 +228,11 @@
     				       if($countroomzpo[0] > 0){
         				       while ($showroomzpo = mysqli_fetch_array($rsroomzpo2,MYSQLI_ASSOC)){
     			        ?>
-    		            
+
     		                <a class="dropdown-item bnmenusub2" href="admin_index.php?url=cf_showroom_online.php&id=<?php echo $showroomzpo['confer_id'];?>">
         		                <?php echo $showroomzpo['confer_name'];?>
         		            </a>
-        		        
+
         		            <?php
             		          }
         			     }else{ ?>
@@ -247,11 +247,11 @@
     				       if($countroomzpo[0] > 0){
         				       while ($showroomzpo = mysqli_fetch_array($rsroomzpo2,MYSQLI_ASSOC)){
     			        ?>
-    		            
+
     		                <a class="dropdown-item bnmenusub2" href="admin_index.php?url=cf_showroom_online.php&id=<?php echo $showroomzpo['confer_id'];?>">
         		                <?php echo $showroomzpo['confer_name'];?>
         		            </a>
-        		        
+
         		            <?php
             		          }
         			     }else{ ?>
@@ -266,11 +266,11 @@
     				       if($countroomzpo[0] > 0){
         				       while ($showroomzpo = mysqli_fetch_array($rsroomzpo2,MYSQLI_ASSOC)){
     			        ?>
-    		            
+
     		                <a class="dropdown-item bnmenusub2" href="admin_index.php?url=cf_showroom_online.php&id=<?php echo $showroomzpo['confer_id'];?>">
         		                <?php echo $showroomzpo['confer_name'];?>
         		            </a>
-        		        
+
         		            <?php
             		          }
         			     }else{ ?>
@@ -285,11 +285,11 @@
     				       if($countroomzpo[0] > 0){
         				       while ($showroomzpo = mysqli_fetch_array($rsroomzpo2,MYSQLI_ASSOC)){
     			        ?>
-    		            
+
     		                <a class="dropdown-item bnmenusub2" href="admin_index.php?url=cf_showroom_online.php&id=<?php echo $showroomzpo['confer_id'];?>">
         		                <?php echo $showroomzpo['confer_name'];?>
         		            </a>
-        		        
+
         		            <?php
             		          }
         			     }else{ ?>
@@ -304,11 +304,11 @@
     				       if($countroomzpo[0] > 0){
         				       while ($showroomzpo = mysqli_fetch_array($rsroomzpo2,MYSQLI_ASSOC)){
     			        ?>
-    		            
+
     		                <a class="dropdown-item bnmenusub2" href="admin_index.php?url=cf_showroom_online.php&id=<?php echo $showroomzpo['confer_id'];?>">
         		                <?php echo $showroomzpo['confer_name'];?>
         		            </a>
-        		        
+
         		            <?php
             		          }
         			     }else{ ?>
@@ -323,11 +323,11 @@
     				       if($countroomzpo[0] > 0){
         				       while ($showroomzpo = mysqli_fetch_array($rsroomzpo2,MYSQLI_ASSOC)){
     			        ?>
-    		            
+
     		                <a class="dropdown-item bnmenusub2" href="admin_index.php?url=cf_showroom_online.php&id=<?php echo $showroomzpo['confer_id'];?>">
         		                <?php echo $showroomzpo['confer_name'];?>
         		            </a>
-        		        
+
         		            <?php
             		          }
         			     }else{ ?>
@@ -342,18 +342,36 @@
     				       if($countroomzpo[0] > 0){
         				       while ($showroomzpo = mysqli_fetch_array($rsroomzpo2,MYSQLI_ASSOC)){
     			        ?>
-    		            
+
     		                <a class="dropdown-item bnmenusub2" href="admin_index.php?url=cf_showroom_online.php&id=<?php echo $showroomzpo['confer_id'];?>">
         		                <?php echo $showroomzpo['confer_name'];?>
         		            </a>
-        		        
+
         		            <?php
             		          }
         			     }else{ ?>
     				             <li class="dropdown-item"><a class="dropdown-item" href="#">ยังไม่มีข้อมูล</a></li>
     			      <?php } ?>
     			      </ul>
-	                </ul>    
+	                </ul>
+	                <a class="nav-link collapsed py-1" href="#cfreport" data-toggle="collapse" data-target="#cfreport">รายงาน</a>
+		                <ul class="sub-menu collapse bnmenusub1" id="cfreport">
+				         <a class="nav-link collapsed py-1" href="#cfreportcon" data-toggle="collapse" data-target="#cfreportcon"><span data-feather="chevron-right"></span>รายงานห้องประชุม</a>
+				          <ul class="sub-menu collapse" id="cfreportcon">
+				          <a class="dropdown-item" href="#"><span data-feather="chevron-right"></span>รายงานห้องประชุมรายห้อง</a>
+				          <a class="dropdown-item" href="#"><span data-feather="chevron-right"></span>รายงานห้องประชุมรวม</a>
+		               </ul>
+				         <a class="nav-link collapsed py-1" href="#cfreportvdocon" data-toggle="collapse" data-target="#cfreportvdocon"><span data-feather="chevron-right"></span>รายงานห้องประชุมออนไลน์</a>
+				         <ul class="sub-menu collapse" id="cfreportvdocon">
+				          <a class="dropdown-item" href="#"><span data-feather="chevron-right"></span>รายงานห้องประชุมออนไลน์รายห้อง</a>
+				          <a class="dropdown-item" href="#"><span data-feather="chevron-right"></span>รายงานห้องประชุมออนไลน์รวม</a>
+		               </ul>
+				        </ul>
+	                <a class="nav-link collapsed py-1" href="#cfsetting" data-toggle="collapse" data-target="#cfsetting"><span data-feather="settings"></span>ตั้งค่า</a>
+		               <ul class="sub-menu collapse" id="cfsetting">
+				          <a class="dropdown-item" href="#"><span data-feather="chevron-right"></span>จัดการห้องประชุม</a>
+				          <a class="dropdown-item" href="#"><span data-feather="chevron-right"></span>จัดการหัวข้อห้องประชุม</a>
+		               </ul>
               </ul>
               <!-- end sub menu -->
               </li>
