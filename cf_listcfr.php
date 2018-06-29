@@ -171,13 +171,13 @@
     									1.ห้องประชุมนกเงือก<br>
 									</p>
 								</div>
-								<div class='col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2'>
-									<div class='row'>
-										<a class="btn btn-info col-md-12 cfok" href="index.php?url=cf_calendar.php&id=13">
-										คลิกเพื่อจองห้องประชุม
-										</a>
-									</div>
-								</div>
+							</div>
+						</div>
+						<div class='col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2'>
+							<div class='row'>
+								<a class="btn btn-info col-md-12 cfok" href="index.php?url=cf_calendar.php&id=13">
+								คลิกเพื่อจองห้องประชุม
+								</a>
 							</div>
 						</div>
 					</div>
@@ -235,7 +235,7 @@
 								</div>
 							</div>
 						</div>
-						<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12'>
+						<div class='col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2'>
 							<div class='row'>
 								<a class="btn btn-info col-md-12 cfok" href="index.php?url=cf_calendar.php&id=10">
 									คลิกเพื่อจองห้องประชุม
