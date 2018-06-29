@@ -1,10 +1,7 @@
 <?php
-include '../database/db_tools.php';
-include '../connect.php';
-error_reporting(0);
 $time = time();
 
-$config = include 'config/config.php';
+$config = include 'filemanager/config/config.php';
 
 
 //TODO switch to array
@@ -25,7 +22,7 @@ if (USE_ACCESS_KEYS == TRUE){
 $_SESSION['RF']["verify"] = "RESPONSIVEfilemanager";
 
 if(isset($_POST['submit'])){
-	include 'upload.php';
+	include 'filemanager/upload.php';
 }else{
 
 $lang = $config['default_language'];
@@ -286,13 +283,13 @@ $get_params = http_build_query($get_params);
 		<meta name="robots" content="noindex,nofollow">
 		<title>ระบบจัดการไฟล์</title>
 		<!-- CSS to style the file input field as button and adjust the Bootstrap progress bars -->
-		<link rel="stylesheet" href="css/jquery.fileupload.css">
-		<link rel="stylesheet" href="css/jquery.fileupload-ui.css">
+		<link rel="stylesheet" href="filemanager/css/jquery.fileupload.css">
+		<link rel="stylesheet" href="filemanager/css/jquery.fileupload-ui.css">
 		<!-- CSS adjustments for browsers with JavaScript disabled -->
-		<noscript><link rel="stylesheet" href="css/jquery.fileupload-noscript.css"></noscript>
-		<noscript><link rel="stylesheet" href="css/jquery.fileupload-ui-noscript.css"></noscript>
-		<link href="js/jPlayer/skin/blue.monday/jplayer.blue.monday.css" rel="stylesheet" type="text/css">
-		<link href="css/style.css?v=<?php echo $version; ?>" rel="stylesheet" type="text/css" />
+		<noscript><link rel="stylesheet" href="filemanager/css/jquery.fileupload-noscript.css"></noscript>
+		<noscript><link rel="stylesheet" href="filemanager/css/jquery.fileupload-ui-noscript.css"></noscript>
+		<link href="filemanager/js/jPlayer/skin/blue.monday/jplayer.blue.monday.css" rel="stylesheet" type="text/css">
+		<link href="filemanager/css/style.css?v=<?php echo $version; ?>" rel="stylesheet" type="text/css" />
 	<!--[if lt IE 8]><style>
 	.img-container span, .img-container-mini span {
 		display: inline-block;
@@ -300,18 +297,18 @@ $get_params = http_build_query($get_params);
 	}
 	</style><![endif]-->
 
-	<script src="js/jquery1.12.js"></script>
-	<script src="js/jquery-ui.js" type="text/javascript"></script>
-?	<script src="js/plugins.js?v=<?php echo $version; ?>"></script>
-	<script src="js/jPlayer/jquery.jplayer/jquery.jplayer.js"></script>
-	<script src="js/modernizr.custom.js"></script>
+	<script src="filemanager/js/jquery1.12.js"></script>
+	<script src="filemanager/js/jquery-ui.js" type="text/javascript"></script>
+?	<script src="filemanager/js/plugins.js?v=<?php echo $version; ?>"></script>
+	<script src="filemanager/js/jPlayer/jquery.jplayer/jquery.jplayer.js"></script>
+	<script src="filemanager/js/modernizr.custom.js"></script>
 
 	<?php
 	if ($aviary_active){
 	if (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' || $_SERVER['SERVER_PORT'] == 443) { ?>
-		<script src="js/editor.js"></script>
+		<script src="filemanager/js/editor.js"></script>
 	<?php }else{ ?>
-		<script src="js/editor.js"></script>
+		<script src="filemanager/js/editor.js"></script>
 	<?php }} ?>
 
 	<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
@@ -727,14 +724,6 @@ $files=$sorted;
 <!-- header div start -->
 <div class="navbar navbar-fixed-top">
 	<div class="navbar-inner">
-			<?php
-		if (!empty($_SESSION['user_name'])){
-			include_once 'admin_menu.php';
-		}
-		else{
-			include_once 'zdc_menu.php';
-		}
-	?>
 		<div class="container-fluid">
 		<button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
 		<span class="icon-bar"></span>

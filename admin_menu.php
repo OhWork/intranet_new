@@ -12,28 +12,28 @@
               </li>
               <?php if($_SESSION['systemallow_drive'] == 1){ ?>
               <li class="nav-item">
-                <a class="nav-link" href="filemanager/dialog.php">
+                <a class="nav-link" href="admin_index.php?url=filemanager/dialog.php">
                     <span data-feather="database"></span>
                   ระบบฝากไฟล์
                 </a>
               </li>
               <?php }
-				  if($_SESSION['systemallow_news'] == 1){ 
-    				  include_once 'admin_news_menu.php'; 
+				  if($_SESSION['systemallow_news'] == 1){
+    				  include_once 'admin_news_menu.php';
     				  }
-				if($_SESSION['systemallow_confer'] == 1){ 
+				if($_SESSION['systemallow_confer'] == 1){
     				include_once 'admin_cf_menu.php';
     				 }
-				if($_SESSION['systemallow_service'] == 1){ 
+				if($_SESSION['systemallow_service'] == 1){
 					include_once 'admin_cs_menu.php';
                     }
-				if($_SESSION['systemallow_touristreport'] == 1){ 
+				if($_SESSION['systemallow_touristreport'] == 1){
                     include_once 'admin_trs_menu.php';
                }
-    			if($_SESSION['systemallow_km'] == 1){ 
+    			if($_SESSION['systemallow_km'] == 1){
                     include_once 'admin_km_menu.php';
                }
-				if($_SESSION['systemallow_admin'] == 1){ 
+				if($_SESSION['systemallow_admin'] == 1){
                     include_once 'admin_user_menu.php';
                } ?>
             </ul>
