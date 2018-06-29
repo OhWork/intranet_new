@@ -1,10 +1,10 @@
 <?php
 
 if (!isset($config)){
-  $config = include 'config/config.php';
+  $config = include 'filemanager/config/config.php';
 }
 
-include 'include/utils.php';
+include 'filemanager/include/utils.php';
 
 if ($_SESSION['RF']["verify"] != "RESPONSIVEfilemanager")
 {
@@ -12,7 +12,7 @@ if ($_SESSION['RF']["verify"] != "RESPONSIVEfilemanager")
 	exit;
 }
 
-include 'include/mime_type_lib.php';
+include 'filemanager/include/mime_type_lib.php';
 
 
 $ftp=ftp_con($config);

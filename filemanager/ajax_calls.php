@@ -1,22 +1,22 @@
 <?php
 
-$config = include 'config/config.php';
+$config = include 'filemanager/config/config.php';
 //TODO switch to array
 extract($config, EXTR_OVERWRITE);
 
-require_once 'include/utils.php';
+require_once 'filemanager/include/utils.php';
 
 if ($_SESSION['RF']["verify"] != "RESPONSIVEfilemanager")
 {
 	response(trans('forbiden').AddErrorLocation())->send();
 	exit;
 }
-$languages = include 'lang/languages.php';
+$languages = include 'filemanager/lang/languages.php';
 
 if (isset($_SESSION['RF']['language']) && file_exists('lang/' . basename($_SESSION['RF']['language']) . '.php'))
 {
 	if(array_key_exists($_SESSION['RF']['language'],$languages)){
-		include 'lang/' . basename($_SESSION['RF']['language']) . '.php';
+		include 'filemanager/lang/' . basename($_SESSION['RF']['language']) . '.php';
 	}else{
 		response(trans('Lang_Not_Found').AddErrorLocation())->send();
 		exit;
@@ -544,7 +544,7 @@ if(isset($_GET['action']))
 
 			break;
 		case 'get_lang':
-			if ( ! file_exists('lang/languages.php'))
+			if ( ! file_exists('filemanager/lang/languages.php'))
 			{
 				response(trans('Lang_Not_Found').AddErrorLocation())->send();
 				exit;
