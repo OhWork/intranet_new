@@ -188,7 +188,7 @@
 	                </ul>
 	               </div>
 	                <a class="nav-link collapsed py-1" href="#trsreportold" data-toggle="collapse" data-target="#trsreportold">
-	                   <span data-feather="chevron-right"></span>รายงานจำนวนผู้เข้าชมสวนสัตว์เก่า(ตุลาคม 2559 - กันยายน 2560)
+	                   <span data-feather="chevron-right"></span>รายงานจำนวนผู้เข้าชมสวนสัตว์เก่า<br>(ตุลาคม 2559 - กันยายน 2560)
 	                </a>
 	                <ul class="sub-menu collapse" id="trsreportold">
 	                    <?php
