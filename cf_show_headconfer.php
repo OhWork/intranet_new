@@ -16,7 +16,14 @@
 </script>
 <?php
     if (!empty($_SESSION['user_name'])):
+    ?>
 
+            <div class="col-md-12" style="float: left;margin-top: 10px;">
+                <div class="col-md-2" style="float: left;"><a href="admin_index.php?url=cf_add_headnameconfer.php" class="btn btn-success">เพิ่มหัวข้อการประชุม</a>
+                </div>
+            </div>
+            <div class="col-md-12" style="float: left;margin-top: 10px;">
+            <?php
     $columns = array('headncf_name','headncf_no');
     $row = "<div class='row'>";
     $rowend = "</div>";
@@ -35,4 +42,5 @@
 			$grid->renderFromDB($columns,$rs);
 			endif;
 		?>
+            </div>
             </div>

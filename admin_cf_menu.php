@@ -358,19 +358,19 @@
 		                <ul class="sub-menu collapse bnmenusub1" id="cfreport">
 				         <a class="nav-link collapsed py-1" href="#cfreportcon" data-toggle="collapse" data-target="#cfreportcon"><span data-feather="chevron-right"></span>รายงานห้องประชุม</a>
 				          <ul class="sub-menu collapse" id="cfreportcon">
-				          <a class="dropdown-item" href="#"><span data-feather="chevron-right"></span>รายงานห้องประชุมรายห้อง</a>
-				          <a class="dropdown-item" href="#"><span data-feather="chevron-right"></span>รายงานห้องประชุมรวม</a>
+				          <a class="dropdown-item" href="admin_index.php?url=cf_totalservicemonthconferroom.php"><span data-feather="chevron-right"></span>รายงานห้องประชุมรายห้อง</a>
+				          <a class="dropdown-item" href="admin_index.php?url=cf_totalservicemonthconferroomAll.php"><span data-feather="chevron-right"></span>รายงานห้องประชุมรวม</a>
 		               </ul>
 				         <a class="nav-link collapsed py-1" href="#cfreportvdocon" data-toggle="collapse" data-target="#cfreportvdocon"><span data-feather="chevron-right"></span>รายงานห้องประชุมออนไลน์</a>
 				         <ul class="sub-menu collapse" id="cfreportvdocon">
-				          <a class="dropdown-item" href="#"><span data-feather="chevron-right"></span>รายงานห้องประชุมออนไลน์รายห้อง</a>
-				          <a class="dropdown-item" href="#"><span data-feather="chevron-right"></span>รายงานห้องประชุมออนไลน์รวม</a>
+				          <a class="dropdown-item" href="admin_index.php?url=cf_totalservicemonthconferroomonline.php"><span data-feather="chevron-right"></span>รายงานห้องประชุมออนไลน์รายห้อง</a>
+				          <a class="dropdown-item" href="admin_index.php?url=cf_totalservicemonthconferroomonlineAll.php"><span data-feather="chevron-right"></span>รายงานห้องประชุมออนไลน์รวม</a>
 		               </ul>
 				        </ul>
 	                <a class="nav-link collapsed py-1" href="#cfsetting" data-toggle="collapse" data-target="#cfsetting"><span data-feather="settings"></span>ตั้งค่า</a>
 		               <ul class="sub-menu collapse" id="cfsetting">
-				          <a class="dropdown-item" href="#"><span data-feather="chevron-right"></span>จัดการห้องประชุม</a>
-				          <a class="dropdown-item" href="#"><span data-feather="chevron-right"></span>จัดการหัวข้อห้องประชุม</a>
+				          <a class="dropdown-item" href="admin_index.php?url=cf_addconfer.php"><span data-feather="chevron-right"></span>จัดการห้องประชุม</a>
+				          <a class="dropdown-item" href="admin_index.php?url=cf_show_headconfer.php"><span data-feather="chevron-right"></span>จัดการหัวข้อห้องประชุม</a>
 		               </ul>
               </ul>
               <!-- end sub menu -->
