@@ -723,7 +723,7 @@ $files=$sorted;
 ?>
 <!-- header div start -->
 <div class="navbar">
-	<div class="navbar-inner">
+	<div class="navbar-inner" style="width:100%;">
 		<div class="container-fluid">
 		<button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
 		<span class="icon-bar"></span>
@@ -731,7 +731,7 @@ $files=$sorted;
 		<span class="icon-bar"></span>
 		</button>
 		<div class="brand"><?php echo trans('Toolbar');?></div>
-		<div class="nav-collapse collapse">
+<!-- 		<div class="nav-collapse collapse"> -->
 		<div class="filters">
 			<div class="row-fluid">
 				<div class="span12 entire types">
@@ -797,7 +797,7 @@ $files=$sorted;
 
 			</div>
 			</div>
-		</div>
+<!-- 		</div> -->
 		</div>
 	</div>
 	</div>
