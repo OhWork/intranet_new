@@ -66,21 +66,21 @@
 	$buttonprintpdf = new buttonok('ค้นหา','','btn btn-default trspdf','submit');
 
      ?>
-
+<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" style='margin-top: 70px;margin-left:95px;'>
 	<div class='row'>
-		<div class='col-md-12 printdisplaynone' style="float: left;">
+		<div class='col-md-12 printdisplaynone'>
 			<h1>รายงานแจ้งจำนวนยานพาหนะของสวนสัตว์</h1>
 		</div>
 <?php echo $form->open('form_reg','myform','','',''); ?>
-        <div class='col-md-12 printdisplaynone' style="float: left;">
+        <div class='col-md-12 printdisplaynone'>
             <div class='row'>
-                <div class='col-md-1 printdisplaynone' style="float: left;"></div>
-                <div class='col-md-2 azchoice border border-dark' style="float: left;">
+                <div class='col-md-1 printdisplaynone'></div>
+                <div class='col-md-2 azchoice border border-dark'>
                     <div class='row'>
 						<div class='col-md-12 azhead'>
                     		<h4>สวนสัตว์</h4>
                     	</div>
-                        <div class='col-md-12' style="padding: 5 15 0 15;">
+                        <div class='col-md-12' style="padding-left:15px;padding-right:15px;padding-top:8px;"">
                         	<label>
                             	<input type="checkbox" name="check_list[]" id='check_list' value="11">
                                 	สวนสัตว์ดุสิต
@@ -114,9 +114,23 @@
 									โครงการคชอาณาจักร จังหวัดสุรินทร์
                             </label>
                         </div>
-                        <div class='col-md-12' style="float: left;">
-                            <input type="button" class='btn btn-success col-md-6' style="padding: 4 8;height: 30px;float:left;" value="ทุกสวนสัตว์" onClick="checkAll('check_list')">
-                            <input type="button" class='btn btn-danger col-md-6' style="padding: 4 8;height: 30px;float:left;" value="ยกเลิก" onClick="uncheckAll('check_list')">
+                        <div class='col-md-12'>
+							<div class="row">
+								<div class='col-md-12'>
+									<div class="row">
+										<div class='col-md-2'></div>
+										<input type="button" class='btn btn-success col-md-8' value="ทุกสวนสัตว์" onClick="checkAll('check_list')">
+										<div class='col-md-2'></div>
+									</div>
+								</div>
+								<div class='col-md-12' style="margin-top: 8px;">
+									<div class="row">
+										<div class='col-md-2'></div>
+										<input type="button" class='btn btn-danger col-md-8' value="ยกเลิก" onClick="uncheckAll('check_list')">
+										<div class='col-md-2'></div>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -378,9 +392,10 @@
                                   '<b><center>'.number_format($trsfinal['mtc']).'</b></center>');
 			$grid->renderFromDB($columns,$trs);
 }?>
-				</div>
-				</div>
-                </div>
+			</div>
+		</div>
+    </div>
+</div>
 <script>
    $.fn.datepicker.dates['th'] = {
                                 days: ["อาทิตย์", "จันทร์", "อังคาร", "พุธ", "พฤหัส", "ศุกร์", "เสาร์", "อาทิตย์"],
