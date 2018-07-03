@@ -83,9 +83,9 @@ if ( ! function_exists('trans'))
 
 	}
 	if(file_exists('lang/' . $lang . '.php')){
-		$lang_vars = include 'filemanager/lang/' . $lang . '.php';
+		$lang_vars = include 'lang/' . $lang . '.php';
 	}else{
-		$lang_vars = include 'filemanager/lang/' . $lang . '.php';
+		$lang_vars = include 'lang/' . $lang . '.php';
 	}
 
 	if ( ! is_array($lang_vars))

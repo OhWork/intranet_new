@@ -1,7 +1,7 @@
 <?php
 $time = time();
 
-$config = include 'filemanager/config/config.php';
+$config = include 'config/config.php';
 
 
 //TODO switch to array
@@ -22,11 +22,11 @@ if (USE_ACCESS_KEYS == TRUE){
 $_SESSION['RF']["verify"] = "RESPONSIVEfilemanager";
 
 if(isset($_POST['submit'])){
-	include 'filemanager/upload.php';
+	include 'upload.php';
 }else{
 
 $lang = $config['default_language'];
-$languages = include 'filemanager/lang/languages.php';
+$languages = include 'lang/languages.php';
 if (isset($_GET['lang']))
 {
 	$lang = strip_tags($_GET['lang']);
@@ -39,7 +39,7 @@ if (isset($_GET['lang']))
 		$_SESSION['RF']['language'] = $lang;
 	}
 }
-include 'filemanager/include/utils.php';
+include 'include/utils.php';
 
 if (isset($_GET['fldr'])
 	&& !empty($_GET['fldr'])
@@ -283,13 +283,13 @@ $get_params = http_build_query($get_params);
 		<meta name="robots" content="noindex,nofollow">
 		<title>ระบบจัดการไฟล์</title>
 		<!-- CSS to style the file input field as button and adjust the Bootstrap progress bars -->
-		<link rel="stylesheet" href="filemanager/css/jquery.fileupload.css">
-		<link rel="stylesheet" href="filemanager/css/jquery.fileupload-ui.css">
+		<link rel="stylesheet" href="css/jquery.fileupload.css">
+		<link rel="stylesheet" href="css/jquery.fileupload-ui.css">
 		<!-- CSS adjustments for browsers with JavaScript disabled -->
-		<noscript><link rel="stylesheet" href="filemanager/css/jquery.fileupload-noscript.css"></noscript>
-		<noscript><link rel="stylesheet" href="filemanager/css/jquery.fileupload-ui-noscript.css"></noscript>
-		<link href="filemanager/js/jPlayer/skin/blue.monday/jplayer.blue.monday.css" rel="stylesheet" type="text/css">
-		<link href="filemanager/css/style.css?v=<?php echo $version; ?>" rel="stylesheet" type="text/css" />
+		<noscript><link rel="stylesheet" href="css/jquery.fileupload-noscript.css"></noscript>
+		<noscript><link rel="stylesheet" href="css/jquery.fileupload-ui-noscript.css"></noscript>
+		<link href="js/jPlayer/skin/blue.monday/jplayer.blue.monday.css" rel="stylesheet" type="text/css">
+		<link href="css/style.css?v=<?php echo $version; ?>" rel="stylesheet" type="text/css" />
 	<!--[if lt IE 8]><style>
 	.img-container span, .img-container-mini span {
 		display: inline-block;
@@ -297,18 +297,18 @@ $get_params = http_build_query($get_params);
 	}
 	</style><![endif]-->
 
-	<script src="filemanager/js/jquery1.12.js"></script>
-	<script src="filemanager/js/jquery-ui.js" type="text/javascript"></script>
-?	<script src="filemanager/js/plugins.js?v=<?php echo $version; ?>"></script>
-	<script src="filemanager/js/jPlayer/jquery.jplayer/jquery.jplayer.js"></script>
-	<script src="filemanager/js/modernizr.custom.js"></script>
+	<script src="js/jquery1.12.js"></script>
+	<script src="js/jquery-ui.js" type="text/javascript"></script>
+?	<script src="js/plugins.js?v=<?php echo $version; ?>"></script>
+	<script src="js/jPlayer/jquery.jplayer/jquery.jplayer.js"></script>
+	<script src="js/modernizr.custom.js"></script>
 
 	<?php
 	if ($aviary_active){
 	if (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' || $_SERVER['SERVER_PORT'] == 443) { ?>
-		<script src="filemanager/js/editor.js"></script>
+		<script src="js/editor.js"></script>
 	<?php }else{ ?>
-		<script src="filemanager/js/editor.js"></script>
+		<script src="js/editor.js"></script>
 	<?php }} ?>
 
 	<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
@@ -358,31 +358,31 @@ $get_params = http_build_query($get_params);
 	});
 		}
 	</script>
-	<script src="filemanager/js/include.js?v=<?php echo $version; ?>"></script>
+	<script src="js/include.js?v=<?php echo $version; ?>"></script>
 </head>
 <body>
 <!-- The Templates plugin is included to render the upload/download listings -->
-<script src="filemanager/js/tmpl.min.js"></script>
+<script src="js/tmpl.min.js"></script>
 <!-- The Load Image plugin is included for the preview images and image resizing functionality -->
-<script src="filemanager/js/load-image.all.min.js"></script>
+<script src="js/load-image.all.min.js"></script>
 <!-- The Canvas to Blob plugin is included for image resizing functionality -->
-<script src="filemanager/js/canvas-to-blob.min.js"></script>
+<script src="js/canvas-to-blob.min.js"></script>
 <!-- The Iframe Transport is required for browsers without support for XHR file uploads -->
-<script src="filemanager/js/jquery.iframe-transport.js"></script>
+<script src="js/jquery.iframe-transport.js"></script>
 <!-- The basic File Upload plugin -->
-<script src="filemanager/js/jquery.fileupload.js"></script>
+<script src="js/jquery.fileupload.js"></script>
 <!-- The File Upload processing plugin -->
-<script src="filemanager/js/jquery.fileupload-process.js"></script>
+<script src="js/jquery.fileupload-process.js"></script>
 <!-- The File Upload image preview & resize plugin -->
-<script src="filemanager/js/jquery.fileupload-image.js"></script>
+<script src="js/jquery.fileupload-image.js"></script>
 <!-- The File Upload audio preview plugin -->
-<script src="filemanager/js/jquery.fileupload-audio.js"></script>
+<script src="js/jquery.fileupload-audio.js"></script>
 <!-- The File Upload video preview plugin -->
-<script src="filemanager/js/jquery.fileupload-video.js"></script>
+<script src="js/jquery.fileupload-video.js"></script>
 <!-- The File Upload validation plugin -->
-<script src="filemanager/js/jquery.fileupload-validate.js"></script>
+<script src="js/jquery.fileupload-validate.js"></script>
 <!-- The File Upload user interface plugin -->
-<script src="filemanager/js/jquery.fileupload-ui.js"></script>
+<script src="js/jquery.fileupload-ui.js"></script>
 
 	<input type="hidden" id="ftp" value="<?php echo !!$ftp; ?>" />
 	<input type="hidden" id="popup" value="<?php echo $popup;?>" />
@@ -831,7 +831,7 @@ $files=$sorted;
 	<?php if($show_language_selection){ ?>
 	<li class="pull-right"><a class="btn-small" href="javascript:void('')" id="change_lang_btn"><i class="icon-globe"></i></a></li>
 	<?php } ?>
-	<li class="pull-right"><a id="refresh" class="btn-small" href="admin_index.php?url=filemanager/dialog.php?<?php echo $get_params.$subdir."&".uniqid() ?>"><i class="icon-refresh"></i></a></li>
+	<li class="pull-right"><a id="refresh" class="btn-small" href="admin_index.php?url=filemanager/dialog.php&?<?php echo $get_params.$subdir."&".uniqid() ?>"><i class="icon-refresh"></i></a></li>
 
 	<li class="pull-right">
 		<div class="btn-group">
@@ -973,7 +973,7 @@ if(!empty($_POST['searchall'])){
 			?>
 			<div class="span12" id="datadialog">
 				<div class="span5">
-					<a href="admin_index.php?url=filemanager/dialog.php?editor=0&type=0&lang=en_EN&popup=0&crossdomain=0&field_id=&relative_url=0&akey=key&fldr=<?php echo $result['folder_name']?>"><?php echo $result['folder_name']; ?></a>
+					<a href="admin_index.php?url=filemanager/dialog.php&?editor=0&type=0&lang=en_EN&popup=0&crossdomain=0&field_id=&relative_url=0&akey=key&fldr=<?php echo $result['folder_name']?>"><?php echo $result['folder_name']; ?></a>
 				</div>
 			</div>
 		<?php
@@ -1022,16 +1022,16 @@ if(!empty($_POST['searchall'])){
 					<input type="hidden" class="path" value="<?php echo str_replace('.','',dirname($rfm_subfolder.$subdir));?>"/>
 					<input type="hidden" class="path_thumb" value="<?php echo dirname($thumbs_path.$subdir)."/";?>"/>
 				<?php } ?>
-				<a class="folder-link" href="admin_index.php?url=filemanager/dialog.php?<?php echo $get_params.rawurlencode($src)."&".($callback?'callback='.$callback."&":'').uniqid() ?>">
+				<a class="folder-link" href="admin_index.php?url=filemanager/dialog.php&?<?php echo $get_params.rawurlencode($src)."&".($callback?'callback='.$callback."&":'').uniqid() ?>">
 					<div class="img-precontainer">
 							<div class="img-container directory"><span></span>
-							<img class="directory-img" data-src="filemanager/img/<?php echo $icon_theme;?>/folder<?php if($file==".."){ echo "_back"; }?>.png" />
+							<img class="directory-img" data-src="img/<?php echo $icon_theme;?>/folder<?php if($file==".."){ echo "_back"; }?>.png" />
 							</div>
 					</div>
 					<div class="img-precontainer-mini directory">
 							<div class="img-container-mini">
 							<span></span>
-							<img class="directory-img" data-src="filemanager/img/<?php echo $icon_theme;?>/folder<?php if($file==".."){ echo "_back"; }?>.png" />
+							<img class="directory-img" data-src="img/<?php echo $icon_theme;?>/folder<?php if($file==".."){ echo "_back"; }?>.png" />
 							</div>
 					</div>
 			<?php if($file==".."){ ?>
@@ -1043,7 +1043,7 @@ if(!empty($_POST['searchall'])){
 			<?php }else{ ?>
 					</a>
 					<div class="box">
-					<h4 class="<?php if($ellipsis_title_after_first_row){ echo "ellipsis"; } ?>"><a class="folder-link" data-file="<?php echo $file ?>" href="admin_index.php?url=filemanager/dialog.php?<?php echo $get_params.rawurlencode($src)."&".uniqid() ?>"><?php echo $file;?></a></h4>
+					<h4 class="<?php if($ellipsis_title_after_first_row){ echo "ellipsis"; } ?>"><a class="folder-link" data-file="<?php echo $file ?>" href="admin_index.php?url=filemanager/dialog.php&?<?php echo $get_params.rawurlencode($src)."&".uniqid() ?>"><?php echo $file;?></a></h4>
 					</div>
 					<input type="hidden" class="name" value="<?php echo $file_array['file_lcase'];?>"/>
 					<input type="hidden" class="date" value="<?php echo $file_array['date'];?>"/>
@@ -1296,7 +1296,7 @@ if(!empty($_POST['searchall'])){
 	<!-- loading div start -->
 	<div id="loading_container" style="display:none;">
 		<div id="loading" style="background-color:#000; position:fixed; width:100%; height:100%; top:0px; left:0px;z-index:100000"></div>
-		<img id="loading_animation" src="filemanager/img/storing_animation.gif" alt="loading" style="z-index:10001; margin-left:-32px; margin-top:-32px; position:fixed; left:50%; top:50%"/>
+		<img id="loading_animation" src="img/storing_animation.gif" alt="loading" style="z-index:10001; margin-left:-32px; margin-top:-32px; position:fixed; left:50%; top:50%"/>
 	</div>
 	<!-- loading div end -->
 

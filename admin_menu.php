@@ -12,7 +12,7 @@
               </li>
               <?php if($_SESSION['systemallow_drive'] == 1){ ?>
               <li class="nav-item">
-                <a class="nav-link" href="admin_index.php?url=filemanager/dialog.php">
+                <a class="nav-link" href="filemanager/admin_index.php?url=dialog.php">
                     <span data-feather="database"></span>
                   ระบบฝากไฟล์
                 </a>
