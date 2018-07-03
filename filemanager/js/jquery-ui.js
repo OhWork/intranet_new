@@ -9814,10 +9814,10 @@ $.extend( Datepicker.prototype, {
 			buttonText = this._get( inst, "buttonText" );
 			buttonImage = this._get( inst, "buttonImage" );
 			inst.trigger = $( this._get( inst, "buttonImageOnly" ) ?
-				$( "<filemanager/img/>" ).addClass( this._triggerClass ).
+				$( "<img/>" ).addClass( this._triggerClass ).
 					attr( { src: buttonImage, alt: buttonText, title: buttonText } ) :
 				$( "<button type='button'></button>" ).addClass( this._triggerClass ).
-					html( !buttonImage ? buttonText : $( "<filemanager/img/>" ).attr(
+					html( !buttonImage ? buttonText : $( "<img/>" ).attr(
 					{ src:buttonImage, alt:buttonText, title:buttonText } ) ) );
 			input[ isRTL ? "before" : "after" ]( inst.trigger );
 			inst.trigger.on( "click", function() {

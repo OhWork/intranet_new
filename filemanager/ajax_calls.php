@@ -4,7 +4,7 @@ $config = include 'config/config.php';
 //TODO switch to array
 extract($config, EXTR_OVERWRITE);
 
-require_once 'filemanager/include/utils.php';
+require_once 'include/utils.php';
 
 if ($_SESSION['RF']["verify"] != "RESPONSIVEfilemanager")
 {
@@ -544,7 +544,7 @@ if(isset($_GET['action']))
 
 			break;
 		case 'get_lang':
-			if ( ! file_exists('filemanager/lang/languages.php'))
+			if ( ! file_exists('lang/languages.php'))
 			{
 				response(trans('Lang_Not_Found').AddErrorLocation())->send();
 				exit;

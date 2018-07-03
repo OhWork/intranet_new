@@ -299,7 +299,7 @@ $get_params = http_build_query($get_params);
 
 	<script src="js/jquery1.12.js"></script>
 	<script src="js/jquery-ui.js" type="text/javascript"></script>
-?	<script src="js/plugins.js?v=<?php echo $version; ?>"></script>
+	<script src="js/plugins.js?v=<?php echo $version; ?>"></script>
 	<script src="js/jPlayer/jquery.jplayer/jquery.jplayer.js"></script>
 	<script src="js/modernizr.custom.js"></script>
 
@@ -766,7 +766,7 @@ $files=$sorted;
 				<button class="btn tip<?php if($view==2) echo " btn-inverse";?>" id="view2" data-value="2" title="<?php echo trans('View_columns_list');?>"><i class="icon-fire <?php if($view==2) echo "icon-white";?>"></i></button>
 				</center>
 			</div>
-			<div class="span5 entire types" style="float: right;">
+			<div class="span4 entire types" style="float: right;">
 				<span><?php echo trans('Filters');?>:</span>
 				<?php if($_GET['type']!=1 && $_GET['type']!=3 && $show_filter_buttons){ ?>
 					<?php if(count($ext_file)>0 or false){ ?>
@@ -808,7 +808,7 @@ $files=$sorted;
 
 	<div class="row-fluid">
 	<?php
-		$link="admin_index.php?url=filemanager/dialog.php?".$get_params;
+		$link="admin_index.php?url=dialog.php&?".$get_params;
 	?>
 	<ul class="breadcrumb">
 	<li class="pull-left"><a href="<?php echo $link?>/"><i class="icon-home"></i></a></li>
@@ -831,7 +831,7 @@ $files=$sorted;
 	<?php if($show_language_selection){ ?>
 	<li class="pull-right"><a class="btn-small" href="javascript:void('')" id="change_lang_btn"><i class="icon-globe"></i></a></li>
 	<?php } ?>
-	<li class="pull-right"><a id="refresh" class="btn-small" href="admin_index.php?url=filemanager/dialog.php&?<?php echo $get_params.$subdir."&".uniqid() ?>"><i class="icon-refresh"></i></a></li>
+	<li class="pull-right"><a id="refresh" class="btn-small" href="admin_index.php?url=dialog.php&?<?php echo $get_params.$subdir."&".uniqid() ?>"><i class="icon-refresh"></i></a></li>
 
 	<li class="pull-right">
 		<div class="btn-group">
@@ -973,7 +973,7 @@ if(!empty($_POST['searchall'])){
 			?>
 			<div class="span12" id="datadialog">
 				<div class="span5">
-					<a href="admin_index.php?url=filemanager/dialog.php&?editor=0&type=0&lang=en_EN&popup=0&crossdomain=0&field_id=&relative_url=0&akey=key&fldr=<?php echo $result['folder_name']?>"><?php echo $result['folder_name']; ?></a>
+					<a href="admin_index.php?url=dialog.php&?editor=0&type=0&lang=en_EN&popup=0&crossdomain=0&field_id=&relative_url=0&akey=key&fldr=<?php echo $result['folder_name']?>"><?php echo $result['folder_name']; ?></a>
 				</div>
 			</div>
 		<?php
@@ -1022,7 +1022,7 @@ if(!empty($_POST['searchall'])){
 					<input type="hidden" class="path" value="<?php echo str_replace('.','',dirname($rfm_subfolder.$subdir));?>"/>
 					<input type="hidden" class="path_thumb" value="<?php echo dirname($thumbs_path.$subdir)."/";?>"/>
 				<?php } ?>
-				<a class="folder-link" href="admin_index.php?url=filemanager/dialog.php&?<?php echo $get_params.rawurlencode($src)."&".($callback?'callback='.$callback."&":'').uniqid() ?>">
+				<a class="folder-link" href="admin_index.php?url=dialog.php&?<?php echo $get_params.rawurlencode($src)."&".($callback?'callback='.$callback."&":'').uniqid() ?>">
 					<div class="img-precontainer">
 							<div class="img-container directory"><span></span>
 							<img class="directory-img" data-src="img/<?php echo $icon_theme;?>/folder<?php if($file==".."){ echo "_back"; }?>.png" />
@@ -1043,7 +1043,7 @@ if(!empty($_POST['searchall'])){
 			<?php }else{ ?>
 					</a>
 					<div class="box">
-					<h4 class="<?php if($ellipsis_title_after_first_row){ echo "ellipsis"; } ?>"><a class="folder-link" data-file="<?php echo $file ?>" href="admin_index.php?url=filemanager/dialog.php&?<?php echo $get_params.rawurlencode($src)."&".uniqid() ?>"><?php echo $file;?></a></h4>
+					<h4 class="<?php if($ellipsis_title_after_first_row){ echo "ellipsis"; } ?>"><a class="folder-link" data-file="<?php echo $file ?>" href="admin_index.php?url=dialog.php&?<?php echo $get_params.rawurlencode($src)."&".uniqid() ?>"><?php echo $file;?></a></h4>
 					</div>
 					<input type="hidden" class="name" value="<?php echo $file_array['file_lcase'];?>"/>
 					<input type="hidden" class="date" value="<?php echo $file_array['date'];?>"/>
