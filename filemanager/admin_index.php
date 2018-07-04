@@ -16,7 +16,7 @@
 
 
          <?php
-             include_once 'inc_js.php';
+            include_once 'inc_js.php';
             include_once '../database/db_tools.php';
             include_once '../connect.php';
             include_once '../form/main_form.php';
