@@ -808,8 +808,12 @@ $files=$sorted;
 
 	<div class="row-fluid">
 	<?php
-		if(){
+		if(!empty($_SESSION['subzoo_zoo_zoo_id'])){
 		$link="admin_index.php?url=dialog.php&?".$get_params;
+		}
+		else{
+			$link="index.php?url=dialog.php&?".$get_params;
+
 		}
 	?>
 	<ul class="breadcrumb">
