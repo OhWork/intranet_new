@@ -25,6 +25,8 @@
 					<ul class="sub-menu collapse on-sub" id="cs">
 	                <!-- sub menu -->
 						<a class="dropdown-item" href="index.php?url=cs_add_problem.php">แบบฟอร์มแจ้งซ่อม</a>
+						<a class="dropdown-item" href="index.php?url=#">แบบฟอร์มขอใช้Internet</a>
+						<a class="dropdown-item" href="index.php?url=#">แบบฟอร์มขอให้อัพไฟล์(กรณีไม่สามารถทำไดั)</a>
 						<a class="dropdown-item" href="index.php?url=cs_show_problem.php&subpage=1">รายการแจ้งซ่อม</a>
 					</ul>
 				</li>
