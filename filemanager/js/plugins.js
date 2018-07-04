@@ -2119,16 +2119,16 @@
 	{
 		var that = this,
 			e    = $.Event('show');
-	
+
 		this.$element.trigger(e)
-	
+
 		if (this.isShown || e.isDefaultPrevented()) return
-	
+
 		this.isShown = true;
-	
+
 
 		this.escape()
-	
+
 		// This bit is added since we don't display until we have the size
 		//	which prevents image jumping
 		this.preloadSize(function()
@@ -2136,25 +2136,25 @@
 			that.backdrop(function ()
 			{
 				var transition = $.support.transition && that.$element.hasClass('fade')
-		
+
 				if (!that.$element.parent().length)
 				{
 					that.$element.appendTo(document.body) //don't move modals dom position
 				}
-		
+
 				that.$element.show()
-		
+
 				if (transition)
 				{
 					that.$element[0].offsetWidth // force reflow
 				}
-		
+
 				that.$element
 					.addClass('in')
 					.attr('aria-hidden', false)
-		
+
 				that.enforceFocus()
-		
+
 				transition ?
 					that.$element.one($.support.transition.end, function () { that.$element.focus().trigger('shown') }) :
 					that.$element.focus().trigger('shown')
@@ -2330,7 +2330,7 @@
 
 		$target
 			.lightbox(option)
-			.one('hide', function () 
+			.one('hide', function ()
 			{
 				$this.focus()
 			});
@@ -2353,7 +2353,7 @@
  */
 
 (function($, undefined){
-    
+
     // TODO: -
         // ARIA stuff: menuitem, menuitemcheckbox und menuitemradio
         // create <menu> structure if $.support[htmlCommand || htmlMenuitem] and !opt.disableNative
@@ -2366,20 +2366,20 @@ $.support.eventSelectstart = ("onselectstart" in document.documentElement);
 $.support.cssUserSelect = (function(){
     var t = false,
         e = document.createElement('div');
-    
+
     $.each('Moz|Webkit|Khtml|O|ms|Icab|'.split('|'), function(i, prefix) {
         var propCC = prefix + (prefix ? 'U' : 'u') + 'serSelect',
             prop = (prefix ? ('-' + prefix.toLowerCase() + '-') : '') + 'user-select';
-            
+
         e.style.cssText = prop + ': text;';
         if (e.style[propCC] == 'text') {
             t = true;
             return false;
         }
-        
+
         return true;
     });
-    
+
     return t;
 })();
 */
@@ -2464,21 +2464,21 @@ var // currently active contextMenu trigger
                 // x and y are given (by mouse event)
                 offset = {top: y, left: x};
             }
-            
+
             // correct offset if viewport demands it
             var bottom = $win.scrollTop() + $win.height(),
                 right = $win.scrollLeft() + $win.width(),
                 height = opt.$menu.height(),
                 width = opt.$menu.width();
-            
+
             if (offset.top + height > bottom) {
                 offset.top -= height;
             }
-            
+
             if (offset.left + width > right) {
                 offset.left -= width;
             }
-            
+
             opt.$menu.css(offset);
         },
         // position the sub-menu
@@ -2537,7 +2537,7 @@ var // currently active contextMenu trigger
                 break;
             }
         }
-        
+
         return zin;
     },
     // event handlers
@@ -2547,31 +2547,31 @@ var // currently active contextMenu trigger
             e.preventDefault();
             e.stopImmediatePropagation();
         },
-        
+
         // contextmenu show dispatcher
         contextmenu: function(e) {
             var $this = $(this);
-            
+
             // disable actual context-menu
             e.preventDefault();
             e.stopImmediatePropagation();
-            
+
             // abort native-triggered events unless we're triggering on right click
             if (e.data.trigger != 'right' && e.originalEvent) {
                 return;
             }
-            
+
             // abort event if menu is visible for this trigger
             if ($this.hasClass('context-menu-active')) {
                 return;
             }
-            
+
             if (!$this.hasClass('context-menu-disabled')) {
                 // theoretically need to fire a show event at <menu>
                 // http://www.whatwg.org/specs/web-apps/current-work/multipage/interactive-elements.html#context-menus
                 // var evt = jQuery.Event("show", { data: data, pageX: e.pageX, pageY: e.pageY, relatedTarget: this });
                 // e.data.$menu.trigger(evt);
-                
+
                 $currentTrigger = $this;
                 if (e.data.build) {
                     var built = e.data.build($currentTrigger, e);
@@ -2579,7 +2579,7 @@ var // currently active contextMenu trigger
                     if (built === false) {
                         return;
                     }
-                    
+
                     // dynamically build menu on invocation
                     e.data = $.extend(true, {}, defaults, e.data, built || {});
 
@@ -2589,13 +2589,13 @@ var // currently active contextMenu trigger
                         if (window.console) {
                             (console.error || console.log)("No items specified to show in contextMenu");
                         }
-                        
+
                         throw new Error('No Items specified');
                     }
-                    
+
                     // backreference for custom command type creation
                     e.data.$trigger = $currentTrigger;
-                    
+
                     op.create(e.data);
                 }
                 // show menu
@@ -2612,12 +2612,12 @@ var // currently active contextMenu trigger
         mousedown: function(e) {
             // register mouse down
             var $this = $(this);
-            
+
             // hide any previous menus
             if ($currentTrigger && $currentTrigger.length && !$currentTrigger.is($this)) {
                 $currentTrigger.data('contextMenu').$menu.trigger('contextmenu:hide');
             }
-            
+
             // activate on right click
             if (e.button == 2) {
                 $currentTrigger = $this.data('contextMenuActive', true);
@@ -2633,7 +2633,7 @@ var // currently active contextMenu trigger
                 $currentTrigger = $this;
                 $this.trigger($.Event("contextmenu", { data: e.data, pageX: e.pageX, pageY: e.pageY }));
             }
-            
+
             $this.removeData('contextMenuActive');
         },
         // contextMenu hover trigger
@@ -2641,17 +2641,17 @@ var // currently active contextMenu trigger
             var $this = $(this),
                 $related = $(e.relatedTarget),
                 $document = $(document);
-            
+
             // abort if we're coming from a menu
             if ($related.is('.context-menu-list') || $related.closest('.context-menu-list').length) {
                 return;
             }
-            
+
             // abort if a menu is shown
             if ($currentTrigger && $currentTrigger.length) {
                 return;
             }
-            
+
             hoveract.pageX = e.pageX;
             hoveract.pageY = e.pageY;
             hoveract.data = e.data;
@@ -2675,14 +2675,14 @@ var // currently active contextMenu trigger
             if ($related.is('.context-menu-list') || $related.closest('.context-menu-list').length) {
                 return;
             }
-            
+
             try {
                 clearTimeout(hoveract.timer);
             } catch(e) {}
-            
+
             hoveract.timer = null;
         },
-        
+
         // click on layer to hide contextMenu
         layerClick: function(e) {
             var $this = $(this),
@@ -2691,24 +2691,24 @@ var // currently active contextMenu trigger
                 button = e.button,
                 x = e.pageX,
                 y = e.pageY,
-                target, 
+                target,
                 offset,
                 selectors;
-                
+
             e.preventDefault();
             e.stopImmediatePropagation();
-            
+
             setTimeout(function() {
                 var $window, hideshow, possibleTarget;
                 var triggerAction = ((root.trigger == 'left' && button === 0) || (root.trigger == 'right' && button === 2));
-                
+
                 // find the element that would've been clicked, wasn't the layer in the way
                 if (document.elementFromPoint) {
                     root.$layer.hide();
                     target = document.elementFromPoint(x - $win.scrollLeft(), y - $win.scrollTop());
                     root.$layer.show();
                 }
-                
+
                 if (root.reposition && triggerAction) {
                     if (document.elementFromPoint) {
                         if (root.$trigger.is(target) || root.$trigger.has(target).length) {
@@ -2737,7 +2737,7 @@ var // currently active contextMenu trigger
                         }
                     }
                 }
-                
+
                 if (target && triggerAction) {
                     root.$trigger.one('contextmenu:hidden', function() {
                         $(target).contextMenu({x: x, y: y});
@@ -2752,7 +2752,7 @@ var // currently active contextMenu trigger
             if (!opt.isInput) {
                 e.preventDefault();
             }
-            
+
             e.stopPropagation();
         },
         key: function(e) {
@@ -2779,7 +2779,7 @@ var // currently active contextMenu trigger
                         return;
                     }
                     // omitting break;
-                    
+
                 // case 9: // tab - reached through omitted break;
                 case 40: // down
                     handle.keyStop(e, opt);
@@ -2799,13 +2799,13 @@ var // currently active contextMenu trigger
                         return;
                     }
                     break;
-                
+
                 case 37: // left
                     handle.keyStop(e, opt);
                     if (opt.isInput || !opt.$selected || !opt.$selected.length) {
                         break;
                     }
-                
+
                     if (!opt.$selected.parent().hasClass('context-menu-root')) {
                         var $parent = opt.$selected.parent().parent();
                         opt.$selected.trigger('contextmenu:blur');
@@ -2813,13 +2813,13 @@ var // currently active contextMenu trigger
                         return;
                     }
                     break;
-                    
+
                 case 39: // right
                     handle.keyStop(e, opt);
                     if (opt.isInput || !opt.$selected || !opt.$selected.length) {
                         break;
                     }
-                    
+
                     var itemdata = opt.$selected.data('contextMenu') || {};
                     if (itemdata.$menu && opt.$selected.hasClass('context-menu-submenu')) {
                         opt.$selected = null;
@@ -2828,7 +2828,7 @@ var // currently active contextMenu trigger
                         return;
                     }
                     break;
-                
+
                 case 35: // end
                 case 36: // home
                     if (opt.$selected && opt.$selected.find('input, textarea, select').length) {
@@ -2841,7 +2841,7 @@ var // currently active contextMenu trigger
                         return;
                     }
                     break;
-                    
+
                 case 13: // enter
                     handle.keyStop(e, opt);
                     if (opt.isInput) {
@@ -2853,19 +2853,19 @@ var // currently active contextMenu trigger
                     }
                     opt.$selected && opt.$selected.trigger('mouseup');
                     return;
-                    
+
                 case 32: // space
                 case 33: // page up
                 case 34: // page down
                     // prevent browser from scrolling down while menu is visible
                     handle.keyStop(e, opt);
                     return;
-                    
+
                 case 27: // esc
                     handle.keyStop(e, opt);
                     opt.$menu.trigger('contextmenu:hide');
                     return;
-                    
+
                 default: // 0-9, a-z
                     var k = (String.fromCharCode(e.keyCode)).toUpperCase();
                     if (opt.accesskeys[k]) {
@@ -2878,7 +2878,7 @@ var // currently active contextMenu trigger
                     }
                     break;
             }
-            // pass event to selected item, 
+            // pass event to selected item,
             // stop propagation to avoid endless recursion
             e.stopPropagation();
             opt.$selected && opt.$selected.trigger(e);
@@ -2895,11 +2895,11 @@ var // currently active contextMenu trigger
                 opt = opt.$selected.parent().data('contextMenu') || {};
                 opt.$selected = $s;
             }
-            
+
             var $children = opt.$menu.children(),
                 $prev = !opt.$selected || !opt.$selected.prev().length ? $children.last() : opt.$selected.prev(),
                 $round = $prev;
-            
+
             // skip disabled
             while ($prev.hasClass('disabled') || $prev.hasClass('not-selectable')) {
                 if ($prev.prev().length) {
@@ -2912,15 +2912,15 @@ var // currently active contextMenu trigger
                     return;
                 }
             }
-            
+
             // leave current
             if (opt.$selected) {
                 handle.itemMouseleave.call(opt.$selected.get(0), e);
             }
-            
+
             // activate next
             handle.itemMouseenter.call($prev.get(0), e);
-            
+
             // focus input
             var $input = $prev.find('input, textarea, select');
             if ($input.length) {
@@ -2955,22 +2955,22 @@ var // currently active contextMenu trigger
                     return;
                 }
             }
-            
+
             // leave current
             if (opt.$selected) {
                 handle.itemMouseleave.call(opt.$selected.get(0), e);
             }
-            
+
             // activate next
             handle.itemMouseenter.call($next.get(0), e);
-            
+
             // focus input
             var $input = $next.find('input, textarea, select');
             if ($input.length) {
                 $input.focus();
             }
         },
-        
+
         // flag that we're inside an input so the key handler can act accordingly
         focusInput: function(e) {
             var $this = $(this).closest('.context-menu-item'),
@@ -2990,7 +2990,7 @@ var // currently active contextMenu trigger
 
             root.isInput = opt.isInput = false;
         },
-        
+
         // :hover on menu
         menuMouseenter: function(e) {
             var root = $(this).data().contextMenuRoot;
@@ -3003,14 +3003,14 @@ var // currently active contextMenu trigger
                 root.hovering = false;
             }
         },
-        
+
         // :hover done manually so key handling is possible
         itemMouseenter: function(e) {
             var $this = $(this),
                 data = $this.data(),
                 opt = data.contextMenu,
                 root = data.contextMenuRoot;
-            
+
             root.hovering = true;
 
             // abort if we're re-entering
@@ -3027,7 +3027,7 @@ var // currently active contextMenu trigger
                 opt.$selected = null;
                 return;
             }
-            
+
             $this.trigger('contextmenu:focus');
         },
         // :hover done manually so key handling is possible
@@ -3044,7 +3044,7 @@ var // currently active contextMenu trigger
                 root.$selected = opt.$selected = opt.$node;
                 return;
             }
-            
+
             $this.trigger('contextmenu:blur');
         },
         // contextMenu item click
@@ -3069,7 +3069,7 @@ var // currently active contextMenu trigger
                 callback = root.callbacks[key];
             } else if ($.isFunction(root.callback)) {
                 // default callback
-                callback = root.callback;                
+                callback = root.callback;
             } else {
                 // no callback, no action
                 return;
@@ -3086,7 +3086,7 @@ var // currently active contextMenu trigger
         inputClick: function(e) {
             e.stopImmediatePropagation();
         },
-        
+
         // hide <menu>
         hideMenu: function(e, data) {
             var root = $(this).data('contextMenuRoot');
@@ -3102,10 +3102,10 @@ var // currently active contextMenu trigger
 
             $this.addClass('hover')
                 .siblings('.hover').trigger('contextmenu:blur');
-            
+
             // remember selected
             opt.$selected = root.$selected = $this;
-            
+
             // position sub-menu - do after show so dumb $.ui.position can keep up
             if (opt.$node) {
                 root.positionSubmenu.call(opt.$node, opt.$menu);
@@ -3118,7 +3118,7 @@ var // currently active contextMenu trigger
                 data = $this.data(),
                 opt = data.contextMenu,
                 root = data.contextMenuRoot;
-            
+
             $this.removeClass('hover');
             opt.$selected = null;
         }
@@ -3144,7 +3144,7 @@ var // currently active contextMenu trigger
 
             // create or update context menu
             op.update.call($trigger, opt);
-            
+
             // position menu
             opt.position.call($trigger, opt, x, y);
 
@@ -3152,13 +3152,13 @@ var // currently active contextMenu trigger
             if (opt.zIndex) {
                 css.zIndex = zindex($trigger) + opt.zIndex;
             }
-            
+
             // add layer
             op.layer.call(opt.$menu, opt, css.zIndex);
-            
+
             // adjust sub-menu zIndexes
             opt.$menu.find('ul').css('zIndex', css.zIndex + 1);
-            
+
             // position and show context menu
             opt.$menu.css( css )[opt.animation.show](opt.animation.duration, function() {
                 $trigger.trigger('contextmenu:visible');
@@ -3167,7 +3167,7 @@ var // currently active contextMenu trigger
             $trigger
                 .data('contextMenu', opt)
                 .addClass("context-menu-active");
-            
+
             // register key handler
             $(document).off('keydown.contextMenu').on('keydown.contextMenu', handle.key);
             // register autoHide handler
@@ -3179,7 +3179,7 @@ var // currently active contextMenu trigger
                     var pos = $trigger.offset();
                     pos.right = pos.left + $trigger.outerWidth();
                     pos.bottom = pos.top + $trigger.outerHeight();
-                    
+
                     if (opt.$layer && !opt.hovering && (!(e.pageX >= pos.left && e.pageX <= pos.right) || !(e.pageY >= pos.top && e.pageY <= pos.bottom))) {
                         // if mouse in menu...
                         opt.$menu.trigger('contextmenu:hide');
@@ -3192,17 +3192,17 @@ var // currently active contextMenu trigger
             if (!opt) {
                 opt = $trigger.data('contextMenu') || {};
             }
-            
+
             // hide event
             if (!force && opt.events && opt.events.hide.call($trigger, opt) === false) {
                 return;
             }
-            
+
             // remove options and revert state
             $trigger
                 .removeData('contextMenu')
                 .removeClass("context-menu-active");
-            
+
             if (opt.$layer) {
                 // keep layer for a bit so the contextmenu event can be aborted properly by opera
                 setTimeout((function($layer) {
@@ -3210,14 +3210,14 @@ var // currently active contextMenu trigger
                         $layer.remove();
                     };
                 })(opt.$layer), 10);
-                
+
                 try {
                     delete opt.$layer;
                 } catch(e) {
                     opt.$layer = null;
                 }
             }
-            
+
             // remove handle
             $currentTrigger = null;
             // remove selected
@@ -3248,7 +3248,7 @@ var // currently active contextMenu trigger
                         }
                     });
                 }
-                
+
                 setTimeout(function() {
                     $trigger.trigger('contextmenu:hidden');
                 }, 10);
@@ -3263,32 +3263,32 @@ var // currently active contextMenu trigger
                 'contextMenu': opt,
                 'contextMenuRoot': root
             });
-            
+
             $.each(['callbacks', 'commands', 'inputs'], function(i,k){
                 opt[k] = {};
                 if (!root[k]) {
                     root[k] = {};
                 }
             });
-            
+
             root.accesskeys || (root.accesskeys = {});
-            
+
             // create contextMenu items
             $.each(opt.items, function(key, item){
                 var $t = $('<li class="context-menu-item"></li>').addClass(item.className || ""),
                     $label = null,
                     $input = null;
-                
+
                 // iOS needs to see a click-event bound to an element to actually
                 // have the TouchEvents infrastructure trigger the click event
                 $t.on('click', $.noop);
-                
+
                 item.$node = $t.data({
                     'contextMenu': opt,
                     'contextMenuRoot': root,
                     'contextMenuKey': key
                 });
-                
+
                 // register accesskey
                 // NOTE: the accesskey attribute should be applicable to any element, but Safari5 and Chrome13 still can't do that
                 if (item.accesskey) {
@@ -3301,7 +3301,7 @@ var // currently active contextMenu trigger
                         }
                     }
                 }
-                
+
                 if (typeof item == "string") {
                     $t.addClass('context-menu-separator not-selectable');
                 } else if (item.type && types[item.type]) {
@@ -3330,7 +3330,7 @@ var // currently active contextMenu trigger
                     } else if (item.items) {
                         item.type = 'sub';
                     }
-                
+
                     switch (item.type) {
                         case 'text':
                             $input = $('<input type="text" value="1" name="" value="">')
@@ -3338,7 +3338,7 @@ var // currently active contextMenu trigger
                                 .val(item.value || "")
                                 .appendTo($label);
                             break;
-                    
+
                         case 'textarea':
                             $input = $('<textarea name=""></textarea>')
                                 .attr('name', 'context-menu-input-' + key)
@@ -3365,7 +3365,7 @@ var // currently active contextMenu trigger
                                 .prop("checked", !!item.selected)
                                 .prependTo($label);
                             break;
-                    
+
                         case 'select':
                             $input = $('<select name="">')
                                 .attr('name', 'context-menu-input-' + key)
@@ -3377,7 +3377,7 @@ var // currently active contextMenu trigger
                                 $input.val(item.selected);
                             }
                             break;
-                        
+
                         case 'sub':
                             // FIXME: shouldn't this .html() be a .text()?
                             $('<span></span>').html(item._name || item.name).appendTo($t);
@@ -3386,11 +3386,11 @@ var // currently active contextMenu trigger
                             $t.data('contextMenu', item).addClass('context-menu-submenu');
                             item.callback = null;
                             break;
-                        
+
                         case 'html':
                             $(item.html).appendTo($t);
                             break;
-                        
+
                         default:
                             $.each([opt, root], function(i,k){
                                 k.commands[key] = item;
@@ -3402,34 +3402,34 @@ var // currently active contextMenu trigger
                             $('<span></span>').html(item._name || item.name || "").appendTo($t);
                             break;
                     }
-                    
+
                     // disable key listener in <input>
                     if (item.type && item.type != 'sub' && item.type != 'html') {
                         $input
                             .on('focus', handle.focusInput)
                             .on('blur', handle.blurInput);
-                        
+
                         if (item.events) {
                             $input.on(item.events, opt);
                         }
                     }
-                
+
                     // add icons
                     if (item.icon) {
                         $t.addClass("icon icon-" + item.icon);
                     }
                 }
-                
+
                 // cache contained elements
                 item.$input = $input;
                 item.$label = $label;
 
                 // attach item to menu
                 $t.appendTo(opt.$menu);
-                
+
                 // Disable text selection
                 if (!opt.hasTypes && $.support.eventSelectstart) {
-                    // browsers support user-select: none, 
+                    // browsers support user-select: none,
                     // IE has a special event for text-selection
                     // browsers supporting neither will not be preventing text-selection
                     $t.on('selectstart.disableTextSelect', handle.abortevent);
@@ -3465,7 +3465,7 @@ var // currently active contextMenu trigger
             // elements' widths wouldn't be calculatable otherwise
             if (!nested) {
                 $menu.find('ul').andSelf().css({
-                    position: '', 
+                    position: '',
                     display: '',
                     minWidth: '',
                     maxWidth: ''
@@ -3489,29 +3489,29 @@ var // currently active contextMenu trigger
 
                 // dis- / enable item
                 $item[disabled ? 'addClass' : 'removeClass']('disabled');
-                
+
                 if (item.type) {
                     // dis- / enable input elements
                     $item.find('input, select, textarea').prop('disabled', disabled);
-                    
+
                     // update input states
                     switch (item.type) {
                         case 'text':
                         case 'textarea':
                             item.$input.val(item.value || "");
                             break;
-                            
+
                         case 'checkbox':
                         case 'radio':
                             item.$input.val(item.value || "").prop('checked', !!item.selected);
                             break;
-                            
+
                         case 'select':
                             item.$input.val(item.selected || "");
                             break;
                     }
                 }
-                
+
                 if (item.$menu) {
                     // update sub-menu
                     op.update.call($trigger, item, root);
@@ -3527,7 +3527,7 @@ var // currently active contextMenu trigger
                 .insertBefore(this)
                 .on('contextmenu', handle.abortevent)
                 .on('mousedown', handle.layerClick);
-            
+
             // IE6 doesn't know position:fixed;
             if (!$.support.fixedPosition) {
                 $layer.css({
@@ -3535,7 +3535,7 @@ var // currently active contextMenu trigger
                     'height' : $(document).height()
                 });
             }
-            
+
             return $layer;
         }
     };
@@ -3544,14 +3544,14 @@ var // currently active contextMenu trigger
 function splitAccesskey(val) {
     var t = val.split(/\s+/),
         keys = [];
-        
+
     for (var i=0, k; k = t[i]; i++) {
         k = k[0].toUpperCase(); // first character only
         // theoretically non-accessible characters should be ignored, but different systems, different keyboard layouts, ... screw it.
         // a map to look up already used access keys would be nice
         keys.push(k);
     }
-    
+
     return keys;
 }
 
@@ -3574,7 +3574,7 @@ $.fn.contextMenu = function(operation) {
     } else if (!operation) {
         this.addClass('context-menu-disabled');
     }
-    
+
     return this;
 };
 
@@ -3584,19 +3584,19 @@ $.contextMenu = function(operation, options) {
         options = operation;
         operation = 'create';
     }
-    
+
     if (typeof options == 'string') {
         options = {selector: options};
     } else if (options === undefined) {
         options = {};
     }
-    
+
     // merge with default options
     var o = $.extend(true, {}, defaults, options || {});
     var $document = $(document);
     var $context = $document;
     var _hasContext = false;
-    
+
     if (!o.context || !o.context.length) {
         o.context = document;
     } else {
@@ -3605,7 +3605,7 @@ $.contextMenu = function(operation, options) {
         o.context = $context.get(0);
         _hasContext = o.context !== document;
     }
-    
+
     switch (operation) {
         case 'create':
             // no selector no joy
@@ -3625,12 +3625,12 @@ $.contextMenu = function(operation, options) {
                 namespaces[o.selector] = o.ns;
             }
             menus[o.ns] = o;
-            
+
             // default to right click
             if (!o.trigger) {
                 o.trigger = 'right';
             }
-            
+
             if (!initialized) {
                 // make sure item click is registered first
                 $document
@@ -3654,25 +3654,25 @@ $.contextMenu = function(operation, options) {
 
                 initialized = true;
             }
-            
+
             // engage native contextmenu event
             $context
                 .on('contextmenu' + o.ns, o.selector, o, handle.contextmenu);
-            
+
             if (_hasContext) {
                 // add remove hook, just in case
                 $context.on('remove' + o.ns, function() {
                     $(this).contextMenu("destroy");
                 });
             }
-            
+
             switch (o.trigger) {
                 case 'hover':
                         $context
                             .on('mouseenter' + o.ns, o.selector, o, handle.mouseenter)
-                            .on('mouseleave' + o.ns, o.selector, o, handle.mouseleave);                    
+                            .on('mouseleave' + o.ns, o.selector, o, handle.mouseleave);
                     break;
-                    
+
                 case 'left':
                         $context.on('click' + o.ns, o.selector, o, handle.click);
                     break;
@@ -3685,23 +3685,23 @@ $.contextMenu = function(operation, options) {
                     break;
                 */
             }
-            
+
             // create menu
             if (!o.build) {
                 op.create(o);
             }
             break;
-        
+
         case 'destroy':
             var $visibleMenu;
             if (_hasContext) {
-                // get proper options 
+                // get proper options
                 var context = o.context;
                 $.each(menus, function(ns, o) {
                     if (o.context !== context) {
                         return true;
                     }
-                    
+
                     $visibleMenu = $('.context-menu-list').filter(':visible');
                     if ($visibleMenu.length && $visibleMenu.data().contextMenuRoot.$trigger.is($(o.context).find(o.selector))) {
                         $visibleMenu.trigger('contextmenu:hide', {force: true});
@@ -3718,7 +3718,7 @@ $.contextMenu = function(operation, options) {
                     }
 
                     $(o.context).off(o.ns);
-                    
+
                     return true;
                 });
             } else if (!o.selector) {
@@ -3726,33 +3726,33 @@ $.contextMenu = function(operation, options) {
                 $.each(menus, function(ns, o) {
                     $(o.context).off(o.ns);
                 });
-                
+
                 namespaces = {};
                 menus = {};
                 counter = 0;
                 initialized = false;
-                
+
                 $('#context-menu-layer, .context-menu-list').remove();
             } else if (namespaces[o.selector]) {
                 $visibleMenu = $('.context-menu-list').filter(':visible');
                 if ($visibleMenu.length && $visibleMenu.data().contextMenuRoot.$trigger.is(o.selector)) {
                     $visibleMenu.trigger('contextmenu:hide', {force: true});
                 }
-                
+
                 try {
                     if (menus[namespaces[o.selector]].$menu) {
                         menus[namespaces[o.selector]].$menu.remove();
                     }
-                    
+
                     delete menus[namespaces[o.selector]];
                 } catch(e) {
                     menus[namespaces[o.selector]] = null;
                 }
-                
+
                 $document.off(namespaces[o.selector]);
             }
             break;
-        
+
         case 'html5':
             // if <command> or <menuitem> are not handled by the browser,
             // or options was a bool true,
@@ -3768,11 +3768,11 @@ $.contextMenu = function(operation, options) {
                 }).css('display', 'none');
             }
             break;
-        
+
         default:
             throw new Error('Unknown operation "' + operation + '"');
     }
-    
+
     return this;
 };
 
@@ -3781,7 +3781,7 @@ $.contextMenu.setInputValues = function(opt, data) {
     if (data === undefined) {
         data = {};
     }
-    
+
     $.each(opt.inputs, function(key, item) {
         switch (item.type) {
             case 'text':
@@ -3792,11 +3792,11 @@ $.contextMenu.setInputValues = function(opt, data) {
             case 'checkbox':
                 item.selected = data[key] ? true : false;
                 break;
-                
+
             case 'radio':
                 item.selected = (data[item.radio] || "") == item.value ? true : false;
                 break;
-            
+
             case 'select':
                 item.selected = data[key] || "";
                 break;
@@ -3809,7 +3809,7 @@ $.contextMenu.getInputValues = function(opt, data) {
     if (data === undefined) {
         data = {};
     }
-    
+
     $.each(opt.inputs, function(key, item) {
         switch (item.type) {
             case 'text':
@@ -3821,7 +3821,7 @@ $.contextMenu.getInputValues = function(opt, data) {
             case 'checkbox':
                 data[key] = item.$input.prop('checked');
                 break;
-                
+
             case 'radio':
                 if (item.$input.prop('checked')) {
                     data[item.radio] = item.value;
@@ -3829,7 +3829,7 @@ $.contextMenu.getInputValues = function(opt, data) {
                 break;
         }
     });
-    
+
     return data;
 };
 
@@ -3843,14 +3843,14 @@ function menuChildren(items, $children, counter) {
     if (!counter) {
         counter = 0;
     }
-    
+
     $children.each(function() {
         var $node = $(this),
             node = this,
             nodeName = this.nodeName.toLowerCase(),
             label,
             item;
-        
+
         // extract <label><input>
         if (nodeName == 'label' && $node.find('input, textarea, select').length) {
             label = $node.text();
@@ -3858,14 +3858,14 @@ function menuChildren(items, $children, counter) {
             node = $node.get(0);
             nodeName = node.nodeName.toLowerCase();
         }
-        
+
         /*
          * <menu> accepts flow-content as children. that means <embed>, <canvas> and such are valid menu items.
          * Not being the sadistic kind, $.contextMenu only accepts:
          * <command>, <menuitem>, <hr>, <span>, <p> <input [text, radio, checkbox]>, <textarea>, <select> and of course <menu>.
          * Everything else will be imported as an html node, which is not interfaced with contextMenu.
          */
-        
+
         // http://www.whatwg.org/specs/web-apps/current-work/multipage/commands.html#concept-command
         switch (nodeName) {
             // http://www.whatwg.org/specs/web-apps/current-work/multipage/interactive-elements.html#the-menu-element
@@ -3873,7 +3873,7 @@ function menuChildren(items, $children, counter) {
                 item = {name: $node.attr('label'), items: {}};
                 counter = menuChildren(item.items, $node.children(), counter);
                 break;
-            
+
             // http://www.whatwg.org/specs/web-apps/current-work/multipage/commands.html#using-the-a-element-to-define-a-command
             case 'a':
             // http://www.whatwg.org/specs/web-apps/current-work/multipage/commands.html#using-the-button-element-to-define-a-command
@@ -3884,7 +3884,7 @@ function menuChildren(items, $children, counter) {
                     callback: (function(){ return function(){ $node.click(); }; })()
                 };
                 break;
-            
+
             // http://www.whatwg.org/specs/web-apps/current-work/multipage/commands.html#using-the-command-element-to-define-a-command
 
             case 'menuitem':
@@ -3899,7 +3899,7 @@ function menuChildren(items, $children, counter) {
                             callback: (function(){ return function(){ $node.click(); }; })()
                         };
                         break;
-                        
+
                     case 'checkbox':
                         item = {
                             type: 'checkbox',
@@ -3908,7 +3908,7 @@ function menuChildren(items, $children, counter) {
                             selected: !!$node.attr('checked')
                         };
                         break;
-                        
+
                     case 'radio':
                         item = {
                             type: 'radio',
@@ -3919,16 +3919,16 @@ function menuChildren(items, $children, counter) {
                             selected: !!$node.attr('checked')
                         };
                         break;
-                        
+
                     default:
                         item = undefined;
                 }
                 break;
- 
+
             case 'hr':
                 item = '-------';
                 break;
-                
+
             case 'input':
                 switch ($node.attr('type')) {
                     case 'text':
@@ -3939,7 +3939,7 @@ function menuChildren(items, $children, counter) {
                             value: $node.val()
                         };
                         break;
-                        
+
                     case 'checkbox':
                         item = {
                             type: 'checkbox',
@@ -3948,7 +3948,7 @@ function menuChildren(items, $children, counter) {
                             selected: !!$node.attr('checked')
                         };
                         break;
-                        
+
                     case 'radio':
                         item = {
                             type: 'radio',
@@ -3959,13 +3959,13 @@ function menuChildren(items, $children, counter) {
                             selected: !!$node.attr('checked')
                         };
                         break;
-                    
+
                     default:
                         item = undefined;
                         break;
                 }
                 break;
-                
+
             case 'select':
                 item = {
                     type: 'select',
@@ -3978,7 +3978,7 @@ function menuChildren(items, $children, counter) {
                     item.options[this.value] = $(this).text();
                 });
                 break;
-                
+
             case 'textarea':
                 item = {
                     type: 'textarea',
@@ -3987,21 +3987,21 @@ function menuChildren(items, $children, counter) {
                     value: $node.val()
                 };
                 break;
-            
+
             case 'label':
                 break;
-            
+
             default:
                 item = {type: 'html', html: $node.clone(true)};
                 break;
         }
-        
+
         if (item) {
             counter++;
             items['key' + counter] = item;
         }
     });
-    
+
     return counter;
 }
 
@@ -4009,9 +4009,9 @@ function menuChildren(items, $children, counter) {
 $.contextMenu.fromMenu = function(element) {
     var $this = $(element),
         items = {};
-        
+
     menuChildren(items, $this.children());
-    
+
     return items;
 };
 
@@ -4061,7 +4061,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
         window.dispatchEvent(event);
     };
 
-    /* Auto initialization of one or more instances of lazyload, depending on the 
+    /* Auto initialization of one or more instances of lazyload, depending on the
         options passed in (plain object or an array) */
     var autoInitialize = function autoInitialize(classObj, options) {
         if (!options.length) {
@@ -4699,7 +4699,7 @@ var bootbox = window.bootbox || (function(document, $) {
                 closeButton = "<a href='"+_defaultHref+"' class='close'>&times;</a>";
             }
 
-            parts.push("<div class='modal-header'>"+closeButton+"<h3>"+options['header']+"</h3></div>");
+            parts.push("<div class='modal-header'><h3>"+options['header']+"</h3>"+closeButton+"</div>");
         }
 
         // push an empty body into which we'll inject the proper content later
@@ -5062,7 +5062,7 @@ window.bootbox = bootbox;
 * $Date: 2013-01-12 (Fri, 12 Jan 2013) $
 * $version: 1.6.0	- Fixed bugs with pinching, mainly when both pinch and swipe enabled, as well as adding time threshold for multifinger gestures, so releasing one finger beofre the other doesnt trigger as single finger gesture.
 *					- made the demo site all static local HTML pages so they can be run locally by a developer
-*					- added jsDoc comments and added documentation for the plugin	
+*					- added jsDoc comments and added documentation for the plugin
 *					- code tidy
 *					- added triggerOnTouchLeave property that will end the event when the user swipes off the element.
 * $Date: 2013-03-23 (Sat, 23 Mar 2013) $
@@ -5081,12 +5081,12 @@ window.bootbox = bootbox;
 *
 * $Date: 2014-06-04 (Wed, 04 June 2014) $
 * $version 1.6.6 	- Merge of pull requests.
-*    				- IE10 touch support 
+*    				- IE10 touch support
 *    				- Only prevent default event handling on valid swipe
 *    				- Separate license/changelog comment
 *    				- Detect if the swipe is valid at the end of the touch event.
-*    				- Pass fingerdata to event handlers. 
-*    				- Add 'hold' gesture 
+*    				- Pass fingerdata to event handlers.
+*    				- Add 'hold' gesture
 *    				- Be more tolerant about the tap distance
 *    				- Typos and minor fixes
 *
@@ -5101,15 +5101,15 @@ window.bootbox = bootbox;
 /**
  * See (http://jquery.com/).
  * @name $
- * @class 
+ * @class
  * See the jQuery Library  (http://jquery.com/) for full details.  This just
  * documents the function and classes that are added to jQuery by this plug-in.
  */
- 
+
 /**
  * See (http://jquery.com/)
  * @name fn
- * @class 
+ * @class
  * See the jQuery Library  (http://jquery.com/) for full details.  This just
  * documents the function and classes that are added to jQuery by this plug-in.
  * @memberOf $
@@ -5138,19 +5138,19 @@ window.bootbox = bootbox;
 
 		NONE = "none",
 		AUTO = "auto",
-		
+
 		SWIPE = "swipe",
 		PINCH = "pinch",
 		TAP = "tap",
 		DOUBLE_TAP = "doubletap",
 		LONG_TAP = "longtap",
 		HOLD = "hold",
-		
+
 		HORIZONTAL = "horizontal",
 		VERTICAL = "vertical",
 
 		ALL_FINGERS = "all",
-		
+
 		DOUBLE_TAP_THRESHOLD = 10,
 
 		PHASE_START = "start",
@@ -5159,9 +5159,9 @@ window.bootbox = bootbox;
 		PHASE_CANCEL = "cancel",
 
 		SUPPORTS_TOUCH = 'ontouchstart' in window,
-		
+
 		SUPPORTS_POINTER_IE10 = window.navigator.msPointerEnabled && !window.navigator.pointerEnabled,
-		
+
 		SUPPORTS_POINTER = window.navigator.pointerEnabled || window.navigator.msPointerEnabled,
 
 		PLUGIN_NS = 'TouchSwipe';
@@ -5174,11 +5174,11 @@ window.bootbox = bootbox;
 	* @name $.fn.swipe.defaults
 	* @namespace
 	* @property {int} [fingers=1] The number of fingers to detect in a swipe. Any swipes that do not meet this requirement will NOT trigger swipe handlers.
-	* @property {int} [threshold=75] The number of pixels that the user must move their finger by before it is considered a swipe. 
+	* @property {int} [threshold=75] The number of pixels that the user must move their finger by before it is considered a swipe.
 	* @property {int} [cancelThreshold=null] The number of pixels that the user must move their finger back from the original swipe direction to cancel the gesture.
-	* @property {int} [pinchThreshold=20] The number of pixels that the user must pinch their finger by before it is considered a pinch. 
-	* @property {int} [maxTimeThreshold=null] Time, in milliseconds, between touchStart and touchEnd must NOT exceed in order to be considered a swipe. 
-	* @property {int} [fingerReleaseThreshold=250] Time in milliseconds between releasing multiple fingers.  If 2 fingers are down, and are released one after the other, if they are within this threshold, it counts as a simultaneous release. 
+	* @property {int} [pinchThreshold=20] The number of pixels that the user must pinch their finger by before it is considered a pinch.
+	* @property {int} [maxTimeThreshold=null] Time, in milliseconds, between touchStart and touchEnd must NOT exceed in order to be considered a swipe.
+	* @property {int} [fingerReleaseThreshold=250] Time in milliseconds between releasing multiple fingers.  If 2 fingers are down, and are released one after the other, if they are within this threshold, it counts as a simultaneous release.
 	* @property {int} [longTapThreshold=500] Time in milliseconds between tap and release for a long tap
 	* @property {int} [doubleTapThreshold=200] Time in milliseconds between 2 taps to count as a double tap
 	* @property {function} [swipe=null] A handler to catch all swipes. See {@link $.fn.swipe#event:swipe}
@@ -5190,49 +5190,49 @@ window.bootbox = bootbox;
 	* @property {function} [pinchIn=null] A handler triggered for pinch in events. See {@link $.fn.swipe#event:pinchIn}
 	* @property {function} [pinchOut=null] A handler triggered for pinch out events. See {@link $.fn.swipe#event:pinchOut}
 	* @property {function} [pinchStatus=null] A handler triggered for every phase of a pinch. See {@link $.fn.swipe#event:pinchStatus}
-	* @property {function} [tap=null] A handler triggered when a user just taps on the item, rather than swipes it. If they do not move, tap is triggered, if they do move, it is not. 
+	* @property {function} [tap=null] A handler triggered when a user just taps on the item, rather than swipes it. If they do not move, tap is triggered, if they do move, it is not.
 	* @property {function} [doubleTap=null] A handler triggered when a user double taps on the item. The delay between taps can be set with the doubleTapThreshold property. See {@link $.fn.swipe.defaults#doubleTapThreshold}
 	* @property {function} [longTap=null] A handler triggered when a user long taps on the item. The delay between start and end can be set with the longTapThreshold property. See {@link $.fn.swipe.defaults#longTapThreshold}
 	* @property (function) [hold=null] A handler triggered when a user reaches longTapThreshold on the item. See {@link $.fn.swipe.defaults#longTapThreshold}
-	* @property {boolean} [triggerOnTouchEnd=true] If true, the swipe events are triggered when the touch end event is received (user releases finger).  If false, it will be triggered on reaching the threshold, and then cancel the touch event automatically. 
-	* @property {boolean} [triggerOnTouchLeave=false] If true, then when the user leaves the swipe object, the swipe will end and trigger appropriate handlers. 
+	* @property {boolean} [triggerOnTouchEnd=true] If true, the swipe events are triggered when the touch end event is received (user releases finger).  If false, it will be triggered on reaching the threshold, and then cancel the touch event automatically.
+	* @property {boolean} [triggerOnTouchLeave=false] If true, then when the user leaves the swipe object, the swipe will end and trigger appropriate handlers.
 	* @property {string|undefined} [allowPageScroll='auto'] How the browser handles page scrolls when the user is swiping on a touchSwipe object. See {@link $.fn.swipe.pageScroll}.  <br/><br/>
 										<code>"auto"</code> : all undefined swipes will cause the page to scroll in that direction. <br/>
 										<code>"none"</code> : the page will not scroll when user swipes. <br/>
 										<code>"horizontal"</code> : will force page to scroll on horizontal swipes. <br/>
 										<code>"vertical"</code> : will force page to scroll on vertical swipes. <br/>
-	* @property {boolean} [fallbackToMouseEvents=true] If true mouse events are used when run on a non touch device, false will stop swipes being triggered by mouse events on non tocuh devices. 
-	* @property {string} [excludedElements="button, input, select, textarea, a, .noSwipe"] A jquery selector that specifies child elements that do NOT trigger swipes. By default this excludes all form, input, select, button, anchor and .noSwipe elements. 
-	* @property {boolean} [preventDefaultEvents=true] by default default events are cancelled, so the page doesn't move.  You can dissable this so both native events fire as well as your handlers. 
-	
+	* @property {boolean} [fallbackToMouseEvents=true] If true mouse events are used when run on a non touch device, false will stop swipes being triggered by mouse events on non tocuh devices.
+	* @property {string} [excludedElements="button, input, select, textarea, a, .noSwipe"] A jquery selector that specifies child elements that do NOT trigger swipes. By default this excludes all form, input, select, button, anchor and .noSwipe elements.
+	* @property {boolean} [preventDefaultEvents=true] by default default events are cancelled, so the page doesn't move.  You can dissable this so both native events fire as well as your handlers.
+
 	*/
 	var defaults = {
-		fingers: 1, 		
-		threshold: 75, 	
-		cancelThreshold:null,	
+		fingers: 1,
+		threshold: 75,
+		cancelThreshold:null,
 		pinchThreshold:20,
-		maxTimeThreshold: null, 
-		fingerReleaseThreshold:250, 
+		maxTimeThreshold: null,
+		fingerReleaseThreshold:250,
 		longTapThreshold:500,
 		doubleTapThreshold:200,
-		swipe: null, 		
-		swipeLeft: null, 	
-		swipeRight: null, 	
-		swipeUp: null, 		
-		swipeDown: null, 	
-		swipeStatus: null, 	
-		pinchIn:null,		
-		pinchOut:null,		
-		pinchStatus:null,	
+		swipe: null,
+		swipeLeft: null,
+		swipeRight: null,
+		swipeUp: null,
+		swipeDown: null,
+		swipeStatus: null,
+		pinchIn:null,
+		pinchOut:null,
+		pinchStatus:null,
 		click:null, //Deprecated since 1.6.2
 		tap:null,
 		doubleTap:null,
-		longTap:null, 		
-		hold:null, 
-		triggerOnTouchEnd: true, 
-		triggerOnTouchLeave:false, 
-		allowPageScroll: "auto", 
-		fallbackToMouseEvents: true,	
+		longTap:null,
+		hold:null,
+		triggerOnTouchEnd: true,
+		triggerOnTouchLeave:false,
+		allowPageScroll: "auto",
+		fallbackToMouseEvents: true,
 		excludedElements:"label, button, input, select, textarea, a, .noSwipe",
 		preventDefaultEvents:true
 	};
@@ -5241,13 +5241,13 @@ window.bootbox = bootbox;
 
 	/**
 	* Applies TouchSwipe behaviour to one or more jQuery objects.
-	* The TouchSwipe plugin can be instantiated via this method, or methods within 
+	* The TouchSwipe plugin can be instantiated via this method, or methods within
 	* TouchSwipe can be executed via this method as per jQuery plugin architecture.
 	* @see TouchSwipe
 	* @class
 	* @param {Mixed} method If the current DOMNode is a TouchSwipe object, and <code>method</code> is a TouchSwipe method, then
 	* the <code>method</code> is executed, and any following arguments are passed to the TouchSwipe method.
-	* If <code>method</code> is an object, then the TouchSwipe class is instantiated on the current DOMNode, passing the 
+	* If <code>method</code> is an object, then the TouchSwipe class is instantiated on the current DOMNode, passing the
 	* configuration properties defined in the object. See TouchSwipe
 	*
 	*/
@@ -5255,7 +5255,7 @@ window.bootbox = bootbox;
 		var $this = $(this),
 			plugin = $this.data(PLUGIN_NS);
 
-		//Check if we are already instantiated and trying to execute a method	
+		//Check if we are already instantiated and trying to execute a method
 		if (plugin && typeof method === 'string') {
 			if (plugin[method]) {
 				return plugin[method].apply(this, Array.prototype.slice.call(arguments, 1));
@@ -5275,7 +5275,7 @@ window.bootbox = bootbox;
 	$.fn.swipe.defaults = defaults;
 
 	/**
-	* The phases that a touch event goes through.  The <code>phase</code> is passed to the event handlers. 
+	* The phases that a touch event goes through.  The <code>phase</code> is passed to the event handlers.
 	* These properties are read only, attempting to change them will not alter the values passed to the event handlers.
 	* @namespace
 	* @readonly
@@ -5292,7 +5292,7 @@ window.bootbox = bootbox;
 	};
 
 	/**
-	* The direction constants that are passed to the event handlers. 
+	* The direction constants that are passed to the event handlers.
 	* These properties are read only, attempting to change them will not alter the values passed to the event handlers.
 	* @namespace
 	* @readonly
@@ -5311,7 +5311,7 @@ window.bootbox = bootbox;
 		IN : IN,
 		OUT: OUT
 	};
-	
+
 	/**
 	* The page scroll constants that can be used to set the value of <code>allowPageScroll</code> option
 	* These properties are read only
@@ -5331,7 +5331,7 @@ window.bootbox = bootbox;
 	};
 
 	/**
-	* Constants representing the number of fingers used in a swipe.  These are used to set both the value of <code>fingers</code> in the 
+	* Constants representing the number of fingers used in a swipe.  These are used to set both the value of <code>fingers</code> in the
 	* options object, as well as the value of the <code>fingers</code> event property.
 	* These properties are read only, attempting to change them will not alter the values passed to the event handlers.
 	* @namespace
@@ -5360,7 +5360,7 @@ window.bootbox = bootbox;
 		if (options && (options.allowPageScroll === undefined && (options.swipe !== undefined || options.swipeStatus !== undefined))) {
 			options.allowPageScroll = NONE;
 		}
-		
+
         //Check for deprecated options
 		//Ensure that any old click handlers are assigned to the new tap, unless we have a tap
 		if(options.click!==undefined && options.tap===undefined) {
@@ -5370,7 +5370,7 @@ window.bootbox = bootbox;
 		if (!options) {
 			options = {};
 		}
-		
+
         //pass empty object so we dont modify the defaults
 		options = $.extend({}, $.fn.swipe.defaults, options);
 
@@ -5420,16 +5420,16 @@ window.bootbox = bootbox;
 			pinchDirection = 0,
 			maximumsMap=null;
 
-		
-		
+
+
 		//jQuery wrapped element for this instance
 		var $element = $(element);
-		
+
 		//Current phase of th touch cycle
 		var phase = "start";
 
 		// the current number of fingers being used.
-		var fingerCount = 0; 			
+		var fingerCount = 0;
 
 		//track mouse points / delta
 		var fingerData=null;
@@ -5444,7 +5444,7 @@ window.bootbox = bootbox;
 		//Timeouts
 		var singleTapTimeout=null,
 			holdTimeout=null;
-        
+
 		// Add gestures to all swipable areas if supported
 		try {
 			$element.bind(START_EV, touchStart);
@@ -5457,12 +5457,12 @@ window.bootbox = bootbox;
 		//
 		//Public methods
 		//
-		
+
 		/**
 		* re-enables the swipe plugin with the previous configuration
 		* @function
 		* @name $.fn.swipe#enable
-		* @return {DOMNode} The Dom element that was registered with TouchSwipe 
+		* @return {DOMNode} The Dom element that was registered with TouchSwipe
 		* @example $("#element").swipe("enable");
 		*/
 		this.enable = function () {
@@ -5495,7 +5495,7 @@ window.bootbox = bootbox;
 			$element = null;
 		};
 
-		
+
         /**
          * Allows run time updating of the swipe configuration options.
          * @function
@@ -5525,7 +5525,7 @@ window.bootbox = bootbox;
 		//
 		// Private methods
 		//
-		
+
 		//
 		// EVENTS
 		//
@@ -5539,15 +5539,15 @@ window.bootbox = bootbox;
 			//If we already in a touch event (a finger already in use) then ignore subsequent ones..
 			if( getTouchInProgress() )
 				return;
-			
+
 			//Check if this element matches any in the excluded elements selectors,  or its parent is excluded, if so, DON'T swipe
-			if( $(jqEvent.target).closest( options.excludedElements, $element ).length>0 ) 
+			if( $(jqEvent.target).closest( options.excludedElements, $element ).length>0 )
 				return;
-				
+
 			//As we use Jquery bind for events, we need to target the original event object
 			//If these events are being programmatically triggered, we don't have an original event object, so use the Jq one.
 			var event = jqEvent.originalEvent ? jqEvent.originalEvent : jqEvent;
-			
+
 			var ret,
 				evt = SUPPORTS_TOUCH ? event.touches[0] : event;
 
@@ -5576,27 +5576,27 @@ window.bootbox = bootbox;
 			maximumsMap=createMaximumsData();
 			cancelMultiFingerRelease();
 
-			
+
 			// check the number of fingers is what we are looking for, or we are capturing pinches
 			if (!SUPPORTS_TOUCH || (fingerCount === options.fingers || options.fingers === ALL_FINGERS) || hasPinches()) {
 				// get the coordinates of the touch
 				createFingerData( 0, evt );
 				startTime = getTimeStamp();
-				
+
 				if(fingerCount==2) {
 					//Keep track of the initial pinch distance, so we can calculate the diff later
 					//Store second finger data as start
 					createFingerData( 1, event.touches[1] );
 					startTouchesDistance = endTouchesDistance = calculateTouchesDistance(fingerData[0].start, fingerData[1].start);
 				}
-				
+
 				if (options.swipeStatus || options.pinchStatus) {
 					ret = triggerHandler(event, phase);
 				}
 			}
 			else {
 				//A touch with more or less than the fingers we are looking for, so cancel
-				ret = false; 
+				ret = false;
 			}
 
 			//If we have a return value from the users handler, then return and cancel
@@ -5622,33 +5622,33 @@ window.bootbox = bootbox;
 
             return null;
 		};
-		
-		
-		
+
+
+
 		/**
-		* Event handler for a touch move event. 
+		* Event handler for a touch move event.
 		* If we change fingers during move, then cancel the event
 		* @inner
 		* @param {object} jqEvent The normalised jQuery event object.
 		*/
 		function touchMove(jqEvent) {
-			
+
 			//As we use Jquery bind for events, we need to target the original event object
 			//If these events are being programmatically triggered, we don't have an original event object, so use the Jq one.
 			var event = jqEvent.originalEvent ? jqEvent.originalEvent : jqEvent;
-			
+
 			//If we are ending, cancelling, or within the threshold of 2 fingers being released, don't track anything..
 			if (phase === PHASE_END || phase === PHASE_CANCEL || inMultiFingerRelease())
 				return;
 
 			var ret,
 				evt = SUPPORTS_TOUCH ? event.touches[0] : event;
-			
 
-			//Update the  finger data 
+
+			//Update the  finger data
 			var currentFinger = updateFingerData(evt);
 			endTime = getTimeStamp();
-			
+
 			if (SUPPORTS_TOUCH) {
 				fingerCount = event.touches.length;
 			}
@@ -5660,34 +5660,34 @@ window.bootbox = bootbox;
 
 			//If we have 2 fingers get Touches distance as well
 			if(fingerCount==2) {
-				
+
 				//Keep track of the initial pinch distance, so we can calculate the diff later
 				//We do this here as well as the start event, in case they start with 1 finger, and the press 2 fingers
 				if(startTouchesDistance==0) {
 					//Create second finger if this is the first time...
 					createFingerData( 1, event.touches[1] );
-					
+
 					startTouchesDistance = endTouchesDistance = calculateTouchesDistance(fingerData[0].start, fingerData[1].start);
 				} else {
 					//Else just update the second finger
 					updateFingerData(event.touches[1]);
-				
+
 					endTouchesDistance = calculateTouchesDistance(fingerData[0].end, fingerData[1].end);
 					pinchDirection = calculatePinchDirection(fingerData[0].end, fingerData[1].end);
 				}
-				
-				
+
+
 				pinchZoom = calculatePinchZoom(startTouchesDistance, endTouchesDistance);
 				pinchDistance = Math.abs(startTouchesDistance - endTouchesDistance);
 			}
-			
-			
-			
+
+
+
 
 			if ( (fingerCount === options.fingers || options.fingers === ALL_FINGERS) || !SUPPORTS_TOUCH || hasPinches() ) {
-				
+
 				direction = calculateDirection(currentFinger.start, currentFinger.end);
-				
+
 				//Check if we need to prevent default event (page scroll / pinch zoom) or not
 				validateDefaultEvent(jqEvent, direction);
 
@@ -5702,31 +5702,31 @@ window.bootbox = bootbox;
 				if (options.swipeStatus || options.pinchStatus) {
 					ret = triggerHandler(event, phase);
 				}
-				
-				
+
+
 				//If we trigger end events when threshold are met, or trigger events when touch leaves element
 				if(!options.triggerOnTouchEnd || options.triggerOnTouchLeave) {
-					
+
 					var inBounds = true;
-					
+
 					//If checking if we leave the element, run the bounds check (we can use touchleave as its not supported on webkit)
 					if(options.triggerOnTouchLeave) {
 						var bounds = getbounds( this );
 						inBounds = isInBounds( currentFinger.end, bounds );
 					}
-					
+
 					//Trigger end handles as we swipe if thresholds met or if we have left the element if the user has asked to check these..
 					if(!options.triggerOnTouchEnd && inBounds) {
 						phase = getNextPhase( PHASE_MOVE );
-					} 
-					//We end if out of bounds here, so set current phase to END, and check if its modified 
+					}
+					//We end if out of bounds here, so set current phase to END, and check if its modified
 					else if(options.triggerOnTouchLeave && !inBounds ) {
 						phase = getNextPhase( PHASE_END );
 					}
-						
+
 					if(phase==PHASE_CANCEL || phase==PHASE_END)	{
 						triggerHandler(event, phase);
-					}				
+					}
 				}
 			}
 			else {
@@ -5743,7 +5743,7 @@ window.bootbox = bootbox;
 
 
 		/**
-		* Event handler for a touch end event. 
+		* Event handler for a touch end event.
 		* Calculate the direction and trigger events
 		* @inner
 		* @param {object} jqEvent The normalised jQuery event object.
@@ -5751,7 +5751,7 @@ window.bootbox = bootbox;
 		function touchEnd(jqEvent) {
 			//As we use Jquery bind for events, we need to target the original event object
 			var event = jqEvent.originalEvent;
-				
+
 
 			//If we are still in a touch with another finger return
 			//This allows us to wait a fraction and see if the other finger comes up, if it does within the threshold, then we treat it as a multi release, not a single release.
@@ -5761,26 +5761,26 @@ window.bootbox = bootbox;
 					return true;
 				}
 			}
-			
+
 			//If a previous finger has been released, check how long ago, if within the threshold, then assume it was a multifinger release.
 			//This is used to allow 2 fingers to release fractionally after each other, whilst maintainig the event as containg 2 fingers, not 1
-			if(inMultiFingerRelease()) {	
+			if(inMultiFingerRelease()) {
 				fingerCount=previousTouchFingerCount;
-			}	
-		
+			}
+
 			//Set end of swipe
 			endTime = getTimeStamp();
-			
+
 			//Get duration incase move was never fired
 			duration = calculateDuration();
-			
+
 			//If we trigger handlers at end of swipe OR, we trigger during, but they didnt trigger and we are still in the move phase
 			if(didSwipeBackToCancel() || !validateSwipeDistance()) {
 			    phase = PHASE_CANCEL;
                 triggerHandler(event, phase);
 			} else if (options.triggerOnTouchEnd || (options.triggerOnTouchEnd == false && phase === PHASE_MOVE)) {
-				//call this on jq event so we are cross browser 
-				jqEvent.preventDefault(); 
+				//call this on jq event so we are cross browser
+				jqEvent.preventDefault();
 				phase = PHASE_END;
                 triggerHandler(event, phase);
 			}
@@ -5805,7 +5805,7 @@ window.bootbox = bootbox;
 
 
 		/**
-		* Event handler for a touch cancel event. 
+		* Event handler for a touch cancel event.
 		* Clears current vars
 		* @inner
 		*/
@@ -5817,30 +5817,30 @@ window.bootbox = bootbox;
 			startTouchesDistance=0;
 			endTouchesDistance=0;
 			pinchZoom=1;
-			
+
 			//If we were in progress of tracking a possible multi touch end, then re set it.
 			cancelMultiFingerRelease();
-			
+
 			setTouchInProgress(false);
 		}
-		
-		
+
+
 		/**
-		* Event handler for a touch leave event. 
+		* Event handler for a touch leave event.
 		* This is only triggered on desktops, in touch we work this out manually
 		* as the touchleave event is not supported in webkit
 		* @inner
 		*/
 		function touchLeave(jqEvent) {
 			var event = jqEvent.originalEvent;
-			
+
 			//If we have the trigger on leave property set....
 			if(options.triggerOnTouchLeave) {
 				phase = getNextPhase( PHASE_END );
 				triggerHandler(event, phase);
 			}
 		}
-		
+
 		/**
 		* Removes all listeners that were associated with the plugin
 		* @inner
@@ -5850,45 +5850,45 @@ window.bootbox = bootbox;
 			$element.unbind(CANCEL_EV, touchCancel);
 			$element.unbind(MOVE_EV, touchMove);
 			$element.unbind(END_EV, touchEnd);
-			
+
 			//we only have leave events on desktop, we manually calculate leave on touch as its not supported in webkit
-			if(LEAVE_EV) { 
+			if(LEAVE_EV) {
 				$element.unbind(LEAVE_EV, touchLeave);
 			}
-			
+
 			setTouchInProgress(false);
 		}
 
-		
+
 		/**
 		 * Checks if the time and distance thresholds have been met, and if so then the appropriate handlers are fired.
 		 */
 		function getNextPhase(currentPhase) {
-			
+
 			var nextPhase = currentPhase;
-			
+
 			// Ensure we have valid swipe (under time and over distance  and check if we are out of bound...)
 			var validTime = validateSwipeTime();
 			var validDistance = validateSwipeDistance();
 			var didCancel = didSwipeBackToCancel();
-						
-			//If we have exceeded our time, then cancel	
+
+			//If we have exceeded our time, then cancel
 			if(!validTime || didCancel) {
 				nextPhase = PHASE_CANCEL;
 			}
 			//Else if we are moving, and have reached distance then end
 			else if (validDistance && currentPhase == PHASE_MOVE && (!options.triggerOnTouchEnd || options.triggerOnTouchLeave) ) {
 				nextPhase = PHASE_END;
-			} 
+			}
 			//Else if we have ended by leaving and didn't reach distance, then cancel
 			else if (!validDistance && currentPhase==PHASE_END && options.triggerOnTouchLeave) {
 				nextPhase = PHASE_CANCEL;
 			}
-			
+
 			return nextPhase;
 		}
-		
-		
+
+
 		/**
 		* Trigger the relevant event handler
 		* The handlers are passed the original event, the element that was swiped, and in the case of the catch all handler, the direction that was swiped, "left", "right", "up", or "down"
@@ -5897,16 +5897,16 @@ window.bootbox = bootbox;
 		* @inner
 		*/
 		function triggerHandler(event, phase) {
-			
+
 			var ret = undefined;
-			
+
 			//Swipes and pinches are not mutually exclusive - can happend at same time, so need to trigger 2 events potentially
 			if( (didSwipe() || hasSwipes()) || (didPinch() || hasPinches()) ) {
 				// SWIPE GESTURES
 				if(didSwipe() || hasSwipes()) { //hasSwipes as status needs to fire even if swipe is invalid
 					//Trigger the swipe events...
 					ret = triggerHandlerForGesture(event, phase, SWIPE);
-				}	
+				}
 
 				// PINCH GESTURES (if the above didn't cancel)
 				if((didPinch() || hasPinches()) && ret!==false) {
@@ -5914,13 +5914,13 @@ window.bootbox = bootbox;
 					ret = triggerHandlerForGesture(event, phase, PINCH);
 				}
 			} else {
-			 
+
 				// CLICK / TAP (if the above didn't cancel)
 				if(didDoubleTap() && ret!==false) {
 					//Trigger the tap events...
 					ret = triggerHandlerForGesture(event, phase, DOUBLE_TAP);
 				}
-				
+
 				// CLICK / TAP (if the above didn't cancel)
 				else if(didLongTap() && ret!==false) {
 					//Trigger the tap events...
@@ -5933,32 +5933,32 @@ window.bootbox = bootbox;
 					ret = triggerHandlerForGesture(event, phase, TAP);
 				}
 			}
-			
-			
-			
+
+
+
 			// If we are cancelling the gesture, then manually trigger the reset handler
 			if (phase === PHASE_CANCEL) {
 				touchCancel(event);
 			}
-			
+
 			// If we are ending the gesture, then manually trigger the reset handler IF all fingers are off
 			if(phase === PHASE_END) {
 				//If we support touch, then check that all fingers are off before we cancel
 				if (SUPPORTS_TOUCH) {
 					if(event.touches.length==0) {
-						touchCancel(event);	
+						touchCancel(event);
 					}
-				} 
+				}
 				else {
 					touchCancel(event);
 				}
 			}
-					
+
 			return ret;
 		}
-		
-		
-		
+
+
+
 		/**
 		* Trigger the relevant event handler
 		* The handlers are passed the original event, the element that was swiped, and in the case of the catch all handler, the direction that was swiped, "left", "right", "up", or "down"
@@ -5968,74 +5968,74 @@ window.bootbox = bootbox;
 		* @return Boolean False, to indicate that the event should stop propagation, or void.
 		* @inner
 		*/
-		function triggerHandlerForGesture(event, phase, gesture) {	
-			
+		function triggerHandlerForGesture(event, phase, gesture) {
+
 			var ret=undefined;
-			
+
 			//SWIPES....
 			if(gesture==SWIPE) {
 				//Trigger status every time..
-				
+
 				//Trigger the event...
 				$element.trigger('swipeStatus', [phase, direction || null, distance || 0, duration || 0, fingerCount, fingerData]);
-				
+
 				//Fire the callback
 				if (options.swipeStatus) {
 					ret = options.swipeStatus.call($element, event, phase, direction || null, distance || 0, duration || 0, fingerCount, fingerData);
 					//If the status cancels, then dont run the subsequent event handlers..
 					if(ret===false) return false;
 				}
-				
-				
-				
-				
+
+
+
+
 				if (phase == PHASE_END && validateSwipe()) {
 					//Fire the catch all event
 					$element.trigger('swipe', [direction, distance, duration, fingerCount, fingerData]);
-					
+
 					//Fire catch all callback
 					if (options.swipe) {
 						ret = options.swipe.call($element, event, direction, distance, duration, fingerCount, fingerData);
 						//If the status cancels, then dont run the subsequent event handlers..
 						if(ret===false) return false;
 					}
-					
-					//trigger direction specific event handlers	
+
+					//trigger direction specific event handlers
 					switch (direction) {
 						case LEFT:
 							//Trigger the event
 							$element.trigger('swipeLeft', [direction, distance, duration, fingerCount, fingerData]);
-					
+
 					        //Fire the callback
 							if (options.swipeLeft) {
 								ret = options.swipeLeft.call($element, event, direction, distance, duration, fingerCount, fingerData);
 							}
 							break;
-	
+
 						case RIGHT:
 							//Trigger the event
 					        $element.trigger('swipeRight', [direction, distance, duration, fingerCount, fingerData]);
-					
+
 					        //Fire the callback
 							if (options.swipeRight) {
 								ret = options.swipeRight.call($element, event, direction, distance, duration, fingerCount, fingerData);
 							}
 							break;
-	
+
 						case UP:
 							//Trigger the event
 					        $element.trigger('swipeUp', [direction, distance, duration, fingerCount, fingerData]);
-					
+
 					        //Fire the callback
 							if (options.swipeUp) {
 								ret = options.swipeUp.call($element, event, direction, distance, duration, fingerCount, fingerData);
 							}
 							break;
-	
+
 						case DOWN:
 							//Trigger the event
 					        $element.trigger('swipeDown', [direction, distance, duration, fingerCount, fingerData]);
-					
+
 					        //Fire the callback
 							if (options.swipeDown) {
 								ret = options.swipeDown.call($element, event, direction, distance, duration, fingerCount, fingerData);
@@ -6044,64 +6044,64 @@ window.bootbox = bootbox;
 					}
 				}
 			}
-			
-			
+
+
 			//PINCHES....
 			if(gesture==PINCH) {
 				//Trigger the event
 			     $element.trigger('pinchStatus', [phase, pinchDirection || null, pinchDistance || 0, duration || 0, fingerCount, pinchZoom, fingerData]);
-					
+
                 //Fire the callback
 				if (options.pinchStatus) {
 					ret = options.pinchStatus.call($element, event, phase, pinchDirection || null, pinchDistance || 0, duration || 0, fingerCount, pinchZoom, fingerData);
 					//If the status cancels, then dont run the subsequent event handlers..
 					if(ret===false) return false;
 				}
-				
+
 				if(phase==PHASE_END && validatePinch()) {
-					
+
 					switch (pinchDirection) {
 						case IN:
 							//Trigger the event
                             $element.trigger('pinchIn', [pinchDirection || null, pinchDistance || 0, duration || 0, fingerCount, pinchZoom, fingerData]);
-                    
+
                             //Fire the callback
                             if (options.pinchIn) {
 								ret = options.pinchIn.call($element, event, pinchDirection || null, pinchDistance || 0, duration || 0, fingerCount, pinchZoom, fingerData);
 							}
 							break;
-						
+
 						case OUT:
 							//Trigger the event
                             $element.trigger('pinchOut', [pinchDirection || null, pinchDistance || 0, duration || 0, fingerCount, pinchZoom, fingerData]);
-                    
+
                             //Fire the callback
                             if (options.pinchOut) {
 								ret = options.pinchOut.call($element, event, pinchDirection || null, pinchDistance || 0, duration || 0, fingerCount, pinchZoom, fingerData);
 							}
-							break;	
+							break;
 					}
 				}
 			}
-			
 
 
-                
-	    		
+
+
+
 			if(gesture==TAP) {
 				if(phase === PHASE_CANCEL || phase === PHASE_END) {
-					
-    			    
+
+
     			    //Cancel any existing double tap
 				    clearTimeout(singleTapTimeout);
     			    //Cancel hold timeout
 				    clearTimeout(holdTimeout);
-				           
+
 					//If we are also looking for doubelTaps, wait incase this is one...
 				    if(hasDoubleTap() && !inDoubleTap()) {
 				        //Cache the time of this tap
                         doubleTapStartTime = getTimeStamp();
-                       
+
 				        //Now wait for the double tap timeout, and trigger this single tap
 				        //if its not cancelled by a double tap
 				        singleTapTimeout = setTimeout($.proxy(function() {
@@ -6109,20 +6109,20 @@ window.bootbox = bootbox;
         			        //Trigger the event
                 			$element.trigger('tap', [event.target]);
 
-                        
+
                             //Fire the callback
                             if(options.tap) {
                                 ret = options.tap.call($element, event, event.target);
                             }
     			        }, this), options.doubleTapThreshold );
-    			    	
+
     			    } else {
                         doubleTapStartTime=null;
-                        
+
                         //Trigger the event
                         $element.trigger('tap', [event.target]);
 
-                        
+
                         //Fire the callback
                         if(options.tap) {
                             ret = options.tap.call($element, event, event.target);
@@ -6130,49 +6130,49 @@ window.bootbox = bootbox;
 	    		    }
 	    		}
 			}
-			
+
 			else if (gesture==DOUBLE_TAP) {
 				if(phase === PHASE_CANCEL || phase === PHASE_END) {
-					//Cancel any pending singletap 
+					//Cancel any pending singletap
 				    clearTimeout(singleTapTimeout);
 				    doubleTapStartTime=null;
-				        
+
                     //Trigger the event
                     $element.trigger('doubletap', [event.target]);
-                
+
                     //Fire the callback
                     if(options.doubleTap) {
                         ret = options.doubleTap.call($element, event, event.target);
                     }
 	    		}
 			}
-			
+
 			else if (gesture==LONG_TAP) {
 				if(phase === PHASE_CANCEL || phase === PHASE_END) {
 					//Cancel any pending singletap (shouldnt be one)
 				    clearTimeout(singleTapTimeout);
 				    doubleTapStartTime=null;
-				        
+
                     //Trigger the event
                     $element.trigger('longtap', [event.target]);
-                
+
                     //Fire the callback
                     if(options.longTap) {
                         ret = options.longTap.call($element, event, event.target);
                     }
 	    		}
-			}				
-				
+			}
+
 			return ret;
 		}
 
 
 
-		
+
 		//
 		// GESTURE VALIDATION
 		//
-		
+
 		/**
 		* Checks the user has swipe far enough
 		* @return Boolean if <code>threshold</code> has been set, return true if the threshold was met, else false.
@@ -6185,10 +6185,10 @@ window.bootbox = bootbox;
 			if (options.threshold !== null) {
 				valid = distance >= options.threshold;
 			}
-			
+
             return valid;
 		}
-		
+
 		/**
 		* Checks the user has swiped back to cancel.
 		* @return Boolean if <code>cancelThreshold</code> has been set, return true if the cancelThreshold was met, else false.
@@ -6200,7 +6200,7 @@ window.bootbox = bootbox;
     		if(options.cancelThreshold !== null && direction !==null)  {
     		    cancelled =  (getMaxDistance( direction ) - distance) >= options.cancelThreshold;
 			}
-			
+
 			return cancelled;
 		}
 
@@ -6240,7 +6240,7 @@ window.bootbox = bootbox;
 			return result;
 		}
 
-	
+
 
 		/**
 		* Checks direction of the swipe and the value allowPageScroll to see if we should allow or prevent the default behaviour from occurring.
@@ -6252,7 +6252,7 @@ window.bootbox = bootbox;
 		*/
 		function validateDefaultEvent(jqEvent, direction) {
 
-			
+
 			if( options.preventDefaultEvents === false ) {
 				return;
 			}
@@ -6303,9 +6303,9 @@ window.bootbox = bootbox;
 		    var hasEndPoint = validateEndPoint();
 			var hasCorrectDistance = validatePinchDistance();
 			return hasCorrectFingerCount && hasEndPoint && hasCorrectDistance;
-			
+
 		}
-		
+
 		/**
 		 * Returns true if any Pinch events have been registered
 		 * @return Boolean
@@ -6315,7 +6315,7 @@ window.bootbox = bootbox;
 			//Enure we dont return 0 or null for false values
 			return !!(options.pinchStatus || options.pinchIn || options.pinchOut);
 		}
-		
+
 		/**
 		 * Returns true if we are detecting pinches, and have one
 		 * @return Boolean
@@ -6338,18 +6338,18 @@ window.bootbox = bootbox;
 		function validateSwipe() {
 			//Check validity of swipe
 			var hasValidTime = validateSwipeTime();
-			var hasValidDistance = validateSwipeDistance();	
+			var hasValidDistance = validateSwipeDistance();
 			var hasCorrectFingerCount = validateFingers();
 		    var hasEndPoint = validateEndPoint();
-		    var didCancel = didSwipeBackToCancel();	
-		    
+		    var didCancel = didSwipeBackToCancel();
+
 			// if the user swiped more than the minimum length, perform the appropriate action
-			// hasValidDistance is null when no distance is set 
+			// hasValidDistance is null when no distance is set
 			var valid =  !didCancel && hasEndPoint && hasCorrectFingerCount && hasValidDistance && hasValidTime;
-			
+
 			return valid;
 		}
-		
+
 		/**
 		 * Returns true if any Swipe events have been registered
 		 * @return Boolean
@@ -6359,8 +6359,8 @@ window.bootbox = bootbox;
 			//Enure we dont return 0 or null for false values
 			return !!(options.swipe || options.swipeStatus || options.swipeLeft || options.swipeRight || options.swipeUp || options.swipeDown);
 		}
-		
-		
+
+
 		/**
 		 * Returns true if we are detecting swipes and have one
 		 * @return Boolean
@@ -6380,7 +6380,7 @@ window.bootbox = bootbox;
             //The number of fingers we want were matched, or on desktop we ignore
     		return ((fingerCount === options.fingers || options.fingers === ALL_FINGERS) || !SUPPORTS_TOUCH);
     	}
-        
+
         /**
 		 * Returns true if we have an end point for the swipe
 		 * @return Boolean
@@ -6401,7 +6401,7 @@ window.bootbox = bootbox;
 			//Enure we dont return 0 or null for false values
 			return !!(options.tap) ;
 		}
-		
+
 		/**
 		 * Returns true if a double tap events have been registered
 		 * @return Boolean
@@ -6411,7 +6411,7 @@ window.bootbox = bootbox;
 			//Enure we dont return 0 or null for false values
 			return !!(options.doubleTap) ;
 		}
-		
+
 		/**
 		 * Returns true if any long tap events have been registered
 		 * @return Boolean
@@ -6421,7 +6421,7 @@ window.bootbox = bootbox;
 			//Enure we dont return 0 or null for false values
 			return !!(options.longTap) ;
 		}
-		
+
 		/**
 		 * Returns true if we could be in the process of a double tap (one tap has occurred, we are listening for double taps, and the threshold hasn't past.
 		 * @return Boolean
@@ -6434,7 +6434,7 @@ window.bootbox = bootbox;
 		    var now = getTimeStamp();
 		    return (hasDoubleTap() && ((now-doubleTapStartTime) <= options.doubleTapThreshold));
 		}
-		
+
 		/**
 		 * Returns true if we could be in the process of a double tap (one tap has occurred, we are listening for double taps, and the threshold hasn't past.
 		 * @return Boolean
@@ -6443,8 +6443,8 @@ window.bootbox = bootbox;
 		function inDoubleTap() {
 		    return validateDoubleTap();
 		}
-		
-		
+
+
 		/**
 		 * Returns true if we have a valid tap
 		 * @return Boolean
@@ -6453,7 +6453,7 @@ window.bootbox = bootbox;
 		function validateTap() {
 		    return ((fingerCount === 1 || !SUPPORTS_TOUCH) && (isNaN(distance) || distance < options.threshold));
 		}
-		
+
 		/**
 		 * Returns true if we have a valid long tap
 		 * @return Boolean
@@ -6461,9 +6461,9 @@ window.bootbox = bootbox;
 		*/
 		function validateLongTap() {
 		    //slight threshold on moving finger
-            return ((duration > options.longTapThreshold) && (distance < DOUBLE_TAP_THRESHOLD)); 
+            return ((duration > options.longTapThreshold) && (distance < DOUBLE_TAP_THRESHOLD));
 		}
-		
+
 		/**
 		 * Returns true if we are detecting taps and have one
 		 * @return Boolean
@@ -6473,8 +6473,8 @@ window.bootbox = bootbox;
 		    //Enure we dont return 0 or null for false values
 			return !!(validateTap() && hasTap());
 		}
-		
-		
+
+
 		/**
 		 * Returns true if we are detecting double taps and have one
 		 * @return Boolean
@@ -6484,7 +6484,7 @@ window.bootbox = bootbox;
 		    //Enure we dont return 0 or null for false values
 			return !!(validateDoubleTap() && hasDoubleTap());
 		}
-		
+
 		/**
 		 * Returns true if we are detecting long taps and have one
 		 * @return Boolean
@@ -6494,10 +6494,10 @@ window.bootbox = bootbox;
 		    //Enure we dont return 0 or null for false values
 			return !!(validateLongTap() && hasLongTap());
 		}
-		
-		
-		
-		
+
+
+
+
 		// MULTI FINGER TOUCH
 		/**
 		 * Starts tracking the time between 2 finger releases, and keeps track of how many fingers we initially had up
@@ -6507,7 +6507,7 @@ window.bootbox = bootbox;
 			previousTouchEndTime = getTimeStamp();
 			previousTouchFingerCount = event.touches.length+1;
 		}
-		
+
 		/**
 		 * Cancels the tracking of time between 2 finger releases, and resets counters
 		 * @inner
@@ -6516,26 +6516,26 @@ window.bootbox = bootbox;
 			previousTouchEndTime = 0;
 			previousTouchFingerCount = 0;
 		}
-		
+
 		/**
-		 * Checks if we are in the threshold between 2 fingers being released 
+		 * Checks if we are in the threshold between 2 fingers being released
 		 * @return Boolean
 		 * @inner
 		*/
 		function inMultiFingerRelease() {
-			
+
 			var withinThreshold = false;
-			
-			if(previousTouchEndTime) {	
-				var diff = getTimeStamp() - previousTouchEndTime	
+
+			if(previousTouchEndTime) {
+				var diff = getTimeStamp() - previousTouchEndTime
 				if( diff<=options.fingerReleaseThreshold ) {
 					withinThreshold = true;
 				}
 			}
-			
-			return withinThreshold;	
+
+			return withinThreshold;
 		}
-		
+
 
 		/**
 		* gets a data flag to indicate that a touch is in progress
@@ -6546,39 +6546,39 @@ window.bootbox = bootbox;
 			//strict equality to ensure only true and false are returned
 			return !!($element.data(PLUGIN_NS+'_intouch') === true);
 		}
-		
+
 		/**
 		* Sets a data flag to indicate that a touch is in progress
 		* @param {boolean} val The value to set the property to
 		* @inner
 		*/
 		function setTouchInProgress(val) {
-			
+
 			//Add or remove event listeners depending on touch status
 			if(val===true) {
 				$element.bind(MOVE_EV, touchMove);
 				$element.bind(END_EV, touchEnd);
-				
+
 				//we only have leave events on desktop, we manually calcuate leave on touch as its not supported in webkit
-				if(LEAVE_EV) { 
+				if(LEAVE_EV) {
 					$element.bind(LEAVE_EV, touchLeave);
 				}
 			} else {
 				$element.unbind(MOVE_EV, touchMove, false);
 				$element.unbind(END_EV, touchEnd, false);
-			
+
 				//we only have leave events on desktop, we manually calcuate leave on touch as its not supported in webkit
-				if(LEAVE_EV) { 
+				if(LEAVE_EV) {
 					$element.unbind(LEAVE_EV, touchLeave, false);
 				}
 			}
-			
-		
+
+
 			//strict equality to ensure only true and false can update the value
 			$element.data(PLUGIN_NS+'_intouch', val === true);
 		}
-		
-		
+
+
 		/**
 		 * Creates the finger data for the touch/finger in the event object.
 		 * @param {int} index The index in the array to store the finger data (usually the order the fingers were pressed)
@@ -6587,15 +6587,15 @@ window.bootbox = bootbox;
 		 * @inner
 		*/
 		function createFingerData( index, evt ) {
-			var id = evt.identifier!==undefined ? evt.identifier : 0; 
-			
+			var id = evt.identifier!==undefined ? evt.identifier : 0;
+
 			fingerData[index].identifier = id;
 			fingerData[index].start.x = fingerData[index].end.x = evt.pageX||evt.clientX;
 			fingerData[index].start.y = fingerData[index].end.y = evt.pageY||evt.clientY;
-			
+
 			return fingerData[index];
 		}
-		
+
 		/**
 		 * Updates the finger data for a particular event object
 		 * @param {object} evt The event object containing the touch/finger data to upadte
@@ -6603,19 +6603,19 @@ window.bootbox = bootbox;
 		 * @inner
 		*/
 		function updateFingerData(evt) {
-			
-			var id = evt.identifier!==undefined ? evt.identifier : 0; 
+
+			var id = evt.identifier!==undefined ? evt.identifier : 0;
 			var f = getFingerData( id );
-			
+
 			f.end.x = evt.pageX||evt.clientX;
 			f.end.y = evt.pageY||evt.clientY;
-			
+
 			return f;
 		}
-		
+
 		/**
 		 * Returns a finger data object by its event ID.
-		 * Each touch event has an identifier property, which is used 
+		 * Each touch event has an identifier property, which is used
 		 * to track repeat touches
 		 * @param {int} id The unique id of the finger in the sequence of touch events.
 		 * @return a finger data object.
@@ -6624,11 +6624,11 @@ window.bootbox = bootbox;
 		function getFingerData( id ) {
 			for(var i=0; i<fingerData.length; i++) {
 				if(fingerData[i].identifier == id) {
-					return fingerData[i];	
+					return fingerData[i];
 				}
 			}
 		}
-		
+
 		/**
 		 * Creats all the finger onjects and returns an array of finger data
 		 * @return Array of finger objects
@@ -6643,12 +6643,12 @@ window.bootbox = bootbox;
 					identifier:0
 				});
 			}
-			
+
 			return fingerData;
 		}
-		
+
 		/**
-		 * Sets the maximum distance swiped in the given direction. 
+		 * Sets the maximum distance swiped in the given direction.
 		 * If the new value is lower than the current value, the max value is not changed.
 		 * @param {string}  direction The direction of the swipe
 		 * @param {int}  distance The distance of the swipe
@@ -6658,18 +6658,18 @@ window.bootbox = bootbox;
     		distance = Math.max(distance, getMaxDistance(direction) );
     		maximumsMap[direction].distance = distance;
 		}
-        
+
         /**
-		 * gets the maximum distance swiped in the given direction. 
+		 * gets the maximum distance swiped in the given direction.
 		 * @param {string}  direction The direction of the swipe
 		 * @return int  The distance of the swipe
 		 * @inner
-		*/        
+		*/
 		function getMaxDistance(direction) {
 			if (maximumsMap[direction]) return maximumsMap[direction].distance;
 			return undefined;
 		}
-		
+
 		/**
 		 * Creats a map of directions to maximum swiped values.
 		 * @return Object A dictionary of maximum values, indexed by direction.
@@ -6681,10 +6681,10 @@ window.bootbox = bootbox;
 			maxData[RIGHT]=createMaximumVO(RIGHT);
 			maxData[UP]=createMaximumVO(UP);
 			maxData[DOWN]=createMaximumVO(DOWN);
-			
+
 			return maxData;
 		}
-		
+
 		/**
 		 * Creates a map maximum swiped values for a given swipe direction
 		 * @param {string} The direction that these values will be associated with
@@ -6692,13 +6692,13 @@ window.bootbox = bootbox;
 		 * @inner
 		*/
 		function createMaximumVO(dir) {
-		    return { 
-		        direction:dir, 
+		    return {
+		        direction:dir,
 		        distance:0
 		    }
 		}
-		
-		
+
+
 		//
 		// MATHS / UTILS
 		//
@@ -6711,7 +6711,7 @@ window.bootbox = bootbox;
 		function calculateDuration() {
 			return endTime - startTime;
 		}
-		
+
 		/**
 		* Calculate the distance between 2 touches (pinch)
 		* @param {point} startPoint A point object containing x and y co-ordinates
@@ -6722,10 +6722,10 @@ window.bootbox = bootbox;
 		function calculateTouchesDistance(startPoint, endPoint) {
 			var diffX = Math.abs(startPoint.x - endPoint.x);
 			var diffY = Math.abs(startPoint.y - endPoint.y);
-				
+
 			return Math.round(Math.sqrt(diffX*diffX+diffY*diffY));
 		}
-		
+
 		/**
 		* Calculate the zoom factor between the start and end distances
 		* @param {int} startDistance Distance (between 2 fingers) the user started pinching at
@@ -6737,8 +6737,8 @@ window.bootbox = bootbox;
 			var percent = (endDistance/startDistance) * 1;
 			return percent.toFixed(2);
 		}
-		
-		
+
+
 		/**
 		* Returns the pinch direction, either IN or OUT for the given points
 		* @return string Either {@link $.fn.swipe.directions.IN} or {@link $.fn.swipe.directions.OUT}
@@ -6753,8 +6753,8 @@ window.bootbox = bootbox;
 				return IN;
 			}
 		}
-		
-		
+
+
 		/**
 		* Calculate the length / distance of the swipe
 		* @param {point} startPoint A point object containing x and y co-ordinates
@@ -6811,7 +6811,7 @@ window.bootbox = bootbox;
 				return UP;
 			}
 		}
-		
+
 
 		/**
 		* Returns a MS time stamp of the current time
@@ -6822,9 +6822,9 @@ window.bootbox = bootbox;
 			var now = new Date();
 			return now.getTime();
 		}
-		
-		
-		
+
+
+
 		/**
 		 * Returns a bounds object with left, right, top and bottom properties for the element specified.
 		 * @param {DomNode} The DOM node to get the bounds for.
@@ -6832,18 +6832,18 @@ window.bootbox = bootbox;
 		function getbounds( el ) {
 			el = $(el);
 			var offset = el.offset();
-			
-			var bounds = {	
+
+			var bounds = {
 					left:offset.left,
 					right:offset.left+el.outerWidth(),
 					top:offset.top,
 					bottom:offset.top+el.outerHeight()
 					}
-			
-			return bounds;	
+
+			return bounds;
 		}
-		
-		
+
+
 		/**
 		 * Checks if the point object is in the bounds object.
 		 * @param {object} point A point object.
@@ -6858,15 +6858,15 @@ window.bootbox = bootbox;
 		function isInBounds(point, bounds) {
 			return (point.x > bounds.left && point.x < bounds.right && point.y > bounds.top && point.y < bounds.bottom);
 		};
-	
-	
+
+
 	}
-	
-	
+
+
 
 
 /**
- * A catch all handler that is triggered for all swipe directions. 
+ * A catch all handler that is triggered for all swipe directions.
  * @name $.fn.swipe#swipe
  * @event
  * @default null
@@ -6877,7 +6877,7 @@ window.bootbox = bootbox;
  * @param {int} fingerCount The number of fingers used. See {@link $.fn.swipe.fingers}
  * @param {object} fingerData The coordinates of fingers in event
  */
- 
+
 
 
 
@@ -6893,7 +6893,7 @@ window.bootbox = bootbox;
  * @param {int} fingerCount The number of fingers used. See {@link $.fn.swipe.fingers}
  * @param {object} fingerData The coordinates of fingers in event
  */
- 
+
 /**
  * A handler that is triggered for "right" swipes.
  * @name $.fn.swipe#swipeRight
@@ -6919,7 +6919,7 @@ window.bootbox = bootbox;
  * @param {int} fingerCount The number of fingers used. See {@link $.fn.swipe.fingers}
  * @param {object} fingerData The coordinates of fingers in event
  */
- 
+
 /**
  * A handler that is triggered for "down" swipes.
  * @name $.fn.swipe#swipeDown
@@ -6932,7 +6932,7 @@ window.bootbox = bootbox;
  * @param {int} fingerCount The number of fingers used. See {@link $.fn.swipe.fingers}
  * @param {object} fingerData The coordinates of fingers in event
  */
- 
+
 /**
  * A handler triggered for every phase of the swipe. This handler is constantly fired for the duration of the pinch.
  * This is triggered regardless of swipe thresholds.
@@ -6947,7 +6947,7 @@ window.bootbox = bootbox;
  * @param {int} fingerCount The number of fingers used. See {@link $.fn.swipe.fingers}
  * @param {object} fingerData The coordinates of fingers in event
  */
- 
+
 /**
  * A handler triggered for pinch in events.
  * @name $.fn.swipe#pinchIn
@@ -6974,7 +6974,7 @@ window.bootbox = bootbox;
  * @param {int} fingerCount The number of fingers used. See {@link $.fn.swipe.fingers}
  * @param {int} zoom The zoom/scale level the user pinched too, 0-1.
  * @param {object} fingerData The coordinates of fingers in event
- */ 
+ */
 
 /**
  * A handler triggered for all pinch events. This handler is constantly fired for the duration of the pinch. This is triggered regardless of thresholds.
@@ -6997,12 +6997,12 @@ window.bootbox = bootbox;
  * Use the <code>tap</code> event instead.
  * @name $.fn.swipe#click
  * @event
- * @deprecated since version 1.6.2, please use {@link $.fn.swipe#tap} instead 
+ * @deprecated since version 1.6.2, please use {@link $.fn.swipe#tap} instead
  * @default null
  * @param {EventObject} event The original event object
  * @param {DomObject} target The element clicked on.
  */
- 
+
  /**
  * A click / tap handler triggered when a user simply clicks or taps, rather than swipes on an element.
  * @name $.fn.swipe#tap
@@ -7011,10 +7011,10 @@ window.bootbox = bootbox;
  * @param {EventObject} event The original event object
  * @param {DomObject} target The element clicked on.
  */
- 
+
 /**
  * A double tap handler triggered when a user double clicks or taps on an element.
- * You can set the time delay for a double tap with the {@link $.fn.swipe.defaults#doubleTapThreshold} property. 
+ * You can set the time delay for a double tap with the {@link $.fn.swipe.defaults#doubleTapThreshold} property.
  * Note: If you set both <code>doubleTap</code> and <code>tap</code> handlers, the <code>tap</code> event will be delayed by the <code>doubleTapThreshold</code>
  * as the script needs to check if its a double tap.
  * @name $.fn.swipe#doubleTap
@@ -7024,10 +7024,10 @@ window.bootbox = bootbox;
  * @param {EventObject} event The original event object
  * @param {DomObject} target The element clicked on.
  */
- 
+
  /**
  * A long tap handler triggered once a tap has been release if the tap was longer than the longTapThreshold.
- * You can set the time delay for a long tap with the {@link $.fn.swipe.defaults#longTapThreshold} property. 
+ * You can set the time delay for a long tap with the {@link $.fn.swipe.defaults#longTapThreshold} property.
  * @name $.fn.swipe#longTap
  * @see  $.fn.swipe.defaults#longTapThreshold
  * @event
@@ -7038,7 +7038,7 @@ window.bootbox = bootbox;
 
   /**
  * A hold tap handler triggered as soon as the longTapThreshold is reached
- * You can set the time delay for a long tap with the {@link $.fn.swipe.defaults#longTapThreshold} property. 
+ * You can set the time delay for a long tap with the {@link $.fn.swipe.defaults#longTapThreshold} property.
  * @name $.fn.swipe#hold
  * @see  $.fn.swipe.defaults#longTapThreshold
  * @event
@@ -7132,12 +7132,12 @@ window.bootbox = bootbox;
 					that.backdrop(modal, function () {
 						modal.$element.show();
 
-						if (transition) {       
-							//modal.$element[0].style.display = 'run-in';       
+						if (transition) {
+							//modal.$element[0].style.display = 'run-in';
 							modal.$element[0].offsetWidth;
-							//modal.$element.one($.support.transition.end, function () { modal.$element[0].style.display = 'block' });  
+							//modal.$element.one($.support.transition.end, function () { modal.$element[0].style.display = 'block' });
 						}
-						
+
 						modal.layout();
 
 						modal.$element
@@ -7168,7 +7168,7 @@ window.bootbox = bootbox;
 				} else if (modal.$backdrop){
 					var transition = $.support.transition && modal.$element.hasClass('fade');
 
-					// trigger a relayout due to firebox's buggy transition end event 
+					// trigger a relayout due to firebox's buggy transition end event
 					if (transition) { modal.$element[0].offsetWidth; }
 					$.support.transition && modal.$element.hasClass('fade') ?
 						modal.$backdrop.one($.support.transition.end, function () { modal.destroy(); }) :
@@ -7465,7 +7465,7 @@ window.bootbox = bootbox;
 
 	$.fn.modalmanager.Constructor = ModalManager
 
-	// ModalManager handles the modal-open class so we need 
+	// ModalManager handles the modal-open class so we need
 	// to remove conflicting bootstrap 3 event handlers
 	$(function () {
 		$(document).off('show.bs.modal').off('hidden.bs.modal');
@@ -7611,7 +7611,7 @@ window.bootbox = bootbox;
 			}
 
 			var modalOverflow = $(window).height() - 10 < this.$element.height();
-            
+
 			if (modalOverflow || this.options.modalOverflow) {
 				this.$element
 					.css('margin-top', 0)
@@ -7779,7 +7779,7 @@ window.bootbox = bootbox;
 				.removeData('modal')
 				.removeClass('in')
 				.attr('aria-hidden', true);
-			
+
 			if (this.$parent !== this.$element.parent()) {
 				this.$element.appendTo(this.$parent);
 			} else if (!this.$parent.length) {
@@ -8682,24 +8682,24 @@ module.exports = E;
 
     var touch = event.originalEvent.changedTouches[0],
         simulatedEvent = document.createEvent('MouseEvents');
-    
+
     // Initialize the simulated mouse event using the touch event's coordinates
     simulatedEvent.initMouseEvent(
       simulatedType,    // type
-      true,             // bubbles                    
-      true,             // cancelable                 
-      window,           // view                       
-      1,                // detail                     
-      touch.screenX,    // screenX                    
-      touch.screenY,    // screenY                    
-      touch.clientX,    // clientX                    
-      touch.clientY,    // clientY                    
-      false,            // ctrlKey                    
-      false,            // altKey                     
-      false,            // shiftKey                   
-      false,            // metaKey                    
-      0,                // button                     
-      null              // relatedTarget              
+      true,             // bubbles
+      true,             // cancelable
+      window,           // view
+      1,                // detail
+      touch.screenX,    // screenX
+      touch.screenY,    // screenY
+      touch.clientX,    // clientX
+      touch.clientY,    // clientY
+      false,            // ctrlKey
+      false,            // altKey
+      false,            // shiftKey
+      false,            // metaKey
+      0,                // button
+      null              // relatedTarget
     );
 
     // Dispatch the simulated event to the target element
@@ -8788,7 +8788,7 @@ module.exports = E;
    * original mouse event handling methods.
    */
   mouseProto._mouseInit = function () {
-    
+
     var self = this;
 
     // Delegate the touch handlers to the widget's element
@@ -8806,7 +8806,7 @@ module.exports = E;
    * Remove the touch event handlers
    */
   mouseProto._mouseDestroy = function () {
-    
+
     var self = this;
 
     // Delegate the touch handlers to the widget's element

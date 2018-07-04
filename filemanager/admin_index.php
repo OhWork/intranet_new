@@ -16,7 +16,7 @@
 
 
          <?php
-//              include_once '../inc_js.php';
+//             include_once 'inc_js.php';
             include_once '../database/db_tools.php';
             include_once '../connect.php';
             include_once '../form/main_form.php';
@@ -24,26 +24,22 @@
             include_once '../clearsession.php';
         ?>
          <!-- Bootstrap core CSS -->
-        <link rel="stylesheet" href="../CSS/bootstrap.css">
+        <link rel="stylesheet" href="../CSS/bootstrap_4o.css">
         <!-- Custom styles for this template -->
         <link rel="stylesheet" href="../CSS/dashboard.css">
-		<link rel="stylesheet" href="../CSS/jquery.dataTables.css">
-        <link rel="stylesheet" href="../CSS/bootstrap-datetimepicker-standalone.css">
-        <link rel="stylesheet" href="../CSS/bootstrap-datetimepicker.css">
-        <link rel="stylesheet" href="../CSS/jquery.mapify.css">
-        <link rel="stylesheet" href="../CSS/jquery.datetimepicker.css">
         <link rel="stylesheet" href="../CSS/main.css">
         <link rel="stylesheet" href="../CSS/print.css" media="print">
         <link rel="stylesheet" href="../CSS/font-awesome.css">
+		<script src="../jquery/feather-icon/feather.min.js"></script>
         </head>
 
   <body>
-    <?php include '../admin_menutop.php';?>
+    <?php include 'admin_menutop.php';?>
     <div class="container-fluid">
       <div class="row">
-        <?php include '../admin_menu.php'; ?>
+        <?php include 'admin_menu.php'; ?>
 
-        <main role="main" class="col-md-9 ml-sm-auto col-lg-10">
+        <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
 <!--             <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom"> -->
                <?php include '../admin_content.php';?>
 
@@ -51,6 +47,10 @@
         </main>
       </div>
     </div>
+    <script>
+    feather.replace();
+    </script>
+
   </body>
 </html>
 

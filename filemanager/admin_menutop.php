@@ -4,6 +4,6 @@
         <a class="" style="text-align:right;">
             <?php echo "คุณ".$_SESSION['user_name']." ".$_SESSION['user_last'];
             ?></a>
-        <a class="nav-link" href="logout.php"><span data-feather="log-out"></span>ออกจากระบบ</a>
+        <a class="nav-link" href="../logout.php"><span data-feather="log-out"></span>ออกจากระบบ</a>
 
 	 </nav>
