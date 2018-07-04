@@ -808,7 +808,9 @@ $files=$sorted;
 
 	<div class="row-fluid">
 	<?php
+		if(){
 		$link="admin_index.php?url=dialog.php&?".$get_params;
+		}
 	?>
 	<ul class="breadcrumb">
 	<li class="pull-left"><a href="<?php echo $link?>/"><i class="icon-home"></i></a></li>

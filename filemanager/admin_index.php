@@ -16,7 +16,7 @@
 
 
          <?php
-//             include_once 'inc_js.php';
+             include_once 'inc_js.php';
             include_once '../database/db_tools.php';
             include_once '../connect.php';
             include_once '../form/main_form.php';
@@ -24,7 +24,7 @@
             include_once '../clearsession.php';
         ?>
          <!-- Bootstrap core CSS -->
-        <link rel="stylesheet" href="../CSS/bootstrap_4o.css">
+        <link rel="stylesheet" href="../CSS/bootstrap.css">
         <!-- Custom styles for this template -->
         <link rel="stylesheet" href="../CSS/dashboard.css">
         <link rel="stylesheet" href="../CSS/main.css">
