@@ -69,7 +69,7 @@
 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" style='margin-top: 70px;margin-left:95px;'>
 	<div class='row'>
 		<div class='col-md-12 printdisplaynone'>
-			<h1>รายงานแจ้งจำนวนยานพาหนะของสวนสัตว์</h1>
+			<h4>รายงานแจ้งจำนวนยานพาหนะของสวนสัตว์</h4>
 		</div>
 <?php echo $form->open('form_reg','myform','','',''); ?>
         <div class='col-md-12 printdisplaynone'>
@@ -116,20 +116,8 @@
                         </div>
                         <div class='col-md-12'>
 							<div class="row">
-								<div class='col-md-12'>
-									<div class="row">
-										<div class='col-md-2'></div>
-										<input type="button" class='btn btn-success col-md-8' value="ทุกสวนสัตว์" onClick="checkAll('check_list')">
-										<div class='col-md-2'></div>
-									</div>
-								</div>
-								<div class='col-md-12' style="margin-top: 8px;">
-									<div class="row">
-										<div class='col-md-2'></div>
-										<input type="button" class='btn btn-danger col-md-8' value="ยกเลิก" onClick="uncheckAll('check_list')">
-										<div class='col-md-2'></div>
-									</div>
-								</div>
+								<input type="button" class='btn btn-success' style="margin-left:10px;margin-right:5px;" value="ทุกสวนสัตว์" onClick="checkAll('check_list')">
+								<input type="button" class='btn btn-danger' value="ยกเลิก" onClick="uncheckAll('check_list')">
 							</div>
 						</div>
 					</div>
