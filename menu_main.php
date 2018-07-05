@@ -45,6 +45,18 @@
 						</a>
 	                </ul>
 				</li>
+				<li class="nav-item">
+				<a class="nav-link collapsed py-1" href="#hrs" data-toggle="collapse" data-target="#hrs"><span data-feather="send"></span>ระบบขอหนังสือรับรอง</a>
+                <!-- sub menu -->
+	                <ul class="sub-menu collapse" id="hrs">
+						<a class="nav-link" href="index.php?url=hrs_add_certificate.php">
+						ขอทำหนังสือรับรอง
+						</a>
+						<a class="nav-link" href="index.php?url=hrs_add_hospital.php">
+						ขอหนังสือรับรองช่วยเหลือค่ารักษาพยาบาล
+						</a>
+	                </ul>
+				</li>
 				<!-- end sub menu -->
             </ul>
         </div>
