@@ -297,7 +297,7 @@ $get_params = http_build_query($get_params);
 	}
 	</style><![endif]-->
 
-	<script src="js/jquery1.12.js"></script>
+<!-- 	<script src="js/jquery1.12.js"></script> -->
 	<script src="js/jquery-ui.js" type="text/javascript"></script>
 	<script src="js/plugins.js?v=<?php echo $version; ?>"></script>
 	<script src="js/jPlayer/jquery.jplayer/jquery.jplayer.js"></script>
