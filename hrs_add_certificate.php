@@ -65,7 +65,7 @@ function num2wordsThai($num){
         }   
         $kaNumWord[$i]=substr($num,$ii,1);   
         $ii++;   
-        $returnNumWord.=$kaDigit[$kaNumWord[$i]].$kaGroup[$i];   
+        @$returnNumWord.=$kaDigit[$kaNumWord[$i]].$kaGroup[$i];   
     }      
     if(isset($num_decimal[1])){
         $returnNumWord.="จุด";
@@ -77,5 +77,5 @@ function num2wordsThai($num){
 }
     
 
-echo num2wordsThai('2510');
+echo "<br><br>56789898798978978sasa979878979878".num2wordsThai('25101111');
  ?>
