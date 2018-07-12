@@ -948,7 +948,9 @@
 	border-radius : 8px;
 }
 .sidebar {
-	padding: 61px 0 0;
+	padding-top: 0;
+	position: static;
+	z-index: 0;
 }
 .list-group {
 	display:inline;
@@ -961,9 +963,6 @@
     display: block;
     border: 1px solid transparent;
     color: #737373;
-}
-.blockshow {
-	padding-left: 250px;
 }
 .blocklogo {
 	margin-top: 30px;

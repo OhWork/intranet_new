@@ -33,14 +33,16 @@ session_start();
               include 'database/db_tools.php';
               include 'connect.php';
       ?>    </head>
-    <body>
-        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-			<a class="navbar-brand brandedit" href="#"><h4>องค์การสวนสัตว์</h4></a>
+<body>
+	<div class="container">
+		<div class="row">
+			<nav class="navbar navbar-expand-md navbar-dark bg-dark col-md-12">
+				<a class="navbar-brand brandedit" href="#"><h4>องค์การสวนสัตว์</h4></a>
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 				</button>
-			<div class="collapse navbar-collapse" id="navbarCollapse">
-				<ul class="navbar-nav mr-auto">
+				<div class="collapse navbar-collapse" id="navbarCollapse">
+					<ul class="navbar-nav mr-auto">
 <!--           <li class="nav-item active">
             <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
           </li>
@@ -50,17 +52,17 @@ session_start();
           <li class="nav-item">
             <a class="nav-link disabled" href="#">Disabled</a>
           </li> -->
-				</ul>
-				<div class="form-inline mt-2 mt-md-0">
-					<a class="btn btn-outline-success my-2 my-sm-0" href="login.php">เข้าสู่ระบบ</a>
+					</ul>
+					<div class="form-inline mt-2 mt-md-0">
+						<a class="btn btn-outline-success my-2 my-sm-0" href="login.php">เข้าสู่ระบบ</a>
+					</div>
 				</div>
-			</div>
-		</nav>
-		<main role="main" class="container">
-			<div class="row">
-				<?php include('menu_main.php'); ?>
-				<?php include('content.php'); ?>
-				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 blocklogo">
+			</nav>
+			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+				<div class="row">
+					<?php include('menu_main.php'); ?>
+					<?php include('content.php'); ?>
+					<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 blocklogo">
 					<center>
 						<div class="indexft"><a href="http://www.zoothailand.org" target="_blank"><img src="images/Logo/ZPO.png"/></a></div>
 						<div class="indexft"><a href="http://www.dusitzoo.org" target="_blank"><img src="images/Logo/Dusitzoo.png"></a></div>
@@ -72,10 +74,9 @@ session_start();
 						<div class="indexft"><a href="http://www.khonkaenzoo.com" target="_blank"><img src="images/Logo/KKzoo.png"></a></div>
 						<div class="indexft"><a href="#" target="_blank"><img src="images/Logo/surin.png"></a></div>
 					</center>
+					</div>
 				</div>
 			</div>
-		</main>
-        
 		<!--<footer class="footer">
 			<div class="container">
 				<span class="text-muted">
@@ -83,7 +84,9 @@ session_start();
 				</span>
 			</div>
 		</footer>-->
-    </body>
+		</div>
+	</div>
+</body>
 
 		<script type="text/javascript">
     //Modal
