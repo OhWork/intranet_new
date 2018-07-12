@@ -1,7 +1,7 @@
-<div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+<div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2" style="height: 100%;">
 <div class="row">
-<div class="list-group">
-	<nav class="d-none d-md-block bg-light sidebar">
+<div class="list-group" style="height: 100%;">
+	<nav class="d-none d-md-block bg-light sidebar" style="height: 100%;">
         <div class="sidebar-sticky" style="height: 100%;">
             <ul class="nav">
 				<li class="nav-item col-12">

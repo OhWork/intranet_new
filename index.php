@@ -34,8 +34,6 @@ session_start();
               include 'connect.php';
       ?>    </head>
 <body>
-	<div class="container">
-		<div class="row">
 			<nav class="navbar navbar-expand-md navbar-dark bg-dark col-md-12">
 				<a class="navbar-brand brandedit" href="#"><h4>องค์การสวนสัตว์</h4></a>
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -84,8 +82,6 @@ session_start();
 				</span>
 			</div>
 		</footer>-->
-		</div>
-	</div>
 </body>
 
 		<script type="text/javascript">
