@@ -1,9 +1,9 @@
-<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" style='margin-top: 85px;margin-left:60px;'>
+<div class="col-xl-9 col-lg-9 col-md-9 col-sm-9 col-9">
 	<div class="row">
 		<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 			<div class="row">
-				<div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2"></div>
-				<div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2 listcfbox" style="padding-top: 10px;padding-bottom: 10px;">
+				<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1"></div>
+				<div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3 listcfbox" style="padding-top: 10px;padding-bottom: 10px;">
 					<center><img class="cflogo" src='images/Logo/ZPO.png' alt='blank'></center>
 				</div>
 				<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4 listcfbox">
@@ -20,22 +20,22 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2 listcfbox">
+				<div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3 listcfbox">
 					<div class="row">
 						<a class="btn btn-info col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 cfok" href="index.php?url=cf_calendar.php&id=1">
 						คลิกเพื่อจองห้องประชุม
 						</a>
 					</div>
 				</div>
-				<div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2"></div>
+				<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1"></div>
 			</div>
 		</div>
 		<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 			<div class="row">
 				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 					<div class="row">
-						<div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2"></div>
-						<div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2 listcfbox" style="padding-top: 10px;padding-bottom: 10px;">
+						<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1"></div>
+						<div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3 listcfbox" style="padding-top: 10px;padding-bottom: 10px;">
 							<center><img class="cflogo" src='images/Logo/Dusitzoo.png' alt='blank'></center>
 						</div>
 						<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4 listcfbox">
@@ -53,14 +53,14 @@
 								</div>
 							</div>
 						</div>
-						<div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2 listcfbox">
+						<div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3 listcfbox">
 							<div class="row">
 								<a class="btn btn-info col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 cfok" href="index.php?url=cf_calendar.php&id=4">
 								คลิกเพื่อจองห้องประชุม
 								</a>
 							</div>
 						</div>
-						<div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2"></div>
+						<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1"></div>
 					</div>
 				</div>
 			</div>
@@ -69,8 +69,8 @@
 			<div class="row">
 				<div class='ol-xl-12 col-lg-12 col-md-12 col-sm-12 col-12'>
 					<div class='row'>
-						<div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2"></div>
-						<div class='col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2 listcfbox' style="padding-top: 10px;padding-bottom: 10px;">
+						<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1"></div>
+						<div class='col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3 listcfbox' style="padding-top: 10px;padding-bottom: 10px;">
 							<center><img class="cflogo" src='images/Logo/KKOzoo.png' alt='blank'></center>
 						</div>
 						<div class='col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4 listcfbox'>
@@ -87,14 +87,14 @@
 								</div>
 							</div>
 						</div>
-						<div class='col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2 listcfbox'>
+						<div class='col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3 listcfbox'>
 							<div class='row'>
 								<a class="btn btn-info col-md-12 cfok" href="index.php?url=cf_calendar.php&id=15">
 								คลิกเพื่อจองห้องประชุม
 								</a>
 							</div>
 						</div>
-						<div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2"></div>
+						<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1"></div>
 					</div>
 				</div>
 			</div>
@@ -103,8 +103,8 @@
 			<div class="row">
 				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 					<div class='row'>
-						<div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2"></div>
-						<div class='col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2 listcfbox' style="padding-top: 10px;padding-bottom: 10px;">
+						<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1"></div>
+						<div class='col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3 listcfbox' style="padding-top: 10px;padding-bottom: 10px;">
 							<center><img class="cflogo" src='images/Logo/chiangmai.png' alt='blank'width="150" height="150"></center>
 						</div>
 						<div class='col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4 listcfbox'>
@@ -119,14 +119,14 @@
 								</div>
 							</div>
 						</div>
-						<div class='col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2 listcfbox'>
+						<div class='col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3 listcfbox'>
 							<div class='row'>
 								<a class="btn btn-info col-md-12 cfok" href="index.php?url=cf_calendar.php&id=11">
 								คลิกเพื่อจองห้องประชุม
 								</a>
 							</div>
 						</div>
-						<div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2"></div>
+						<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1"></div>
 					</div>
 				</div>
 			</div>
@@ -135,8 +135,8 @@
 			<div class="row">
 				<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12'>
 					<div class='row'>
-						<div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2"></div>
-						<div class='col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2 listcfbox' style="padding-top: 10px;padding-bottom: 10px;">
+						<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1"></div>
+						<div class='col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3 listcfbox' style="padding-top: 10px;padding-bottom: 10px;">
 							<center><img class="cflogo" src='images/Logo/Nakhonrachsimazoo.png' alt='blank'></center>
 						</div>
 						<div class='col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4 listcfbox'>
@@ -152,14 +152,14 @@
 								</div>
 							</div>
 						</div>
-						<div class='col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2 listcfbox'>
+						<div class='col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3 listcfbox'>
 							<div class='row'>
 								<a class="btn btn-info col-md-12 cfok" href="index.php?url=cf_calendar.php&id=8">
 									คลิกเพื่อจองห้องประชุม
 								</a>
 							</div>
 						</div>
-						<div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2"></div>
+						<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1"></div>
 					</div>
 				</div>
 			</div>
@@ -168,8 +168,8 @@
 			<div class="row">
 				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 					<div class='row'>
-						<div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2"></div>
-						<div class='col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2 listcfbox' style="padding-top: 10px;padding-bottom: 10px;">
+						<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1"></div>
+						<div class='col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3 listcfbox' style="padding-top: 10px;padding-bottom: 10px;">
 							<center><img class="cflogo" src='images/Logo/Songkhlazoo.png' alt='blank'></center>
 						</div>
 						<div class='col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4 listcfbox'>
@@ -184,14 +184,14 @@
 								</div>
 							</div>
 						</div>
-						<div class='col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2 listcfbox'>
+						<div class='col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3 listcfbox'>
 							<div class='row'>
 								<a class="btn btn-info col-md-12 cfok" href="index.php?url=cf_calendar.php&id=13">
 								คลิกเพื่อจองห้องประชุม
 								</a>
 							</div>
 						</div>
-						<div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2"></div>
+						<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1"></div>
 					</div>
 				</div>
 			</div>
@@ -200,8 +200,8 @@
 			<div class="row">
 				<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12'>
 					<div class='row'>
-						<div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2"></div>
-						<div class='col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2 listcfbox' style="padding-top: 10px;padding-bottom: 10px;">
+						<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1"></div>
+						<div class='col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3 listcfbox' style="padding-top: 10px;padding-bottom: 10px;">
 							<center><img class="cflogo" src='images/Logo/Ubonzoo.png' alt='blank'></center>
 						</div>
 						<div class='col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4 listcfbox'>
@@ -218,14 +218,14 @@
 								</div>
 							</div>
 						</div>
-						<div class='col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2 listcfbox'>
+						<div class='col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3 listcfbox'>
 							<div class='row'>
 								<a class="btn btn-info col-md-12 cfok" href="index.php?url=cf_calendar.php&id=12">
 									คลิกเพื่อจองห้องประชุม
 								</a>
 							</div>
 						</div>
-						<div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2"></div>
+						<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1"></div>
 					</div>
 				</div>
 			</div>
@@ -234,8 +234,8 @@
 			<div class="row">
 				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 					<div class='row'>
-						<div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2"></div>
-						<div class='col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2 listcfbox' style="padding-top: 10px;padding-bottom: 10px;">
+						<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1"></div>
+						<div class='col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3 listcfbox' style="padding-top: 10px;padding-bottom: 10px;">
 							<center><img class="cflogo" src='images/Logo/KKzoo.png' alt='blank'></center>
 						</div>
 						<div class='col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4 listcfbox'>
@@ -250,14 +250,14 @@
 								</div>
 							</div>
 						</div>
-						<div class='col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2 listcfbox'>
+						<div class='col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3 listcfbox'>
 							<div class='row'>
 								<a class="btn btn-info col-md-12 cfok" href="index.php?url=cf_calendar.php&id=10">
 									คลิกเพื่อจองห้องประชุม
 								</a>
 							</div>
 						</div>
-						<div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2"></div>
+						<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1"></div>
 					</div>
 				</div>
 			</div>
@@ -266,8 +266,8 @@
 			<div class="row">
 				<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12'>
 					<div class='row'>
-						<div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2"></div>
-						<div class='col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2 listcfbox' style="padding-top: 10px;padding-bottom: 10px;">
+						<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1"></div>
+						<div class='col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3 listcfbox' style="padding-top: 10px;padding-bottom: 10px;">
 							<center><img class="cflogo" src='images/Logo/surin.png' alt='blank'></center>
 						</div>
 						<div class='col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4 listcfbox'>
@@ -280,14 +280,14 @@
 								</div>
 							</div>
 						</div>
-						<div class='col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2 listcfbox'>
+						<div class='col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3 listcfbox'>
 							<div class='row'>
 								<a class="btn btn-info col-md-12 cfok" href="index.php?url=cf_calendar.php&id=17">
 								คลิกเพื่อจองห้องประชุม
 								</a>
 							</div>
 						</div>
-						<div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2"></div>
+						<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1"></div>
 					</div>
 				</div>
 			</div>

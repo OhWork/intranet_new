@@ -2,7 +2,7 @@
 <div class="row">
 <div class="list-group">
 	<nav class="d-none d-md-block bg-light sidebar">
-        <div class="sidebar-sticky">
+        <div class="sidebar-sticky" style="height: 100%;">
             <ul class="nav">
 				<li class="nav-item col-12">
 					<a class="nav-link py-1 active" href="#"><span data-feather="home"></span>หน้าหลัก <span class="sr-only">(current)</span></a>
@@ -26,10 +26,10 @@
 					<a class="nav-link collapsed py-1" href="#cs" data-toggle="collapse" data-target="#cs"><span data-feather="cpu"></span>ระบบแจ้งซ่อมคอมพิวเตอร์</a>
 					<ul class="sub-menu collapse on-sub" id="cs">
 	                <!-- sub menu -->
-						<a class="dropdown-item" href="index.php?url=cs_add_problem.php">แบบฟอร์มแจ้งซ่อม</a>
-						<a class="dropdown-item" href="index.php?url=#">แบบฟอร์มขอใช้Internet</a>
-						<a class="dropdown-item" href="index.php?url=#">แบบฟอร์มขอให้อัพไฟล์ (กรณีไม่สามารถทำไดั)</a>
-						<a class="dropdown-item" href="index.php?url=cs_show_problem.php&subpage=1">รายการแจ้งซ่อม</a>
+						<a class="nav-link" href="index.php?url=cs_add_problem.php">แบบฟอร์มแจ้งซ่อม</a>
+						<a class="nav-link" href="index.php?url=#">แบบฟอร์มขอใช้Internet</a>
+						<a class="nav-link" href="index.php?url=#">แบบฟอร์มขอให้อัพไฟล์ (กรณีไม่สามารถทำไดั)</a>
+						<a class="nav-link" href="index.php?url=cs_show_problem.php&subpage=1">รายการแจ้งซ่อม</a>
 					</ul>
 				</li>
 				<li class="nav-item col-12">
