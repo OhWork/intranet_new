@@ -16,7 +16,6 @@
     $lbtime = new label('วันที่และเวลาแจ้ง');
     $lbtypetools = new label('ชนิดของอุปกรณ์');
     $txtname = new textfield('','','form-control','','');
-    $txtyourname = new textfield('','yourname','form-control ','','');
     $txtfamily = new textfield('','family','form-control ','','');
     $txtfather = new textfield('','father','form-control ','','');
     $txtmather = new textfield('','mather','form-control ','','');
@@ -43,9 +42,6 @@
 						<div class="col-md-4">
 							<label class="col-md-12">
 							  <input type="radio" name="parent" value="1" > ข้าพเจ้า
-							  <?php
-								  echo $txtyourname;
-							  ?>
 							</label>
 							<label class=" col-md-12">
 							  <input type="radio" name="parent" value="2"> คู่สมรส
@@ -78,7 +74,6 @@
   ?>
   <script>
   		$(document).ready(function(){
-		$('#yourname').hide();
 		$('#family').hide();
 		$('#father').hide();
 		$('#mather').hide();
@@ -86,7 +81,6 @@
 		$('input[name=parent]').on("change",function(e) {
 		var valchange = $(this).val();
 			if(valchange == 1){
-				$('#yourname').show("slow");
 				$('#family').hide("slow");
 				$('#father').hide("slow");
 				$('#mather').hide("slow");
@@ -94,28 +88,24 @@
 			}
 			else if(valchange == 2) {
 				$('#family').show("slow");
-				$('#yourname').hide("slow");
 				$('#father').hide("slow");
 				$('#mather').hide("slow");
 				$('#child').hide("slow");
 			}
 			else if(valchange == 3) {
 				$('#father').show("slow");
-				$('#yourname').hide("slow");
 				$('#family').hide("slow");
 				$('#mather').hide("slow");
 				$('#child').hide("slow");
 			}
 			else if(valchange == 4) {
 				$('#mather').show("slow");
-				$('#yourname').hide("slow");
 				$('#family').hide("slow");
 				$('#father').hide("slow");
 				$('#child').hide("slow");
 			}
 			else if(valchange == 5) {
 				$('#child').show("slow");
-				$('#yourname').hide("slow");
 				$('#family').hide("slow");
 				$('#father').hide("slow");
 				$('#mather').hide("slow");
