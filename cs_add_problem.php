@@ -191,11 +191,11 @@
 
 		}
 	</script>
-<?php    echo $form->open("form_reg","frmMain","","cs_insert_problem.php","");?>
-<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" style='margin-top: 15px;margin-left:95px;'>
+<div class="col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10" style='margin-top: 15px;float-left;'>
 	<div class="row">
+	<?php    echo $form->open("form_reg","frmMain","","cs_insert_problem.php","");?>
 		<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" style="margin: 16px;">
-			<h3>แบบฟอร์มแจ้งซ่อม</h3>
+			<h4>แบบฟอร์มแจ้งซ่อม</h4>
 			<hr>
 		</div>
 		<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">

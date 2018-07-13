@@ -207,10 +207,10 @@
 				?>
 }
 	</script>
-    <div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12'>
+    <div class='col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10' style="margin-top: 16px;">
         <div class="row">
 	        <div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12'>
-				<h1><?php echo $conferroom; ?></h1>
+				<h4><?php echo $conferroom; ?></h4>
 			</div>
 			<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12'>
 				<div class="row">
@@ -830,10 +830,10 @@
 												<?php echo $okcoffeegroup; ?>
 												<?php echo $lbokcoffeegroup; ?>
 											</div>
-											<div style="width:500px;padding-top:4px;padding-left:8px;">
+											<div style="width:400px;padding-top:4px;padding-left:8px;">
 												<div class="col-md-12" style="padding-left:0px;">
 													<div class="row">
-														<div class="col-md-5">
+														<div class="col-md-7">
 															<?php echo $lbcoffee;?>
 														</div>
 														<div class="col-md-2" style="padding-left:0px;">
@@ -855,10 +855,10 @@
 												<?php echo $okdishgroup; ?>
 												<?php echo $lbokdishgroup; ?>
 											</div>
-											<div style="width:500px;padding-top:4px;padding-left:8px;">
+											<div style="width:400px;padding-top:4px;padding-left:8px;">
 												<div class="col-md-12" style="padding-left:0px;">
 													<div class="row">
-														<div class="col-md-6">
+														<div class="col-md-7">
 															<?php echo $lbdish;?>
 														</div>
 														<div class="col-md-2" style="padding-left:0px;">
@@ -880,10 +880,10 @@
 												<?php echo $oktri; ?>
 												<?php echo $lboktri; ?>
 												</div>
-											<div style="width:500px;padding-top:4px;padding-left:8px;">
+											<div style="width:400px;padding-top:4px;padding-left:8px;">
 												<div class="col-md-12" style="padding-left:0px;">
 													<div class="row">
-														<div class="col-md-5">
+														<div class="col-md-7">
 															<?php echo $lbtri;?>
 														</div>
 														<div class="col-md-2" style="padding-left:0px;">

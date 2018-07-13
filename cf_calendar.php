@@ -208,11 +208,9 @@
 			}
          });
      </script>
-        <div class="row">
-			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" style="margin-top:16px;margin-bottom:16px;">
+			<div class="col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10" style="margin-top: 16px;">
 				<div class="row">
 					<div class="col-xl-2 col-lg-2 col-md-12 col-sm-12 col-12">
-						<div class="row">
 							<?php
 								if($id == 1 || $id == 2 ||$id==3){
 							?>
@@ -427,7 +425,6 @@
 									</div>
 								</div>
 							</div>
-						</div>
 					</div>
 					<div class="col-xl-10 col-lg-10 col-md-12 col-sm-12 col-12">
 						<h1><center><?php echo $conferroom;?></center></h1>
@@ -436,5 +433,4 @@
 					<input type="hidden" id="confer_id" value="<?php echo $id;?>">
 				</div>
 			</div>
-		</div>
 <?php include("cf_viewdetail.php")?>
