@@ -1,15 +1,21 @@
 <?php
     date_default_timezone_set('Asia/Bangkok');
     $form = new form();
-    $lbwork = new label('งาน');
+    $lbname= new label('ชื่อ - นามสกุล');
     $lbposition = new label('ตำแหน่ง');
-    $lbcall = new label('โทรศัพท์');
     $lbdevision = new label('สำนัก/สวน');
+    $radioparent = new radioGroup();
+    $radioparent->name = 'systemallow_news';
+    $radioparent->add('ข้าพเจ้า',1,'');
+    $radioparent->add('คู่สมรส ชื่อ',2,'');
+    $radioparent->add('คู่บิดา ชื่อ',2,'');
+    $radioparent->add('คู่มารดา ชื่อ',2,'');
+    $radioparent->add('คู่บุตร ชื่อ',2,'');
     $lbdetail = new label('รายละเอียดเพิ่มเติม');
     $lbproblem = new label('ปัญหา');
     $lbtime = new label('วันที่และเวลาแจ้ง');
     $lbtypetools = new label('ชนิดของอุปกรณ์');
-    $txtwork = new textfield('problem_work','problem_work','form-control','','');
+    $txtname = new textfield('','','form-control','','');
     $txttime = new textfieldcalendarreadonly('problem_date','datetimepicker1','','form-control','input-group-addon btn calen','datetimepicker1');
     $year = date("Y")+543;
     $md = date("m-d");
@@ -22,4 +28,12 @@
     $txtdetail->rows = 5;
     $button = new buttonok("ส่งแบบฟอร์มแจ้งซ่อม","","btn btn-success btn-lg btn-block bt3success col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","");
     ?>
-  
+    
+  <h4>คำขอหนังสือรับรองการมีสิทธิรับเงินช่วยเหลือค่ารักษาพยาบาล</h4>
+  <?php
+      echo $form->open("","","","hrs_insert_hospital.php","");
+      echo $lbname;
+      echo $txtname;
+      echo $radioparent;
+      echo $form->close();
+  ?>
