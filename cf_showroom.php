@@ -49,8 +49,8 @@
 <?php
     $id = $_GET['id'];
     $cfrs = $db->findByPK('conferroom','confer_id',$id)->executeAssoc();
-    $confer_name = $cfrs['confer_name'];
-    echo "<div class='col-md-12'><h2>".$confer_name."</h2></div>" ?>
+    $confer_name = $cfrs['confer_name'];?>
+    <div class='col-md-12' style="padding-top:16px;"><h4> <?php echo $confer_name ?></h4></div>
   <nav class="nav nav-tabs" role="tablist" style="margin-top: 16px;width:100%">
     <a class="nav-item nav-link active" href="#wait" aria-controls="wait" role="tab" data-toggle="tab" style="color:#45B39D;">รอการอนุมัติ</a>
     <a class="nav-item nav-link" href="#pass" aria-controls="pass" role="tab" data-toggle="tab" style="color:#58D68D;">อนุมัติ</a>

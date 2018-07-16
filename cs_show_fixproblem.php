@@ -19,9 +19,11 @@
     } );
 } );
 </script>
-
-<h4>รายการแจ้งดำเนินการใหม่</h4>
-
+<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" style="margin-top:16px;">
+	<div class="row">
+		<h4>รายการแจ้งดำเนินการใหม่</h4>
+	</div>
+</div>
 	<!-- Nav tabs -->
 	<nav class="nav nav-tabs" role="tablist" style="margin-top: 16px;width:100%">
 		<?php if($user_zoo == 10){?>

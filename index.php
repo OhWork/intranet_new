@@ -27,6 +27,7 @@ session_start();
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+		<title>องค์การสวนสัตว์</title>
         <?php include 'inc_js.php';
               include 'form/main_form.php';
               include 'form/gridview.php';
@@ -58,8 +59,8 @@ session_start();
 			</nav>
 			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 				<div class="row">
-					<?php include('menu_main.php'); ?>
-					<?php include('content.php'); ?>
+					<?php include 'menu_main.php'; ?>
+					<?php include 'content.php'; ?>
 					<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 blocklogo">
 					<center>
 						<div class="indexft"><a href="http://www.zoothailand.org" target="_blank"><img src="images/Logo/ZPO.png"/></a></div>

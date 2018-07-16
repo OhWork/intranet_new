@@ -60,8 +60,7 @@
 <!-- ปุ่มตกลง -->
 		<div class="col-md-12 printdisplaynone" style="margin-top: 40px;">
 			<div class="row">
-				<div class='col-md-2' style="float:left;"></div>
-				<div class="col-md-2">
+				<div class="col-md-4">
 					<?php
 					if($user_zoo == 10){ ?>
 					<select class='form-control css-require' id="conferroom_id" name="conferroom">
@@ -95,9 +94,9 @@
 	        			?>
 				</div>
 				<div class='col-md-2' style="float:left;"><?php echo $selectmonth;?></div>
-				<div class='col-md-3' style="padding-top: 7px;float:left;"><center><?php echo $lbyear;?></center></div>
+				<div class='col-md-4' style="padding-top: 7px;float:left;"><center><?php echo $lbyear;?></center></div>
 				<div class='col-md-1' style="float:left;"><?php echo $txtyearmonth;?></div>
-				<div class='col-md-2' style="float:left;"></div>
+				<div class='col-md-1'></div>
 			</div>
 		</div>
 		<div class="col-md-12 printdisplaynone" style="margin-top: 16px;">

@@ -49,8 +49,8 @@
 <?php
     $id = $_GET['id'];
     $cfrs = $db->findByPK('conferroom','confer_id',$id)->executeAssoc();
-    $confer_name = $cfrs['confer_name'];
-    echo "<div class='col-md-12'><h2>".$confer_name."</h2></div>" ?>
+    $confer_name = $cfrs['confer_name'];?>
+    <div class='col-md-12'><h4><?php echo $confer_name ?></h4></div>
   <nav class="nav nav-tabs" role="tablist" style="margin-top: 16px;width:100%">
     <a class="nav-item nav-link active" href="#wait" aria-controls="wait" role="tab" data-toggle="tab" style="color:#45B39D;">รอการอนุมัติ</a>
     <a class="nav-item nav-link" href="#pass" aria-controls="pass" role="tab" data-toggle="tab" style="color:#58D68D;">อนุมัติ</a>
@@ -59,7 +59,7 @@
   </nav>
 
     <div class="tab-content">
-    <div role="tabpanel" class="tab-pane active inf1" id="wait" style="padding-left:16;padding-right:16px;">
+    <div role="tabpanel" class="tab-pane active inf1" id="wait" style="padding-left:16px;padding-right:16px;">
 <?php
     $columns = array('eventconfer_date','eventconfer_uname','headncf_name','eventconfer_story','eventconfer_psname','eventconfer_start','eventconfer_end','zoo_name');
     $rs = $db->findByPK47('eventconfer','conferroom','zoo','headncf','confer_confer_id','confer_id','confer_id',$id,'subzoo_zoo_zoo_id','zoo_id','headncf_headncf_id','headncf_id','eventconfer_status',"'Y'",'eventconfer_status_online',"'W'",'eventconfer_status_conferonline','1')->execute();
@@ -74,7 +74,7 @@
 			$grid->renderFromDB($columns,$rs);
    ?> </div>
 
-    <div role="tabpanel" class="tab-pane inf1" id="pass" style="padding-left:16;padding-right:16px;">
+    <div role="tabpanel" class="tab-pane inf1" id="pass" style="padding-left:16px;padding-right:16px;">
 <?php
     $columns2 = array('eventconfer_date','eventconfer_uname','headncf_name','eventconfer_story','eventconfer_psname','eventconfer_start','eventconfer_end','zoo_name');
     $rs2 = $db->findByPK46('eventconfer','conferroom','zoo','headncf','confer_confer_id','confer_id','confer_id',$id,'subzoo_zoo_zoo_id','zoo_id','headncf_headncf_id','headncf_id','eventconfer_status',"'Y'",'eventconfer_status_online',"'Y'",'eventconfer_status_conferonline','1')->execute();
@@ -90,7 +90,7 @@
 			$grid->renderFromDB($columns2,$rs2);
    ?> </div>
 
-    <div role="tabpanel" class="tab-pane inf1" id="nopass" style="padding-left:16;padding-right:16px;">
+    <div role="tabpanel" class="tab-pane inf1" id="nopass" style="padding-left:16px;padding-right:16px;">
 <?php
     $columns3 = array('eventconfer_date','eventconfer_uname','headncf_name','eventconfer_story','eventconfer_psname','eventconfer_start','eventconfer_end','zoo_name');
     $rs3 = $db->findByPK46('eventconfer','conferroom','zoo','headncf','confer_confer_id','confer_id','confer_id',$id,'subzoo_zoo_zoo_id','zoo_id','headncf_headncf_id','headncf_id','eventconfer_status',"'Y'",'eventconfer_status_online',"'N'",'eventconfer_status_conferonline','1')->execute();
@@ -105,7 +105,7 @@
 			$grid->edittxt ='สถานะ';
 			$grid->renderFromDB($columns3,$rs3);
    ?> </div>
-   <div role="tabpanel" class="tab-pane inf1" id="cancelpass" style="padding-left:16;padding-right:16px;">
+   <div role="tabpanel" class="tab-pane inf1" id="cancelpass" style="padding-left:16px;padding-right:16px;">
 <?php
     $columns = array('eventconfer_date','eventconfer_uname','headncf_name','eventconfer_story','eventconfer_psname','eventconfer_start','eventconfer_end','zoo_name');
     $rs = $db->findByPK46('eventconfer','conferroom','zoo','headncf','confer_confer_id','confer_id','confer_id',$id,'subzoo_zoo_zoo_id','zoo_id','headncf_headncf_id','headncf_id','eventconfer_status',"'Y'",'eventconfer_status_online',"'C'",'eventconfer_status_conferonline','1')->execute();
