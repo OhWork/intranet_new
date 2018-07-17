@@ -37,18 +37,16 @@
         <link rel="stylesheet" href="CSS/font-awesome.css">
         </head>
 
-  <body>
+<body>
     <?php include 'admin_menutop.php';?>
-    <div class="container-fluid">
-      <div class="row">
+	<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+		<div class="row">
         <?php include 'admin_menu.php'; ?>
-
-        <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
-<!--             <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom"> -->
-               <?php include 'admin_content.php';?>
-
-<!--             </div> -->
-        </main>
+		<div class="col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10">
+			<div class="row">
+			<?php include 'admin_content.php';?>
+			</div>
+		</div>
       </div>
     </div>
     <script>
@@ -56,7 +54,6 @@
     $(function() { $('#popup').popover()});
     <?php include 'jquery/system/cs.js';?>
     </script>
-
-  </body>
+</body>
 </html>
 

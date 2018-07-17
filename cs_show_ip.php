@@ -28,7 +28,12 @@
     $columns = array('ipzpo_address','ipzpo_user','typetools_name','ipzpo_detail','ipzpo_comname','ipzpo_comgroup','subzoo_name','zoo_name');
     $form = new form();
     $rs = $db->findByPK44ASC('ipzpo','subzoo','zoo','typetools','ipzpo.subzoo_subzoo_id','subzoo.subzoo_id','subzoo.zoo_zoo_id','zoo.zoo_id','ipzpo.typetools_typetools_id','typetools.typetools_id',$type,$id,'ipzpo_id')->execute();   
-            echo "<div class='col-md-12'><h4>IP-address ของ ".$zoo_name."</h4></div>";
+?> 
+	<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" style="margin-top:16px;">
+		<h4>IP-address ของ <?php echo $zoo_name ?></h4>
+	</div>
+	<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" style="margin-top:16px;">
+<?php
 
 			$grid = new gridView();
 			$grid->pr = 'ipzpo_id';
@@ -40,3 +45,4 @@
 			$grid->renderFromDB($columns,$rs);
 			endif;
 		?>
+	</div>
