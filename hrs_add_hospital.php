@@ -15,7 +15,7 @@
     $lbproblem = new label('ปัญหา');
     $lbtime = new label('วันที่และเวลาแจ้ง');
     $lbtypetools = new label('ชนิดของอุปกรณ์');
-    $txtname = new textfield('','','form-control','','');
+    $txtname = new textfield('','me','form-control','','');
     $txtfamily = new textfield('','family','form-control ','','');
     $txtfather = new textfield('','father','form-control ','','');
     $txtmather = new textfield('','mather','form-control ','','');
@@ -39,7 +39,6 @@
       echo $lbname;
       echo $txtname;
       ?>
-						<div class="col-md-4">
 							<label class="col-md-12">
 							  <input type="radio" name="parent" id="parent1" value="1" > ข้าพเจ้า
 							</label>
@@ -67,69 +66,47 @@
 								  echo $txtchild;
 							  ?>
 							</label>
-						</div>
-						<div class='col-md-4'></div>
       <?
 	    echo $form->close();
   ?>
   <script>
   		$(document).ready(function(){
-		$('#family').hide();
-		$('#father').hide();
-		$('#mather').hide();
-		$('#child').hide();
 		$('input[name=parent]').on("change",function(e) {
 		var valchange = $(this).val();
 			if(valchange == 1){
-				$('#family').hide("slow");
-				$('#father').hide("slow");
-				$('#mather').hide("slow");
-				$('#child').hide("slow");
-				$('#parent2').attr("disabled", true);
-				$('#parent3').attr("disabled", true);
-				$('#parent4').attr("disabled", true);
-				$('#parent5').attr("disabled", true);
+				$('#me').attr("disabled", false);
+				$('#family').attr("disabled", true);
+				$('#father').attr("disabled", true);
+				$('#mather').attr("disabled", true);
+				$('#child').attr("disabled", true);
 			}
 			else if(valchange == 2) {
-				$('#family').show("slow");
-				$('#father').hide("slow");
-				$('#mather').hide("slow");
-				$('#child').hide("slow");
-				$('#parent1').attr("disabled", true);
-				$('#parent3').attr("disabled", true);
-				$('#parent4').attr("disabled", true);
-				$('#parent5').attr("disabled", true);
+				$('#family').attr("disabled", false);
+				$('#me').attr("disabled", true);
+				$('#father').attr("disabled", true);
+				$('#mather').attr("disabled", true);
+				$('#child').attr("disabled", true);
 			}
 			else if(valchange == 3) {
-				$('#father').show("slow");
-				$('#family').hide("slow");
-				$('#mather').hide("slow");
-				$('#child').hide("slow");
-				$('#parent1').attr("disabled", true);
-				$('#parent2').attr("disabled", true);
-				$('#parent4').attr("disabled", true);
-				$('#parent5').attr("disabled", true);
-
+				$('#father').attr("disabled", false);
+				$('#me').attr("disabled", true);
+				$('#family').attr("disabled", true);
+				$('#mather').attr("disabled", true);
+				$('#child').attr("disabled", true);
 			}
 			else if(valchange == 4) {
-				$('#mather').show("slow");
-				$('#family').hide("slow");
-				$('#father').hide("slow");
-				$('#child').hide("slow");
-				$('#parent1').attr("disabled", true);
-				$('#parent2').attr("disabled", true);
-				$('#parent3').attr("disabled", true);
-				$('#parent5').attr("disabled", true);
+				$('#mather').attr("disabled", false);
+				$('#me').attr("disabled", true);
+				$('#family').attr("disabled", true);
+				$('#father').attr("disabled", true);
+				$('#child').attr("disabled", true);
 			}
 			else if(valchange == 5) {
-				$('#child').show("slow");
-				$('#family').hide("slow");
-				$('#father').hide("slow");
-				$('#mather').hide("slow");
-				$('#parent1').attr("disabled", true);
-				$('#parent2').attr("disabled", true);
-				$('#parent3').attr("disabled", true);
-				$('#parent4').attr("disabled", true);
+				$('#child').attr("disabled", false);
+				$('#me').attr("disabled", true);
+				$('#family').attr("disabled", true);
+				$('#father').attr("disabled", true);
+				$('#mather').attr("disabled", true);
 			}
 		});
 	});
