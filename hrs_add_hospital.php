@@ -87,28 +87,24 @@
 			}
 			else if(valchange == 2) {
 				$('#family').attr("disabled", false);
-				$('#me').attr("disabled", true);
 				$('#father').attr("disabled", true);
 				$('#mather').attr("disabled", true);
 				$('#child').attr("disabled", true);
 			}
 			else if(valchange == 3) {
 				$('#father').attr("disabled", false);
-				$('#me').attr("disabled", true);
 				$('#family').attr("disabled", true);
 				$('#mather').attr("disabled", true);
 				$('#child').attr("disabled", true);
 			}
 			else if(valchange == 4) {
 				$('#mather').attr("disabled", false);
-				$('#me').attr("disabled", true);
 				$('#family').attr("disabled", true);
 				$('#father').attr("disabled", true);
 				$('#child').attr("disabled", true);
 			}
 			else if(valchange == 5) {
 				$('#child').attr("disabled", false);
-				$('#me').attr("disabled", true);
 				$('#family').attr("disabled", true);
 				$('#father').attr("disabled", true);
 				$('#mather').attr("disabled", true);
