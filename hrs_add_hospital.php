@@ -41,28 +41,28 @@
       ?>
 						<div class="col-md-4">
 							<label class="col-md-12">
-							  <input type="radio" name="parent" value="1" > ข้าพเจ้า
+							  <input type="radio" name="parent" id="parent1" value="1" > ข้าพเจ้า
 							</label>
 							<label class=" col-md-12">
-							  <input type="radio" name="parent" value="2"> คู่สมรส
+							  <input type="radio" name="parent" id="parent2" value="2"> คู่สมรส
 							  <?php
 								  echo $txtfamily;
 							  ?>
 							</label>
 							<label class="col-md-12">
-							  <input type="radio" name="parent" value="3"> คู่บิดา
+							  <input type="radio" name="parent"  id="parent3" value="3"> คู่บิดา
 							  <?php
 								  echo $txtfather;
 							  ?>
 							</label>
 							<label class="col-md-12">
-							  <input type="radio" name="parent" value="4"> คู่มารดา
+							  <input type="radio" name="parent" id="parent4" value="4"> คู่มารดา
 							  <?php
 								  echo $txtmather;
 							  ?>
 							</label>
 							<label class="col-md-12">
-							  <input type="radio" name="parent" value="5"> คู่บุตร
+							  <input type="radio" name="parent" id="parent5" value="5"> คู่บุตร
 							  <?php
 								  echo $txtchild;
 							  ?>
@@ -85,30 +85,51 @@
 				$('#father').hide("slow");
 				$('#mather').hide("slow");
 				$('#child').hide("slow");
+				$('#parent2').attr("disabled", true);
+				$('#parent3').attr("disabled", true);
+				$('#parent4').attr("disabled", true);
+				$('#parent5').attr("disabled", true);
 			}
 			else if(valchange == 2) {
 				$('#family').show("slow");
 				$('#father').hide("slow");
 				$('#mather').hide("slow");
 				$('#child').hide("slow");
+				$('#parent1').attr("disabled", true);
+				$('#parent3').attr("disabled", true);
+				$('#parent4').attr("disabled", true);
+				$('#parent5').attr("disabled", true);
 			}
 			else if(valchange == 3) {
 				$('#father').show("slow");
 				$('#family').hide("slow");
 				$('#mather').hide("slow");
 				$('#child').hide("slow");
+				$('#parent1').attr("disabled", true);
+				$('#parent2').attr("disabled", true);
+				$('#parent4').attr("disabled", true);
+				$('#parent5').attr("disabled", true);
+
 			}
 			else if(valchange == 4) {
 				$('#mather').show("slow");
 				$('#family').hide("slow");
 				$('#father').hide("slow");
 				$('#child').hide("slow");
+				$('#parent1').attr("disabled", true);
+				$('#parent2').attr("disabled", true);
+				$('#parent3').attr("disabled", true);
+				$('#parent5').attr("disabled", true);
 			}
 			else if(valchange == 5) {
 				$('#child').show("slow");
 				$('#family').hide("slow");
 				$('#father').hide("slow");
 				$('#mather').hide("slow");
+				$('#parent1').attr("disabled", true);
+				$('#parent2').attr("disabled", true);
+				$('#parent3').attr("disabled", true);
+				$('#parent4').attr("disabled", true);
 			}
 		});
 	});
