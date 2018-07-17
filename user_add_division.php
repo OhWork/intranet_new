@@ -36,8 +36,9 @@ $id = $_GET['id'];
     	}
 	}
 	
-  echo $form->open("form_reg","form","","user_insert_division.php","");
+  echo $form->open("form_reg","form","maxw","user_insert_division.php","");
   if(empty($_GET['id'])){ ?>
+<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 	<div class="row">
 		<div class="col-md-3"></div>
 		<div class="col-md-6">  
@@ -53,6 +54,10 @@ $id = $_GET['id'];
 			</div>
 			<?php  }
 			  if(!empty($_GET['id'])){ ?>
+<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+	<div class="row">
+		<div class="col-md-3"></div>
+		<div class="col-md-6">
 			<div class='col-md-12'style="padding-top:14px;">
 				<h4>แก้ไขฝ่าย</h4>
 			</div>
@@ -77,7 +82,7 @@ $id = $_GET['id'];
 			</div>
 			<div class='col-md-12'>
 				<div class='row'>
-					<div class='col-md-2' style="padding-top:8px;"><?php echo $lbsubzoodetail; ?></div>
+					<div class='col-md-3' style="padding-top:8px;"><?php echo $lbsubzoodetail; ?></div>
 					<div class='col-md-8 form-group has-feedback'><? echo $txtsubzoodetail; ?></div>
 				</div>
 			</div>
@@ -103,3 +108,4 @@ $id = $_GET['id'];
 		</div>
 		<div class="col-md-3"></div>		
 	</div>	
+</div>

@@ -251,13 +251,9 @@ function autoTab2(obj,typeCheck){
         }
 }  </script>
 <?php
-      echo $form->open("form_reg","frmMain","","user_insert_user.php","");
+      echo $form->open("form_reg","frmMain","maxw","user_insert_user.php","");
 ?>
-<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" style="margin-top: 10px;">
-    <div class="row">
-  	</div>
-</div>
-  <!-- Tab panes -->
+<!-- Tab panes -->
 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 usubd">
     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" style="margin-top:5px;border-bottom : solid 1px #ced4da;margin-bottom:8px;">
          <legend><h4>ข้อมูลส่วนตัว</h4></legend>
@@ -265,30 +261,29 @@ function autoTab2(obj,typeCheck){
 	<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 		<div class="row">
 			<?php if(empty($id)){ ?>
-
-					<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1" style="padding-top: 7px;"><center><?php echo $lbuser; ?></center></div>
-					<div class="form-group has-feedback col-xl-5 col-lg-5 col-md-5 col-sm-5 col-5 showrequired"><?php echo $txtuser; ?></div>
+					<div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2" style="padding-top: 7px;"><center><?php echo $lbuser; ?></center></div>
+					<div class="form-group has-feedback col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4 showrequired"><?php echo $txtuser; ?></div>
 			<?php }else{ ?>
-					<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1" style="padding-top: 7px;"><center><?php echo $lbuser; ?></center></div>
-					<div class="form-group has-feedback col-md-5" style="padding-top: 7px;"><?php echo $r['user_user'];?></div>
+					<div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2" style="padding-top: 7px;"><center><?php echo $lbuser; ?></center></div>
+					<div class="form-group has-feedback col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4" style="padding-top: 7px;"><?php echo $r['user_user'];?></div>
 					<div id="msg"></div>
 			<?php } ?>
 		</div>
 	</div>
 	<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 		<div class="row">
-			<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1" style="padding-top: 7px;"><center><?php echo $lbpass; ?></center></div>
-			<div class="form-group has-feedback col-xl-5 col-lg-5 col-md-5 col-sm-5 col-5"><?php echo $txtpass; ?></div>
-			<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1" style="padding-top: 7px;"><center><?php echo $lbpasscon; ?></center></div>
-			<div class="form-group has-feedback col-xl-5 col-lg-5 col-md-5 col-sm-5 col-5"><?php echo $txtpass_confirm; ?></div>
+			<div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2" style="padding-top: 7px;"><center><?php echo $lbpass; ?></center></div>
+			<div class="form-group has-feedback col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4"><?php echo $txtpass; ?></div>
+			<div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2" style="padding-top: 7px;"><center><?php echo $lbpasscon; ?></center></div>
+			<div class="form-group has-feedback col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4"><?php echo $txtpass_confirm; ?></div>
 			<div id="msg2" style="margin-left: 180px;"></div>
 		</div>
 	</div>
 	<div id="msg2"></div>
 	<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 		<div class="row">
-			<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1" style="padding-top: 7px;"><center><label>สังกัด</label></center></div>
-			<div class="col-xl-5 col-lg-5 col-md-5 col-sm-5 col-5">
+			<div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2" style="padding-top: 7px;"><center><label>สังกัด</label></center></div>
+			<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
 				<select class='form-control css-require' id="ddlZoo" name="subzoo_zoo_zoo_id" onChange = "ListSubzoo(this.value)">
 				<option selected value="">---โปรดระบุ---</option>
 				<?php
@@ -302,34 +297,34 @@ function autoTab2(obj,typeCheck){
 					?>
 				</select>
 			</div>
-			<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1" style="padding-top: 7px;"><center><label>ฝ่าย</label></center></div>
-			<div class="col-xl-5 col-lg-5 col-md-5 col-sm-5 col-5 form-group has-feedback">
+			<div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2" style="padding-top: 7px;"><center><label>ฝ่าย</label></center></div>
+			<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4 form-group has-feedback">
 				<select class='form-control css-require' id="ddlSubzoo" name="subzoo_subzoo_id"></select>
 			</div>
 		</div>
 	</div>
 	<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 		<div class="row">
-			<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1" style="padding-top: 7px;"><center><?php echo $lbname; ?></center></div>
-			<div class="form-group has-feedback col-xl-5 col-lg-5 col-md-5 col-sm-5 col-5"><?php echo $txtname; ?></div>
-			<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1" style="padding-top: 7px;"><center><?php echo $lblast; ?></center></div>
-			<div class="form-group has-feedback col-xl-5 col-lg-5 col-md-5 col-sm-5 col-5"><?php echo $txtlast; ?></div>
+			<div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2" style="padding-top: 7px;"><center><?php echo $lbname; ?></center></div>
+			<div class="form-group has-feedback col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4"><?php echo $txtname; ?></div>
+			<div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2" style="padding-top: 7px;"><center><?php echo $lblast; ?></center></div>
+			<div class="form-group has-feedback col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4"><?php echo $txtlast; ?></div>
 		</div>
 	</div>
 	<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 		<div class="row">
-			<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1" style="padding-top: 7px;"><center><?php echo $lbnameen; ?></center></div>
-			<div class="form-group has-feedback col-xl-5 col-lg-5 col-md-5 col-sm-5 col-5"><?php echo $txtnameen; ?></div>
-			<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1" style="padding-top: 7px;"><center><?php echo $lblasten; ?></center></div>
-			<div class="form-group has-feedback col-xl-5 col-lg-5 col-md-5 col-sm-5 col-5"><?php echo $txtlasten; ?></div>
+			<div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2" style="padding-top: 7px;"><center><?php echo $lbnameen; ?></center></div>
+			<div class="form-group has-feedback col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4"><?php echo $txtnameen; ?></div>
+			<div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2" style="padding-top: 7px;"><center><?php echo $lblasten; ?></center></div>
+			<div class="form-group has-feedback col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4"><?php echo $txtlasten; ?></div>
 		</div>
 	</div>
 	<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" style="padding-bottom: 15px;">
 		<div class="row">
-			<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1" style="padding-top: 7px;"><center><?php echo $lbtel; ?></center></div>
-			<div class="col-xl-5 col-lg-5 col-md-5 col-sm-5 col-5"><?php echo $txttel; ?></div>
-			<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1" style="padding: 7 0 0 0;"><center><?php echo $lbidcard; ?></center></div>
-			<div class="col-xl-5 col-lg-5 col-md-5 col-sm-5 col-5"><?php echo $txtidcard; ?></div>
+			<div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2" style="padding-top: 7px;"><center><?php echo $lbtel; ?></center></div>
+			<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4"><?php echo $txttel; ?></div>
+			<div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2" style="padding: 7 0 0 0;"><center><?php echo $lbidcard; ?></center></div>
+			<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4"><?php echo $txtidcard; ?></div>
 		</div>
 	</div>
 	<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" style="padding-bottom: 15px;">
@@ -401,12 +396,14 @@ function autoTab2(obj,typeCheck){
  <input type='hidden' name='log_user' value='<?php echo $log_user; ?>'/>
  <input type='hidden' name='user_id' value='<?php echo $_GET['id'];?>'/>
 
-<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" style="margin-bottom 20px;">
-    <div class="col-md-5" style="float: left;"></div>
-    <div class="col-md-2" style="float: left;margin: 15 0 0 0;">
-        <?php echo $submit; ?>
-    </div>
-    <div class="col-md-5" style="float: left;"></div>
+<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" style="margin-top:10px;margin-bottom 20px;">
+	<div class="row">
+		<div class="col-md-5"></div>
+		<div class="col-md-2">
+			<?php echo $submit; ?>
+		</div>
+		<div class="col-md-5"></div>
+	</div>
 </div>
 <?php
       echo $form->close();

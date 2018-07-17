@@ -24,9 +24,16 @@
 
 			$rs2 = "user,subzoo,zoo  where ipzpo.subzoo_subzoo_id = subzoo.subzoo_id && subzoo.zoo_zoo_id = zoo.zoo_id ";
             $rs = $db->findByPK32('user','subzoo','zoo','user.subzoo_subzoo_id','subzoo.subzoo_id','subzoo.zoo_zoo_id','zoo.zoo_id')->execute();  ?> 
-            <div class='col-md-12' style="margin-top: 10px;">
-                <h3>รายชื่อผู้ใช้ระบบ</h3><a href="admin_index.php?url=user_add_user.php" class="btn btn-success"><span data-feather="user-plus"></span></a>
-            </div>
+<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12' style="margin-top: 16px;">
+	<div class="row">
+		<div class='col-11'>
+			<h3>รายชื่อผู้ใช้ระบบ</h3>
+		</div>
+		<div class='col-1'>
+			<a href="admin_index.php?url=user_add_user.php" class="btn btn-success col-12"><span data-feather="user-plus"></span></a>
+		</div>
+	</div>
+</div>
 <!--             <div class='col-sm-4 col-md-offset-3'>".$searchipzpo.$rowend.$rowend; -->
 
 			<?php 
