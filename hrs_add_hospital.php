@@ -40,7 +40,7 @@
       echo $txtname;
       ?>
 							<label class="col-md-12">
-							  <input type="radio" name="parent" id="parent1" value="1" > ข้าพเจ้า
+							  <input type="radio" name="parent" id="parent1" value="1"> ข้าพเจ้า
 							</label>
 							<label class=" col-md-12">
 							  <input type="radio" name="parent" id="parent2" value="2"> คู่สมรส
@@ -71,6 +71,11 @@
   ?>
   <script>
   		$(document).ready(function(){
+  		$('#parent1').prop('checked',true);
+  		$('#family').attr("disabled", true);
+  		$('#father').attr("disabled", true);
+		$('#mather').attr("disabled", true);
+		$('#child').attr("disabled", true);
 		$('input[name=parent]').on("change",function(e) {
 		var valchange = $(this).val();
 			if(valchange == 1){
