@@ -24,7 +24,7 @@
     $txthospital = new textfield('','','form-control','','');
     $txtprovince = new textfield('','','form-control','','');
     $txtdatestart = new textfieldcalendarreadonly('problem_date','datetimepicker1','','form-control','input-group-addon btn calen','datetimepicker1');
-    $txtdateend = new textfieldcalendarreadonly('problem_date','datetimepicker1','','form-control','input-group-addon btn calen','datetimepicker1');
+    $txtdateend = new textfieldcalendarreadonly('problem_date','datetimepicker2','','form-control','input-group-addon btn calen','datetimepicker1');
     $id = $_GET['id'];
     $button = new buttonok("ส่งแบบฟอร์ม","","btn btn-success btn-lg btn-block bt3success col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","");
     ?>
@@ -66,6 +66,12 @@
     							echo $lbhospital;
     							echo $txthospital;
     							echo $lbprovince;
+    							echo $txtprovince;
+    							echo $lbdatestart;
+    							echo $txtdatestart;
+    							echo $lbdateend;
+    							echo $txtdateend;
+    							echo $button;
 							?>
       <?
 	    echo $form->close();
@@ -112,5 +118,30 @@
 			}
 		});
 	});
+	
+	$( document ).ready( function () {
+		$('#datetimepicker1').datetimepicker({
+	        format:'YYYY-MM-DD',
+	        useCurrent: false,
+	        sideBySide: true,
+            allowInputToggle: true,
+	        ignoreReadonly: true,
+	        showClose:true,
+	        locale:moment.locale('th')
+        }).mouseleave(function (e) {
+          $('#datetimepicker1').data("DateTimePicker").hide();
+   });
+   $('#datetimepicker2').datetimepicker({
+	        format:'YYYY-MM-DD',
+	        useCurrent: false,
+	        sideBySide: true,
+            allowInputToggle: true,
+	        ignoreReadonly: true,
+	        showClose:true,
+	        locale:moment.locale('th')
+        }).mouseleave(function (e) {
+          $('#datetimepicker2').data("DateTimePicker").hide();
+   });
+   });
 
   </script>
