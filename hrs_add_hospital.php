@@ -11,26 +11,22 @@
     $radioparent->add('คู่บิดา ชื่อ',2,'');
     $radioparent->add('คู่มารดา ชื่อ',2,'');
     $radioparent->add('คู่บุตร ชื่อ',2,'');
-    $lbdetail = new label('รายละเอียดเพิ่มเติม');
-    $lbproblem = new label('ปัญหา');
-    $lbtime = new label('วันที่และเวลาแจ้ง');
+    $lbprovince = new label('จังหวัด');
+    $lbdatestart = new label('ตั้งแต่วันที่');
+    $lbdateend = new label('ถึงวันที่');
     $lbtypetools = new label('ชนิดของอุปกรณ์');
+    $lbhospital = new label('รับการรักษาจากสถานพยาบาล');
     $txtname = new textfield('','me','form-control','','');
     $txtfamily = new textfield('','family','form-control ','','');
     $txtfather = new textfield('','father','form-control ','','');
     $txtmather = new textfield('','mather','form-control ','','');
     $txtchild = new textfield('','child','form-control ','','');
-    $txttime = new textfieldcalendarreadonly('problem_date','datetimepicker1','','form-control','input-group-addon btn calen','datetimepicker1');
-    $year = date("Y")+543;
-    $md = date("m-d");
-    $time = date("H:i");
+    $txthospital = new textfield('','','form-control','','');
+    $txtprovince = new textfield('','','form-control','','');
+    $txtdatestart = new textfieldcalendarreadonly('problem_date','datetimepicker1','','form-control','input-group-addon btn calen','datetimepicker1');
+    $txtdateend = new textfieldcalendarreadonly('problem_date','datetimepicker1','','form-control','input-group-addon btn calen','datetimepicker1');
     $id = $_GET['id'];
-    $txttime->value = $year."-".$md." ".$time;
-    $txtcall = new textfield('problem_tel','','form-control','','');
-    $txtposition = new textfield('problem_position','problem_position','form-control','','');
-    $txtdetail = new textarea('problem_detail','aprob','','');
-    $txtdetail->rows = 5;
-    $button = new buttonok("ส่งแบบฟอร์มแจ้งซ่อม","","btn btn-success btn-lg btn-block bt3success col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","");
+    $button = new buttonok("ส่งแบบฟอร์ม","","btn btn-success btn-lg btn-block bt3success col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","");
     ?>
 
   <h4>คำขอหนังสือรับรองการมีสิทธิรับเงินช่วยเหลือค่ารักษาพยาบาล</h4>
@@ -66,6 +62,11 @@
 								  echo $txtchild;
 							  ?>
 							</label>
+							<?php
+    							echo $lbhospital;
+    							echo $txthospital;
+    							echo $lbprovince;
+							?>
       <?
 	    echo $form->close();
   ?>
