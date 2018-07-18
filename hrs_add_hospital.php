@@ -72,11 +72,10 @@
     							echo $lbdateend;
     							echo $txtdateend;
     							echo $button;
-							?>
-      <?
+
 	    echo $form->close();
   ?>
-  <script>
+    <script>
   		$(document).ready(function(){
   		$('#parent1').prop('checked',true);
   		$('#family').attr("disabled", true);
