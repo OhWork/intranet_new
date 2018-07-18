@@ -45,16 +45,16 @@
     $selectmonth->addItem('ธันวาคม','12');
     $txtyear = new textfield('year','','form-control css-require','','');
 	$button = new buttonok('ค้นหา','','btn btn-primary stzbutton','submit');
-     ?>
-        <div class='row'>
-            <div class='col-md-12 printdisplaynone'>
-				<div class='col-md-12' style="margin-top: 10px;">
-				    <h1>รายงานจำนวนผู้เข้าชม <?php echo @$zoo_name ?></h1>
-				</div>
-        <?php   echo $form->open('','','','',''); ?>
-        <div class='col-md-12'>
+	echo $form->open('','','','','');
+?>
+<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 printdisplaynone' style="margin-top:16px;">
+    <div class='row'>
+		<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12' style="margin-top: 10px;">
+			<h4>รายงานจำนวนผู้เข้าชม <?php echo @$zoo_name ?></h4>
+		</div>
+        <div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12'>
             <div class='row'>
-                <div class='col-md-12' style="margin-bottom: 10px;">
+                <div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12'>
 					<div class='row'>
 						<div class='col-md-3'></div>
 						<div class='btn-group col-md-6' data-toggle='buttons' style="margin-top: 20px;">
@@ -68,51 +68,46 @@
 						<div class='col-md-3'></div>
 					</div>
 				</div>
-                <div class='col-md-12'>
+                <div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12' style="margin-top: 20px;">
                     <div id="searchdaySettings">
-                        <div class='col-md-4' style="float: left;">
-                        </div>
-             			<div class="date-form dayinbox col-md-4 form-horizontal control-group controls" style="float: left;">
+                        <div class='col-md-4' style="float:left;"></div>
+             			<div class="date-form dayinbox col-md-4 form-horizontal control-group controls" style="float:left;">
                             <div class="input-group"><?php echo $txtday;?></div>
                         </div>
-                         <div class='col-md-4'style="float: left;">
-                         </div>
-                    </div>
-                    <div id="searchmonthSettings"  style="display:none;">
-                        <div class='col-md-2' style="float: left;">
-                        </div>
-                        <div class='col-md-8' style="float: left;">
+                        <div class='col-md-4' style="float:left;"></div>
+					</div>
+                    <div id="searchmonthSettings" style="display:none;">
+                        <div class='col-md-2' style="float:left;"></div>
+                        <div class='col-md-8' style="float:left;">
                             <div class='row'>
-                                <div class='col-md-2' style="float: left;">
-                                </div>
-                                <div class='col-md-1' style="padding:  8 0 0 25;">
+                                <div class='col-md-2'></div>
+                                <div class='col-md-1' style="padding-top:8px;">
                                     <?php echo $lbmonth;?>
                                 </div>
                                 <div class='col-md-3'>
                                     <?php echo $selectmonth;?>
                                 </div>
-                                 <div class='col-md-1' style="padding:  8 0 0 15;">
+                                <div class='col-md-2' style="padding-top:8px;">
                                     <?php echo $lbyear;?>
                                 </div>
-                                <div class='col-md-3'>
+                                <div class='col-md-2'>
                                     <?php echo $txtyear;?>
                                 </div>
-                                <div class='col-md-2' style="float: left;">
-                                </div>
+                                <div class='col-md-2'></div>
                             </div>
                         </div>
-                        <div class='col-md-2' style="float: left;">
-                        </div>
+                        <div class='col-md-2' style="float:left;"></div>
                     </div>
                 </div>
             </div>
-
-
-        <div class='col-md-12'style="margin-top: 10px;"><center><?php echo $button ?></center>
-			</div>
-			</div>
-			</div>
-<?php	        echo $form->close();
+		</div>
+        <div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12'style="margin-top: 20px;">
+			<center><?php echo $button ?></center>
+		</div>
+	</div>
+</div>
+<?php	        
+	echo $form->close();
 	if (isset($_POST['submit'])) {
     //ปี
 isset($_POST['date'])?$date  = $_POST['date']:$date='';
@@ -231,8 +226,8 @@ if($date){
 			$grid->renderFromDB($columns,$trs);
 }
 ?>
-            </div>
-    <script>
+<?php endif;?>
+<script>
    $.fn.datepicker.dates['th'] = {
                                 days: ["อาทิตย์", "จันทร์", "อังคาร", "พุธ", "พฤหัส", "ศุกร์", "เสาร์", "อาทิตย์"],
                                 daysShort: ["อา", "จ", "อ", "พ", "พฤ", "ศ", "ส", "อา"],
@@ -253,4 +248,4 @@ if($date){
         });
       } );
 </script>
-<?php endif;?>
+

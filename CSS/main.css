@@ -671,6 +671,9 @@
 .noneuau {
 	border-bottom : 0px;
 }
+.maxw {
+	width: 100%;
+}
 /*gridviwe*/
 .editdetial {
 	min-width : 100%;
@@ -947,6 +950,7 @@
 .usubd {
 	border : solid 1px #ced4da;
 	border-radius : 8px;
+	margin-top : 16px;
 }
 .sidebar {
 	padding-top: 0;
