@@ -9,7 +9,7 @@
 		$strSeconds= date("s",strtotime($strDate));
 		$strMonthCut = Array("","ม.ค.","ก.พ.","มี.ค.","เม.ย.","พ.ค.","มิ.ย.","ก.ค.","ส.ค.","ก.ย.","ต.ค.","พ.ย.","ธ.ค.");
 		$strMonthThai=$strMonthCut[$strMonth];
-		return "$strDay $strMonthThai $strYear, $strHour:$strMinute";
+		return "$strDay $strMonthThai $strYear";
 	}
 function num2wordsThai($num){   
     $num=str_replace(",","",$num);
@@ -67,7 +67,7 @@ function num2wordsThai($num){
 }
     
 
-    echo num2wordsThai('25101111');
+    echo num2wordsThai('25101111')."<br>";
 	$strDate = "2008-08-14";
 	echo DateThai($strDate);
 ?>
