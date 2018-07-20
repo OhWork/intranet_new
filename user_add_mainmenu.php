@@ -1,7 +1,7 @@
 <?php
   $form = new form();
   $lbmainmenu = new label("เมนูหลัก:");
-  $txtmainmenu = new textfield('zoo_name','','form-control css-require','');
+  $txtmainmenu = new textfield('menu_name','','form-control css-require','');
   $submit = new buttonok("ยืนยัน","","btn btn-success col-md-12","");
 
   echo $form->open("form_reg","form","","user_insert_mainmenu.php",""); ?>
