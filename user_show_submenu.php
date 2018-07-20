@@ -16,9 +16,9 @@
 </script>
 <?php
     if (!empty($_SESSION['user_name'])):
-    $selectzoo = new SelectFromDB();
-    $selectzoo->name = 'menu_id';
-    $selectzoo->lists = 'โปรดระบุ';
+    $selectmenu = new SelectFromDB();
+    $selectmenu->name = 'menu_id';
+    $selectmenu->lists = 'โปรดระบุ';
     $columns = array('submenu_name','submenu_no');
     $row = "<div class='row'>";
     $rowend = "</div>";
@@ -29,9 +29,9 @@
     echo $form->open('form_reg','myform','','',''); ?>
     
             <div class="col-md-12" style="float: left;margin-top: 10px;">
-                <div class="col-md-2" style="float: left;"><a href="admin_index.php?url=user_add_submenu.php" class="btn btn-success">เพิ่มฝ่าย</a>
+                <div class="col-md-2" style="float: left;"><a href="admin_index.php?url=user_add_submenu.php" class="btn btn-success">เพิ่มเมนูย่อย</a>
                 </div>
-                <div class="col-md-6" style="float: left;"><?php echo $selectzoo->selectFromTB('menu','menu_id','meny_name',$r['typetools_typetools_id']);?>
+                <div class="col-md-6" style="float: left;"><?php echo $selectmenu->selectFromTB('menu','menu_id','menu_name',$r['typetools_typetools_id']);?>
                 </div>
                 <div class="col-md-2" style="float: left;"><?php echo $button; ?>
                 </div>

@@ -41,7 +41,7 @@ $id = $_GET['id'];
 			<div class='col-md-12' style="padding-top:14px;">
 				<h4>เพิ่มเมนูย่อย</h4>
 			</div>
-			<div class='col-md-12'><?php echo $lbmenu.$selectmenu->selectFromTB('menu','menu_id','menu_name',$r['menu_menu_id']); ?></div>
+			<div class='col-md-12'><?php echo $lbmenu.$selectmenu->selectFromTB('menu','menu_id','menu_name',''); ?></div>
 			<div class='col-md-12' style="padding-top:16px;">
 				<div class='row'>
 					<div class='col-md-2' style='padding-top:8px;'><?php echo $lbsubmenuname; ?></div>
