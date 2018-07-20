@@ -73,7 +73,7 @@
 							<input type="radio" name="parent" id="parent1" value="1"> ข้าพเจ้า
 						</label>
 						<label class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8">
-							นายอะไรซักอย่าง
+							
 						</label>
 					</div>
 				</div>
