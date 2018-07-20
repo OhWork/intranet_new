@@ -13,6 +13,12 @@
 	                <a class="nav-link dropuser" href="admin_index.php?url=user_show_zoo.php">
 	                   <span data-feather="chevron-right"></span>รายการสวนสัตว์
 	                </a>
+	                <a class="nav-link dropuser" href="admin_index.php?url=user_show_submenu.php">
+	                   <span data-feather="chevron-right"></span>รายการเมนูย่อย
+	                </a>
+	                <a class="nav-link dropuser" href="admin_index.php?url=user_show_mainmenu.php">
+	                   <span data-feather="chevron-right"></span>รายการเมนูหลัก
+	                </a>
 	                <a class="nav-link dropuser" href="admin_index.php?url=user_log_user.php">
 	                   <span data-feather="chevron-right"></span>Log-การใช้งาน
 	                </a>
