@@ -68,7 +68,7 @@
 			$grid->pr = 'eventconfer_id';
 			$grid->header = array('<b><center>เวลาการจองห้องประชุม</center></b>','<b><center>ผู้ขอใช้ห้องประชุม</center></b>', '<b><center>ประเภทเรื่อง</center></b>','<b><center>เรื่อง</center></b>','<b><center>ประธานในที่ประชุม</center></b>','<b><center>เวลาเริ่มประชุม</center></b>','<b><center>เวลาสิ้นสุดการประชุม</center></b>','<b><center>สังกัด</center></b>','<b><center>#</center></b>');
 			$grid->width = array('10%','10%','20%','10%','10%','10%','14%','5%');
-			$grid->edit = 'admin_index.php?url=admin_cf_index.php&url2=cf_status_online.php';
+			$grid->edit = 'admin_index.php?url=cf_status_online.php';
 			$grid->name = 'table';
 			$grid->edittxt ='สถานะ';
 			$grid->renderFromDB($columns,$rs);
@@ -84,7 +84,7 @@
 			$grid->pr = 'eventconfer_id';
 			$grid->header = array('<b><center>เวลาการจองห้องประชุม</center></b>','<b><center>ผู้ขอใช้ห้องประชุม</center></b>', '<b><center>ประเภทเรื่อง</center></b>','<b><center>เรื่อง</center></b>','<b><center>ประธานในที่ประชุม</center></b>','<b><center>เวลาเริ่มประชุม</center></b>','<b><center>เวลาสิ้นสุดการประชุม</center></b>','<b><center>สังกัด</center></b>','<b><center>#</center></b>');
 			$grid->width = array('10%','10%','20%','10%','10%','10%','14%','5%');
-			$grid->edit = 'admin_index.php?url=admin_cf_index.php&url2=cf_status_online.php';
+			$grid->edit = 'admin_index.php?url=cf_status_online.php';
 			$grid->name = 'table2';
 			$grid->edittxt ='สถานะ';
 			$grid->renderFromDB($columns2,$rs2);
@@ -100,7 +100,7 @@
 			$grid->pr = 'eventconfer_id';
 			$grid->header = array('<b><center>เวลาการจองห้องประชุม</center></b>','<b><center>ผู้ขอใช้ห้องประชุม</center></b>', '<b><center>ประเภทเรื่อง</center></b>','<b><center>เรื่อง</center></b>','<b><center>ประธานในที่ประชุม</center></b>','<b><center>เวลาเริ่มประชุม</center></b>','<b><center>เวลาสิ้นสุดการประชุม</center></b>','<b><center>สังกัด</center></b>','<b><center>#</center></b>');
 			$grid->width = array('10%','10%','20%','10%','10%','10%','14%','5%');
-			$grid->edit = 'admin_index.php?url=admin_cf_index.php&url2=cf_status_online.php';
+			$grid->edit = 'admin_index.php?url=cf_status_online.php';
 			$grid->name = 'table3';
 			$grid->edittxt ='สถานะ';
 			$grid->renderFromDB($columns3,$rs3);
@@ -115,7 +115,7 @@
 			$grid->pr = 'eventconfer_id';
 			$grid->header = array('<b><center>เวลาการจองห้องประชุม</center></b>','<b><center>ผู้ขอใช้ห้องประชุม</center></b>', '<b><center>ประเภทเรื่อง</center></b>','<b><center>เรื่อง</center></b>','<b><center>ประธานในที่ประชุม</center></b>','<b><center>เวลาเริ่มประชุม</center></b>','<b><center>เวลาสิ้นสุดการประชุม</center></b>','<b><center>สังกัด</center></b>','<b><center>#</center></b>');
 			$grid->width = array('10%','10%','20%','10%','10%','10%','14%','5%');
-			$grid->edit = 'admin_index.php?url=admin_cf_index.php&url2=cf_status.php';
+			$grid->edit = 'admin_index.php?url=cf_status.php';
 			$grid->name = 'table3';
 			$grid->edittxt ='สถานะ';
 			$grid->renderFromDB($columns,$rs);

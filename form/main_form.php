@@ -365,10 +365,10 @@ class labeladdday{
 // 		return $html;
 // 		}
 
-	function selectFromTBinDB2($table,$table2,$value,$label,$label2,$type,$id,$zoo,$idzoo,$sysallow,$idsysallow,$result){
+	function selectFromTBinDB2($table,$table2,$value,$label,$label2,$type,$id,$zoo,$idzoo,$sysallow,$idsysallow,$user,$iduser,$result){
 		include_once 'database/db_tools.php';
 		$db = new db_tools();
-		$rs = $db->findbyPK23($table,$table2,$type,$id,$zoo,$idzoo,$sysallow,$idsysallow)->execute();
+		$rs = $db->findbyPK24($table,$table2,$type,$id,$zoo,$idzoo,$user,$iduser,$sysallow,$idsysallow)->execute();
 		$html = "<select class='form-control css-require' name='{$this->name}' id='{$this->idtf}'>
 			<option value=''>
 			-----{$this->lists}-----
