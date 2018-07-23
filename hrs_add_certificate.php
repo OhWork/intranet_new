@@ -18,13 +18,13 @@
  ?>
  <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" style="padding-top:8px;">
 	<div class="row">
-		<div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2"></div>
-		<div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8">
+		<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1"></div>
+		<div class="col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10">
 			<div class="row">
 				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 					<h4>หนังสือรับรอง</h4>
 				</div>
-				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-2">
 					<div class="row">
 						<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
 							<?php echo $lbsend; ?>
@@ -34,7 +34,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-2">
 					<div class="row">
 						<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
 							<?php echo $lbname; ?>
@@ -44,7 +44,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-2">
 					<div class="row">
 						<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
 							<?php echo $lbposition; ?>
@@ -54,7 +54,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-2">
 					<div class="row">
 						<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
 							<?php echo $lbdevision; ?>
@@ -64,16 +64,30 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-2">
 					<div class="row">
 						<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
 							<?php echo $lbdatework; ?>
 						</div>
 						<div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8">
+							<div class="row">
+								<div class="date-form dayinbox col-md-6" style="float: left;">
+									<div class="form-horizontal">
+										<div class="control-group">
+											<div class="controls">
+												<div class="input-group">
+													<?php echo $txttime;?>
+												</div>
+											</div>
+										</div>
+								   </div>
+								</div>
+								<div class='col-md-6'style="float: left;"></div>
+							</div>
 						</div>
 					</div>
 				</div>
-				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-2">
 					<div class="row">
 						<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
 							<?php echo $lbsalary; ?>
@@ -115,8 +129,8 @@
 				</div>
 				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 					<div class="row">
-						<label class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
-							<input type="radio" name="hrhos_familytype"  id="parent4" value="4"> รับรองการคำ้ประกันการกู้เงินจากสถาบันการเงิน
+						<label class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4" style="padding-right:0px;">
+							<input type="radio" name="hrhos_familytype"  id="parent4" value="4"> รับรองการค้ำประกันการกู้เงินจากสถาบันการเงิน
 						</label>
 						<label class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8">
 						</label>
@@ -124,15 +138,15 @@
 				</div>
 				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 					<div class="row">
-						<label class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
-							<input type="radio" name="hrhos_familytype" id="parent5" value="5"> รับรองการคำ้ประกันการเข้าทำงาน ของ
+						<label class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
+							<input type="radio" name="hrhos_familytype" id="parent5" value="5"> รับรองการค้ำประกันการเข้าทำงาน ของ
 						</label>
-						<label class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+						<label class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
 							<?php echo $txtsubname;?>
 						</label>
-						<label class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3"> ซึ่งเกี่ยวข้องกับข้าพเจ้าโดยเป็น
+						<label class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2" style="padding-left:0;padding-right:0;"> ซึ่งเกี่ยวข้องกับข้าพเจ้าโดยเป็น
 						</label>
-						<label class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+						<label class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2">
 							<?php echo $txtsubname;?>
 						</label>
 					</div>
@@ -158,7 +172,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2"></div>
+		<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1"></div>
 	</div>
 </div>
 <script>
