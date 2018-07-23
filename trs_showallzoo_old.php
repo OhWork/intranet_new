@@ -66,9 +66,10 @@
 	$buttonprintpdf = new buttonok('ค้นหา','','btn btn-default','');
 
      ?>
+	<div class='col-10' style="margin-top:16px;">
         <div class='row'>
 			    <div class='col-md-12 printdisplaynone' style="float: left;">
-				    <h1>รายงานจำนวนผู้เข้าชมของสวนสัตว์แบบเก่า</h1>
+				    <h4>รายงานจำนวนผู้เข้าชมของสวนสัตว์แบบเก่า</h4>
 				</div>
 					<?php echo $form->open('form_reg','myform','','','');
 					?>
@@ -510,6 +511,7 @@
 				</div>
             </div>
 		</div>
+	</div>
 <script>
    $.fn.datepicker.dates['th'] = {
                                 days: ["อาทิตย์", "จันทร์", "อังคาร", "พุธ", "พฤหัส", "ศุกร์", "เสาร์", "อาทิตย์"],
