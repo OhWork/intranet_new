@@ -56,4 +56,29 @@
     </script>
 </body>
 </html>
+   <script>
+    $(function() {
+        // this will get the full URL at the address bar
+        var url = window.location.href;
 
+/*
+        console.log(url);
+        console.log('----------------------');
+*/
+
+
+        // passes on every "a" tag
+        $("a").each(function() {
+// 	       	console.log(this.href);
+            // checks if its the same on the address bar
+            if (url == (this.href)) {
+	            console.log(1234);
+                $(this).addClass("active");
+                //for making parent of submenu active
+               //$(this).closest("li").parent().parent().addClass("active");
+               $(this).prev().attr("aria-expanded", true);
+               console.log($(this).prev());
+            }
+        });
+    });
+</script>
