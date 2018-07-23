@@ -109,7 +109,7 @@
     ?>
   </div>
 <?php
-    echo $row."<div class='col-md-4 text-center font-weight-bold m-3'>".$lbadmin.$rowend."<div class='col m-3'>".$selectadmin->selectFromTBinDB2('user','systemallow','user_id','user_name','user_last','systemallow_systemallow_id','systemallow_id','subzoo_zoo_zoo_id',$zoo,'systemallow_service','1',$r['problem_adminfix']).$rowend.$rowend;
+    echo $row."<div class='col-md-4 text-center font-weight-bold m-3'>".$lbadmin.$rowend."<div class='col m-3'>".$selectadmin->selectFromTBinDB2('user','systemallow','user_id','user_name','user_last','systemallow_systemallow_id','systemallow_id','subzoo_zoo_zoo_id',$zoo,'user_enable','1','systemallow_service','1',$r['problem_adminfix']).$rowend.$rowend;
     echo "<input type='hidden' name='log_user' value='$log_user'/>";
     echo "<input type='hidden' name='problem_id' value='$_GET[id]'/>";
     echo $row."<div class='col mt-5 ml-5 mr-5'>".$button.$rowend.$rowend;

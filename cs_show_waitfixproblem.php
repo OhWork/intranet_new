@@ -94,7 +94,7 @@
 			$grid->width = array('15%','10%','20%','20%','15%','5%','5%');
  			$grid->view = '#';
  			$grid->viewtxt ='รายละเอียด';
- 			$grid->edit = 'admin_index.php?url=admin_cs_index.php&url2=cs_updateproblem.php';
+ 			$grid->edit = 'admin_index.php?url=cs_updateproblem.php';
  			$grid->edittxt = 'อัพเดทสถานะ';
  			$grid->name = 'table';
 			$grid->changestatus = 'btn btn-warning';
@@ -118,7 +118,7 @@
 			$grid->width = array('15%','10%','20%','20%','15%','5%','5%');
  			$grid->view = '#';
  			$grid->viewtxt ='รายละเอียด';
- 			$grid->edit = 'admin_index.php?url=admin_cs_index.php&url2=cs_updateproblem.php';
+ 			$grid->edit = 'admin_index.php?url=cs_updateproblem.php';
  			$grid->edittxt = 'อัพเดทสถานะ';
  			$grid->name = 'table';
 			$grid->changestatus = 'btn btn-warning';
@@ -142,7 +142,7 @@
 			$grid->width = array('15%','10%','20%','20%','15%','5%','5%');
  			$grid->view = '#';
  			$grid->viewtxt ='รายละเอียด';
- 			$grid->edit = 'admin_index.php?url=admin_cs_index.php&url2=cs_updateproblem.php';
+ 			$grid->edit = 'admin_index.php?url=cs_updateproblem.php';
  			$grid->edittxt = 'อัพเดทสถานะ';
  			$grid->name = 'table';
 			$grid->changestatus = 'btn btn-warning';
@@ -165,7 +165,7 @@
 			$grid->width = array('15%','10%','20%','20%','15%','5%','5%');
  			$grid->view = '#';
  			$grid->viewtxt ='รายละเอียด';
- 			$grid->edit = 'admin_index.php?url=admin_cs_index.php&url2=cs_updateproblem.php';
+ 			$grid->edit = 'admin_index.php?url=cs_updateproblem.php';
  			$grid->edittxt = 'อัพเดทสถานะ';
  			$grid->name = 'table';
 			$grid->changestatus = 'btn btn-warning';
@@ -188,7 +188,7 @@
 			$grid->width = array('15%','10%','20%','20%','15%','5%','5%');
  			$grid->view = '#';
  			$grid->viewtxt ='รายละเอียด';
- 			$grid->edit = 'admin_index.php?url=admin_cs_index.php&url2=cs_updateproblem.php';
+ 			$grid->edit = 'admin_index.php?url=cs_updateproblem.php';
  			$grid->edittxt = 'อัพเดทสถานะ';
  			$grid->name = 'table';
 			$grid->changestatus = 'btn btn-warning';
@@ -211,7 +211,7 @@
 			$grid->width = array('15%','10%','20%','20%','15%','5%','5%');
  			$grid->view = '#';
  			$grid->viewtxt ='รายละเอียด';
- 			$grid->edit = 'admin_index.php?url=admin_cs_index.php&url2=cs_updateproblem.php';
+ 			$grid->edit = 'admin_index.php?url=cs_updateproblem.php';
  			$grid->edittxt = 'อัพเดทสถานะ';
  			$grid->name = 'table';
 			$grid->changestatus = 'btn btn-warning';
@@ -234,7 +234,7 @@
 			$grid->width = array('15%','10%','20%','20%','15%','5%','5%');
  			$grid->view = '#';
  			$grid->viewtxt ='รายละเอียด';
- 			$grid->edit = 'admin_index.php?url=admin_cs_index.php&url2=cs_updateproblem.php';
+ 			$grid->edit = 'admin_index.php?url=cs_updateproblem.php';
  			$grid->edittxt = 'อัพเดทสถานะ';
  			$grid->name = 'table';
 			$grid->changestatus = 'btn btn-warning';
@@ -257,7 +257,7 @@
 			$grid->width = array('15%','10%','20%','20%','15%','5%','5%');
  			$grid->view = '#';
  			$grid->viewtxt ='รายละเอียด';
- 			$grid->edit = 'admin_index.php?url=admin_cs_index.php&url2=cs_updateproblem.php';
+ 			$grid->edit = 'admin_index.php?url=cs_updateproblem.php';
  			$grid->edittxt = 'อัพเดทสถานะ';
  			$grid->name = 'table';
 			$grid->changestatus = 'btn btn-warning';
