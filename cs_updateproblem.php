@@ -56,6 +56,7 @@
 		  $txtserialNo->value = $r['problem_serial'];
 		  $txtplace->value = $r['problem_place'];
 		  $txtorder->value = $r['problem_dateorder'];
+		  }
 ?>
 <div class="col-10" style="margin-top:16px;">
 	<div class="row">
@@ -91,7 +92,7 @@
 								<div class='col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8'>ยังไม่ลงทะเบียน</div>
 							</div>
 						</div>
-<?php					
+<?php
 		}else{
 ?>
 						<div class="col-12">
@@ -222,7 +223,7 @@
 								<div class='col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8'><?php echo $selectadmin->selectFromTBinDB2('user','systemallow','user_id','user_name','user_last','systemallow_systemallow_id','systemallow_id','subzoo_zoo_zoo_id',$zoo,'user_enable','1','systemallow_service','1',$r['problem_adminfix']); ?></div>
 							</div>
 						</div>
-<?php    
+<?php
 	echo "<input type='hidden' name='log_user' value='$log_user'/>";
     echo "<input type='hidden' name='problem_id' value='$_GET[id]'/>";
 ?>
