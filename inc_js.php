@@ -41,3 +41,4 @@
 <script src="jquery/select2.min.js"></script>
 <script src="jquery/feather-icon/feather.min.js"></script>
 <script src="jquery/util.js"></script>
+<!-- <script src="jquery/jquery.cookie.js"></script> -->
