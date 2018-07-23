@@ -14,7 +14,7 @@
     $year = date("Y")+543;
     $md = date("m-d");
     $time = date("H:i");
-    $id = $_GET['id'];
+    @$id = $_GET['id'];
     $txttime->value = $year."-".$md." ".$time;
     $txtcall = new textfield('problem_tel','','form-control','','');
     $txtposition = new textfield('problem_position','problem_position','form-control','','');

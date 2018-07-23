@@ -14,17 +14,19 @@
     $lbprovince = new label('จังหวัด');
     $lbdatestart = new label('ตั้งแต่วันที่');
     $lbdateend = new label('ถึงวันที่');
-    $lbtypetools = new label('ชนิดของอุปกรณ์');
     $lbhospital = new label('รับการรักษาจากสถานพยาบาล');
-    $txtname = new textfield('','hrhos_name','form-control','','');
-    $txtsubname = new textfield('','hrhos_subname','form-control ','','');
+    $txtname = new textfield('hrhos_name','','form-control','','');
+    $txtsubname = new textfield('hrhos_subname','','form-control ','','');
 //     $txtfather = new textfield('','father','form-control ','','');
 //     $txtmather = new textfield('','mather','form-control ','','');
 //     $txtchild = new textfield('','child','form-control ','','');
-    $txthospital = new textfield('','hrhos_hosname','form-control','','');
-    $txtprovince = new textfield('','hrnos_province','form-control','','');
+    $txthospital = new textfield('hrhos_hosname','','form-control','','');
+    $txtprovince = new textfield('hrnos_province','','form-control','','');
     $txtdatestart = new textfieldcalendarreadonly('hrhos_datestart','datetimepicker1','','form-control','input-group-addon','datetimepicker1');
-    $txtdateend = new textfieldcalendarreadonly('hrhos_dateend','datetimepicker2','','form-control','input-group-addon','datetimepicker1');
+    $txtdateend = new textfieldcalendarreadonly('hrhos_dateend','datetimepicker2','','form-control','input-group-addon','datetimepicker2');
+    $selectdevision = new SelectFromDB();
+    $selectdevision->name = 'zoo_zoo_id';
+    $selectdevision->lists = 'โปรดระบุ';
     //$id = $_GET['id'];
     $button = new buttonok("ส่งแบบฟอร์ม","","btn btn-success btn-lg btn-block bt3success col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","");
     echo $form->open("","","col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10","hrs_insert_hospital.php","");
@@ -63,7 +65,7 @@
 							<?php echo $lbdevision; ?>
 						</div>
 						<div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8">
-							<?php echo $txtname; ?>
+							<?php echo $selectdevision->selectFromTBinDB('zoo','zoo_id','zoo_name','zoo_per_hrs','1',''); ?>
 						</div>
 					</div>
 				</div>
