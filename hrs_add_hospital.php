@@ -73,7 +73,7 @@
 							<input type="radio" name="hrhos_familytype" id="parent1" value="1"> ข้าพเจ้า
 						</label>
 						<label class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8">
-							
+
 						</label>
 					</div>
 				</div>
@@ -176,53 +176,53 @@
 		</div>
 		<div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2"></div>
 	</div>
-</div>					
+</div>
 <?php
 	echo $form->close();
 ?>
   <script>
   		$(document).ready(function(){
   		$('#parent1').prop('checked',true);
-  		$('#family').attr("disabled", true);
-  		$('#father').attr("disabled", true);
-		$('#mather').attr("disabled", true);
-		$('#child').attr("disabled", true);
-		$('input[name=parent]').on("change",function(e) {
+  		$('[id=hrhos_subname]').slice(0).prop("disabled", true);
+		$('input[name=hrhos_familytype]').on("change",function(e) {
 		var valchange = $(this).val();
 			if(valchange == 1){
+/*
 				$('#me').attr("disabled", false);
 				$('#family').attr("disabled", true);
 				$('#father').attr("disabled", true);
 				$('#mather').attr("disabled", true);
 				$('#child').attr("disabled", true);
+*/
 			}
 			else if(valchange == 2) {
-				$('#family').attr("disabled", false);
-				$('#father').attr("disabled", true);
-				$('#mather').attr("disabled", true);
-				$('#child').attr("disabled", true);
+				$('[id=hrhos_subname]').slice(0,1).prop("disabled", false);
+				$('[id=hrhos_subname]').slice(1,2).prop("disabled", true);
+				$('[id=hrhos_subname]').slice(2,3).prop("disabled", true);
+				$('[id=hrhos_subname]').slice(3,4).prop("disabled", true);
+
 			}
 			else if(valchange == 3) {
-				$('#father').attr("disabled", false);
-				$('#family').attr("disabled", true);
-				$('#mather').attr("disabled", true);
-				$('#child').attr("disabled", true);
+				$('[id=hrhos_subname]').slice(1,2).prop("disabled", false);
+				$('[id=hrhos_subname]').slice(0,1).prop("disabled", true);
+				$('[id=hrhos_subname]').slice(2,3).prop("disabled", true);
+				$('[id=hrhos_subname]').slice(3,4).prop("disabled", true);
 			}
 			else if(valchange == 4) {
-				$('#mather').attr("disabled", false);
-				$('#family').attr("disabled", true);
-				$('#father').attr("disabled", true);
-				$('#child').attr("disabled", true);
+				$('[id=hrhos_subname]').slice(2,3).prop("disabled", false);
+				$('[id=hrhos_subname]').slice(0,1).prop("disabled", true);
+				$('[id=hrhos_subname]').slice(1,2).prop("disabled", true);
+				$('[id=hrhos_subname]').slice(3,4).prop("disabled", true);
 			}
 			else if(valchange == 5) {
-				$('#child').attr("disabled", false);
-				$('#family').attr("disabled", true);
-				$('#father').attr("disabled", true);
-				$('#mather').attr("disabled", true);
+				$('[id=hrhos_subname]').slice(3,4).prop("disabled", false);
+				$('[id=hrhos_subname]').slice(0,1).prop("disabled", true);
+				$('[id=hrhos_subname]').slice(1,2).prop("disabled", true);
+				$('[id=hrhos_subname]').slice(2,3).prop("disabled", true);
 			}
 		});
 	});
-	
+
 	$( document ).ready( function () {
 		$('#datetimepicker1').datetimepicker({
 	        format:'YYYY-MM-DD',
