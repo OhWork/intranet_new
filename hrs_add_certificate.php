@@ -7,13 +7,11 @@
     $lbdevision = new label('สังกัด');
     $lbdatework = new label('บรรจุเป็นพนักงานเมื่อวันที่');
     $lbsalary = new label('เงินเดือนปัจจุบัน');
-    $lbtypetools = new label('ชนิดของอุปกรณ์');
-    $txtwork = new textfield('problem_work','problem_work','form-control','','');
+    $txtsend = new textfield('problem_work','problem_work','form-control','','');
+    $txtname = new textfield('problem_work','problem_work','form-control','','');
     $txttime = new textfieldcalendarreadonly('problem_date','datetimepicker1','','form-control','input-group-addon btn calen','datetimepicker1');
     $txtcall = new textfield('problem_tel','','form-control','','');
     $txtposition = new textfield('problem_position','problem_position','form-control','','');
-    $txtdetail = new textarea('problem_detail','aprob','','');
-    $txtdetail->rows = 5;
     $txtsubname = new textfield('','hrhos_subname','form-control ','','');
     $button = new buttonok("ส่งแบบฟอร์ม","","btn btn-success btn-lg btn-block bt3success col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","");
     echo $form->open("","","col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10","","");
@@ -32,6 +30,7 @@
 							<?php echo $lbsend; ?>
 						</div>
 						<div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8">
+    						<?php echo $txtsend; ?>
 						</div>
 					</div>
 				</div>
@@ -41,6 +40,7 @@
 							<?php echo $lbname; ?>
 						</div>
 						<div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8">
+    						<?php echo $txtsend; ?>
 						</div>
 					</div>
 				</div>
@@ -50,6 +50,7 @@
 							<?php echo $lbposition; ?>
 						</div>
 						<div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8">
+    						<?php echo $txtsend; ?>
 						</div>
 					</div>
 				</div>
@@ -59,6 +60,7 @@
 							<?php echo $lbdevision; ?>
 						</div>
 						<div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8">
+    						<?php echo $txtsend; ?>
 						</div>
 					</div>
 				</div>
