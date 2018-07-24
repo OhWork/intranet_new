@@ -11,28 +11,28 @@
 	                <ul class="sub-menu collapse" id="trsreport">
 	                   <?php
                                       if($user_zoo == 7 || $user_zoo == 10 || $user_zoo == 11){?>
-                                        <a class="dropdown-item" href="admin_index.php?url=trs_showtotalzoo.php&zoo=11"><span data-feather="chevron-right"></span>สวนสัตว์ดุสิต</a>
+                                        <a class="nav-link" href="admin_index.php?url=trs_showtotalzoo.php&zoo=11"><span data-feather="chevron-right"></span>สวนสัตว์ดุสิต</a>
                                          <?php }
                                       if($user_zoo == 7 || $user_zoo == 10 || $user_zoo == 12){?>
-                                        <a class="dropdown-item" href="admin_index.php?url=trs_showtotalzoo.php&zoo=12"><span data-feather="chevron-right"></span>สวนสัตว์เปิดเขาเขียว</a>
+                                        <a class="nav-link" href="admin_index.php?url=trs_showtotalzoo.php&zoo=12"><span data-feather="chevron-right"></span>สวนสัตว์เปิดเขาเขียว</a>
                                          <?php }
                                       if($user_zoo == 7 || $user_zoo == 10 || $user_zoo == 13){?>
-                                        <a class="dropdown-item" href="admin_index.php?url=trs_showtotalzoo.php&zoo=13"><span data-feather="chevron-right"></span>สวนสัตว์เชียงใหม่</a>
+                                        <a class="nav-link" href="admin_index.php?url=trs_showtotalzoo.php&zoo=13"><span data-feather="chevron-right"></span>สวนสัตว์เชียงใหม่</a>
                                          <?php }
                                       if($user_zoo == 7 || $user_zoo == 10 || $user_zoo == 14){?>
-                                        <a class="dropdown-item" href="admin_index.php?url=trs_showtotalzoo.php&zoo=14"><span data-feather="chevron-right"></span>สวนสัตว์นครราชสีมา</a>
+                                        <a class="nav-link" href="admin_index.php?url=trs_showtotalzoo.php&zoo=14"><span data-feather="chevron-right"></span>สวนสัตว์นครราชสีมา</a>
                                          <?php }
                                        if($user_zoo == 7 || $user_zoo == 10 || $user_zoo == 15){?>
-                                        <a class="dropdown-item" href="admin_index.php?url=trs_showtotalzoo.php&zoo=15"><span data-feather="chevron-right"></span>สวนสัตว์สงขลา</a>
+                                        <a class="nav-link" href="admin_index.php?url=trs_showtotalzoo.php&zoo=15"><span data-feather="chevron-right"></span>สวนสัตว์สงขลา</a>
                                          <?php }
                                       if($user_zoo == 7 || $user_zoo == 10 || $user_zoo == 16){?>
-                                        <a class="dropdown-item" href="admin_index.php?url=trs_showtotalzoo.php&zoo=16"><span data-feather="chevron-right"></span>สวนสัตว์อุบลราชธานี</a>
+                                        <a class="nav-link" href="admin_index.php?url=trs_showtotalzoo.php&zoo=16"><span data-feather="chevron-right"></span>สวนสัตว์อุบลราชธานี</a>
                                          <?php }
                                       if($user_zoo == 7 || $user_zoo == 10 || $user_zoo == 17){?>
-                                        <a class="dropdown-item" href="admin_index.php?url=trs_showtotalzoo.php&zoo=17"><span data-feather="chevron-right"></span>สวนสัตว์ขอนแก่น</a>
+                                        <a class="nav-link" href="admin_index.php?url=trs_showtotalzoo.php&zoo=17"><span data-feather="chevron-right"></span>สวนสัตว์ขอนแก่น</a>
                                          <?php }
                                       if($user_zoo == 7 || $user_zoo == 10 || $user_zoo == 18){?>
-                                        <a class="dropdown-item" href="admin_index.php?url=trs_showtotalzoo.php&zoo=?"><span data-feather="chevron-right"></span>โครงการคชอาณาจักร</a>
+                                        <a class="nav-link" href="admin_index.php?url=trs_showtotalzoo.php&zoo=?"><span data-feather="chevron-right"></span>โครงการคชอาณาจักร</a>
                                         <?php }?>
 	                </ul>
 	               </div>
@@ -42,28 +42,28 @@
 	                <ul class="sub-menu collapse" id="trsreportold">
 	                    <?php
                                       if($user_zoo == 7 || $user_zoo == 10 || $user_zoo == 11){?>
-                                        <a class="dropdown-item" href="admin_index.php?url=trs_showtotalzoo_old.php&zoo=11"><span data-feather="chevron-right"></span>สวนสัตว์ดุสิต</a>
+                                        <a class="nav-link" href="admin_index.php?url=trs_showtotalzoo_old.php&zoo=11"><span data-feather="chevron-right"></span>สวนสัตว์ดุสิต</a>
                                          <?php }
                                       if($user_zoo == 7 || $user_zoo == 10 || $user_zoo == 12){?>
-                                        <a class="dropdown-item" href="admin_index.php?url=trs_showtotalzoo_old.php&zoo=12"><span data-feather="chevron-right"></span>สวนสัตว์เปิดเขาเขียว</a>
+                                        <a class="nav-link" href="admin_index.php?url=trs_showtotalzoo_old.php&zoo=12"><span data-feather="chevron-right"></span>สวนสัตว์เปิดเขาเขียว</a>
                                          <?php }
                                       if($user_zoo == 7 || $user_zoo == 10 || $user_zoo == 13){?>
-                                        <a class="dropdown-item" href="admin_index.php?url=trs_showtotalzoo_old.php&zoo=13"><span data-feather="chevron-right"></span>สวนสัตว์เชียงใหม่</a>
+                                        <a class="nav-link" href="admin_index.php?url=trs_showtotalzoo_old.php&zoo=13"><span data-feather="chevron-right"></span>สวนสัตว์เชียงใหม่</a>
                                          <?php }
                                       if($user_zoo == 7 || $user_zoo == 10 || $user_zoo == 14){?>
-                                        <a class="dropdown-item" href="admin_index.php?url=trs_showtotalzoo_old.php&zoo=14"><span data-feather="chevron-right"></span>สวนสัตว์นครราชสีมา</a>
+                                        <a class="nav-link" href="admin_index.php?url=trs_showtotalzoo_old.php&zoo=14"><span data-feather="chevron-right"></span>สวนสัตว์นครราชสีมา</a>
                                          <?php }
                                        if($user_zoo == 7 || $user_zoo == 10 || $user_zoo == 15){?>
-                                        <a class="dropdown-item" href="admin_index.php?url=trs_showtotalzoo_old.php&zoo=15"><span data-feather="chevron-right"></span>สวนสัตว์สงขลา</a>
+                                        <a class="nav-link" href="admin_index.php?url=trs_showtotalzoo_old.php&zoo=15"><span data-feather="chevron-right"></span>สวนสัตว์สงขลา</a>
                                          <?php }
                                       if($user_zoo == 7 || $user_zoo == 10 || $user_zoo == 16){?>
-                                        <a class="dropdown-item" href="admin_index.php?url=trs_showtotalzoo_old.php&zoo=16"><span data-feather="chevron-right"></span>สวนสัตว์อุบลราชธานี</a>
+                                        <a class="nav-link" href="admin_index.php?url=trs_showtotalzoo_old.php&zoo=16"><span data-feather="chevron-right"></span>สวนสัตว์อุบลราชธานี</a>
                                          <?php }
                                       if($user_zoo == 7 || $user_zoo == 10 || $user_zoo == 17){?>
-                                        <a class="dropdown-item" href="admin_index.php?url=trs_showtotalzoo_old.php&zoo=17"><span data-feather="chevron-right"></span>สวนสัตว์ขอนแก่น</a>
+                                        <a class="nav-link" href="admin_index.php?url=trs_showtotalzoo_old.php&zoo=17"><span data-feather="chevron-right"></span>สวนสัตว์ขอนแก่น</a>
                                          <?php }
                                       if($user_zoo == 7 || $user_zoo == 10 || $user_zoo == 18){?>
-                                        <a class="dropdown-item" href="admin_index.php?url=trs_showtotalzoo_old.php&zoo=?"><span data-feather="chevron-right"></span>โครงการคชอาณาจักร</a>
+                                        <a class="nav-link" href="admin_index.php?url=trs_showtotalzoo_old.php&zoo=?"><span data-feather="chevron-right"></span>โครงการคชอาณาจักร</a>
                                         <?php }?>
 	                </ul>
                 </ul>
