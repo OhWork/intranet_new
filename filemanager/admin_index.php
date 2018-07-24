@@ -27,7 +27,7 @@
         <link rel="stylesheet" href="../CSS/bootstrap.css">
         <!-- Custom styles for this template -->
         <link rel="stylesheet" href="../CSS/dashboard.css">
-        <link rel="stylesheet" href="../CSS/main.css">
+<!--         <link rel="stylesheet" href="../CSS/main.css"> -->
         <link rel="stylesheet" href="../CSS/print.css" media="print">
         <link rel="stylesheet" href="../CSS/font-awesome.css">
 		<script src="../jquery/feather-icon/feather.min.js"></script>

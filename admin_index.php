@@ -72,13 +72,13 @@
 // 	       	console.log(this.href);
             // checks if its the same on the address bar
             if (url == (this.href)) {
-	            console.log(1234);
+// 	            console.log(1234);
                 $(this).parents(0).addClass("show");
                 $(this).addClass("active");
                 //for making parent of submenu active
                //$(this).closest("li").parent().parent().addClass("active");
                $(this).parents(0).attr("aria-expanded", true);
-               console.log($(this).parents());
+//                console.log($(this).parents());
             }
         });
     });
