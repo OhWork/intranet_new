@@ -88,7 +88,7 @@
 				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" style="margin-top:8px;">
 					<div class="row">
 						<label class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
-							<input type="radio" name="hrhos_familytype" id="parent1" value="1"> รับรองเงินเดือน
+							<input type="radio" name="typectf_typectf" id="parent1" value="1"> รับรองเงินเดือน
 						</label>
 						<label class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8">
 
@@ -98,7 +98,7 @@
 				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" style="margin-top:8px;">
 					<div class="row">
 						<label class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
-							<input type="radio" name="hrhos_familytype" id="parent2" value="2"> รับรองการเป็นผู้ปฏิบัติงาน
+							<input type="radio" name="typectf_typectf" id="parent2" value="2"> รับรองการเป็นผู้ปฏิบัติงาน
 						</label>
 						<label class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8">
 
@@ -109,7 +109,7 @@
 				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 					<div class="row">
 						<label class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
-							<input type="radio" name="hrhos_familytype"  id="parent3" value="3"> รับรองเข้ารับการศึกษา (สถาบันการศึกษา)
+							<input type="radio" name="typectf_typectf"  id="parent3" value="3"> รับรองเข้ารับการศึกษา (สถาบันการศึกษา)
 						</label>
 						<label class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8">
 							<?php echo $txtsubname;?>
@@ -119,7 +119,7 @@
 				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 					<div class="row">
 						<label class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4" style="padding-right:0px;">
-							<input type="radio" name="hrhos_familytype"  id="parent4" value="4"> รับรองการค้ำประกันการกู้เงินจากสถาบันการเงิน
+							<input type="radio" name="typectf_typectf"  id="parent4" value="4"> รับรองการค้ำประกันการกู้เงินจากสถาบันการเงิน
 						</label>
 						<label class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8">
 						</label>
@@ -128,7 +128,7 @@
 				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 					<div class="row">
 						<label class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
-							<input type="radio" name="hrhos_familytype" id="parent5" value="5"> รับรองการค้ำประกันการเข้าทำงาน ของ
+							<input type="radio" name="typectf_typectf" id="parent5" value="5"> รับรองการค้ำประกันการเข้าทำงาน ของ
 						</label>
 						<label class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
 							<?php echo $txtsubname;?>
@@ -143,7 +143,7 @@
 				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 					<div class="row">
 						<label class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
-							<input type="radio" name="hrhos_familytype"  id="parent7" value="7"> ขอหนังสือรับรองพยาบาล
+							<input type="radio" name="typectf_typectf"  id="parent7" value="7"> ขอหนังสือรับรองพยาบาล
 						</label>
 						<label class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8">
 						</label>
@@ -152,7 +152,7 @@
 				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 					<div class="row">
 						<label class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
-							<input type="radio" name="hrhos_familytype"  id="parent6" value="6"> อื่นๆ
+							<input type="radio" name="typectf_typectf"  id="parent6" value="6"> อื่นๆ
 						</label>
 						<label class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8">
 						<?php echo $txtsubname;?>
