@@ -40,51 +40,35 @@
  ?>
  <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" style="padding-top:8px;">
 	<div class="row">
-		<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1"></div>
-		<div class="col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10">
+		<div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3"></div>
+		<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6" style="padding-top:16px;background-color:#ffffff;border:solid 1px #E0E0E0;border-radius:7px;">
 			<div class="row">
 				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 					<h4>หนังสือรับรอง</h4>
 				</div>
-				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-2">
-					<div class="row">
-						<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
-							<?php echo $lbrecipient; ?>
-						</div>
-						<div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8">
-    						<?php echo $txtrecipient; ?>
-						</div>
-					</div>
+				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-1">
+					<?php echo $lbrecipient; ?>
 				</div>
-				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-2">
-					<div class="row">
-						<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
-							<?php echo $lbname; ?>
-						</div>
-						<div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8">
-    						<?php echo $txtname; ?>
-						</div>
-					</div>
+				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+    				<?php echo $txtrecipient; ?>
 				</div>
-				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-2">
-					<div class="row">
-						<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
-							<?php echo $lbposition; ?>
-						</div>
-						<div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8">
-    						<?php echo $txtposition; ?>
-						</div>
-					</div>
+				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-1">
+					<?php echo $lbname; ?>
 				</div>
-				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-2">
-					<div class="row">
-						<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
-							<?php echo $lbdevision; ?>
-						</div>
-						<div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8">
-    						<?php echo $selectdevision->selectFromTBinDB('zoo','zoo_id','zoo_name','zoo_per_hrs','1',''); ?>
-						</div>
-					</div>
+				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+    				<?php echo $txtname; ?>
+				</div>
+				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-1">
+					<?php echo $lbposition; ?>
+				</div>
+				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+    				<?php echo $txtposition; ?>
+				</div>
+				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-1">
+					<?php echo $lbdevision; ?>
+				</div>
+				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+					<?php echo $selectdevision->selectFromTBinDB('zoo','zoo_id','zoo_name','zoo_per_hrs','1',''); ?>
 				</div>
 				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" style="margin-top:8px;">
 					<div class="row">
@@ -290,9 +274,11 @@
 				</div>
 			</div>
 		</div>
-		<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1"></div>
+		<div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3"></div>
 	</div>
 </div>
+</div>
+<?php echo $form->close();?>
 <script>
   		$(document).ready(function(){
   		$('#parent1').prop('checked',true);
