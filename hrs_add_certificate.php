@@ -143,19 +143,19 @@
 				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 					<div class="row">
 						<label class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
-							<input type="radio" name="hrhos_familytype"  id="parent6" value="6"> อื่นๆ
+							<input type="radio" name="hrhos_familytype"  id="parent7" value="7"> ขอหนังสือรับรองพยาบาล
 						</label>
 						<label class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8">
-						<?php echo $txtsubname;?>
 						</label>
 					</div>
 				</div>
 				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 					<div class="row">
 						<label class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
-							<input type="radio" name="hrhos_familytype"  id="parent7" value="7"> ขอหนังสือรับรองพยาบาล
+							<input type="radio" name="hrhos_familytype"  id="parent6" value="6"> อื่นๆ
 						</label>
 						<label class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8">
+						<?php echo $txtsubname;?>
 						</label>
 					</div>
 				</div>
