@@ -284,7 +284,7 @@
   		$('#parent1').prop('checked',true);
   		$('#hos').hide();
   		$('[id=hrhos_subname]').slice(0).prop("disabled", true);
-		$('input[name=hrhos_familytype]').on("change",function(e) {
+		$('input[name=typectf_typectf]').on("change",function(e) {
 		var valchange = $(this).val();
 		if(valchange == 1 || valchange == 2 || valchange == 3 || valchange == 4 || valchange == 5 || valchange == 6){
 			$('#cer').fadeIn("slow");;
@@ -327,6 +327,7 @@
 			}
 			}
 			else{
+				console.log(123);
 				$('#parent7').prop('checked',true);
 				$('#parent8').prop('checked',true);
 				$('#cer').hide();
