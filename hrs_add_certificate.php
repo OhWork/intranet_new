@@ -20,9 +20,9 @@
     $radioparent->name = 'parent';
     $radioparent->add('ข้าพเจ้า',1,'');
     $radioparent->add('คู่สมรส ชื่อ',2,'');
-    $radioparent->add('คู่บิดา ชื่อ',2,'');
-    $radioparent->add('คู่มารดา ชื่อ',2,'');
-    $radioparent->add('คู่บุตร ชื่อ',2,'');
+    $radioparent->add('คู่บิดา ชื่อ',3,'');
+    $radioparent->add('คู่มารดา ชื่อ',4,'');
+    $radioparent->add('คู่บุตร ชื่อ',5,'');
     $lbprovince = new label('จังหวัด');
     $lbdatestart = new label('ตั้งแต่วันที่');
     $lbdateend = new label('ถึงวันที่');
@@ -33,6 +33,7 @@
     $txtname = new textfield('hrhos_name','','form-control','','');
     $txthospital = new textfield('hrhos_hosname','','form-control','','');
     $txtprovince = new textfield('hrnos_province','','form-control','','');
+    $txtsalary = new textfield('hrnos_province','','form-control','','');
     $txtdatestart = new textfieldcalendarreadonly('hrhos_datestart','datetimepicker1','','form-control','input-group-addon','datetimepicker1');
     $button = new buttonok("ส่งแบบฟอร์ม","","btn btn-success btn-lg btn-block bt3success col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","");
     echo $form->open("","","col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10","","");
@@ -189,6 +190,7 @@
 							<?php echo $lbsalary; ?>
 						</div>
 						<div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8">
+    						<?php echo $txtsalary; ?>
 						</div>
 					</div>
 				</div>
