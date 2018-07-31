@@ -40,265 +40,243 @@
  ?>
  <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" style="padding-top:8px;">
 	<div class="row">
-		<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1"></div>
-		<div class="col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10">
+		<div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3"></div>
+		<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6" style="padding-top:16px;background-color:#ffffff;border:solid 1px #E0E0E0;border-radius:7px;">
 			<div class="row">
 				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 					<h4>หนังสือรับรอง</h4>
 				</div>
-				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-2">
-					<div class="row">
-						<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
-							<?php echo $lbrecipient; ?>
-						</div>
-						<div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8">
-    						<?php echo $txtrecipient; ?>
-						</div>
-					</div>
+				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-1">
+					<?php echo $lbrecipient; ?>
+				</div>
+				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+    				<?php echo $txtrecipient; ?>
+				</div>
+				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-1">
+					<?php echo $lbname; ?>
+				</div>
+				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+    				<?php echo $txtname; ?>
+				</div>
+				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-1">
+					<?php echo $lbposition; ?>
+				</div>
+				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+    				<?php echo $txtposition; ?>
+				</div>
+				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-1">
+					<?php echo $lbdevision; ?>
+				</div>
+				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+					<?php echo $selectdevision->selectFromTBinDB('zoo','zoo_id','zoo_name','zoo_per_hrs','1',''); ?>
 				</div>
 				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-2">
 					<div class="row">
-						<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
-							<?php echo $lbname; ?>
-						</div>
-						<div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8">
-    						<?php echo $txtname; ?>
-						</div>
-					</div>
-				</div>
-				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-2">
-					<div class="row">
-						<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
-							<?php echo $lbposition; ?>
-						</div>
-						<div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8">
-    						<?php echo $txtposition; ?>
-						</div>
-					</div>
-				</div>
-				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-2">
-					<div class="row">
-						<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
-							<?php echo $lbdevision; ?>
-						</div>
-						<div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8">
-    						<?php echo $selectdevision->selectFromTBinDB('zoo','zoo_id','zoo_name','zoo_per_hrs','1',''); ?>
-						</div>
-					</div>
-				</div>
-				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" style="margin-top:8px;">
-					<div class="row">
-						<label class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
+						<label class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 							<input type="radio" name="typectf_typectf" id="parent1" value="1"> รับรองเงินเดือน
 						</label>
-						<label class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8">
-
-						</label>
 					</div>
 				</div>
-				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" style="margin-top:8px;">
+				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 					<div class="row">
-						<label class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
+						<label class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 							<input type="radio" name="typectf_typectf" id="parent2" value="2"> รับรองการเป็นผู้ปฏิบัติงาน
 						</label>
-						<label class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8">
-
-						</label>
 					</div>
 				</div>
-
 				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 					<div class="row">
-						<label class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
+						<label class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 							<input type="radio" name="typectf_typectf"  id="parent3" value="3"> รับรองเข้ารับการศึกษา (สถาบันการศึกษา)
 						</label>
-						<label class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8">
+						<label class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 							<?php echo $txtsubname;?>
 						</label>
 					</div>
 				</div>
 				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 					<div class="row">
-						<label class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4" style="padding-right:0px;">
+						<label class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 							<input type="radio" name="typectf_typectf"  id="parent4" value="4"> รับรองการค้ำประกันการกู้เงินจากสถาบันการเงิน
 						</label>
-						<label class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8">
-						</label>
 					</div>
 				</div>
 				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 					<div class="row">
-						<label class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
+						<label class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 							<input type="radio" name="typectf_typectf" id="parent5" value="5"> รับรองการค้ำประกันการเข้าทำงาน ของ
 						</label>
-						<label class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
+						<label class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 							<?php echo $txtsubname;?>
 						</label>
-						<label class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2" style="padding-left:0;padding-right:0;"> ซึ่งเกี่ยวข้องกับข้าพเจ้าโดยเป็น
+						<label class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" style="padding-left:32px;"> ซึ่งเกี่ยวข้องกับข้าพเจ้าโดยเป็น
 						</label>
-						<label class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2">
+						<label class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 							<?php echo $txtsubname;?>
 						</label>
 					</div>
 				</div>
 				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 					<div class="row">
-						<label class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
+						<label class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 							<input type="radio" name="typectf_typectf"  id="parent7" value="7"> ขอหนังสือรับรองพยาบาล
 						</label>
-						<label class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8">
-						</label>
 					</div>
 				</div>
 				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 					<div class="row">
-						<label class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
+						<label class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 							<input type="radio" name="typectf_typectf"  id="parent6" value="6"> อื่นๆ
 						</label>
-						<label class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8">
-						<?php echo $txtsubname;?>
+						<label class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+							<?php echo $txtsubname;?>
 						</label>
 					</div>
 				</div>
 				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-2" id="cer">
-				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-2">
 					<div class="row">
-						<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
-							<?php echo $lbdatework; ?>
-						</div>
-						<div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8">
+						<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 							<div class="row">
-								<div class="date-form dayinbox col-md-6" style="float: left;">
-									<div class="form-horizontal">
-										<div class="control-group">
-											<div class="controls">
-												<div class="input-group">
-													<?php echo $txttime;?>
-												</div>
-											</div>
-										</div>
-								   </div>
+								<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
+									<?php echo $lbdatework; ?>
 								</div>
-								<div class='col-md-6'style="float: left;"></div>
+								<div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8">
+									<div class="row">
+										<div class="date-form dayinbox col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" style="float: left;">
+											<div class="form-horizontal">
+												<div class="control-group">
+													<div class="controls">
+														<div class="input-group">
+															<?php echo $txttime;?>
+														</div>
+													</div>
+												</div>
+										   </div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+							<div class="row">
+								<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+									<?php echo $lbsalary; ?>
+								</div>
+								<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+									<?php echo $txtsalary; ?>
+								</div>
 							</div>
 						</div>
 					</div>
-				</div>
-				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-2">
-					<div class="row">
-						<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
-							<?php echo $lbsalary; ?>
-						</div>
-						<div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8">
-    						<?php echo $txtsalary; ?>
-						</div>
-					</div>
-				</div>
 				</div>
 				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" style="margin-top:8px;" id="hos">
-				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" style="margin-top:8px;">
 					<div class="row">
-						<label class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
-							<input type="radio" name="hrhos_familytype2" id="parent8" value="8"> ข้าพเจ้า
-						</label>
-						<label class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8">
-
-						</label>
-					</div>
-				</div>
-				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-					<div class="row">
-						<label class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
-							<input type="radio" name="hrhos_familytype2"  id="parent9" value="9"> คู่สมรส
-						</label>
-						<label class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8">
-							<?php echo $txtsubname2;?>
-						</label>
-					</div>
-				</div>
-				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-					<div class="row">
-						<label class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
-							<input type="radio" name="hrhos_familytype2"  id="parent10" value="10"> บิดา
-						</label>
-						<label class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8">
-							<?php echo $txtsubname2;?>
-						</label>
-					</div>
-				</div>
-				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-					<div class="row">
-						<label class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
-							<input type="radio" name="hrhos_familytype2" id="parent11" value="11"> มารดา
-						</label>
-						<label class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8">
-							<?php echo $txtsubname2;?>
-						</label>
-					</div>
-				</div>
-				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-					<div class="row">
-						<label class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
-							<input type="radio" name="hrhos_familytype2" id="parent12" value="12"> บุตร
-						</label>
-						<label class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8">
-							<?php echo $txtsubname2; ?>
-						</label>
-					</div>
-				</div>
-				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-					<div class="row">
-						<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
-							<?php echo $lbhospital; ?>
+						<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" style="padding-top:8px;border-top:solid 1px #e0e0e0;">
+							ขอหนังสือรับรองพยาบาล
 						</div>
-						<div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8">
-							<?php echo $txthospital; ?>
-						</div>
-					</div>
-				</div>
-				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" style="margin-top:8px;">
-					<div class="row">
-						<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
-							<?php echo $lbprovince; ?>
-						</div>
-						<div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8">
-							<?php echo $txtprovince; ?>
-						</div>
-					</div>
-				</div>
-				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" style="margin-top:8px;">
-					<div class="row">
-						<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
-							<?php echo $lbdatestart; ?>
-						</div>
-						<div class="date-form dayinbox col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4 form-horizontal control-group controls">
-                            <div class="input-group">
-								<?php echo $txtdatestart; ?>
+						<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-2">
+							<div class="row">
+								<label class="ccol-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+									<input type="radio" name="hrhos_familytype2" id="parent8" value="8"> ข้าพเจ้า
+								</label>
 							</div>
 						</div>
-						<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4"></div>
+						<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+							<div class="row">
+								<label class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+									<input type="radio" name="hrhos_familytype2"  id="parent9" value="9"> คู่สมรส
+								</label>
+								<label class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+									<?php echo $txtsubname2;?>
+								</label>
+							</div>
+						</div>
+						<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+							<div class="row">
+								<label class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+									<input type="radio" name="hrhos_familytype2"  id="parent10" value="10"> บิดา
+								</label>
+								<label class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+									<?php echo $txtsubname2;?>
+								</label>
+							</div>
+						</div>
+						<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+							<div class="row">
+								<label class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+									<input type="radio" name="hrhos_familytype2" id="parent11" value="11"> มารดา
+								</label>
+								<label class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+									<?php echo $txtsubname2;?>
+								</label>
+							</div>
+						</div>
+						<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+							<div class="row">
+								<label class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+									<input type="radio" name="hrhos_familytype2" id="parent12" value="12"> บุตร
+								</label>
+								<label class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+									<?php echo $txtsubname2; ?>
+								</label>
+							</div>
+						</div>
+						<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+							<div class="row">
+								<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+									<?php echo $lbhospital; ?>
+								</div>
+								<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+									<?php echo $txthospital; ?>
+								</div>
+							</div>
+						</div>
+						<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-2">
+							<div class="row">
+								<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+									<?php echo $lbprovince; ?>
+								</div>
+								<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+									<?php echo $txtprovince; ?>
+								</div>
+							</div>
+						</div>
+						<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-2">
+							<div class="row">
+								<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
+									<?php echo $lbdatestart; ?>
+								</div>
+								<div class="date-form dayinbox col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8 form-horizontal control-group controls">
+									<div class="input-group">
+										<?php echo $txtdatestart; ?>
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
-				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" style="margin-top:8px;">
+				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-2" style="margin-bottom:16px;">
 					<div class="row">
 						<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4"></div>
-						<div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+						<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
 							<?php echo $button; ?>
 						</div>
-						<div class="col-xl-5 col-lg-5 col-md-5 col-sm-5 col-5"></div>
+						<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4"></div>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1"></div>
+		<div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3"></div>
 	</div>
 </div>
+</div>
+<?php echo $form->close();?>
 <script>
   		$(document).ready(function(){
   		$('#parent1').prop('checked',true);
   		$('#hos').hide();
   		$('[id=hrhos_subname]').slice(0).prop("disabled", true);
-		$('input[name=hrhos_familytype]').on("change",function(e) {
+		$('input[name=typectf_typectf]').on("change",function(e) {
 		var valchange = $(this).val();
 		if(valchange == 1 || valchange == 2 || valchange == 3 || valchange == 4 || valchange == 5 || valchange == 6){
 			$('#cer').fadeIn("slow");;
@@ -341,6 +319,7 @@
 			}
 			}
 			else{
+				console.log(123);
 				$('#parent7').prop('checked',true);
 				$('#parent8').prop('checked',true);
 				$('#cer').hide();
