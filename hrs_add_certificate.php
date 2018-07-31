@@ -103,15 +103,15 @@
 				</div>
 				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 					<div class="row">
-						<label class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+						<label class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6" style="padding-top:7px;">
 							<input type="radio" name="typectf_typectf" id="parent5" value="5"> รับรองการค้ำประกันการเข้าทำงาน ของ
 						</label>
-						<label class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+						<label class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6">
 							<?php echo $txtsubname;?>
 						</label>
-						<label class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" style="padding-left:32px;"> ซึ่งเกี่ยวข้องกับข้าพเจ้าโดยเป็น
+						<label class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6" style="padding-left:34px;padding-top:7px;"> ซึ่งเกี่ยวข้องกับข้าพเจ้าโดยเป็น
 						</label>
-						<label class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+						<label class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6">
 							<?php echo $txtsubname;?>
 						</label>
 					</div>
@@ -137,10 +137,10 @@
 					<div class="row">
 						<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 							<div class="row">
-								<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
+								<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6" style="padding-top:7px;">
 									<?php echo $lbdatework; ?>
 								</div>
-								<div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8">
+								<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6">
 									<div class="row">
 										<div class="date-form dayinbox col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" style="float: left;">
 											<div class="form-horizontal">
@@ -157,12 +157,12 @@
 								</div>
 							</div>
 						</div>
-						<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+						<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-2">
 							<div class="row">
-								<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+								<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6" style="padding-top:7px;">
 									<?php echo $lbsalary; ?>
 								</div>
-								<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+								<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6">
 									<?php echo $txtsalary; ?>
 								</div>
 							</div>
