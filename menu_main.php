@@ -5,7 +5,7 @@
         <div class="sidebar-sticky">
             <ul class="nav flex-column">
 				<li class="nav-item">
-					<a class="nav-link active" href="#"><span data-feather="home"></span>หน้าหลัก <span class="sr-only">(current)</span></a>
+					<a class="nav-link active" href="index.php"><span data-feather="home"></span>หน้าหลัก <span class="sr-only">(current)</span></a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" href="https://172.16.0.1:4100/logon.shtml?redirect=http://192.168.0.1/"><span data-feather="chrome"></span>เข้าระบบอินเตอร์เน็ต</a>
