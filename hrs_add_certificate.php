@@ -300,7 +300,7 @@
 		var valchange = $(this).val();
 		if(valchange == 1 || valchange == 2 || valchange == 3 || valchange == 4 || valchange == 5 || valchange == 6){
 			$('#cer').fadeIn("slow");;
-			$('#hos').fadeOut("slow");
+			$('#hos').hide();
 			if(valchange == 1){
 			$('[id=hrhos_subname]').slice(0).prop("disabled", true);
 			}
@@ -341,7 +341,7 @@
 			else{
 				$('#parent7').prop('checked',true);
 				$('#parent8').prop('checked',true);
-				$('#cer').fadeOut("slow");
+				$('#cer').hide();
 				$('#hos').fadeIn("slow");;
 				$('[id=hrhos_subname2]').slice(0).prop("disabled", true);
 				$('input[name=hrhos_familytype2]').on("change",function(e) {
