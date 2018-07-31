@@ -383,5 +383,27 @@
 				});
 			}
 		});
-	});
+		$('#datetimepicker1').datetimepicker({
+	        format:'YYYY-MM-DD',
+	        useCurrent: false,
+	        sideBySide: true,
+            allowInputToggle: true,
+	        ignoreReadonly: true,
+	        showClose:true,
+	        locale:moment.locale('th')
+        })
+/*
+   $('#datetimepicker2').datetimepicker({
+	        format:'YYYY-MM-DD',
+	        useCurrent: false,
+	        sideBySide: true,
+            allowInputToggle: true,
+	        ignoreReadonly: true,
+	        showClose:true,
+	        locale:moment.locale('th')
+        }).mouseleave(function (e) {
+          $('#datetimepicker2').data("DateTimePicker").hide();
+   });
+*/
+   });
 </script>
