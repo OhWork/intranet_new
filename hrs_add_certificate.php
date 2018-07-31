@@ -1,17 +1,16 @@
 <?php
     date_default_timezone_set('Asia/Bangkok');
     $form = new form();
-    $lbsend = new label('เรียน');
+    $lbrecipient = new label('เรียน');
     $lbname = new label('ชื่อ - นามสกุล');
     $lbposition = new label('ตำแหน่ง');
     $lbdevision = new label('สังกัด');
     $lbdatework = new label('บรรจุเป็นพนักงานเมื่อวันที่');
     $lbsalary = new label('เงินเดือนปัจจุบัน');
-    $txtsend = new textfield('problem_work','problem_work','form-control','','');
-    $txtname = new textfield('problem_work','problem_work','form-control','','');
-    $txttime = new textfieldcalendarreadonly('problem_date','datetimepicker1','','form-control','input-group-addon btn calen','datetimepicker1');
-    $txtcall = new textfield('problem_tel','','form-control','','');
-    $txtposition = new textfield('problem_position','problem_position','form-control','','');
+    $txtrecipient = new textfield('hrctf_recipient','problem_work','form-control','','');
+    $txtname = new textfield('hrctf_name','problem_work','form-control','','');
+    $txttime = new textfieldcalendarreadonly('hrctf_datestart','datetimepicker1','','form-control','input-group-addon btn calen','datetimepicker1');
+    $txtposition = new textfield('hrhos_position','problem_position','form-control','','');
     $txtsubname = new textfield('','hrhos_subname','form-control ','','');
     $selectdevision = new SelectFromDB();
     $selectdevision->name = 'zoo_zoo_id';
@@ -27,12 +26,13 @@
     $lbdatestart = new label('ตั้งแต่วันที่');
     $lbdateend = new label('ถึงวันที่');
     $lbhospital = new label('รับการรักษาจากสถานพยาบาล');
+    $selectdevision = new SelectFromDB();
+    $selectdevision->name = 'zoo_zoo_id';
+    $selectdevision->lists = 'โปรดระบุ';
     $txtname = new textfield('hrhos_name','','form-control','','');
     $txthospital = new textfield('hrhos_hosname','','form-control','','');
     $txtprovince = new textfield('hrnos_province','','form-control','','');
     $txtdatestart = new textfieldcalendarreadonly('hrhos_datestart','datetimepicker1','','form-control','input-group-addon','datetimepicker1');
-    $txtdateend = new textfieldcalendarreadonly('hrhos_dateend','datetimepicker2','','form-control','input-group-addon','datetimepicker2');
-
     $button = new buttonok("ส่งแบบฟอร์ม","","btn btn-success btn-lg btn-block bt3success col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","");
     echo $form->open("","","col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10","","");
  ?>
@@ -47,10 +47,10 @@
 				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-2">
 					<div class="row">
 						<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
-							<?php echo $lbsend; ?>
+							<?php echo $lbrecipient; ?>
 						</div>
 						<div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8">
-    						<?php echo $txtsend; ?>
+    						<?php echo $txtrecipient; ?>
 						</div>
 					</div>
 				</div>
@@ -60,7 +60,7 @@
 							<?php echo $lbname; ?>
 						</div>
 						<div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8">
-    						<?php echo $txtsend; ?>
+    						<?php echo $txtname; ?>
 						</div>
 					</div>
 				</div>
@@ -70,7 +70,7 @@
 							<?php echo $lbposition; ?>
 						</div>
 						<div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8">
-    						<?php echo $txtsend; ?>
+    						<?php echo $txtposition; ?>
 						</div>
 					</div>
 				</div>
@@ -80,7 +80,7 @@
 							<?php echo $lbdevision; ?>
 						</div>
 						<div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8">
-    						<?php echo $txtsend; ?>
+    						<?php echo $selectdevision->selectFromTBinDB('zoo','zoo_id','zoo_name','zoo_per_hrs','1',''); ?>
 						</div>
 					</div>
 				</div>
@@ -216,7 +216,7 @@
 				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 					<div class="row">
 						<label class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
-							<input type="radio" name="hrhos_familytype"  id="parent3" value="10"> คู่บิดา
+							<input type="radio" name="hrhos_familytype"  id="parent3" value="10"> บิดา
 						</label>
 						<label class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8">
 							<?php echo $txtsubname;?>
@@ -226,7 +226,7 @@
 				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 					<div class="row">
 						<label class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
-							<input type="radio" name="hrhos_familytype" id="parent4" value="11"> คู่มารดา
+							<input type="radio" name="hrhos_familytype" id="parent4" value="11"> มารดา
 						</label>
 						<label class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8">
 							<?php echo $txtsubname;?>
@@ -236,7 +236,7 @@
 				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 					<div class="row">
 						<label class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
-							<input type="radio" name="hrhos_familytype" id="parent5" value="12"> คู่บุตร
+							<input type="radio" name="hrhos_familytype" id="parent5" value="12"> บุตร
 						</label>
 						<label class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8">
 							<?php echo $txtsubname; ?>
