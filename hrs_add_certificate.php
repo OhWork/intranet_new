@@ -278,20 +278,6 @@
 				</div>
 				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" style="margin-top:8px;">
 					<div class="row">
-						<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
-							<?php echo $lbdateend; ?>
-						</div>
-						<div class="date-form dayinbox col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4 form-horizontal control-group controls">
-                            <div class="input-group">
-								<?php echo $txtdateend; ?>
-							</div>
-						</div>
-						<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4"></div>
-					</div>
-				</div>
-				</div>
-				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" style="margin-top:8px;">
-					<div class="row">
 						<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4"></div>
 						<div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
 							<?php echo $button; ?>

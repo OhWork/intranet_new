@@ -54,9 +54,6 @@
 						<a class="nav-link" href="index.php?url=hrs_add_certificate.php">
 						ขอทำหนังสือรับรอง
 						</a>
-						<a class="nav-link" href="index.php?url=hrs_add_hospital.php">
-						ขอหนังสือรับรองช่วยเหลือค่ารักษาพยาบาล
-						</a>
 	                </ul>
 				</li>
 				<!-- end sub menu -->
