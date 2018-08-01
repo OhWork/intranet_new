@@ -160,6 +160,7 @@
 						<div class='col-md-6 statustext'><?php echo $r['eventconfer_join'] ?></div>
 					</div>
 				</div>
+<!--
 				<div class='col-md-12'>
 					<div class='row'>
 						<div class="col-md-12"><hr></div>
@@ -171,6 +172,7 @@
 						<div class='col-md-6 statustext'><?php echo $r['eventconfer_comment'] ?></div>
 					</div>
 				</div>
+-->
 		<?php }
 
 		 ?>

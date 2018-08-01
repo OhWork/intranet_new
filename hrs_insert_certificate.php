@@ -22,7 +22,8 @@
         	$rs = $db->insert('hrctf',array(
         	'hrctf_name' => @$_POST['hrctf_name'],
         	'hrctf_position' => @$_POST['hrctf_position'],
-        	'hrctf_datestart' => @$_POST['hrctf_datestart'],
+        	'hrctf_datestartwork' => @$_POST['hrctf_datestartwork'],
+        	'hrctf_datestarthos' => @$_POST['hrctf_datestarthos'],
             'hrctf_datereg' => @$_POST['hrctf_datereg'],
             'hrctf_dateupdate' => @$_POST['hrctf_dateupdate'],
         	'hrctf_familytype' => @$_POST['hrctf_familytype'],
