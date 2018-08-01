@@ -22,7 +22,6 @@
 	$rs = $db->executeRow();
 	$system_id = $rs['systemallow_systemallow_id'];
     $rsallow = $db->findByPK('systemallow','systemallow_id',$system_id)->executeAssoc();
-    print_r($rsallow);
 	if($rs){
     	$_SESSION['user_id'] = $rs['user_id'];
 		$_SESSION['user_name'] = $rs['user_name'];
