@@ -24,10 +24,10 @@
     $txthospital = new textfield('hrhos_hosname','','form-control','','');
     $txtprovince = new textfield('hrnos_province','','form-control','','');
     $txtsalary = new textfield('hrctf_salary','','form-control','','');
-    $txtctfname = new textfield('hrctf_ctfname','','form-control','','');
-    $txtwhoname = new textfield('hrctf_whoname','','form-control','','');
-    $txtwhofu = new textfield('hrctf_whofu','','form-control','','');
-    $txteducation = new textfield('hrctf_educationname','','form-control','','');
+    $txtctfname = new textfield('hrctf_ctfname','hrctf_ctfname_id','form-control','','');
+    $txtwhoname = new textfield('hrctf_whoname','hrctf_ctfname_id','form-control','','');
+    $txtwhofu = new textfield('hrctf_whofu','hrctf_ctfname_id','form-control','','');
+    $txteducation = new textfield('hrctf_educationname','hrctf_ctfname_id','form-control','','');
     $txtfamilyname = new textfield('hrctf_familyname','hrctf_familyname_id','form-control','','');
     $txtdatestart = new textfieldcalendarreadonly('hrhos_datestart','datetimepicker1','','form-control','input-group-addon','datetimepicker1');
     $button = new buttonok("ส่งแบบฟอร์ม","","btn btn-success btn-lg btn-block bt3success col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","");
@@ -274,40 +274,40 @@
   		$(document).ready(function(){
   		$('#parent1').prop('checked',true);
   		$('#hos').hide();
-  		$('[id=hrhos_subname]').slice(0).prop("disabled", true);
+  		$('[id=hrctf_ctfname_id]').slice(0).prop("disabled", true);
 		$('input[name=typectf_typectf]').on("change",function(e) {
 		var valchange = $(this).val();
 		if(valchange == 1 || valchange == 2 || valchange == 3 || valchange == 4 || valchange == 5 || valchange == 6){
 			$('#cer').fadeIn("slow");;
 			$('#hos').hide();
 			if(valchange == 1){
-			$('[id=hrhos_subname]').slice(0).prop("disabled", true);
+			$('[id=hrctf_ctfname_id]').slice(0).prop("disabled", true);
 			}
 			else if(valchange == 2) {
-			$('[id=hrhos_subname]').slice(0).prop("disabled", true);
+			$('[id=hrctf_ctfname_id]').slice(0).prop("disabled", true);
 			}
 			else if(valchange == 3) {
-				$('[id=hrhos_subname]').slice(0,1).prop("disabled", false);
-				$('[id=hrhos_subname]').slice(1,2).prop("disabled", true);
-				$('[id=hrhos_subname]').slice(2,3).prop("disabled", true);
-				$('[id=hrhos_subname]').slice(3,4).prop("disabled", true);
+				$('[id=hrctf_ctfname_id]').slice(0,1).prop("disabled", false);
+				$('[id=hrctf_ctfname_id]').slice(1,2).prop("disabled", true);
+				$('[id=hrctf_ctfname_id]').slice(2,3).prop("disabled", true);
+				$('[id=hrctf_ctfname_id]').slice(3,4).prop("disabled", true);
 				$('[id=hrctf_familyname_id]').slice(0).prop("disabled", true);
 			}
 			else if(valchange == 4) {
 				$('[id=hrhos_subname]').slice(0).prop("disabled", true);
 			}
 			else if(valchange == 5) {
-				$('[id=hrhos_subname]').slice(1,2).prop("disabled", false);
-				$('[id=hrhos_subname]').slice(2,3).prop("disabled", false);
-				$('[id=hrhos_subname]').slice(0,1).prop("disabled", true);
-				$('[id=hrhos_subname]').slice(3,4).prop("disabled", true);
+				$('[id=hrctf_ctfname_id]').slice(1,2).prop("disabled", false);
+				$('[id=hrctf_ctfname_id]').slice(2,3).prop("disabled", false);
+				$('[id=hrctf_ctfname_id]').slice(0,1).prop("disabled", true);
+				$('[id=hrctf_ctfname_id]').slice(3,4).prop("disabled", true);
 				$('[id=hrctf_familyname_id]').slice(0).prop("disabled", true);
 			}
 			else if(valchange == 6) {
-				$('[id=hrhos_subname]').slice(3,4).prop("disabled", false);
-				$('[id=hrhos_subname]').slice(0,1).prop("disabled", true);
-				$('[id=hrhos_subname]').slice(1,2).prop("disabled", true);
-				$('[id=hrhos_subname]').slice(2,3).prop("disabled", true);
+				$('[id=hrctf_ctfname_id]').slice(3,4).prop("disabled", false);
+				$('[id=hrctf_ctfname_id]').slice(0,1).prop("disabled", true);
+				$('[id=hrctf_ctfname_id]').slice(1,2).prop("disabled", true);
+				$('[id=hrctf_ctfname_id]').slice(2,3).prop("disabled", true);
 				$('[id=hrctf_familyname_id]').slice(0).prop("disabled", true);
 			}
 			}
