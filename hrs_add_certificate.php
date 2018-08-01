@@ -13,7 +13,7 @@
     $lbhospital = new label('รับการรักษาจากสถานพยาบาล');
     $txtrecipient = new textfield('hrctf_recipient','problem_work','form-control','','');
     $txtname = new textfield('hrctf_name','problem_work','form-control','','');
-    $txttime = new textfieldcalendarreadonly('hrctf_datestartwork','datetimepicker1','','form-control','input-group-addon btn calen','datetimepicker1');
+    $txtdatestartwork = new textfieldcalendarreadonly('hrctf_datestartwork','datetimepicker1','','form-control','input-group-addon btn calen','datetimepicker1');
     $txtdatestarthos = new textfieldcalendarreadonly('hrhos_datestarthos','datetimepicker2','','form-control','input-group-addon','datetimepicker2');
     $txtposition = new textfield('hrctf_position','problem_position','form-control','','');
     $selectdevision = new SelectFromDB();
@@ -42,12 +42,14 @@
 				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 					<h4>หนังสือรับรอง</h4>
 				</div>
+<!--
 				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-1">
 					<?php echo $lbrecipient; ?>
 				</div>
 				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
     				<?php echo $txtrecipient; ?>
 				</div>
+-->
 				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-1">
 					<?php echo $lbname; ?>
 				</div>
@@ -119,6 +121,7 @@
 						</label>
 					</div>
 				</div>
+<!--
 				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 					<div class="row">
 						<label class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
@@ -129,6 +132,7 @@
 						</label>
 					</div>
 				</div>
+-->
 				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-2" id="cer">
 					<div class="row">
 						<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
@@ -143,7 +147,7 @@
 												<div class="control-group">
 													<div class="controls">
 														<div class="input-group">
-															<?php echo $txttime;?>
+															<?php echo $txtdatestartwork;?>
 														</div>
 													</div>
 												</div>
@@ -244,7 +248,7 @@
 								</div>
 								<div class="date-form dayinbox col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8 form-horizontal control-group controls">
 									<div class="input-group">
-										<?php echo $txtdatestart; ?>
+										<?php echo $txtdatestartwork; ?>
 									</div>
 								</div>
 							</div>
@@ -256,7 +260,7 @@
 						<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
     						<input type='hidden' name='hrctf_datereg' value='<?php echo date("Y-m-d");?>'>
     						<input type='hidden' name='hrctf_dateupdate' value='-'>
-    						<input type='hidden' name='hrctf_status' value='N'>
+    						<input type='hidden' name='hrctf_status' value='S'>
 						</div>
 						<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
 							<?php echo $button; ?>

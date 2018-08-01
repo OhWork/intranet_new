@@ -54,6 +54,9 @@
 						<a class="nav-link" href="index.php?url=hrs_add_certificate.php">
 						ขอทำหนังสือรับรอง
 						</a>
+						<a class="nav-link" href="index.php?url=hrs_show_certificate.php">
+						รายการหนังสือรับรอง
+						</a>
 	                </ul>
 				</li>
 				<!-- end sub menu -->

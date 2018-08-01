@@ -35,6 +35,7 @@
         	'hrctf_ctfname' => @$_POST['hrctf_ctfname'],
         	'hrctf_whoname' => @$_POST['hrctf_whoname'],
         	'hrctf_whofu' => @$_POST['hrctf_whofu'],
+        	'hrctf_status' => @$_POST['hrctf_status'],
         	'typectf_typectf' => @$_POST['typectf_typectf'],
         	'zoo_zoo_id' => @$_POST['zoo_zoo_id']
     	));
@@ -48,7 +49,7 @@
     	}else if($rsfix){
             echo "<div class='statusok'>แก้ไขสำเร็จ</div>";
         }
-            $link = "hrs_index.php?url=grs_add_certificate.php";
+            $link = "hrs_index.php?url=hrs_add_certificate.php";
             header( "Refresh: 2; $link" );
 }
 
