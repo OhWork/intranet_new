@@ -12,6 +12,8 @@
 	if(!empty($_POST['user_id'])){
 		$data['user_name'] = $_POST['user_name'];
 		$data['user_last'] = $_POST['user_last'];
+		$data['user_nameeng'] = $_POST['user_nameeng'];
+		$data['user_lasteng'] = $_POST['user_lasteng'];
 		$data['user_pass'] = $_POST['user_pass'];
 		$data['user_tel'] = $_POST['user_tel'];
 		$data['user_idcard'] = $_POST['user_idcard'];
@@ -28,7 +30,8 @@
 		$data['systemallow_drive'] = $_POST['systemallow_drive'];
 		$data['systemallow_hrs'] = $_POST['systemallow_hrs'];
 		$rsfixsystem = $db->update('systemallow',$data,'systemallow_id',$_POST['systemallow_id']);
-		
+		echo "Fix->".$rs;
+		echo "FixSystem->".$rsfixsystem;
 		if(getenv(HTTP_X_FORWARDED_FOR)){
             $ip = $_SERVER['HTTP_X_FORWARDED_FOR']; // IP proxy
         }else{
@@ -53,11 +56,14 @@
 	'systemallow_hrs' => $_POST['systemallow_hrs'],
 	'systemallow_drive' => $_POST['systemallow_drive']
 	));
+	
 	$last_id = $db->specifytable2('systemallow_id','systemallow','ORDER BY systemallow_id DESC LIMIT 0 , 1')->executeAssoc();
 	if($last_id){
     $rs = $db->insert('user',array(
     'user_name' => $_POST['user_name'],
     'user_last' => $_POST['user_last'],
+    'user_nameeng' => $_POST['user_nameeng'],
+    'user_lasteng' => $_POST['user_lasteng'],
     'user_user' => $_POST['user_user'],
     'user_pass' => $_POST['user_pass'],
     'user_idcard' => $_POST['user_idcard'],
@@ -67,6 +73,7 @@
 	'subzoo_zoo_zoo_id' => $_POST['subzoo_zoo_zoo_id'],
     'systemallow_systemallow_id' => $last_id['systemallow_id']
 	));
+
 	}
 	 //Log
 		if(getenv(HTTP_X_FORWARDED_FOR)){

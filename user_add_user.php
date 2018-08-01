@@ -24,9 +24,9 @@ if (!empty($_SESSION['user_name'])):
   $txtpass = new pass('user_pass','form-control css-require','','user_pass');
   $txtpass_confirm = new pass('user_pass_confirm','form-control css-require','','user_pass_confirm');
   $txtname = new textfield('user_name','','form-control css-require','');
-  $txtnameen = new textfield('user_name_en','','form-control','');
+  $txtnameen = new textfield('user_nameeng','','form-control','');
   $txtlast = new textfield('user_last','','form-control css-require','');
-  $txtlasten = new textfield('user_last_en','','form-control','');
+  $txtlasten = new textfield('user_lasteng','','form-control','');
   $txttel = new textfield('user_tel','data2','form-control','');
   $txttel->functions = "onkeyup='autoTab2(this,2)'";
   $txtidcard = new textfield('user_idcard','data2','form-control','');
@@ -415,9 +415,9 @@ function autoTab2(obj,typeCheck){
 //      echo $gen_password."<br>";
 -->
 
- <input type='hidden' name='log_user' value='<?php echo $log_user; ?>'/>
- <input type='hidden' name='user_id' value='<?php echo $_GET['id'];?>'/>
-  <input type='hidden' name='systemallow_id' value='<?php echo $_GET['id'];?>'/>
+    <input type='hidden' name='log_user' value='<?php echo $log_user; ?>'/>
+    <input type='hidden' name='user_id' value='<?php echo $_GET['id'];?>'/>
+    <input type='hidden' name='systemallow_id' value='<?php echo $_GET['id'];?>'/>
 
 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" style="margin-top:10px;margin-bottom 20px;">
 	<div class="row">
