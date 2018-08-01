@@ -194,143 +194,119 @@
 <?php echo $form->open("form_reg","frmMain","col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10","cs_insert_problem.php","");?>
 	<div class="row">
 	<div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2"></div>
-	<div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8">
+	<div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8" style="padding-top:16px;background-color:#ffffff;border:solid 1px #E0E0E0;border-radius:7px;">
 		<div class="row">
-			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" style="margin: 16px;">
-				<div class="row">
-				<h4>แบบฟอร์มแจ้งซ่อม</h4>
-				</div>
-			</div>
 			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+					<h4>แบบฟอร์มแจ้งซ่อม</h4>
+			</div>
+			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" style="border-top:solid 1px #E0E0E0;">
 				<div class="row">
-					<div class='col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8'>
+					<div class='col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8' style="border-right:solid 1px #E0E0E0;">
 						<div class='row'>
-							<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-								<div class='row'>
-									<div class='col-xl-4 col-lg-4 col-md-4 col-sm-4 col-12' style="padding-top: 8px;float: left;"><label>สำนัก/สวน</label></div>
-									<div class='col-xl-8 col-lg-8 col-md-8 col-sm-8 col-12 form-group has-feedback test' style="float: left;">
-										<select class='form-control' id="ddlZoo" name="subzoo_zoo_zoo_id" onchange = "ListSubzoo(this.value)">
-											<option selected value="">โปรดระบุ</option>
-												<? $rs = $db->findAllASC('zoo','zoo_no')->execute();
-													while($objResult = mysqli_fetch_array($rs,MYSQLI_ASSOC))
-													{
-												?>
+							<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3">
+								<label>สำนัก/สวน</label>
+							</div>
+							<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 form-group has-feedback test' style="float: left;">
+								<select class='form-control' id="ddlZoo" name="subzoo_zoo_zoo_id" onchange = "ListSubzoo(this.value)">
+									<option selected value="">โปรดระบุ</option>
+										<? $rs = $db->findAllASC('zoo','zoo_no')->execute();
+											while($objResult = mysqli_fetch_array($rs,MYSQLI_ASSOC))
+										{
+										?>
 											<option value="<?=$objResult["zoo_id"];?>"><?=$objResult["zoo_name"];?></option>
-												<?
-													}
-												?>
-										</select>
-									</div>
+										<?
+										}
+										?>
+								</select>
+							</div>
+							<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+								<label>ฝ่าย</label>
+							</div>
+							<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 form-group has-feedback test">
+								<select class='form-control' id="ddlSubzoo" name="subzoo_subzoo_id"></select>
+							</div>
+							<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+								<label><?php echo $lbwork; ?></label>
+							</div>
+							<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 form-group test">
+								<?php echo $txtwork; ?>
+							</div>
+							<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+								<label for="ipzpo_user">ชื่อ - นามสกุล</label>
+							</div>
+							<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 form-group has-feedback test'>
+								<input class='form-control' name="problem_name" type="text" id="ipzpo_user" size="50" />
+							</div>
+							<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+								<label><?php echo $lbposition; ?></label>
+							</div>
+							<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 form-group test'>
+								<?php echo $txtposition; ?>
+							</div>
+							<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+								<label for="ipzpo_address">หมายเลขไอพี</label>
+							</div>
+							<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 form-group has-feedback test'>
+								<input type="text" class="form-control disabledTextInput" name="problem_ip" id="ipzpo_address" readonly/>
+							</div>
+							<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+								<label><?php echo $lbtime; ?></label>
+							</div>
+							<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 form-group input-group date test'>
+								<div class='input-group date' id='datetimepicker1'>
+									<input type='text' class="form-control" name="problem_date"  id='date1' readonly/>
+									<span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
 								</div>
 							</div>
 							<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-								<div class='row'>
-									<div class='col-xl-4 col-lg-4 col-md-4 col-sm-4 col-12' style="padding-top: 8px;float: left;"><label>ฝ่าย</label></div>
-									<div class='col-xl-8 col-lg-8 col-md-8 col-sm-8 col-12 form-group has-feedback test' style="float: left;">
-										<select class='form-control' id="ddlSubzoo" name="subzoo_subzoo_id"></select>
-									</div>
-								</div>
+								<label><?php echo $lbcall; ?></label>
+							</div>
+							<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 form-group test'>
+								<?php echo $txtcall; ?>
 							</div>
 							<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-								<div class='row'>
-									<div class='col-xl-4 col-lg-4 col-md-4 col-sm-4 col-12' style="padding-top: 8px;float: left;"><label><?php echo $lbwork; ?></label></div>
-									<div class='col-xl-8 col-lg-8 col-md-8 col-sm-8 col-12 form-group test' style="float: left;">
-										<?php echo $txtwork; ?>
-									</div>
-								</div>
+								<label><?php echo $lbtypetools;?></label>
 							</div>
-							<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-								<div class="row">
-									<div class='col-xl-4 col-lg-4 col-md-4 col-sm-4 col-12' style="padding-top: 8px;float: left;"><label for="ipzpo_user">ชื่อ - นามสกุล</label></div>
-									<div class='col-xl-8 col-lg-8 col-md-8 col-sm-8 col-12 form-group has-feedback test' style="float: left;">
-										<input class='form-control' name="problem_name" type="text" id="ipzpo_user" size="50" />
-									</div>
-								</div>
-							</div>
-							<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-								<div class='row'>
-									<div class='col-xl-4 col-lg-4 col-md-4 col-sm-4 col-12' style="padding-top: 8px;float: left;"><label><?php echo $lbposition; ?></label></div>
-									<div class='col-xl-8 col-lg-8 col-md-8 col-sm-8 col-12 form-group test' style="float: left;">
-										<?php echo $txtposition; ?>
-									</div>
-								</div>
-							</div>
-							<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-								<div class="row">
-									<div class='col-xl-4 col-lg-4 col-md-4 col-sm-4 col-12' style="padding-top: 8px;float: left;"><label for="ipzpo_address">หมายเลขไอพี</label></div>
-									<div class='col-xl-8 col-lg-8 col-md-8 col-sm-8 col-12 form-group has-feedback test' style="float: left;">
-										<input type="text" class="form-control disabledTextInput" name="problem_ip" id="ipzpo_address" readonly/>
-									</div>
-								</div>
-							</div>
-							<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-								<div class="row">
-									<div class='col-xl-4 col-lg-4 col-md-4 col-sm-4 col-12' style="padding-top: 8px;float: left;"><label><?php echo $lbtime; ?></label></div>
-									<div class='col-xl-8 col-lg-8 col-md-8 col-sm-8 col-12 form-group input-group date test' style="float: left;">
-										<div class='input-group date' id='datetimepicker1'>
-											<input type='text' class="form-control" name="problem_date"  id='date1' readonly/>
-											<span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-								<div class='row'>
-									<div class='col-xl-4 col-lg-4 col-md-4 col-sm-4 col-12' style="padding-top: 8px;float: left;"><label><?php echo $lbcall; ?></label></div>
-									<div class='col-xl-8 col-lg-8 col-md-8 col-sm-8 col-12 form-group test' style="float: left;">
-										<?php echo $txtcall; ?>
-									</div>
-								</div>
-							</div>
-							<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-								<div class='row'>
-									<div class='col-xl-4 col-lg-4 col-md-4 col-sm-4 col-12' style="padding-top: 8px;float: left;"><label><?php echo $lbtypetools;?></label></div>
-									<div class='col-xl-8 col-lg-8 col-md-8 col-sm-8 col-12 form-group has-feedback test' style="float: left;">
-										<select class='form-control' id="ddltypetools" name="subtypetools_typetools_typetools_id" onchange = "ListSubtypetools(this.value)">
-										<option selected value="">โปรดระบุ</option>
+							<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 form-group has-feedback test'>
+								<select class='form-control' id="ddltypetools" name="subtypetools_typetools_typetools_id" onchange = "ListSubtypetools(this.value)">
+									<option selected value="">โปรดระบุ</option>
 											<?
 												$rs = $db->orderASC('typetools','typetools_id')->execute();
 												while($objResult = mysqli_fetch_array($rs,MYSQLI_ASSOC)){
 											?>
-										<option value="<?=$objResult["typetools_id"];?>"><?=$objResult["typetools_name"];?></option>
+									<option value="<?=$objResult["typetools_id"];?>"><?=$objResult["typetools_name"];?></option>
 											<?
 												}
 											?>
-										</select>
-									</div>
-								</div>
+								</select>
 							</div>
 							<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-								<div class='row'>
-									<div class='col-xl-4 col-lg-4 col-md-4 col-sm-4 col-12' style="padding-top: 8px;float: left;"><label><?php echo $lbproblem;?></label></div>
-									<div class='col-xl-8 col-lg-8 col-md-8 col-sm-8 col-12 form-group has-feedback test' style="float: left;">
-										<select class='form-control' id="ddlsubtypetools" name="subtypetools_subtypetools_id"></select>
-									</div>
-								</div>
+								<label><?php echo $lbproblem;?></label>
+							</div>
+							<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 form-group has-feedback test'>
+								<select class='form-control' id="ddlsubtypetools" name="subtypetools_subtypetools_id"></select>
 							</div>
 							<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-								<div class='row ohter'>
-									<div class='col-xl-4 col-lg-4 col-md-4 col-sm-4 col-12' style="padding-top: 8px;float: left;"><label><?php echo $lbdetail;?></label></div>
-									<div class='col-xl-8 col-lg-8 col-md-8 col-sm-8 col-12 form-group test' style="float: left;">
-										<?php echo $txtdetail;?>
-									</div>
-								</div>
+								<label><?php echo $lbdetail;?></label>
+							</div>
+							<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 form-group test'>
+								<?php echo $txtdetail;?>
 							</div>
 								<input type='hidden' name='problem_status' value='N'>
 							<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 								<div class='row'>
-									<div class='col-xl-4 col-lg-4 col-md-4 col-sm-4 col-2'style="float: left;"></div>
-									<div class='col-xl-5 col-lg-5 col-md-5 col-sm-5 col-8 form-group' style="float: left;">
+									<div class='col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3'></div>
+									<div class='col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6 form-group'>
 										<?php echo $button;?>
 									</div>
-									<div class='col-xl-3 col-lg-3 col-md-3 col-sm-3 col-2'style="float: left;"></div>
+									<div class='col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3'></div>
 								</div>
 							</div>
 						</div>
 					</div>
-					<div class='col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3' style="color:#f44336;">
+					<div class='col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4' style="color:#f44336;">
 						<div class='row'>
-							<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+							<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3">
 								<h3>*** คำเตือน ***</h3>
 								<p>1.เพื่อความปลอดภัยของข้อมูล ผู้ขอใช้บริการต้องทำการสำรองข้อมูล ให้แล้วเสร็จก่อนนำเครื่องมาใช้บริการ</p>
 								<p>2.สำนักเทคโนโลยีสารสนเทศ ไม่รับผิดชอบต่อความเสียหายของข้อมูลทุกกรณี</p>
@@ -341,7 +317,8 @@
 				</div>
 			</div>
 		</div>
-		<div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2"></div>
+	</div>
+	<div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2"></div>
 	</div>
 <?php echo $form->close();?>
 <script language = "JavaScript">
