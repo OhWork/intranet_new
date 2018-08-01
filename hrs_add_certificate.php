@@ -12,17 +12,17 @@
     $txttime = new textfieldcalendarreadonly('hrctf_datestart','datetimepicker1','','form-control','input-group-addon btn calen','datetimepicker1');
     $txtposition = new textfield('hrhos_position','problem_position','form-control','','');
     $txtsubname = new textfield('','hrhos_subname','form-control ','','');
-    $txtsubname2 = new textfield('','hrhos_subname2','form-control ','','');
+    $txtsubname2 = new textfield('','hrctf_familyname','form-control ','','');
     $selectdevision = new SelectFromDB();
     $selectdevision->name = 'zoo_zoo_id';
     $selectdevision->lists = 'โปรดระบุ';
-    $radioparent = new radioGroup();
-    $radioparent->name = 'parent';
-    $radioparent->add('ข้าพเจ้า',1,'');
-    $radioparent->add('คู่สมรส ชื่อ',2,'');
-    $radioparent->add('คู่บิดา ชื่อ',3,'');
-    $radioparent->add('คู่มารดา ชื่อ',4,'');
-    $radioparent->add('คู่บุตร ชื่อ',5,'');
+//     $radioparent = new radioGroup();
+//     $radioparent->name = 'parent';
+//     $radioparent->add('ข้าพเจ้า',1,'');
+//     $radioparent->add('คู่สมรส ชื่อ',2,'');
+//     $radioparent->add('คู่บิดา ชื่อ',3,'');
+//     $radioparent->add('คู่มารดา ชื่อ',4,'');
+//     $radioparent->add('คู่บุตร ชื่อ',5,'');
     $lbprovince = new label('จังหวัด');
     $lbdatestart = new label('ตั้งแต่วันที่');
     $lbdateend = new label('ถึงวันที่');
@@ -34,6 +34,7 @@
     $txthospital = new textfield('hrhos_hosname','','form-control','','');
     $txtprovince = new textfield('hrnos_province','','form-control','','');
     $txtsalary = new textfield('hrnos_province','','form-control','','');
+    $txtfamilyname = new textfield('hrctf_familyname','','form-control','','');
     $txtdatestart = new textfieldcalendarreadonly('hrhos_datestart','datetimepicker1','','form-control','input-group-addon','datetimepicker1');
     $button = new buttonok("ส่งแบบฟอร์ม","","btn btn-success btn-lg btn-block bt3success col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","");
     echo $form->open("","","col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10","","");
@@ -177,47 +178,47 @@
 						<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-2">
 							<div class="row">
 								<label class="ccol-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-									<input type="radio" name="hrhos_familytype2" id="parent8" value="8"> ข้าพเจ้า
+									<input type="radio" name="hrctf_familytype" id="parent8" value="1"> ข้าพเจ้า
 								</label>
 							</div>
 						</div>
 						<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 							<div class="row">
 								<label class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-									<input type="radio" name="hrhos_familytype2"  id="parent9" value="9"> คู่สมรส
+									<input type="radio" name="hrctf_familytype"  id="parent9" value="2"> คู่สมรส
 								</label>
 								<label class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-									<?php echo $txtsubname2;?>
-								</label>
-							</div>
-						</div>
-						<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-							<div class="row">
-								<label class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-									<input type="radio" name="hrhos_familytype2"  id="parent10" value="10"> บิดา
-								</label>
-								<label class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-									<?php echo $txtsubname2;?>
+									<?php echo $txtfamilyname;?>
 								</label>
 							</div>
 						</div>
 						<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 							<div class="row">
 								<label class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-									<input type="radio" name="hrhos_familytype2" id="parent11" value="11"> มารดา
+									<input type="radio" name="hrctf_familytype"  id="parent10" value="3"> บิดา
 								</label>
 								<label class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-									<?php echo $txtsubname2;?>
+									<?php echo $txtfamilyname;?>
 								</label>
 							</div>
 						</div>
 						<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 							<div class="row">
 								<label class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-									<input type="radio" name="hrhos_familytype2" id="parent12" value="12"> บุตร
+									<input type="radio" name="hrctf_familytype" id="parent11" value="4"> มารดา
 								</label>
 								<label class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-									<?php echo $txtsubname2; ?>
+									<?php echo $txtfamilyname;?>
+								</label>
+							</div>
+						</div>
+						<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+							<div class="row">
+								<label class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+									<input type="radio" name="hrctf_familytype" id="parent12" value="5"> บุตร
+								</label>
+								<label class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+									<?php echo $txtfamilyname; ?>
 								</label>
 							</div>
 						</div>
@@ -324,7 +325,7 @@
 				$('#parent8').prop('checked',true);
 				$('#cer').hide();
 				$('#hos').fadeIn("slow");;
-				$('[id=hrhos_subname2]').slice(0).prop("disabled", true);
+				$('[id=hrctf_familyname]').slice(0).prop("disabled", true);
 				$('input[name=hrhos_familytype2]').on("change",function(e) {
 				var valchange = $(this).val();
 				if(valchange == 8){
@@ -337,29 +338,29 @@
 */
 			}
 			else if(valchange == 9) {
-				$('[id=hrhos_subname2]').slice(0,1).prop("disabled", false);
-				$('[id=hrhos_subname2]').slice(1,2).prop("disabled", true);
-				$('[id=hrhos_subname2]').slice(2,3).prop("disabled", true);
-				$('[id=hrhos_subname2]').slice(3,4).prop("disabled", true);
+				$('[id=hrctf_familyname]').slice(0,1).prop("disabled", false);
+				$('[id=hrctf_familyname]').slice(1,2).prop("disabled", true);
+				$('[id=hrctf_familyname]').slice(2,3).prop("disabled", true);
+				$('[id=hrctf_familyname]').slice(3,4).prop("disabled", true);
 
 			}
 			else if(valchange == 10) {
-				$('[id=hrhos_subname2]').slice(1,2).prop("disabled", false);
-				$('[id=hrhos_subname2]').slice(0,1).prop("disabled", true);
-				$('[id=hrhos_subname2]').slice(2,3).prop("disabled", true);
-				$('[id=hrhos_subname2]').slice(3,4).prop("disabled", true);
+				$('[id=hrctf_familyname]').slice(1,2).prop("disabled", false);
+				$('[id=hrctf_familyname]').slice(0,1).prop("disabled", true);
+				$('[id=hrctf_familyname]').slice(2,3).prop("disabled", true);
+				$('[id=hrctf_familyname]').slice(3,4).prop("disabled", true);
 			}
 			else if(valchange == 11) {
-				$('[id=hrhos_subname2]').slice(2,3).prop("disabled", false);
-				$('[id=hrhos_subname2]').slice(0,1).prop("disabled", true);
-				$('[id=hrhos_subname2]').slice(1,2).prop("disabled", true);
-				$('[id=hrhos_subname2]').slice(3,4).prop("disabled", true);
+				$('[id=hrctf_familyname]').slice(2,3).prop("disabled", false);
+				$('[id=hrctf_familyname]').slice(0,1).prop("disabled", true);
+				$('[id=hrctf_familyname]').slice(1,2).prop("disabled", true);
+				$('[id=hrctf_familyname]').slice(3,4).prop("disabled", true);
 			}
 			else if(valchange == 12) {
-				$('[id=hrhos_subname2]').slice(3,4).prop("disabled", false);
-				$('[id=hrhos_subname2]').slice(0,1).prop("disabled", true);
-				$('[id=hrhos_subname2]').slice(1,2).prop("disabled", true);
-				$('[id=hrhos_subname2]').slice(2,3).prop("disabled", true);
+				$('[id=hrctf_familyname]').slice(3,4).prop("disabled", false);
+				$('[id=hrctf_familyname]').slice(0,1).prop("disabled", true);
+				$('[id=hrctf_familyname]').slice(1,2).prop("disabled", true);
+				$('[id=hrctf_familyname]').slice(2,3).prop("disabled", true);
 			}
 				});
 			}
