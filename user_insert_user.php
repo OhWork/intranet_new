@@ -8,6 +8,7 @@
 <?php
     include 'database/db_tools.php';
 	include 'connect.php';
+	
 	if(!empty($_POST['user_id'])){
 		$data['user_name'] = $_POST['user_name'];
 		$data['user_last'] = $_POST['user_last'];
@@ -20,11 +21,12 @@
 		$rsfix = $db->update('user',$data,'user_id',$_POST['user_id']);
 		
 		$data['systemallow_service'] = $_POST['systemallow_service'];
-		$data['systemallow_news'] = $_POST['user_news_allow'];
+		$data['systemallow_news'] = $_POST['systemallow_news'];
 		$data['systemallow_confer'] = $_POST['systemallow_confer'];
 		$data['systemallow_admin'] = $_POST['systemallow_admin'];
 		$data['systemallow_touristreport'] = $_POST['systemallow_touristreport'];
 		$data['systemallow_drive'] = $_POST['systemallow_drive'];
+		$data['systemallow_hrs'] = $_POST['systemallow_hrs'];
 		$rsfixsystem = $db->update('systemallow',$data,'systemallow_id',$_POST['systemallow_id']);
 		
 		if(getenv(HTTP_X_FORWARDED_FOR)){
@@ -34,7 +36,7 @@
         }
             $ipshow = gethostbyaddr($ip);
             $log = $db->insert('log',array(
-        	'log_system' => 'UpdateStatusonline-ConferenceRoom',
+        	'log_system' => 'UserSystem',
         	'log_action' => 'Edit',
         	'log_action_date' => date("Y-m-d H:i"),
         	'log_action_by' => $_POST['log_user'],
@@ -48,6 +50,7 @@
 	'systemallow_confer' => $_POST['systemallow_confer'],
 	'systemallow_admin' => $_POST['systemallow_admin'],
 	'systemallow_touristreport' => $_POST['systemallow_touristreport'],
+	'systemallow_hrs' => $_POST['systemallow_hrs'],
 	'systemallow_drive' => $_POST['systemallow_drive']
 	));
 	$last_id = $db->specifytable2('systemallow_id','systemallow','ORDER BY systemallow_id DESC LIMIT 0 , 1')->executeAssoc();
@@ -86,6 +89,8 @@
     	    echo "<div class='statusok'>เพิ่มสำเร็จ</div>";
     	}else if($rsfix){
             echo "<div class='statusok'>แก้ไขสำเร็จ</div>";
+        }else if($rsfixsystem){
+            echo "<div class='statusok'>แก้ไขสำเร็จ</div>";
         }else{
             echo("ไม่สำเร็จ");
             echo $last_id;
@@ -95,7 +100,7 @@
             header( "Refresh: 2; $link" );
 
         }else{
-            $link = "admin_index.php?url=admin_user_index.php";
+            $link = "admin_index.php";
             header( "Refresh: 2; $link" );
         }
 }

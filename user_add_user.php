@@ -17,6 +17,7 @@ if (!empty($_SESSION['user_name'])):
   $lbnews = new label("ระบบจัดการข่าวสาร");
   $lbzpodrive = new label("ระบบการจัดการเอกสาร");
   $lbconfer = new label("ระบบจองห้องประชุม");
+  $lbhrs = new label("ระบบขอหนังสือรับรอง");
   $lbradiotouristreport = new label("ระบบจัดการคนเข้าชมสวนสัตว์");
   $lbadmin = new label("ระบบจัดการผู้ใช้");
   $txtuser = new textfield('user_user','user_user','form-control css-require','');
@@ -73,6 +74,12 @@ if (!empty($_SESSION['user_name'])):
         $radiotouristreport->add('อนุญาต',1,'');
         $radiotouristreport->add('ไม่อนุญาต',0,'checked');
   }
+  $radiohrs = new radioGroup();
+  $radiohrs->name = 'systemallow_hrs';
+  if(empty($id)){
+        $radiohrs->add('อนุญาต',1,'');
+        $radiohrs->add('ไม่อนุญาต',0,'checked');
+  }
    $submit = new buttonok("ยืนยัน","btnSubmit","btn btn-success col-md-12","");
     if(!empty($_GET['id'])){
 	$id = $_GET['id'];
@@ -127,6 +134,13 @@ if (!empty($_SESSION['user_name'])):
     	}else if($sa['systemallow_confer'] == 0){
         $radioconfer->add('อนุญาต',1,'');
         $radioconfer->add('ไม่อนุญาต',0,'checked');
+        }
+    if($sa["systemallow_hrs"] == 1){
+    	$radiohrs->add('อนุญาต',1,'checked');
+    	$radiohrs->add('ไม่อนุญาต',0,'');
+    	}else if($sa['systemallow_hrs'] == 0){
+        $radiohrs->add('อนุญาต',1,'');
+        $radiohrs->add('ไม่อนุญาต',0,'checked');
         }
 if($sa["systemallow_touristreport"] == 1){
     	$radiotouristreport->add('อนุญาต',1,'checked');
@@ -379,6 +393,14 @@ function autoTab2(obj,typeCheck){
             <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3"></div>
         </div>
     </div>
+    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+		<div class="row">
+            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3"></div>
+            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3 usu" style="padding-top: 14px;"><?php echo $lbhrs; ?></div>
+            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3 usu2" style="padding-top: 14px;"><?php echo $radiohrs; ?></div>
+            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3"></div>
+        </div>
+    </div>    
     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" style="padding-bottom: 15px;">
         <div class="row">
             <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3"></div>
@@ -395,6 +417,7 @@ function autoTab2(obj,typeCheck){
 
  <input type='hidden' name='log_user' value='<?php echo $log_user; ?>'/>
  <input type='hidden' name='user_id' value='<?php echo $_GET['id'];?>'/>
+  <input type='hidden' name='systemallow_id' value='<?php echo $_GET['id'];?>'/>
 
 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" style="margin-top:10px;margin-bottom 20px;">
 	<div class="row">
