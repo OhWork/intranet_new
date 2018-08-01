@@ -28,7 +28,7 @@
     $txtprovince = new textfield('hrnos_province','','form-control','','');
     $txtsalary = new textfield('hrnos_province','','form-control','','');
     $txtctfname = new textfield('hrctf_ctfname','','form-control','','');
-    $txtfamilyname = new textfield('hrctf_familyname','hrctf_familyname_id','form-control','','');
+    $txtfamilyname = new textfield('hrctf_familyname','hrctf_familyname','form-control','','');
     $txtdatestart = new textfieldcalendarreadonly('hrhos_datestart','datetimepicker1','','form-control','input-group-addon','datetimepicker1');
     $button = new buttonok("ส่งแบบฟอร์ม","","btn btn-success btn-lg btn-block bt3success col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","");
     echo $form->open("","","col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10","","");
@@ -319,7 +319,7 @@
 				$('#parent8').prop('checked',true);
 				$('#cer').hide();
 				$('#hos').fadeIn("slow");;
-				$('[id=hrctf_familyname_id]').slice(0).prop("disabled", true);
+				$('[id=hrctf_familyname]').slice(0).prop("disabled", true);
 				$('input[name=hrctf_familytype]').on("change",function(e) {
 				var valchange = $(this).val();
 				if(valchange == 1){
@@ -332,29 +332,29 @@
 */
 			}
 			else if(valchange == 2) {
-				$('[id=hrctf_familyname_id]').slice(0,1).prop("disabled", false);
-				$('[id=hrctf_familyname_id]').slice(1,2).prop("disabled", true);
-				$('[id=hrctf_familyname_id]').slice(2,3).prop("disabled", true);
-				$('[id=hrctf_familyname_id]').slice(3,4).prop("disabled", true);
+				$('[id=hrctf_familyname]').slice(0,1).prop("disabled", false);
+				$('[id=hrctf_familyname]').slice(1,2).prop("disabled", true);
+				$('[id=hrctf_familyname]').slice(2,3).prop("disabled", true);
+				$('[id=hrctf_familyname]').slice(3,4).prop("disabled", true);
 
 			}
 			else if(valchange == 3) {
-				$('[id=hrctf_familyname_id]').slice(1,2).prop("disabled", false);
-				$('[id=hrctf_familyname_id]').slice(0,1).prop("disabled", true);
-				$('[id=hrctf_familyname_id]').slice(2,3).prop("disabled", true);
-				$('[id=hrctf_familyname_id]').slice(3,4).prop("disabled", true);
+				$('[id=hrctf_familyname]').slice(1,2).prop("disabled", false);
+				$('[id=hrctf_familyname]').slice(0,1).prop("disabled", true);
+				$('[id=hrctf_familyname]').slice(2,3).prop("disabled", true);
+				$('[id=hrctf_familyname]').slice(3,4).prop("disabled", true);
 			}
 			else if(valchange == 4) {
-				$('[id=hrctf_familyname_id]').slice(2,3).prop("disabled", false);
-				$('[id=hrctf_familyname_id]').slice(0,1).prop("disabled", true);
-				$('[id=hrctf_familyname_id]').slice(1,2).prop("disabled", true);
-				$('[id=hrctf_familyname_id]').slice(3,4).prop("disabled", true);
+				$('[id=hrctf_familyname]').slice(2,3).prop("disabled", false);
+				$('[id=hrctf_familyname]').slice(0,1).prop("disabled", true);
+				$('[id=hrctf_familyname]').slice(1,2).prop("disabled", true);
+				$('[id=hrctf_familyname]').slice(3,4).prop("disabled", true);
 			}
 			else if(valchange == 5) {
-				$('[id=hrctf_familyname_id]').slice(3,4).prop("disabled", false);
-				$('[id=hrctf_familyname_id]').slice(0,1).prop("disabled", true);
-				$('[id=hrctf_familyname_id]').slice(1,2).prop("disabled", true);
-				$('[id=hrctf_familyname_id]').slice(2,3).prop("disabled", true);
+				$('[id=hrctf_familyname]').slice(3,4).prop("disabled", false);
+				$('[id=hrctf_familyname]').slice(0,1).prop("disabled", true);
+				$('[id=hrctf_familyname]').slice(1,2).prop("disabled", true);
+				$('[id=hrctf_familyname]').slice(2,3).prop("disabled", true);
 			}
 				});
 			}
