@@ -89,8 +89,6 @@
     	    echo "<div class='statusok'>เพิ่มสำเร็จ</div>";
     	}else if($rsfix){
             echo "<div class='statusok'>แก้ไขสำเร็จ</div>";
-        }else if($rsfixsystem){
-            echo "<div class='statusok'>แก้ไขสำเร็จ</div>";
         }else{
             echo("ไม่สำเร็จ");
             echo $last_id;
