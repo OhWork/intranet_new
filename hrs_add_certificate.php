@@ -15,23 +15,23 @@
     $txtname = new textfield('hrctf_name','problem_work','form-control','','');
     $txttime = new textfieldcalendarreadonly('hrctf_datestart','datetimepicker1','','form-control','input-group-addon btn calen','datetimepicker1');
     $txtposition = new textfield('hrctf_position','problem_position','form-control','','');
-    $txtsubname = new textfield('','hrhos_subname','form-control ','','');
-    $txtsubname2 = new textfield('','hrctf_familyname','form-control ','','');
     $selectdevision = new SelectFromDB();
     $selectdevision->name = 'zoo_zoo_id';
     $selectdevision->lists = 'โปรดระบุ';
-        $selectdevision = new SelectFromDB();
+    $selectdevision = new SelectFromDB();
     $selectdevision->name = 'zoo_zoo_id';
     $selectdevision->lists = 'โปรดระบุ';
-    $txtname = new textfield('hrhos_name','','form-control','','');
     $txthospital = new textfield('hrhos_hosname','','form-control','','');
     $txtprovince = new textfield('hrnos_province','','form-control','','');
-    $txtsalary = new textfield('hrnos_province','','form-control','','');
+    $txtsalary = new textfield('hrctf_salary','','form-control','','');
     $txtctfname = new textfield('hrctf_ctfname','','form-control','','');
+    $txtwhoname = new textfield('hrctf_whoname','','form-control','','');
+    $txtwhofu = new textfield('hrctf_whofu','','form-control','','');
+    $txteducation = new textfield('hrctf_educationname','','form-control','','');
     $txtfamilyname = new textfield('hrctf_familyname','hrctf_familyname_id','form-control','','');
     $txtdatestart = new textfieldcalendarreadonly('hrhos_datestart','datetimepicker1','','form-control','input-group-addon','datetimepicker1');
     $button = new buttonok("ส่งแบบฟอร์ม","","btn btn-success btn-lg btn-block bt3success col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","");
-    echo $form->open("","","col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10","","");
+    echo $form->open("","","col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10","hrs_insert_certificate.php","");
  ?>
  <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" style="padding-top:8px;">
 	<div class="row">
@@ -85,7 +85,7 @@
 							<input type="radio" name="typectf_typectf"  id="parent3" value="3"> รับรองเข้ารับการศึกษา (สถาบันการศึกษา)
 						</label>
 						<label class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-							<?php echo $txtsubname;?>
+							<?php echo $txteducation;?>
 						</label>
 					</div>
 				</div>
@@ -102,12 +102,12 @@
 							<input type="radio" name="typectf_typectf" id="parent5" value="5"> รับรองการค้ำประกันการเข้าทำงาน ของ
 						</label>
 						<label class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6">
-							<?php echo $txtsubname;?>
+							<?php echo $txtwhoname;?>
 						</label>
 						<label class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6" style="padding-left:34px;padding-top:7px;"> ซึ่งเกี่ยวข้องกับข้าพเจ้าโดยเป็น
 						</label>
 						<label class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6">
-							<?php echo $txtsubname;?>
+							<?php echo $txtwhofu;?>
 						</label>
 					</div>
 				</div>
@@ -124,7 +124,7 @@
 							<input type="radio" name="typectf_typectf"  id="parent6" value="6"> อื่นๆ
 						</label>
 						<label class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-							<?php echo $txtsubname;?>
+							<?php echo $txtctfname;?>
 						</label>
 					</div>
 				</div>
@@ -252,7 +252,11 @@
 				</div>
 				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-2" style="margin-bottom:16px;">
 					<div class="row">
-						<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4"></div>
+						<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
+    						<input type='hidden' name='hrctf_datereg' value='<?php echo date("Y-m-d");?>'>
+    						<input type='hidden' name='hrctf_dateupdate' value='-'>
+    						<input type='hidden' name='hrctf_status' value='N'>
+						</div>
 						<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
 							<?php echo $button; ?>
 						</div>
