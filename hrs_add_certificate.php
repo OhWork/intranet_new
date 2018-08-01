@@ -13,7 +13,8 @@
     $lbhospital = new label('รับการรักษาจากสถานพยาบาล');
     $txtrecipient = new textfield('hrctf_recipient','problem_work','form-control','','');
     $txtname = new textfield('hrctf_name','problem_work','form-control','','');
-    $txttime = new textfieldcalendarreadonly('hrctf_datestart','datetimepicker1','','form-control','input-group-addon btn calen','datetimepicker1');
+    $txttime = new textfieldcalendarreadonly('hrctf_datestartwork','datetimepicker1','','form-control','input-group-addon btn calen','datetimepicker1');
+    $txtdatestarthos = new textfieldcalendarreadonly('hrhos_datestarthos','datetimepicker2','','form-control','input-group-addon','datetimepicker2');
     $txtposition = new textfield('hrctf_position','problem_position','form-control','','');
     $selectdevision = new SelectFromDB();
     $selectdevision->name = 'zoo_zoo_id';
@@ -29,7 +30,7 @@
     $txtwhofu = new textfield('hrctf_whofu','hrctf_ctfname_id','form-control','','');
     $txteducation = new textfield('hrctf_educationname','hrctf_ctfname_id','form-control','','');
     $txtfamilyname = new textfield('hrctf_familyname','hrctf_familyname_id','form-control','','');
-    $txtdatestart = new textfieldcalendarreadonly('hrhos_datestart','datetimepicker1','','form-control','input-group-addon','datetimepicker1');
+    
     $button = new buttonok("ส่งแบบฟอร์ม","","btn btn-success btn-lg btn-block bt3success col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","");
     echo $form->open("","","col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10","hrs_insert_certificate.php","");
  ?>
@@ -371,7 +372,6 @@
 	        showClose:true,
 	        locale:moment.locale('th')
         })
-/*
    $('#datetimepicker2').datetimepicker({
 	        format:'YYYY-MM-DD',
 	        useCurrent: false,
@@ -383,6 +383,5 @@
         }).mouseleave(function (e) {
           $('#datetimepicker2').data("DateTimePicker").hide();
    });
-*/
    });
 </script>
