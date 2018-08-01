@@ -22,6 +22,7 @@
 	$rs = $db->executeRow();
 	$system_id = $rs['systemallow_systemallow_id'];
     $rsallow = $db->findByPK('systemallow','systemallow_id',$system_id)->executeAssoc();
+    print_r($rsallow);
 	if($rs){
     	$_SESSION['user_id'] = $rs['user_id'];
 		$_SESSION['user_name'] = $rs['user_name'];
@@ -33,12 +34,15 @@
 		$_SESSION['systemallow_confer'] = $rsallow['systemallow_confer'];
 		$_SESSION['systemallow_touristreport'] = $rsallow['systemallow_touristreport'];
 		$_SESSION['systemallow_km'] = $rsallow['systemallow_km'];
+		$_SESSION['systemallow_hrs'] = $rsallow['systemallow_hrs'];
 		$_SESSION['subzoo_subzoo_id'] = $rs['subzoo_subzoo_id'];
 		$_SESSION['subzoo_zoo_zoo_id'] = $rs['subzoo_zoo_zoo_id'];
 		?>
 		<script>
+
 			alert('เข้าสู่ระบบได้เรียบร้อย');
 			window.location.href = 'admin_index.php';
+
 		</script>
 		<?php
 		//header('location: admin_index.php');
