@@ -19,7 +19,7 @@
     $selectzoo = new SelectFromDB();
     $selectzoo->name = 'zoo_id';
     $selectzoo->lists = 'โปรดระบุ';
-    $columns = array('zoo_name','subzoo_no');
+    $columns = array('zoo_name','zoo_no');
     $row = "<div class='row'>";
     $rowend = "</div>";
     $button = new buttonok('ค้นหา','','btn btn-primary','submit');

@@ -15,6 +15,7 @@
 	if(!empty($_POST['zoo_id'])){
 
 		$data['zoo_name'] = $_POST['zoo_name'];
+		$data['zoo_no'] = $_POST['zoo_no'];
 		$data['zoo_enable'] = $_POST['zoo_enable'];
 
 		$rsfix = $db->update('zoo',$data,'zoo_id',$_POST['zoo_id']);
@@ -22,6 +23,7 @@
 	}else{
 	$rs = $db->insert('zoo',array(
 	'zoo_name' => $_POST['zoo_name'],
+	'zoo_no' => $_POST['zoo_no'],
 	'zoo_enable' => $_POST['zoo_enable']
 	));
 

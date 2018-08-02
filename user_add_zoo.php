@@ -2,8 +2,10 @@
   $form = new form();
   $id = $_GET['id'];
   $lbzoo = new label("สำนัก/สวนสัตว์ :");
+  $lbzoono = new label("ลำดับ :");
   $lbzooenable = new label("สถานะการใช้งาน :");
   $txtzoo = new textfield('zoo_name','','form-control css-require','');
+  $txtzoono = new textfield('zoo_no','','form-control css-require','');
   $radiozooenable = new radioGroup();
   $radiozooenable->name = 'zoo_enable';
   if(empty($id)){
@@ -15,6 +17,7 @@
   if(!empty($_GET['id'])){
 	$r = $db->findByPK('zoo','zoo_id',$id)->executeRow();
 	$txtzoo->value = $r['zoo_name'];
+	$txtzoono->value = $r['zoo_no'];
   if($r["zoo_enable"] == 1){
     	$radiozooenable->add('ใช้งานได้',1,'checked');
     	$radiozooenable->add('ไม่สามารถใช้งานได้',0,'');
@@ -34,6 +37,12 @@
 				<div class='row'>
 					<div class='col-md-3'  style='padding-top: 7px;'><?php echo $lbzoo ?></div>
 					<div class='col-md-9 form-group has-feedback'><?php echo $txtzoo ?></div>
+				</div>
+			</div>
+			<div class='col-md-12'>
+				<div class='row'>
+					<div class='col-md-3'  style='padding-top: 7px;'><?php echo $lbzoono ?></div>
+					<div class='col-md-9 form-group has-feedback'><?php echo $txtzoono ?></div>
 				</div>
 			</div>
 			<div class="row">
