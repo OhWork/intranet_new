@@ -49,8 +49,8 @@ if (!empty($_SESSION['user_name'])):
 	$zoo = $r['subzoo_zoo_zoo_id'];
     $subzoo = $r['subzoo_subzoo_id'];
     if($r["user_enable"] == 1){
-    	$radiouserenable->add('ใช้งานได้',1,'checked');
-    	$radiouserenable->add('ไม่สามารถใช้งานได้',0,'');
+    	$radiouserenable->add(' ใช้งานได้',1,'checked');
+    	$radiouserenable->add(' ไม่สามารถใช้งานได้',0,'');
     	}else if($sa['systemallow_admin'] == 0){
         $radiouserenable->add('ใช้งานได้',1,'');
         $radiouserenable->add('ไม่สามารถใช้งานได้',0,'checked');
@@ -313,12 +313,11 @@ function autoTab2(obj,typeCheck){
 					<div id="msg2"></div>
 				</div>
 			</div>
-			
 			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" style="padding-bottom: 15px;">
 				<div class="row">
-					<div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2" style="padding-top: 14px;"><?php echo $lbuserenable; ?></div>
-					<div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3" style="padding-top: 14px;"><?php echo $radiouserenable; ?></div>
-					<div class="col-xl-7 col-lg-7 col-md-7 col-sm-7 col-7"></div>
+					<div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3" style="padding-top: 14px;"><?php echo $lbuserenable; ?></div>
+					<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4" style="padding-top: 14px;"><?php echo $radiouserenable; ?></div>
+					<div class="col-xl-5 col-lg-5 col-md-5 col-sm-5 col-5"></div>
 				</div>
 			</div>
 <!--
