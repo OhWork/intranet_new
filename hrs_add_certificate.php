@@ -29,7 +29,7 @@
     $txtwhofu = new textfield('hrctf_whofu','hrctf_ctfname_id','form-control','','');
     $txteducation = new textfield('hrctf_educationname','hrctf_ctfname_id','form-control','','');
     $txtfamilyname = new textfield('hrctf_familyname','hrctf_familyname_id','form-control','','');
-    
+
     $button = new buttonok("ส่งแบบขอหนังสือรับรอง","","btn btn-success btn-lg btn-block bt3success col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","");
     echo $form->open("","","col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10","hrs_insert_certificate.php","");
  ?>
@@ -227,7 +227,7 @@
 								</div>
 								<div class="date-form dayinbox col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8 form-horizontal control-group controls">
 									<div class="input-group">
-										<?php echo $txtdatestartwork; ?>
+										<?php echo $txtdatestarthos; ?>
 									</div>
 								</div>
 							</div>
@@ -353,7 +353,6 @@
 	        sideBySide: true,
             allowInputToggle: true,
 	        ignoreReadonly: true,
-	        showClose:true,
 	        locale:moment.locale('th')
         })
    $('#datetimepicker2').datetimepicker({
@@ -362,10 +361,7 @@
 	        sideBySide: true,
             allowInputToggle: true,
 	        ignoreReadonly: true,
-	        showClose:true,
 	        locale:moment.locale('th')
-        }).mouseleave(function (e) {
-          $('#datetimepicker2').data("DateTimePicker").hide();
-   });
+        })
    });
 </script>
