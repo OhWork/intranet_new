@@ -272,7 +272,7 @@ function autoTab2(obj,typeCheck){
 			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-2"  style="border-bottom:solid 1px #E0E0E0;">
 				<h4>สิทธิ์การเข้าถึงระบบ</h4>
 			</div>
-			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-2" style="color:#0288D1;">
+			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-2" style="color:#0288D1;font-size: 1rem;">
 				<div class="row">
 					<div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
 						<?php echo $lbuser; ?>
