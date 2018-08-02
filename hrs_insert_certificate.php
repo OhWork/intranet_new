@@ -1,4 +1,5 @@
 <?php  ob_start();
+    error_reporting(E_ERROR | E_WARNING | E_PARSE);
     include 'database/db_tools.php';
 	include 'connect.php';
 
@@ -50,7 +51,7 @@
     	}else if($rsfix){
             echo "<div class='statusok'>แก้ไขสำเร็จ</div>";
         }
-            $link = "hrs_index.php?url=hrs_add_certificate.php";
+            $link = "index.php?url=hrs_add_certificate.php";
             header( "Refresh: 2; $link" );
 }
 
