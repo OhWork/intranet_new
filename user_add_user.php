@@ -300,9 +300,21 @@ function autoTab2(obj,typeCheck){
 					<div id="msg2"></div>
 				</div>
 			</div>
+			
+			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" style="padding-bottom: 15px;">
+				<div class="row">
+					<div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2" style="padding-top: 14px;"><?php echo $lbuserenable; ?></div>
+					<div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3" style="padding-top: 14px;"><?php echo $radiouserenable; ?></div>
+					<div class="col-xl-7 col-lg-7 col-md-7 col-sm-7 col-7"></div>
+				</div>
+			</div>
+<!--
+//      $gen_password=sha1(md5(md5(md5('test'))));
+//      echo $gen_password."<br>";
+-->
 			<input type='hidden' name='log_user' value='<?php echo $log_user; ?>'/>
 			<input type='hidden' name='user_id' value='<?php echo $_GET['id'];?>'/>
-			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" style="margin-bottom: 16px;">
+			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" style="margin-bottom:16px;">
 				<div class="row">
 					<div class="col-md-4"></div>
 					<div class="col-md-4">
