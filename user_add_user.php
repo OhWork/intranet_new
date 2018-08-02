@@ -20,12 +20,12 @@ if (!empty($_SESSION['user_name'])):
   $lbhrs = new label("ระบบขอหนังสือรับรอง");
   $lbradiotouristreport = new label("ระบบจัดการคนเข้าชมสวนสัตว์");
   $lbadmin = new label("ระบบจัดการผู้ใช้");
-  $txtuser = new textfield('user_user','user_user','form-control css-require','');
-  $txtpass = new pass('user_pass','form-control css-require','','user_pass');
-  $txtpass_confirm = new pass('user_pass_confirm','form-control css-require','','user_pass_confirm');
-  $txtname = new textfield('user_name','','form-control css-require','');
+  $txtuser = new textfield('user_user','user_user','form-control','');
+  $txtpass = new pass('user_pass','form-control','','user_pass');
+  $txtpass_confirm = new pass('user_pass_confirm','form-control','','user_pass_confirm');
+  $txtname = new textfield('user_name','','form-control','');
   $txtnameen = new textfield('user_nameeng','','form-control','');
-  $txtlast = new textfield('user_last','','form-control css-require','');
+  $txtlast = new textfield('user_last','','form-control','');
   $txtlasten = new textfield('user_lasteng','','form-control','');
   $txttel = new textfield('user_tel','data2','form-control','');
   $txttel->functions = "onkeyup='autoTab2(this,2)'";
@@ -223,9 +223,10 @@ function autoTab2(obj,typeCheck){
 							<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 								<?php echo $lbname; ?>
 							</div>
-							<div class="form-group has-feedback col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+							<div class="form-group has-feedback col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 showrequired">
 								<?php echo $txtname; ?>
 							</div>
+							<div id="msg"></div>
 						</div>
 					</div>
 					<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6">
@@ -233,9 +234,10 @@ function autoTab2(obj,typeCheck){
 							<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 								<?php echo $lblast; ?>
 							</div>
-							<div class="form-group has-feedback col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+							<div class="form-group has-feedback col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 showrequired">
 								<?php echo $txtlast; ?>
 							</div>
+							<div id="msg"></div>
 						</div>
 					</div>
 				</div>
@@ -295,9 +297,10 @@ function autoTab2(obj,typeCheck){
 							<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 								<?php echo $lbpass; ?>
 							</div>
-							<div class="form-group has-feedback col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+							<div class="form-group has-feedback col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 showrequired">
 								<?php echo $txtpass; ?>
 							</div>
+							<div id="msg"></div>
 						</div>
 					</div>
 					<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6">
@@ -305,9 +308,10 @@ function autoTab2(obj,typeCheck){
 							<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 								<?php echo $lbpasscon; ?>
 							</div>
-							<div class="form-group has-feedback col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+							<div class="form-group has-feedback col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 showrequired">
 								<?php echo $txtpass_confirm; ?>
 							</div>
+							<div id="msg"></div>
 						</div>
 					</div>
 					<div id="msg2"></div>
@@ -350,9 +354,18 @@ $(document).ready(function() {
 				required: true,
 				rangelength: [8, 16]
 			},
+			user_pass: "required",
+			user_name: "required",
+			user_pass_confirm: "required",
+			user_last: "required",
+
 		},
 		messages: {
 			user_user:'*กรุณากรอกชื่อผู้ใช้ระหว่าง 8-16 ตัวอักษร*',
+			user_pass:'*กรุณากรอกรหัสผ่าน*',
+			user_name:'*กรุณากรอกชื่อ*',
+			user_pass_confirm:'*กรุณายืนยันรหัสผ่าน*',
+			user_last:'*กรุณากรอกนามสกุล*',
 		},
 				highlight: function ( element, errorClass, validClass ) {
 					$( element ).parents( ".showrequired" ).addClass( "text-danger" ).removeClass( "text-success" );
