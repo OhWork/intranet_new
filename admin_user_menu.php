@@ -7,6 +7,9 @@
 	                <a class="nav-link dropuser" href="admin_index.php?url=user_show_list.php">
 	                   <span data-feather="chevron-right"></span>รายการผู้ใช้
 	                </a>
+	                <a class="nav-link dropuser" href="admin_index.php?url=user_show_permission.php">
+	                   <span data-feather="chevron-right"></span>รายการกำหนดสิทธิ์ผู้ใช้
+	                </a>
 	                <a class="nav-link dropuser" href="admin_index.php?url=user_show_division.php">
 	                   <span data-feather="chevron-right"></span>รายการฝ่าย
 	                </a>
