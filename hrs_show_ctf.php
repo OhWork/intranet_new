@@ -20,7 +20,7 @@
 </script>
 <?php
     $id = $_GET['id'];
-    $cfrs = $db->findByPK('hrctf','confer_id',$id)->executeAssoc();
+    $cfrs = $db->findByPK('hrctf','hrctf_id',$id)->executeAssoc();
     $confer_name = $cfrs['confer_name'];?>
     <div class='col-md-12' style="padding-top:16px;"><h4>รายการหนังสือรับรอง</h4></div>
 

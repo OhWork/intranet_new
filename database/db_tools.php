@@ -71,6 +71,32 @@
 			$this->sql = "UPDATE $table SET $rows WHERE $field = $value";
 			return mysqli_query($con,$this->sql);
 		}
+        function update2tb($table, $table2, $data, $field, $data2, $field2, $value, $value2){
+    		$con = $this->connect();
+			$rows ="";
+			$rows2 ="";
+			$i=0;
+			foreach($data as $k => $v){
+				if($k!=$field){
+					$rows.="$k ='$v'";
+					if($i<count($data)-1){
+						$rows.=',';
+					}
+					$i++;
+				}
+			}
+			foreach($data2 as $k => $v){
+				if($k!=$field2){
+					$rows2.="$k ='$v'";
+					if($i<count($data2)-1){
+						$rows2.=',';
+					}
+					$i++;
+				}
+			}
+			$this->sql = "UPDATE $table,$table2 SET $rows , $rows2 WHERE $field = $value AND $field2 = $value2";
+			return mysqli_query($con,$this->sql);
+		}
 		function updatefolder($table,$field1,$change,$field,$value,$field2,$value2){
 			$con = $this->connect();
     		$this->sql = "UPDATE $table SET $field1 = $change  WHERE $field = $value AND $field2 = $value2";

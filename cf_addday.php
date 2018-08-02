@@ -975,6 +975,12 @@
 											<div class='col-md-8 showrequired'><?php echo $tel; ?></div>
 										</div>
 									</div>
+									<?php 
+                                        $datenow = date("Y-m-d");
+                                    	$timenow = date("H:i");
+                                    	$adddatenow = $datenow."&nbsp;".$timenow;
+                                    ?>                                  
+                                    <input type='hidden' name='adddatenow' value='<?php echo $adddatenow; ?>'/>
 									<input type='hidden' id='status_event' name='eventconfer_status' value='W'/>
 									<input type='hidden' id='confer_id' name='confer_confer_id' value="<?php echo $id;?>">
 									<input type='hidden' id='status_online' name='eventconfer_status_online' value="W">

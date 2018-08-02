@@ -1,12 +1,12 @@
 <?php  ob_start();
-		error_reporting(E_ERROR | E_WARNING | E_PARSE);
+ 		error_reporting(E_ERROR | E_WARNING | E_PARSE);
 ?>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html" charset="utf-8">
         <link rel="stylesheet" href="CSS/bootstrap.css">
         <link rel="stylesheet" href="CSS/main.css">
-          <title>ระบบคอมพิวเตอร์เซอรวิส(New)</title>
+          <title>ระบบจองห้องประชุมออนไลน์</title>
 	</head>
 <?php
     include 'database/db_tools.php';
@@ -15,7 +15,6 @@
 	$datenow = date("Y-m-d");
 	$timenow = date("H:i");
 	$adddatenow = $datenow."&nbsp;".$timenow;
-
       if($_POST['subzoo_zoo_zoo_id'] == '' && $_POST['subzoo_zoo_zoo_id'] == 0){
           echo("กรุณาติดต่อเจ้าหน้าที่ไอที Call 1040");
       }else{
@@ -65,15 +64,15 @@
         	'confer_confer_id' => $_POST['confer_confer_id'],
         	'eventconfer_status' => $_POST['eventconfer_status'],
         	'headncf_headncf_id' => $_POST['headncf_headncf_id']
-    	));
+            ));
 	    }
 
     	if($rs){
     	    echo "<div class='statusok'>เพิ่มสำเร็จ</div>";
     	    $link = "cf_index.php?url=cf_calendar.php";
             header( "Refresh: 2; $link" );
-    	}else if($rsfix){
-            echo "<div class='statusok'>แก้ไขสำเร็จ</div>";
+        }else{
+            echo "เกิดปัญหา";
         }
 
 ?>
