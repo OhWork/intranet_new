@@ -26,39 +26,44 @@
         $radiozooenable->add('ไม่สามารถใช้งานได้',0,'checked');
     	}
     }
-  echo $form->open("form_reg","form","","user_insert_zoo.php",""); ?>
-	<div class='row'>
-		<div class='col-md-3'></div>
-		<div class='col-md-6'>
-			<div class='col-md-12'  style='margin-top: 16px;'>
+echo $form->open("form_reg","form","col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","user_insert_zoo.php",""); ?>
+<div class="row">
+	<div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3"></div>
+	<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6 usubd">
+		<div class="row">
+			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-2" style="border-bottom:solid 1px #E0E0E0;">
 				<h4>เพิ่มสวนสัตว์</h4>
 			</div>
-			<div class='col-md-12'>
-				<div class='row'>
-					<div class='col-md-3'  style='padding-top: 7px;'><?php echo $lbzoo ?></div>
-					<div class='col-md-9 form-group has-feedback'><?php echo $txtzoo ?></div>
-				</div>
+			<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3'>
+				<?php echo $lbzoo ?>
 			</div>
-			<div class='col-md-12'>
-				<div class='row'>
-					<div class='col-md-3'  style='padding-top: 7px;'><?php echo $lbzoono ?></div>
-					<div class='col-md-9 form-group has-feedback'><?php echo $txtzoono ?></div>
-				</div>
+			<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 form-group has-feedback'>
+				<?php echo $txtzoo ?>
 			</div>
-			<div class="row">
-            <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2" style="padding-top: 14px;"><?php echo $lbzooenable; ?></div>
-            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3" style="padding-top: 14px;"><?php echo $radiozooenable; ?></div>
-			<div class="col-xl-7 col-lg-7 col-md-7 col-sm-7 col-7"></div>
+			<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12'>
+				<?php echo $lbzoono ?>
+			</div>
+			<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 form-group has-feedback'>
+				<?php echo $txtzoono ?>
+			</div>
+			<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12'>
+				<div class="row">
+					<div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3" style="padding-top: 14px;"><?php echo $lbzooenable; ?></div>
+					<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4" style="padding-top: 14px;"><?php echo $radiozooenable; ?></div>
+					<div class="col-xl-5 col-lg-5 col-md-5 col-sm-5 col-5"></div>
+				</div>
 		    </div>
-			<div class='col-md-12'>
+			<input type='hidden' name='zoo_id' value='<?php echo $_GET['id'];?>'/>
+			<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3' style="margin-bottom: 16px;">
 				<div class='row'>
-					 <input type='hidden' name='zoo_id' value='<?php echo $_GET['id'];?>'/>
+					<div class='col-md-4'></div>
 					<div class='col-md-4'><?php echo $submit ?></div>
 					<div class='col-md-4'></div>
 				</div>
 			</div>
 		</div>
-		<div class='col-md-3'></div>
 	</div>
+	<div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3"></div>
+</div>
 <?php echo $form->close();
 ?>
