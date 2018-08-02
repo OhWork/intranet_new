@@ -16,7 +16,7 @@
 		$data['subtypetools_typetools_typetools_id'] = $_POST['subtypetools_typetools_typetools_id'];
 		$data['subzoo_subzoo_id'] = $_POST['subzoo_subzoo_id'];
 
-		$rs = $db->update('hrctf',$data,'hrctf_id',$_POST['hrctf_id'])->execute();
+		$rsfix = $db->update('hrctf',$data,'hrctf_id',$_POST['hrctf_id'])->execute();
 
 	}else{
         	$rs = $db->insert('hrctf',array(
@@ -29,10 +29,8 @@
         	'hrctf_familytype' => @$_POST['hrctf_familytype'],
         	'hrctf_familyname' => @$_POST['hrctf_familyname'],
         	'hrctf_hosname' => @$_POST['hrctf_hosname'],
-        	'hrctf_recipient' => @$_POST['hrctf_recipient'],
         	'hrctf_educationname' => @$_POST['hrctf_educationname'],
         	'hrctf_salary' => @$_POST['hrctf_salary'],
-        	'hrctf_ctfname' => @$_POST['hrctf_ctfname'],
         	'hrctf_whoname' => @$_POST['hrctf_whoname'],
         	'hrctf_whofu' => @$_POST['hrctf_whofu'],
         	'hrctf_status' => @$_POST['hrctf_status'],
