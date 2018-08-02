@@ -1,8 +1,7 @@
 <?php
     date_default_timezone_set('Asia/Bangkok');
-    $id = $_GET['id'];
+//     $id = $_GET['id'];
     $form = new form();
-    $lbrecipient = new label('เรียน');
     $lbname = new label('ชื่อ - นามสกุล');
     $lbposition = new label('ตำแหน่ง');
     $lbdevision = new label('สังกัด');
@@ -12,7 +11,6 @@
     $lbdatestart = new label('ตั้งแต่วันที่');
     $lbdateend = new label('ถึงวันที่');
     $lbhospital = new label('รับการรักษาจากสถานพยาบาล');
-    $txtrecipient = new textfield('hrctf_recipient','problem_work','form-control','','');
     $txtname = new textfield('hrctf_name','problem_work','form-control','','');
     $txtdatestartwork = new textfieldcalendarreadonly('hrctf_datestartwork','datetimepicker1','','form-control','input-group-addon btn calen','datetimepicker1');
     $txtdatestarthos = new textfieldcalendarreadonly('hrhos_datestarthos','datetimepicker2','','form-control','input-group-addon','datetimepicker2');
@@ -32,7 +30,7 @@
     $txteducation = new textfield('hrctf_educationname','hrctf_ctfname_id','form-control','','');
     $txtfamilyname = new textfield('hrctf_familyname','hrctf_familyname_id','form-control','','');
     
-    $button = new buttonok("ส่งแบบฟอร์ม","","btn btn-success btn-lg btn-block bt3success col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","");
+    $button = new buttonok("ส่งแบบขอหนังสือรับรอง","","btn btn-success btn-lg btn-block bt3success col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","");
     echo $form->open("","","col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10","hrs_insert_certificate.php","");
  ?>
  <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" style="padding-top:8px;">
@@ -43,14 +41,6 @@
 				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 					<h4>หนังสือรับรอง</h4>
 				</div>
-<!--
-				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-1">
-					<?php echo $lbrecipient; ?>
-				</div>
-				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-    				<?php echo $txtrecipient; ?>
-				</div>
--->
 				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-1">
 					<?php echo $lbname; ?>
 				</div>
@@ -72,21 +62,21 @@
 				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-2">
 					<div class="row">
 						<label class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-							<input type="radio" name="typectf_typectf" id="parent1" value="1"> รับรองเงินเดือน
+							<input type="radio" name="typectf_typectf_id" id="parent1" value="1"> รับรองเงินเดือน
 						</label>
 					</div>
 				</div>
 				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 					<div class="row">
 						<label class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-							<input type="radio" name="typectf_typectf" id="parent2" value="2"> รับรองการเป็นผู้ปฏิบัติงาน
+							<input type="radio" name="typectf_typectf_id" id="parent2" value="2"> รับรองการเป็นผู้ปฏิบัติงาน
 						</label>
 					</div>
 				</div>
 				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 					<div class="row">
 						<label class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-							<input type="radio" name="typectf_typectf"  id="parent3" value="3"> รับรองเข้ารับการศึกษา (สถาบันการศึกษา)
+							<input type="radio" name="typectf_typectf_id"  id="parent3" value="3"> รับรองเข้ารับการศึกษา (สถาบันการศึกษา)
 						</label>
 						<label class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 							<?php echo $txteducation;?>
@@ -96,14 +86,14 @@
 				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 					<div class="row">
 						<label class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-							<input type="radio" name="typectf_typectf"  id="parent4" value="4"> รับรองการค้ำประกันการกู้เงินจากสถาบันการเงิน
+							<input type="radio" name="typectf_typectf_id"  id="parent4" value="4"> รับรองการค้ำประกันการกู้เงินจากสถาบันการเงิน
 						</label>
 					</div>
 				</div>
 				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 					<div class="row">
 						<label class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6" style="padding-top:7px;">
-							<input type="radio" name="typectf_typectf" id="parent5" value="5"> รับรองการค้ำประกันการเข้าทำงาน ของ
+							<input type="radio" name="typectf_typectf_id" id="parent5" value="5"> รับรองการค้ำประกันการเข้าทำงาน ของ
 						</label>
 						<label class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6">
 							<?php echo $txtwhoname;?>
@@ -118,22 +108,10 @@
 				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 					<div class="row">
 						<label class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-							<input type="radio" name="typectf_typectf"  id="parent7" value="7"> ขอหนังสือรับรองพยาบาล
+							<input type="radio" name="typectf_typectf_id"  id="parent7" value="7"> ขอหนังสือรับรองพยาบาล
 						</label>
 					</div>
 				</div>
-<!--
-				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-					<div class="row">
-						<label class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-							<input type="radio" name="typectf_typectf"  id="parent6" value="6"> อื่นๆ
-						</label>
-						<label class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-							<?php echo $txtctfname;?>
-						</label>
-					</div>
-				</div>
--->
 				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-2" id="cer">
 					<div class="row">
 						<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
@@ -259,10 +237,10 @@
 				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-2" style="margin-bottom:16px;">
 					<div class="row">
 						<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
-    						<input type='hidden' name='hrctf_datereg' value='<?php echo date("Y-m-d");?>'>
-    						<input type='hidden' name='hrctf_dateupdate' value='-'>
-    						<input type='hidden' name='hrctf_status' value='S'>
-    						<input type='hidden' name='hrctf_id' value='<?php echo $_GET['id']; ?>'>
+    						<input type='hidden' name='hrctf_datereg' value='<?php echo date("Y-m-d");?>'/>
+    						<input type='hidden' name='hrctf_dateupdate' value='-'/>
+    						<input type='hidden' name='hrctf_status' value='S'/>
+<!--     						<input type='hidden' name='hrctf_id' value='<?php echo $_GET['id']; ?>'/> -->
 						</div>
 						<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
 							<?php echo $button; ?>
@@ -282,7 +260,7 @@
   		$('#parent1').prop('checked',true);
   		$('#hos').hide();
   		$('[id=hrctf_ctfname_id]').slice(0).prop("disabled", true);
-		$('input[name=typectf_typectf]').on("change",function(e) {
+		$('input[name=typectf_typectf_id]').on("change",function(e) {
 		var valchange = $(this).val();
 		if(valchange == 1 || valchange == 2 || valchange == 3 || valchange == 4 || valchange == 5 || valchange == 6){
 			$('#cer').fadeIn("slow");;
