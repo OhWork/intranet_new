@@ -1,5 +1,6 @@
 <?php
     date_default_timezone_set('Asia/Bangkok');
+    $id = $_GET['id'];
     $form = new form();
     $lbrecipient = new label('เรียน');
     $lbname = new label('ชื่อ - นามสกุล');
@@ -261,6 +262,7 @@
     						<input type='hidden' name='hrctf_datereg' value='<?php echo date("Y-m-d");?>'>
     						<input type='hidden' name='hrctf_dateupdate' value='-'>
     						<input type='hidden' name='hrctf_status' value='S'>
+    						<input type='hidden' name='hrctf_id' value='<?php echo $_GET['id']; ?>'>
 						</div>
 						<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
 							<?php echo $button; ?>

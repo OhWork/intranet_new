@@ -20,22 +20,9 @@
 
 	}else{
         	$rs = $db->insert('hrctf',array(
-        	'hrctf_name' => @$_POST['hrctf_name'],
-        	'hrctf_position' => @$_POST['hrctf_position'],
-        	'hrctf_datestartwork' => @$_POST['hrctf_datestartwork'],
-        	'hrctf_datestarthos' => @$_POST['hrctf_datestarthos'],
-            'hrctf_datereg' => @$_POST['hrctf_datereg'],
-            'hrctf_dateupdate' => @$_POST['hrctf_dateupdate'],
-        	'hrctf_familytype' => @$_POST['hrctf_familytype'],
-        	'hrctf_familyname' => @$_POST['hrctf_familyname'],
-        	'hrctf_hosname' => @$_POST['hrctf_hosname'],
-        	'hrctf_educationname' => @$_POST['hrctf_educationname'],
-        	'hrctf_salary' => @$_POST['hrctf_salary'],
-        	'hrctf_whoname' => @$_POST['hrctf_whoname'],
-        	'hrctf_whofu' => @$_POST['hrctf_whofu'],
-        	'hrctf_status' => @$_POST['hrctf_status'],
-        	'typectf_typectf' => @$_POST['typectf_typectf'],
-        	'zoo_zoo_id' => @$_POST['zoo_zoo_id']
+        	
+        	'typectf_typectf' => $_POST['typectf_typectf'],
+        	'zoo_zoo_id' => $_POST['zoo_zoo_id']
     	));
 	    }
 
