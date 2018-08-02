@@ -206,804 +206,803 @@
 				}
 				?>
 }
-	</script>
-<div class='col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2'></div>
-<div class='col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8'>
-    <div class="row">
-	    <div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12'>
-			<h4><?php echo $conferroom; ?></h4>
-		</div>
-		<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12'>
+</script>
+<div class='col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10'>
+	<div class="row">
+		<div class='col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1'></div>
+		<div class='col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10' style="padding-top:16px;background-color:#ffffff;border:solid 1px #E0E0E0;border-radius:7px;">
 			<div class="row">
-				<div class='col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8'>
-					<div class='row'>
-						<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 picbackground' id="room1">
-							<div id='myCarousel' class='carousel slide' data-ride='carousel'>
-								<ol class="carousel-indicators">
-									<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-									<li data-target="#myCarousel" data-slide-to="1"></li>
-									<li data-target="#myCarousel" data-slide-to="2"></li>
-								</ol>
-								<div class='carousel-inner slidewarpper' role='listbox'>
-									<div class='carousel-item active'>
-										<img class="d-block w-100" src='images/conferroom/zpo/confer1_1.JPG' alt="First slide">
-									</div>
-									<div class='carousel-item'>
-										<img class="d-block w-100" src='images/conferroom/zpo/confer1_2.JPG' alt="Second slide">
-									</div>
-									<div class='carousel-item'>
-										<img class="d-block w-100" src='images/conferroom/zpo/confer1_3.JPG' alt="Third slide">
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class='col-md-12 picbackground' id="room2">
-							<div id='myCarousel2' class='carousel slide' data-ride='carousel'>
-								<ol class="carousel-indicators">
-									<li data-target="#myCarousel2" data-slide-to="0" class="active"></li>
-									<li data-target="#myCarousel2" data-slide-to="1"></li>
-									<li data-target="#myCarousel2" data-slide-to="2"></li>
-									<li data-target="#myCarousel2" data-slide-to="3"></li>
-								</ol>
-								<div class='carousel-inner slidewarpper' role='listbox'>
-									<div class='carousel-item active'>
-										<img class="d-block w-100" src='images/conferroom/zpo/confer2_1.JPG' alt="First slide">
-									</div>
-									<div class='carousel-item'>
-										<img class="d-block w-100" src='images/conferroom/zpo/confer2_2.JPG' alt="Second slide">
-									</div>
-									<div class='carousel-item'>
-										<img class="d-block w-100" src='images/conferroom/zpo/confer2_3.JPG' alt="Third slide">
-									</div>
-									<div class='carousel-item'>
-										<img class="d-block w-100" src='images/conferroom/zpo/confer2_4.JPG' alt="Four slide">
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class='col-md-12 picbackground' id="room3">
-							<div id='myCarousel3' class='carousel slide' data-ride='carousel'>
-								<ol class="carousel-indicators">
-									<li data-target="#myCarousel3" data-slide-to="0" class="active"></li>
-									<li data-target="#myCarousel3" data-slide-to="1"></li>
-									<li data-target="#myCarousel3" data-slide-to="2"></li>
-									<li data-target="#myCarousel3" data-slide-to="3"></li>
-								</ol>
-								<div class='carousel-inner slidewarpper' role='listbox'>
-									<div class='carousel-item active'>
-										<img class="d-block w-100" src='images/conferroom/zpo/confer3_1.JPG' alt="First slide">
-									</div>
-									<div class='carousel-item'>
-										<img class="d-block w-100" src='images/conferroom/zpo/confer3_2.JPG' alt="Second slide">
-									</div>
-									<div class='carousel-item'>
-										<img class="d-block w-100" src='images/conferroom/zpo/confer3_3.JPG' alt="Third slide">
-									</div>
-									<div class='carousel-item'>
-										<img class="d-block w-100" src='images/conferroom/zpo/confer3_4.JPG' alt="Third slide">
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class='col-md-12 picbackground' id="room4">
-							<div id='myCarousel4' class='carousel slide' data-ride='carousel'>
-								<ol class="carousel-indicators">
-									<li data-target="#myCarousel4" data-slide-to="0" class="active"></li>
-									<li data-target="#myCarousel4" data-slide-to="1"></li>
-									<li data-target="#myCarousel4" data-slide-to="2"></li>
-								</ol>
-								<div class='carousel-inner slidewarpper' role='listbox'>
-									<div class='carousel-item active'>
-										<img class="d-block w-100" src='images/no_pic.png' alt="First slide">
-									</div>
-									<div class='carousel-item'>
-										<img class="d-block w-100" src='images/no_pic.png' alt="Second slide">
-									</div>
-									<div class='carousel-item'>
-										<img class="d-block w-100" src='images/no_pic.png' alt="Third slide">
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class='col-md-12 picbackground' id="room5">
-							<div id='myCarousel5' class='carousel slide' data-ride='carousel'>
-								<ol class="carousel-indicators">
-									<li data-target="#myCarousel5" data-slide-to="0" class="active"></li>
-									<li data-target="#myCarousel5" data-slide-to="1"></li>
-									<li data-target="#myCarousel5" data-slide-to="2"></li>
-								</ol>
-								<div class='carousel-inner slidewarpper' role='listbox'>
-									<div class='carousel-item active'>
-										<img class="d-block w-100" src='images/no_pic.png' alt="First slide">
-									</div>
-									<div class='carousel-item'>
-										<img class="d-block w-100" src='images/no_pic.png' alt="Second slide">
-									</div>
-									<div class='carousel-item'>
-										<img class="d-block w-100" src='images/no_pic.png' alt="Third slide">
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class='col-md-12 picbackground' id="room6">
-							<div id='myCarousel6' class='carousel slide' data-ride='carousel'>
-								<ol class="carousel-indicators">
-									<li data-target="#myCarousel6" data-slide-to="0" class="active"></li>
-									<li data-target="#myCarousel6" data-slide-to="1"></li>
-									<li data-target="#myCarousel6" data-slide-to="2"></li>
-								</ol>
-								<div class='carousel-inner slidewarpper' role='listbox'>
-									<div class='carousel-item active'>
-										<img class="d-block w-100" src='images/no_pic.png' alt="First slide">
-									</div>
-									<div class='carousel-item'>
-										<img class="d-block w-100" src='images/no_pic.png' alt="Second slide">
-									</div>
-									<div class='carousel-item'>
-										<img class="d-block w-100" src='images/no_pic.png' alt="Third slide">
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class='col-md-12 picbackground' id="room7">
-							<div id='myCarousel7' class='carousel slide' data-ride='carousel'>
-								<ol class="carousel-indicators">
-									<li data-target="#myCarousel7" data-slide-to="0" class="active"></li>
-									<li data-target="#myCarousel7" data-slide-to="1"></li>
-									<li data-target="#myCarousel7" data-slide-to="2"></li>
-								</ol>
-								<div class='carousel-inner slidewarpper' role='listbox'>
-									<div class='carousel-item active'>
-										<img class="d-block w-100" src='images/no_pic.png' alt="First slide">
-									</div>
-									<div class='carousel-item'>
-										<img class="d-block w-100" src='images/no_pic.png' alt="Second slide">
-									</div>										<div class='carousel-item'>
-										<img class="d-block w-100" src='images/no_pic.png' alt="Third slide">
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class='col-md-12 picbackground' id="room8">
-							<div id='myCarousel8' class='carousel slide' data-ride='carousel'>
-								<ol class="carousel-indicators">
-									<li data-target="#myCarousel8" data-slide-to="0" class="active"></li>
-									<li data-target="#myCarousel8" data-slide-to="1"></li>
-									<li data-target="#myCarousel8" data-slide-to="2"></li>
-								</ol>
-								<div class='carousel-inner slidewarpper' role='listbox'>
-									<div class='carousel-item active'>
-										<img class="d-block w-100" src='images/conferroom/korach/korach_confer_1_1.jpg' alt="First slide">
-									</div>
-									<div class='carousel-item'>
-										<img class="d-block w-100" src='images/conferroom/korach/korach_confer_1_2.jpg' alt="Second slide">
-									</div>
-									<div class='carousel-item'>
-										<img class="d-block w-100" src='images/conferroom/korach/korach_confer_1_3.jpg' alt="Third slide">
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class='col-md-12 picbackground' id="room9">
-							<div id='myCarousel9' class='carousel slide' data-ride='carousel'>
-								<ol class="carousel-indicators">
-									<li data-target="#myCarousel9" data-slide-to="0" class="active"></li>
-									<li data-target="#myCarousel9" data-slide-to="1"></li>
-									<li data-target="#myCarousel9" data-slide-to="2"></li>
-									<li data-target="#myCarousel9" data-slide-to="3"></li>
-									<li data-target="#myCarousel9" data-slide-to="4"></li>
-								</ol>
-								<div class='carousel-inner slidewarpper' role='listbox'>
-									<div class='carousel-item active'>
-										<img class="d-block w-100" src='images/conferroom/korach/korach_confer_2_1.jpg' alt="First slide">
-									</div>
-									<div class='carousel-item'>
-										<img class="d-block w-100" src='images/conferroom/korach/korach_confer_2_2.jpg' alt="Second slide">
-									</div>
-									<div class='carousel-item'>
-										<img class="d-block w-100" src='images/conferroom/korach/korach_confer_2_3.jpg' alt="Third slide">
-									</div>
-									<div class='carousel-item'>
-										<img class="d-block w-100" src='images/conferroom/korach/korach_confer_2_4.jpg' alt="Third slide">
-									</div>
-									<div class='carousel-item'>
-										<img class="d-block w-100" src='images/conferroom/korach/korach_confer_2_5.jpg' alt="Third slide">
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class='col-md-12 picbackground' id="room10">
-							<div id='myCarousel10' class='carousel slide' data-ride='carousel'>
-								<ol class="carousel-indicators">
-									<li data-target="#myCarousel10" data-slide-to="0" class="active"></li>
-									<li data-target="#myCarousel10" data-slide-to="1"></li>
-								</ol>
-								<div class='carousel-inner slidewarpper' role='listbox'>
-									<div class='carousel-item active'>
-										<img class="d-block w-100" src='images/conferroom/khonkean/khonkean_confer_1_1.jpg' alt="First slide">
-									</div>
-									<div class='carousel-item'>
-										<img class="d-block w-100" src='images/conferroom/khonkean/khonkean_confer_1_2.jpg' alt="Second slide">
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class='col-md-12 picbackground' id="room11">
-							<div id='myCarousel11' class='carousel slide' data-ride='carousel'>
-								<ol class="carousel-indicators">
-									<li data-target="#myCarousel11" data-slide-to="0" class="active"></li>
-									<li data-target="#myCarousel11" data-slide-to="1"></li>
-									<li data-target="#myCarousel11" data-slide-to="2"></li>
-									<li data-target="#myCarousel11" data-slide-to="3"></li>
-									<li data-target="#myCarousel11" data-slide-to="4"></li>
-								</ol>
-								<div class='carousel-inner slidewarpper' role='listbox'>
-									<div class='carousel-item active'>
-										<img class="d-block w-100" src='images/conferroom/changmai/conferren_changmai_1_1.jpg' alt="First slide">
-									</div>
-									<div class='carousel-item'>
-										<img class="d-block w-100" src='images/conferroom/changmai/conferren_changmai_1_2.jpg' alt="Second slide">
-									</div>
-									<div class='carousel-item'>
-										<img class="d-block w-100" src='images/conferroom/changmai/conferren_changmai_1_3.jpg' alt="Second slide">
-									</div>
-									<div class='carousel-item'>
-										<img class="d-block w-100" src='images/conferroom/changmai/conferren_changmai_1_4.jpg' alt="Second slide">
-									</div>
-									<div class='carousel-item'>
-										<img class="d-block w-100" src='images/conferroom/changmai/conferren_changmai_1_5.jpg' alt="Second slide">
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class='col-md-12 picbackground' id="room12">
-							<div id='myCarousel12' class='carousel slide' data-ride='carousel'>
-								<ol class="carousel-indicators">
-									<li data-target="#myCarousel12" data-slide-to="0" class="active"></li>
-									<li data-target="#myCarousel12" data-slide-to="1"></li>
-									<li data-target="#myCarousel12" data-slide-to="2"></li>
-								</ol>
-								<div class='carousel-inner slidewarpper' role='listbox'>
-									<div class='carousel-item active'>
-										<img class="d-block w-100" src='images/no_pic.png' alt="First slide">
-									</div>
-									<div class='carousel-item'>
-										<img class="d-block w-100" src='images/no_pic.png' alt="Second slide">
-									</div>
-									<div class='carousel-item'>
-										<img class="d-block w-100" src='images/no_pic.png' alt="Third slide">
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class='col-md-12 picbackground' id="room13">
-							<div id='myCarousel13' class='carousel slide' data-ride='carousel'>
-								<ol class="carousel-indicators">
-									<li data-target="#myCarousel13" data-slide-to="0" class="active"></li>
-									<li data-target="#myCarousel13" data-slide-to="1"></li>
-									<li data-target="#myCarousel13" data-slide-to="2"></li>
-									<li data-target="#myCarousel13" data-slide-to="3"></li>
-									<li data-target="#myCarousel13" data-slide-to="4"></li>
-								</ol>
-								<div class='carousel-inner slidewarpper' role='listbox'>
-									<div class='carousel-item active'>
-										<img class="d-block w-100" src='images/conferroom/songkhla/songkhla1_1.jpg' alt="First slide">
-									</div>
-									<div class='carousel-item'>
-										<img class="d-block w-100" src='images/conferroom/songkhla/songkhla1_2.jpg' alt="Second slide">
-									</div>
-									<div class='carousel-item'>
-										<img class="d-block w-100" src='images/conferroom/songkhla/songkhla1_3.jpg' alt="First slide">
-									</div>
-									<div class='carousel-item'>
-										<img class="d-block w-100" src='images/conferroom/songkhla/songkhla1_4.jpg' alt="Second slide">
-									</div>
-									<div class='carousel-item'>
-										<img class="d-block w-100" src='images/conferroom/songkhla/songkhla1_5.jpg' alt="Second slide">
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class='col-md-12 picbackground' id="room15">
-							<div id='myCarousel15' class='carousel slide' data-ride='carousel'>
-								<ol class="carousel-indicators">
-									<li data-target="#myCarousel15" data-slide-to="0" class="active"></li>
-									<li data-target="#myCarousel15" data-slide-to="1"></li>
-									<li data-target="#myCarousel15" data-slide-to="2"></li>
-									<li data-target="#myCarousel15" data-slide-to="3"></li>
-								</ol>
-								<div class='carousel-inner slidewarpper' role='listbox'>
-									<div class='carousel-item active'>
-										<img class="d-block w-100" src='images/conferroom/kkoz/kkoz_confer_1_1.jpg' alt="First slide">
-									</div>
-									<div class='carousel-item'>
-										<img class="d-block w-100" src='images/conferroom/kkoz/kkoz_confer_1_2.jpg' alt="Second slide">
-									</div>
-									<div class='carousel-item'>
-										<img class="d-block w-100" src='images/conferroom/kkoz/kkoz_confer_1_3.jpg' alt="First slide">
-									</div>
-									<div class='carousel-item'>
-										<img class="d-block w-100" src='images/conferroom/kkoz/kkoz_confer_1_4.jpg' alt="Second slide">
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class='col-md-12 picbackground' id="room16">
-							<div id='myCarousel16' class='carousel slide' data-ride='carousel'>
-								<ol class="carousel-indicators">
-									<li data-target="#myCarousel16" data-slide-to="0" class="active"></li>
-									<li data-target="#myCarousel16" data-slide-to="1"></li>
-								</ol>
-								<div class='carousel-inner slidewarpper' role='listbox'>
-									<div class='carousel-item active'>
-										<img class="d-block w-100" src='images/conferroom/ubon/ubon_confer_1_1.jpg' alt="First slide">																			</div>
-									<div class='carousel-item'>
-										<img class="d-block w-100" src='images/conferroom/ubon/ubon_confer_1_2.jpg' alt="Second slide">
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class='col-md-12 picbackground' id="room17">
-							<div id='myCarousel17' class='carousel slide' data-ride='carousel'>
-								<ol class="carousel-indicators">
-									<li data-target="#myCarousel17" data-slide-to="0" class="active"></li>
-									<li data-target="#myCarousel17" data-slide-to="1"></li>
-									<li data-target="#myCarousel17" data-slide-to="2"></li>
-									<li data-target="#myCarousel17" data-slide-to="3"></li>
-								</ol>
-								<div class='carousel-inner slidewarpper' role='listbox'>
-									<div class='carousel-item active'>
-										<img class="d-block w-100" src='images/conferroom/surin/surin_confer_1_1.jpg' alt="First slide">																		</div>
-									<div class='carousel-item'>
-										<img class="d-block w-100" src='images/conferroom/surin/surin_confer_1_2.jpg' alt="Second slide">
-									</div>
-									<div class='carousel-item'>
-										<img class="d-block w-100" src='images/conferroom/surin/surin_confer_1_3.jpg' alt="First slide">																			</div>
-									<div class='carousel-item'>
-										<img class="d-block w-100" src='images/conferroom/surin/surin_confer_1_4.jpg' alt="Second slide">
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class='col-md-12 picbackground' id="room18">
-							<div id='myCarousel18' class='carousel slide' data-ride='carousel'>
-								<ol class="carousel-indicators">
-									<li data-target="#myCarousel18" data-slide-to="0" class="active"></li>
-									<li data-target="#myCarousel18" data-slide-to="1"></li>
-								</ol>
-								<div class='carousel-inner slidewarpper' role='listbox'>										
-									<div class='carousel-item active'>
-										<img class="d-block w-100" src='images/conferroom/ubon/ubon_confer_2_1.jpg' alt="First slide">																			</div>
-									<div class='carousel-item'>
-										<img class="d-block w-100" src='images/conferroom/ubon/ubon_confer_2_2.jpg' alt="Second slide">
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class='col-md-12 picbackground' id="room19">
-							<div id='myCarousel19' class='carousel slide' data-ride='carousel'>
-								<ol class="carousel-indicators">
-									<li data-target="#myCarousel19" data-slide-to="0" class="active"></li>
-									<li data-target="#myCarousel19" data-slide-to="1"></li>
-									<li data-target="#myCarousel19" data-slide-to="2"></li>
-									<li data-target="#myCarousel19" data-slide-to="3"></li>
-									<li data-target="#myCarousel19" data-slide-to="4"></li>
-									<li data-target="#myCarousel19" data-slide-to="5"></li>
-									<li data-target="#myCarousel19" data-slide-to="6"></li>
-								</ol>
-								<div class='carousel-inner slidewarpper' role='listbox'>
-									<div class='carousel-item active'>
-										<img class="d-block w-100" src='images/conferroom/kkoz/kkoz_confer_3_1.jpg' alt="First slide">																		</div>
-									<div class='carousel-item'>
-										<img class="d-block w-100" src='images/conferroom/kkoz/kkoz_confer_3_2.jpg' alt="First slide">																			</div>
-									<div class='carousel-item'>
-										<img class="d-block w-100" src='images/conferroom/kkoz/kkoz_confer_3_3.jpg' alt="First slide">																			</div>
-									<div class='carousel-item'>
-										<img class="d-block w-100" src='images/conferroom/kkoz/kkoz_confer_3_4.jpg' alt="First slide">																			</div>
-									<div class='carousel-item'>
-										<img class="d-block w-100" src='images/conferroom/kkoz/kkoz_confer_3_5.jpg' alt="First slide">																			</div>
-									<div class='carousel-item'>
-										<img class="d-block w-100" src='images/conferroom/kkoz/kkoz_confer_3_6.jpg' alt="First slide">																			</div>
-									<div class='carousel-item'>
-										<img class="d-block w-100" src='images/conferroom/kkoz/kkoz_confer_3_7.jpg' alt="First slide">				
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class='col-md-12 picbackground' id="room20">
-							<div id='myCarousel20' class='carousel slide' data-ride='carousel'>
-								<ol class="carousel-indicators">
-									<li data-target="#myCarousel20" data-slide-to="0" class="active"></li>
-									<li data-target="#myCarousel20" data-slide-to="1"></li>
-									<li data-target="#myCarousel20" data-slide-to="2"></li>
-									<li data-target="#myCarousel20" data-slide-to="3"></li>
-								</ol>
-								<div class='carousel-inner slidewarpper' role='listbox'>
-									<div class='carousel-item active'>
-										<img class="d-block w-100" src='images/conferroom/kkoz/kkoz_confer_2_1.jpg' alt="First slide">																			</div>
-									<div class='carousel-item'>
-										<img class="d-block w-100" src='images/conferroom/kkoz/kkoz_confer_2_2.jpg' alt="First slide">																			</div>
-									<div class='carousel-item'>
-										<img class="d-block w-100" src='images/conferroom/kkoz/kkoz_confer_2_3.jpg' alt="First slide">																			</div>
-									<div class='carousel-item'>
-										<img class="d-block w-100" src='images/conferroom/kkoz/kkoz_confer_2_4.jpg' alt="First slide">	
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class='col-md-12  mt-3'>
-							<div class='row'>
-								<div class='text-danger col-md-1'><label class="col-md-12 ml-1">1. </label></div>
-								<div class='text-danger col-md-11'>
-									ฝ่ายประชุมและพิธีการ จะอำนวยความสะดวกอุปกรณ์ตามรายละเอียดที่ต้องการ โดยหน่วยงานเจ้าของเรื่องเป็นผู้จัดเตรียม กาแฟ/ของว่าง/อาหารกลางวัน/นำ้ดื่ม/ป้ายชื่อ และพนักงานบริการ
-								</div>
-								<div class='text-danger col-md-1'><label class="col-md-12 ml-1">2. </label></div>
-								<div class='text-danger col-md-11'>
-									 หากต้องการคอมพิวเตอร์โน๊ตบุ๊ค ให้หน่วยงานเจ้าของเรื่องเป็นผู้จัดเตรียมมา
-								</div>
-								<div class='text-danger col-md-1'><label class="col-md-12 ml-1">3. </label></div>
-								<div class='text-danger col-md-11'>
-									 กรุณาประสานงานก่อนล่วงหน้าอย่างน้อย 3 วัน โดยส่งเรื่องถึงฝ่ายประชุมและพิธีการ สำนักบริหารกลาง และติดตามผลได้ที่ คุณรุ่งทิวา,คุณฐิติมา <u>โทรศัพท์ภายใน ต่อ 125 IP Phone 1015</u>
-								</div>
-							</div>
-						</div>
-					</div>
+				<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12'>
+					<h4><?php echo $conferroom; ?></h4>
 				</div>
-				<?php echo $form->open('form_reg','frmMain','col-md-4','cf_insert_day.php',''); ?>
-					<div class='row'>
-						<div class='col-md-12'>
-							<?php echo $lbname1; ?>
-						</div>
-						<div class='col-md-12'>
-							<?php echo $uname; ?>
-						</div>
-						<div class='col-md-12'>
-							<?php echo $lbclass; ?>
-						</div>
-						<div class='col-md-12'>
-							<?php echo $uclass; ?>
-						</div>
-						<div class='col-md-12'>
-							<label>สำนัก/สวน</label>
-						</div>
-						<div class='col-md-12 form-group has-feedback'>
-                            <select class='form-control css-require' id="ddlZoo" name="subzoo_zoo_zoo_id" onchange="ListSubzoo(this.value)">
-                                <option selected value="">-----โปรดระบุ-----</option>
-                					<?php
-                						$rs = $db->orderASC('zoo','zoo_id')->execute();
-                						while($objResult = mysqli_fetch_array($rs,MYSQLI_ASSOC))
-           								{
-               						?>
-                				<option value="<?=$objResult["zoo_id"];?>"><?=$objResult["zoo_name"];?></option>
-                					<?php
-										}
-                					?>
-        					</select>
-						</div>
-            			<div class='col-md-12'>
-							<label>ฝ่าย</label>
-						</div>
-            			<div class='col-md-12 form-group has-feedback'>
-            				<select class='form-control css-require' id="ddlSubzoo" name="subzoo_subzoo_id"></select>
-            			</div>
-						<div class='col-md-12'>
-							<?php echo $lbstorytype; ?>
-						</div>
-						<div class='col-md-12'>
-							<?php echo $selectheadncf->selectFromTBinDB('headncf','headncf_id','headncf_name','headncf_enable','1',''); ?>
-						</div>
-						<div class='col-md-12 story mt-3'>
+				<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12' style="border-top:solid 1px #E0E0E0;">
+					<div class="row">
+						<div class='col-xl-7 col-lg-7 col-md-7 col-sm-7 col-7' style="border-right:solid 1px #E0E0E0;padding-top:16px;">
 							<div class='row'>
+								<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 picbackground' id="room1">
+									<div id='myCarousel' class='carousel slide' data-ride='carousel'>
+										<ol class="carousel-indicators">
+											<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+											<li data-target="#myCarousel" data-slide-to="1"></li>
+											<li data-target="#myCarousel" data-slide-to="2"></li>
+										</ol>
+										<div class='carousel-inner slidewarpper' role='listbox'>
+											<div class='carousel-item active'>
+												<img class="d-block w-100" src='images/conferroom/zpo/confer1_1.JPG' alt="First slide">
+											</div>
+											<div class='carousel-item'>
+												<img class="d-block w-100" src='images/conferroom/zpo/confer1_2.JPG' alt="Second slide">
+											</div>
+											<div class='carousel-item'>
+												<img class="d-block w-100" src='images/conferroom/zpo/confer1_3.JPG' alt="Third slide">
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class='col-md-12 picbackground' id="room2">
+									<div id='myCarousel2' class='carousel slide' data-ride='carousel'>
+										<ol class="carousel-indicators">
+											<li data-target="#myCarousel2" data-slide-to="0" class="active"></li>
+											<li data-target="#myCarousel2" data-slide-to="1"></li>
+											<li data-target="#myCarousel2" data-slide-to="2"></li>
+											<li data-target="#myCarousel2" data-slide-to="3"></li>
+										</ol>
+										<div class='carousel-inner slidewarpper' role='listbox'>
+											<div class='carousel-item active'>
+												<img class="d-block w-100" src='images/conferroom/zpo/confer2_1.JPG' alt="First slide">
+											</div>
+											<div class='carousel-item'>
+												<img class="d-block w-100" src='images/conferroom/zpo/confer2_2.JPG' alt="Second slide">
+											</div>
+											<div class='carousel-item'>
+												<img class="d-block w-100" src='images/conferroom/zpo/confer2_3.JPG' alt="Third slide">
+											</div>
+											<div class='carousel-item'>
+												<img class="d-block w-100" src='images/conferroom/zpo/confer2_4.JPG' alt="Four slide">
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class='col-md-12 picbackground' id="room3">
+									<div id='myCarousel3' class='carousel slide' data-ride='carousel'>
+										<ol class="carousel-indicators">
+											<li data-target="#myCarousel3" data-slide-to="0" class="active"></li>
+											<li data-target="#myCarousel3" data-slide-to="1"></li>
+											<li data-target="#myCarousel3" data-slide-to="2"></li>
+											<li data-target="#myCarousel3" data-slide-to="3"></li>
+										</ol>
+										<div class='carousel-inner slidewarpper' role='listbox'>
+											<div class='carousel-item active'>
+												<img class="d-block w-100" src='images/conferroom/zpo/confer3_1.JPG' alt="First slide">
+											</div>
+											<div class='carousel-item'>
+												<img class="d-block w-100" src='images/conferroom/zpo/confer3_2.JPG' alt="Second slide">
+											</div>
+											<div class='carousel-item'>
+												<img class="d-block w-100" src='images/conferroom/zpo/confer3_3.JPG' alt="Third slide">
+											</div>
+											<div class='carousel-item'>
+												<img class="d-block w-100" src='images/conferroom/zpo/confer3_4.JPG' alt="Third slide">
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class='col-md-12 picbackground' id="room4">
+									<div id='myCarousel4' class='carousel slide' data-ride='carousel'>
+										<ol class="carousel-indicators">
+											<li data-target="#myCarousel4" data-slide-to="0" class="active"></li>
+											<li data-target="#myCarousel4" data-slide-to="1"></li>
+											<li data-target="#myCarousel4" data-slide-to="2"></li>
+										</ol>
+										<div class='carousel-inner slidewarpper' role='listbox'>
+											<div class='carousel-item active'>
+												<img class="d-block w-100" src='images/no_pic.png' alt="First slide">
+											</div>
+											<div class='carousel-item'>
+												<img class="d-block w-100" src='images/no_pic.png' alt="Second slide">
+											</div>
+											<div class='carousel-item'>
+												<img class="d-block w-100" src='images/no_pic.png' alt="Third slide">
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class='col-md-12 picbackground' id="room5">
+									<div id='myCarousel5' class='carousel slide' data-ride='carousel'>
+										<ol class="carousel-indicators">
+											<li data-target="#myCarousel5" data-slide-to="0" class="active"></li>
+											<li data-target="#myCarousel5" data-slide-to="1"></li>
+											<li data-target="#myCarousel5" data-slide-to="2"></li>
+										</ol>
+										<div class='carousel-inner slidewarpper' role='listbox'>
+											<div class='carousel-item active'>
+												<img class="d-block w-100" src='images/no_pic.png' alt="First slide">
+											</div>
+											<div class='carousel-item'>
+												<img class="d-block w-100" src='images/no_pic.png' alt="Second slide">
+											</div>
+											<div class='carousel-item'>
+												<img class="d-block w-100" src='images/no_pic.png' alt="Third slide">
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class='col-md-12 picbackground' id="room6">
+									<div id='myCarousel6' class='carousel slide' data-ride='carousel'>
+										<ol class="carousel-indicators">
+											<li data-target="#myCarousel6" data-slide-to="0" class="active"></li>
+											<li data-target="#myCarousel6" data-slide-to="1"></li>
+											<li data-target="#myCarousel6" data-slide-to="2"></li>
+										</ol>
+										<div class='carousel-inner slidewarpper' role='listbox'>
+											<div class='carousel-item active'>
+												<img class="d-block w-100" src='images/no_pic.png' alt="First slide">
+											</div>
+											<div class='carousel-item'>
+												<img class="d-block w-100" src='images/no_pic.png' alt="Second slide">
+											</div>
+											<div class='carousel-item'>
+												<img class="d-block w-100" src='images/no_pic.png' alt="Third slide">
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class='col-md-12 picbackground' id="room7">
+									<div id='myCarousel7' class='carousel slide' data-ride='carousel'>
+										<ol class="carousel-indicators">
+											<li data-target="#myCarousel7" data-slide-to="0" class="active"></li>
+											<li data-target="#myCarousel7" data-slide-to="1"></li>
+											<li data-target="#myCarousel7" data-slide-to="2"></li>
+										</ol>
+										<div class='carousel-inner slidewarpper' role='listbox'>
+											<div class='carousel-item active'>
+												<img class="d-block w-100" src='images/no_pic.png' alt="First slide">
+											</div>
+											<div class='carousel-item'>
+												<img class="d-block w-100" src='images/no_pic.png' alt="Second slide">
+											</div>										<div class='carousel-item'>
+												<img class="d-block w-100" src='images/no_pic.png' alt="Third slide">
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class='col-md-12 picbackground' id="room8">
+									<div id='myCarousel8' class='carousel slide' data-ride='carousel'>
+										<ol class="carousel-indicators">
+											<li data-target="#myCarousel8" data-slide-to="0" class="active"></li>
+											<li data-target="#myCarousel8" data-slide-to="1"></li>
+											<li data-target="#myCarousel8" data-slide-to="2"></li>
+										</ol>
+										<div class='carousel-inner slidewarpper' role='listbox'>
+											<div class='carousel-item active'>
+												<img class="d-block w-100" src='images/conferroom/korach/korach_confer_1_1.jpg' alt="First slide">
+											</div>
+											<div class='carousel-item'>
+												<img class="d-block w-100" src='images/conferroom/korach/korach_confer_1_2.jpg' alt="Second slide">
+											</div>
+											<div class='carousel-item'>
+												<img class="d-block w-100" src='images/conferroom/korach/korach_confer_1_3.jpg' alt="Third slide">
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class='col-md-12 picbackground' id="room9">
+									<div id='myCarousel9' class='carousel slide' data-ride='carousel'>
+										<ol class="carousel-indicators">
+											<li data-target="#myCarousel9" data-slide-to="0" class="active"></li>
+											<li data-target="#myCarousel9" data-slide-to="1"></li>
+											<li data-target="#myCarousel9" data-slide-to="2"></li>
+											<li data-target="#myCarousel9" data-slide-to="3"></li>
+											<li data-target="#myCarousel9" data-slide-to="4"></li>
+										</ol>
+										<div class='carousel-inner slidewarpper' role='listbox'>
+											<div class='carousel-item active'>
+												<img class="d-block w-100" src='images/conferroom/korach/korach_confer_2_1.jpg' alt="First slide">
+											</div>
+											<div class='carousel-item'>
+												<img class="d-block w-100" src='images/conferroom/korach/korach_confer_2_2.jpg' alt="Second slide">
+											</div>
+											<div class='carousel-item'>
+												<img class="d-block w-100" src='images/conferroom/korach/korach_confer_2_3.jpg' alt="Third slide">
+											</div>
+											<div class='carousel-item'>
+												<img class="d-block w-100" src='images/conferroom/korach/korach_confer_2_4.jpg' alt="Third slide">
+											</div>
+											<div class='carousel-item'>
+												<img class="d-block w-100" src='images/conferroom/korach/korach_confer_2_5.jpg' alt="Third slide">
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class='col-md-12 picbackground' id="room10">
+									<div id='myCarousel10' class='carousel slide' data-ride='carousel'>
+										<ol class="carousel-indicators">
+											<li data-target="#myCarousel10" data-slide-to="0" class="active"></li>
+											<li data-target="#myCarousel10" data-slide-to="1"></li>
+										</ol>
+										<div class='carousel-inner slidewarpper' role='listbox'>
+											<div class='carousel-item active'>
+												<img class="d-block w-100" src='images/conferroom/khonkean/khonkean_confer_1_1.jpg' alt="First slide">
+											</div>
+											<div class='carousel-item'>
+												<img class="d-block w-100" src='images/conferroom/khonkean/khonkean_confer_1_2.jpg' alt="Second slide">
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class='col-md-12 picbackground' id="room11">
+									<div id='myCarousel11' class='carousel slide' data-ride='carousel'>
+										<ol class="carousel-indicators">
+											<li data-target="#myCarousel11" data-slide-to="0" class="active"></li>
+											<li data-target="#myCarousel11" data-slide-to="1"></li>
+											<li data-target="#myCarousel11" data-slide-to="2"></li>
+											<li data-target="#myCarousel11" data-slide-to="3"></li>
+											<li data-target="#myCarousel11" data-slide-to="4"></li>
+										</ol>
+										<div class='carousel-inner slidewarpper' role='listbox'>
+											<div class='carousel-item active'>
+												<img class="d-block w-100" src='images/conferroom/changmai/conferren_changmai_1_1.jpg' alt="First slide">
+											</div>
+											<div class='carousel-item'>
+												<img class="d-block w-100" src='images/conferroom/changmai/conferren_changmai_1_2.jpg' alt="Second slide">
+											</div>
+											<div class='carousel-item'>
+												<img class="d-block w-100" src='images/conferroom/changmai/conferren_changmai_1_3.jpg' alt="Second slide">
+											</div>
+											<div class='carousel-item'>
+												<img class="d-block w-100" src='images/conferroom/changmai/conferren_changmai_1_4.jpg' alt="Second slide">
+											</div>
+											<div class='carousel-item'>
+												<img class="d-block w-100" src='images/conferroom/changmai/conferren_changmai_1_5.jpg' alt="Second slide">
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class='col-md-12 picbackground' id="room12">
+									<div id='myCarousel12' class='carousel slide' data-ride='carousel'>
+										<ol class="carousel-indicators">
+											<li data-target="#myCarousel12" data-slide-to="0" class="active"></li>
+											<li data-target="#myCarousel12" data-slide-to="1"></li>
+											<li data-target="#myCarousel12" data-slide-to="2"></li>
+										</ol>
+										<div class='carousel-inner slidewarpper' role='listbox'>
+											<div class='carousel-item active'>
+												<img class="d-block w-100" src='images/no_pic.png' alt="First slide">
+											</div>
+											<div class='carousel-item'>
+												<img class="d-block w-100" src='images/no_pic.png' alt="Second slide">
+											</div>
+											<div class='carousel-item'>
+												<img class="d-block w-100" src='images/no_pic.png' alt="Third slide">
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class='col-md-12 picbackground' id="room13">
+									<div id='myCarousel13' class='carousel slide' data-ride='carousel'>
+										<ol class="carousel-indicators">
+											<li data-target="#myCarousel13" data-slide-to="0" class="active"></li>
+											<li data-target="#myCarousel13" data-slide-to="1"></li>
+											<li data-target="#myCarousel13" data-slide-to="2"></li>
+											<li data-target="#myCarousel13" data-slide-to="3"></li>
+											<li data-target="#myCarousel13" data-slide-to="4"></li>
+										</ol>
+										<div class='carousel-inner slidewarpper' role='listbox'>
+											<div class='carousel-item active'>
+												<img class="d-block w-100" src='images/conferroom/songkhla/songkhla1_1.jpg' alt="First slide">
+											</div>
+											<div class='carousel-item'>
+												<img class="d-block w-100" src='images/conferroom/songkhla/songkhla1_2.jpg' alt="Second slide">
+											</div>
+											<div class='carousel-item'>
+												<img class="d-block w-100" src='images/conferroom/songkhla/songkhla1_3.jpg' alt="First slide">
+											</div>
+											<div class='carousel-item'>
+												<img class="d-block w-100" src='images/conferroom/songkhla/songkhla1_4.jpg' alt="Second slide">
+											</div>
+											<div class='carousel-item'>
+												<img class="d-block w-100" src='images/conferroom/songkhla/songkhla1_5.jpg' alt="Second slide">
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class='col-md-12 picbackground' id="room15">
+									<div id='myCarousel15' class='carousel slide' data-ride='carousel'>
+										<ol class="carousel-indicators">
+											<li data-target="#myCarousel15" data-slide-to="0" class="active"></li>
+											<li data-target="#myCarousel15" data-slide-to="1"></li>
+											<li data-target="#myCarousel15" data-slide-to="2"></li>
+											<li data-target="#myCarousel15" data-slide-to="3"></li>
+										</ol>
+										<div class='carousel-inner slidewarpper' role='listbox'>
+											<div class='carousel-item active'>
+												<img class="d-block w-100" src='images/conferroom/kkoz/kkoz_confer_1_1.jpg' alt="First slide">
+											</div>
+											<div class='carousel-item'>
+												<img class="d-block w-100" src='images/conferroom/kkoz/kkoz_confer_1_2.jpg' alt="Second slide">
+											</div>
+											<div class='carousel-item'>
+												<img class="d-block w-100" src='images/conferroom/kkoz/kkoz_confer_1_3.jpg' alt="First slide">
+											</div>
+											<div class='carousel-item'>
+												<img class="d-block w-100" src='images/conferroom/kkoz/kkoz_confer_1_4.jpg' alt="Second slide">
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class='col-md-12 picbackground' id="room16">
+									<div id='myCarousel16' class='carousel slide' data-ride='carousel'>
+										<ol class="carousel-indicators">
+											<li data-target="#myCarousel16" data-slide-to="0" class="active"></li>
+											<li data-target="#myCarousel16" data-slide-to="1"></li>
+										</ol>
+										<div class='carousel-inner slidewarpper' role='listbox'>
+											<div class='carousel-item active'>
+												<img class="d-block w-100" src='images/conferroom/ubon/ubon_confer_1_1.jpg' alt="First slide">																			</div>
+											<div class='carousel-item'>
+												<img class="d-block w-100" src='images/conferroom/ubon/ubon_confer_1_2.jpg' alt="Second slide">
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class='col-md-12 picbackground' id="room17">
+									<div id='myCarousel17' class='carousel slide' data-ride='carousel'>
+										<ol class="carousel-indicators">
+											<li data-target="#myCarousel17" data-slide-to="0" class="active"></li>
+											<li data-target="#myCarousel17" data-slide-to="1"></li>
+											<li data-target="#myCarousel17" data-slide-to="2"></li>
+											<li data-target="#myCarousel17" data-slide-to="3"></li>
+										</ol>
+										<div class='carousel-inner slidewarpper' role='listbox'>
+											<div class='carousel-item active'>
+												<img class="d-block w-100" src='images/conferroom/surin/surin_confer_1_1.jpg' alt="First slide">																		</div>
+											<div class='carousel-item'>
+												<img class="d-block w-100" src='images/conferroom/surin/surin_confer_1_2.jpg' alt="Second slide">
+											</div>
+											<div class='carousel-item'>
+												<img class="d-block w-100" src='images/conferroom/surin/surin_confer_1_3.jpg' alt="First slide">																			</div>
+											<div class='carousel-item'>
+												<img class="d-block w-100" src='images/conferroom/surin/surin_confer_1_4.jpg' alt="Second slide">
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class='col-md-12 picbackground' id="room18">
+									<div id='myCarousel18' class='carousel slide' data-ride='carousel'>
+										<ol class="carousel-indicators">
+											<li data-target="#myCarousel18" data-slide-to="0" class="active"></li>
+											<li data-target="#myCarousel18" data-slide-to="1"></li>
+										</ol>
+										<div class='carousel-inner slidewarpper' role='listbox'>										
+											<div class='carousel-item active'>
+												<img class="d-block w-100" src='images/conferroom/ubon/ubon_confer_2_1.jpg' alt="First slide">																			</div>
+											<div class='carousel-item'>
+												<img class="d-block w-100" src='images/conferroom/ubon/ubon_confer_2_2.jpg' alt="Second slide">
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class='col-md-12 picbackground' id="room19">
+									<div id='myCarousel19' class='carousel slide' data-ride='carousel'>
+										<ol class="carousel-indicators">
+											<li data-target="#myCarousel19" data-slide-to="0" class="active"></li>
+											<li data-target="#myCarousel19" data-slide-to="1"></li>
+											<li data-target="#myCarousel19" data-slide-to="2"></li>
+											<li data-target="#myCarousel19" data-slide-to="3"></li>
+											<li data-target="#myCarousel19" data-slide-to="4"></li>
+											<li data-target="#myCarousel19" data-slide-to="5"></li>
+											<li data-target="#myCarousel19" data-slide-to="6"></li>
+										</ol>
+										<div class='carousel-inner slidewarpper' role='listbox'>
+											<div class='carousel-item active'>
+												<img class="d-block w-100" src='images/conferroom/kkoz/kkoz_confer_3_1.jpg' alt="First slide">																		</div>
+											<div class='carousel-item'>
+												<img class="d-block w-100" src='images/conferroom/kkoz/kkoz_confer_3_2.jpg' alt="First slide">																			</div>
+											<div class='carousel-item'>
+												<img class="d-block w-100" src='images/conferroom/kkoz/kkoz_confer_3_3.jpg' alt="First slide">																			</div>
+											<div class='carousel-item'>
+												<img class="d-block w-100" src='images/conferroom/kkoz/kkoz_confer_3_4.jpg' alt="First slide">																			</div>
+											<div class='carousel-item'>
+												<img class="d-block w-100" src='images/conferroom/kkoz/kkoz_confer_3_5.jpg' alt="First slide">																			</div>
+											<div class='carousel-item'>
+												<img class="d-block w-100" src='images/conferroom/kkoz/kkoz_confer_3_6.jpg' alt="First slide">																			</div>
+											<div class='carousel-item'>
+												<img class="d-block w-100" src='images/conferroom/kkoz/kkoz_confer_3_7.jpg' alt="First slide">				
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class='col-md-12 picbackground' id="room20">
+									<div id='myCarousel20' class='carousel slide' data-ride='carousel'>
+										<ol class="carousel-indicators">
+											<li data-target="#myCarousel20" data-slide-to="0" class="active"></li>
+											<li data-target="#myCarousel20" data-slide-to="1"></li>
+											<li data-target="#myCarousel20" data-slide-to="2"></li>
+											<li data-target="#myCarousel20" data-slide-to="3"></li>
+										</ol>
+										<div class='carousel-inner slidewarpper' role='listbox'>
+											<div class='carousel-item active'>
+												<img class="d-block w-100" src='images/conferroom/kkoz/kkoz_confer_2_1.jpg' alt="First slide">																			</div>
+											<div class='carousel-item'>
+												<img class="d-block w-100" src='images/conferroom/kkoz/kkoz_confer_2_2.jpg' alt="First slide">																			</div>
+											<div class='carousel-item'>
+												<img class="d-block w-100" src='images/conferroom/kkoz/kkoz_confer_2_3.jpg' alt="First slide">																			</div>
+											<div class='carousel-item'>
+												<img class="d-block w-100" src='images/conferroom/kkoz/kkoz_confer_2_4.jpg' alt="First slide">	
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class='col-md-12  mt-3'>
+									<div class='row'>
+										<div class='text-danger col-md-1'><label class="col-md-12 ml-1">1. </label></div>
+										<div class='text-danger col-md-11'>
+											ฝ่ายประชุมและพิธีการ จะอำนวยความสะดวกอุปกรณ์ตามรายละเอียดที่ต้องการ โดยหน่วยงานเจ้าของเรื่องเป็นผู้จัดเตรียม กาแฟ/ของว่าง/อาหารกลางวัน/นำ้ดื่ม/ป้ายชื่อ และพนักงานบริการ
+										</div>
+										<div class='text-danger col-md-1'><label class="col-md-12 ml-1">2. </label></div>
+										<div class='text-danger col-md-11'>
+											 หากต้องการคอมพิวเตอร์โน๊ตบุ๊ค ให้หน่วยงานเจ้าของเรื่องเป็นผู้จัดเตรียมมา
+										</div>
+										<div class='text-danger col-md-1'><label class="col-md-12 ml-1">3. </label></div>
+										<div class='text-danger col-md-11'>
+											 กรุณาประสานงานก่อนล่วงหน้าอย่างน้อย 3 วัน โดยส่งเรื่องถึงฝ่ายประชุมและพิธีการ สำนักบริหารกลาง และติดตามผลได้ที่ คุณรุ่งทิวา,คุณฐิติมา <u>โทรศัพท์ภายใน ต่อ 125 IP Phone 1015</u>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<?php echo $form->open('form_reg','frmMain','col-xl-5 col-lg-5 col-md-5 col-sm-5 col-5','cf_insert_day.php',''); ?>
+							<div class='row'>
+								<div class='col-md-12' style="padding-top:16px;">
+									<?php echo $lbname1; ?>
+								</div>
 								<div class='col-md-12'>
-									<?php echo $lbstory; ?>
+									<?php echo $uname; ?>
+								</div>
+								<div class='col-md-12'>
+									<?php echo $lbclass; ?>
+								</div>
+								<div class='col-md-12'>
+									<?php echo $uclass; ?>
+								</div>
+								<div class='col-md-12'>
+									<label>สำนัก/สวน</label>
+								</div>
+								<div class='col-md-12 form-group has-feedback'>
+									<select class='form-control css-require' id="ddlZoo" name="subzoo_zoo_zoo_id" onchange="ListSubzoo(this.value)">
+										<option selected value="">-----โปรดระบุ-----</option>
+											<?php
+												$rs = $db->orderASC('zoo','zoo_id')->execute();
+												while($objResult = mysqli_fetch_array($rs,MYSQLI_ASSOC))
+												{
+											?>
+										<option value="<?=$objResult["zoo_id"];?>"><?=$objResult["zoo_name"];?></option>
+											<?php
+												}
+											?>
+									</select>
+								</div>
+								<div class='col-md-12'>
+									<label>ฝ่าย</label>
+								</div>
+								<div class='col-md-12 form-group has-feedback'>
+									<select class='form-control css-require' id="ddlSubzoo" name="subzoo_subzoo_id"></select>
+								</div>
+								<div class='col-md-12'>
+									<?php echo $lbstorytype; ?>
+								</div>
+								<div class='col-md-12'>
+									<?php echo $selectheadncf->selectFromTBinDB('headncf','headncf_id','headncf_name','headncf_enable','1',''); ?>
+								</div>
+								<div class='col-md-12 story mt-3'>
+									<div class='row'>
+										<div class='col-md-12'>
+											<?php echo $lbstory; ?>
+										</div>
+										<div class='col-md-12 showrequired'>
+											<?php echo $story; ?>
+										</div>
+									</div>
+								</div>
+								<div class='col-md-12 mt-3'>
+									<?php echo $lbpatan; ?>
+								</div>
+								<div class='col-md-12'>
+									<?php echo $patanname; ?>
+								</div>
+								<div class='col-md-12 mt-3'>
+									<?php echo $lbclass; ?>
+								</div>
+								<div class='col-md-12'>
+									<?php echo $patanclass; ?>
+								</div>
+								<div class='col-md-12 mt-3'>
+									<?php echo $lbdate; ?>
+								</div>
+								<div class='date-form dayinbox col-md-12 form-horizontal control-group controls input-group'>
+									<div class='input-group date' id ="datetimepicker1">
+										<input type='text' class="form-control datetimepicker " name="eventconfer_start" id='date1' readonly/>
+											<span class="input-group-addon">
+												<span class="glyphicon glyphicon-calendar"></span>
+											</span>
+									</div>
+								</div>
+								<div class='col-md-12 mt-3'>
+									<?php echo $lbdate2 ?>
+								</div>
+								<div class='date-form dayinbox col-md-12 form-horizontal control-group controls input-group'>
+									<div class='input-group date' id ="datetimepicker2">
+										<input type='text' class="form-control datetimepicker" name="eventconfer_end" id='date2' readonly/>
+											<span class="input-group-addon datetimepicker-addon">
+												<span class="glyphicon glyphicon-calendar"></span>
+											</span>
+									</div>
+								</div>
+								<div class='col-md-12'>
+									<div id="msg" class="col-md-12 form-group" style="text-align:center;padding-top:10px;"></div>
+								</div>
+								<div class='col-md-12'>
+									<?php echo $lbjoin; ?>
+								</div>
+								<div class='col-md-12'>
+									<div class="row">
+										<div class='col-md-6 showrequired'>
+											<?php echo $join; ?>
+										</div>
+										<div class='col-md-6 text-danger'>
+											<b><u><?php echo 'สูงสุด '.$r['confer_people'].' คน'; ?></u></b>
+										</div>
+									</div>
+								</div>
+								<div class="form-check col-md-12 mt-3">
+									<div class="cc-selector" style="float:left;">
+										<?php echo $nolcd;?>
+										<?php echo $lbnolcd; ?>
+										<?php echo $oklcd; ?>
+										<?php echo $lboklcd; ?>
+									</div>
+									<div style="padding-top:4px;padding-left:8px;" style="float:left;">
+										<?php echo $lblcd;?>
+									</div>
+								</div>
+		<!--
+											<div class='col-md-12' style="margin-bottom: 5px;">
+												<div class="row">
+													<div class="cc-selector">
+														<?php echo $nonotebook;?>
+														<?php echo $lbnonotebook; ?>
+														<?php echo $oknotebook; ?>
+														<?php echo $lboknotebook; ?>
+													</div>
+													<?php echo $lbnotebook;?>
+													</div>
+											</div>
+											<div class='col-md-12' style="margin-bottom: 5px;">
+												<div class="row">
+													<div class="cc-selector">
+														<?php echo $nopointer;?>
+														<?php echo $lbnopointer; ?>
+														<?php echo $okpointer; ?>
+														<?php echo $lbokpointer; ?>
+													</div>
+													<?php echo $lbpointer;?>
+												</div>
+											</div>
+		-->
+								<div class='col-md-12' style="margin-bottom: 5px;">
+									<div class="cc-selector" style="float:left;">
+										<?php echo $nocooldrink;?>
+										<?php echo $lbnocooldrink; ?>
+										<?php echo $okcooldrink; ?>
+										<?php echo $lbokcooldrink; ?>
+									</div>
+									<div style="padding-top:4px;padding-left:8px;" style="float:left;">
+										<?php echo $lbdrinkcold;?>
+									</div>
+								</div>
+								<div class='col-md-12' style="margin-bottom: 5px;">
+									<div class="cc-selector" style="float:left;">
+										<?php echo $nohotdrink;?>
+										<?php echo $lbnohotdrink; ?>
+										<?php echo $okhotdrink; ?>
+										<?php echo $lbokhotdrink; ?>
+									</div>
+									<div style="padding-top:4px;padding-left:8px;" style="float:left;">
+										<?php echo $lbdrinkhot;?>
+									</div>
+								</div>
+								<div class='col-md-12' style="margin-bottom: 5px;">
+									<div class="cc-selector" style="float:left">
+										<?php echo $nocoffeegroup;?>
+										<?php echo $lbnocoffeegroup; ?>
+										<?php echo $okcoffeegroup; ?>
+										<?php echo $lbokcoffeegroup; ?>
+									</div>
+									<div style="padding-top:4px;padding-left:8px;">
+										<?php echo $lbcoffee;?>
+									</div>
+								</div>
+								<div class='col-md-12' style="margin-bottom: 5px;">
+									<div class="col-md-6" style="float:left">
+										<?php echo $newmisc;?>
+									</div>
+									<div class="col-md-6" style="padding-left:0px;float:left;">
+										<?php echo $lbnum;?>
+									</div>
+								</div>
+								<div class='col-md-12' style="margin-bottom: 5px;">
+									<div class="cc-selector" style="float:left">
+										<?php echo $nodishgroup;?>
+										<?php echo $lbnodishgroup; ?>
+										<?php echo $okdishgroup; ?>
+										<?php echo $lbokdishgroup; ?>
+									</div>
+									<div style="padding-top:4px;padding-left:8px;">
+										<?php echo $lbdish;?>
+									</div>
+								</div>
+								<div class='col-md-12' style="margin-bottom: 5px;">
+									<div class="col-md-6" style="float:left">
+										<?php echo $newmisc2;?>
+									</div>
+									<div class="col-md-6" style="padding-left:0px;float:left;">
+										<?php echo $lbnum;?>
+									</div>
+								</div>
+								<div class='col-md-12' style="margin-bottom: 5px;">
+									<div class="cc-selector" style="float:left">
+										<?php echo $notri;?>
+										<?php echo $lbnotri; ?>
+										<?php echo $oktri; ?>
+										<?php echo $lboktri; ?>
+									</div>
+									<div style="padding-top:4px;padding-left:8px;">
+										<?php echo $lbtri;?>
+									</div>
+								</div>
+								<div class='col-md-12' style="margin-bottom: 5px;">
+									<div class="col-md-6" style="float:left;">
+										<?php echo $newmisc3;?>
+									</div>
+									<div class="col-md1" style="padding-left:0px;float:left;">
+										<?php echo $lbnum;?>
+									</div>
+								</div>
+								<div class='col-md-12 checkvdocon' style="margin-bottom: 5px;">
+									<div class="cc-selector">
+										<?php echo $novdocon; ?>
+										<?php echo $lbnovdocon; ?>
+										<?php echo $okvdocon;   ?>
+										<?php echo $lbokvdocon; ?>
+									</div>
+									<div style="padding-top:4px;padding-left:8px;">
+										<? echo $lbvdocon; ?>
+									</div>
+									<div class='col-md-12 inzoo'>
+										<div class='col-md-12 text-danger font-weight-bold mt-1' style="text-align:center;">**โปรดเลือกสวนที่เข้าร่วมประชุม**</div>
+										<div class='col-md-12'>
+											<div class="row">
+												<div class='col-md-6 mt-3'>
+													<div class='col-md-12'>
+														<input type='checkbox' class='form-check-input' id='iszpo' name='eventconfer_status_iszpo' value='1'>
+														<label for='iszpo'>สำนักตรวจสอบ</label>
+													</div>
+													<div class='col-md-12'>
+														<input type='checkbox' class='form-check-input' id='cazpo' name='eventconfer_status_cazpo' value='1'>
+														<label for='cazpo'>สำนักบริหารกลาง</label>
+													</div>
+													<div class='col-md-12'>
+														<input type='checkbox' class='form-check-input' id='fpzpo' name='eventconfer_status_fpzpo' value='1'>
+														<label for='fpzpo'>สำนักการเงินและทรัพย์สิน</label>
+													</div>
+													<div class='col-md-12'>
+														<input type='checkbox' class='form-check-input' id='spzpo' name='eventconfer_status_spzpo' value='1'>
+														<label for='spzpo'>สำนักยุทธศาสตร์และแผน</label>
+													</div>
+													<div class='col-md-12'>
+														<input type='checkbox' class='form-check-input' id='lzpo' name='eventconfer_status_lzpo' value='1'>
+														<label for='lzpo'>สำนักกฎหมาย</label>
+													</div>
+													<div class='col-md-12'>
+														<input type='checkbox' class='form-check-input' id='crzpo' name='eventconfer_status_crzpo' value='1'>
+														<label for='crzpo'>สำนักอนุรักษ์ และ วิจัย</label>
+													</div>
+													<div class='col-md-12'>
+														<input type='checkbox' class='form-check-input' id='bdzpo' name='eventconfer_status_bdzpo' value='1'>
+														<label for='bdzpo'>สำนักพัฒนาธุรกิจ</label>
+													</div>
+													<div class='col-md-12'>
+														<input type='checkbox' class='form-check-input' id='itzpo' name='eventconfer_status_itzpo' value='1'>
+														<label for='itzpo'>สำนักเทคโนโลยีสารสนเทศ</label>
+													</div>
+													<div class='col-md-12'>
+														<input type='checkbox' class='form-check-input' id='hrzpo' name='eventconfer_status_hrzpo' value='1'>
+														<label for='hrzpo'>สำนักบริหารทรัพยากรบุคคล</label>
+													</div>
+													<div class='col-md-12'>
+														<input type='checkbox' class='form-check-input' id='zmizpo' name='eventconfer_status_zmizpo' value='1'>
+														<label for='zmizpo'>สถาบันบริหารจัดการสวนสัตว์</label>
+													</div>
+												</div>
+												<div class='col-md-6 mt-3' id='zoo'>
+													<div class='col-md-12'>
+														<input type='checkbox' class='form-check-input' id='dusit' name='eventconfer_status_ds' value='1'>
+														<label for='dusit'>สวนสัตว์ดุสิต</label>
+													</div>
+													<div class='col-md-12'>
+														<input type='checkbox' class='form-check-input' id='khaokeaw' name='eventconfer_status_kkoz' value='1'>
+														<label for='khaokeaw'>สวนสัตว์เปิดเขาเขียว</label>
+													</div>
+													<div class='col-md-12'>
+														<input type='checkbox' class='form-check-input' id='changmai' name='eventconfer_status_cm' value='1'>
+														<label for='changmai'>สวนสัตว์เชียงใหม่</label>
+													</div>
+													<div class='col-md-12'>
+														<input type='checkbox' class='form-check-input' id='korach' name='eventconfer_status_nm' value='1'>
+														<label for='korach'>สวนสัตว์นครราชสีมา</label>
+													</div>
+													<div class='col-md-12'>
+														<input type='checkbox' class='form-check-input' id='songkhla' name ='eventconfer_status_sk' value='1'>
+														<label for='songkhla'>สวนสัตว์สงขลา</label>
+													</div>
+													<div class='col-md-12'>
+														<input type='checkbox' class='form-check-input' id='ubon' name ='eventconfer_status_ub' value='1'>
+														<label for='ubon'>สวนสัตว์อุบลราชธานี</label>
+													</div>
+													<div class='col-md-12'>
+														<input type='checkbox' class='form-check-input' id='khonkean' name ='eventconfer_status_kk' value='1'>
+														<label for='khonkean'>สวนสัตว์ขอนแก่น</label>
+													</div>
+													<div class='col-md-12'>
+														<input type='checkbox' class='form-check-input' id='sr' name ='eventconfer_status_sr' value='1'>
+														<label for='sr'>โครงการคชอาณาจักร์</label>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class='col-md-12'>
+									<?php echo $lbname; ?>
+								</div>
+								<div class='col-md-12'>
+									<?php echo $name; ?>
+								</div>
+								<div class='col-md-12'>
+									<?php echo $lbtel; ?>
 								</div>
 								<div class='col-md-12 showrequired'>
-									<?php echo $story; ?>
+									<?php echo $tel; ?>
+								</div>
+								<?php 
+									$datenow = date("Y-m-d");
+									$timenow = date("H:i");
+									$adddatenow = $datenow."&nbsp;".$timenow;
+								?>                                  
+								<input type='hidden' name='adddatenow' value='<?php echo $adddatenow; ?>'/>
+								<input type='hidden' id='status_event' name='eventconfer_status' value='W'/>
+								<input type='hidden' id='confer_id' name='confer_confer_id' value="<?php echo $id;?>">
+								<input type='hidden' id='status_online' name='eventconfer_status_online' value="W">
+								<div class='col-md-12 mt-3' style="margin-bottom:16px;">
+									<div class='row'>
+										<div class='col-md-4'></div>
+										<div class='col-md-4' style="padding-left:32px;padding-right:0px;">
+											<?php echo $button; ?>
+										</div>
+										<div class='col-md-4'>
+											<button type="button" class="btn btn-danger col-md-12" data-dismiss="modal">ยกเลิก</button>
+										</div>
+									</div>
 								</div>
 							</div>
-						</div>
-						<div class='col-md-12 mt-3'>
-							<?php echo $lbpatan; ?>
-						</div>
-						<div class='col-md-12'>
-							<?php echo $patanname; ?>
-						</div>
-						<div class='col-md-12 mt-3'>
-							<?php echo $lbclass; ?>
-						</div>
-						<div class='col-md-12'>
-							<?php echo $patanclass; ?>
-						</div>
-						<div class='col-md-12 mt-3'>
-							<?php echo $lbdate; ?>
-						</div>
-						<div class='date-form dayinbox col-md-12 form-horizontal control-group controls input-group'>
-							<div class='input-group date' id ="datetimepicker1">
-						        <input type='text' class="form-control datetimepicker " name="eventconfer_start" id='date1' readonly/>
-						            <span class="input-group-addon">
-										<span class="glyphicon glyphicon-calendar"></span>
-									</span>
-						    </div>
-						</div>
-						<div class='col-md-12 mt-3'>
-							<?php echo $lbdate2 ?>
-						</div>
-						<div class='date-form dayinbox col-md-12 form-horizontal control-group controls input-group'>
-							<div class='input-group date' id ="datetimepicker2">
-							    <input type='text' class="form-control datetimepicker" name="eventconfer_end" id='date2' readonly/>
-							        <span class="input-group-addon datetimepicker-addon">
-										<span class="glyphicon glyphicon-calendar"></span>
-									</span>
-							</div>
-						</div>
-						<div class='col-md-12'>
-							<div id="msg" class="col-md-12 form-group" style="text-align:center;padding-top:10px;"></div>
-						</div>
-						<div class='col-md-12'>
-							<?php echo $lbjoin; ?>
-						</div>
-						<div class='col-md-12'>
-							<div class="row">
-								<div class='col-md-6 showrequired'>
-									<?php echo $join; ?>
-								</div>
-								<div class='col-md-6 text-danger'>
-									<b><u><?php echo 'สูงสุด '.$r['confer_people'].' คน'; ?></u></b>
-								</div>
-							</div>
-						</div>
-						<div class="form-check col-md-12 mt-3">
-							<div class="cc-selector" style="float:left;">
-								<?php echo $nolcd;?>
-								<?php echo $lbnolcd; ?>
-								<?php echo $oklcd; ?>
-								<?php echo $lboklcd; ?>
-							</div>
-							<div style="padding-top:4px;padding-left:8px;" style="float:left;">
-								<?php echo $lblcd;?>
-							</div>
-						</div>
-<!--
-									<div class='col-md-12' style="margin-bottom: 5px;">
-										<div class="row">
-											<div class="cc-selector">
-												<?php echo $nonotebook;?>
-												<?php echo $lbnonotebook; ?>
-												<?php echo $oknotebook; ?>
-												<?php echo $lboknotebook; ?>
-											</div>
-											<?php echo $lbnotebook;?>
-											</div>
-									</div>
-									<div class='col-md-12' style="margin-bottom: 5px;">
-										<div class="row">
-											<div class="cc-selector">
-												<?php echo $nopointer;?>
-												<?php echo $lbnopointer; ?>
-												<?php echo $okpointer; ?>
-												<?php echo $lbokpointer; ?>
-											</div>
-											<?php echo $lbpointer;?>
-										</div>
-									</div>
--->
-						<div class='col-md-12' style="margin-bottom: 5px;">
-							<div class="cc-selector" style="float:left;">
-								<?php echo $nocooldrink;?>
-								<?php echo $lbnocooldrink; ?>
-								<?php echo $okcooldrink; ?>
-								<?php echo $lbokcooldrink; ?>
-							</div>
-							<div style="padding-top:4px;padding-left:8px;" style="float:left;">
-								<?php echo $lbdrinkcold;?>
-							</div>
-						</div>
-						<div class='col-md-12' style="margin-bottom: 5px;">
-							<div class="cc-selector" style="float:left;">
-								<?php echo $nohotdrink;?>
-								<?php echo $lbnohotdrink; ?>
-								<?php echo $okhotdrink; ?>
-								<?php echo $lbokhotdrink; ?>
-							</div>
-							<div style="padding-top:4px;padding-left:8px;" style="float:left;">
-								<?php echo $lbdrinkhot;?>
-							</div>
-						</div>
-						<div class='col-md-12' style="margin-bottom: 5px;">
-							<div class="cc-selector" style="float:left">
-								<?php echo $nocoffeegroup;?>
-								<?php echo $lbnocoffeegroup; ?>
-								<?php echo $okcoffeegroup; ?>
-								<?php echo $lbokcoffeegroup; ?>
-							</div>
-							<div style="padding-top:4px;padding-left:8px;">
-								<?php echo $lbcoffee;?>
-							</div>
-						</div>
-						<div class='col-md-12' style="margin-bottom: 5px;">
-							<div class="col-md-6" style="float:left">
-								<?php echo $newmisc;?>
-							</div>
-							<div class="col-md-6" style="padding-left:0px;float:left;">
-								<?php echo $lbnum;?>
-							</div>
-						</div>
-						<div class='col-md-12' style="margin-bottom: 5px;">
-							<div class="cc-selector" style="float:left">
-								<?php echo $nodishgroup;?>
-								<?php echo $lbnodishgroup; ?>
-								<?php echo $okdishgroup; ?>
-								<?php echo $lbokdishgroup; ?>
-							</div>
-							<div style="padding-top:4px;padding-left:8px;">
-								<?php echo $lbdish;?>
-							</div>
-						</div>
-						<div class='col-md-12' style="margin-bottom: 5px;">
-							<div class="col-md-6" style="float:left">
-								<?php echo $newmisc2;?>
-							</div>
-							<div class="col-md-6" style="padding-left:0px;float:left;">
-								<?php echo $lbnum;?>
-							</div>
-						</div>
-						<div class='col-md-12' style="margin-bottom: 5px;">
-							<div class="cc-selector" style="float:left">
-								<?php echo $notri;?>
-								<?php echo $lbnotri; ?>
-								<?php echo $oktri; ?>
-								<?php echo $lboktri; ?>
-							</div>
-							<div style="padding-top:4px;padding-left:8px;">
-								<?php echo $lbtri;?>
-							</div>
-						</div>
-						<div class='col-md-12' style="margin-bottom: 5px;">
-							<div class="col-md-6" style="float:left;">
-								<?php echo $newmisc3;?>
-							</div>
-							<div class="col-md1" style="padding-left:0px;float:left;">
-								<?php echo $lbnum;?>
-							</div>
-						</div>
-									<div class='col-md-12 checkvdocon' style="margin-bottom: 16px;">
-										<div class='row'>
-										<div class="cc-selector">
-												<?php echo $novdocon; ?>
-												<?php echo $lbnovdocon; ?>
-												<?php echo $okvdocon;   ?>
-												<?php echo $lbokvdocon; ?>
-											</div>
-											<div style="padding-top:4px;padding-left:8px;">
-												<? echo $lbvdocon; ?>
-											</div>
-											<div class='col-md-12 inzoo'>
-												<div class='row'>
-													<span class="col-md-2"></span>
-													<span class='col-md-10 text-danger font-weight-bold mt-3'>**โปรดเลือกสวนที่เข้าร่วมประชุม**</span>
-													<div class='col-md-6 mt-3'>
-														<div class='col-md-12'>
-																<input type='checkbox' class='form-check-input' id='iszpo' name='eventconfer_status_iszpo' value='1'>
-																<label for='iszpo'>สำนักตรวจสอบ</label>
-															</div>
-															<div class='col-md-12'>
-																<input type='checkbox' class='form-check-input' id='cazpo' name='eventconfer_status_cazpo' value='1'>
-																<label for='cazpo'>สำนักบริหารกลาง</label>
-															</div>
-															<div class='col-md-12'>
-																<input type='checkbox' class='form-check-input' id='fpzpo' name='eventconfer_status_fpzpo' value='1'>
-																<label for='fpzpo'>สำนักการเงินและทรัพย์สิน</label>
-															</div>
-															<div class='col-md-12'>
-																<input type='checkbox' class='form-check-input' id='spzpo' name='eventconfer_status_spzpo' value='1'>
-																<label for='spzpo'>สำนักยุทธศาสตร์และแผน</label>
-															</div>
-															<div class='col-md-12'>
-																<input type='checkbox' class='form-check-input' id='lzpo' name='eventconfer_status_lzpo' value='1'>
-																<label for='lzpo'>สำนักกฎหมาย</label>
-															</div>
-															<div class='col-md-12'>
-																<input type='checkbox' class='form-check-input' id='crzpo' name='eventconfer_status_crzpo' value='1'>
-																<label for='crzpo'>สำนักอนุรักษ์ และ วิจัย</label>
-															</div>
-															<div class='col-md-12'>
-																<input type='checkbox' class='form-check-input' id='bdzpo' name='eventconfer_status_bdzpo' value='1'>
-																<label for='bdzpo'>สำนักพัฒนาธุรกิจ</label>
-															</div>
-															<div class='col-md-12'>
-																<input type='checkbox' class='form-check-input' id='itzpo' name='eventconfer_status_itzpo' value='1'>
-																<label for='itzpo'>สำนักเทคโนโลยีสารสนเทศ</label>
-															</div>
-															<div class='col-md-12'>
-																<input type='checkbox' class='form-check-input' id='hrzpo' name='eventconfer_status_hrzpo' value='1'>
-																<label for='hrzpo'>สำนักบริหารทรัพยากรบุคคล</label>
-															</div>
-															<div class='col-md-12'>
-																<input type='checkbox' class='form-check-input' id='zmizpo' name='eventconfer_status_zmizpo' value='1'>
-																<label for='zmizpo'>สถาบันบริหารจัดการสวนสัตว์</label>
-															</div>
-
-													</div>
-													<div class='col-md-6 mt-3' id='zoo'>
-															<div class='col-md-12'>
-																<input type='checkbox' class='form-check-input' id='dusit' name='eventconfer_status_ds' value='1'>
-																<label for='dusit'>สวนสัตว์ดุสิต</label>
-															</div>
-															<div class='col-md-12'>
-																<input type='checkbox' class='form-check-input' id='khaokeaw' name='eventconfer_status_kkoz' value='1'>
-																<label for='khaokeaw'>สวนสัตว์เปิดเขาเขียว</label>
-															</div>
-															<div class='col-md-12'>
-																<input type='checkbox' class='form-check-input' id='changmai' name='eventconfer_status_cm' value='1'>
-																<label for='changmai'>สวนสัตว์เชียงใหม่</label>
-															</div>
-															<div class='col-md-12'>
-																<input type='checkbox' class='form-check-input' id='korach' name='eventconfer_status_nm' value='1'>
-																<label for='korach'>สวนสัตว์นครราชสีมา</label>
-															</div>
-															<div class='col-md-12'>
-																<input type='checkbox' class='form-check-input' id='songkhla' name ='eventconfer_status_sk' value='1'>
-																<label for='songkhla'>สวนสัตว์สงขลา</label>
-															</div>
-															<div class='col-md-12'>
-																<input type='checkbox' class='form-check-input' id='ubon' name ='eventconfer_status_ub' value='1'>
-																<label for='ubon'>สวนสัตว์อุบลราชธานี</label>
-															</div>
-															<div class='col-md-12'>
-																<input type='checkbox' class='form-check-input' id='khonkean' name ='eventconfer_status_kk' value='1'>
-																<label for='khonkean'>สวนสัตว์ขอนแก่น</label>
-															</div>
-															<div class='col-md-12'>
-																<input type='checkbox' class='form-check-input' id='sr' name ='eventconfer_status_sr' value='1'>
-																<label for='sr'>โครงการคชอาณาจักร์</label>
-															</div>
-														</div>
-													</div>
-												</div>
-											</label>
-										</div>
-									</div>
-									<div class='col-md-12' style="margin-bottom: 16px;">
-										<div class='row'>
-											<div class='col-md-4' style="padding-right: 0;padding-left: 0;padding-top:7px;"><?php echo $lbname; ?></div>
-											<div class='col-md-8'><?php echo $name; ?></div>
-										</div>
-									</div>
-									<div class='col-md-12' style="margin-bottom: 16px;">
-										<div class='row'>
-											<div class='col-md-4' style="padding-right: 0;padding-left: 0;padding-top:7px;"><?php echo $lbtel; ?></div>
-											<div class='col-md-8 showrequired'><?php echo $tel; ?></div>
-										</div>
-									</div>
-									<?php 
-                                        $datenow = date("Y-m-d");
-                                    	$timenow = date("H:i");
-                                    	$adddatenow = $datenow."&nbsp;".$timenow;
-                                    ?>                                  
-                                    <input type='hidden' name='adddatenow' value='<?php echo $adddatenow; ?>'/>
-									<input type='hidden' id='status_event' name='eventconfer_status' value='W'/>
-									<input type='hidden' id='confer_id' name='confer_confer_id' value="<?php echo $id;?>">
-									<input type='hidden' id='status_online' name='eventconfer_status_online' value="W">
-									<div class='col-md-12'>
-											<div class='row'>
-												<div class='col-md-8'></div>
-												<div class='col-md-2'>
-													<?php echo $button; ?>
-												</div>
-												<div class='col-md-2'>
-													<button type="button" class="btn btn-danger col-md-12" data-dismiss="modal">ยกเลิก</button>
-												</div>
-											</div>
-									</div>
-
-						</div>
+						<?php 	echo $form->close(); ?>
 					</div>
 				</div>
-				<?php 	echo $form->close(); ?>
 			</div>
 		</div>
-		<div class='col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2'></div>
+		<div class='col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1'></div>
 	</div>
+</div>
 <script>
 	 $(function () {
         $('#datetimepicker1').datetimepicker({
