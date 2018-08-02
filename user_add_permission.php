@@ -280,7 +280,6 @@ function autoTab2(obj,typeCheck){
 		</div>
 	</div>
 	<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 usubd" style="margin-top:5px;">
-
     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
         <div class="row">
             <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3"></div>
