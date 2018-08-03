@@ -15,7 +15,7 @@
     } );
 } );
 </script>
-<div class="col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10">
+<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 	  <!-- Nav tabs -->
 	  <nav class="nav nav-tabs" role="tablist" style="margin-top: 16px;">
 			<a class="nav-item nav-link active" href="#zpo" aria-controls="zpo" role="tab" data-toggle="tab" style="color:#EC7063;" aria-selected="true">องค์การสวนสัตว์</a>

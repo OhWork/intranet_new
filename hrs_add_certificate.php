@@ -31,7 +31,7 @@
     $txtfamilyname = new textfield('hrctf_familyname','hrctf_familyname_id','form-control','','');
 
     $button = new buttonok("ส่งแบบขอหนังสือรับรอง","","btn btn-success btn-lg btn-block bt3success col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","");
-    echo $form->open("","","col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10","hrs_insert_certificate.php","");
+    echo $form->open("","","col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","hrs_insert_certificate.php","");
  ?>
  <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" style="padding-top:8px;">
 	<div class="row">
@@ -234,18 +234,18 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-2" style="margin-bottom:16px;">
+				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3" style="margin-bottom:16px;">
 					<div class="row">
-						<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
+						<div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
     						<input type='hidden' name='hrctf_datereg' value='<?php echo date("Y-m-d");?>'/>
     						<input type='hidden' name='hrctf_dateupdate' value='-'/>
     						<input type='hidden' name='hrctf_status' value='S'/>
 <!--     						<input type='hidden' name='hrctf_id' value='<?php echo $_GET['id']; ?>'/> -->
 						</div>
-						<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
+						<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6">
 							<?php echo $button; ?>
 						</div>
-						<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4"></div>
+						<div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3"></div>
 					</div>
 				</div>
 			</div>

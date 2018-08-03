@@ -19,254 +19,260 @@
     } );
 } );
 </script>
-<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" style="margin-top:16px;">
+<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3">
 	<div class="row">
-		<h4>รายการแจ้งดำเนินการใหม่</h4>
-	</div>
-</div>
-	<!-- Nav tabs -->
-	<nav class="nav nav-tabs" role="tablist" style="margin-top: 16px;width:100%">
-		<?php if($user_zoo == 10){?>
-			<a class="nav-item nav-link active" href="#zpo" aria-controls="zpo" role="tab" data-toggle="tab" style="color:#EC7063;" aria-selected="true">องค์การสวนสัตว์</a>
+		<div class='col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1'></div>
+		<div class='col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10'>
+			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+				<h4>รายการแจ้งดำเนินการใหม่</h4>
+			</div>
+			<!-- Nav tabs -->
+			<nav class="nav nav-tabs" role="tablist" style="margin-top: 16px;width:100%">
+				<?php if($user_zoo == 10){?>
+					<a class="nav-item nav-link active" href="#zpo" aria-controls="zpo" role="tab" data-toggle="tab" style="color:#EC7063;" aria-selected="true">องค์การสวนสัตว์</a>
+				<?php }
+					if($user_zoo == 10 || $user_zoo == 11){
+					if($user_zoo == 10){?>
+					<a class="nav-item nav-link" href="#dusitzoo" aria-controls="dusitzoo" role="tab" data-toggle="tab" style="color:#AF7AC5;" aria-selected="false">สวนสัตว์ดุสิต</a>
+				<?php }
+				else if($user_zoo == 11){?>
+					<a class="nav-item nav-link" href="#dusitzoo" aria-controls="dusitzoo" role="tab" data-toggle="tab" style="color:#AF7AC5;" aria-selected="false">สวนสัตว์ดุสิต</a>
+				<?php }
+					}
+					if($user_zoo == 10 || $user_zoo == 12){
+					if($user_zoo == 10){?>
+					<a class="nav-item nav-link" href="#khaokeawzoo" aria-controls="khaokeawzoo" role="tab" data-toggle="tab" style="color:#5DADE2;" aria-selected="false">สวนสัตว์เปิดเขาเขียว</a>
+				<?php }else if($user_zoo == 12){?>
+					<a class="nav-item nav-link" href="#khaokeawzoo" aria-controls="khaokeawzoo" role="tab" data-toggle="tab" style="color:#5DADE2;" aria-selected="false">สวนสัตว์เปิดเขาเขียว</a>
+				<?php }
+					}
+					if($user_zoo == 10 || $user_zoo == 13){
+					if($user_zoo == 10){?>
+					<a class="nav-item nav-link" href="#chiangmaizoo" aria-controls="chiangmaizoo" role="tab" data-toggle="tab" style="color:#48C9B0;" aria-selected="false">สวนสัตว์เชียงใหม่</a>
+				<?php }else if($user_zoo == 12){?>
+					<a class="nav-item nav-link" href="#chiangmaizoo" aria-controls="chiangmaizoo" role="tab" data-toggle="tab" style="color:#48C9B0;" aria-selected="false">สวนสัตว์เปิดเขาเขียว</a>
+				<?php }
+					}
+					if($user_zoo == 10 || $user_zoo == 14){
+					if($user_zoo == 10){?>
+					<a class="nav-item nav-link" href="#korachzoo" aria-controls="korachzoo" role="tab" data-toggle="tab" style="color:#58D68D;" aria-selected="false">สวนสัตว์นครราชสีมา</a>
+				<?php }else if($user_zoo == 14){?>
+					<a class="nav-item nav-link" href="#korachzoo" aria-controls="korachzoo" role="tab" data-toggle="tab" style="color:#58D68D;" aria-selected="false">สวนสัตว์นครราชสีมา</a>
+				<?php }
+					}
+					if($user_zoo == 10 || $user_zoo == 15){
+					 if($user_zoo == 10){?>
+					<a class="nav-item nav-link" href="#songkhlazoo" aria-controls="songkhlazoo" role="tab" data-toggle="tab" style="color:#F4D03F;" aria-selected="false">สวนสัตว์สงขลา</a>
+				<?php }else if($user_zoo == 15){?>
+					<a class="nav-item nav-link" href="#songkhlazoo" aria-controls="songkhlazoo" role="tab" data-toggle="tab" style="color:#F4D03F;" aria-selected="false">สวนสัตว์สงขลา</a>
+				<?php }
+					}
+					if($user_zoo == 10 || $user_zoo == 16){
+					if($user_zoo == 10){?>
+					<a class="nav-item nav-link" href="#ubonzoo" aria-controls="ubonzoo" role="tab" data-toggle="tab" style="color:#EB984E;" aria-selected="false">สวนสัตว์อุบลราชธานี</a>
+				<?php }else if($user_zoo == 16){?>
+					<a class="nav-item nav-link" href="#ubonzoo" aria-controls="ubonzoo" role="tab" data-toggle="tab" style="color:#EB984E;" aria-selected="false">สวนสัตว์อุบลราชธานี</a>
+				<?php }
+					}
+					if($user_zoo == 10 || $user_zoo == 17){
+					if($user_zoo == 10){?>
+					<a class="nav-item nav-link" href="#khonkeanzoo" aria-controls="khonkean" role="tab" data-toggle="tab" style="color:#45B39D;" aria-selected="false">สวนสัตว์ขอนแก่น</a>
+				<?php }else if($user_zoo == 17){?>
+					<a class="nav-item nav-link" href="#khonkeanzoo" aria-controls="khonkean" role="tab" data-toggle="tab" style="color:#45B39D;" aria-selected="false">สวนสัตว์ขอนแก่น</a>
+				<?php }
+					}
+				?>
+			</nav>
+		  <!-- Tab panes -->
+			<div class="tab-content">
+			<?php if($user_zoo == 10){?>
+				<div role="tabpanel" class="tab-pane active inf1" id="zpo" style="padding-left:16px;padding-right:16px;">
+				<?php
+					$columns = array('problem_name','problem_date','zoo_name','subzoo_name','subtypetools_name','typetools_name');
+					$rs = $db->findByPK66DESC('problem','subzoo','typetools','subtypetools','zoo','problem.subzoo_subzoo_id','subzoo.subzoo_id','problem.subzoo_subzoo_id','subzoo.subzoo_id','problem.subtypetools_subtypetools_id','subtypetools.subtypetools_id','subtypetools.typetools_typetools_id','typetools.typetools_id','subzoo.zoo_zoo_id','zoo.zoo_id','zoo.zoo_type','1','problem_status',$status,'problem_status,problem_date')->execute();
+					$grid = new gridView();
+					$grid->pr = 'problem_id';
+					$grid->sts = 'problem_status';
+					$grid->header = array('<b><center>ชื่อ-สกุล</center></b>','<b><center>วันและเวลา</center></b>','<b><center>สำนัก</center></b>','<b><center>ฝ่าย</center></b>','<b><center>ปัญหา</center></b>','<b><center>ชนิด</center></b>','<b>#</b>','<b><center>สถานะ</center></b>');
+					$grid->width = array('19%','12%','15%','12%','23%','15%','2%','2%');
+					$grid->view = '#';
+					$grid->viewtxt ='รายละเอียด';
+					$grid->edit = 'admin_index.php?url=cs_updateproblem.php';
+					$grid->edittxt = 'อัพเดทสถานะ';
+					$grid->name = 'table';
+					$grid->changestatus = 'btn btn-warning';
+					$grid->renderFromDB($columns,$rs);
+				?>
+				</div>
+			<?php }
+				if($user_zoo == 10 || $user_zoo == 11){
+				if($user_zoo == 10){?>
+			<div role="tabpanel" class="tab-pane inf1" id="dusitzoo" style="padding-left:16px;padding-right:16px;">
+				<?php }else if($user_zoo == 11){?>
+					<div role="tabpanel" class="tab-pane active inf2" id="dusitzoo" style="padding-left:16px;padding-right:16px;">
+					<?php
+						}
+						$columns = array('problem_name','problem_date','subzoo_name','subtypetools_name','typetools_name');
+						$rs = $db->findByPK66DESC('problem','subzoo','typetools','subtypetools','zoo','problem.subzoo_subzoo_id','subzoo.subzoo_id','problem.subzoo_subzoo_id','subzoo.subzoo_id','problem.subtypetools_subtypetools_id','subtypetools.subtypetools_id','subtypetools.typetools_typetools_id','typetools.typetools_id','subzoo.zoo_zoo_id','zoo.zoo_id','zoo.zoo_id','11','problem_status',$status,'problem_status,problem_date')->execute();
+						$grid = new gridView();
+						$grid->pr = 'problem_id';
+						$grid->sts = 'problem_status';
+						$grid->header = array('<b><center>ชื่อ-สกุล</center></b>','<b><center>วันและเวลา</center></b>','<b><center>สถานที่</center></b>','<b><center>ปัญหา</center></b>','<b><center>ชนิด</center></b>','<b>#</b>','<b><center>สถานะ</center></b>');
+						$grid->width = array('15%','10%','20%','20%','15%','5%','5%');
+						$grid->view = '#';
+						$grid->viewtxt ='รายละเอียด';
+						$grid->edit = 'admin_index.php?url=cs_updateproblem.php';
+						$grid->edittxt = 'อัพเดทสถานะ';
+						$grid->name = 'table';
+						$grid->changestatus = 'btn btn-warning';
+						$grid->renderFromDB($columns,$rs);
+					?>
+					</div>
+			<?php }
+				if($user_zoo == 10 || $user_zoo == 12){
+				if($user_zoo == 10){?>
+			<div role="tabpanel" class="tab-pane inf1" id="khaokeawzoo" style="padding-left:16px;padding-right:16px;">
+				<?php }else if($user_zoo == 12){?>
+					<div role="tabpanel" class="tab-pane active inf1" id="khaokeawzoo" style="padding-left:16px;padding-right:16px;">
+					<?php
+						}
+						$columns = array('problem_name','problem_date','subzoo_name','subtypetools_name','typetools_name');
+						$rs = $db->findByPK66DESC('problem','subzoo','typetools','subtypetools','zoo','problem.subzoo_subzoo_id','subzoo.subzoo_id','problem.subzoo_subzoo_id','subzoo.subzoo_id','problem.subtypetools_subtypetools_id','subtypetools.subtypetools_id','subtypetools.typetools_typetools_id','typetools.typetools_id','subzoo.zoo_zoo_id','zoo.zoo_id','zoo.zoo_id','12','problem_status',$status,'problem_status,problem_date')->execute();
+						$grid = new gridView();
+						$grid->pr = 'problem_id';
+						$grid->sts = 'problem_status';
+						$grid->header = array('<b><center>ชื่อ-สกุล</center></b>','<b><center>วันและเวลา</center></b>','<b><center>สถานที่</center></b>','<b><center>ปัญหา</center></b>','<b><center>ชนิด</center></b>','<b>#</b>','<b><center>สถานะ</center></b>');
+						$grid->width = array('15%','10%','20%','20%','15%','5%','5%');
+						$grid->view = '#';
+						$grid->viewtxt ='รายละเอียด';
+						$grid->edit = 'admin_index.php?url=cs_updateproblem.php';
+						$grid->edittxt = 'อัพเดทสถานะ';
+						$grid->name = 'table';
+						$grid->changestatus = 'btn btn-warning';
+						$grid->renderFromDB($columns,$rs);
+					?>
+					</div>
+			<?php }
+				if($user_zoo == 10 || $user_zoo == 13){
+				if($user_zoo == 10){?>
+			<div role="tabpanel" class="tab-pane inf1" id="chiangmaizoo" style="padding-left:16px;padding-right:16px;">
+				<?php }else if($user_zoo == 13){?>
+					<div role="tabpanel" class="tab-pane active inf1" id="chiangmaizoo" style="padding-left:16px;padding-right:16px;">
+					<?php }
+						$columns = array('problem_name','problem_date','subzoo_name','subtypetools_name','typetools_name');
+						$rs = $db->findByPK66DESC('problem','subzoo','typetools','subtypetools','zoo','problem.subzoo_subzoo_id','subzoo.subzoo_id','problem.subzoo_subzoo_id','subzoo.subzoo_id','problem.subtypetools_subtypetools_id','subtypetools.subtypetools_id','subtypetools.typetools_typetools_id','typetools.typetools_id','subzoo.zoo_zoo_id','zoo.zoo_id','zoo.zoo_id','13','problem_status',$status,'problem_status,problem_date')->execute();
+						$grid = new gridView();
+						$grid->pr = 'problem_id';
+						$grid->sts = 'problem_status';
+						$grid->header = array('<b><center>ชื่อ-สกุล</center></b>','<b><center>วันและเวลา</center></b>','<b><center>สถานที่</center></b>','<b><center>ปัญหา</center></b>','<b><center>ชนิด</center></b>','<b>#</b>','<b><center>สถานะ</center></b>');
+						$grid->width = array('15%','10%','20%','20%','15%','5%','5%');
+						$grid->view = '#';
+						$grid->viewtxt ='รายละเอียด';
+						$grid->edit = 'admin_index.php?url=cs_updateproblem.php';
+						$grid->edittxt = 'อัพเดทสถานะ';
+						$grid->name = 'table';
+						$grid->changestatus = 'btn btn-warning';
+						$grid->renderFromDB($columns,$rs);
+					?>
+					</div>
+			<?php }
+				if($user_zoo == 10 || $user_zoo == 14){
+				if($user_zoo == 10){?>
+			<div role="tabpanel" class="tab-pane inf1" id="korachzoo" style="padding-left:16px;padding-right:16px;">
+				<?php }else if($user_zoo == 14){?>
+					<div role="tabpanel" class="tab-pane active inf1" id="korachzoo" style="padding-left:16px;padding-right:16px;">
+					<?php }
+						$columns = array('problem_name','problem_date','subzoo_name','subtypetools_name','typetools_name');
+						$rs = $db->findByPK66DESC('problem','subzoo','typetools','subtypetools','zoo','problem.subzoo_subzoo_id','subzoo.subzoo_id','problem.subzoo_subzoo_id','subzoo.subzoo_id','problem.subtypetools_subtypetools_id','subtypetools.subtypetools_id','subtypetools.typetools_typetools_id','typetools.typetools_id','subzoo.zoo_zoo_id','zoo.zoo_id','zoo.zoo_id','14','problem_status',$status,'problem_status,problem_date')->execute();
+						$grid = new gridView();
+						$grid->pr = 'problem_id';
+						$grid->sts = 'problem_status';
+						$grid->header = array('<b><center>ชื่อ-สกุล</center></b>','<b><center>วันและเวลา</center></b>','<b><center>สถานที่</center></b>','<b><center>ปัญหา</center></b>','<b><center>ชนิด</center></b>','<b>#</b>','<b><center>สถานะ</center></b>');
+						$grid->width = array('15%','10%','20%','20%','15%','5%','5%');
+						$grid->view = '#';
+						$grid->viewtxt ='รายละเอียด';
+						$grid->edit = 'admin_index.php?url=cs_updateproblem.php';
+						$grid->edittxt = 'อัพเดทสถานะ';
+						$grid->name = 'table';
+						$grid->changestatus = 'btn btn-warning';
+						$grid->renderFromDB($columns,$rs);
+					?>
+					</div>
+			<?php }
+				if($user_zoo == 10 || $user_zoo == 15){
+				if($user_zoo == 10){?>
+			<div role="tabpanel" class="tab-pane inf1" id="songkhlazoo" style="padding-left:16px;padding-right:16px;">
+				<?php }else if($user_zoo == 15){?>
+					<div role="tabpanel" class="tab-pane active inf1" id="songkhlazoo" style="padding-left:16px;padding-right:16px;">
+					<?php }
+						$columns = array('problem_name','problem_date','subzoo_name','subtypetools_name','typetools_name');
+						$rs = $db->findByPK66DESC('problem','subzoo','typetools','subtypetools','zoo','problem.subzoo_subzoo_id','subzoo.subzoo_id','problem.subzoo_subzoo_id','subzoo.subzoo_id','problem.subtypetools_subtypetools_id','subtypetools.subtypetools_id','subtypetools.typetools_typetools_id','typetools.typetools_id','subzoo.zoo_zoo_id','zoo.zoo_id','zoo.zoo_id','15','problem_status',$status,'problem_status,problem_date')->execute();
+						$grid = new gridView();
+						$grid->pr = 'problem_id';
+						$grid->sts = 'problem_status';
+						$grid->header = array('<b><center>ชื่อ-สกุล</center></b>','<b><center>วันและเวลา</center></b>','<b><center>สถานที่</center></b>','<b><center>ปัญหา</center></b>','<b><center>ชนิด</center></b>','<b>#</b>','<b><center>สถานะ</center></b>');
+						$grid->width = array('15%','10%','20%','20%','15%','5%','5%');
+						$grid->view = '#';
+						$grid->viewtxt ='รายละเอียด';
+						$grid->edit = 'admin_index.php?url=cs_updateproblem.php';
+						$grid->edittxt = 'อัพเดทสถานะ';
+						$grid->name = 'table';
+						$grid->changestatus = 'btn btn-warning';
+						$grid->renderFromDB($columns,$rs);
+		?>
+			</div>
+			<?php }
+				if($user_zoo == 10 || $user_zoo == 16){
+				if($user_zoo == 10){?>
+			<div role="tabpanel" class="tab-pane inf1" id="ubonzoo" style="padding-left:16px;padding-right:16px;">
+			<?php }else if($user_zoo == 16){?>
+			<div role="tabpanel" class="tab-pane active inf1" id="ubonzoo" style="padding-left:16px;padding-right:16px;">
+			<?php }
+					$columns = array('problem_name','problem_date','subzoo_name','subtypetools_name','typetools_name');
+					$rs = $db->findByPK66DESC('problem','subzoo','typetools','subtypetools','zoo','problem.subzoo_subzoo_id','subzoo.subzoo_id','problem.subzoo_subzoo_id','subzoo.subzoo_id','problem.subtypetools_subtypetools_id','subtypetools.subtypetools_id','subtypetools.typetools_typetools_id','typetools.typetools_id','subzoo.zoo_zoo_id','zoo.zoo_id','zoo.zoo_id','16','problem_status',$status,'problem_status,problem_date')->execute();
+					$grid = new gridView();
+					$grid->pr = 'problem_id';
+					$grid->sts = 'problem_status';
+					$grid->header = array('<b><center>ชื่อ-สกุล</center></b>','<b><center>วันและเวลา</center></b>','<b><center>สถานที่</center></b>','<b><center>ปัญหา</center></b>','<b><center>ชนิด</center></b>','<b>#</b>','<b><center>สถานะ</center></b>');
+					$grid->width = array('15%','10%','20%','20%','15%','5%','5%');
+					$grid->view = '#';
+					$grid->viewtxt ='รายละเอียด';
+					$grid->edit = 'admin_index.php?url=cs_updateproblem.php';
+					$grid->edittxt = 'อัพเดทสถานะ';
+					$grid->name = 'table';
+					$grid->changestatus = 'btn btn-warning';
+					$grid->renderFromDB($columns,$rs);
+		?>
+			</div>
 		<?php }
-			if($user_zoo == 10 || $user_zoo == 11){
-			if($user_zoo == 10){?>
-			<a class="nav-item nav-link" href="#dusitzoo" aria-controls="dusitzoo" role="tab" data-toggle="tab" style="color:#AF7AC5;" aria-selected="false">สวนสัตว์ดุสิต</a>
-		<?php }
-		else if($user_zoo == 11){?>
-			<a class="nav-item nav-link" href="#dusitzoo" aria-controls="dusitzoo" role="tab" data-toggle="tab" style="color:#AF7AC5;" aria-selected="false">สวนสัตว์ดุสิต</a>
-		<?php }
-			}
-			if($user_zoo == 10 || $user_zoo == 12){
-			if($user_zoo == 10){?>
-			<a class="nav-item nav-link" href="#khaokeawzoo" aria-controls="khaokeawzoo" role="tab" data-toggle="tab" style="color:#5DADE2;" aria-selected="false">สวนสัตว์เปิดเขาเขียว</a>
-		<?php }else if($user_zoo == 12){?>
-			<a class="nav-item nav-link" href="#khaokeawzoo" aria-controls="khaokeawzoo" role="tab" data-toggle="tab" style="color:#5DADE2;" aria-selected="false">สวนสัตว์เปิดเขาเขียว</a>
-		<?php }
-			}
-			if($user_zoo == 10 || $user_zoo == 13){
-			if($user_zoo == 10){?>
-			<a class="nav-item nav-link" href="#chiangmaizoo" aria-controls="chiangmaizoo" role="tab" data-toggle="tab" style="color:#48C9B0;" aria-selected="false">สวนสัตว์เชียงใหม่</a>
-		<?php }else if($user_zoo == 12){?>
-			<a class="nav-item nav-link" href="#chiangmaizoo" aria-controls="chiangmaizoo" role="tab" data-toggle="tab" style="color:#48C9B0;" aria-selected="false">สวนสัตว์เปิดเขาเขียว</a>
-		<?php }
-			}
-			if($user_zoo == 10 || $user_zoo == 14){
-			if($user_zoo == 10){?>
-			<a class="nav-item nav-link" href="#korachzoo" aria-controls="korachzoo" role="tab" data-toggle="tab" style="color:#58D68D;" aria-selected="false">สวนสัตว์นครราชสีมา</a>
-		<?php }else if($user_zoo == 14){?>
-			<a class="nav-item nav-link" href="#korachzoo" aria-controls="korachzoo" role="tab" data-toggle="tab" style="color:#58D68D;" aria-selected="false">สวนสัตว์นครราชสีมา</a>
-		<?php }
-			}
-			if($user_zoo == 10 || $user_zoo == 15){
-			 if($user_zoo == 10){?>
-			<a class="nav-item nav-link" href="#songkhlazoo" aria-controls="songkhlazoo" role="tab" data-toggle="tab" style="color:#F4D03F;" aria-selected="false">สวนสัตว์สงขลา</a>
-		<?php }else if($user_zoo == 15){?>
-			<a class="nav-item nav-link" href="#songkhlazoo" aria-controls="songkhlazoo" role="tab" data-toggle="tab" style="color:#F4D03F;" aria-selected="false">สวนสัตว์สงขลา</a>
-		<?php }
-			}
-			if($user_zoo == 10 || $user_zoo == 16){
-			if($user_zoo == 10){?>
-			<a class="nav-item nav-link" href="#ubonzoo" aria-controls="ubonzoo" role="tab" data-toggle="tab" style="color:#EB984E;" aria-selected="false">สวนสัตว์อุบลราชธานี</a>
-		<?php }else if($user_zoo == 16){?>
-			<a class="nav-item nav-link" href="#ubonzoo" aria-controls="ubonzoo" role="tab" data-toggle="tab" style="color:#EB984E;" aria-selected="false">สวนสัตว์อุบลราชธานี</a>
-		<?php }
-			}
 			if($user_zoo == 10 || $user_zoo == 17){
 			if($user_zoo == 10){?>
-			<a class="nav-item nav-link" href="#khonkeanzoo" aria-controls="khonkean" role="tab" data-toggle="tab" style="color:#45B39D;" aria-selected="false">สวนสัตว์ขอนแก่น</a>
-		<?php }else if($user_zoo == 17){?>
-			<a class="nav-item nav-link" href="#khonkeanzoo" aria-controls="khonkean" role="tab" data-toggle="tab" style="color:#45B39D;" aria-selected="false">สวนสัตว์ขอนแก่น</a>
-		<?php }
-			}
-		?>
-	</nav>
-  <!-- Tab panes -->
-  <div class="tab-content">
-      <?php if($user_zoo == 10){?>
-    <div role="tabpanel" class="tab-pane active inf1" id="zpo" style="padding-left:16;padding-right:16px;">
-       <?php
-            $columns = array('problem_name','problem_date','zoo_name','subzoo_name','subtypetools_name','typetools_name');
-			$rs = $db->findByPK66DESC('problem','subzoo','typetools','subtypetools','zoo','problem.subzoo_subzoo_id','subzoo.subzoo_id','problem.subzoo_subzoo_id','subzoo.subzoo_id','problem.subtypetools_subtypetools_id','subtypetools.subtypetools_id','subtypetools.typetools_typetools_id','typetools.typetools_id','subzoo.zoo_zoo_id','zoo.zoo_id','zoo.zoo_type','1','problem_status',$status,'problem_status,problem_date')->execute();
-			$grid = new gridView();
-			$grid->pr = 'problem_id';
-			$grid->sts = 'problem_status';
-			$grid->header = array('<b><center>ชื่อ-สกุล</center></b>','<b><center>วันและเวลา</center></b>','<b><center>สำนัก</center></b>','<b><center>ฝ่าย</center></b>','<b><center>ปัญหา</center></b>','<b><center>ชนิด</center></b>','<b>#</b>','<b><center>สถานะ</center></b>');
-			$grid->width = array('19%','12%','15%','12%','23%','15%','2%','2%');
- 			$grid->view = '#';
- 			$grid->viewtxt ='รายละเอียด';
- 			$grid->edit = 'admin_index.php?url=cs_updateproblem.php';
- 			$grid->edittxt = 'อัพเดทสถานะ';
- 			$grid->name = 'table';
-			$grid->changestatus = 'btn btn-warning';
-			$grid->renderFromDB($columns,$rs);
-?>
-        </div>
-    <?php }
-        if($user_zoo == 10 || $user_zoo == 11){
-        if($user_zoo == 10){?>
-    <div role="tabpanel" class="tab-pane inf1" id="dusitzoo" style="padding-left:16;padding-right:16px;">
-    <?php }else if($user_zoo == 11){?>
-    <div role="tabpanel" class="tab-pane active inf2" id="dusitzoo" style="padding-left:16;padding-right:16px;">
-    <?php
-        }
-            $columns = array('problem_name','problem_date','subzoo_name','subtypetools_name','typetools_name');
-			$rs = $db->findByPK66DESC('problem','subzoo','typetools','subtypetools','zoo','problem.subzoo_subzoo_id','subzoo.subzoo_id','problem.subzoo_subzoo_id','subzoo.subzoo_id','problem.subtypetools_subtypetools_id','subtypetools.subtypetools_id','subtypetools.typetools_typetools_id','typetools.typetools_id','subzoo.zoo_zoo_id','zoo.zoo_id','zoo.zoo_id','11','problem_status',$status,'problem_status,problem_date')->execute();
-			$grid = new gridView();
-			$grid->pr = 'problem_id';
-			$grid->sts = 'problem_status';
-			$grid->header = array('<b><center>ชื่อ-สกุล</center></b>','<b><center>วันและเวลา</center></b>','<b><center>สถานที่</center></b>','<b><center>ปัญหา</center></b>','<b><center>ชนิด</center></b>','<b>#</b>','<b><center>สถานะ</center></b>');
-			$grid->width = array('15%','10%','20%','20%','15%','5%','5%');
- 			$grid->view = '#';
- 			$grid->viewtxt ='รายละเอียด';
- 			$grid->edit = 'admin_index.php?url=cs_updateproblem.php';
- 			$grid->edittxt = 'อัพเดทสถานะ';
- 			$grid->name = 'table';
-			$grid->changestatus = 'btn btn-warning';
-			$grid->renderFromDB($columns,$rs);
-?>
+		<div role="tabpanel" class="tab-pane inf1" id="khonkeanzoo" style="padding-left:16px;padding-right:16px;">
+			<?php }else if($user_zoo == 17){?>
+				<div role="tabpanel" class="tab-pane active inf1" id="khonkeanzoo" style="padding-left:16px;padding-right:16px;">
+				<?php }
+					$columns = array('problem_name','problem_date','subzoo_name','subtypetools_name','typetools_name');
+					$rs = $db->findByPK66DESC('problem','subzoo','typetools','subtypetools','zoo','problem.subzoo_subzoo_id','subzoo.subzoo_id','problem.subzoo_subzoo_id','subzoo.subzoo_id','problem.subtypetools_subtypetools_id','subtypetools.subtypetools_id','subtypetools.typetools_typetools_id','typetools.typetools_id','subzoo.zoo_zoo_id','zoo.zoo_id','zoo.zoo_id','17','problem_status',$status,'problem_status,problem_date')->execute();
+					$grid = new gridView();
+					$grid->pr = 'problem_id';
+					$grid->sts = 'problem_status';
+					$grid->header = array('<b><center>ชื่อ-สกุล</center></b>','<b><center>วันและเวลา</center></b>','<b><center>สถานที่</center></b>','<b><center>ปัญหา</center></b>','<b><center>ชนิด</center></b>','<b>#</b>','<b><center>สถานะ</center></b>');
+					$grid->width = array('15%','10%','20%','20%','15%','5%','5%');
+					$grid->view = '#';
+					$grid->viewtxt ='รายละเอียด';
+					$grid->edit = 'admin_index.php?url=cs_updateproblem.php';
+					$grid->edittxt = 'อัพเดทสถานะ';
+					$grid->name = 'table';
+					$grid->changestatus = 'btn btn-warning';
+					$grid->renderFromDB($columns,$rs);
+				?>
+				</div>
+			<?php }?>
+		</div>
+		</div>
+		<div class='col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1'></div>
+	</div>
 </div>
-<?php }
-        if($user_zoo == 10 || $user_zoo == 12){
-            if($user_zoo == 10){?>
-    <div role="tabpanel" class="tab-pane inf1" id="khaokeawzoo" style="padding-left:16;padding-right:16px;">
-    <?php }else if($user_zoo == 12){?>
-    <div role="tabpanel" class="tab-pane active inf1" id="khaokeawzoo" style="padding-left:16;padding-right:16px;">
-    <?php
-        }
-            $columns = array('problem_name','problem_date','subzoo_name','subtypetools_name','typetools_name');
-			$rs = $db->findByPK66DESC('problem','subzoo','typetools','subtypetools','zoo','problem.subzoo_subzoo_id','subzoo.subzoo_id','problem.subzoo_subzoo_id','subzoo.subzoo_id','problem.subtypetools_subtypetools_id','subtypetools.subtypetools_id','subtypetools.typetools_typetools_id','typetools.typetools_id','subzoo.zoo_zoo_id','zoo.zoo_id','zoo.zoo_id','12','problem_status',$status,'problem_status,problem_date')->execute();
-			$grid = new gridView();
-			$grid->pr = 'problem_id';
-			$grid->sts = 'problem_status';
-			$grid->header = array('<b><center>ชื่อ-สกุล</center></b>','<b><center>วันและเวลา</center></b>','<b><center>สถานที่</center></b>','<b><center>ปัญหา</center></b>','<b><center>ชนิด</center></b>','<b>#</b>','<b><center>สถานะ</center></b>');
-			$grid->width = array('15%','10%','20%','20%','15%','5%','5%');
- 			$grid->view = '#';
- 			$grid->viewtxt ='รายละเอียด';
- 			$grid->edit = 'admin_index.php?url=cs_updateproblem.php';
- 			$grid->edittxt = 'อัพเดทสถานะ';
- 			$grid->name = 'table';
-			$grid->changestatus = 'btn btn-warning';
-			$grid->renderFromDB($columns,$rs);
-?>
-    </div>
-    <?php }
-        if($user_zoo == 10 || $user_zoo == 13){
-        if($user_zoo == 10){?>
-    <div role="tabpanel" class="tab-pane inf1" id="chiangmaizoo" style="padding-left:16;padding-right:16px;">
-    <?php }else if($user_zoo == 13){?>
-    <div role="tabpanel" class="tab-pane active inf1" id="chiangmaizoo" style="padding-left:16;padding-right:16px;">
-   <?php }
-            $columns = array('problem_name','problem_date','subzoo_name','subtypetools_name','typetools_name');
-			$rs = $db->findByPK66DESC('problem','subzoo','typetools','subtypetools','zoo','problem.subzoo_subzoo_id','subzoo.subzoo_id','problem.subzoo_subzoo_id','subzoo.subzoo_id','problem.subtypetools_subtypetools_id','subtypetools.subtypetools_id','subtypetools.typetools_typetools_id','typetools.typetools_id','subzoo.zoo_zoo_id','zoo.zoo_id','zoo.zoo_id','13','problem_status',$status,'problem_status,problem_date')->execute();
-			$grid = new gridView();
-			$grid->pr = 'problem_id';
-			$grid->sts = 'problem_status';
-			$grid->header = array('<b><center>ชื่อ-สกุล</center></b>','<b><center>วันและเวลา</center></b>','<b><center>สถานที่</center></b>','<b><center>ปัญหา</center></b>','<b><center>ชนิด</center></b>','<b>#</b>','<b><center>สถานะ</center></b>');
-			$grid->width = array('15%','10%','20%','20%','15%','5%','5%');
- 			$grid->view = '#';
- 			$grid->viewtxt ='รายละเอียด';
- 			$grid->edit = 'admin_index.php?url=cs_updateproblem.php';
- 			$grid->edittxt = 'อัพเดทสถานะ';
- 			$grid->name = 'table';
-			$grid->changestatus = 'btn btn-warning';
-			$grid->renderFromDB($columns,$rs);
-?>
-    </div>
-    <?php }
-        if($user_zoo == 10 || $user_zoo == 14){
-             if($user_zoo == 10){?>
-    <div role="tabpanel" class="tab-pane inf1" id="korachzoo" style="padding-left:16;padding-right:16px;">
-    <?php }else if($user_zoo == 14){?>
-    <div role="tabpanel" class="tab-pane active inf1" id="korachzoo" style="padding-left:16;padding-right:16px;">
-    <?php }
-            $columns = array('problem_name','problem_date','subzoo_name','subtypetools_name','typetools_name');
-			$rs = $db->findByPK66DESC('problem','subzoo','typetools','subtypetools','zoo','problem.subzoo_subzoo_id','subzoo.subzoo_id','problem.subzoo_subzoo_id','subzoo.subzoo_id','problem.subtypetools_subtypetools_id','subtypetools.subtypetools_id','subtypetools.typetools_typetools_id','typetools.typetools_id','subzoo.zoo_zoo_id','zoo.zoo_id','zoo.zoo_id','14','problem_status',$status,'problem_status,problem_date')->execute();
-			$grid = new gridView();
-			$grid->pr = 'problem_id';
-			$grid->sts = 'problem_status';
-			$grid->header = array('<b><center>ชื่อ-สกุล</center></b>','<b><center>วันและเวลา</center></b>','<b><center>สถานที่</center></b>','<b><center>ปัญหา</center></b>','<b><center>ชนิด</center></b>','<b>#</b>','<b><center>สถานะ</center></b>');
-			$grid->width = array('15%','10%','20%','20%','15%','5%','5%');
- 			$grid->view = '#';
- 			$grid->viewtxt ='รายละเอียด';
- 			$grid->edit = 'admin_index.php?url=cs_updateproblem.php';
- 			$grid->edittxt = 'อัพเดทสถานะ';
- 			$grid->name = 'table';
-			$grid->changestatus = 'btn btn-warning';
-			$grid->renderFromDB($columns,$rs);
-?>
-    </div>
-    <?php }
-        if($user_zoo == 10 || $user_zoo == 15){
-        if($user_zoo == 10){?>
-    <div role="tabpanel" class="tab-pane inf1" id="songkhlazoo" style="padding-left:16;padding-right:16px;">
-    <?php }else if($user_zoo == 15){?>
-    <div role="tabpanel" class="tab-pane active inf1" id="songkhlazoo" style="padding-left:16;padding-right:16px;">
-   <?php }
-            $columns = array('problem_name','problem_date','subzoo_name','subtypetools_name','typetools_name');
-			$rs = $db->findByPK66DESC('problem','subzoo','typetools','subtypetools','zoo','problem.subzoo_subzoo_id','subzoo.subzoo_id','problem.subzoo_subzoo_id','subzoo.subzoo_id','problem.subtypetools_subtypetools_id','subtypetools.subtypetools_id','subtypetools.typetools_typetools_id','typetools.typetools_id','subzoo.zoo_zoo_id','zoo.zoo_id','zoo.zoo_id','15','problem_status',$status,'problem_status,problem_date')->execute();
-			$grid = new gridView();
-			$grid->pr = 'problem_id';
-			$grid->sts = 'problem_status';
-			$grid->header = array('<b><center>ชื่อ-สกุล</center></b>','<b><center>วันและเวลา</center></b>','<b><center>สถานที่</center></b>','<b><center>ปัญหา</center></b>','<b><center>ชนิด</center></b>','<b>#</b>','<b><center>สถานะ</center></b>');
-			$grid->width = array('15%','10%','20%','20%','15%','5%','5%');
- 			$grid->view = '#';
- 			$grid->viewtxt ='รายละเอียด';
- 			$grid->edit = 'admin_index.php?url=cs_updateproblem.php';
- 			$grid->edittxt = 'อัพเดทสถานะ';
- 			$grid->name = 'table';
-			$grid->changestatus = 'btn btn-warning';
-			$grid->renderFromDB($columns,$rs);
-?>
-    </div>
-    <?php }
-        if($user_zoo == 10 || $user_zoo == 16){
-        if($user_zoo == 10){?>
-    <div role="tabpanel" class="tab-pane inf1" id="ubonzoo" style="padding-left:16;padding-right:16px;">
-    <?php }else if($user_zoo == 16){?>
-    <div role="tabpanel" class="tab-pane active inf1" id="ubonzoo" style="padding-left:16;padding-right:16px;">
-    <?php }
-            $columns = array('problem_name','problem_date','subzoo_name','subtypetools_name','typetools_name');
-			$rs = $db->findByPK66DESC('problem','subzoo','typetools','subtypetools','zoo','problem.subzoo_subzoo_id','subzoo.subzoo_id','problem.subzoo_subzoo_id','subzoo.subzoo_id','problem.subtypetools_subtypetools_id','subtypetools.subtypetools_id','subtypetools.typetools_typetools_id','typetools.typetools_id','subzoo.zoo_zoo_id','zoo.zoo_id','zoo.zoo_id','16','problem_status',$status,'problem_status,problem_date')->execute();
-			$grid = new gridView();
-			$grid->pr = 'problem_id';
-			$grid->sts = 'problem_status';
-			$grid->header = array('<b><center>ชื่อ-สกุล</center></b>','<b><center>วันและเวลา</center></b>','<b><center>สถานที่</center></b>','<b><center>ปัญหา</center></b>','<b><center>ชนิด</center></b>','<b>#</b>','<b><center>สถานะ</center></b>');
-			$grid->width = array('15%','10%','20%','20%','15%','5%','5%');
- 			$grid->view = '#';
- 			$grid->viewtxt ='รายละเอียด';
- 			$grid->edit = 'admin_index.php?url=cs_updateproblem.php';
- 			$grid->edittxt = 'อัพเดทสถานะ';
- 			$grid->name = 'table';
-			$grid->changestatus = 'btn btn-warning';
-			$grid->renderFromDB($columns,$rs);
-?>
-    </div>
-    <?php }
-        if($user_zoo == 10 || $user_zoo == 17){
-        if($user_zoo == 10){?>
-    <div role="tabpanel" class="tab-pane inf1" id="khonkeanzoo" style="padding-left:16;padding-right:16px;">
-    <?php }else if($user_zoo == 17){?>
-    <div role="tabpanel" class="tab-pane active inf1" id="khonkeanzoo" style="padding-left:16;padding-right:16px;">
-     <?php }
-            $columns = array('problem_name','problem_date','subzoo_name','subtypetools_name','typetools_name');
-			$rs = $db->findByPK66DESC('problem','subzoo','typetools','subtypetools','zoo','problem.subzoo_subzoo_id','subzoo.subzoo_id','problem.subzoo_subzoo_id','subzoo.subzoo_id','problem.subtypetools_subtypetools_id','subtypetools.subtypetools_id','subtypetools.typetools_typetools_id','typetools.typetools_id','subzoo.zoo_zoo_id','zoo.zoo_id','zoo.zoo_id','17','problem_status',$status,'problem_status,problem_date')->execute();
-			$grid = new gridView();
-			$grid->pr = 'problem_id';
-			$grid->sts = 'problem_status';
-			$grid->header = array('<b><center>ชื่อ-สกุล</center></b>','<b><center>วันและเวลา</center></b>','<b><center>สถานที่</center></b>','<b><center>ปัญหา</center></b>','<b><center>ชนิด</center></b>','<b>#</b>','<b><center>สถานะ</center></b>');
-			$grid->width = array('15%','10%','20%','20%','15%','5%','5%');
- 			$grid->view = '#';
- 			$grid->viewtxt ='รายละเอียด';
- 			$grid->edit = 'admin_index.php?url=cs_updateproblem.php';
- 			$grid->edittxt = 'อัพเดทสถานะ';
- 			$grid->name = 'table';
-			$grid->changestatus = 'btn btn-warning';
-			$grid->renderFromDB($columns,$rs);
-?>
-     </div>
-     <?php }?>
-  </div>
 <?php
 include_once 'cs_viewdetail.php';
     endif;
