@@ -121,18 +121,18 @@
 	}
 	</script>
 <?php echo $form->open("form_reg","frmMain","","cs_insert_upweb.php",""); ?>
-<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" style="margin-top:15px;">
+<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3">
 	<div class="row">
 		<div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3"></div>
-		<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6">
+		<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6"  style="padding-top:16px;background-color:#ffffff;border:solid 1px #E0E0E0;border-radius:7px;">
 			<div class="row">
-				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-					<h3>ร้องขอขึ้นเว็บไซต์</h3>
+				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12"  style="border-bottom:solid 1px #E0E0E0;">
+					<h4>ร้องขอขึ้นเว็บไซต์</h4>
 				</div>
-				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" style="margin-top:7px;">
-					<div class="row">
-						<div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3"><?php echo $lbdevision; ?></div>
-						<div class='col-xl-9 col-lg-9 col-md-9 col-sm-9 col-9 form-group has-feedback'>
+				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3">
+					<?php echo $lbdevision; ?>
+				</div>
+				<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 form-group has-feedback'>
 							<select class='form-control css-require' id="ddlZoo" name="subzoo_zoo_zoo_id" onChange = "ListSubzoo(this.value)">
 							<option selected value="">-----โปรดระบุ-----</option>
 							<?php
@@ -145,63 +145,58 @@
 								}
 								?>
 							</select>
+				</div>
+				<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12'>
+					<label>ฝ่าย</label>
+				</div>
+				<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 form-group has-feedback'>
+					<select class='form-control css-require' id="ddlSubzoo" name="subzoo_subzoo_id"></select>
+				</div>
+				<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12'>
+					<?php echo $lbwork ?>
+				</div>
+				<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 form-group has-feedback'>
+					<?php echo $txtwork ?>
+				</div>
+				<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12'>
+					<?php echo $lbname ?>
+				</div>
+				<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 form-group has-feedback'>
+					<?php echo $txtname ?>
+				</div>
+				<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12'>
+					<?php echo $lbsystem ?>
+				</div>
+				<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 form-group has-feedback'>
+					<?php echo $txtname ?>
+				</div>
+				<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12'>
+					<?php echo $lbdetail ?>
+				</div>
+				<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 form-group has-feedback'>
+					<?php echo $txtdetail ?>
+				</div>
+				<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12'>
+					<div class="row">
+						<div class='col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1' style="padding-top: 8px;">
+							<?php echo $lbfile ?>
+						</div>
+						<div class='col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8' style="padding-top: 5px;">
+							<input type="file" name="filUpload[]">
+							<span id="mySpan"></span>
+						</div>
+						<div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3" id="add">
+							<input class="btn btn-primary col-12" name="btnButton" id="btnButton" type="button" value="เพิ่ม" onClick="JavaScript:fncCreateElement();">
 						</div>
 					</div>
 				</div>
-				<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12'>
+				<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3' style="margin-bottom:16px;">
 					<div class="row">
-						<div class='col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3' style="padding-top: 8px;"><label>ฝ่าย</label></div>
-						<div class='col-xl-9 col-lg-9 col-md-9 col-sm-9 col-9 form-group has-feedback'>
-							<select class='form-control css-require' id="ddlSubzoo" name="subzoo_subzoo_id"></select>
+						<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4"></div>
+						<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
+							<input class="btn btn-success col-12" name="btnSubmit" type="submit" value="Submit">
 						</div>
-					</div>
-				</div>
-				<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12'>
-					<div class="row">
-						<div class='col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3' style="padding-top: 8px;"><?php echo $lbwork ?></div>
-						<div class='col-xl-9 col-lg-9 col-md-9 col-sm-9 col-9 form-group has-feedback'><?php echo $txtwork ?></div>
-					</div>
-				</div>
-				<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12'>
-					<div class="row">
-						<div class='col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3' style="padding-top: 8px;"><?php echo $lbname ?></div>
-						<div class='col-xl-9 col-lg-9 col-md-9 col-sm-9 col-9 form-group has-feedback'><?php echo $txtname ?></div>
-					</div>
-				</div>
-				<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12'>
-					<div class="row">
-						<div class='col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3' style="padding-top: 8px;"><?php echo $lbsystem ?></div>
-						<div class='col-xl-9 col-lg-9 col-md-9 col-sm-9 col-9 form-group has-feedback'><?php echo $txtname ?></div>
-					</div>
-				</div>
-				<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12'>
-					<div class="row">
-						<div class='col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3' style="padding-top: 8px;"><?php echo $lbdetail ?></div>
-						<div class='col-xl-9 col-lg-9 col-md-9 col-sm-9 col-9 form-group has-feedback'><?php echo $txtdetail ?></div>
-					</div>
-				</div>
-				<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12'>
-					<div class="row">
-						<div class='col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3' style="padding-top: 8px;"><?php echo $lbfile ?></div>
-						<div class='col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3' style="padding-top: 8px;">
-						<input type="file" name="filUpload[]">
-						<span id="mySpan"></span>
-						</div>
-					</div>
-				</div>
-				<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12'>
-					<div class="row">
-						<div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8"></div>
-						<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4" style="margin-top:8px;">
-							<div class="row">
-								<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6" id="add">
-									<input class="btn btn-primary col-12" name="btnButton" id="btnButton" type="button" value="เพิ่ม" onClick="JavaScript:fncCreateElement();">
-								</div>
-								<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6">
-									<input class="btn btn-success col-12" name="btnSubmit" type="submit" value="Submit">
-								</div>
-							</div>
-						</div>
+						<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4"></div>
 					</div>
 				</div>
 			</div>

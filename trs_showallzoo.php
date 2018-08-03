@@ -66,7 +66,7 @@
 	$buttonprintpdf = new buttonok('ค้นหา','','btn btn-default trspdf','submit');
 
      ?>
-<div class="col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10">
+<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3">
 	<div class='row'>
 		<div class='col-md-12 printdisplaynone'>
 			<h4>รายงานจำนวนผู้เข้าชมของสวนสัตว์</h4>

@@ -1,5 +1,4 @@
 <?php
-
 	$form = new form();
 	$story = new textfield('eventconfer_story','story','form-control','','');
 	$name = new textfield('eventconfer_namers','','form-control','','');
@@ -207,7 +206,7 @@
 				?>
 }
 </script>
-<div class='col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10'>
+<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12'>
 	<div class="row">
 		<div class='col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1'></div>
 		<div class='col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10' style="padding-top:16px;background-color:#ffffff;border:solid 1px #E0E0E0;border-radius:7px;">
