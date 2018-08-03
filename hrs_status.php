@@ -55,6 +55,8 @@
 		  echo $row."<legend></legend>".$rowend;
 		  echo $form->open("form_reg","form","","cf_insert_updatestatus.php","");
 ?>
+
+						<a href="admin_index.php?url=hrs_edit_certificate.php&id=<?php echo $_GET['id']; ?>" class="btn btn-success col-12">แก้ไขข้อมูล</a>
 <div class='col-md-12'>
 	<div class='row'>
 		<div class='col-md-3'></div>
