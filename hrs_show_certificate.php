@@ -29,7 +29,7 @@
 			$grid = new gridView();
 			$grid->pr = 'hrctf_id';
 			$grid->sts = 'hrctf_status';
-			$grid->header = array('<b><center>หนังสือรับรอง</center></b>','<b><center>ชื่อ-นามสกุล</center></b>','<b><center>ตำแหน่ง</center></b>','<b><center>สังกัด</center></b>','<b><center>#</center></b>');
+			$grid->header = array('<b><center>หนังสือรับรอง</center></b>','<b><center>ชื่อ-นามสกุล</center></b>','<b><center>ตำแหน่ง</center></b>','<b><center>สังกัด</center></b>','<b><center>สถานะ</center></b>');
 			$grid->width = array('30%','20%','15%','15%','20%');
 // 			$grid->edit = '#';
 			$grid->name = 'table';

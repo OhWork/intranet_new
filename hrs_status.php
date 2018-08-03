@@ -8,7 +8,7 @@
     $form = new form();
     $lbname = new label('ชื่อ-นามสกุล');
     $lbposition = new label('ตำแหน่ง');
-    $lbtypestory = new label('ประเภทเรื่อง');
+    $lbcertificate = new label('ชื่อหนังสือรับรอง');
     $lbstory = new label('เรื่อง');
     $lbstart = new label('วันและเวลาเริ่มประชุม');
     $lbend = new label('วันและเวลาเลิกประชุม');
@@ -40,7 +40,7 @@
     $button = new buttonok('เปลี่ยนสถานะ','','btn btn-success col-md-12','');
     if(!empty($_GET['id'])){
 		$id = $_GET['id'];
-		$r = $db->findByPK44('eventconfer','conferroom','zoo','headncf','confer_confer_id','confer_id','zoo_zoo_id','zoo_id','headncf_headncf_id','headncf_id','eventconfer_id',$id)->executeRow();
+		$r = $db->findByPK33('hrctf','typectf','zoo','typectf_typectf_id','typectf_id','zoo_zoo_id','zoo_id','hrctf_status',"'S'")->executeRow();
 		 $year = date("Y")+543;
           $md = date("m-d");
           $time = date("H:i");
@@ -60,10 +60,16 @@
 		<div class='col-md-3'></div>
 		<div class='col-md-6' style="border: solid 1px #eaecef;border-radius: 6px;padding-top:16px;padding-bottom:16px;">
 			<div class='row'>
+    			<div class='col-md-12'>
+					<div class='row'>
+						<div class='col-md-6 font-weight-bold statustextleft'><?php echo $lbcertificate ?></div>
+						<div class='col-md-6 statustext'><?php echo $r['typectf_name'] ?></div>
+					</div>
+				</div>
 				<div class='col-md-12'>
 					<div class='row'>
-						<div class='col-md-6 font-weight-bold statustextleft'><?php echo $lbuname ?></div>
-						<div class='col-md-6 statustext'><?php echo $r['eventconfer_uname'] ?></div>
+						<div class='col-md-6 font-weight-bold statustextleft'><?php echo $lbname ?></div>
+						<div class='col-md-6 statustext'><?php echo $r['hrctf_name'] ?></div>
 					</div>
 				</div>
 				<div class='col-md-12'>
@@ -198,25 +204,7 @@
 						<div class='col-md-4'></div>
 					</div>
 				</div>
-				<div class='col-md-12 mt-3 editcomment'>
-					<div class='row'>
-						<div class="col-md-12">
-							<div class="row">
-								<div class="col-md-4 statustextleft">
-								<?php
-									echo $lbCause;
-									?>
-								</div>
-								<div class="col-md-8 statustext">
-									<?php
-									echo $txtcause;
-								?>
-								</div>
-							</div>
-						</div>
-					</div>
-					</div>
-				</div>
+
 <?php
     echo "<input type='hidden' name='eventconfer_id' value='$_GET[id]'/>";
 ?>
@@ -239,20 +227,3 @@
 	endif;
 ?>
 </div>
-<script>
-	$(document).ready(function(){
-		$('.editcomment').hide();
-		$('.statusconfirm').on("change",function(e) {
-		var checkstat = $('input[name=eventconfer_status]:radio:checked').val();
-			console.log(checkstat);
-			if(checkstat =='N' || checkstat =='C'){
-// 				$('.editcomment').animate({height: 'toggle'});
-				$('.editcomment').show("slow");
-			}
-			else {
-				$('.editcomment').hide("slow");
-
-			}
-		});
-	});
-</script>
