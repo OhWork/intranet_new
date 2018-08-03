@@ -264,99 +264,85 @@ function autoTab2(obj,typeCheck){
             obj.value=obj.value.substr(0,pattern.length);
         }
 }  </script>
-<?php
-      echo $form->open("form_reg","frmMain","maxw","user_insert_permission.php","");
-?>
-<!-- Tab panes -->
-<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 usubd">
-    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" style="margin-top:5px;border-bottom : solid 1px #ced4da;margin-bottom:8px;">
-         <legend><h4>สิทธิ์การเข้าถึงระบบ</h4></legend>
-    </div>
-	<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+<?php echo $form->open("form_reg","frmMain","col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","user_insert_permission.php",""); ?>
+<div class="row">
+	<div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3"></div>
+	<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6 usubd">
 		<div class="row">
-					<div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2" style="padding-top: 7px;"><center><?php echo $lbuser; ?></center></div>
-					<div class="form-group has-feedback col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4" style="padding-top: 7px;"><?php echo $r['user_user'];?></div>
+			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-2"  style="border-bottom:solid 1px #E0E0E0;">
+				<h4>สิทธิ์การเข้าถึงระบบ</h4>
+			</div>
+			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-2" style="color:#0288D1;font-size: 1rem;">
+				<div class="row">
+					<div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+						<?php echo $lbuser; ?>
+					</div>
+					<div class="form-group has-feedback col-xl-9 col-lg-9 col-md-9 col-sm-9 col-9">
+						<?php echo $r['user_user'];?>
+					</div>
 					<div id="msg"></div>
+				</div>
+			</div>
+			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" style="border-bottom:solid 1px #E0E0E0;">
+				<div class="row">
+					<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6" style="padding-top: 8px;"><?php echo $lbnews; ?></div>
+					<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6" style="padding-top: 8px;"><?php echo $radionews; ?></div>
+				</div>
+			</div>
+			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" style="border-bottom:solid 1px #E0E0E0;">
+				<div class="row">
+					<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6" style="padding-top: 8px;"><?php echo $lbzpodrive; ?></div>
+					<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6" style="padding-top: 8px;"><?php echo $radiodrive; ?></div>
+				</div>
+			</div>
+			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" style="border-bottom:solid 1px #E0E0E0;">
+				<div class="row">
+					<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6" style="padding-top: 8px;"><?php echo $lbconfer; ?></div>
+					<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6" style="padding-top: 8px;"><?php echo $radioconfer; ?></div>
+				</div>
+			</div>
+			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" style="border-bottom:solid 1px #E0E0E0;">
+				<div class="row">
+					<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6" style="padding-top: 8px;"><?php echo $lbcomputerservice; ?></div>
+					<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6" style="padding-top: 8px;"><?php echo $radioservice; ?></div>
+				</div>
+			</div>
+			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" style="border-bottom:solid 1px #E0E0E0;">
+				<div class="row">
+					<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6" style="padding-top: 8px;"><?php echo $lbradiotouristreport; ?></div>
+					<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6" style="padding-top: 8px;"><?php echo $radiotouristreport; ?></div>
+				</div>
+			</div>
+			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" style="border-bottom:solid 1px #E0E0E0;">
+				<div class="row">
+					<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6" style="padding-top: 8px;"><?php echo $lbhrs; ?></div>
+					<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6" style="padding-top: 8px;"><?php echo $radiohrs; ?></div>
+				</div>
+			</div>    
+			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+				<div class="row">
+					<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6" style="padding-top: 8px;"><?php echo $lbadmin; ?></div>
+					<div class='col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6' style="padding-top: 8px;"><?php echo $radioadmin; ?></div>
+				</div>
+			</div>	
+			<input type='hidden' name='log_user' value='<?php echo $log_user; ?>'/>
+			<input type='hidden' name='user_id' value='<?php echo $_GET['id'];?>'/>
+			<input type='hidden' name='systemallow_id' value='<?php echo $_GET['id'];?>'/>
+			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3" style="margin-bottom: 16px;">
+				<div class="row">
+					<div class="col-md-4"></div>
+					<div class="col-md-4">
+						<?php echo $submit; ?>
+					</div>
+					<div class="col-md-4"></div>
+				</div>
+			</div>
 		</div>
 	</div>
-	<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 usubd" style="margin-top:5px;">
-    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-        <div class="row">
-            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3"></div>
-            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3 usu" style="padding-top: 14px;"><?php echo $lbnews; ?></div>
-            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3 usu2" style="padding-top: 14px;"><?php echo $radionews; ?></div>
-            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3"></div>
-        </div>
-    </div>
-    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-        <div class="row">
-            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3"></div>
-            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3 usu" style="padding-top: 14px;"><?php echo $lbzpodrive; ?></div>
-            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3 usu2" style="padding-top: 14px;"><?php echo $radiodrive; ?></div>
-            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3"></div>
-        </div>
-    </div>
-    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-        <div class="row">
-            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3"></div>
-            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3 usu" style="padding-top: 14px;"><?php echo $lbconfer; ?></div>
-            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3 usu2" style="padding-top: 14px;"><?php echo $radioconfer; ?></div>
-            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3"></div>
-        </div>
-    </div>
-    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-        <div class="row">
-            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3"></div>
-            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3 usu" style="padding-top: 14px;"><?php echo $lbcomputerservice; ?></div>
-            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3 usu2" style="padding-top: 14px;"><?php echo $radioservice; ?></div>
-            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3"></div>
-        </div>
-    </div>
-    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-		<div class="row">
-            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3"></div>
-            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3 usu" style="padding-top: 14px;"><?php echo $lbradiotouristreport; ?></div>
-            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3 usu2" style="padding-top: 14px;"><?php echo $radiotouristreport; ?></div>
-            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3"></div>
-        </div>
-    </div>
-    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-		<div class="row">
-            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3"></div>
-            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3 usu" style="padding-top: 14px;"><?php echo $lbhrs; ?></div>
-            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3 usu2" style="padding-top: 14px;"><?php echo $radiohrs; ?></div>
-            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3"></div>
-        </div>
-    </div>    
-    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" style="padding-bottom: 15px;">
-        <div class="row">
-            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3"></div>
-            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3 usu3" style="padding-top: 14px;"><?php echo $lbadmin; ?></div>
-            <div class='col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3 usu4' style="padding-top: 14px;"><?php echo $radioadmin; ?></div>
-            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3"></div>
-        </div>
-    </div>
-</div>
-<!--
-//      $gen_password=sha1(md5(md5(md5('test'))));
-//      echo $gen_password."<br>";
--->
-
-    <input type='hidden' name='log_user' value='<?php echo $log_user; ?>'/>
-    <input type='hidden' name='user_id' value='<?php echo $_GET['id'];?>'/>
-    <input type='hidden' name='systemallow_id' value='<?php echo $_GET['id'];?>'/>
-
-<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" style="margin-top:10px;margin-bottom 20px;">
-	<div class="row">
-		<div class="col-md-5"></div>
-		<div class="col-md-2">
-			<?php echo $submit; ?>
-		</div>
-		<div class="col-md-5"></div>
-	</div>
+	<div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3"></div>
 </div>
 <?php
-      echo $form->close();
+    echo $form->close();
     endif; ?>
 <script>
 $(document).ready(function() {

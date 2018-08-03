@@ -191,7 +191,7 @@
 
 		}
 	</script>
-<?php echo $form->open("form_reg","frmMain","col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10","cs_insert_problem.php","");?>
+<?php echo $form->open("form_reg","frmMain","col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","cs_insert_problem.php","");?>
 	<div class="row">
 	<div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2"></div>
 	<div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8" style="padding-top:16px;background-color:#ffffff;border:solid 1px #E0E0E0;border-radius:7px;">

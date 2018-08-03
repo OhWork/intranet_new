@@ -1,7 +1,8 @@
 <?php
 include_once 'change2thaidate.php';
+error_reporting(E_ERROR | E_WARNING | E_PARSE);
 class gridView{
-	public $name,$data,$delete,$edit,$view,$deletetxt,$edittxt,$printtxt,$viewtxt,$header,$width,$pr,$change,$changestatus,$sts,$span,$link,$special,$system;
+	public $name,$data,$delete,$edit,$view,$deletetxt,$edittxt,$printtxt,$viewtxt,$header,$width,$pr,$change,$changestatus,$sts,$sts_hrs,$span,$link,$special,$system;
 
 
 	function __construct(){
@@ -136,17 +137,23 @@ class gridView{
 				}
                 @$id = $r[$this->pr];
                 @$status = $r[$this->sts];
+                @$status_hrs = $r[$this->sts_hrs];
 			/* ส่วนตรวจสอบค่า */
             @$con = mysqli_connect("localhost","root","","intranet");
 			@$sql = "SELECT * FROM problem WHERE problem_id = $id"; //ไว้แก้ เปลี่ยนสเตตัส
+			@$sqlhrs = "SELECT * FROM hrctf WHERE hrctf_id = $id"; //ไว้แก้ เปลี่ยนสเตตัส
 			@$sqlplan = "SELECT * FROM plan WHERE plan_id = $id"; //ไว้แก้ เปลี่ยนสเตตัส
 			@$query= mysqli_query($con,$sql);
+			@$queryhrs= mysqli_query($con,$sqlhrs);
 			@$queryplan= mysqli_query($con,$sqlplan);
 			if(!empty($query)){
 			@$rs_c = mysqli_fetch_array($query,MYSQLI_ASSOC);
 			}
 			if(!empty($queryplan)){
 			@$rs_plan = mysqli_fetch_array($queryplan,MYSQLI_ASSOC);
+			}
+			if(!empty($queryhrs)){
+			@$rs_hrs = mysqli_fetch_array($queryhrs,MYSQLI_ASSOC);
 			}
 			 if(@$rs_c["problem_status"]=='Y')
 			{
@@ -165,6 +172,30 @@ class gridView{
 				$this->changestatus ='btn btn-warning editok';
 				$this->span ='glyphicon glyphicon-question-sign';
 				$this->changetxt = '&nbsp;กำลังดำเนินการแก้ไข';
+			}
+			 if(@$rs_hrs["hrctf_status"]=='Y')
+			{
+				$this->changestatus ='btn btn-success editok';
+				$this->span ='glyphicon glyphicon-ok-sign';
+				$this->changetxt = '&nbsp;อนุมัติเรียบร้อย';
+			}
+			else if(@$rs_hrs["hrctf_status"]=='N')
+			{
+				$this->changestatus ='btn btn-primary editwait';
+				$this->span ='glyphicon glyphicon-info-sign';
+				$this->changetxt = '&nbsp;ไม่อนุมัติ';
+			}
+			else if(@$rs_hrs["hrctf_status"]=='W')
+			{
+				$this->changestatus ='btn btn-primary editwait';
+				$this->span ='glyphicon glyphicon-info-sign';
+				$this->changetxt = '&nbsp;รับเรื่องและรอการดำเนินการ';
+			}
+			else if(@$rs_hrs["hrctf_status"]=='S')
+			{
+				$this->changestatus ='btn btn-warning editok';
+				$this->span ='glyphicon glyphicon-question-sign';
+				$this->changetxt = '&nbsp;ดำเนินการขอหนังสือรับรองแล้ว';
 			}
 			 if(@$rs_plan["plan_status"]=='1')
 			{

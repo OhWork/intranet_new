@@ -2,16 +2,16 @@
 if (!empty($_SESSION['user_name'])):
 $id = $_GET['id'];
   $form = new form();
-  $lbsubzooname = new label("ฝ่าย :");
-  $lbsubzooyear = new label("ปี :");
-  $lbsubzoodetail = new label("รายละเอียด :");
-  $lbsubzoono = new label("ลำดับ :");
-  $lbradiosubzoo = new label("สถานะ :");
+  $lbsubzooname = new label("ฝ่าย");
+  $lbsubzooyear = new label("ปี");
+  $lbsubzoodetail = new label("รายละเอียด");
+  $lbsubzoono = new label("ลำดับ");
+  $lbradiosubzoo = new label("สถานะ");
   $txtsubzooname = new textfield('subzoo_name','','form-control','');
   $txtsubzoono = new textfield('subzoo_no','','form-control','');
   $txtsubzooyear = new textfield('subzoo_year','','form-control','');
   $txtsubzoodetail = new textfield('subzoo_detail','','form-control','');
-  $submit = new buttonok("ยืนยัน","","btn btn-success col-md-12","");
+  $submit = new buttonok("ยืนยัน","","btn btn-success col-12","");
   $selectzoo = new SelectFromDB();
   $selectzoo->name = 'zoo_zoo_id';
   $selectzoo->lists = 'โปรดระบุ สำนัก/สวนสัตว์';
@@ -36,76 +36,77 @@ $id = $_GET['id'];
     	}
 	}
 	
-  echo $form->open("form_reg","form","maxw","user_insert_division.php","");
+  echo $form->open("form_reg","form","col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","user_insert_division.php","");
   if(empty($_GET['id'])){ ?>
-<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-	<div class="row">
-		<div class="col-md-3"></div>
-		<div class="col-md-6">  
-			<div class='col-md-12' style="padding-top:14px;">
+<div class="row">
+	<div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3"></div>
+	<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6 usubd">
+		<div class="row"> 
+			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3" style="border-bottom:solid 1px #E0E0E0;">
 				<h4>เพิ่มฝ่าย</h4>
 			</div>
-			<div class='col-md-12'><?php echo $lbzoo.$selectzoo->selectFromTB('zoo','zoo_id','zoo_name',$r['zoo_zoo_id']); ?></div>
-			<div class='col-md-12' style="padding-top:16px;">
-				<div class='row'>
-					<div class='col-md-2' style='padding-top:8px;'><?php echo $lbsubzooname; ?></div>
-					<div class='col-md-8 form-group has-feedback'><?php echo $txtsubzooname; ?></div>
-				</div>
+			<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3'>
+				<?php echo $lbzoo.$selectzoo->selectFromTB('zoo','zoo_id','zoo_name',$r['zoo_zoo_id']); ?>
+			</div>
+			<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3'>
+				<?php echo $lbsubzooname; ?>
+			</div>
+			<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 form-group has-feedback'>
+				<?php echo $txtsubzooname; ?>
 			</div>
 			<?php  }
 			  if(!empty($_GET['id'])){ ?>
-<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-	<div class="row">
-		<div class="col-md-3"></div>
-		<div class="col-md-6">
-			<div class='col-md-12'style="padding-top:14px;">
+<div class="row">
+	<div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3"></div>
+	<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6 usubd">
+		<div class="row"> 
+			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3" style="border-bottom:solid 1px #E0E0E0;">
 				<h4>แก้ไขฝ่าย</h4>
 			</div>
-			<div class='col-md-12'>
-				<div class='row'>
-					<div class='col-md-2'><?php echo $lbsubzooname; ?></div>
-					<div class='col-md-8 form-group has-feedback'><?php echo $txtsubzooname; ?></div>
-				</div>
+			<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3'>
+				<?php echo $lbsubzooname; ?>
+			</div>
+			<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 form-group has-feedback'>
+				<?php echo $txtsubzooname; ?>
 			</div>
 			 <?php } ?>
-			<div class='col-md-12'>
+			<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12'>
+				<?php echo $lbsubzoono; ?>
+			</div>
+			<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 form-group has-feedback'>
+				<?php echo $txtsubzoono; ?>
+			</div>
+			<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12'>
+				<?php echo $lbsubzooyear; ?>
+			</div>
+			<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 form-group has-feedback'>
+				<?php echo $txtsubzooyear; ?>
+			</div>
+			<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12'>
+				<?php echo $lbsubzoodetail; ?>
+			</div>
+			<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 form-group has-feedback'>
+				<?php echo $txtsubzoodetail; ?>
+			</div>
+			<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12'>
 				<div class='row'>
-					<div class='col-md-2' style="padding-top:8px;"><?php echo $lbsubzoono; ?></div>
-					<div class='col-md-8 form-group has-feedback'><?php echo $txtsubzoono; ?></div>
+					<div class='col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2' style="padding-top:8px;"><?php echo $lbradiosubzoo; ?></div>
+					<div class='col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10' style="padding-top:8px;"><?php echo $radiosubzoo; ?></div>
 				</div>
 			</div>
-			<div class='col-md-12'>
-				<div class='row'>
-					<div class='col-md-2' style="padding-top:8px;"><?php echo $lbsubzooyear; ?></div>
-					<div class='col-md-8 form-group has-feedback'><?php echo $txtsubzooyear; ?></div>
-				</div>
-			</div>
-			<div class='col-md-12'>
-				<div class='row'>
-					<div class='col-md-3' style="padding-top:8px;"><?php echo $lbsubzoodetail; ?></div>
-					<div class='col-md-8 form-group has-feedback'><? echo $txtsubzoodetail; ?></div>
-				</div>
-			</div>
-			<div class='col-md-12'>
-				<div class='row'>
-					<div class='col-md-2' style="padding-top:8px;"><?php echo $lbradiosubzoo; ?></div>
-					<div class='col-md-8' style="padding-top:8px;"><?php echo $radiosubzoo; ?></div>
-				</div>
-			</div>
-			<div class='col-md-12' style="padding-top:16px;">
+			<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3' style="margin-bottom:16px;">
 				<div class="row">
-					<div class="col-md-4"></div>
-					<div class="col-md-4">
-					<input type='hidden' name='subzoo_id' value="<?php echo $_GET['id']; ?>"/>
-					<?php echo $submit; ?>
+					<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4"></div>
+					<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
+						<input type='hidden' name='subzoo_id' value="<?php echo $_GET['id']; ?>"/>
+						<?php echo $submit; ?>
 					</div>
-					<div class="col-md-3"></div>
+					<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4"></div>
 				</div>
 			</div>
-			<?php echo $form->close();
-						endif;
-			?>
-		</div>
-		<div class="col-md-3"></div>		
-	</div>	
+		</div>		
+	</div>
+	<div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3"></div>
 </div>
+<?php echo $form->close();
+	  endif; ?>
