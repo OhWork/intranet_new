@@ -19,15 +19,15 @@
     <div class='col-md-12' style="padding-top:16px;"><h4>รายการหนังสือรับรอง</h4></div>
 
 <?php
-    $columns = array('typectf_name','hrctf_name');
+    $columns = array('typectf_name','hrctf_name','hrctf_position','zoo_name');
     $rs = $db->findByPK33('hrctf','typectf','zoo','typectf_typectf_id','typectf_id','zoo_zoo_id','zoo_id','hrctf_status',"'S'")->execute();
 
 
 			$grid = new gridView();
 			$grid->pr = 'hrctf_id';
-			$grid->header = array('<b><center>หนังสือรับรอง</center></b>','<b><center>ชื่อ-นามสกุล</center></b>','<b><center>#</center></b>');
-			$grid->width = array('10%','10%');
-			$grid->edit = 'admin_index.php?url=cf_status.php';
+			$grid->header = array('<b><center>หนังสือรับรอง</center></b>','<b><center>ชื่อ-นามสกุล</center></b>','<b><center>ตำแหน่ง</center></b>','<b><center>สังกัด</center></b>','<b><center>#</center></b>');
+			$grid->width = array('30%','20%','15%','15%','20%');
+			$grid->edit = 'admin_index.php?url=hrs_editstatus.php';
 			$grid->name = 'table';
 			$grid->edittxt ='สถานะ';
 			$grid->renderFromDB($columns,$rs);
