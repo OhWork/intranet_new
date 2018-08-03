@@ -54,13 +54,14 @@
         var url = window.location.href;
         // passes on every "a" tag
         $("ul a").each(function() {
+	        var urlcheck = url.split('#');
             // checks if its the same on the address bar
-            if (url == (this.href)) {
+            if (urlcheck == (this.href)) {
 	               	$(this).parents(0).addClass("show");
 				   	$(this).addClass("active");
 				   	$(this).parents(0).attr("aria-expanded", true);
             }
-            else if(url != (this.href)) {
+            else if(urlcheck != (this.href)) {
 	            console.log(1234);
 				if(this.href.match("user_add_user")){
 				   	$('#user').addClass("show");
