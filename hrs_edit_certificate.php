@@ -10,6 +10,7 @@
     $lbprovince = new label('จังหวัด');
     $lbdatestart = new label('ตั้งแต่วันที่');
     $lbdateend = new label('ถึงวันที่');
+    $lbpricehos = new label('ค่ารักษาพยาบาลต่อวัน');
     $lbhospital = new label('รับการรักษาจากสถานพยาบาล');
     $txtname = new textfield('hrctf_name','problem_work','form-control','','');
     $txtdatestartwork = new textfieldcalendarreadonly('hrctf_datestartwork','datetimepicker1','','form-control','input-group-addon btn calen','datetimepicker1');
@@ -65,6 +66,14 @@
 				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 					<?php echo $selectdevision->selectFromTBinDB('zoo','zoo_id','zoo_name','zoo_per_hrs','1',$r['zoo_zoo_id']); ?>
 				</div>
+				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+					<?php echo $lbpricehos;?>
+					<select class="form-control" id="test">
+						<option>--------กรุณาเลือกราคาค่าใช้จ่าย------------</option>
+						<option value="1">800</option>
+						<option value="2">1200</option>
+					</select>
+				</div>
 			</div>
 		</div>
 		<div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3"><?php echo $button; ?></div>
@@ -89,5 +98,11 @@
 	        ignoreReadonly: true,
 	        locale:moment.locale('th')
         })
+/*
+   $( document ).ready( function () {
+   $('#test').on('change',function(){
+    	   	console.log($('#test').val());
    });
+   });
+*/
 </script>

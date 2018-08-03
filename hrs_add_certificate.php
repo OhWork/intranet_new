@@ -108,7 +108,7 @@
 				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 					<div class="row">
 						<label class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-							<input type="radio" name="typectf_typectf_id"  id="parent7" value="7"> ขอหนังสือรับรองพยาบาล
+							<input type="radio" name="typectf_typectf_id"  id="parent7" value="6"> ขอหนังสือรับรองพยาบาล
 						</label>
 					</div>
 				</div>
