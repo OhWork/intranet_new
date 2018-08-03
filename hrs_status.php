@@ -9,22 +9,12 @@
     $lbname = new label('ชื่อ-นามสกุล');
     $lbposition = new label('ตำแหน่ง');
     $lbcertificate = new label('ชื่อหนังสือรับรอง');
-    $lbstory = new label('เรื่อง');
-    $lbstart = new label('วันและเวลาเริ่มประชุม');
-    $lbend = new label('วันและเวลาเลิกประชุม');
-    $lbcall = new label('โทรศัพท์');
-    $lbpsname = new label('ประธานที่ประชุม (โปรดระบุชื่อ - สกุล)');
-    $lbpsclass = new label('ตำแหน่ง');
-    $lbjoin = new label('ผู้เข้าร่วมประชุม (โปรดระบุจำนวน)');
-    $lbnamers = new label('ชื่อผู้จอง');
-    $lbtel = new label('เบอร์โทรศัพท์');
-    $lbCause = new label('สาเหตุที่ไม่อนุมัติ/ยกเลิก :');
-    $selectadmin = new SelectFromDB();
-    $selectadmin->name = 'problem_adminfix';
-    $selectadmin->lists = 'โปรดระบุ';
-    $selectadmin2 = new SelectFromDB();
-    $selectadmin2->name = 'problem_adminfix';
-    $selectadmin2->lists = 'โปรดระบุ';
+    $lbdevision = new label('สังกัด');
+    $lbdatework = new label('บรรจุเป็นพนักงานเมื่อวันที่');
+    $lbsalary = new label('เงินเดือนปัจจุบัน');
+    $lbprovince = new label('จังหวัด');
+    $lbdatestart = new label('ตั้งแต่วันที่');
+    $lbdateend = new label('ถึงวันที่');
 
     $txtnotclear = new textfield('problem_notclear','','form-control css-require','','');
     $txttime = new textfield('problem_dateend','datetimepicker','form-control css-require','','');
@@ -41,11 +31,7 @@
     if(!empty($_GET['id'])){
 		$id = $_GET['id'];
 		$r = $db->findByPK33('hrctf','typectf','zoo','typectf_typectf_id','typectf_id','zoo_zoo_id','zoo_id','hrctf_status',"'S'")->executeRow();
-		 $year = date("Y")+543;
-          $md = date("m-d");
-          $time = date("H:i");
-		  $selectadmin->value = $r['problem_adminfix'];
-		  $selectadmin2->value = $r['problem_adminfix'];
+
           $txtnocompletedetail->value = $r['problem_detailwaitcomplete'];
 		  $txtcompletedetail->value = $r['problem_detailcomplete'];
           $txtserialorganize->value = $r['problem_serialorganize'];
@@ -81,8 +67,8 @@
 				</div>
 				<div class='col-md-12'>
 					<div class='row'>
-						<div class='col-md-6 font-weight-bold statustextleft'><?php echo $lbuclass ?></div>
-						<div class='col-md-6 statustext'><?php echo $r['eventconfer_uclass']?></div>
+						<div class='col-md-6 font-weight-bold statustextleft'><?php echo $lbposition ?></div>
+						<div class='col-md-6 statustext'><?php echo $r['hrctf_position']?></div>
 					</div>
 				</div>
 				<div class='col-md-12'>
@@ -92,12 +78,12 @@
 				</div>
 				<div class='col-md-12'>
 					<div class='row'>
-						<div class='col-md-6 font-weight-bold statustextleft'><?php echo $lbtypestory ?></div>
-						<div class='col-md-6 statustext'><?php echo $r['headncf_name'] ?></div>
+						<div class='col-md-6 font-weight-bold statustextleft'><?php echo $lbdevision ?></div>
+						<div class='col-md-6 statustext'><?php echo $r['zoo_name'] ?></div>
 					</div>
 				</div>
 				<?php 
-    				if(($r['headncf_id'] == 1)||($r['headncf_id'] == 2)){
+    				if($r['typectf_id'] == 7){
     				 ?>
 				<div class='col-md-12'>
 					<div class='row'>
@@ -111,6 +97,8 @@
 					</div>
 				</div>
 				<?php
+    				}else{
+        				
     				}
 				?>
 				<div class='col-md-12'>

@@ -29,7 +29,7 @@
     $txtwhofu = new textfield('hrctf_whofu','hrctf_ctfname_id','form-control','','');
     $txteducation = new textfield('hrctf_educationname','hrctf_ctfname_id','form-control','','');
     $txtfamilyname = new textfield('hrctf_familyname','hrctf_familyname_id','form-control','','');
-    $button = new buttonok("ส่งแบบขอหนังสือรับรอง","","btn btn-success btn-lg btn-block bt3success col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","");
+    $button = new buttonok("แก้ไขข้อมูล","","btn btn-success btn-lg btn-block bt3success col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","");
     if(!empty($_GET['id'])){
 		$id = $_GET['id'];
 		$r = $db->findByPK33('hrctf','typectf','zoo','typectf_typectf_id','typectf_id','zoo_zoo_id','zoo_id','hrctf_id',$id)->executeRow();
@@ -45,7 +45,7 @@
 		<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6" style="padding-top:16px;background-color:#ffffff;border:solid 1px #E0E0E0;border-radius:7px;">
 			<div class="row">
 				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-					<h4>หนังสือรับรอง</h4>
+					<h4>หนังสือ<?php echo $r['typectf_name']; ?></h4>
 				</div>
 				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-1">
 					<?php echo $lbname; ?>
@@ -67,7 +67,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3"></div>
+		<div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3"><?php echo $button; ?></div>
 	</div>
 </div>
 </div>
