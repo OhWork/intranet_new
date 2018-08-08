@@ -10,8 +10,18 @@
     $lbprovince = new label('จังหวัด');
     $lbdatestart = new label('ตั้งแต่วันที่');
     $lbdateend = new label('ถึงวันที่');
-    $lbpricehos = new label('ค่ารักษาพยาบาลต่อวัน');
+    $lbmoneyroom = new label('ค่ารักษาพยาบาลต่อวัน');
     $lbhospital = new label('รับการรักษาจากสถานพยาบาล');
+    $lbdatework = new label('บรรจุเป็นพนักงานเมื่อวันที่');
+    $lbsalary = new label('เงินเดือนปัจจุบัน');
+    $lbprovince = new label('จังหวัด');
+    $lbeducation = new label('ชื่อสถาบันการศึกษา');
+    $lbhosfamily = new label('ขอหนังสือรับรองนี้ให้กับ');
+    $lbhosname = new label('รับการรักษาจากโรงพยาบาล');
+    $lbdatestarthos = new label('วันที่เริ่มเข้ารับการรักษา');
+    $lbrecipient = new label('เรียน');
+    $lbwhofu = new label('ค้ำประกันการเข้าทำงาน ของ');
+    $lbwhoname = new label('ซึ่งเกี่ยวข้องกับข้าพเจ้าโดยเป็น');
     $txtname = new textfield('hrctf_name','problem_work','form-control','','');
     $txtdatestartwork = new textfieldcalendarreadonly('hrctf_datestartwork','datetimepicker1','','form-control','input-group-addon btn calen','datetimepicker1');
     $txtdatestarthos = new textfieldcalendarreadonly('hrhos_datestarthos','datetimepicker2','','form-control','input-group-addon','datetimepicker2');
@@ -35,6 +45,8 @@
     $selectmoneyroom->addItem('-----โปรดระบุจำนวนเงิน-----','');
     $selectmoneyroom->addItem('800','800');
     $selectmoneyroom->addItem('1200','1200');
+    $radiofamilytype = new radioGroup();
+    $radiofamilytype->name = 'hrctf_typefamily';
     $button = new buttonok("แก้ไขข้อมูล","","btn btn-success btn-lg btn-block bt3success col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","");
     if(!empty($_GET['id'])){
 		$id = $_GET['id'];
@@ -42,6 +54,37 @@
           $txtname->value = $r['hrctf_name'];
 		  $txtposition->value = $r['hrctf_position'];
 
+	if($r["hrctf_familytype"] == 1){
+    	$radiofamilytype->add('ข้าพเจ้า',1,'checked');
+    	$radiofamilytype->add('คู่สมรส',2,'');
+    	$radiofamilytype->add('บิดา',3,'');
+    	$radiofamilytype->add('มารดา',4,'');
+    	$radiofamilytype->add('บุตร',5,'');
+    	}else if($r["hrctf_familytype"] == 2){
+        $radiofamilytype->add('ข้าพเจ้า',1,'');
+    	$radiofamilytype->add('คู่สมรส',2,'checked');
+    	$radiofamilytype->add('บิดา',3,'');
+    	$radiofamilytype->add('มารดา',4,'');
+    	$radiofamilytype->add('บุตร',5,'');
+        }else if($r["hrctf_familytype"] == 3){
+        $radiofamilytype->add('ข้าพเจ้า',1,'');
+    	$radiofamilytype->add('คู่สมรส',2,'');
+    	$radiofamilytype->add('บิดา',3,'checked');
+    	$radiofamilytype->add('มารดา',4,'');
+    	$radiofamilytype->add('บุตร',5,'');
+        }else if($r["hrctf_familytype"] == 4){
+        $radiofamilytype->add('ข้าพเจ้า',1,'');
+    	$radiofamilytype->add('คู่สมรส',2,'');
+    	$radiofamilytype->add('บิดา',3,'');
+    	$radiofamilytype->add('มารดา',4,'checked');
+    	$radiofamilytype->add('บุตร',5,'');
+        }else if($r["hrctf_familytype"] == 5){
+        $radiofamilytype->add('ข้าพเจ้า',1,'');
+    	$radiofamilytype->add('คู่สมรส',2,'');
+    	$radiofamilytype->add('บิดา',3,'');
+    	$radiofamilytype->add('มารดา',4,'');
+    	$radiofamilytype->add('บุตร',5,'checked');
+        }
 		  }
     echo $form->open("","","col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10","hrs_insert_certificate.php","");
  ?>
@@ -72,8 +115,18 @@
 					<?php echo $selectdevision->selectFromTBinDB('zoo','zoo_id','zoo_name','zoo_per_hrs','1',$r['zoo_zoo_id']); ?>
 				</div>
 				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-					<?php echo $lbpricehos;
+					
+					<?php if($r['typectf_typectf_id'] == 3){
+    					 
+    					}else if($r['typectf_typectf_id'] == 5){
+        					
+    					}else if($r['typectf_typectf_id'] == 6){
+        					echo $lbmoneyroom;
     					echo $selectmoneyroom;
+    					echo $radiofamilytype;
+    					}else{
+        					
+    					}
 					?>
                     
 				</div>
