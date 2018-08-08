@@ -262,7 +262,7 @@
   		$('[id=hrctf_ctfname_id]').slice(0).prop("disabled", true);
 		$('input[name=typectf_typectf_id]').on("change",function(e) {
 		var valchange = $(this).val();
-		if(valchange == 1 || valchange == 2 || valchange == 3 || valchange == 4 || valchange == 5 || valchange == 6){
+		if(valchange == 1 || valchange == 2 || valchange == 3 || valchange == 4 || valchange == 5){
 			$('#cer').fadeIn("slow");;
 			$('#hos').hide();
 			if(valchange == 1){
