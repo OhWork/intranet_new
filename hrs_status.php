@@ -18,8 +18,12 @@
     $lbhosname = new label('รับการรักษาจากโรงพยาบาล');
     $lbdatestarthos = new label('วันที่เริ่มเข้ารับการรักษา');
     $lbrecipient = new label('เรียน');
+    $lbwhofu = new label('ค้ำประกันการเข้าทำงาน ของ');
+    $lbwhoname = new label('ซึ่งเกี่ยวข้องกับข้าพเจ้าโดยเป็น');
     $lbmoneyroom = new label('ค่าห้องรวมค่าอาหารเบิกวันละไม่เกิน');
     $txtrecipient = new textfield('hrctf_recipient','','form-control css-require','','');
+    $txtwhofu = new textfield('hrctf_whofu','','form-control css-require','','');
+    $txtwhoname = new textfield('hrctf_whoname','','form-control css-require','','');
     $selectmoneyroom = new selectMenu();
  	$selectmoneyroom->name = 'hrctf_moneyroom';
     $selectmoneyroom->addItem('-----โปรดระบุจำนวนเงิน-----','');
@@ -107,8 +111,29 @@
 				</div>
 				<div class='col-md-12'>
 					<div class='row'>
-						<div class='col-md-6 font-weight-bold statustextleft'><?php echo $lbsalary ?></div>
-						<div class='col-md-6 statustext'><?php echo $r['hrctf_salary'] ?></div>
+						<div class='col-md-6 font-weight-bold statustextleft'><?php echo $lbwhofu ?></div>
+						<div class='col-md-6 statustext'><?php 
+    						if($r['hrctf_whofu']){
+    						        echo $r['hrctf_whofu'];
+    						       }else{
+                                    echo $txtwhofu;
+        						    } ?></div>
+					</div>
+				</div>
+				<div class='col-md-12'>
+					<div class='row'>
+						<div class="col-md-12"><hr></div>
+					</div>
+				</div>
+				<div class='col-md-12'>
+					<div class='row'>
+						<div class='col-md-6 font-weight-bold statustextleft'><?php echo $lbwhoname ?></div>
+						<div class='col-md-6 statustext'><?php 
+    						if($r['hrctf_whoname']){
+    						        echo $r['hrctf_whoname'];
+    						       }else{
+                                    echo $txtwhoname;
+        						    } ?></div>
 					</div>
 				</div>
 				<?php 
