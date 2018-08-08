@@ -30,6 +30,11 @@
     $txtwhofu = new textfield('hrctf_whofu','hrctf_ctfname_id','form-control','','');
     $txteducation = new textfield('hrctf_educationname','hrctf_ctfname_id','form-control','','');
     $txtfamilyname = new textfield('hrctf_familyname','hrctf_familyname_id','form-control','','');
+    $selectmoneyroom = new selectMenu();
+ 	$selectmoneyroom->name = 'hrctf_moneyroom';
+    $selectmoneyroom->addItem('-----โปรดระบุจำนวนเงิน-----','');
+    $selectmoneyroom->addItem('800','800');
+    $selectmoneyroom->addItem('1200','1200');
     $button = new buttonok("แก้ไขข้อมูล","","btn btn-success btn-lg btn-block bt3success col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","");
     if(!empty($_GET['id'])){
 		$id = $_GET['id'];
@@ -67,12 +72,10 @@
 					<?php echo $selectdevision->selectFromTBinDB('zoo','zoo_id','zoo_name','zoo_per_hrs','1',$r['zoo_zoo_id']); ?>
 				</div>
 				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-					<?php echo $lbpricehos;?>
-					<select class="form-control" id="test">
-						<option>--------กรุณาเลือกราคาค่าใช้จ่าย------------</option>
-						<option value="1">800</option>
-						<option value="2">1200</option>
-					</select>
+					<?php echo $lbpricehos;
+    					echo $selectmoneyroom;
+					?>
+                    
 				</div>
 			</div>
 		</div>

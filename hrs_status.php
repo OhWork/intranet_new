@@ -13,20 +13,18 @@
     $lbdatework = new label('บรรจุเป็นพนักงานเมื่อวันที่');
     $lbsalary = new label('เงินเดือนปัจจุบัน');
     $lbprovince = new label('จังหวัด');
-    $lbdatestart = new label('ตั้งแต่วันที่');
-    $lbdateend = new label('ถึงวันที่');
-
-    $txtnotclear = new textfield('problem_notclear','','form-control css-require','','');
-    $txttime = new textfield('problem_dateend','datetimepicker','form-control css-require','','');
-    $txtorder = new textfield('problem_dateorder','datetimepicker2','form-control css-require','','');
-    $txtserialNo = new textfield('problem_serial','','form-control css-require','','');
-    $txtplace = new textfield('problem_place','','form-control css-require','','');
-    $txtcause = new textAreaCf(5,5,'eventconfer_comment','form-control','comment','');
-    $txtserialorganize = new textfield('problem_serialorganize','','form-control css-require','','');
-    $txtcompletedetail = new textarea('problem_detailcomplete','form-control','','');
-    $txtcompletedetail->rows = 5;
-    $txtnocompletedetail = new textarea('problem_detailwaitcomplete','form-control','','');
-    $txtnocompletedetail->rows = 5;
+    $lbeducation = new label('ชื่อสถาบันการศึกษา');
+    $lbhosfamily = new label('ขอหนังสือรับรองนี้ให้กับ');
+    $lbhosname = new label('รับการรักษาจากโรงพยาบาล');
+    $lbdatestarthos = new label('วันที่เริ่มเข้ารับการรักษา');
+    $lbrecipient = new label('เรียน');
+    $lbmoneyroom = new label('ค่าห้องรวมค่าอาหารเบิกวันละไม่เกิน');
+    $txtrecipient = new textfield('hrctf_recipient','','form-control css-require','','');
+    $selectmoneyroom = new selectMenu();
+ 	$selectmoneyroom->name = 'hrctf_moneyroom';
+    $selectmoneyroom->addItem('-----โปรดระบุจำนวนเงิน-----','');
+    $selectmoneyroom->addItem('800','800');
+    $selectmoneyroom->addItem('1200','1200');
     $button = new buttonok('เปลี่ยนสถานะ','','btn btn-success col-md-12','');
     	
 	$strDate = $r['hrctf_datestartwork'];
@@ -34,14 +32,7 @@
 
     if(!empty($_GET['id'])){
 		$id = $_GET['id'];
-		$r = $db->findByPK33('hrctf','typectf','zoo','typectf_typectf_id','typectf_id','zoo_zoo_id','zoo_id','hrctf_status',"'S'")->executeRow();
-
-          $txtnocompletedetail->value = $r['problem_detailwaitcomplete'];
-		  $txtcompletedetail->value = $r['problem_detailcomplete'];
-          $txtserialorganize->value = $r['problem_serialorganize'];
-		  $txtserialNo->value = $r['problem_serial'];
-		  $txtplace->value = $r['problem_place'];
-		  $txtorder->value = $r['problem_dateorder'];
+		$r = $db->findByPK33('hrctf','typectf','zoo','typectf_typectf_id','typectf_id','zoo_zoo_id','zoo_id','hrctf_id',"'$id'")->executeRow();
 		  }
 		  echo $row."<legend></legend>".$rowend;
 		  echo $form->open("form_reg","form","","cf_insert_updatestatus.php","");
@@ -93,7 +84,21 @@
 					</div>
 				</div>
 				<?php 
-    				if($r['typectf_id'] == 7){
+    				if($r['typectf_typectf_id'] == 3){
+    				 ?>
+				<div class='col-md-12'>
+					<div class='row'>
+						<div class="col-md-12"><hr></div>
+					</div>
+				</div>
+				<div class='col-md-12'>
+					<div class='row'>
+						<div class='col-md-6 font-weight-bold statustextleft'><?php echo $lbeducation ?></div>
+						<div class='col-md-6 statustext'><?php echo $r['hrctf_educationname'] ?></div>
+					</div>
+				</div>
+				<?php 
+    				}else if($r['typectf_typectf_id'] == 5){
     				 ?>
 				<div class='col-md-12'>
 					<div class='row'>
@@ -104,6 +109,77 @@
 					<div class='row'>
 						<div class='col-md-6 font-weight-bold statustextleft'><?php echo $lbsalary ?></div>
 						<div class='col-md-6 statustext'><?php echo $r['hrctf_salary'] ?></div>
+					</div>
+				</div>
+				<?php 
+    				}else if($r['typectf_typectf_id'] == 6){
+    				 ?>
+				<div class='col-md-12'>
+					<div class='row'>
+						<div class="col-md-12"><hr></div>
+					</div>
+				</div>
+				<div class='col-md-12'>
+					<div class='row'>
+						<div class='col-md-6 font-weight-bold statustextleft'><?php echo $lbhosfamily ?></div>
+						<div class='col-md-6 statustext'><?php 
+    						if($r['hrctf_familytype'] == 1){
+    						    echo "ข้าพเจ้าชื่อ".$r['hrctf_name'];
+                            }else if($r['hrctf_familytype'] == 2){
+                                echo "คู่สมรสชื่อ".$r['hrctf_familyname'];
+    						}else if($r['hrctf_familytype'] == 3){
+                                echo "บิดาชื่อ".$r['hrctf_familyname'];
+    						}else if($r['hrctf_familytype'] == 4){
+                                echo "มารดาชื่อ".$r['hrctf_familyname'];
+    						}else if($r['hrctf_familytype'] == 5){
+                                echo "บุตรชื่อ".$r['hrctf_familyname'];
+    						} ?></div>
+					</div>
+					<div class='col-md-12'>
+					<div class='row'>
+						<div class="col-md-12"><hr></div>
+					</div>
+				</div>
+				<div class='col-md-12'>
+					<div class='row'>
+						<div class='col-md-6 font-weight-bold statustextleft'><?php echo $lbhosname ?></div>
+						<div class='col-md-6 statustext'><?php echo $r['hrctf_hosname'] ?></div>
+					</div>
+				</div>
+				<div class='col-md-12'>
+					<div class='row'>
+						<div class="col-md-12"><hr></div>
+					</div>
+				</div>
+				<div class='col-md-12'>
+					<div class='row'>
+						<div class='col-md-6 font-weight-bold statustextleft'><?php echo $lbprovince ?></div>
+						<div class='col-md-6 statustext'><?php echo $r['hrctf_hosprovince'] ?></div>
+					</div>
+				<div class='col-md-12'>
+					<div class='row'>
+						<div class="col-md-12"><hr></div>
+					</div>
+				</div>
+				<div class='col-md-12'>
+					<div class='row'>
+						<div class='col-md-6 font-weight-bold statustextleft'><?php echo $lbdatestarthos ?></div>
+						<div class='col-md-6 statustext'><?php 
+    						$strDate = $r['hrctf_datestarthos'];
+    						echo DateThai($strDate); ?></div>
+					</div>
+				</div>
+				<div class='col-md-12'>
+					<div class='row'>
+    					
+						<div class='col-md-6 font-weight-bold statustextleft'><?php echo $lbmoneyroom ?></div>
+						
+						<div class='col-md-6 statustext'>
+    						<?php echo $selectmoneyroom; ?></div>
+					</div>
+				<div class='col-md-12'>
+					<div class='row'>
+						<div class="col-md-12"><hr></div>
 					</div>
 				</div>
 				<?php
@@ -136,6 +212,23 @@
         				<?php
     				}
 				?>
+				<div class='col-md-12'>
+					<div class='row'>
+    					
+						<div class='col-md-6 font-weight-bold statustextleft'><?php echo $lbrecipient ?></div>
+						
+						<div class='col-md-6 statustext'><?php 
+    						    if($r['hrctf_recipient']){
+    						        echo $r['hrctf_recipient'];
+    						       }else{
+                                    echo $txtrecipient;
+        						    } ?></div>
+					</div>
+				<div class='col-md-12'>
+					<div class='row'>
+						<div class="col-md-12"><hr></div>
+					</div>
+				</div>
 				<div class='col-md-12'>
 					<div class='row'>
 						<div class="col-md-12"><hr></div>

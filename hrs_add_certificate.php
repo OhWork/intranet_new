@@ -22,7 +22,7 @@
     $selectdevision->name = 'zoo_zoo_id';
     $selectdevision->lists = 'โปรดระบุ';
     $txthospital = new textfield('hrhos_hosname','','form-control','','');
-    $txtprovince = new textfield('hrnos_province','','form-control','','');
+    $txtprovince = new textfield('hrctf_hosprovince','','form-control','','');
     $txtsalary = new textfield('hrctf_salary','','form-control','','');
     $txtctfname = new textfield('hrctf_ctfname','hrctf_ctfname_id','form-control','','');
     $txtwhoname = new textfield('hrctf_whoname','hrctf_ctfname_id','form-control','','');
