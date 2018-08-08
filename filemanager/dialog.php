@@ -547,7 +547,7 @@ $get_params = http_build_query($get_params);
 					        <td>
 					            <p class="name">
 					                {% if (file.url) { %}
-					                    <a href="{%=file.url%}" title="{%=file.name%}" download="{%=file.name%}" {%=file.thumbnailUrl?'data-gallery':''%}>{%=file.name%}</a>
+					                    <a href="{%=file.url%}" title="{%=file.name%}" download="{%=file.name%}"> {%=file.thumbnailUrl?'data-gallery':''%}>{%=file.name%}</a>
 					                {% } else { %}
 					                    <span>{%=file.name%}</span>
 					                {% } %}
@@ -591,6 +591,7 @@ $get_params = http_build_query($get_params);
 
 <?php } ?>
 		<div class="container-fluid">
+
 
 <?php
 $class_ext = '';

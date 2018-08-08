@@ -29,7 +29,7 @@
     $selectmoneyroom->addItem('-----โปรดระบุจำนวนเงิน-----','');
     $selectmoneyroom->addItem('800','800');
     $selectmoneyroom->addItem('1200','1200');
-    $button = new buttonok('เปลี่ยนสถานะ','','btn btn-success col-md-12','');
+    $button = new buttonok('เปลี่ยนสถานะ','','btn btn-success col-12','');
     	
 	$strDate = $r['hrctf_datestartwork'];
 
@@ -38,107 +38,84 @@
 		$id = $_GET['id'];
 		$r = $db->findByPK33('hrctf','typectf','zoo','typectf_typectf_id','typectf_id','zoo_zoo_id','zoo_id','hrctf_id',"'$id'")->executeRow();
 		  }
-		  echo $row."<legend></legend>".$rowend;
-		  echo $form->open("form_reg","form","","cf_insert_updatestatus.php","");
+echo $form->open("form_reg","form","col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","cf_insert_updatestatus.php","");
 ?>
-
-						<a href="admin_index.php?url=hrs_edit_certificate.php&id=<?php echo $_GET['id']; ?>" class="btn btn-success col-12">แก้ไขข้อมูล</a>
-<div class='col-md-12'>
+<div class='row'>
+<div class='col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3'></div>
+<div class='col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6' style="border: solid 1px #eaecef;border-radius: 6px;padding-top:16px;padding-bottom:16px;">
 	<div class='row'>
-		<div class='col-md-3'></div>
-		<div class='col-md-6' style="border: solid 1px #eaecef;border-radius: 6px;padding-top:16px;padding-bottom:16px;">
-			<div class='row'>
-				<div class='col-md-12'>
-					<div class='row'>
-						<div class='col-md-6 font-weight-bold statustextleft'><?php echo $lbname ?></div>
-						<div class='col-md-6 statustext'><?php echo $r['hrctf_name'] ?></div>
-					</div>
-				</div>
-				<div class='col-md-12'>
-					<div class='row'>
-						<div class="col-md-12"><hr></div>
-					</div>
-				</div>
-				<div class='col-md-12'>
-					<div class='row'>
-						<div class='col-md-6 font-weight-bold statustextleft'><?php echo $lbposition ?></div>
-						<div class='col-md-6 statustext'><?php echo $r['hrctf_position']?></div>
-					</div>
-				</div>
-				<div class='col-md-12'>
-					<div class='row'>
-						<div class="col-md-12"><hr></div>
-					</div>
-				</div>
-				<div class='col-md-12'>
-					<div class='row'>
-						<div class='col-md-6 font-weight-bold statustextleft'><?php echo $lbdevision ?></div>
-						<div class='col-md-6 statustext'><?php echo $r['zoo_name'] ?></div>
-					</div>
-				</div>
-								<div class='col-md-12'>
-					<div class='row'>
-						<div class="col-md-12"><hr></div>
-					</div>
-				</div>
-				<div class='col-md-12'>
-					<div class='row'>
-						<div class='col-md-6 font-weight-bold statustextleft'><?php echo $lbcertificate ?></div>
-						<div class='col-md-6 statustext'><?php echo $r['typectf_name'] ?></div>
-					</div>
-				</div>
-				<?php 
-    				if($r['typectf_typectf_id'] == 3){
-    				 ?>
-				<div class='col-md-12'>
-					<div class='row'>
-						<div class="col-md-12"><hr></div>
-					</div>
-				</div>
-				<div class='col-md-12'>
-					<div class='row'>
-						<div class='col-md-6 font-weight-bold statustextleft'><?php echo $lbeducation ?></div>
-						<div class='col-md-6 statustext'><?php echo $r['hrctf_educationname'] ?></div>
-					</div>
-				</div>
-				<?php 
-    				}else if($r['typectf_typectf_id'] == 5){
-    				 ?>
-				<div class='col-md-12'>
-					<div class='row'>
-						<div class="col-md-12"><hr></div>
-					</div>
-				</div>
-				<div class='col-md-12'>
-					<div class='row'>
-						<div class='col-md-6 font-weight-bold statustextleft'><?php echo $lbwhofu ?></div>
-						<div class='col-md-6 statustext'><?php 
+		<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12' style="border-bottom: solid 1px #eaecef;">
+			<h4>แบบฟอร์มการยืนยัน และอัพเดตสถานะ</h4>
+		</div>
+		<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-2'>
+			<?php echo $lbname ?>
+		</div>
+		<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12'>
+			<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12' style="border: solid 1px #eaecef;border-radius: 6px;padding-top:0.5rem;">
+				<center><label><?php echo $r['hrctf_name'] ?></label></center>
+			</div>
+		</div>
+		<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-2'>
+			<?php echo $lbposition ?>
+		</div>
+		<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12'>
+			<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12' style="border: solid 1px #eaecef;border-radius: 6px;padding-top:0.5rem;">
+				<center><label><?php echo $r['hrctf_position']?></label></center>
+			</div>
+		</div>
+		<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-2'>
+			<?php echo $lbdevision ?>
+		</div>
+		<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12'>
+			<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12' style="border: solid 1px #eaecef;border-radius: 6px;padding-top:0.5rem;">
+				<center><label><?php echo $r['zoo_name'] ?></label></center>
+			</div>
+		</div>
+		<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-2'>
+			<?php echo $lbcertificate ?>
+		</div>
+		<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12'>
+			<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12' style="border: solid 1px #eaecef;border-radius: 6px;padding-top:0.5rem;">
+				<center><label><?php echo $r['typectf_name'] ?></label></center>
+			</div>
+		</div>
+		<?php if($r['typectf_typectf_id'] == 3){ ?>
+		<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-2'>
+			<?php echo $lbeducation ?>
+		</div>
+		<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12'>
+			<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12' style="border: solid 1px #eaecef;border-radius: 6px;padding-top:0.5rem;">
+				<center><label><?php echo $r['hrctf_educationname'] ?></label></center>
+			</div>
+		</div>
+		<?php }else if($r['typectf_typectf_id'] == 5){ ?>
+		<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-2'>
+			<?php echo $lbwhofu ?>
+		</div>
+		<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12'>
+			<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12' style="border: solid 1px #eaecef;border-radius: 6px;padding-top:0.5rem;">
+				<center><label><?php 
     						if($r['hrctf_whofu']){
     						        echo $r['hrctf_whofu'];
     						       }else{
                                     echo $txtwhofu;
-        						    } ?></div>
-					</div>
-				</div>
-				<div class='col-md-12'>
-					<div class='row'>
-						<div class="col-md-12"><hr></div>
-					</div>
-				</div>
-				<div class='col-md-12'>
-					<div class='row'>
-						<div class='col-md-6 font-weight-bold statustextleft'><?php echo $lbwhoname ?></div>
-						<div class='col-md-6 statustext'><?php 
+        						    } ?></label></center>
+			</div>
+		</div>
+		<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-2'>
+			<?php echo $lbwhoname ?>
+		</div>
+		<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12'>
+			<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12' style="border: solid 1px #eaecef;border-radius: 6px;padding-top:0.5rem;">
+				<center><label><?php 
     						if($r['hrctf_whoname']){
     						        echo $r['hrctf_whoname'];
     						       }else{
                                     echo $txtwhoname;
-        						    } ?></div>
-					</div>
-				</div>
-				<?php 
-    				}else if($r['typectf_typectf_id'] == 6){
-    				 ?>
+        						    } ?></label></center>
+			</div>
+		</div>
+		<?php }else if($r['typectf_typectf_id'] == 6){ ?>
 				<div class='col-md-12'>
 					<div class='row'>
 						<div class="col-md-12"><hr></div>
@@ -252,6 +229,11 @@
 				<div class='col-md-12'>
 					<div class='row'>
 						<div class="col-md-12"><hr></div>
+					</div>
+				</div>
+				<div class='col-md-12'>
+					<div class='row'>
+						<a href="admin_index.php?url=hrs_edit_certificate.php&id=<?php echo $_GET['id']; ?>" class="btn btn-success col-12">แก้ไขข้อมูล</a>
 					</div>
 				</div>
 				<div class='col-md-12'>
