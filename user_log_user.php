@@ -46,47 +46,61 @@
     $selectmonth->addItem('ธันวาคม','12');
     $txtyear = new textfield('year','','form-control css-require','','');
 	$button = new buttonok('ค้นหา','','btn btn-primary col-12','submit');
-     ?>
-<?php   echo $form->open('','','','',''); ?>
-    <div class='col-md-12 printdisplaynone'>
-		<div class='row'>
-			<div class='col-md-12' style="margin-top: 10px;">
-				<h3>เลือกวันที่ต้องการดู Log</h3>
-			</div>
-			<div class='col-md-12'>
-				<div class='row'>
-					<div class='col-md-12' style="margin-bottom: 10px;">
-						<div id="searchdaySettings">
+echo $form->open('','','col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12','',''); ?>
+	<div class='row'>
+		<div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2"></div>
+		<div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8" style="background-color:#ffffff;border:solid 1px #E0E0E0;border-radius:7px;">
+			<div class="row">
+				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3" style="border-bottom:solid 1px #E0E0E0;">
+					<h4>เลือกวันที่ต้องการดู Log</h4>
+				</div>
+				<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-2'>
+					<div id="searchdaySettings">
 						<div class='row'>
-							<div class="col-md-1" style="padding-top: 7px;">
-								<?php echo $lbdayfrist; ?>
-							</div>
-							<div class="date-form dayinbox col-md-3 form-horizontal control-group controls">
-								<div class="input-group"><?php echo $txtday;?></div>
-							</div>
-							<div class="col-md-1" style="padding-top: 7px;">
-								<?php echo $lbdaylast; ?>
-							</div>
-							<div class="date-form dayinbox col-md-3 form-horizontal control-group controls">
-								<div class="input-group"><?php echo $txtday2;?></div>
-							</div>
-							<div class='col-md-4'>
-								<div class='row'>
-									<div class="col-md-4">
-										<center><?php echo $button ?></center>
+							<div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2"></div>
+							<div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8">
+								<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12'>
+									<?php echo $lbdayfrist; ?>
+								</div>
+								<div class="date-form dayinbox col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 form-horizontal control-group controls">
+									<div class="input-group">
+										<?php echo $txtday;?>
 									</div>
-									<div class="col-md-4"></div>
-									<div class="col-md-4"></div>
 								</div>
 							</div>
+							<div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2"></div>
 						</div>
+					</div>
+				</div>
+				<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-2'>
+					<div id="searchdaySettings">
+						<div class='row'>
+							<div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2"></div>
+							<div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8">
+								<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12'>
+									<?php echo $lbdaylast; ?>
+								</div>
+								<div class="date-form dayinbox col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 form-horizontal control-group controls">
+									<div class="input-group">
+										<?php echo $txtday2;?>
+									</div>
+								</div>
+							</div>
+							<div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2"></div>
 						</div>
+					</div>
+				</div>
+				<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3' style="padding-bottom:16px;">
+					<div class='row'>
+						<div class='col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4'></div>
+						<div class='col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4'><?php echo $button; ?></div>
+						<div class='col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4'></div>
 					</div>
 				</div>
 			</div>
 		</div>
+		<div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2"></div>
 	</div>
-	<div class='col-md-12'>
 <?php	        echo $form->close();
     isset($_POST['date'])?$date  = $_POST['date']:$date='';
     isset($_POST['date2'])?$date2 = $_POST['date2']:$date2='';
@@ -101,17 +115,31 @@
 
 // 			$rs2 = "user,subzoo,zoo  where ipzpo.subzoo_subzoo_id = subzoo.subzoo_id && subzoo.zoo_zoo_id = zoo.zoo_id ";
             $rs = $db->findByPK11BETWEEN('log','log_action_date',$qua)->execute();
-            echo $row."<div class='col-sm-4 col-md-offset-0'>"."<h4>Log การใช้งานของระบบ</h4>".$rowend."<div class='col-sm-4 col-md-offset-3'>".$searchipzpo.$rowend.$rowend;
-
-			$grid = new gridView();
-			$grid->header = array('<b><center>ระบบ</center></b>','<b><center>ทำ</center></b>','<b><center>วันที่ใช้งาน</center></b>','<b><center>ใช้งานโดย</center></b>','<b><center>IP</center></b>');
-			$grid->width = array('20%','20%','20%','20%','20%');
-			$grid->name = 'table';
-			$grid->renderFromDB($columns,$rs);
-		}
-			endif;
-		?>
+?>
+	<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3'>
+		<div class='row'>
+			<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1"></div>
+			<div class="col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10">
+				<div class='row'>
+					<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12'>
+						<h4>Log การใช้งานของระบบ</h4>
+					</div>
+					<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3'>
+						<?php echo $searchipzpo;
+							$grid = new gridView();
+							$grid->header = array('<b><center>ระบบ</center></b>','<b><center>ทำ</center></b>','<b><center>วันที่ใช้งาน</center></b>','<b><center>ใช้งานโดย</center></b>','<b><center>IP</center></b>');
+							$grid->width = array('20%','20%','20%','20%','20%');
+							$grid->name = 'table';
+							$grid->renderFromDB($columns,$rs);
+						}
+						?>
+					</div>
+				</div>
+			</div>
+			<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1"></div>
+		</div>
 	</div>
+<?php endif; ?>
 <script>
  $( function() {
    	$('.datetimepicker').datetimepicker({
