@@ -28,6 +28,10 @@
     $txtnocompletedetail = new textarea('problem_detailwaitcomplete','form-control','','');
     $txtnocompletedetail->rows = 5;
     $button = new buttonok('เปลี่ยนสถานะ','','btn btn-success col-md-12','');
+    	
+	$strDate = $r['hrctf_datestartwork'];
+
+
     if(!empty($_GET['id'])){
 		$id = $_GET['id'];
 		$r = $db->findByPK33('hrctf','typectf','zoo','typectf_typectf_id','typectf_id','zoo_zoo_id','zoo_id','hrctf_status',"'S'")->executeRow();
@@ -38,6 +42,7 @@
 		  $txtserialNo->value = $r['problem_serial'];
 		  $txtplace->value = $r['problem_place'];
 		  $txtorder->value = $r['problem_dateorder'];
+		  }
 		  echo $row."<legend></legend>".$rowend;
 		  echo $form->open("form_reg","form","","cf_insert_updatestatus.php","");
 ?>
@@ -48,12 +53,6 @@
 		<div class='col-md-3'></div>
 		<div class='col-md-6' style="border: solid 1px #eaecef;border-radius: 6px;padding-top:16px;padding-bottom:16px;">
 			<div class='row'>
-    			<div class='col-md-12'>
-					<div class='row'>
-						<div class='col-md-6 font-weight-bold statustextleft'><?php echo $lbcertificate ?></div>
-						<div class='col-md-6 statustext'><?php echo $r['typectf_name'] ?></div>
-					</div>
-				</div>
 				<div class='col-md-12'>
 					<div class='row'>
 						<div class='col-md-6 font-weight-bold statustextleft'><?php echo $lbname ?></div>
@@ -82,6 +81,17 @@
 						<div class='col-md-6 statustext'><?php echo $r['zoo_name'] ?></div>
 					</div>
 				</div>
+								<div class='col-md-12'>
+					<div class='row'>
+						<div class="col-md-12"><hr></div>
+					</div>
+				</div>
+				<div class='col-md-12'>
+					<div class='row'>
+						<div class='col-md-6 font-weight-bold statustextleft'><?php echo $lbcertificate ?></div>
+						<div class='col-md-6 statustext'><?php echo $r['typectf_name'] ?></div>
+					</div>
+				</div>
 				<?php 
     				if($r['typectf_id'] == 7){
     				 ?>
@@ -92,86 +102,40 @@
 				</div>
 				<div class='col-md-12'>
 					<div class='row'>
-						<div class='col-md-6 font-weight-bold statustextleft'><?php echo $lbstory ?></div>
-						<div class='col-md-6 statustext'><?php echo $r['eventconfer_story'] ?></div>
+						<div class='col-md-6 font-weight-bold statustextleft'><?php echo $lbsalary ?></div>
+						<div class='col-md-6 statustext'><?php echo $r['hrctf_salary'] ?></div>
 					</div>
 				</div>
 				<?php
     				}else{
-        				
+        				?>
+        				<div class='col-md-12'>
+					<div class='row'>
+						<div class="col-md-12"><hr></div>
+					</div>
+				</div>
+				<div class='col-md-12'>
+					<div class='row'>
+						<div class='col-md-6 font-weight-bold statustextleft'><?php echo $lbsalary ?></div>
+						<div class='col-md-6 statustext'><?php echo $r['hrctf_salary'] ; echo " ( ";  echo num2wordsThai($r['hrctf_salary']); echo " ) บาท"; ?></div>
+					</div>
+				</div>
+				<div class='col-md-12'>
+					<div class='row'>
+						<div class="col-md-12"><hr></div>
+					</div>
+				</div>
+				<div class='col-md-12'>
+					<div class='row'>
+						<div class='col-md-6 font-weight-bold statustextleft'><?php echo $lbdatework ?></div>
+						<div class='col-md-6 statustext'><?php 
+                            $strDate = $r['hrctf_datestartwork'];
+    						echo DateThai($strDate); ?></div>
+					</div>
+				</div>
+        				<?php
     				}
 				?>
-				<div class='col-md-12'>
-					<div class='row'>
-						<div class="col-md-12"><hr></div>
-					</div>
-				</div>
-				<div class='col-md-12'>
-					<div class='row'>
-						<div class='col-md-6 font-weight-bold statustextleft'><?php echo $lbstart ?></div>
-						<div class='col-md-6 statustext'><?php echo $r['eventconfer_start'] ?></div>
-					</div>
-				</div>
-				<div class='col-md-12'>
-					<div class='row'>
-						<div class="col-md-12"><hr></div>
-					</div>
-				</div>
-				<div class='col-md-12'>
-					<div class='row'>
-						<div class='col-md-6 font-weight-bold statustextleft'><?php echo $lbend ?></div>
-						<div class='col-md-6 statustext'><?php echo $r['eventconfer_end'] ?></div>
-					</div>
-				</div>
-				<div class='col-md-12'>
-					<div class='row'>
-						<div class="col-md-12"><hr></div>
-					</div>
-				</div>
-				<div class='col-md-12'>
-					<div class='row'>
-						<div class='col-md-6 font-weight-bold statustextleft'><?php echo $lbpsname ?></div>
-						<div class='col-md-6 statustext'><?php echo $r['eventconfer_psname'] ?></div>
-					</div>
-				</div>
-				<div class='col-md-12'>
-					<div class='row'>
-						<div class="col-md-12"><hr></div>
-					</div>
-				</div>
-				<div class='col-md-12'>
-					<div class='row'>
-						<div class='col-md-6 font-weight-bold statustextleft'><?php echo $lbpsclass ?></div>
-						<div class='col-md-6 statustext'><?php echo $r['eventconfer_psclass'] ?></div>
-					</div>
-				</div>
-				<div class='col-md-12'>
-					<div class='row'>
-						<div class="col-md-12"><hr></div>
-					</div>
-				</div>
-				<div class='col-md-12'>
-					<div class='row'>
-						<div class='col-md-6 font-weight-bold statustextleft'><?php echo $lbjoin ?></div>
-						<div class='col-md-6 statustext'><?php echo $r['eventconfer_join'] ?></div>
-					</div>
-				</div>
-<!--
-				<div class='col-md-12'>
-					<div class='row'>
-						<div class="col-md-12"><hr></div>
-					</div>
-				</div>
-				<div class='col-md-12'>
-					<div class='row'>
-						<div class='col-md-6 font-weight-bold statustextleft'><?php echo $lbCause ?></div>
-						<div class='col-md-6 statustext'><?php echo $r['eventconfer_comment'] ?></div>
-					</div>
-				</div>
--->
-		<?php }
-
-		 ?>
 				<div class='col-md-12'>
 					<div class='row'>
 						<div class="col-md-12"><hr></div>
