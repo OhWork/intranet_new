@@ -29,9 +29,6 @@
     $selectdevision = new SelectFromDB();
     $selectdevision->name = 'zoo_zoo_id';
     $selectdevision->lists = 'โปรดระบุ';
-    $selectdevision = new SelectFromDB();
-    $selectdevision->name = 'zoo_zoo_id';
-    $selectdevision->lists = 'โปรดระบุ';
     $txthospital = new textfield('hrhos_hosname','','form-control','','');
     $txtprovince = new textfield('hrnos_province','','form-control','','');
     $txtsalary = new textfield('hrctf_salary','','form-control','','');
@@ -86,14 +83,13 @@
     	$radiofamilytype->add('บุตร',5,'checked');
         }
 		  }
-    echo $form->open("","","col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10","hrs_insert_certificate.php","");
+    echo $form->open("","","col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","hrs_insert_certificate.php","");
  ?>
- <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" style="padding-top:8px;">
 	<div class="row">
 		<div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3"></div>
-		<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6" style="padding-top:16px;background-color:#ffffff;border:solid 1px #E0E0E0;border-radius:7px;">
+		<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6" style="background-color:#ffffff;border:solid 1px #E0E0E0;border-radius:7px;">
 			<div class="row">
-				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3" style="border-bottom:solid 1px #E0E0E0;">
 					<h4>หนังสือ<?php echo $r['typectf_name']; ?></h4>
 				</div>
 				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-1">
@@ -114,28 +110,39 @@
 				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 					<?php echo $selectdevision->selectFromTBinDB('zoo','zoo_id','zoo_name','zoo_per_hrs','1',$r['zoo_zoo_id']); ?>
 				</div>
-				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-1">
 					
 					<?php if($r['typectf_typectf_id'] == 3){
     					 
     					}else if($r['typectf_typectf_id'] == 5){
         					
     					}else if($r['typectf_typectf_id'] == 6){
-        					echo $lbmoneyroom;
-    					echo $selectmoneyroom;
-    					echo $radiofamilytype;
-    					}else{
+					?>
+        				<?php echo $lbmoneyroom; ?>
+				</div>
+				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+    					<?php echo $selectmoneyroom; ?>
+				</div>
+				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-2">
+    					<?php echo $radiofamilytype; ?>
+    				<?php	
+						}else{
         					
     					}
 					?>
                     
 				</div>
+				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-2">
+					<div class="row">
+						<div class='col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4'></div>
+						<div class='col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4'><?php echo $button; ?></div>
+						<div class='col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4'></div>
+					</div>
+				</div>
 			</div>
 		</div>
-		<div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3"><?php echo $button; ?></div>
+		<div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3"></div>
 	</div>
-</div>
-</div>
 <?php echo $form->close();?>
 <script>
 		$('#datetimepicker1').datetimepicker({
