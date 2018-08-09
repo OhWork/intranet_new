@@ -7,7 +7,7 @@ $inactive = 18000000000;
 	?>
 	<script>
 		alert('ท่านล็อคอินเข้าสู่ระบบเกินระยะเวลาที่กำหนด กรุณาล็อคอินใหม่อีกครั้ง');
-		window.location.href = 'index.php';
+		window.location.href = 'login.php';
 	</script>
 		<?php
 		session_destroy();
