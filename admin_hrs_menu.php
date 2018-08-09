@@ -1,8 +1,4 @@
-<li data-toggle="collapse" data-target="#hrs" class="collapsed">
-                <a class="nav-link" href="#">
-                     <span data-feather="calendar"></span>
-                  ระบบขอหนังสือรับรอง
-                </a>
+<a class="nav-link collapsed" href="#hrs" data-toggle="collapse" data-target="#hrs"><span data-feather="calendar"></span>ระบบขอหนังสือรับรอง</a>
                   <!-- sub menu -->
                 <ul class="sub-menu collapse" id="hrs">
 	                <a class="nav-link collapsed"  data-toggle="collapse" data-target="#hrscase">
@@ -18,5 +14,3 @@
 	                   รายงาน
 	                </a>
                 </ul>
-              <!-- end sub menu -->
-              </li>
