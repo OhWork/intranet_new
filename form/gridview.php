@@ -138,6 +138,7 @@ class gridView{
                 @$id = $r[$this->pr];
                 @$status = $r[$this->sts];
                 @$status_hrs = $r[$this->sts_hrs];
+                @$status_plan = $r[$this->sts_plan];
 			/* ส่วนตรวจสอบค่า */
             @$con = mysqli_connect("localhost","root","","intranet");
 			@$sql = "SELECT * FROM problem WHERE problem_id = $id"; //ไว้แก้ เปลี่ยนสเตตัส
@@ -155,59 +156,65 @@ class gridView{
 			if(!empty($queryhrs)){
 			@$rs_hrs = mysqli_fetch_array($queryhrs,MYSQLI_ASSOC);
 			}
-			 if(@$rs_c["problem_status"]=='Y')
-			{
-				$this->changestatus ='btn btn-success editok';
-				$this->span ='glyphicon glyphicon-ok-sign';
-				$this->changetxt = '&nbsp;ดำเนินการแก้ไขแล้ว';
+			if(@$status){
+				 if(@$rs_c["problem_status"]=='Y')
+				{
+					$this->changestatus ='btn btn-success editok';
+					$this->span ='glyphicon glyphicon-ok-sign';
+					$this->changetxt = '&nbsp;ดำเนินการแก้ไขแล้ว';
+				}
+				else if(@$rs_c["problem_status"]=='N')
+				{
+					$this->changestatus ='btn btn-primary editwait';
+					$this->span ='glyphicon glyphicon-info-sign';
+					$this->changetxt = '&nbsp;รอการดำเนินการ';
+				}
+				else if(@$rs_c["problem_status"]=='S')
+				{
+					$this->changestatus ='btn btn-warning editok';
+					$this->span ='glyphicon glyphicon-question-sign';
+					$this->changetxt = '&nbsp;กำลังดำเนินการแก้ไข';
+				}
 			}
-			else if(@$rs_c["problem_status"]=='N')
-			{
-				$this->changestatus ='btn btn-primary editwait';
-				$this->span ='glyphicon glyphicon-info-sign';
-				$this->changetxt = '&nbsp;รอการดำเนินการ';
+			if(@$status_hrs){
+				 if(@$rs_hrs["hrctf_status"]=='Y')
+				{
+					$this->changestatus ='btn btn-success editok';
+					$this->span ='glyphicon glyphicon-ok-sign';
+					$this->changetxt = '&nbsp;อนุมัติเรียบร้อย';
+				}
+				else if(@$rs_hrs["hrctf_status"]=='N')
+				{
+					$this->changestatus ='btn btn-danger editwait';
+					$this->span ='glyphicon glyphicon-info-sign';
+					$this->changetxt = '&nbsp;ไม่อนุมัติ';
+				}
+				else if(@$rs_hrs["hrctf_status"]=='W')
+				{
+					$this->changestatus ='btn btn-primary editwait';
+					$this->span ='glyphicon glyphicon-info-sign';
+					$this->changetxt = '&nbsp;รับเรื่องและรอการดำเนินการ';
+				}
+				else if(@$rs_hrs["hrctf_status"]=='S')
+				{
+					$this->changestatus ='btn btn-light editok';
+					$this->span ='glyphicon glyphicon-question-sign';
+					$this->changetxt = '&nbsp;ดำเนินการขอหนังสือรับรองแล้ว';
+				}
 			}
-			else if(@$rs_c["problem_status"]=='S')
-			{
-				$this->changestatus ='btn btn-warning editok';
-				$this->span ='glyphicon glyphicon-question-sign';
-				$this->changetxt = '&nbsp;กำลังดำเนินการแก้ไข';
-			}
-			 if(@$rs_hrs["hrctf_status"]=='Y')
-			{
-				$this->changestatus ='btn btn-success editok';
-				$this->span ='glyphicon glyphicon-ok-sign';
-				$this->changetxt = '&nbsp;อนุมัติเรียบร้อย';
-			}
-			else if(@$rs_hrs["hrctf_status"]=='N')
-			{
-				$this->changestatus ='btn btn-danger editwait';
-				$this->span ='glyphicon glyphicon-info-sign';
-				$this->changetxt = '&nbsp;ไม่อนุมัติ';
-			}
-			else if(@$rs_hrs["hrctf_status"]=='W')
-			{
-				$this->changestatus ='btn btn-primary editwait';
-				$this->span ='glyphicon glyphicon-info-sign';
-				$this->changetxt = '&nbsp;รับเรื่องและรอการดำเนินการ';
-			}
-			else if(@$rs_hrs["hrctf_status"]=='S')
-			{
-				$this->changestatus ='btn btn-light editok';
-				$this->span ='glyphicon glyphicon-question-sign';
-				$this->changetxt = '&nbsp;ดำเนินการขอหนังสือรับรองแล้ว';
-			}
-			 if(@$rs_plan["plan_status"]=='1')
-			{
-				$this->changestatus ='btn btn-success editok';
-				$this->span ='glyphicon glyphicon-ok-sign';
-				$this->changetxt = '&nbsp;ใช้งาน';
-			}
-			else if(@$rs_plan["plan_status"]=='0')
-			{
-				$this->changestatus ='btn btn-danger editwait';
-				$this->span ='glyphicon glyphicon-info-sign';
-				$this->changetxt = '&nbsp;ไม่ใช้งาน';
+			if(@$status_plan){
+				 if(@$rs_plan["plan_status"]=='1')
+				{
+					$this->changestatus ='btn btn-success editok';
+					$this->span ='glyphicon glyphicon-ok-sign';
+					$this->changetxt = '&nbsp;ใช้งาน';
+				}
+				else if(@$rs_plan["plan_status"]=='0')
+				{
+					$this->changestatus ='btn btn-danger editwait';
+					$this->span ='glyphicon glyphicon-info-sign';
+					$this->changetxt = '&nbsp;ไม่ใช้งาน';
+				}
 			}
 
 
