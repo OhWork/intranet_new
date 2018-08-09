@@ -9,9 +9,10 @@
 	                   รายการหนังสือรับรอง
 	                </a>
 	                <ul class="sub-menu collapse bnmenusub1" id="hrscase">
-				          <a class="nav-link bnmenusub2" href="admin_index.php?url=cs_show_fixproblem.php"><span data-feather="chevron-right"></span>รายการแจ้งดำเนินการใหม่</a>
-				          <a class="nav-link bnmenusub2" href="admin_index.php?url=cs_show_waitfixproblem.php"><span data-feather="chevron-right"></span>รายงานระหว่างการดำเนินการ</a>
-				          <a class="nav-link bnmenusub2" href="admin_index.php?url=cs_show_completefixproblem.php"><span data-feather="chevron-right"></span>รานงานการดำเนินการเสร็จ</a>
+				          <a class="nav-link bnmenusub2" href="admin_index.php?url=hrs_show_editcertificate.php"><span data-feather="chevron-right"></span>รายการรอการดำเนินการ</a>
+				          <a class="nav-link bnmenusub2" href="admin_index.php?url=hrs_show_editcertificate_wait.php"><span data-feather="chevron-right"></span>รายการรอการอนุมัติ</a>
+				          <a class="nav-link bnmenusub2" href="admin_index.php?url=hrs_show_editcertificate_pass.php"><span data-feather="chevron-right"></span>รายการอนุมัติ</a>
+				          <a class="nav-link bnmenusub2" href="admin_index.php?url=hrs_show_editcertificate_nopass.php"><span data-feather="chevron-right"></span>รายการไม่อนุมัติ</a>
 		                </ul>
 	                <a class="nav-link dropknow ml-4" href="#">
 	                   รายงาน
