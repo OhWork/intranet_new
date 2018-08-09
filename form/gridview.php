@@ -197,7 +197,7 @@ class gridView{
 				}
 				else if(@$rs_hrs["hrctf_status"]=='S')
 				{
-					$this->changestatus ='btn btn-light editok';
+					$this->changestatus ='btn btn-light editok waitbox ';
 					$this->span ='glyphicon glyphicon-question-sign';
 					$this->changetxt = '&nbsp;ดำเนินการขอหนังสือรับรองแล้ว';
 				}

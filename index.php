@@ -5,6 +5,13 @@ session_start();
 <!DOCTYPE html>
 <html>
     <head>
+		<title>องค์การสวนสัตว์</title>
+	        <?php include 'inc_js.php';
+              include 'form/main_form.php';
+              include 'form/gridview.php';
+              include 'database/db_tools.php';
+              include 'connect.php';
+			?>    </head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <link rel="stylesheet" href="CSS/bootstrap.min.css">
         <link rel="stylesheet" href="CSS/bootstrap-datetimepicker-standalone.css">
@@ -14,26 +21,20 @@ session_start();
         <link rel="stylesheet" href="CSS/sticky-footer.css">
         <link rel="stylesheet" href="CSS/dataTables.bootstrap4.css">
 		<link rel="stylesheet" href="CSS/fullcalendar.min.css">
+		<link rel="stylesheet" href="CSS/jquery.dataTables.css">
 <!--         <link rel="stylesheet" href="CSS/jquery.fancybox.css"> -->
 		<link rel="stylesheet" href="CSS/select2.min.css">
 		<link rel="stylesheet" href="CSS/main.css">
         <link rel="stylesheet" href="CSS/fullcalendar.print.min.css" media="print">
-        <link rel="stylesheet" href="CSS/print.css" media="print">
-        <link rel="stylesheet" href="CSS/font-awesome.css">
         <link rel="stylesheet" href="CSS/main.css">
+		<link rel="stylesheet" href="CSS/print.css" media="print">
+        <link rel="stylesheet" href="CSS/font-awesome.css">
 		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-		<title>องค์การสวนสัตว์</title>
-        <?php include 'inc_js.php';
-              include 'form/main_form.php';
-              include 'form/gridview.php';
-              include 'database/db_tools.php';
-              include 'connect.php';
-      ?>    </head>
 <body>
 			<nav class="navbar navbar-expand-md navbar-dark bg-dark col-md-12">
 				<a class="navbar-brand brandedit" href="#"><h4>องค์การสวนสัตว์</h4></a>

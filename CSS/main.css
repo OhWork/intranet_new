@@ -659,24 +659,43 @@
 }
 /*gridviwe*/
 .editdetial {
-	min-width : 100%;
-	padding: 8 4;
+	min-width : 80%;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	padding-left: 8px;
+	padding-right: 8px;
 	font-size: small;
 }
 .editok {
-	min-width : 100%;
-	padding: 8 4;
+	min-width : 80%;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	padding-left: 8px;
+	padding-right: 8px;
 	font-size: small;
 }
 .editwait {
-	min-width : 100%;
-	padding: 8 4;
+	min-width : 80%;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	padding-left: 8px;
+	padding-right: 8px;
 	font-size: small;
 }
 .editbox {
-	min-width : 100%;
-	padding: 8 4;
+	min-width : 80%;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	padding-left: 8px;
+	padding-right: 8px;
 	font-size: small;
+}
+.waitbox {
+	background-color: #FFE082;
+	color:#212529;
+}
+.waitbox:active {
+	background-color: #90CAF9;
 }
 .formgetfixdetial {
 	padding:8 8 8 8;
@@ -978,4 +997,7 @@
 }
 .showindex {
 	background-color:#F5F5F5;
+}
+.hrsstpad {
+	padding-top:4px;
 }

@@ -24,7 +24,7 @@
 				<h4>รายการหนังสือรับรอง</h4>
 				</div>
 				<div class="tab-content col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-					<div role="tabpanel" class="tab-pane active inf1" id="wait" style="padding-left:16;padding-right:16px;">
+					<div role="tabpanel" class="tab-pane active" id="wait" style="padding-left:16px;padding-right:16px;">
 					<?php
 						$columns = array('typectf_name','hrctf_name','hrctf_position','zoo_name');
 						$rs = $db->findByPK32('hrctf','typectf','zoo','typectf_typectf_id','typectf_id','zoo_zoo_id','zoo_id')->execute();

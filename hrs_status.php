@@ -39,86 +39,101 @@
 echo $form->open("form_reg","form","col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","hrs_update_status.php","");
 ?>
 <div class='row'>
-<div class='col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3'></div>
-<div class='col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6' style="border: solid 1px #eaecef;border-radius: 6px;padding-top:16px;padding-bottom:16px;">
+<div class='col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2'></div>
+<div class='col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8' style="border: solid 1px #eaecef;border-radius: 6px;padding-top:16px;padding-bottom:16px;">
 	<div class='row'>
 		<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12' style="border-bottom: solid 1px #eaecef;">
-			<h4>แบบฟอร์มการยืนยัน และอัพเดตสถานะ</h4>
+			<h4>แบบฟอร์มการแก้ไขข้อมูล และอัพเดตสถานะ</h4>
 		</div>
-		<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-2'>
-			<?php echo $lbname ?>
-		</div>
-		<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12'>
-			<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12' style="border: solid 1px #eaecef;border-radius: 6px;padding-top:0.5rem;">
-				<center><label><?php echo $r['hrctf_name'] ?></label></center>
+		<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12' style="border-bottom: solid 1px #eaecef;">
+			<div class='row'>
+				<div class='col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4 hrsstpad' style="border-right: solid 1px #eaecef;">
+					<center><?php echo $lbname ?></center>
+				</div>
+				<div class='col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8 hrsstpad'>
+					<center><label><?php echo $r['hrctf_name'] ?></label></center>
+				</div>
 			</div>
 		</div>
-		<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-2'>
-			<?php echo $lbposition ?>
-		</div>
-		<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12'>
-			<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12' style="border: solid 1px #eaecef;border-radius: 6px;padding-top:0.5rem;">
-				<center><label><?php echo $r['hrctf_position']?></label></center>
+		<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12' style="border-bottom: solid 1px #eaecef;">
+			<div class='row'>
+				<div class='col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4 hrsstpad' style="border-right: solid 1px #eaecef;">
+					<center><?php echo $lbposition ?></center>
+				</div>
+				<div class='col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8 hrsstpad'>
+					<center><label><?php echo $r['hrctf_position']?></label></center>
+				</div>
 			</div>
 		</div>
-		<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-2'>
-			<?php echo $lbdevision ?>
-		</div>
-		<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12'>
-			<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12' style="border: solid 1px #eaecef;border-radius: 6px;padding-top:0.5rem;">
-				<center><label><?php echo $r['zoo_name'] ?></label></center>
+		<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12' style="border-bottom: solid 1px #eaecef;">
+			<div class='row'>
+				<div class='col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4 hrsstpad' style="border-right: solid 1px #eaecef;">
+					<center><?php echo $lbdevision ?></center>
+				</div>
+				<div class='col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8 hrsstpad'>
+					<center><label><?php echo $r['zoo_name'] ?></label></center>
+				</div>
 			</div>
 		</div>
-		<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-2'>
-			<?php echo $lbcertificate ?>
-		</div>
-		<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12'>
-			<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12' style="border: solid 1px #eaecef;border-radius: 6px;padding-top:0.5rem;">
-				<center><label><?php echo $r['typectf_name'] ?></label></center>
+		<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12' style="border-bottom: solid 1px #eaecef;">
+			<div class='row'>
+				<div class='col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4 hrsstpad' style="border-right: solid 1px #eaecef;">
+					<center><?php echo $lbcertificate ?></center>
+				</div>
+				<div class='col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8 hrsstpad'>
+					<center><label><?php echo $r['typectf_name'] ?></label></center>
+				</div>
 			</div>
 		</div>
 		<?php if($r['typectf_typectf_id'] == 3){ ?>
-		<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-2'>
-			<?php echo $lbeducation ?>
-		</div>
-		<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12'>
-			<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12' style="border: solid 1px #eaecef;border-radius: 6px;padding-top:0.5rem;">
-				<center><label><?php echo $r['hrctf_educationname'] ?></label></center>
+		<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12' style="border-bottom: solid 1px #eaecef;">
+			<div class='row'>
+				<div class='col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4 hrsstpad' style="border-right: solid 1px #eaecef;">
+					<center><?php echo $lbeducation ?></center>
+				</div>
+				<div class='col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8 hrsstpad'>
+					<center><label><?php echo $r['hrctf_educationname'] ?></label></center>
+				</div>
 			</div>
 		</div>
 		<?php }else if($r['typectf_typectf_id'] == 5){ ?>
-		<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-2'>
-			<?php echo $lbwhofu ?>
-		</div>
-		<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12'>
-			<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12' style="border: solid 1px #eaecef;border-radius: 6px;padding-top:0.5rem;">
+		<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12' style="border-bottom: solid 1px #eaecef;">
+			<div class='row'>
+				<div class='col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4 hrsstpad' style="border-right: solid 1px #eaecef;">
+					<center><?php echo $lbwhofu ?></center>
+				</div>
+				<div class='col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8 hrsstpad'>
 				<center><label><?php 
     						if($r['hrctf_whofu']){
     						        echo $r['hrctf_whofu'];
     						       }else{
                                     echo $txtwhofu;
         						    } ?></label></center>
+				</div>
 			</div>
 		</div>
-		<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-2'>
-			<?php echo $lbwhoname ?>
-		</div>
-		<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12'>
-			<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12' style="border: solid 1px #eaecef;border-radius: 6px;padding-top:0.5rem;">
+		<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12' style="border-bottom: solid 1px #eaecef;">
+			<div class='row'>
+				<div class='col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4 hrsstpad' style="border-right: solid 1px #eaecef;">
+					<center><?php echo $lbwhoname ?></center>
+				</div>
+				<div class='col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8 hrsstpad'>
 				<center><label><?php 
     						if($r['hrctf_whoname']){
     						        echo $r['hrctf_whoname'];
     						       }else{
                                     echo $txtwhoname;
         						    } ?></label></center>
+				</div>
 			</div>
 		</div>
 		<?php }else if($r['typectf_typectf_id'] == 6){ ?>
-		<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-2'>
-			<?php echo $lbhosfamily ?>
-		</div>
-		<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12'>
-			<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12' style="border: solid 1px #eaecef;border-radius: 6px;padding-top:0.5rem;">
+		<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12' style="border-bottom: solid 1px #eaecef;">
+			<div class='row'>
+				<div class='col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4 hrsstpad' style="border-right: solid 1px #eaecef;">
+					<center><?php echo $lbhosfamily ?></center>
+				</div>
+				<div class='col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8 hrsstpad'>
 				<center><label>
 				<?php 
     				if($r['hrctf_familytype'] == 1){
@@ -134,68 +149,79 @@ echo $form->open("form_reg","form","col-xl-12 col-lg-12 col-md-12 col-sm-12 col-
     				} 
 				?>
 				</label></center>
+				</div>
 			</div>
 		</div>
-		<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-2'>
-			<?php echo $lbhosname ?>
-		</div>
-		<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12'>
-			<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12' style="border: solid 1px #eaecef;border-radius: 6px;padding-top:0.5rem;">
-				<center><label><?php echo $r['hrctf_hosname'] ?></label></center>
+		<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12' style="border-bottom: solid 1px #eaecef;">
+			<div class='row'>
+				<div class='col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4 hrsstpad' style="border-right: solid 1px #eaecef;">
+					<center><?php echo $lbhosname ?></center>
+				</div>
+				<div class='col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8 hrsstpad'>
+					<center><label><?php echo $r['hrctf_hosname'] ?></label></center>
+				</div>
 			</div>
 		</div>
-		<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-2'>
-			<?php echo $lbprovince ?>
-		</div>
-		<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12'>
-			<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12' style="border: solid 1px #eaecef;border-radius: 6px;padding-top:0.5rem;">
-				<center><label><?php echo $r['hrctf_hosprovince'] ?></label></center>
+		<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12' style="border-bottom: solid 1px #eaecef;">
+			<div class='row'>
+				<div class='col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4 hrsstpad' style="border-right: solid 1px #eaecef;">
+					<center><?php echo $lbprovince ?></center>
+				</div>
+				<div class='col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8 hrsstpad'>
+					<center><label><?php echo $r['hrctf_hosprovince'] ?></label></center>
+				</div>
 			</div>
 		</div>
-		<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-2'>
-			<?php echo $lbdatestarthos ?>
-		</div>
-		<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12'>
-			<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12' style="border: solid 1px #eaecef;border-radius: 6px;padding-top:0.5rem;">
+		<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12' style="border-bottom: solid 1px #eaecef;">
+			<div class='row'>
+				<div class='col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4 hrsstpad' style="border-right: solid 1px #eaecef;">
+					<center><?php echo $lbdatestarthos ?></center>
+				</div>
+				<div class='col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8 hrsstpad'>
 				<center><label>
 					<?php 
     						$strDate = $r['hrctf_datestarthos'];
     						echo DateThai($strDate); 
 					?>
 				</label></center>
+				</div>
 			</div>
 		</div>
 		<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-2'>
 			<div class="row">
-				<div class='col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6'style="padding-top:7px;">
+				<div class='col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4 hrsstpad' style="padding-top:7px;">
 					<?php echo $lbmoneyroom ?>
 				</div>
-				<div class='col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6'>
+				<div class='col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8'>
     				<?php echo $selectmoneyroom; ?>
 				</div>
 			</div>
 		</div>
 		<?php }else{ ?>
-		<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-2'>
-			<?php echo $lbsalary ?>
-		</div>
-		<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12'>
-			<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12' style="border: solid 1px #eaecef;border-radius: 6px;padding-top:0.5rem;">
-				<center><label>
-					<?php echo $r['hrctf_salary'] ; echo " ( ";  echo num2wordsThai($r['hrctf_salary']); echo " ) บาท"; ?>
-				</label></center>
+		<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12' style="border-bottom: solid 1px #eaecef;">
+			<div class='row'>
+				<div class='col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4 hrsstpad' style="border-right: solid 1px #eaecef;">
+					<center><?php echo $lbsalary ?></center>
+				</div>
+				<div class='col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8 hrsstpad'>
+					<center><label>
+						<?php echo $r['hrctf_salary'] ; echo " ( ";  echo num2wordsThai($r['hrctf_salary']); echo " ) บาท"; ?>
+					</label></center>
+				</div>
 			</div>
 		</div>
-		<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-2'>
-			<?php echo $lbdatework ?>
-		</div>
-		<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12'>
-			<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12' style="border: solid 1px #eaecef;border-radius: 6px;padding-top:0.5rem;">
+		<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12' style="border-bottom: solid 1px #eaecef;">
+			<div class='row'>
+				<div class='col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4 hrsstpad' style="border-right: solid 1px #eaecef;">
+					<center><?php echo $lbdatework ?></center>
+				</div>
+				<div class='col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8 hrsstpad'>
 				<center><label>
 				<?php 
                     $strDate = $r['hrctf_datestartwork'];
     				echo DateThai($strDate); ?>
 				</label></center>
+				</div>
 			</div>
 		</div>
         <?php } ?>
@@ -210,39 +236,31 @@ echo $form->open("form_reg","form","col-xl-12 col-lg-12 col-md-12 col-sm-12 col-
                         echo $txtrecipient;
 					} ?>
 		</div>
+		<input type='hidden' name='hrctf_status' value='W'/>
+		<?php echo "<input type='hidden' name='hrctf_id' value='$_GET[id]'/>"; ?>
 		<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3'>
 			<div class='row'>
 				<div class='col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6'>
 					<div class='row'>
-						<div class='col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3'></div>
-						<div class='col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6'>
-							<a href="admin_index.php?url=hrs_edit_certificate.php&id=<?php echo $_GET['id']; ?>" class="btn btn-success col-12">แก้ไขข้อมูล</a>
+						<div class='col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2'></div>
+						<div class='col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8'>
+							<a href="admin_index.php?url=hrs_edit_certificate.php&id=<?php echo $_GET['id']; ?>" class="btn btn-warning col-12">แก้ไขข้อมูล</a>
 						</div>
-						<div class='col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3'></div>
+						<div class='col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2'></div>
 					</div>
 				</div>
-<!--
-    				<div class='col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6'>
-    					<div class='row'>
-    						<div class="btn-group col-12" data-toggle="buttons">
-    							<label class="btn btn-success col-4 active">
-    							  <input type="radio" name="hrctf_status" class="statusconfirm" value="Y" id="complete" autocomplete="off"  checked> อนุมัติ
-    							</label>
-    							<label class="btn btn-danger col-4">
-    							  <input type="radio" name="hrctf_status" class="statusconfirm" value="N" id="nocomplete" autocomplete="off"> ไม่อนุมัติ
-    							</label>
-    							<label class="btn btn-warning col-4">
-    							  <input type="radio" name="hrctf_status" class="statusconfirm" value="" id="cancelcomplete" autocomplete="off"> ยกเลิก
-    							</label>
-    						</div>
-    					</div>
-    				</div>
--->
+    			<div class='col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6'>
+    				<div class='row'>
+    					<div class='col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2'></div>
+						<div class='col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8'>
+							<?php echo $button ?>
+						</div>
+						<div class='col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2'></div>
+					</div>
+				</div>
 			</div>
 		</div>
-		<input type='hidden' name='hrctf_status' value='W'/>
-		<?php echo "<input type='hidden' name='hrctf_id' value='$_GET[id]'/>"; ?>
-		<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3'>
+		<!--<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3'>
 			<div class='row'>
 				<div class='col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6'></div>
 				<div class='col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6'>
@@ -255,10 +273,10 @@ echo $form->open("form_reg","form","col-xl-12 col-lg-12 col-md-12 col-sm-12 col-
 					</div>
 				</div>
 			</div>
-		</div>
+		</div>-->
 	</div>
 </div>
-<div class='col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3'></div>
+<div class='col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2'></div>
 </div>
 <?php
      echo $form->close();
