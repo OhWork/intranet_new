@@ -181,7 +181,7 @@ class gridView{
 			}
 			else if(@$rs_hrs["hrctf_status"]=='N')
 			{
-				$this->changestatus ='btn btn-primary editwait';
+				$this->changestatus ='btn btn-danger editwait';
 				$this->span ='glyphicon glyphicon-info-sign';
 				$this->changetxt = '&nbsp;ไม่อนุมัติ';
 			}
@@ -193,7 +193,7 @@ class gridView{
 			}
 			else if(@$rs_hrs["hrctf_status"]=='S')
 			{
-				$this->changestatus ='btn btn-warning editok';
+				$this->changestatus ='btn btn-light editok';
 				$this->span ='glyphicon glyphicon-question-sign';
 				$this->changetxt = '&nbsp;ดำเนินการขอหนังสือรับรองแล้ว';
 			}

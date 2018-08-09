@@ -1,6 +1,6 @@
 <?php
     date_default_timezone_set('Asia/Bangkok');
-//     $id = $_GET['id'];
+     $id = $_GET['id'];
     $form = new form();
     $lbname = new label('ชื่อ - นามสกุล');
     $lbposition = new label('ตำแหน่ง');
@@ -32,7 +32,6 @@
     $txthospital = new textfield('hrhos_hosname','','form-control','','');
     $txtprovince = new textfield('hrnos_province','','form-control','','');
     $txtsalary = new textfield('hrctf_salary','','form-control','','');
-    $txtctfname = new textfield('hrctf_ctfname','hrctf_ctfname_id','form-control','','');
     $txtwhoname = new textfield('hrctf_whoname','hrctf_ctfname_id','form-control','','');
     $txtwhofu = new textfield('hrctf_whofu','hrctf_ctfname_id','form-control','','');
     $txteducation = new textfield('hrctf_educationname','hrctf_ctfname_id','form-control','','');
@@ -50,6 +49,14 @@
 		$r = $db->findByPK33('hrctf','typectf','zoo','typectf_typectf_id','typectf_id','zoo_zoo_id','zoo_id','hrctf_id',$id)->executeRow();
           $txtname->value = $r['hrctf_name'];
 		  $txtposition->value = $r['hrctf_position'];
+		  $txtprovince->value = $r['hrctf_province'];
+		  $txtdatestartwork->value = $r['hrctf_datestartwork'];
+		  $txtdatestarthos->value = $r['hrctf_datestarthos'];
+		  $txtwhoname->value = $r['hrctf_whoname'];
+		  $txtwhofu->value = $r['hrctf_whofu'];
+		  $txteducation->value = $r['hrctf_educationname'];
+		  $txtfamilyname->value = $r['hrctf_familyname'];
+		  $txtsalary->value = $r['hrctf_salary'];
 
 	if($r["hrctf_familytype"] == 1){
     	$radiofamilytype->add('ข้าพเจ้า',1,'checked');
@@ -84,6 +91,8 @@
         }
 		  }
     echo $form->open("","","col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","hrs_insert_certificate.php","");
+    echo $r['hrctf_name'];
+    echo $r['hrctf_salary'];
  ?>
 	<div class="row">
 		<div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3"></div>
@@ -113,9 +122,21 @@
 				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-1">
 					
 					<?php if($r['typectf_typectf_id'] == 3){
-    					 
+    					    echo $lbeducation;
+    					    echo $txteducation;
+    					    echo $lbdatework;
+        					echo $txtdatestartwork;
+        					echo $lbsalary;
+        					echo $txtsalary;
     					}else if($r['typectf_typectf_id'] == 5){
-        					
+        					echo $lbwhofu;
+        					echo $txtwhofu;
+        					echo $lbwhoname;
+        					echo $txtwhoname;
+        					echo $lbdatework;
+        					echo $txtdatestartwork;
+        					echo $lbsalary;
+        					echo $txtsalary;
     					}else if($r['typectf_typectf_id'] == 6){
 					?>
         				<?php echo $lbmoneyroom; ?>
@@ -127,13 +148,18 @@
     					<?php echo $radiofamilytype; ?>
     				<?php	
 						}else{
-        					
+        					echo $lbdatework;
+        					echo $txtdatestartwork;
+        					echo $lbsalary;
+        					echo $txtsalary;
     					}
 					?>
                     
 				</div>
 				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-2">
 					<div class="row">
+    					<input type='hidden' name='hrctf_id' value='<?php echo $_GET['id']; ?>'/>
+    					<input type='hidden' name='hrctf_dateupdate' value='<?php echo date("Y-m-d"); ?>'/>
 						<div class='col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4'></div>
 						<div class='col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4'><?php echo $button; ?></div>
 						<div class='col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4'></div>

@@ -36,7 +36,7 @@
 		$id = $_GET['id'];
 		$r = $db->findByPK33('hrctf','typectf','zoo','typectf_typectf_id','typectf_id','zoo_zoo_id','zoo_id','hrctf_id',"'$id'")->executeRow();
 		  }
-echo $form->open("form_reg","form","col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","cf_insert_updatestatus.php","");
+echo $form->open("form_reg","form","col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","hrs_insert_certificate.php","");
 ?>
 <div class='row'>
 <div class='col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3'></div>
@@ -221,24 +221,27 @@ echo $form->open("form_reg","form","col-xl-12 col-lg-12 col-md-12 col-sm-12 col-
 						<div class='col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3'></div>
 					</div>
 				</div>
-				<div class='col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6'>
-					<div class='row'>
-						<div class="btn-group col-12" data-toggle="buttons">
-							<label class="btn btn-success col-4 active">
-							  <input type="radio" name="eventconfer_status" class="statusconfirm" value="Y" id="complete" autocomplete="off"  checked> อนุมัติ
-							</label>
-							<label class="btn btn-danger col-4">
-							  <input type="radio" name="eventconfer_status" class="statusconfirm" value="N" id="nocomplete" autocomplete="off"> ไม่อนุมัติ
-							</label>
-							<label class="btn btn-warning col-4">
-							  <input type="radio" name="eventconfer_status" class="statusconfirm" value="C" id="cancelcomplete" autocomplete="off"> ยกเลิก
-							</label>
-						</div>
-					</div>
-				</div>
+<!--
+    				<div class='col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6'>
+    					<div class='row'>
+    						<div class="btn-group col-12" data-toggle="buttons">
+    							<label class="btn btn-success col-4 active">
+    							  <input type="radio" name="hrctf_status" class="statusconfirm" value="Y" id="complete" autocomplete="off"  checked> อนุมัติ
+    							</label>
+    							<label class="btn btn-danger col-4">
+    							  <input type="radio" name="hrctf_status" class="statusconfirm" value="N" id="nocomplete" autocomplete="off"> ไม่อนุมัติ
+    							</label>
+    							<label class="btn btn-warning col-4">
+    							  <input type="radio" name="hrctf_status" class="statusconfirm" value="" id="cancelcomplete" autocomplete="off"> ยกเลิก
+    							</label>
+    						</div>
+    					</div>
+    				</div>
+-->
 			</div>
 		</div>
-		<?php echo "<input type='hidden' name='eventconfer_id' value='$_GET[id]'/>"; ?>
+		<input type='hidden' name='hrctf_status' value='W'/>
+		<?php echo "<input type='hidden' name='hrctf_id' value='$_GET[id]'/>"; ?>
 		<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3'>
 			<div class='row'>
 				<div class='col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6'></div>

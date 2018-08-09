@@ -4,7 +4,6 @@
 	include 'connect.php';
 
 	if(!empty($_POST['hrctf_id'])){
-
 		$data['hrctf_name'] = $_POST['hrctf_name'];
 		$data['hrctf_position'] = $_POST['hrctf_position'];
 		$data['hrctf_datestartwork'] = $_POST['hrctf_datestartwork'];
@@ -17,12 +16,10 @@
         $data['hrctf_whoname'] = $_POST['hrctf_whoname'];
         $data['hrctf_whofu'] = $_POST['hrctf_whofu'];
         $data['hrctf_status'] = $_POST['hrctf_status'];
-		$data['subtypetools_subtypetools_id'] = $_POST['subtypetools_subtypetools_id'];
-		$data['typectf_typectf_id'] = $_POST['typectf_typectf_id'];
 		$data['zoo_zoo_id'] = $_POST['zoo_zoo_id'];
 
-		$rsfix = $db->update('hrctf',$data,'hrctf_id',$_POST['hrctf_id'])->execute();
-
+		$rsfix = $db->update('hrctf',$data,'hrctf_id',$_POST['hrctf_id']);
+	
 	}else{
         	$rs = $db->insert('hrctf',array(
         	'hrctf_name' => $_POST['hrctf_name'],
@@ -48,12 +45,16 @@
 	if($rs || $rsfix){
     	if($rs){
     	    echo "<div class='statusok'>เพิ่มสำเร็จ</div>";
+    	    $link = "index.php?url=hrs_add_certificate.php";
     	}else if($rsfix){
             echo "<div class='statusok'>แก้ไขสำเร็จ</div>";
+            $link = "admin_index.php?url=hrs_status.php&id=".$_POST['hrctf_id'];
         }
-            $link = "index.php?url=hrs_add_certificate.php";
+            
             header( "Refresh: 2; $link" );
-}
+}else{
+            echo "error";
+        }
 
 ob_end_flush();
 ?>
