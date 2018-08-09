@@ -24,14 +24,13 @@
     $txthospital = new textfield('hrhos_hosname','','form-control','','');
     $txtprovince = new textfield('hrctf_hosprovince','','form-control','','');
     $txtsalary = new textfield('hrctf_salary','','form-control','','');
-    $txtctfname = new textfield('hrctf_ctfname','hrctf_ctfname_id','form-control','','');
     $txtwhoname = new textfield('hrctf_whoname','hrctf_ctfname_id','form-control','','');
     $txtwhofu = new textfield('hrctf_whofu','hrctf_ctfname_id','form-control','','');
     $txteducation = new textfield('hrctf_educationname','hrctf_ctfname_id','form-control','','');
     $txtfamilyname = new textfield('hrctf_familyname','hrctf_familyname_id','form-control','','');
 
     $button = new buttonok("ส่งแบบขอหนังสือรับรอง","","btn btn-success btn-lg btn-block bt3success col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","");
-    echo $form->open("","","col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","hrs_insert_certificate.php","");
+    echo $form->open("form_reg","","col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","hrs_insert_certificate.php","");
  ?>
  <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" style="padding-top:8px;">
 	<div class="row">
@@ -41,39 +40,39 @@
 				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 					<h4>หนังสือรับรอง</h4>
 				</div>
-				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-1">
+				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-1 showmsg">
 					<?php echo $lbname; ?>
 				</div>
-				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 showmsg">
     				<?php echo $txtname; ?>
 				</div>
-				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-1">
+				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-1 showmsg">
 					<?php echo $lbposition; ?>
 				</div>
-				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 showmsg">
     				<?php echo $txtposition; ?>
 				</div>
-				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-1">
+				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-1 showmsg">
 					<?php echo $lbdevision; ?>
 				</div>
 				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 					<?php echo $selectdevision->selectFromTBinDB('zoo','zoo_id','zoo_name','zoo_per_hrs','1',''); ?>
 				</div>
-				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-2">
+				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-2 showmsg">
 					<div class="row">
 						<label class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 							<input type="radio" name="typectf_typectf_id" id="parent1" value="1"> รับรองเงินเดือน
 						</label>
 					</div>
 				</div>
-				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 showmsg">
 					<div class="row">
 						<label class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 							<input type="radio" name="typectf_typectf_id" id="parent2" value="2"> รับรองการเป็นผู้ปฏิบัติงาน
 						</label>
 					</div>
 				</div>
-				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 showmsg">
 					<div class="row">
 						<label class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 							<input type="radio" name="typectf_typectf_id"  id="parent3" value="3"> รับรองเข้ารับการศึกษา (สถาบันการศึกษา)
@@ -83,14 +82,14 @@
 						</label>
 					</div>
 				</div>
-				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 showmsg">
 					<div class="row">
 						<label class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 							<input type="radio" name="typectf_typectf_id"  id="parent4" value="4"> รับรองการค้ำประกันการกู้เงินจากสถาบันการเงิน
 						</label>
 					</div>
 				</div>
-				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 showmsg=">
 					<div class="row">
 						<label class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6" style="padding-top:7px;">
 							<input type="radio" name="typectf_typectf_id" id="parent5" value="5"> รับรองการค้ำประกันการเข้าทำงาน ของ
@@ -105,7 +104,7 @@
 						</label>
 					</div>
 				</div>
-				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 showmsg">
 					<div class="row">
 						<label class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 							<input type="radio" name="typectf_typectf_id"  id="parent7" value="6"> ขอหนังสือรับรองพยาบาล
@@ -116,12 +115,12 @@
 					<div class="row">
 						<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 							<div class="row">
-								<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6" style="padding-top:7px;">
+								<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6 showmsg" style="padding-top:7px;">
 									<?php echo $lbdatework; ?>
 								</div>
 								<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6">
 									<div class="row">
-										<div class="date-form dayinbox col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" style="float: left;">
+										<div class="date-form dayinbox col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 showmsg" style="float: left;">
 											<div class="form-horizontal">
 												<div class="control-group">
 													<div class="controls">
@@ -141,7 +140,7 @@
 								<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6" style="padding-top:7px;">
 									<?php echo $lbsalary; ?>
 								</div>
-								<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6">
+								<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6 showmsg">
 									<?php echo $txtsalary; ?>
 								</div>
 							</div>
@@ -165,7 +164,7 @@
 								<label class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 									<input type="radio" name="hrctf_familytype"  id="parent9" value="2"> คู่สมรส
 								</label>
-								<label class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+								<label class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 showmsg">
 									<?php echo $txtfamilyname;?>
 								</label>
 							</div>
@@ -175,7 +174,7 @@
 								<label class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 									<input type="radio" name="hrctf_familytype"  id="parent10" value="3"> บิดา
 								</label>
-								<label class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+								<label class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 showmsg">
 									<?php echo $txtfamilyname;?>
 								</label>
 							</div>
@@ -185,7 +184,7 @@
 								<label class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 									<input type="radio" name="hrctf_familytype" id="parent11" value="4"> มารดา
 								</label>
-								<label class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+								<label class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 showmsg">
 									<?php echo $txtfamilyname;?>
 								</label>
 							</div>
@@ -195,37 +194,37 @@
 								<label class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 									<input type="radio" name="hrctf_familytype" id="parent12" value="5"> บุตร
 								</label>
-								<label class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+								<label class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 showmsg">
 									<?php echo $txtfamilyname; ?>
 								</label>
 							</div>
 						</div>
 						<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 							<div class="row">
-								<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+								<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 showmsg">
 									<?php echo $lbhospital; ?>
 								</div>
-								<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+								<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 showmsg">
 									<?php echo $txthospital; ?>
 								</div>
 							</div>
 						</div>
 						<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-2">
 							<div class="row">
-								<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+								<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 showmsg">
 									<?php echo $lbprovince; ?>
 								</div>
-								<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+								<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 showmsg">
 									<?php echo $txtprovince; ?>
 								</div>
 							</div>
 						</div>
 						<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-2">
 							<div class="row">
-								<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
+								<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4 showmsg">
 									<?php echo $lbdatestart; ?>
 								</div>
-								<div class="date-form dayinbox col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8 form-horizontal control-group controls">
+								<div class="date-form dayinbox col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8 form-horizontal control-group controls showmsg">
 									<div class="input-group">
 										<?php echo $txtdatestarthos; ?>
 									</div>
@@ -364,4 +363,40 @@
 	        locale:moment.locale('th')
         })
    });
+   $("#form_reg").validate({
+		rules: {
+			hrctf_name: "required",
+			hrctf_datestartwork: "required",
+			zoo_zoo_id : "required",
+			hrhos_datestarthos: "required",
+			hrctf_position: "required",
+			hrhos_hosname: "required",
+			hrctf_hosprovince : "required",
+			hrctf_salary : "required",
+			hrctf_whoname : "required",
+			hrctf_whofu : "required",
+			hrctf_educationname : "required",
+			hrctf_familyname : "required",
+		},
+		messages: {
+			hrctf_name: "กรุณากรอกชื่อ-นามสกุล",
+			hrctf_datestartwork: "กรุณากรอกวันที่เริ่มทำงาน",
+			zoo_zoo_id : "กรุณากรอกสำนักที่ปฎิบัติงาน",
+			hrhos_datestarthos: "กรุณากรอกวันที่เข้าโรงพยาบาล",
+			hrctf_position: "กรุณากรอกวันที่ตำแหน่ง",
+			hrhos_hosname: "กรุณากรอกชื่อโรงพยาบาล",
+			hrctf_hosprovince : "กรุณากรอจังหวัดของโรงพยาบาล",
+			hrctf_salary : "กรุณากรอกจำนวนเงินเดือน",
+			hrctf_whoname : "กรุณากรอกชื่อผู้ค้ำประกันการเข้าทำงาน",
+			hrctf_whofu : "กรุณากรอกการเกี่ยวข้อง",
+			hrctf_educationname : "กรุณากรอกสถานที่เข้าศึกษา",
+			hrctf_familyname : "กรุณากรอกชื่อ",
+
+		},
+				highlight: function ( element, errorClass, validClass ) {
+					$( element ).parents( ".showmsg" ).addClass( "text-danger" ).removeClass( "text-success" );
+				},
+				unhighlight: function (element, errorClass, validClass) {
+					$( element ).parents( ".showmsg" ).addClass( "text-success" ).removeClass( " text-danger" );
+				}	});
 </script>
