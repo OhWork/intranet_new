@@ -36,7 +36,7 @@
 		$id = $_GET['id'];
 		$r = $db->findByPK33('hrctf','typectf','zoo','typectf_typectf_id','typectf_id','zoo_zoo_id','zoo_id','hrctf_id',"'$id'")->executeRow();
 		  }
-echo $form->open("form_reg","form","col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","hrs_insert_certificate.php","");
+echo $form->open("form_reg","form","col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","hrs_update_status.php","");
 ?>
 <div class='row'>
 <div class='col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3'></div>

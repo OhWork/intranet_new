@@ -89,7 +89,7 @@
     	$radiofamilytype->add('มารดา',4,'');
     	$radiofamilytype->add('บุตร',5,'checked');
         }
-		  }
+    }
     echo $form->open("","","col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","hrs_insert_certificate.php","");
     echo $r['hrctf_name'];
     echo $r['hrctf_salary'];
@@ -159,6 +159,7 @@
 				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-2">
 					<div class="row">
     					<input type='hidden' name='hrctf_id' value='<?php echo $_GET['id']; ?>'/>
+    					<input type='hidden' name='hrctf_status' value='W'/>
     					<input type='hidden' name='hrctf_dateupdate' value='<?php echo date("Y-m-d"); ?>'/>
 						<div class='col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4'></div>
 						<div class='col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4'><?php echo $button; ?></div>
