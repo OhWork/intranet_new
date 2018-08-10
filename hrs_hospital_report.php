@@ -14,11 +14,11 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
     </head>
-    <body>
+    <body style="margin:auto">
 		<!--บรรทัดที่ 1-->
 		<table>
     		<tr>
-        		<td>ที่ ทส.๑๑๐๑/</td>
+        		<td style="margin">ที่ ทส.๑๑๐๑/</td>
     		</tr>
 		</table>
 		<!--บรรทัดที่ 2-->
