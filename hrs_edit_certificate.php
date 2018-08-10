@@ -14,7 +14,6 @@
     $lbhospital = new label('รับการรักษาจากสถานพยาบาล');
     $lbdatework = new label('บรรจุเป็นพนักงานเมื่อวันที่');
     $lbsalary = new label('เงินเดือนปัจจุบัน');
-    $lbprovince = new label('จังหวัด');
     $lbeducation = new label('ชื่อสถาบันการศึกษา');
     $lbhosfamily = new label('ขอหนังสือรับรองนี้ให้กับ');
     $lbhosname = new label('รับการรักษาจากโรงพยาบาล');
@@ -29,8 +28,8 @@
     $selectdevision = new SelectFromDB();
     $selectdevision->name = 'zoo_zoo_id';
     $selectdevision->lists = 'โปรดระบุ';
-    $txthospital = new textfield('hrhos_hosname','','form-control','','');
-    $txtprovince = new textfield('hrnos_province','','form-control','','');
+    $txthospital = new textfield('hrctf_hosname','','form-control','','');
+    $txtprovince = new textfield('hrctf_hosprovince','','form-control','','');
     $txtsalary = new textfield('hrctf_salary','','form-control','','');
     $txtwhoname = new textfield('hrctf_whoname','hrctf_ctfname_id','form-control','','');
     $txtwhofu = new textfield('hrctf_whofu','hrctf_ctfname_id','form-control','','');
@@ -49,10 +48,11 @@
 		$r = $db->findByPK33('hrctf','typectf','zoo','typectf_typectf_id','typectf_id','zoo_zoo_id','zoo_id','hrctf_id',$id)->executeRow();
           $txtname->value = $r['hrctf_name'];
 		  $txtposition->value = $r['hrctf_position'];
-		  $txtprovince->value = $r['hrctf_province'];
+		  $txtprovince->value = $r['hrctf_hosprovince'];
 		  $txtdatestartwork->value = $r['hrctf_datestartwork'];
 		  $txtdatestarthos->value = $r['hrctf_datestarthos'];
 		  $txtwhoname->value = $r['hrctf_whoname'];
+		  $txthospital->value = $r['hrctf_hosname'];
 		  $txtwhofu->value = $r['hrctf_whofu'];
 		  $txteducation->value = $r['hrctf_educationname'];
 		  $txtfamilyname->value = $r['hrctf_familyname'];
@@ -91,8 +91,6 @@
         }
     }
     echo $form->open("","","col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","hrs_insert_certificate.php","");
-    echo $r['hrctf_name'];
-    echo $r['hrctf_salary'];
  ?>
 	<div class="row">
 		<div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3"></div>
@@ -138,14 +136,18 @@
         					echo $lbsalary;
         					echo $txtsalary;
     					}else if($r['typectf_typectf_id'] == 6){
-					?>
+                               echo $lbhospital;
+                               echo $txthospital;
+                               echo $lbprovince;
+                               echo $txtprovince;
+                             echo $radiofamilytype; ?>
         				<?php echo $lbmoneyroom; ?>
 				</div>
 				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
     					<?php echo $selectmoneyroom; ?>
 				</div>
 				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-2">
-    					<?php echo $radiofamilytype; ?>
+    					
     				<?php	
 						}else{
         					echo $lbdatework;
