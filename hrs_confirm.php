@@ -48,6 +48,26 @@ echo $form->open("form_reg","form","col-xl-12 col-lg-12 col-md-12 col-sm-12 col-
 		<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12' style="border-bottom: solid 1px #eaecef;">
 			<div class='row'>
 				<div class='col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4 hrsstpad' style="border-right: solid 1px #eaecef;">
+					<center><?php echo $lbcertificate ?></center>
+				</div>
+				<div class='col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8 hrsstpad'>
+					<center><label><?php echo $r['typectf_name'] ?></label></center>
+				</div>
+			</div>
+		</div>
+		<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12' style="border-bottom: solid 1px #eaecef;">
+			<div class='row'>
+				<div class='col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4 hrsstpad' style="border-right: solid 1px #eaecef;">
+					<center><?php echo $lbrecipient ?></center>
+				</div>
+				<div class='col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8 hrsstpad'>
+					<center><label><?php echo $r['hrctf_recipient'] ?></label></center>
+				</div>
+			</div>
+		</div>
+		<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12' style="border-bottom: solid 1px #eaecef;">
+			<div class='row'>
+				<div class='col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4 hrsstpad' style="border-right: solid 1px #eaecef;">
 					<center><?php echo $lbname ?></center>
 				</div>
 				<div class='col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8 hrsstpad'>
@@ -225,17 +245,6 @@ echo $form->open("form_reg","form","col-xl-12 col-lg-12 col-md-12 col-sm-12 col-
 			</div>
 		</div>
         <?php } ?>
-		<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-2'>
-			<?php echo $lbrecipient ?>
-		</div>
-		<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12'>
-				<?php 
-    				if($r['hrctf_recipient']){
-						echo $r['hrctf_recipient'];
-    				}else{
-                        echo $txtrecipient;
-					} ?>
-		</div>
 		<input type='hidden' name='hrctf_status' value='W'/>
 		
 		<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3'>
@@ -297,20 +306,6 @@ echo $form->open("form_reg","form","col-xl-12 col-lg-12 col-md-12 col-sm-12 col-
 				</div>
 			</div>
 		</div>
-		<!--<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3'>
-			<div class='row'>
-				<div class='col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6'></div>
-				<div class='col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6'>
-					<div class='row'>
-						<div class='col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2'></div>
-						<div class='col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8'>
-							<?php echo $button ?>
-						</div>
-						<div class='col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2'></div>
-					</div>
-				</div>
-			</div>
-		</div>-->
 	</div>
 </div>
 <div class='col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2'></div>

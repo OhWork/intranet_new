@@ -3,6 +3,7 @@
     include_once 'database/db_tools.php';
     include_once 'connect.php';
     include_once 'form/main_change.php';
+    require_once 'vendor/autoload.php';
 	error_reporting(0);
 
     $id = $_GET['id'];
@@ -143,3 +144,14 @@
 		</table>
     </body>
 </html>
+<?php
+$html = ob_get_contents();
+ob_end_clean();
+$pdf = new \Mpdf\Mpdf(['mode' => 'th']);
+$stylesheet .= file_get_contents('CSS/pdf.css');
+$pdf->WriteHTML($stylesheet,1);
+$pdf->SetDisplayMode('fullpage');
+$pdf->WriteHTML($html, 2);
+$pdf->Output();
+?>
+?>
