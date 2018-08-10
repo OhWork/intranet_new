@@ -131,7 +131,7 @@ echo $form->open("form_reg","form","col-xl-12 col-lg-12 col-md-12 col-sm-12 col-
 		<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12' style="border-bottom: solid 1px #eaecef;">
 			<div class='row'>
 				<div class='col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4 hrsstpad' style="border-right: solid 1px #eaecef;">
-					<center><?php echo $lbhosfamily ?></center>
+					<center><?php echo $lbhosfamily; ?></center>
 				</div>
 				<div class='col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8 hrsstpad'>
 				<center><label>
@@ -155,10 +155,10 @@ echo $form->open("form_reg","form","col-xl-12 col-lg-12 col-md-12 col-sm-12 col-
 		<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12' style="border-bottom: solid 1px #eaecef;">
 			<div class='row'>
 				<div class='col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4 hrsstpad' style="border-right: solid 1px #eaecef;">
-					<center><?php echo $lbhosname ?></center>
+					<center><?php echo $lbhosname; ?></center>
 				</div>
 				<div class='col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8 hrsstpad'>
-					<center><label><?php echo $r['hrctf_hosname'] ?></label></center>
+					<center><label><?php echo $r['hrctf_hosname']; ?></label></center>
 				</div>
 			</div>
 		</div>

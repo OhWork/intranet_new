@@ -31,6 +31,7 @@
         	'hrctf_familytype' => $_POST['hrctf_familytype'],
         	'hrctf_familyname' => $_POST['hrctf_familyname'],
         	'hrctf_hosname' => $_POST['hrctf_hosname'],
+        	'hrctf_hosprovince' => $_POST['hrctf_hosprovince'],
         	'hrctf_educationname' => $_POST['hrctf_educationname'],
         	'hrctf_salary' => $_POST['hrctf_salary'],
         	'hrctf_whoname' => $_POST['hrctf_whoname'],
