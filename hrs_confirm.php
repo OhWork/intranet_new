@@ -237,9 +237,12 @@ echo $form->open("form_reg","form","col-xl-12 col-lg-12 col-md-12 col-sm-12 col-
 					} ?>
 		</div>
 		<input type='hidden' name='hrctf_status' value='W'/>
-		<?php echo "<input type='hidden' name='hrctf_id' value='$_GET[id]'/>"; ?>
+		
 		<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3'>
 			<div class='row'>
+    			<?php
+    			if($r['typectf_typectf_id']==6){
+        			?>
 				<div class='col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6'>
 					<div class='row'>
 						<div class='col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2'></div>
@@ -258,11 +261,36 @@ echo $form->open("form_reg","form","col-xl-12 col-lg-12 col-md-12 col-sm-12 col-
 						<div class='col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2'></div>
 					</div>
 				</div>
+				<?php
+				}else{
+                ?>
+                <div class='col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6'>
+					<div class='row'>
+						<div class='col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2'></div>
+						<div class='col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8'>
+							<a href="hrs_certificate_report_BT.php?id=<?php echo $_GET['id']; ?>" class="btn btn-warning col-12">บันทึกข้อความ</a>
+						</div>
+						<div class='col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2'></div>
+					</div>
+				</div>
+				<div class='col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6'>
+					<div class='row'>
+						<div class='col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2'></div>
+						<div class='col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8'>
+							<a href="hrs_certificate_report.php?id=<?php echo $_GET['id']; ?>" class="btn btn-warning col-12">หนังสือส่งออก</a>
+						</div>
+						<div class='col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2'></div>
+					</div>
+				</div>
+                <?php
+				}
+				?>
     			<div class='col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6'>
     				<div class='row'>
     					<div class='col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2'></div>
 						<div class='col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8'>
-							<?php echo $button ?>
+    						<?php echo "<input type='hidden' name='hrctf_id' value='$_GET[id]'/>"; 
+							      echo $button ?>
 						</div>
 						<div class='col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2'></div>
 					</div>
