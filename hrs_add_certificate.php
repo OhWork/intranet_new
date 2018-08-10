@@ -13,7 +13,7 @@
     $lbhospital = new label('รับการรักษาจากสถานพยาบาล');
     $txtname = new textfield('hrctf_name','problem_work','form-control','','');
     $txtdatestartwork = new textfieldcalendarreadonly('hrctf_datestartwork','datetimepicker1','','form-control','input-group-addon btn calen','datetimepicker1');
-    $txtdatestarthos = new textfieldcalendarreadonly('hrhos_datestarthos','datetimepicker2','','form-control','input-group-addon','datetimepicker2');
+    $txtdatestarthos = new textfieldcalendarreadonly('hrctf_datestarthos','datetimepicker2','','form-control','input-group-addon','datetimepicker2');
     $txtposition = new textfield('hrctf_position','problem_position','form-control','','');
     $selectdevision = new SelectFromDB();
     $selectdevision->name = 'zoo_zoo_id';
