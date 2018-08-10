@@ -23,7 +23,7 @@
     $lbwhoname = new label('ซึ่งเกี่ยวข้องกับข้าพเจ้าโดยเป็น');
     $txtname = new textfield('hrctf_name','problem_work','form-control','','');
     $txtdatestartwork = new textfieldcalendarreadonly('hrctf_datestartwork','datetimepicker1','','form-control','input-group-addon btn calen','datetimepicker1');
-    $txtdatestarthos = new textfieldcalendarreadonly('hrhos_datestarthos','datetimepicker2','','form-control','input-group-addon','datetimepicker2');
+    $txtdatestarthos = new textfieldcalendarreadonly('hrctf_datestarthos','datetimepicker2','','form-control','input-group-addon','datetimepicker2');
     $txtposition = new textfield('hrctf_position','problem_position','form-control','','');
     $selectdevision = new SelectFromDB();
     $selectdevision->name = 'zoo_zoo_id';
@@ -35,11 +35,8 @@
     $txtwhofu = new textfield('hrctf_whofu','hrctf_ctfname_id','form-control','','');
     $txteducation = new textfield('hrctf_educationname','hrctf_ctfname_id','form-control','','');
     $txtfamilyname = new textfield('hrctf_familyname','hrctf_familyname_id','form-control','','');
-    $selectmoneyroom = new selectMenu();
- 	$selectmoneyroom->name = 'hrctf_moneyroom';
-    $selectmoneyroom->addItem('-----โปรดระบุจำนวนเงิน-----','');
-    $selectmoneyroom->addItem('800','800');
-    $selectmoneyroom->addItem('1200','1200');
+    $radiomoneyroom = new radioGroup();
+ 	$radiomoneyroom->name = 'hrctf_moneyroom';
     $radiofamilytype = new radioGroup();
     $radiofamilytype->name = 'hrctf_typefamily';
     $button = new buttonok("แก้ไขข้อมูล","","btn btn-success btn-lg btn-block bt3success col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","");
@@ -57,7 +54,13 @@
 		  $txteducation->value = $r['hrctf_educationname'];
 		  $txtfamilyname->value = $r['hrctf_familyname'];
 		  $txtsalary->value = $r['hrctf_salary'];
-
+    if($r["hrctf_moneyroom"] == 800){
+    	$radiomoneyroom->add('800',800,'checked');
+    	$radiomoneyroom->add('1200',1200,'');
+    	}else if($r["hrctf_moneyroom"] == 1200){
+        $radiomoneyroom->add('800',800,'');
+    	$radiomoneyroom->add('1200',1200,'checked');
+        } 
 	if($r["hrctf_familytype"] == 1){
     	$radiofamilytype->add('ข้าพเจ้า',1,'checked');
     	$radiofamilytype->add('คู่สมรส',2,'');
@@ -140,8 +143,10 @@
                                echo $txthospital;
                                echo $lbprovince;
                                echo $txtprovince;
-                             echo $radiofamilytype; ?>
-        				<?php echo $lbmoneyroom; ?>
+                               echo $radiofamilytype;
+                               echo $txtdatestarthos;
+                               echo $lbmoneyroom;
+                               echo $radiomoneyroom; ?>
 				</div>
 				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
     					<?php echo $selectmoneyroom; ?>
