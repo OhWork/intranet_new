@@ -55,7 +55,7 @@
 				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-1 showmsg">
 					<?php echo $lbdevision; ?>
 				</div>
-				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 showmsg">
 					<?php echo $selectdevision->selectFromTBinDB('zoo','zoo_id','zoo_name','zoo_per_hrs','1',''); ?>
 				</div>
 				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-2 showmsg">
@@ -72,12 +72,12 @@
 						</label>
 					</div>
 				</div>
-				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 showmsg">
+				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 					<div class="row">
 						<label class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 							<input type="radio" name="typectf_typectf_id"  id="parent3" value="3"> รับรองเข้ารับการศึกษา (สถาบันการศึกษา)
 						</label>
-						<label class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+						<label class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 showmsg">
 							<?php echo $txteducation;?>
 						</label>
 					</div>
@@ -89,17 +89,17 @@
 						</label>
 					</div>
 				</div>
-				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 showmsg=">
+				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 showmsg">
 					<div class="row">
 						<label class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6" style="padding-top:7px;">
 							<input type="radio" name="typectf_typectf_id" id="parent5" value="5"> รับรองการค้ำประกันการเข้าทำงาน ของ
 						</label>
-						<label class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6">
+						<label class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6 showmsg">
 							<?php echo $txtwhoname;?>
 						</label>
 						<label class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6" style="padding-left:34px;padding-top:7px;"> ซึ่งเกี่ยวข้องกับข้าพเจ้าโดยเป็น
 						</label>
-						<label class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6">
+						<label class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6 ">
 							<?php echo $txtwhofu;?>
 						</label>
 					</div>
@@ -201,7 +201,7 @@
 						</div>
 						<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 							<div class="row">
-								<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 showmsg">
+								<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 									<?php echo $lbhospital; ?>
 								</div>
 								<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 showmsg">
@@ -211,7 +211,7 @@
 						</div>
 						<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-2">
 							<div class="row">
-								<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 showmsg">
+								<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 									<?php echo $lbprovince; ?>
 								</div>
 								<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 showmsg">
@@ -296,11 +296,11 @@
 			}
 			}
 			else{
-				console.log(123);
 				$('#parent7').prop('checked',true);
 				$('#parent8').prop('checked',true);
 				$('#cer').hide();
 				$('#hos').fadeIn("slow");
+				$('[id=hrctf_ctfname_id]').slice(0).prop("disabled", true);
 				$('[id=hrctf_familyname_id]').slice(0).prop("disabled", true);
 				$('input[name=hrctf_familytype]').on("change",function(e) {
 				var valchange = $(this).val();
