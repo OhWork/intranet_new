@@ -1,78 +1,14 @@
-<?php
-	function DateThai($strDate)
-	{
-		$strYear = date("Y",strtotime($strDate))+543;
-		$strMonth= date("n",strtotime($strDate));
-		$strDay= date("j",strtotime($strDate));
-		$strHour= date("H",strtotime($strDate));
-		$strMinute= date("i",strtotime($strDate));
-		$strSeconds= date("s",strtotime($strDate));
-		$strMonthCut = Array("","ม.ค.","ก.พ.","มี.ค.","เม.ย.","พ.ค.","มิ.ย.","ก.ค.","ส.ค.","ก.ย.","ต.ค.","พ.ย.","ธ.ค.");
-		$strMonthThai=$strMonthCut[$strMonth];
-		return "$strDay $strMonthThai $strYear";
-	}
-function num2wordsThai($num){   
-    $num=str_replace(",","",$num);
-    $num_decimal=explode(".",$num);
-    $num=$num_decimal[0];
-    $returnNumWord;   
-    $lenNumber=strlen($num);   
-    $lenNumber2=$lenNumber-1;   
-    $kaGroup=array("","สิบ","ร้อย","พัน","หมื่น","แสน","ล้าน","สิบ","ร้อย","พัน","หมื่น","แสน","ล้าน");   
-    $kaDigit=array("","หนึ่ง","สอง","สาม","สี่","ห้า","หก","เจ็ต","แปด","เก้า");   
-    $kaDigitDecimal=array("ศูนย์","หนึ่ง","สอง","สาม","สี่","ห้า","หก","เจ็ต","แปด","เก้า");   
-    $ii=0;   
-    for($i=$lenNumber2;$i>=0;$i--){   
-        $kaNumWord[$i]=substr($num,$ii,1);   
-        $ii++;   
-    }   
-    $ii=0;   
-    for($i=$lenNumber2;$i>=0;$i--){   
-        if(($kaNumWord[$i]==2 && $i==1) || ($kaNumWord[$i]==2 && $i==7)){   
-            $kaDigit[$kaNumWord[$i]]="ยี่";   
-        }else{   
-            if($kaNumWord[$i]==2){   
-                $kaDigit[$kaNumWord[$i]]="สอง";        
-            }   
-            if(($kaNumWord[$i]==1 && $i<=2 && $i==0) || ($kaNumWord[$i]==1 && $lenNumber>6 && $i==6)){   
-                if($kaNumWord[$i+1]==0){   
-                    $kaDigit[$kaNumWord[$i]]="หนึ่ง";      
-                }else{   
-                    $kaDigit[$kaNumWord[$i]]="เอ็ด";       
-                }   
-            }elseif(($kaNumWord[$i]==1 && $i<=2 && $i==1) || ($kaNumWord[$i]==1 && $lenNumber>6 && $i==7)){   
-                $kaDigit[$kaNumWord[$i]]="";   
-            }else{   
-                if($kaNumWord[$i]==1){   
-                    $kaDigit[$kaNumWord[$i]]="หนึ่ง";   
-                }   
-            }   
-        }   
-        if($kaNumWord[$i]==0){   
-            if($i!=6){
-                $kaGroup[$i]="";   
-            }
-        }   
-        $kaNumWord[$i]=substr($num,$ii,1);   
-        $ii++;   
-        @$returnNumWord.=$kaDigit[$kaNumWord[$i]].$kaGroup[$i];   
-    }      
-    if(isset($num_decimal[1])){
-        $returnNumWord.="จุด";
-        for($i=0;$i<strlen($num_decimal[1]);$i++){
-                $returnNumWord.=$kaDigitDecimal[substr($num_decimal[1],$i,1)];  
-        }
-    }       
-    return $returnNumWord;   
-}
-    
+<?php 
+    ob_start();
+    include_once 'database/db_tools.php';
+    include_once 'connect.php';
+    include_once 'form/main_change.php';
+	error_reporting(0);
 
-    echo num2wordsThai('25101111')."<br>";
-	$strDate = "2008-08-14";
-	echo DateThai($strDate);
+    $id = $_GET['id'];
+    $rs = $rs = $db->findByPK33('hrctf','typectf','zoo','typectf_typectf_id','typectf_id','zoo_zoo_id','zoo_id','hrctf_id',$id)->execute();
+    $show = mysqli_fetch_assoc($rs);
 ?>
-
-<!-- เขียนต่อจากนี้ -->
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
@@ -100,19 +36,28 @@ function num2wordsThai($num){
 		<!--บรรทัดที่ 4-->
 		<table>
     		<tr>
-				<td>เรื่อง</td>
-				<td>โรงพยาบาล</td>
-				<td><!--ใส่โค๊ตตรงนี้--></td>
+				<td>เรียน</td>
+				<td>ผู้อำนวยการ</td>
+				<td><?php echo $show['hrctf_name']?></td>
 			</tr>
 		</table>
 		<!--บรรทัดที่ 4-->
 		<table>
     		<tr>
 				<td>ด้วย</td>
-				<td><!--ใส่โค๊ตตรงนี้ ญาติพนักงาน--></td>
-				<td><!--ใส่โค๊ตตรงนี้ TYPE--></td>
+				<td><?php echo $show['hrctf_familyname']?></td>
+				<td><?php if($show['hrctf_familytype'] == 2){
+    				    echo "คู่สมรส"; 
+    				}else if($show['hrctf_familytype'] == 3){
+        				echo "บิดา"; 
+    				}else if($show['hrctf_familytype'] == 4){
+        				echo "มารดา"; 
+    				}else if($show['hrctf_familytype'] == 5){
+        				echo "บุตร"; 
+    				}
+				?></td>
 				<td>ของ</td>
-				<td><!--ใส่โค๊ตตรงนี้ พนักงาน--></td>
+				<td><?php echo $show['hrctf_name']?></td>
 				<td>พนักงานองค์การ</td>
 			</tr>
 		</table>
@@ -120,9 +65,10 @@ function num2wordsThai($num){
 		<table>
     		<tr>
 				<td>สวนสัตว์</td>
-				<td><!--ใส่โค๊ตตรงนี้ ตำแหน่ง--></td>
+				<td>ตำแหน่ง</td>
+				<td><?php echo $show['hrctf_position']?></td>
 				<td>สังกัด</td>
-				<td><!--ใส่โค๊ตตรงนี้ สังกัด--></td>
+				<td><?php echo $show['zoo_name']?></td>
 				<td>องค์การสวนสัตว์ ได้เข้ารับการรักษาพยาบาล</td>
 			</tr>
 		</table>
@@ -130,7 +76,7 @@ function num2wordsThai($num){
 		<table>
     		<tr>
 				<td>ณ สถานพยาบาลแห่งนี้ ตั้งแต่วันที่</td>
-				<td><!--ใส่โค๊ตตรงนี้ วันที่เข้ารับการรับษา--></td>
+				<td><?php echo DateThai($show['hrctf_datestarthos']);?></td>
 				<td>ประเภทคนไข้ใน</td>
 			</tr>
 		</table>
@@ -144,7 +90,7 @@ function num2wordsThai($num){
 		<table>
     		<tr>
 				<td>และสิ่งแวดล้อม ขอรับรองว่า</td>
-				<td><!--ใส่โค๊ตตรงนี้ ญาติพนักงาน--></td>
+				<td><?php echo $show['hrctf_familyname']?></td>
 				<td>มีสิทธิได้รับสวัสดิการค่ารักษาพยาบาล</td>
 			</tr>
 		</table>
