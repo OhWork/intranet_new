@@ -1,4 +1,15 @@
-รับรองการมีสิทธิได้รับสวัสดิการ
+<?php 
+    ob_start();
+    include_once 'database/db_tools.php';
+    include_once 'connect.php';
+    include_once 'form/main_change.php';
+    require_once 'vendor/autoload.php';
+	error_reporting(0);
+
+    $id = $_GET['id'];
+    $rs = $rs = $db->findByPK33('hrctf','typectf','zoo','typectf_typectf_id','typectf_id','zoo_zoo_id','zoo_id','hrctf_id',$id)->execute();
+    $show = mysqli_fetch_assoc($rs);
+?>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
@@ -72,3 +83,13 @@
 		</table>
     </body>
 </html>
+<?php
+$html = ob_get_contents();
+ob_end_clean();
+$pdf = new \Mpdf\Mpdf(['mode' => 'th']);
+$stylesheet .= file_get_contents('CSS/pdf.css');
+$pdf->WriteHTML($stylesheet,1);
+$pdf->SetDisplayMode('fullpage');
+$pdf->WriteHTML($html, 2);
+$pdf->Output();
+?>
