@@ -692,7 +692,7 @@
 }
 .waitbox {
 	background-color: #FFE082;
-	color:#212529;
+	color:#fff;
 }
 .waitbox:active {
 	background-color: #90CAF9;
@@ -978,7 +978,7 @@
 .cflogo {
 	width:150px;
 	height:150px;
-} 
+}
 .cfok {
 	margin-top:60px;
 }
