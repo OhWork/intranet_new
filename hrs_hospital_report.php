@@ -14,16 +14,22 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
     </head>
-    <body style="margin:auto">
-		<!--บรรทัดที่ 1-->
-		<table>
+    <body>
+		<table style="margin-bottom:200px;">
     		<tr>
-        		<td style="margin">ที่ ทส.๑๑๐๑/</td>
+        		<td></td>
+    		</tr>
+		</table>
+		<!--บรรทัดที่ 1-->
+		<table style="margin-bottom:50px;">
+    		<tr>
+        		<td>ที่ ทส.๑๑๐๑/</td>
     		</tr>
 		</table>
 		<!--บรรทัดที่ 2-->
-		<table>
+		<table style="margin-left:350px;margin-bottom:50px;">
     		<tr>
+				<td>10 สิงหาคม 2561</td>
 				<td><!-- ระบุวันที่ --></td>
 			</tr>
 		</table>
@@ -35,7 +41,7 @@
 			</tr>
 		</table>
 		<!--บรรทัดที่ 4-->
-		<table>
+		<table style="margin-bottom:20px;">
     		<tr>
 				<td>เรียน</td>
 				<td>ผู้อำนวยการ</td>
@@ -45,9 +51,9 @@
 		<!--บรรทัดที่ 4-->
 		<table>
     		<tr>
-				<td>ด้วย</td>
-				<td><?php echo $show['hrctf_familyname']?></td>
-				<td><?php if($show['hrctf_familytype'] == 2){
+				<td style="padding-left:60px;"><p>ด้วย นายโชติเชาว์ ปาลคำ บิดา
+					<?php echo $show['hrctf_familyname']?>
+					<?php if($show['hrctf_familytype'] == 2){
     				    echo "คู่สมรส"; 
     				}else if($show['hrctf_familytype'] == 3){
         				echo "บิดา"; 
@@ -56,80 +62,45 @@
     				}else if($show['hrctf_familytype'] == 5){
         				echo "บุตร"; 
     				}
-				?></td>
-				<td>ของ</td>
-				<td><?php echo $show['hrctf_name']?></td>
-				<td>พนักงานองค์การ</td>
+					?> ของ <?php echo $show['hrctf_name']?> พนักงานองค์การสวนสัตว์ ตำแหน่ง <?php echo $show['hrctf_position']?> สังกัด <?php echo $show['zoo_name']?> 
+					</p>
+				</td>
 			</tr>
-		</table>
-		<!--บรรทัดที่ 5-->
-		<table>
-    		<tr>
-				<td>สวนสัตว์</td>
-				<td>ตำแหน่ง</td>
-				<td><?php echo $show['hrctf_position']?></td>
-				<td>สังกัด</td>
-				<td><?php echo $show['zoo_name']?></td>
-				<td>องค์การสวนสัตว์ ได้เข้ารับการรักษาพยาบาล</td>
-			</tr>
-		</table>
-		<!--บรรทัดที่ 6-->
-		<table>
-    		<tr>
-				<td>ณ สถานพยาบาลแห่งนี้ ตั้งแต่วันที่</td>
-				<td><?php echo DateThai($show['hrctf_datestarthos']);?></td>
-				<td>ประเภทคนไข้ใน</td>
+			<tr>
+				<td>
+					<p>องค์การสวนสัตว์  ได้เข้ารับการรักษาพยาบาล ณ สถานพยาบาลแห่งนี้ ตั้งแต่วันที่ <?php echo DateThai($show['hrctf_datestarthos']);?> ประเภทคนไข้ใน</p>
+				</td>
 			</tr>
 		</table>
 		<!--บรรทัดที่ 7-->
 		<table>
     		<tr>
-				<td>องค์การสวนสัตว์ เป็นหน่วยงานรัฐวิสาหกิจ สังกัดกระทรวงทรัพยากรธรรมชาติ</td>
+				<td style="padding-left:60px;">องค์การสวนสัตว์ เป็นหน่วยงานรัฐวิสาหกิจ สังกัดกระทรวงทรัพยากรธรรมชาติและสิ่งแวดล้อมขอรับรองว่า <?php echo $show['hrctf_familyname']?> 
+				</td>
 			</tr>
-		</table>
-		<!--บรรทัดที่ 8-->
-		<table>
-    		<tr>
-				<td>และสิ่งแวดล้อม ขอรับรองว่า</td>
-				<td><?php echo $show['hrctf_familyname']?></td>
-				<td>มีสิทธิได้รับสวัสดิการค่ารักษาพยาบาล</td>
+			<tr>
+				<td>มีสิทธิได้รับสวัสดิการค่ารักษาพยาบาลตามระเบียบขององค์การสวยสัตว์ โดยค่าห้องรวมค่าอาหารเบิกได้วันละไม่เกิน <!--ใส่โค๊ตตรงนี้ค่าห้อง--> บาท จึงขอให้ <!--ใส่โค๊ตตรงนี้ ชื่อโรงพยาบาล--> เรียก
+				</td>
 			</tr>
-		</table>
-		<!--บรรทัดที่ 9-->
-		<table>
-    		<tr>
-				<td><!--ใส่โค๊ตตรงนี้ ชื่อโรงพยาบาล--></td>
-				<td>เรียกเก็บเงินค่ารักษาพยาบาล</td>
-			</tr>
-		</table>
-		<!--บรรทัดที่ 10-->
-		<table>
-    		<tr>
-				<td>ของ</td>
-				<td><!--ใส่โค๊ตตรงนี้ วันที่เข้ารับการรับษา--></td>
-				<td>ได้โดยตรงกับองค์การสวนสัตว์ ๗๑ ถนนพระราม ๕ เขตดุสิต</td>
-			</tr>
-		</table>
-		<!--บรรทัดที่ 11-->
-		<table>
-    		<tr>
-				<td>กรุงเทพมหานคร ๑๐๓๐๐ จักขอบคุณยิ่ง</td>
+			<tr>
+				<td>เก็บเงินค่ารักษาพยาบาล ของ <!--ใส่โค๊ตตรงนี้ ชื่อผู้เข้ารับการรักษา-->ได้โดยตรงกับองค์การสวนสัตว์ ๗๑ ถนนพระราม ๕ เขตดุสิต กรุงเทพมหานคร ๑๐๓๐๐ จักขอบคุณยิ่ง
+				</td>
 			</tr>
 		</table>
 		<!--บรรทัดที่ 12-->
 		<table>
     		<tr>
-				<td>จึงเรียนมาเพื่อโปรดพิจารณา</td>
+				<td style="padding-left:60px;">จึงเรียนมาเพื่อโปรดพิจารณา</td>
 			</tr>
 		</table>
 		<!--บรรทัดที่ 13-->
-		<table>
+		<table style="margin-left:350px;margin-bottom:100px;">
     		<tr>
 				<td>ของแสดงความนับถึอ</td>
 			</tr>
 		</table>
 		<!--บรรทัดที่ 13-->
-		<table>
+		<table style="margin-left:330px;">
     		<tr>
 				<td>(</td>
 				<td><!--ใส่โค๊ตตรงนี้ ชื่อผอ.--></td>
@@ -137,7 +108,7 @@
 			</tr>
 		</table>
 		<!--บรรทัดที่ 13-->
-		<table>
+		<table style="margin-left:330px;">
     		<tr>
 				<td><!--ใส่โค๊ตตรงนี้ ตำแหน่ง ผอ.--></td>
 			</tr>
@@ -153,5 +124,4 @@ $pdf->WriteHTML($stylesheet,1);
 $pdf->SetDisplayMode('fullpage');
 $pdf->WriteHTML($html, 2);
 $pdf->Output();
-?>
 ?>
