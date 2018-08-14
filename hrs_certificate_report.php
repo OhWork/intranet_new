@@ -35,14 +35,17 @@
 		<!--บรรทัดที่ 3-->
 		<table style="margin-bottom:10px;">
     		<tr>
-				<td style="padding-left:60px;font-size:14px;">หนังสือฉบับนี้เพื่อรับรองว่า นายราชพร เชิขวัญมา<!--ใส่โค๊ตตรงนี้ พนักงาน--> ปัจจุบันปฏิบัติงานในตำแหน่ง เจ้าหน้าที่ตรวจสอบ3<!--ใส่โค๊ตตรงนี้ ตำแหน่ง--></td>
+				<td style="padding-left:60px;font-size:14px;">หนังสือฉบับนี้เพื่อรับรองว่า <?php echo $show['hrctf_name'];?> ปัจจุบันปฏิบัติงานในตำแหน่ง <?php echo thainumDigit($show['hrctf_position']);?></td>
 			</tr>
 			<tr>
-				<td style="font-size:14px;">สังกัด สำนักตรวจสอบ<!--ใส่โค๊ตตรงนี้ สังกัด--> องค์การสวนสัตว์ กระทรวงทรัพยาการธรรมชาติและสิ่งแวดล้อม ได้เข้าทำงานเมื่อวันที่
+				<td style="font-size:14px;">สังกัด <?php echo $show['zoo_name'];?> องค์การสวนสัตว์ กระทรวงทรัพยาการธรรมชาติและสิ่งแวดล้อม ได้เข้าทำงานเมื่อวันที่
 				</td>
 			</tr>
 			<tr>
-				<td style="font-size:14px;"><!--ใส่โค๊ตตรงนี้ วันที่-->ปัจจุบันอัตราเงินเดือน <!--ใส่โค๊ตตรงนี้ เงินเดือน--> บาท <!--ใส่โค๊ตตรงนี้ เงินเป็นตัวหนังสือ--></td>
+				<td style="font-size:14px;"><?php $datethai = DateThai($show['hrctf_datestartwork']);
+    				                              echo thainumDigit($datethai);
+				?> ปัจจุบันอัตราเงินเดือน <?php    $salary = number_format($show['hrctf_salary']);
+    				                        echo thainumDigit($salary);?> บาท <!--ใส่โค๊ตตรงนี้ เงินเป็นตัวหนังสือ--></td>
 			</tr>
 		</table>
 		<table style="margin-left:60px;margin-bottom:100px;">
@@ -54,14 +57,14 @@
 		<table style="margin-left:280px;">
     		<tr>
 				<td>(</td>
-				<td><!--ใส่โค๊ตตรงนี้ ชื่อผอ.--></td>
+				<td><!--ใส่เส้นปะ--></td>
 				<td>)</td>
 			</tr>
 		</table>
 		<!--บรรทัดที่ 7-->
 		<table style="margin-left:280px;">
     		<tr>
-				<td><!--ใส่โค๊ตตรงนี้ ตำแหน่ง ผอ.--></td>
+				<td><!--ใส่เส้นปะ--></td>
 			</tr>
 		</table>
     </body>

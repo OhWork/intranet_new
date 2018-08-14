@@ -41,7 +41,9 @@
 				<td>ที่</td>
 				<td>ทส ๑๑๑๙ /</td>
 				<td>วันที่</td>
-				<td><!--ใส่โค๊ตตรงนี้--></td>
+				<td><?php 
+    				$datenow = Date("Y-m-d");
+    				echo DateThai($datenow);?></td>
 			</tr>
 		</table>
 		<!--บรรทัดที่ 4-->
@@ -62,28 +64,28 @@
 		<table>
     		<tr>
 				<td>ด้วย</td>
-				<td><!--ใส่โค๊ตตรงนี้ ชื่อ--></td>
-				<td><!--ใส่โค๊ตตรงนี้ ตำแหน่ง--></td>
+				<td><?php echo $show['hrctf_name'];?></td>
+				<td><?php echo $show['hrctf_position'];?></td>
 				<td>สังกัด</td>
-				<td><!--ใส่โค๊ตตรงนี้ สังกัด--></td>
+				<td><?php echo $show['zoo_name'];?></td>
 			</tr>
 		</table>
 		<!--บรรทัดที่ 6-->
 		<table>
     		<tr>
 				<td>มีความประสงค์ขอหนังสือรับรองการมีสิทธิรับเงินช่วยเหลือค่ารักษาพยาบาลซึ่ง</td>
-				<td><!--ใส่โค๊ตตรงนี้ ผู้ที่เข้ารับการรับษา--></td>
+				<td><?php echo $show['hrctf_familyname'];?></td>
 			</tr>
 		</table>
 		<!--บรรทัดที่ 7-->
 		<table>
     		<tr>
-				<td><!--ใส่โค๊ตตรงนี้ TYPE--></td>
-				<td><!--ใส่โค๊ตตรงนี้ ชื่อ--></td>
+				<td><!--ใส่โค๊ตตรงนี้ TYPE (กุงง)--></td>
+				<td><!--ใส่โค๊ตตรงนี้ ชื่อ (กุงง)--></td>
 				<td>จะเข้ารับการรักษาพยาบาลที่</td>
-				<td><!--ใส่โค๊ตตรงนี้ ชื่อสถานพยาบาล--></td>
+				<td><?php echo $show['hrctf_hosname'];?></td>
 				<td>ในวันที่</td>
-				<td><!--ใส่โค๊ตตรงนี้ วันที่--></td>
+				<td><?php echo $show['hrctf_datestarthos'];?></td>
 				<td>นั้น</td>
 			</tr>
 		</table>

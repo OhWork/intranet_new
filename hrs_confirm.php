@@ -27,7 +27,7 @@
     $selectmoneyroom->addItem('-----โปรดระบุจำนวนเงิน-----','');
     $selectmoneyroom->addItem('800','800');
     $selectmoneyroom->addItem('1200','1200');
-    $button = new buttonok('เปลี่ยนสถานะ','','btn btn-success col-12','');
+    $button = new buttonok('ยืนยัน','','btn btn-success col-12','');
     	
 	$strDate = $r['hrctf_datestartwork'];
 
@@ -245,7 +245,6 @@ echo $form->open("form_reg","form","col-xl-12 col-lg-12 col-md-12 col-sm-12 col-
 			</div>
 		</div>
         <?php } ?>
-		<input type='hidden' name='hrctf_status' value='W'/>
 		
 		<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3'>
 			<div class='row'>
@@ -256,7 +255,7 @@ echo $form->open("form_reg","form","col-xl-12 col-lg-12 col-md-12 col-sm-12 col-
 					<div class='row'>
 						<div class='col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2'></div>
 						<div class='col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8'>
-							<a href="hrs_hospital_report_BT.php?id=<?php echo $_GET['id']; ?>" class="btn btn-warning col-12">บันทึกข้อความ</a>
+							<a href="hrs_hospital_report_BT.php?id=<?php echo $_GET['id']; ?>" class="btn btn-warning col-12"><span data-feather="file-text"></span>บันทึกข้อความ</a>
 						</div>
 						<div class='col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2'></div>
 					</div>
@@ -265,7 +264,7 @@ echo $form->open("form_reg","form","col-xl-12 col-lg-12 col-md-12 col-sm-12 col-
 					<div class='row'>
 						<div class='col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2'></div>
 						<div class='col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8'>
-							<a href="hrs_hospital_report.php?id=<?php echo $_GET['id']; ?>" class="btn btn-warning col-12">หนังสือส่งออก</a>
+							<a href="hrs_hospital_report.php?id=<?php echo $_GET['id']; ?>" class="btn btn-warning col-12"><span data-feather="file-text"></span>หนังสือส่งออก</a>
 						</div>
 						<div class='col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2'></div>
 					</div>
@@ -277,7 +276,7 @@ echo $form->open("form_reg","form","col-xl-12 col-lg-12 col-md-12 col-sm-12 col-
 					<div class='row'>
 						<div class='col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2'></div>
 						<div class='col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8'>
-							<a href="hrs_certificate_report_BT.php?id=<?php echo $_GET['id']; ?>" class="btn btn-warning col-12">บันทึกข้อความ</a>
+							<a href="hrs_certificate_report_BT.php?id=<?php echo $_GET['id']; ?>" class="btn btn-warning col-12"><span data-feather="file-text"></span>บันทึกข้อความ</a>
 						</div>
 						<div class='col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2'></div>
 					</div>
@@ -286,7 +285,7 @@ echo $form->open("form_reg","form","col-xl-12 col-lg-12 col-md-12 col-sm-12 col-
 					<div class='row'>
 						<div class='col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2'></div>
 						<div class='col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8'>
-							<a href="hrs_certificate_report.php?id=<?php echo $_GET['id']; ?>" class="btn btn-warning col-12">หนังสือส่งออก</a>
+							<a href="hrs_certificate_report.php?id=<?php echo $_GET['id']; ?>" class="btn btn-warning col-12"><span data-feather="file-text"></span>หนังสือส่งออก</a>
 						</div>
 						<div class='col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2'></div>
 					</div>
@@ -298,6 +297,14 @@ echo $form->open("form_reg","form","col-xl-12 col-lg-12 col-md-12 col-sm-12 col-
     				<div class='row'>
     					<div class='col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2'></div>
 						<div class='col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8'>
+    						<div class="btn-group col-12" data-toggle="buttons">
+											<label class="btn btn-success active col-6">
+												<input type="radio" name="hrctf_status" value="Y" onchange="swapConfig(this)" id="complete" autocomplete="off" checked> อนุมัติ
+											</label>
+											<label class="btn btn-warning col-6">
+												<input type="radio" name="hrctf_status" value="N" onchange="swapConfig(this)" id="nocomplete" autocomplete="off"> ยกเลิก / ไม่อนุมัติ
+											</label>
+										</div>
     						<?php echo "<input type='hidden' name='hrctf_id' value='$_GET[id]'/>"; 
 							      echo $button ?>
 						</div>
@@ -310,6 +317,16 @@ echo $form->open("form_reg","form","col-xl-12 col-lg-12 col-md-12 col-sm-12 col-
 </div>
 <div class='col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2'></div>
 </div>
+<script>
+    function swapConfig(x) {
+    var radioName = document.getElementsByName(x.name);
+    for(i = 0 ; i < radioName.length; i++){
+      document.getElementById(radioName[i].id.concat("Settings")).style.display="none";
+    }
+    document.getElementById(x.id.concat("Settings")).style.display="initial";
+
+  }
+</script>
 <?php
      echo $form->close();
 	endif;
