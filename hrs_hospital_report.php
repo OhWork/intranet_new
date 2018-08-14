@@ -58,7 +58,7 @@
     				}else if($show['hrctf_familytype'] == 5){
         				echo "บุตร"; 
     				}
-					?> ของ <?php echo $show['hrctf_name']?> พนักงานองค์การสวนสัตว์ ตำแหน่ง <?php echo $show['hrctf_position']?> สังกัด <?php echo $show['zoo_name']?>
+					?> ของ <?php echo $show['hrctf_name'];?> พนักงานองค์การสวนสัตว์ ตำแหน่ง <?php echo $show['hrctf_position'];?> สังกัด <?php echo $show['zoo_name'];?>
 				</td>
 			</tr>
 			<tr>
@@ -70,7 +70,7 @@
 		<!--บรรทัดที่ 7-->
 		<table>
     		<tr>
-				<td style="padding-left:60px;">องค์การสวนสัตว์ เป็นหน่วยงานรัฐวิสาหกิจ สังกัดกระทรวงทรัพยากรธรรมชาติและสิ่งแวดล้อมขอรับรองว่า <?php echo $show['hrctf_familyname']?> 
+				<td style="padding-left:60px;">องค์การสวนสัตว์ เป็นหน่วยงานรัฐวิสาหกิจ สังกัดกระทรวงทรัพยากรธรรมชาติและสิ่งแวดล้อมขอรับรองว่า <?php echo $show['hrctf_familyname'];?> 
 				</td>
 			</tr>
 			<tr>
