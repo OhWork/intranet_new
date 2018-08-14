@@ -47,7 +47,7 @@
 		<!--บรรทัดที่ 4-->
 		<table>
     		<tr>
-				<td style="padding-left:60px;">ด้วย
+				<td style="font-size:14px;padding-left:60px;">ด้วย 
 					<?php echo $show['hrctf_familyname']?>
 					<?php if($show['hrctf_familytype'] == 2){
     				    echo "คู่สมรส"; 
@@ -58,54 +58,79 @@
     				}else if($show['hrctf_familytype'] == 5){
         				echo "บุตร"; 
     				}
-					?> ของ <?php echo $show['hrctf_name'];?> พนักงานองค์การสวนสัตว์ ตำแหน่ง <?php echo $show['hrctf_position'];?> สังกัด <?php echo $show['zoo_name'];?>
+					?> ของ <?php echo $show['hrctf_name'];?> พนักงานองค์การสวนสัตว์ ตำแหน่ง 
 				</td>
 			</tr>
+		</table>
+		<table>
 			<tr>
-				<td>
-					<p>องค์การสวนสัตว์  ได้เข้ารับการรักษาพยาบาล ณ สถานพยาบาลแห่งนี้ ตั้งแต่วันที่ <?php echo DateThai($show['hrctf_datestarthos']);?> ประเภทคนไข้ใน</p>
+				<td style="font-size:14px;"><?php echo $show['hrctf_position'];?> สังกัด <?php echo $show['zoo_name'];?> องค์การสวนสัตว์  ได้เข้ารับการรักษาพยาบาล ณ สถาน</td>
+			</tr>
+		</table>
+		<!--บรรทัดที่ 7-->
+		<table>
+			<tr>
+				<td style="font-size:14px;">พยาบาลแห่งนี้ ตั้งแต่วันที่ <?php echo DateThai($show['hrctf_datestarthos']);?> ประเภทคนไข้ใน
 				</td>
 			</tr>
 		</table>
 		<!--บรรทัดที่ 7-->
 		<table>
     		<tr>
-				<td style="padding-left:60px;">องค์การสวนสัตว์ เป็นหน่วยงานรัฐวิสาหกิจ สังกัดกระทรวงทรัพยากรธรรมชาติและสิ่งแวดล้อมขอรับรองว่า <?php echo $show['hrctf_familyname'];?> 
-				</td>
-			</tr>
-			<tr>
-				<td>มีสิทธิได้รับสวัสดิการค่ารักษาพยาบาลตามระเบียบขององค์การสวนสัตว์ โดยค่าห้องรวมค่าอาหารเบิกได้วันละไม่เกิน <?php echo $show['hrctf_moneyroom'];?> บาท จึงขอให้ <?php echo $show['hrctf_hosname'];?> เรียก
-				</td>
-			</tr>
-			<tr>
-				<td>เก็บเงินค่ารักษาพยาบาล ของ <?php echo $show['hrctf_familyname'];?>ได้โดยตรงกับองค์การสวนสัตว์ ๗๑ ถนนพระราม ๕ เขตดุสิต กรุงเทพมหานคร ๑๐๓๐๐ จักขอบคุณยิ่ง
+				<td style="font-size:14px;padding-left:60px;">องค์การสวนสัตว์ เป็นหน่วยงานรัฐวิสาหกิจ สังกัดกระทรวงทรัพยากรธรรมชาติและสิ่งแวดล้อมขอรับรองว่า
 				</td>
 			</tr>
 		</table>
-		<!--บรรทัดที่ 12-->
+		<!--บรรทัดที่ 7-->
 		<table>
+			<tr>
+				<td style="font-size:14px;"><?php echo $show['hrctf_familyname'];?> มีสิทธิได้รับสวัสดิการค่ารักษาพยาบาลตามระเบียบขององค์การสวนสัตว์ โดยค่าห้องรวมค่า
+				</td>
+			</tr>
+		</table>
+		<!--บรรทัดที่ 7-->
+		<table>
+			<tr>
+				<td style="font-size:14px;">อาหารเบิกได้วันละไม่เกิน <?php echo $show['hrctf_moneyroom'];?> บาท จึงขอให้ <?php echo $show['hrctf_hosname'];?> เรียก เก็บเงินค่ารักษาพยาบาล ของ 
+				</td>
+			</tr>
+		</table>
+		</table>
+		<!--บรรทัดที่ 7-->
+		<table>
+			<tr>
+				<td style="font-size:14px;"><?php echo $show['hrctf_familyname'];?> ได้โดยตรงกับองค์การสวนสัตว์ ๗๑ ถนนพระราม ๕ เขตดุสิต กรุงเทพมหานคร ๑๐๓๐๐</td>
+			</tr>
+		</table>
+		<table style="margin-bottom:30px;">
+			<tr>
+				<td style="font-size:14px;">จักขอบคุณยิ่ง</td>
+			</tr>
+		</table>
+		<!--บรรทัดที่ 12-->
+		<table style="margin-bottom:30px;">
     		<tr>
-				<td style="padding-left:60px;">จึงเรียนมาเพื่อโปรดพิจารณา</td>
+				<td style="font-size:14px;padding-left:60px;">จึงเรียนมาเพื่อโปรดพิจารณา</td>
 			</tr>
 		</table>
 		<!--บรรทัดที่ 13-->
 		<table style="margin-left:350px;margin-bottom:100px;">
     		<tr>
-				<td>ของแสดงความนับถึอ</td>
+				<td style="font-size:14px;">ของแสดงความนับถึอ</td>
 			</tr>
 		</table>
 		<!--บรรทัดที่ 13-->
-		<table style="margin-left:330px;">
+		<table style="margin-left:290px;">
     		<tr>
-				<td>(</td>
-				<td><!--ใส่โค๊ตตรงนี้ ชื่อผอ.--></td>
-				<td>)</td>
+				<td style="font-size:14px;">(</td>
+				<td style="font-size:14px;">.............................................................</td>
+				<td style="font-size:14px;">)</td>
 			</tr>
 		</table>
 		<!--บรรทัดที่ 13-->
-		<table style="margin-left:330px;">
+		<table style="margin-left:335px;">
     		<tr>
-				<td><!--ใส่โค๊ตตรงนี้ ตำแหน่ง ผอ.--></td>
+				<td style="font-size:14px;">ผู้อำนวยการองค์การสวนสัตว์</td>
 			</tr>
 		</table>
     </body>
