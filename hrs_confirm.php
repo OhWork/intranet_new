@@ -213,7 +213,7 @@ echo $form->open("form_reg","form","col-xl-12 col-lg-12 col-md-12 col-sm-12 col-
 					<?php echo $lbmoneyroom ?>
 				</div>
 				<div class='col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8'>
-    				<?php echo $selectmoneyroom; ?>
+    				<?php echo $r['hrctf_moneyroom']; ?>
 				</div>
 			</div>
 		</div>
