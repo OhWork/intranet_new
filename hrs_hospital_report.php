@@ -23,35 +23,31 @@
 		<!--บรรทัดที่ 1-->
 		<table style="margin-bottom:50px;">
     		<tr>
-        		<td>ที่ ทส.๑๑๐๑/</td>
+        		<td style="font-size:14px;">ที่ ทส.๑๑๐๑/</td>
     		</tr>
 		</table>
 		<!--บรรทัดที่ 2-->
 		<table style="margin-left:350px;margin-bottom:50px;">
     		<tr>
-				<td>10 สิงหาคม 2561</td>
-				<td><!-- ระบุวันที่ --></td>
+				<td style="font-size:14px;"><!-- ระบุวันที่ --></td>
 			</tr>
 		</table>
 		<!--บรรทัดที่ 3-->
 		<table>
     		<tr>
-				<td>เรื่อง</td>
-				<td>รับรองการมีสิทธิได้รับสวัสดิการค่ารักษาพยาบาล</td>
+				<td style="font-size:14px;">เรื่อง รับรองการมีสิทธิได้รับสวัสดิการค่ารักษาพยาบาล</td>
 			</tr>
 		</table>
 		<!--บรรทัดที่ 4-->
 		<table style="margin-bottom:20px;">
     		<tr>
-				<td>เรียน</td>
-				<td>ผู้อำนวยการ</td>
-				<td><?php echo $show['hrctf_name']?></td>
+				<td style="font-size:14px;">เรียน ผู้อำนวยการ<!--ชื่อสถานพยาบาลที่เข้ารับการรักษา--></td>
 			</tr>
 		</table>
 		<!--บรรทัดที่ 4-->
 		<table>
     		<tr>
-				<td style="padding-left:60px;"><p>ด้วย
+				<td style="padding-left:60px;">ด้วย
 					<?php echo $show['hrctf_familyname']?>
 					<?php if($show['hrctf_familytype'] == 2){
     				    echo "คู่สมรส"; 
@@ -62,8 +58,7 @@
     				}else if($show['hrctf_familytype'] == 5){
         				echo "บุตร"; 
     				}
-					?> ของ <?php echo $show['hrctf_name']?> พนักงานองค์การสวนสัตว์ ตำแหน่ง <?php echo $show['hrctf_position']?> สังกัด <?php echo $show['zoo_name']?> 
-					</p>
+					?> ของ <?php echo $show['hrctf_name']?> พนักงานองค์การสวนสัตว์ ตำแหน่ง <?php echo $show['hrctf_position']?> สังกัด <?php echo $show['zoo_name']?>
 				</td>
 			</tr>
 			<tr>

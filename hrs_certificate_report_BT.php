@@ -14,85 +14,88 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
     </head>
-    <body>
+    <body font="th-saraban">
 		<!--บรรทัดที่ 1-->
 		<table align="left">
     		<tr>
                 <td><img style='width:90px;' src='images/Logo/ZPO.png'></td>
+				<td style="font-size: 24px;padding-left:170px;"><b>บันทึกข้อความ</b></td>
 			</tr>
-		</table>
-		<table>
-    		<tr>
-        		<td style="font-size: 24px;"><b>บันทึกข้อความ</b></td>
-    		</tr>
 		</table>
 		<!--บรรทัดที่ 2-->
 		<table>
     		<tr>
-				<td><b>หน่วยงาน</b></td>
-				<td>องค์การสวนสัตว์  สำนักบริหารทรัพยากรบุคคล ฝ่ายสวัสดิการและแรงงานสัมพันธ์</td>
+				<td style="font-size:14px;"><b>หน่วยงาน</b></td>
+				<td style="font-size:14px;">องค์การสวนสัตว์  สำนักบริหารทรัพยากรบุคคล ฝ่ายสวัสดิการและแรงงานสัมพันธ์</td>
 			</tr>
 		</table>
 		<!--บรรทัดที่ 3-->
 		<table>
     		<tr>
-				<td>ที่</td>
-				<td>ทส ๑๑๑๙ /</td>
-				<td>วันที่</td>
-				<td><!--ใส่โค๊ตตรงนี้--></td>
+				<td style="font-size:14px;">ที่</td>
+				<td style="font-size:14px;">ทส ๑๑๑๙ /</td>
+				<td style="width: 350px;"></td>
+				<td style="font-size:14px;">วันที่</td>
+				<td style="font-size:14px;"><!--ใส่โค๊ตตรงนี้--></td>
 			</tr>
 		</table>
 		<!--บรรทัดที่ 4-->
-		<table style="border-bottom: solid 1px #000000;">
+		<table style="border-bottom: solid 1px #000000;margin-bottom:20px;">
     		<tr>
-				<td>เรื่อง</td>
-				<td>หนังสือรับรองเงินเดือนพนักงานองค์การสวนสัตว์</td>
+				<td style="font-size:14px;padding-right:360px;">เรื่อง หนังสือรับรองเงินเดือนพนักงานองค์การสวนสัตว์</td>
 			</tr>
 		</table>
 		<!--บรรทัดที่ 4-->
-		<table>
+		<table style="margin-bottom:20px">
     		<tr>
-				<td><b>เรียน</b></td>
-				<td><b>ผู้อำนวยการองค์การสวนสัตว์</b></td>
+				<td style="font-size:14px;"><b>เรียน ผู้อำนวยการองค์การสวนสัตว์</b></td>
 			</tr>
 		</table>
 		<!--บรรทัดที่ 5-->
 		<table>
     		<tr>
-				<td>ตามที่</td>
-				<td><?php echo $show['hrctf_name'];?></td>
-				<td><?php echo $show['hrctf_position'];?></td>
-				<td>สังกัด</td>
-				<td><?php echo $show['zoo_name'];?></td>
-				<td>ได้ยื่นความประสงค์ขอหนังสือรับรองเงินเดือนพนักงานองค์การสวนสัตว์จำนวน ๑ ฉบับ เพื่อประกอบการกู้เงินจากสถาบันการเงิน</td>
+				<td style="font-size:14px;padding-left:60px;width:100px;">ตามที่ </td>
+				<td style="font-size:14px;"><?php echo $show['hrctf_name'];?> <?php echo $show['hrctf_position'];?></td>
+				<td style="font-size:14px;">สังกัด</td>
+				<td style="font-size:14px;"><?php echo $show['zoo_name'];?></td>
+				<td style="font-size:14px;">ได้ยื่นความ</td>
+			</tr>
+		</table>
+		<table>
+			<tr>
+				<td style="font-size:14px;">ประสงค์ขอหนังสือรับรองเงินเดือนพนักงานองค์การสวนสัตว์จำนวน ๑ ฉบับ เพื่อประกอบการกู้เงินจากสถาบันการเงิน</td>
 			</tr>
 		</table>
 		<!--บรรทัดที่ 6-->
 		<table>
     		<tr>
-				<td>สำนักบริหารทรัพยากรบุคคล ฝ่ายสวัสดิการและแรงงานสัมพันธ์ ได้ดำเนินการตรวจสอบและจัดทำหนังสือรับรองเงินเดือนพนักงานองค์การสวนสัตว์</td>
-				<td><!--ใส่โค๊ตตรงนี้ ชื่อ--></td>
-				<td>เพื่อพิจารณาลงนามด้วยแล้ว</td>
+				<td style="font-size:14px;padding-left:60px;">สำนักบริหารทรัพยากรบุคคล ฝ่ายสวัสดิการและแรงงานสัมพันธ์ ได้ดำเนินการตรวจสอบและจัดทำหนังสือรับ</td>
+			</tr>
+		</table>
+		<!--บรรทัดที่ 6-->
+		<table  style="margin-bottom:30px">
+    		<tr>
+				<td style="font-size:14px;">รองเงินเดือนพนักงานองค์การสวนสัตว์ <?php echo $show['hrctf_name'];?> เพื่อพิจารณาลงนามด้วยแล้ว</td>
 			</tr>
 		</table>
 		<!--บรรทัดที่ 7-->
-		<table>
+		<table  style="margin-bottom:100px">
     		<tr>
-				<td>จึงเรียนมาเพื่อโปรดพิจารณา</td>
+				<td style="font-size:14px;padding-left:60px;">จึงเรียนมาเพื่อโปรดพิจารณา</td>
 			</tr>
 		</table>
 		<!--บรรทัดที่ 8-->
 		<table>
     		<tr>
-				<td>(</td>
-				<td><!--กรุณาทำเส้นประ--></td>
-				<td>)</td>
+				<td style="font-size:14px;padding-left:350px;">(</td>
+				<td style="font-size:14px;">.............................................</td>
+				<td style="font-size:14px;">)</td>
 			</tr>
 		</table>
 		<!--บรรทัดที่ 9-->
 		<table>
     		<tr>
-				<td><!--ใส่โค๊ตตรงนี้ ตำแหน่ง ผอ.HR--></td>
+				<td style="font-size:14px;padding-left:330px;">ผู้อำนวยการสำนักบริหารทรัพยากรบุคคล</td>
 			</tr>
 		</table>
     </body>

@@ -691,8 +691,13 @@
 	font-size: small;
 }
 .waitbox {
-	background-color: #FFE082;
+	background-color: #FFDE03;
 	color:#fff;
+}
+.waitbox:hover {
+	background-color: #c4b817;
+	color:#fff;
+	border-color: #dbcc06; 
 }
 .waitbox:active {
 	background-color: #90CAF9;
