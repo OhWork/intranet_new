@@ -22,11 +22,6 @@
     $txtrecipient = new textfield('hrctf_recipient','','form-control css-require','','');
     $txtwhofu = new textfield('hrctf_whofu','','form-control css-require','','');
     $txtwhoname = new textfield('hrctf_whoname','','form-control css-require','','');
-    $selectmoneyroom = new selectMenu();
- 	$selectmoneyroom->name = 'hrctf_moneyroom';
-    $selectmoneyroom->addItem('-----โปรดระบุจำนวนเงิน-----','');
-    $selectmoneyroom->addItem('800','800');
-    $selectmoneyroom->addItem('1200','1200');
     $button = new buttonok('ยืนยัน','','btn btn-success col-12','');
     	
 	$strDate = $r['hrctf_datestartwork'];
@@ -156,6 +151,7 @@ echo $form->open("form_reg","form","col-xl-12 col-lg-12 col-md-12 col-sm-12 col-
 				<div class='col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8 hrsstpad'>
 				<center><label>
 				<?php 
+    				echo $r['hrctf_familytype'];
     				if($r['hrctf_familytype'] == 1){
 						echo "ข้าพเจ้าชื่อ".$r['hrctf_name'];
                     }else if($r['hrctf_familytype'] == 2){
@@ -166,7 +162,9 @@ echo $form->open("form_reg","form","col-xl-12 col-lg-12 col-md-12 col-sm-12 col-
                         echo "มารดาชื่อ".$r['hrctf_familyname'];
     				}else if($r['hrctf_familytype'] == 5){
                         echo "บุตรชื่อ".$r['hrctf_familyname'];
-    				} 
+    				}else{
+        				echo "ปัญหาละ";
+    				}
 				?>
 				</label></center>
 				</div>
