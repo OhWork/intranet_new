@@ -690,19 +690,10 @@
 	padding-right: 8px;
 	font-size: small;
 }
-.waitbox {
-	background-color: #FFDE03;
+.waitbox , .waitbox:hover {
 	color:#fff;
 }
-.waitbox:hover {
-	background-color: #c4b817;
-	color:#fff;
-	border-color: #dbcc06; 
-}
-.waitbox:active {
-	background-color: #90CAF9;
-}
-.formgetfixdetial {
+.rmgetfixdetial {
 	padding:8 8 8 8;
 }
 .datebox {

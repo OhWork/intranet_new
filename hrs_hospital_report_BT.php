@@ -21,100 +21,95 @@
 		<table align="left">
     		<tr>
                 <td><img style='width:90px;' src='images/Logo/ZPO.png'></td>
+				<td style="font-size: 24px;padding-left:170px;"><b>บันทึกข้อความ</b></td>
 			</tr>
-		</table>
-		<table>
-    		<tr>
-        		<td style="font-size: 24px;"><b>บันทึกข้อความ</b></td>
-    		</tr>
 		</table>
 		<!--บรรทัดที่ 2-->
 		<table>
     		<tr>
-				<td><b>หน่วยงาน</b></td>
-				<td>องค์การสวนสัตว์  สำนักบริหารทรัพยากรบุคคล ฝ่ายสวัสดิการและแรงงานสัมพันธ์</td>
+				<td style="font-size:14px;"><b>หน่วยงาน</b></td>
+				<td style="font-size:14px;">องค์การสวนสัตว์  สำนักบริหารทรัพยากรบุคคล ฝ่ายสวัสดิการและแรงงานสัมพันธ์</td>
 			</tr>
 		</table>
 		<!--บรรทัดที่ 3-->
 		<table>
     		<tr>
-				<td>ที่</td>
-				<td>ทส ๑๑๑๙ /</td>
-				<td>วันที่</td>
+				<td style="font-size:14px;">ที่</td>
+				<td style="font-size:14px;">ทส ๑๑๑๙ /</td>
+				<td style="width: 350px;"></td>
+				<td style="font-size:14px;">วันที่</td>
 				<td><?php 
     				$datenow = Date("Y-m-d");
     				echo DateThai($datenow);?></td>
 			</tr>
 		</table>
 		<!--บรรทัดที่ 4-->
-		<table style="border-bottom: solid 1px #000000;">
+		<table style="border-bottom: solid 1px #000000;margin-bottom:20px;">
     		<tr>
-				<td>เรื่อง</td>
-				<td>รับรองการมีสิทธิรับเงินช่วยเหลือค่ารักษาพยาบาล</td>
+				<td style="font-size:14px;padding-right:360px;">เรื่อง รับรองการมีสิทธิรับเงินช่วยเหลือค่ารักษาพยาบาล</td>
 			</tr>
 		</table>
 		<!--บรรทัดที่ 4-->
-		<table>
+		<table style="margin-bottom:20px">
     		<tr>
-				<td><b>เรียน</b></td>
-				<td><b>ผู้อำนวยการองค์การสวนสัตว์</b></td>
+				<td style="font-size:14px;"><b>เรียน ผู้อำนวยการองค์การสวนสัตว์</b></td>
 			</tr>
 		</table>
 		<!--บรรทัดที่ 5-->
 		<table>
     		<tr>
-				<td>ด้วย</td>
-				<td><?php echo $show['hrctf_name'];?></td>
-				<td><?php echo $show['hrctf_position'];?></td>
-				<td>สังกัด</td>
-				<td><?php echo $show['zoo_name'];?></td>
+				<td style="font-size:14px;padding-left:60px;">ด้วย <?php echo $show['hrctf_name'];?> <?php echo $show['hrctf_position'];?> สังกัด <?php echo $show['zoo_name'];?></td>
 			</tr>
 		</table>
 		<!--บรรทัดที่ 6-->
 		<table>
     		<tr>
-				<td>มีความประสงค์ขอหนังสือรับรองการมีสิทธิรับเงินช่วยเหลือค่ารักษาพยาบาลซึ่ง</td>
-				<td><?php echo $show['hrctf_familyname'];?></td>
-			</tr>
+				<td style="font-size:14px;">มีความประสงค์ขอหนังสือรับรองการมีสิทธิรับเงินช่วยเหลือค่ารักษาพยาบาลซึ่ง 
+				<?php echo $show['hrctf_familyname'];?> 
+				<!-- ใส่โค๊ต บิดา บุตร มารดา-->
+				</tr>
 		</table>
-		<!--บรรทัดที่ 7-->
+		<!--บรรทัดที่ 6-->
 		<table>
     		<tr>
-				<td><!--ใส่โค๊ตตรงนี้ TYPE (กุงง)--></td>
-				<td><!--ใส่โค๊ตตรงนี้ ชื่อ (กุงง)--></td>
-				<td>จะเข้ารับการรักษาพยาบาลที่</td>
-				<td><?php echo $show['hrctf_hosname'];?></td>
-				<td>ในวันที่</td>
-				<td><?php echo $show['hrctf_datestarthos'];?></td>
-				<td>นั้น</td>
+				<td style="font-size:14px;"><?php echo $show['hrctf_name'];?>
+				จะเข้ารับการรักษาพยาบาลที่ 
+				<?php echo $show['hrctf_hosname'];?> 
+				ในวันที่ <?php echo $show['hrctf_datestarthos'];?> นั้น</td>
 			</tr>
 		</table>
 		<!--บรรทัดที่ 8-->
 		<table>
     		<tr>
-				<td>สำนักบริหารทรัพยากรบุคคล ได้จัดทำหนังสือรับรองการมีสิทธิรับเงินช่วยเหลือค่ารักษาพยาบาลบิดาของ </td>
-				<td><!--ใส่โค๊ตตรงนี้ ชื่อ--></td>
-				<td>เรียบร้อยแล้ว</td>
+				<td style="font-size:14px;padding-left:60px;">สำนักบริหารทรัพยากรบุคคล ได้จัดทำหนังสือรับรองการมีสิทธิรับเงินช่วยเหลือค่ารักษาพยาบาล
+				<!-- ใส่โค๊ต บิดา บุตร มารดา--></td>
+			</tr>
+		</table>
+		<!--บรรทัดที่ 8-->
+		<table>
+    		<tr>
+				<td style="font-size:14px;">
+				<?php echo $show['hrctf_name'];?> เรียบร้อยแล้ว</td>
 			</tr>
 		</table>
 		<!--บรรทัดที่ 9-->
-		<table>
+		<table style="margin-bottom:100px">
     		<tr>
-				<td>จึงเรียนมาเพื่อโปรดพิจารณา หากเห็นชอบเพื่อโปรดลงนามในหนังสือรับรองที่แนบมาพร้อมนี้</td>
+				<td style="font-size:14px;padding-left:60px;">จึงเรียนมาเพื่อโปรดพิจารณา หากเห็นชอบเพื่อโปรดลงนามในหนังสือรับรองที่แนบมาพร้อมนี้</td>
 			</tr>
 		</table>
 		<!--บรรทัดที่ 10-->
 		<table>
     		<tr>
-				<td>(</td>
-				<td><!--ใส่โค๊ตตรงนี้ ชื่อผอ.HR--></td>
-				<td>)</td>
+				<td style="font-size:14px;padding-left:350px;">(</td>
+				<td style="font-size:14px;">.............................................</td>
+				<td style="font-size:14px;">)</td>
 			</tr>
 		</table>
 		<!--บรรทัดที่ 13-->
 		<table>
     		<tr>
-				<td><!--ใส่โค๊ตตรงนี้ ตำแหน่ง ผอ.HR--></td>
+				<td style="font-size:14px;padding-left:330px;">ผู้อำนวยการสำนักบริหารทรัพยากรบุคคล</td>
 			</tr>
 		</table>
     </body>

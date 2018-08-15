@@ -16,7 +16,7 @@
     $lbhosname = new label('รับการรักษาจากโรงพยาบาล');
     $lbdatestarthos = new label('วันที่เริ่มเข้ารับการรักษา');
     $lbrecipient = new label('เรียน');
-    $lbCause = new label('สาเหตุที่ไม่อนุมัติ/ยกเลิก :');
+    $lbCause = new label('สาเหตุที่ไม่อนุมัติ/ยกเลิก');
     $lbwhofu = new label('ค้ำประกันการเข้าทำงาน ของ');
     $lbwhoname = new label('ซึ่งเกี่ยวข้องกับข้าพเจ้าโดยเป็น');
     $lbmoneyroom = new label('ค่าห้องรวมค่าอาหารเบิกวันละไม่เกิน');
@@ -253,41 +253,73 @@ echo $form->open("form_reg","form","col-xl-12 col-lg-12 col-md-12 col-sm-12 col-
         			?>
 				<div class='col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6'>
 					<div class='row'>
-						<div class='col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2'></div>
-						<div class='col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8'>
-							<a href="hrs_hospital_report_BT.php?id=<?php echo $_GET['id']; ?>" class="btn btn-warning col-12"><span data-feather="file-text"></span>บันทึกข้อความ</a>
+						<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3'>
+							<div class='row'>
+								<div class='col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2'></div>
+								<div class='col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4' style="padding-top: 10px;padding-right:8px;">
+									<p>บันทึกข้อความ ></p>
+								</div>
+								<div class='col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2'>
+									<div class='row'>
+										<a href="hrs_hospital_report_BT.php?id=<?php echo $_GET['id']; ?>" class='col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8 btn btn-primary' style="border-radius:50%;height:40px;padding-top: 8px;"><span data-feather="file-text"></span></a>
+										<div class='col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4'></div>
+									</div>
+								</div>
+								<div class='col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4'></div>
+							</div>
 						</div>
-						<div class='col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2'></div>
-					</div>
-				</div>
-				<div class='col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6'>
-					<div class='row'>
-						<div class='col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2'></div>
-						<div class='col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8'>
-							<a href="hrs_hospital_report.php?id=<?php echo $_GET['id']; ?>" class="btn btn-warning col-12"><span data-feather="file-text"></span>หนังสือส่งออก</a>
+						<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3'>
+							<div class='row'>
+								<div class='col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2'></div>
+								<div class='col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4' style="padding-top: 10px;padding-right:8px;">
+									<p>หนังสือส่งออก ></p>
+								</div>
+								<div class='col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2'>
+									<div class='row'>
+										<a href="hrs_hospital_report.php?id=<?php echo $_GET['id']; ?>" class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8 btn btn-primary" style="border-radius:50%;height:40px;padding-top: 8px;"><span data-feather="file-text"></span></a>
+										<div class='col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4'></div>
+									</div>
+								</div>
+								<div class='col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4'></div>
+							</div>
 						</div>
-						<div class='col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2'></div>
 					</div>
-				</div>
+				</div>	
 				<?php
 				}else{
                 ?>
                 <div class='col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6'>
 					<div class='row'>
-						<div class='col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2'></div>
-						<div class='col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8'>
-							<a href="hrs_certificate_report_BT.php?id=<?php echo $_GET['id']; ?>" class="btn btn-warning col-12"><span data-feather="file-text"></span>บันทึกข้อความ</a>
+						<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3'>
+							<div class='row'>
+								<div class='col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2'></div>
+								<div class='col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4' style="padding-top: 10px;padding-right:8px;">
+									<p>บันทึกข้อความ ></p>
+								</div>
+								<div class='col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2'>
+									<div class='row'>
+										<a href="hrs_certificate_report_BT.php?id=<?php echo $_GET['id']; ?>" class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8 btn btn-primary" style="border-radius:50%;height:40px;padding-top: 8px;"><span data-feather="file-text"></span></a>
+										<div class='col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4'></div>
+									</div>
+								</div>
+								<div class='col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4'></div>
+							</div>
 						</div>
-						<div class='col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2'></div>
-					</div>
-				</div>
-				<div class='col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6'>
-					<div class='row'>
-						<div class='col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2'></div>
-						<div class='col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8'>
-							<a href="hrs_certificate_report.php?id=<?php echo $_GET['id']; ?>" class="btn btn-warning col-12"><span data-feather="file-text"></span>หนังสือส่งออก</a>
+						<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3'>
+							<div class='row'>
+								<div class='col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2'></div>
+								<div class='col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4' style="padding-top: 10px;padding-right:8px;">
+									<p>หนังสือส่งออก ></p>
+								</div>
+								<div class='col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2'>
+									<div class='row'>
+										<a href="hrs_certificate_report.php?id=<?php echo $_GET['id']; ?>" class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8 btn btn-primary" style="border-radius:50%;height:40px;padding-top: 8px;"><span data-feather="file-text"></span></a>
+										<div class='col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4'></div>
+									</div>
+								</div>
+								<div class='col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4'></div>
+							</div>
 						</div>
-						<div class='col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2'></div>
 					</div>
 				</div>
                 <?php
@@ -295,39 +327,46 @@ echo $form->open("form_reg","form","col-xl-12 col-lg-12 col-md-12 col-sm-12 col-
 				?>
     			<div class='col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6'>
     				<div class='row'>
-    					<div class='col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2'></div>
-						<div class='col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8'>
-    						<div class="btn-group col-12" data-toggle="buttons">
-											<label class="btn btn-success active col-6">
-												<input class="statusconfirm" type="radio" name="hrctf_status" value="Y" onchange="swapConfig(this)" id="complete" autocomplete="off" checked> อนุมัติ
-											</label>
-											<label class="btn btn-warning col-6">
-												<input class="statusconfirm" type="radio" name="hrctf_status" value="N" onchange="swapConfig(this)" id="nocomplete" autocomplete="off"> ยกเลิก / ไม่อนุมัติ
-											</label>
-										</div>
-											</div>
-											<div class='col-md-12 mt-3 editcomment'>
-											<div class='row'>
-												<div class="col-md-12">
-													<div class="row">
-														<div class="col-md-4 statustextleft">
-														<?php
-															echo $lbCause;
-															?>
-														</div>
-														<div class="col-md-8 statustext">
-															<?php
-															echo $txtcause;
-														?>
-														</div>
-													</div>
+						<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3'>
+							<div class='row'>
+								<div class='col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2'></div>
+								<div class='col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8'>
+									<div class='row'>
+									<div class="btn-group col-12" data-toggle="buttons">
+										<label class="btn btn-success active col-4">
+											<input class="statusconfirm" type="radio" name="hrctf_status" value="Y" onchange="swapConfig(this)" id="complete" autocomplete="off" checked> อนุมัติ
+										</label>
+										<label class="btn btn-danger col-8">
+											<input class="statusconfirm" type="radio" name="hrctf_status" value="N" onchange="swapConfig(this)" id="nocomplete" autocomplete="off"> ยกเลิก / ไม่อนุมัติ
+										</label>
+									</div>
+									</div>
+									<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 editcomment'>
+										<div class='row'>
+											<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3'>
+												<div class='row'>
+													<?php echo $lbCause; ?>
 												</div>
 											</div>
+											<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 statustext">
+												<?php echo $txtcause; ?>
+											</div>
 										</div>
-    						<?php echo "<input type='hidden' name='hrctf_id' value='$_GET[id]'/>";
-							      echo $button ?>
+									</div>
+								</div>
+								<div class='col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2'></div>
+							</div>
 						</div>
-						<div class='col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2'></div>
+						<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12' style="margin-top: 1.9rem;">
+							<div class='row'>
+								<div class='col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2'></div>
+								<div class='col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8'>
+									<?php echo "<input type='hidden' name='hrctf_id' value='$_GET[id]'/>";
+										  echo $button ?>
+								</div>
+								<div class='col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2'></div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
