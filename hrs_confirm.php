@@ -245,42 +245,46 @@ echo $form->open("form_reg","form","col-xl-12 col-lg-12 col-md-12 col-sm-12 col-
 			</div>
 		</div>
         <?php } ?>
-		<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12'>
-			<div class='row'>
-				<div class='col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4 hrsstpad'><center><label>พิมพ์</label></center></div>
-				<div class='col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8 hrsstpad'></div>
-			</div>
-		</div>
 		<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12' style="border-bottom: solid 1px #eaecef;padding-bottom:16px;">
 			<div class='row'>
     			<?php
     			if($r['typectf_typectf_id']==6){
         			?>
-				<div class='col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6'>
+				<div class='col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6 mt-3'>
 					<div class='row'>
 						<div class='col-xl-5 col-lg-5 col-md-5 col-sm-5 col-5'></div>
 						<div class='col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3'>
 							<div class='row'>
-								<a href="hrs_hospital_report_BT.php?id=<?php echo $_GET['id']; ?>" class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 btn btn-primary" 
-								style="border-radius:50%;height:90px;padding-top:16px;padding-right:0px;padding-left:0px;">
-								<span data-feather="file-text"></span>
-								<p>บันทึกข้อความ</p>
+								<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12' style="text-align:center;">
+									พิมพ์
+								</div>
+								<a href="hrs_hospital_report_BT.php?id=<?php echo $_GET['id']; ?>" class="btn btn-primary rounded-circle" 
+								style="margin-left:8px;">
+								<img width="30" height="40" style="margin:10px;" src='images/icons/glyphicons-40-notes@2x.png'/>
 								</a>
+								<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12' style="padding-left:6px;padding-right:0px;">
+									บันทึกข้อความ
+								</div>
 							</div>
 						</div>
 						<div class='col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4'></div>
 					</div>
 				</div>
-				<div class='col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6'>
+				<div class='col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6 mt-3'>
 					<div class='row'>
 						<div class='col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4'></div>
 						<div class='col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3'>
 							<div class='row'>
-								<a href="hrs_hospital_report.php?id=<?php echo $_GET['id']; ?>" class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 btn btn-primary" 
-								style="border-radius:50%;height:90px;padding-top:16px;padding-right:0px;padding-left:0px;">
-								<span data-feather="file-text"></span>
-								<p>หนังสือส่งออก</p>
+								<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12' style="text-align:center;">
+									พิมพ์
+								</div>
+								<a href="hrs_hospital_report.php?id=<?php echo $_GET['id']; ?>" class="btn btn-primary rounded-circle" 
+								style="margin-left:8px;">
+								<img width="30" height="40" style="margin:10px;" src='images/icons/glyphicons-40-notes@2x.png'/>
 								</a>
+								<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12' style="padding-left:4px;padding-right:0px;">
+									หนังสือส่งออก
+								</div>
 							</div>
 						</div>
 						<div class='col-xl-5 col-lg-5 col-md-5 col-sm-5 col-5'></div>
@@ -291,31 +295,41 @@ echo $form->open("form_reg","form","col-xl-12 col-lg-12 col-md-12 col-sm-12 col-
 				<?php
 				}else{
                 ?>
-                <div class='col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6'>
+                <div class='col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6 mt-3'>
 					<div class='row'>
 						<div class='col-xl-5 col-lg-5 col-md-5 col-sm-5 col-5'></div>
 						<div class='col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3'>
 							<div class='row'>
-								<a href="hrs_certificate_report_BT.php?id=<?php echo $_GET['id']; ?>" class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 btn btn-primary" 
-								style="border-radius:50%;height:90px;padding-top:16px;padding-right:0px;padding-left:0px;">
-								<span data-feather="file-text"></span>
-								<p>บันทึกข้อความ</p>
+								<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12' style="text-align:center;">
+									พิมพ์
+								</div>
+								<a href="hrs_certificate_report_BT.php?id=<?php echo $_GET['id']; ?>" class="btn btn-primary rounded-circle" 
+								style="margin-left:8px;">
+								<img width="30" height="40" style="margin:10px;" src='images/icons/glyphicons-40-notes@2x.png'/>
 								</a>
+								<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12' style="padding-left:6px;padding-right:0px;">
+									บันทึกข้อความ
+								</div>
 							</div>
 						</div>
 						<div class='col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4'></div>
 					</div>
 				</div>
-				<div class='col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6'>
+				<div class='col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6 mt-3'>
 					<div class='row'>
 						<div class='col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4'></div>
 						<div class='col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3'>
 							<div class='row'>
-								<a href="hrs_certificate_report.php?id=<?php echo $_GET['id']; ?>" class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 btn btn-primary" 
-								style="border-radius:50%;height:90px;padding-top:16px;padding-right:0px;padding-left:0px;">
-								<span data-feather="file-text"></span>
-								<p>หนังสือส่งออก</p>
+								<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12' style="text-align:center;">
+									พิมพ์
+								</div>
+								<a href="hrs_certificate_report.php?id=<?php echo $_GET['id']; ?>" class="btn btn-primary rounded-circle" 
+								style="margin-left:8px;">
+								<img width="30" height="40" style="margin:10px;" src='images/icons/glyphicons-40-notes@2x.png'/>
 								</a>
+								<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12' style="padding-left:6px;padding-right:0px;">
+									บันทึกข้อความ
+								</div>
 							</div>
 						</div>
 						<div class='col-xl-5 col-lg-5 col-md-5 col-sm-5 col-5'></div>
