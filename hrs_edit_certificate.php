@@ -38,7 +38,7 @@
     $radiomoneyroom = new radioGroup();
  	$radiomoneyroom->name = 'hrctf_moneyroom';
     $radiofamilytype = new radioGroup();
-    $radiofamilytype->name = 'hrctf_typefamily';
+    $radiofamilytype->name = 'hrctf_familytype';
     $button = new buttonok("แก้ไขข้อมูล","","btn btn-success btn-lg btn-block bt3success col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","");
     if(!empty($_GET['id'])){
 		$id = $_GET['id'];

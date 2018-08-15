@@ -4,11 +4,8 @@
 	include 'connect.php';
 
 	if(!empty($_POST['hrctf_id'])){
-		$data['hrctf_dateupdate'] = $_POST['hrctf_dateupdate'];
-        $data['hrctf_recipient'] = $_POST['hrctf_recipient'];
-        $data['hrctf_moneyroom'] = $_POST['hrctf_moneyroom'];
         $data['hrctf_status'] = $_POST['hrctf_status'];
-// 		$data['zoo_zoo_id'] = $_POST['zoo_zoo_id'];
+ 		$data['hrctf_comment'] = $_POST['hrctf_comment'];
 
 		$rsfix = $db->update('hrctf',$data,'hrctf_id',$_POST['hrctf_id']);
 	
