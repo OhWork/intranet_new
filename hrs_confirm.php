@@ -16,14 +16,16 @@
     $lbhosname = new label('รับการรักษาจากโรงพยาบาล');
     $lbdatestarthos = new label('วันที่เริ่มเข้ารับการรักษา');
     $lbrecipient = new label('เรียน');
+    $lbCause = new label('สาเหตุที่ไม่อนุมัติ/ยกเลิก :');
     $lbwhofu = new label('ค้ำประกันการเข้าทำงาน ของ');
     $lbwhoname = new label('ซึ่งเกี่ยวข้องกับข้าพเจ้าโดยเป็น');
     $lbmoneyroom = new label('ค่าห้องรวมค่าอาหารเบิกวันละไม่เกิน');
+    $txtcause = new textAreaCf(5,5,'hrctf_comment','form-control','comment','');
     $txtrecipient = new textfield('hrctf_recipient','','form-control css-require','','');
     $txtwhofu = new textfield('hrctf_whofu','','form-control css-require','','');
     $txtwhoname = new textfield('hrctf_whoname','','form-control css-require','','');
     $button = new buttonok('ยืนยัน','','btn btn-success col-12','');
-    	
+
 	$strDate = $r['hrctf_datestartwork'];
 
 
@@ -118,7 +120,7 @@ echo $form->open("form_reg","form","col-xl-12 col-lg-12 col-md-12 col-sm-12 col-
 					<center><?php echo $lbwhofu ?></center>
 				</div>
 				<div class='col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8 hrsstpad'>
-				<center><label><?php 
+				<center><label><?php
     						if($r['hrctf_whofu']){
     						        echo $r['hrctf_whofu'];
     						       }else{
@@ -133,7 +135,7 @@ echo $form->open("form_reg","form","col-xl-12 col-lg-12 col-md-12 col-sm-12 col-
 					<center><?php echo $lbwhoname ?></center>
 				</div>
 				<div class='col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8 hrsstpad'>
-				<center><label><?php 
+				<center><label><?php
     						if($r['hrctf_whoname']){
     						        echo $r['hrctf_whoname'];
     						       }else{
@@ -150,7 +152,7 @@ echo $form->open("form_reg","form","col-xl-12 col-lg-12 col-md-12 col-sm-12 col-
 				</div>
 				<div class='col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8 hrsstpad'>
 				<center><label>
-				<?php 
+				<?php
     				echo $r['hrctf_familytype'];
     				if($r['hrctf_familytype'] == 1){
 						echo "ข้าพเจ้าชื่อ".$r['hrctf_name'];
@@ -197,9 +199,9 @@ echo $form->open("form_reg","form","col-xl-12 col-lg-12 col-md-12 col-sm-12 col-
 				</div>
 				<div class='col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8 hrsstpad'>
 				<center><label>
-					<?php 
+					<?php
     						$strDate = $r['hrctf_datestarthos'];
-    						echo DateThai($strDate); 
+    						echo DateThai($strDate);
 					?>
 				</label></center>
 				</div>
@@ -235,7 +237,7 @@ echo $form->open("form_reg","form","col-xl-12 col-lg-12 col-md-12 col-sm-12 col-
 				</div>
 				<div class='col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8 hrsstpad'>
 				<center><label>
-				<?php 
+				<?php
                     $strDate = $r['hrctf_datestartwork'];
     				echo DateThai($strDate); ?>
 				</label></center>
@@ -243,7 +245,7 @@ echo $form->open("form_reg","form","col-xl-12 col-lg-12 col-md-12 col-sm-12 col-
 			</div>
 		</div>
         <?php } ?>
-		
+
 		<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3'>
 			<div class='row'>
     			<?php
@@ -297,13 +299,32 @@ echo $form->open("form_reg","form","col-xl-12 col-lg-12 col-md-12 col-sm-12 col-
 						<div class='col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8'>
     						<div class="btn-group col-12" data-toggle="buttons">
 											<label class="btn btn-success active col-6">
-												<input type="radio" name="hrctf_status" value="Y" onchange="swapConfig(this)" id="complete" autocomplete="off" checked> อนุมัติ
+												<input class="statusconfirm" type="radio" name="hrctf_status" value="Y" onchange="swapConfig(this)" id="complete" autocomplete="off" checked> อนุมัติ
 											</label>
 											<label class="btn btn-warning col-6">
-												<input type="radio" name="hrctf_status" value="N" onchange="swapConfig(this)" id="nocomplete" autocomplete="off"> ยกเลิก / ไม่อนุมัติ
+												<input class="statusconfirm" type="radio" name="hrctf_status" value="N" onchange="swapConfig(this)" id="nocomplete" autocomplete="off"> ยกเลิก / ไม่อนุมัติ
 											</label>
 										</div>
-    						<?php echo "<input type='hidden' name='hrctf_id' value='$_GET[id]'/>"; 
+											</div>
+											<div class='col-md-12 mt-3 editcomment'>
+											<div class='row'>
+												<div class="col-md-12">
+													<div class="row">
+														<div class="col-md-4 statustextleft">
+														<?php
+															echo $lbCause;
+															?>
+														</div>
+														<div class="col-md-8 statustext">
+															<?php
+															echo $txtcause;
+														?>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+    						<?php echo "<input type='hidden' name='hrctf_id' value='$_GET[id]'/>";
 							      echo $button ?>
 						</div>
 						<div class='col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2'></div>
@@ -324,6 +345,21 @@ echo $form->open("form_reg","form","col-xl-12 col-lg-12 col-md-12 col-sm-12 col-
     document.getElementById(x.id.concat("Settings")).style.display="initial";
 
   }
+  $(document).ready(function(){
+		$('.editcomment').hide();
+		$('.statusconfirm').on("change",function(e) {
+		var checkstat = $('input[name=hrctf_status]:radio:checked').val();
+			console.log(checkstat);
+			if(checkstat =='N'){
+// 				$('.editcomment').animate({height: 'toggle'});
+				$('.editcomment').show("slow");
+			}
+			else {
+				$('.editcomment').hide("slow");
+
+			}
+		});
+	});
 </script>
 <?php
      echo $form->close();

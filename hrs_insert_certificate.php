@@ -3,6 +3,7 @@
     include 'database/db_tools.php';
 	include 'connect.php';
 
+
 	if(!empty($_POST['hrctf_id'])){
 		$data['hrctf_name'] = $_POST['hrctf_name'];
 		$data['hrctf_position'] = $_POST['hrctf_position'];
@@ -19,7 +20,7 @@
 		$data['zoo_zoo_id'] = $_POST['zoo_zoo_id'];
 
 		$rsfix = $db->update('hrctf',$data,'hrctf_id',$_POST['hrctf_id']);
-	
+
 	}else{
         	$rs = $db->insert('hrctf',array(
         	'hrctf_name' => $_POST['hrctf_name'],
@@ -31,7 +32,7 @@
         	'hrctf_familytype' => $_POST['hrctf_familytype'],
         	'hrctf_familyname' => $_POST['hrctf_familyname'],
         	'hrctf_hosname' => $_POST['hrctf_hosname'],
-        	'hrctf_moneyroom' => $_POST['hrctf_moneyroom'],
+//         	'hrctf_moneyroom' => $_POST['hrctf_moneyroom'],
         	'hrctf_hosprovince' => $_POST['hrctf_hosprovince'],
         	'hrctf_educationname' => $_POST['hrctf_educationname'],
         	'hrctf_salary' => $_POST['hrctf_salary'],
@@ -52,7 +53,7 @@
             echo "<div class='statusok'>แก้ไขสำเร็จ</div>";
             $link = "admin_index.php?url=hrs_status.php&id=".$_POST['hrctf_id'];
         }
-            
+
             header( "Refresh: 2; $link" );
 }else{
             echo "error";

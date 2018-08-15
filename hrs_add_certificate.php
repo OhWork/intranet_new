@@ -305,13 +305,7 @@
 				$('input[name=hrctf_familytype]').on("change",function(e) {
 				var valchange = $(this).val();
 				if(valchange == 1){
-/*
-				$('#me').attr("disabled", false);
-				$('#family').attr("disabled", true);
-				$('#father').attr("disabled", true);
-				$('#mather').attr("disabled", true);
-				$('#child').attr("disabled", true);
-*/
+				$('[id=hrctf_familyname_id]').slice(0).prop("disabled", true);
 			}
 			else if(valchange == 2) {
 				$('[id=hrctf_familyname_id]').slice(0,1).prop("disabled", false);
