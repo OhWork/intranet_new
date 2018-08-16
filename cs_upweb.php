@@ -98,6 +98,7 @@
 		}
 	</script>
 	<script language="javascript">
+/*
 		$(document).ready(function() {
 		var i = 1 ;
 		$('#btnButton').on('click',function(){
@@ -109,6 +110,7 @@
 			}
 		});
 	});
+*/
 	function fncCreateElement(){
 
 	   var mySpan = document.getElementById('mySpan');
@@ -168,7 +170,17 @@
 					<?php echo $lbsystem ?>
 				</div>
 				<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 form-group has-feedback'>
-					<?php echo $txtname ?>
+					<select class='form-control' id="ddlZoo" name="subzoo_zoo_zoo_id" onchange = "ListSubzoo(this.value)">
+						<option selected value="">โปรดระบุ</option>
+							<? $rs = $db->findAll('typeWorkupweb')->execute();
+								while($objResult = mysqli_fetch_array($rs,MYSQLI_ASSOC))
+								{
+								?>
+									<option value="<?=$objResult["typeWorkupweb_id"];?>"><?=$objResult["typeWorkupweb_name"];?></option>
+								<?
+								}
+								?>
+					</select>
 				</div>
 				<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12'>
 					<?php echo $lbdetail ?>
@@ -182,12 +194,14 @@
 							<?php echo $lbfile ?>
 						</div>
 						<div class='col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8' style="padding-top: 5px;">
-							<input type="file" name="filUpload[]">
+							<input type="file" name="filUpload">
 							<span id="mySpan"></span>
 						</div>
+<!--
 						<div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3" id="add">
 							<input class="btn btn-primary col-12" name="btnButton" id="btnButton" type="button" value="เพิ่ม" onClick="JavaScript:fncCreateElement();">
 						</div>
+-->
 					</div>
 				</div>
 				<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3' style="margin-bottom:16px;">
