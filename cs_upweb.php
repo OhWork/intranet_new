@@ -170,7 +170,17 @@
 					<?php echo $lbsystem ?>
 				</div>
 				<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 form-group has-feedback'>
-					<?php echo $txtname ?>
+					<select class='form-control' id="ddlZoo" name="subzoo_zoo_zoo_id" onchange = "ListSubzoo(this.value)">
+						<option selected value="">โปรดระบุ</option>
+							<? $rs = $db->findAll('typeWorkupweb')->execute();
+								while($objResult = mysqli_fetch_array($rs,MYSQLI_ASSOC))
+								{
+								?>
+									<option value="<?=$objResult["typeWorkupweb_id"];?>"><?=$objResult["typeWorkupweb_name"];?></option>
+								<?
+								}
+								?>
+					</select>
 				</div>
 				<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12'>
 					<?php echo $lbdetail ?>
