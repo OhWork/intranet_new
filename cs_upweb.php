@@ -8,6 +8,10 @@
     $lbdetail = new label('รายละเอียด');
     $lbsystem = new label('ระบบงาน');
     $lbfile = new label('ไฟล์');
+    $lbemail = new label('อีเมลที่ติดต่อกลับ');
+    $lbtel = new label('เบอร์โทรศัพท์ติดต่อ');
+    $txttel = new textfield('upweb_tel','','form-control','','');
+    $txtemail = new textfield('upweb_email','','form-control','','');
     $txtname = new textfield('upweb_name','','form-control','','');
     $txtwork = new textfield('upweb_work','','form-control','','');
     $txtposition = new textfield('upweb_position','','form-control','','');
@@ -154,10 +158,10 @@
 				<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 form-group has-feedback'>
 					<select class='form-control css-require' id="ddlSubzoo" name="subzoo_subzoo_id"></select>
 				</div>
-				<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12'>
+				<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 work'>
 					<?php echo $lbwork ?>
 				</div>
-				<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 form-group has-feedback'>
+				<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 form-group has-feedback work'>
 					<?php echo $txtwork ?>
 				</div>
 				<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12'>
@@ -170,7 +174,7 @@
 					<?php echo $lbsystem ?>
 				</div>
 				<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 form-group has-feedback'>
-					<select class='form-control' id="ddlZoo" name="subzoo_zoo_zoo_id" onchange = "ListSubzoo(this.value)">
+					<select class='form-control' name="type_upweb">
 						<option selected value="">โปรดระบุ</option>
 							<? $rs = $db->findAll('typeWorkupweb')->execute();
 								while($objResult = mysqli_fetch_array($rs,MYSQLI_ASSOC))
@@ -204,6 +208,18 @@
 -->
 					</div>
 				</div>
+				<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12'>
+					<?php echo $lbtel ?>
+				</div>
+				<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 form-group has-feedback'>
+					<?php echo $txttel ?>
+				</div>
+				<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12'>
+					<?php echo $lbemail ?>
+				</div>
+				<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 form-group has-feedback'>
+					<?php echo $txtemail ?>
+				</div>
 				<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3' style="margin-bottom:16px;">
 					<div class="row">
 						<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4"></div>
@@ -217,5 +233,19 @@
 		</div>
 		<div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3"></div>
 	</div>
+	<input type='hidden' id='status_online' name='upweb_status' value="W">
 </div>
 <?php $form->close(); ?>
+<script>
+	$('.work').hide();
+$('#ddlZoo').on("change",function(e) {
+	var check =  $("#ddlZoo>option:selected").html();
+// 	console.log(check.match("สวนสัตว์"));
+	if(check.match("สวนสัตว์")){
+		$('.work').show("slow");
+		}
+	else {
+		$('.work').hide("slow");
+	}
+	});
+</script>

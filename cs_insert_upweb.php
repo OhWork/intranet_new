@@ -55,13 +55,16 @@
 	'upweb_date' => date("Y-m-d"),
 	'upweb_detail' => $_POST['upweb_detail'],
 	'upweb_uploadfile' => $img_new_name,
-/*
+	'upweb_email' => $_POST['upweb_email'],
+	'upweb_tel' => $_POST['upweb_tel'],
+	'upweb_status' => $_POST['upweb_status'],
 	'subzoo_subzoo_id' => $_POST['subzoo_subzoo_id'],
-	'subzoo_zoo_zoo_id' => $_POST['subzoo_zoo_zoo_id']
-*/
+	'subzoo_zoo_zoo_id' => $_POST['subzoo_zoo_zoo_id'],
+	'typeWorkupweb_typeWorkupweb_id' => $_POST['type_upweb']
 	));
 
 	}
+
 
 
 	if($rs || $rsfix){
@@ -81,6 +84,7 @@
             }
             header( "Refresh: 1; $link" );
 }
+
 ?>
 </html>
 <?php

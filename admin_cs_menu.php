@@ -111,6 +111,7 @@
 										<?php }?>
 				         </ul>
 				        </ul>
+				        <a class="nav-link collapsed py-1" href="admin_index.php?url=cs_showupweb.php"><span data-feather="settings"></span>รายการขอคำร้องขึ้นเว็บไซต์</a>
 		               <a class="nav-link collapsed py-1" href="#cssetting" data-toggle="collapse" data-target="#cssetting"><span data-feather="settings"></span>ตั้งค่า</a>
 		               <ul class="sub-menu collapse" id="cssetting">
 				          <a class="nav-link" href="#"><span data-feather="chevron-right"></span>จัดการชนิดอุปกรณ์</a>
