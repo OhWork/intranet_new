@@ -117,42 +117,12 @@
         case 11: $monthtxt = "พฤศจิกายน"; break;
         case 12: $monthtxt = "ธันวาคม"; break;
     }
-    switch($conferrenname){
-        case 1: $confertxt = "ห้องประชุมองค์การสวนสัตว์ ๑"; break;
-        case 2: $confertxt = "ห้องประชุมองค์การสวนสัตว์ ๒"; break;
-        case 3: $confertxt = "ห้องประชุมองค์การสวนสัตว์ ๓"; break;
-        case 4: $confertxt = "ห้องประชุมเก้งเผือก"; break;
-        case 5: $confertxt = "ห้องประชุมกวางดาว"; break;
-        case 6: $confertxt = "ห้องประชุมมะลิ"; break;
-        case 7: $confertxt = "ห้องประชุมสักทอง"; break;
-        case 8: $confertxt = "ห้องประชุมฝ่ายบริหาร"; break;
-        case 9: $confertxt = "ห้องประชุมโรงบาลสัตว์"; break;
-        case 10: $confertxt = "ห้องประชุมฝ่ายบริหารงานทั่วไป"; break;
-        case 11: $confertxt = "ห้องประชุมนกเงือก"; break;
-        case 12: $confertxt = "ห้องประชุมอาคารสำนักงาน"; break;
-    }
-    $rs = $db->findByPK45LimitBETWEENASC('eventconfer','headncf','conferroom','zoo',
-    'eventconfer.confer_confer_id','conferroom.confer_id',
-    'eventconfer.subzoo_zoo_zoo_id','zoo.zoo_id',
-    'eventconfer.headncf_headncf_id','headncf.headncf_id',
-    'eventconfer_status',"'Y'",
-    'eventconfer_start',$qua,
-    'eventconfer_start')->execute();
 
-    $total = $db->countTableBETWEEN45('eventconfer','headncf','conferroom','zoo',
-    'eventconfer.confer_confer_id','conferroom.confer_id',
-    'eventconfer.subzoo_zoo_zoo_id','zoo.zoo_id',
-    'eventconfer.headncf_headncf_id','headncf.headncf_id',
-    'eventconfer_status',"'Y'",
-    'eventconfer_start',$qua)->executeRowcount();
-
-    $countjoin = $db->specifytable('*,
-    SUM(eventconfer_join) AS joinconfer'
-    ,'eventconfer,zoo,headncf,conferroom',"eventconfer.confer_confer_id = conferroom.confer_id AND
-                                           eventconfer.subzoo_zoo_zoo_id = zoo.zoo_id AND
-                                           eventconfer.headncf_headncf_id = headncf.headncf_id AND
-                                           eventconfer_status = 'Y' AND
-                                           eventconfer_start $qua")->executeAssoc();
+//     $rs = $db->findByPK2("hrctf","typectf",'typectf_typectf_id','typectf_id')->execute();
+     $rs = $db->specifytable('typectf_name,
+                                count(typectf_typectf_id) AS ctf',
+                                        'hrctf,typectf',"hrctf.typectf_typectf_id = typectf.typectf_id AND hrctf_status = 'Y' AND hrctf_datereg $qua GROUP BY typectf_typectf_id")->execute();
+     $total = $db->countTableBETWEEN('hrctf','hrctf_status',"'Y'",'hrctf_datereg',$qua)->executeRowcount()
  ?>
 <div class='col-md-12'>
 	<div class='row'>
@@ -160,7 +130,7 @@
 			<Center><img src='images/Logo/zpo.png'></center>
 		</div>
 		<div class='col-md-12 test'>
-			<center>รายงานการใช้บริการห้องประชุม</center>
+			<center>รายงานการขอใบรับรอง</center>
 		</div>
 		<div class='col-md-12' style="float:left;">
 			<center>
@@ -180,23 +150,18 @@
         <div class='col-md-12'>
 			<div class='row'>
 				<div class='col-md-12'>
-					<p><b><u>สรุป</u></b> จำนวนการขอใช้ห้องประชุมทั้งหมด <?php echo $total;?> ครั้ง</p>
-					<p> จำนวนผู้เข้าใช้ทั้งหมด <?php echo $countjoin['joinconfer'];?> คน</p>
+					<p><b><u>สรุป</u></b> จำนวนการขอใบรับรอง <?php echo $total;?> ครั้ง</p>
 				</div>
 				<div class='col-md-12 page' style="float:left;">
 					<?php
-					$columns = array('eventconfer_start','eventconfer_end','headncf_name','eventconfer_story','eventconfer_join','zoo_name','confer_name');
+					$columns = array('typectf_name','ctf');
 					$grid = new gridView();
-					$grid->pr = 'eventconfer_id';
-					$grid->header = array('<b><center>วันเริ่มประชุม</center></b>',
-					                      '<b><center>วันเลิกประชุม</center></b>',
-					                      '<b><center>ประเภทเรื่อง</center></b>',
-					                      '<b><center>เรื่อง</center></b>',
-					                      '<b><center>ผู้เข้าร่วมประชุม</center></b>',
-										  '<b><center>สำนัก/สวนสัตว์</center></b>',
-										  '<b><center>ห้องประชุม</center></b>');
+					$grid->pr = 'hrctf_id';
+					$grid->header = array(
+					                      '<b><center>ประเภทใบรับรอง</center></b>',
+					                      '<b><center>จำนวน</center></b>');
 					$grid->name = 'table1';
-					$grid->width = array('15%','15%','20%','10%','25%','25%');
+					$grid->width = array('50%','50%');
 					$grid->renderFromDB($columns,$rs);
 					}
 					?>

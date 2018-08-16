@@ -402,10 +402,6 @@
             $this->sql = "select count(*) from $table where $column1 = $value1 AND $column2 $value2" ;
             return $this;
 		}
-		function countTableBETWEEN12($table,$column1,$value1,$column2,$value2){
-            $this->sql = "select count(*) from $table where $column1 = $value1 AND $column2 $value2" ;
-            return $this;
-		}
 		function countTableBETWEEN13($table,$column1,$value1,$column2,$value2,$column3,$value3){
             $this->sql = "select count(*) from $table where $column1 = $value1 AND $column2 = $value2 AND $column3 $value3" ;
             return $this;
