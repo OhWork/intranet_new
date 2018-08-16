@@ -17,6 +17,7 @@
 
 		$data['problem_name'] = $_POST['problem_name'];
 		$data['problem_position'] = $_POST['problem_position'];
+		$data['problem_work'] = $_POST['problem_work'];
 		$data['problem_ip'] = $_POST['problem_ip'];
 		$data['problem_tel'] = $_POST['problem_tel'];
 		$data['problem_detail'] = $_POST['problem_detail'];
@@ -36,6 +37,7 @@
         	$rs = $db->insert('problem',array(
         	'problem_name' => $_POST['problem_name'],
         	'problem_position' => $_POST['problem_position'],
+        	'problem_work' => $_POST['problem_work'],
         	'problem_ip' => $_POST['problem_ip'],
             'problem_tel' => $_POST['problem_tel'],
         	'problem_status' => $_POST['problem_status'],

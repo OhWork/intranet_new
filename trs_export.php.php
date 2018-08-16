@@ -47,9 +47,9 @@
      break;
 }
     if(!empty($zoo == 2)){
-    $CY = $db->countTableBETWEEN12('problem','problem_status',"'Y'",'problem_date',$qua)->executeRowcount();
-    $CS = $db->countTableBETWEEN12('problem','problem_status',"'S'",'problem_date',$qua)->executeRowcount();
-    $CN = $db->countTableBETWEEN12('problem','problem_status',"'N'",'problem_date',$qua)->executeRowcount();
+    $CY = $db->countTableBETWEEN('problem','problem_status',"'Y'",'problem_date',$qua)->executeRowcount();
+    $CS = $db->countTableBETWEEN('problem','problem_status',"'S'",'problem_date',$qua)->executeRowcount();
+    $CN = $db->countTableBETWEEN('problem','problem_status',"'N'",'problem_date',$qua)->executeRowcount();
     $rs = $db->specifytable("subtypetools.subtypetools_name AS STT,COUNT(problem.subtypetools_subtypetools_id) AS C_A,
 SUM(IF(problem_status = 'N',1,0)) AS C_N,
 SUM(IF(problem_status = 'Y',1,0)) AS C_Y,
