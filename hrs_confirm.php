@@ -325,7 +325,7 @@ echo $form->open("form_reg","form","col-xl-12 col-lg-12 col-md-12 col-sm-12 col-
 								<img width="30" height="40" style="margin:10px;" src='images/icons/glyphicons-40-notes@2x.png'/>
 								</a>
 								<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12' style="padding-left:6px;padding-right:0px;">
-									บันทึกข้อความ
+									หนังสือส่งออก
 								</div>
 							</div>
 						</div>

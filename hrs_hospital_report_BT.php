@@ -58,21 +58,10 @@
 		<!--บรรทัดที่ 5-->
 		<table>
     		<tr>
-				<td style="font-size:14px;padding-left:60px;">ด้วย <?php echo $show['hrctf_name'];?> <?php echo $show['hrctf_position'];?> สังกัด <?php echo $show['zoo_name'];?></td>
-			</tr>
-		</table>
-		<!--บรรทัดที่ 6-->
-		<table>
-    		<tr>
-				<td style="font-size:14px;">มีความประสงค์ขอหนังสือรับรองการมีสิทธิรับเงินช่วยเหลือค่ารักษาพยาบาลซึ่ง 
-				<?php echo $show['hrctf_familyname'];?> 
-				<!-- ใส่โค๊ต บิดา บุตร มารดา-->
-				</tr>
-		</table>
-		<!--บรรทัดที่ 6-->
-		<table>
-    		<tr>
-				<td style="font-size:14px;"><?php echo $show['hrctf_name'];?>
+				<td style="font-size:14px;line-height:24px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ด้วย <?php echo $show['hrctf_name'];?> <?php echo $show['hrctf_position'];?> 
+				สังกัด <?php echo $show['zoo_name'];?>มีความประสงค์ขอหนังสือรับรองการมีสิทธิรับเงินช่วยเหลือค่ารักษาพยาบาลซึ่ง 
+				<?php echo $show['hrctf_familyname'];?>
+				<?php echo $show['hrctf_name'];?>
 				จะเข้ารับการรักษาพยาบาลที่ 
 				<?php echo $show['hrctf_hosname'];?> 
 				ในวันที่ <?php echo $show['hrctf_datestarthos'];?> นั้น</td>
@@ -81,25 +70,19 @@
 		<!--บรรทัดที่ 8-->
 		<table>
     		<tr>
-				<td style="font-size:14px;padding-left:60px;">สำนักบริหารทรัพยากรบุคคล ได้จัดทำหนังสือรับรองการมีสิทธิรับเงินช่วยเหลือค่ารักษาพยาบาล
-				<!-- ใส่โค๊ต บิดา บุตร มารดา--></td>
-			</tr>
-		</table>
-		<!--บรรทัดที่ 8-->
-		<table>
-    		<tr>
-				<td style="font-size:14px;">
+				<td style="font-size:14px;line-height:24px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; สำนักบริหารทรัพยากรบุคคล ได้จัดทำหนังสือรับรองการมีสิทธิรับเงินช่วยเหลือค่ารักษาพยาบาล
+				<!-- ใส่โค๊ต บิดา บุตร มารดา-->
 				<?php echo $show['hrctf_name'];?> เรียบร้อยแล้ว</td>
 			</tr>
 		</table>
 		<!--บรรทัดที่ 9-->
 		<table style="margin-bottom:100px">
     		<tr>
-				<td style="font-size:14px;padding-left:60px;">จึงเรียนมาเพื่อโปรดพิจารณา หากเห็นชอบเพื่อโปรดลงนามในหนังสือรับรองที่แนบมาพร้อมนี้</td>
+				<td style="font-size:14px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  จึงเรียนมาเพื่อโปรดพิจารณา หากเห็นชอบเพื่อโปรดลงนามในหนังสือรับรองที่แนบมาพร้อมนี้</td>
 			</tr>
 		</table>
 		<!--บรรทัดที่ 10-->
-		<table>
+		<table style="margin-bottom:10px">
     		<tr>
 				<td style="font-size:14px;padding-left:350px;">(</td>
 				<td style="font-size:14px;">.............................................</td>

@@ -35,30 +35,25 @@
 		<!--บรรทัดที่ 3-->
 		<table style="margin-bottom:10px;">
     		<tr>
-				<td style="padding-left:60px;font-size:14px;">หนังสือฉบับนี้เพื่อรับรองว่า <?php echo $show['hrctf_name'];?> ปัจจุบันปฏิบัติงานในตำแหน่ง <?php echo thainumDigit($show['hrctf_position']);?></td>
-			</tr>
-			<tr>
-				<td style="font-size:14px;">สังกัด <?php echo $show['zoo_name'];?> องค์การสวนสัตว์ กระทรวงทรัพยาการธรรมชาติและสิ่งแวดล้อม ได้เข้าทำงานเมื่อวันที่
-				</td>
-			</tr>
-			<tr>
-				<td style="font-size:14px;"><?php $datethai = DateThai($show['hrctf_datestartwork']);
-    				                              echo thainumDigit($datethai);
-				?> ปัจจุบันอัตราเงินเดือน <?php    $salary = number_format($show['hrctf_salary']);
+				<td style="font-size:14px;line-height:28px;letter-spacing:nomal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; หนังสือฉบับนี้เพื่อรับรองว่า
+				<?php echo $show['hrctf_name'];?> ปัจจุบันปฏิบัติงานในตำแหน่ง <?php echo thainumDigit($show['hrctf_position']);?> 
+				สังกัด <?php echo $show['zoo_name'];?> องค์การสวนสัตว์ กระทรวงทรัพยาการธรรมชาติและสิ่งแวดล้อม ได้เข้าทำงานเมื่อวันที่ 
+				<?php $datethai = DateThai($show['hrctf_datestartwork']); echo thainumDigit($datethai);?> 
+				ปัจจุบันอัตราเงินเดือน <?php $salary = number_format($show['hrctf_salary']);
     				                        echo thainumDigit($salary);?> บาท <!--ใส่โค๊ตตรงนี้ เงินเป็นตัวหนังสือ--></td>
 			</tr>
 		</table>
-		<table style="margin-left:60px;margin-bottom:100px;">
+		<table style="margin-bottom:100px;">
     		<tr>
-				<td style="font-size:14px;">ให้ไว้ ณ วันที่ <!--ใส่โค๊ตตรงนี้ วันที่--></td>
+				<td style="font-size:14px;letter-spacing:nomal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ให้ไว้ ณ วันที่ <!--ใส่โค๊ตตรงนี้ วันที่--></td>
 			</tr>
 		</table>
 		<!--บรรทัดที่ 6-->
-		<table style="margin-left:280px;">
+		<table>
     		<tr>
-				<td>(</td>
-				<td><!--ใส่เส้นปะ--></td>
-				<td>)</td>
+				<td style="font-size:14px;padding-left:350px;">(</td>
+				<td style="font-size:14px;">.............................................</td>
+				<td style="font-size:14px;">)</td>
 			</tr>
 		</table>
 		<!--บรรทัดที่ 7-->

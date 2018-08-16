@@ -46,7 +46,7 @@
 			</tr>
 		</table>
 		<!--บรรทัดที่ 4-->
-		<table style="margin-bottom:20px">
+		<table style="margin-bottom:20px;">
     		<tr>
 				<td style="font-size:14px;"><b>เรียน ผู้อำนวยการองค์การสวนสัตว์</b></td>
 			</tr>
@@ -54,38 +54,26 @@
 		<!--บรรทัดที่ 5-->
 		<table>
     		<tr>
-				<td style="font-size:14px;padding-left:60px;width:100px;">ตามที่ </td>
-				<td style="font-size:14px;"><?php echo $show['hrctf_name'];?> <?php echo $show['hrctf_position'];?></td>
-				<td style="font-size:14px;">สังกัด</td>
-				<td style="font-size:14px;"><?php echo $show['zoo_name'];?></td>
-				<td style="font-size:14px;">ได้ยื่นความ</td>
-			</tr>
-		</table>
-		<table>
-			<tr>
-				<td style="font-size:14px;">ประสงค์ขอหนังสือรับรองเงินเดือนพนักงานองค์การสวนสัตว์จำนวน ๑ ฉบับ เพื่อประกอบการกู้เงินจากสถาบันการเงิน</td>
+				<td style="font-size:14px;line-height:24px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ตามที่ 
+				<?php echo $show['hrctf_name'];?> <?php echo $show['hrctf_position'];?>
+				 สังกัด <?php echo $show['zoo_name'];?> ได้ยื่นความประสงค์ขอหนังสือรับรองเงินเดือนพนักงานองค์การสวนสัตว์จำนวน ๑ ฉบับ เพื่อประกอบการกู้เงินจากสถาบันการเงิน</td>
 			</tr>
 		</table>
 		<!--บรรทัดที่ 6-->
-		<table>
+		<table style="margin-bottom:30px">
     		<tr>
-				<td style="font-size:14px;padding-left:60px;">สำนักบริหารทรัพยากรบุคคล ฝ่ายสวัสดิการและแรงงานสัมพันธ์ ได้ดำเนินการตรวจสอบและจัดทำหนังสือรับ</td>
-			</tr>
-		</table>
-		<!--บรรทัดที่ 6-->
-		<table  style="margin-bottom:30px">
-    		<tr>
-				<td style="font-size:14px;">รองเงินเดือนพนักงานองค์การสวนสัตว์ <?php echo $show['hrctf_name'];?> เพื่อพิจารณาลงนามด้วยแล้ว</td>
+				<td style="font-size:14px;line-height:24px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; สำนักบริหารทรัพยากรบุคคล ฝ่ายสวัสดิการและแรงงานสัมพันธ์ ได้ดำเนินการตรวจสอบและจัดทำหนังสือรับ
+				รองเงินเดือนพนักงานองค์การสวนสัตว์ <?php echo $show['hrctf_name'];?> เพื่อพิจารณาลงนามด้วยแล้ว</td>
 			</tr>
 		</table>
 		<!--บรรทัดที่ 7-->
 		<table  style="margin-bottom:100px">
     		<tr>
-				<td style="font-size:14px;padding-left:60px;">จึงเรียนมาเพื่อโปรดพิจารณา</td>
+				<td style="font-size:14px;line-height:24px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; จึงเรียนมาเพื่อโปรดพิจารณา</td>
 			</tr>
 		</table>
 		<!--บรรทัดที่ 8-->
-		<table>
+		<table style="margin-bottom:10px;">
     		<tr>
 				<td style="font-size:14px;padding-left:350px;">(</td>
 				<td style="font-size:14px;">.............................................</td>
