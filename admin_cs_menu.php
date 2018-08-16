@@ -49,7 +49,36 @@
 				        </ul>
 		               <a class="nav-link collapsed py-1" href="#csreport" data-toggle="collapse" data-target="#csreport">รายงาน</a>
 		                <ul class="sub-menu collapse bnmenusub1" id="csreport">
-				         <a class="nav-link collapsed py-1 bnmenusub2" href="#"><span data-feather="chevron-right"></span>รายงานการซ่อมบริการ</a>
+				         <a class="nav-link collapsed py-1 bnmenusub2" href="#csreportcom" data-toggle="collapse" data-target="#csreportcom"><span data-feather="chevron-right"></span>รายงานการซ่อม</a>
+				         <ul class="sub-menu collapse bnmenusub1" id="csreportcom">
+										<?php if($user_zoo == 10){?>
+												<li class="dropdown-item"><a class="dropdown-item" href="admin_index.php?url=cs_totalservicemonthzpo.php">องค์การสวนสัตว์</a></li>
+										<?php }
+											if($user_zoo == 10 || $user_zoo == 11){?>
+												<li class="dropdown-item"><a class="dropdown-item" href="admin_index.php?url=cs_totalservicemonthzoo.php&zoo=11">สวนสัตว์ดุสิต</a></li>
+										<?php }
+											if($user_zoo == 10 || $user_zoo == 12){?>
+												<li class="dropdown-item"><a class="dropdown-item" href="admin_index.php?url=cs_totalservicemonthzoo.php&zoo=12">สวนสัตว์เปิดเขาเขียว</a></li>
+										<?php }
+											if($user_zoo == 10 || $user_zoo == 13){?>
+												<li class="dropdown-item"><a class="dropdown-item" href="admin_index.php?url=cs_totalservicemonthzoo.php&zoo=13">สวนสัตว์เชียงใหม่</a></li>
+										<?php }
+											if($user_zoo == 10 || $user_zoo == 14){?>
+												<li class="dropdown-item"><a class="dropdown-item" href="admin_index.php?url=cs_totalservicemonthzoo.php&zoo=14">สวนสัตว์นครราชสีมา</a></li>
+										<?php }
+											if($user_zoo == 10 || $user_zoo == 15){?>
+												<li class="dropdown-item"><a class="dropdown-item" href="admin_index.php?urlcs_totalservicemonthzoo.php&zoo=15">สวนสัตว์สงขลา</a></li>
+										<?php }
+											if($user_zoo == 10 || $user_zoo == 16){?>
+												<li class="dropdown-item"><a class="dropdown-item" href="admin_index.php?urlcs_totalservicemonthzoo.php&zoo=16">สวนสัตว์อุบลราชธานี</a></li>
+										<?php }
+											if($user_zoo == 10 || $user_zoo == 17){?>
+												<li class="dropdown-item"><a class="dropdown-item" href="admin_index.php?url=cs_totalservicemonthzoo.php&zoo=17">สวนสัตว์ขอนแก่น</a></li>
+										<?php }
+											if($user_zoo == 10 || $user_zoo == 18){?>
+												<li class="dropdown-item"><a class="dropdown-item" href="#">โครงการคชอาณาจักร</a></li>
+										<?php }?>
+									</ul>
 				         <a class="nav-link collapsed py-1 bnmenusub2" href="admin_index.php?url=cs_totalserviceadmin.php"><span data-feather="chevron-right"></span>รายงานการบริการ</a>
 				         <a class="nav-link collapsed py-1 bnmenusub2" href="#csreportip" data-toggle="collapse" data-target="#csreportip"><span data-feather="chevron-right"></span>รายงานสรุปไอพีที่ใช้</a>
 				         <ul class="sub-menu collapse" id="csreportip">
@@ -82,6 +111,7 @@
 										<?php }?>
 				         </ul>
 				        </ul>
+				        <a class="nav-link collapsed py-1" href="admin_index.php?url=cs_showupweb.php"><span data-feather="settings"></span>รายการขอคำร้องขึ้นเว็บไซต์</a>
 		               <a class="nav-link collapsed py-1" href="#cssetting" data-toggle="collapse" data-target="#cssetting"><span data-feather="settings"></span>ตั้งค่า</a>
 		               <ul class="sub-menu collapse" id="cssetting">
 				          <a class="nav-link" href="#"><span data-feather="chevron-right"></span>จัดการชนิดอุปกรณ์</a>

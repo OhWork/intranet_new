@@ -252,8 +252,16 @@
 			$this->sql = "SELECT * FROM $table,$table2,$table3 WHERE $column1 = $value1 && $column2 = $value2";
 			return $this;
 		}
+		function findByPK32DESC($table,$table2,$table3,$column1,$value1,$column2,$value2,$order){
+			$this->sql = "SELECT * FROM $table,$table2,$table3 WHERE $column1 = $value1 && $column2 = $value2 ORDER BY $order DESC";
+			return $this;
+		}
         function findByPK33($table1,$table2,$table3,$column1,$value1,$column2,$value2,$column3,$value3){
 			$this->sql = "SELECT * FROM $table1,$table2,$table3 WHERE $column1 = $value1 && $column2 = $value2 && $column3 = $value3";
+			return $this;
+		}
+		function findByPK33DESC($table1,$table2,$table3,$column1,$value1,$column2,$value2,$column3,$value3,$order){
+			$this->sql = "SELECT * FROM $table1,$table2,$table3 WHERE $column1 = $value1 && $column2 = $value2 && $column3 = $value3 ORDER BY $order DESC";
 			return $this;
 		}
 		 function findByPK34($table1,$table2,$table3,$column1,$value1,$column2,$value2,$column3,$value3,$column4,$value4){
@@ -391,10 +399,6 @@
             return $this;
 		}
 		function countTableBETWEEN($table,$column1,$value1,$column2,$value2){
-            $this->sql = "select count(*) from $table where $column1 = $value1 AND $column2 $value2" ;
-            return $this;
-		}
-		function countTableBETWEEN12($table,$column1,$value1,$column2,$value2){
             $this->sql = "select count(*) from $table where $column1 = $value1 AND $column2 $value2" ;
             return $this;
 		}
