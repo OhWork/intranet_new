@@ -7,7 +7,9 @@
           <title>ระบบคอมพิวเตอร์เซอรวิส(New)</title>
 	</head>
 <?php
-
+	echo "<pre>";
+	print_r($_POST);
+	print_r($_FILES['filUpload']);
     include 'database/db_tools.php';
 	include 'connect.php';
 	if(!empty($_POST['ipzpo_id'])){
@@ -41,25 +43,27 @@
 				}
 				return $randomString;
 			}
-		for($i = 0; $i<count($_FILES['filUpload']['name']); $i++){
 			$target_dir = 'images/test/';
-			$target_file = $target_dir.basename($_FILES['filUpload']['name'][$i]);
+			$target_file = $target_dir.basename($_FILES['filUpload']['name']);
 			$img_new_name = generateRandomString(10);
-			$target_dir_save = 'images/uploadweb/'.$img_new_name.'.jpg';
-			move_uploaded_file($_FILES['filUpload']['tmp_name'][$i], $target_dir_save);
+			$target_dir_save = 'images/uploadweb/'.$img_new_name.'.zip';
+			move_uploaded_file($_FILES['filUpload']['tmp_name'], $target_dir_save);
 
-		}
-/*
+
 	$rs = $db->insert('upweb',array(
-	'upweb_name' => $_POST['ipzpo_address'],
-	'ipzpo_user' => $_POST['ipzpo_user'],
+	'upweb_name' => $_POST['upweb_name'],
+	'upweb_date' => date("Y-m-d"),
+	'upweb_detail' => $_POST['upweb_detail'],
+	'upweb_uploadfile' => $img_new_name,
+/*
 	'subzoo_subzoo_id' => $_POST['subzoo_subzoo_id'],
 	'subzoo_zoo_zoo_id' => $_POST['subzoo_zoo_zoo_id']
-	));
 */
+	));
+
 	}
 
-/*
+
 	if($rs || $rsfix){
     	if($rs){
     	    echo "<div class='statusok'>เพิ่มสำเร็จ</div>";
@@ -77,7 +81,6 @@
             }
             header( "Refresh: 1; $link" );
 }
-*/
 ?>
 </html>
 <?php

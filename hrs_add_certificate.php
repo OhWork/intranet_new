@@ -89,7 +89,7 @@
 						</label>
 					</div>
 				</div>
-				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 showmsg">
+				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 					<div class="row">
 						<label class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6" style="padding-top:7px;">
 							<input type="radio" name="typectf_typectf_id" id="parent5" value="5"> รับรองการค้ำประกันการเข้าทำงาน ของ
@@ -99,7 +99,7 @@
 						</label>
 						<label class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6" style="padding-left:34px;padding-top:7px;"> ซึ่งเกี่ยวข้องกับข้าพเจ้าโดยเป็น
 						</label>
-						<label class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6 ">
+						<label class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6 showmsg">
 							<?php echo $txtwhofu;?>
 						</label>
 					</div>
