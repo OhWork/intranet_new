@@ -10,7 +10,7 @@
 				          <a class="nav-link bnmenusub2" href="admin_index.php?url=hrs_show_editcertificate_pass.php"><span data-feather="chevron-right"></span>รายการอนุมัติ</a>
 				          <a class="nav-link bnmenusub2" href="admin_index.php?url=hrs_show_editcertificate_nopass.php"><span data-feather="chevron-right"></span>รายการไม่อนุมัติ</a>
 		                </ul>
-	                <a class="nav-link dropknow ml-4" href="#">
+	                <a class="nav-link dropknow ml-4" href="admin_index.php?url=hrs_totalmonthcertificateAll">
 	                   รายงาน
 	                </a>
                 </ul>

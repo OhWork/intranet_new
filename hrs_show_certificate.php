@@ -27,7 +27,7 @@
 					<div role="tabpanel" class="tab-pane active" id="wait" style="padding-left:16px;padding-right:16px;">
 					<?php
 						$columns = array('typectf_name','hrctf_name','hrctf_position','zoo_name');
-						$rs = $db->findByPK32('hrctf','typectf','zoo','typectf_typectf_id','typectf_id','zoo_zoo_id','zoo_id')->execute();
+						$rs = $db->findByPK32DESC('hrctf','typectf','zoo','typectf_typectf_id','typectf_id','zoo_zoo_id','zoo_id','hrctf_datereg')->execute();
 								$grid = new gridView();
 								$grid->pr = 'hrctf_id';
 								$grid->sts_hrs = 'hrctf_status';
