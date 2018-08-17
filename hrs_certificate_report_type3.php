@@ -49,17 +49,30 @@
 			</tr>
 		</table>
 		<!--บรรทัดที่ 6-->
-		<table>
+		<table style="margin-left:330px;margin-bottom:10px;">
     		<tr>
-				<td style="font-size:14px;padding-left:280px;">(</td>
-				<td style="font-size:14px;">.............................................</td>
+				<td style="font-size:14px;">(</td>
+				<td style="font-size:14px;">นายเบญจพล นาคประเสริฐ</td>
 				<td style="font-size:14px;">)</td>
 			</tr>
 		</table>
-		<!--บรรทัดที่ 7-->
-		<table style="margin-left:280px;">
+		<table style="margin-left:333px;margin-bottom:250px;">
     		<tr>
-				<td><!--ใส่เส้นปะ--></td>
+				<td style="font-size:14px;">ผู้อำนวยการองค์การสวนสัตว์</td>
+			</tr>
+		</table>
+		<table>
+    		<tr>
+				<td style="font-size:12px;width:150px;"><?php echo $show['zoo_name'];?></td>
+				<td style="width: 450px;"></td>
+				<td style="font-size:12px;width:100px;">คณิศร / บุคลากร ๔</td>
+			</tr>
+		</table>
+		<table>
+    		<tr>
+				<td style="font-size:12px;width:150px;"><?php echo $show['zoo_name'];?></td>
+				<td style="width: 450px;"></td>
+				<td style="font-size:12px;width:100px;">&nbsp;&nbsp;&nbsp;&nbsp;............ / ตรวจ</td>
 			</tr>
 		</table>
     </body>

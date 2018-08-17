@@ -15,7 +15,7 @@
         <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
     </head>
     <body>
-		<table style="margin-bottom:200px;">
+		<table style="margin-bottom:150px;">
     		<tr>
         		<td></td>
     		</tr>
@@ -85,11 +85,30 @@
 			</tr>
 		</table>
 		<!--บรรทัดที่ 13-->
-		<table style="margin-left:290px;">
+		<table style="margin-left:330px;margin-bottom:10px;">
     		<tr>
 				<td style="font-size:14px;">(</td>
-				<td style="font-size:14px;">.............................................................</td>
+				<td style="font-size:14px;">นายเบญจพล นาคประเสริฐ</td>
 				<td style="font-size:14px;">)</td>
+			</tr>
+		</table>
+		<table style="margin-left:333px;margin-bottom:130px;">
+    		<tr>
+				<td style="font-size:14px;">ผู้อำนวยการองค์การสวนสัตว์</td>
+			</tr>
+		</table>
+		<table>
+    		<tr>
+				<td style="font-size:12px;width:150px;"><?php echo $show['zoo_name'];?></td>
+				<td style="width: 450px;"></td>
+				<td style="font-size:12px;width:100px;">คณิศร / บุคลากร ๔</td>
+			</tr>
+		</table>
+		<table>
+    		<tr>
+				<td style="font-size:12px;width:150px;"><?php echo $show['zoo_name'];?></td>
+				<td style="width: 450px;"></td>
+				<td style="font-size:12px;width:100px;">&nbsp;&nbsp;&nbsp;&nbsp;............ / ตรวจ</td>
 			</tr>
 		</table>
     </body>
