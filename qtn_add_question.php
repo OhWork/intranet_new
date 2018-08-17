@@ -5,7 +5,7 @@
     $lbdateend = new label('วันสิ้นสุด : ');
     $lblink = new label('ลิ้ง : ');
     $txtname = new textfield('qtn_name','','form-control','','');
-    $txtcolor = new textfield('qtn_color','','form-control','','');
+//     $txtcolor = new textfield('qtn_color','','form-control','','');
     $txtlink = new textfield('qtn_link','','form-control','','');
     $datetime = date("Y-m-d H:i");
     $button = new buttonok("ส่งแบบสอบถาม","","btn btn-success btn-lg btn-block bt3success col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","");
@@ -51,7 +51,9 @@
 									</div>
 								</div>
 	<?php
-	echo $lbcolor.$txtcolor;
+	echo $lbcolor;?>
+	<input  type="color" id="qtn_color" name="qtn_color" value="#ff0000">
+	<?php
 	echo $lblink.$txtlink;
 
    if(!empty($_GET['user_id'])){
