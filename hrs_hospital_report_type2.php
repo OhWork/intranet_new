@@ -85,11 +85,16 @@
 			</tr>
 		</table>
 		<!--บรรทัดที่ 13-->
-		<table style="margin-left:290px;">
+		<table style="margin-left:330px;margin-bottom:10px;">
     		<tr>
 				<td style="font-size:14px;">(</td>
-				<td style="font-size:14px;">.............................................................</td>
+				<td style="font-size:14px;">นายเบญจพล นาคประเสริฐ</td>
 				<td style="font-size:14px;">)</td>
+			</tr>
+		</table>
+		<table style="margin-left:333px;">
+    		<tr>
+				<td style="font-size:14px;">ผู้อำนวยการองค์การสวนสัตว์</td>
 			</tr>
 		</table>
     </body>

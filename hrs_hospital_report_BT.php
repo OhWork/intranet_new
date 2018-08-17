@@ -82,7 +82,7 @@
 			</tr>
 		</table>
 		<!--บรรทัดที่ 10-->
-		<table style="margin-bottom:10px">
+		<table style="margin-bottom:300px">
     		<tr>
 				<td style="font-size:14px;padding-left:350px;">(</td>
 				<td style="font-size:14px;">.............................................</td>
@@ -92,7 +92,17 @@
 		<!--บรรทัดที่ 13-->
 		<table>
     		<tr>
-				<td style="font-size:14px;padding-left:330px;">ผู้อำนวยการสำนักบริหารทรัพยากรบุคคล</td>
+				<td style="font-size:10px;padding-left:580px;">&nbsp;&nbsp;คณิศร / บุคลากร &nbsp;๔</td>
+			</tr>
+		</table>
+		<table>
+    		<tr>
+				<td style="font-size:10px;padding-left:580px;">........... / รก.หนฝ.สร.</td>
+			</tr>
+		</table>
+		<table>
+    		<tr>
+				<td style="font-size:10px;padding-left:580px;">........... / ผช.ผอ.สบท.</td>
 			</tr>
 		</table>
     </body>
