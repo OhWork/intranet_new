@@ -7,9 +7,9 @@
      $selecttypenews->name = 'typeNews_typeNews_id';
      $selecttypenews->lists = 'โปรดระบุ ชนิดของข่าวสาร';
     $txtheadnews = new textfield('news_head','','form-control','','');
-    $txtdetail = new textarea('news_detail','ckeditor','','');
-    $txttime = new textfield('news_date','','form-control css-require','','');
-    $txttime->value = date("Y-m-d H:i");
+    $datetime = date("Y-m-d H:i");
+    $date = date("Y-m-d");
+    $time = date("H:i");
     $button = new buttonok("ส่งแบบฟอร์มแจ้งซ่อม","","btn btn-success btn-lg btn-block bt3success col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","");
       if(!empty($_GET['user_id'])){
 	$id = $_GET['user_id'];
@@ -30,17 +30,19 @@
     }
 	echo '<div class="newaddbox">';
     echo $form->open("form_reg","form","","news_insert_news.php","");
-    echo $selecttypenews->selectFromTB('typeNews','typeNews_id','typeNews_name',$r['typeNews_typeNews_id']);
     echo $lbheadnews.$txtheadnews;
-    echo $lbdetail.$txtdetail;
+    echo $selecttypenews->selectFromTB('typeNews','typeNews_id','typeNews_name',$r['typeNews_typeNews_id']);
 	echo $lbtime.$txttime;
-    echo("ผู้เขียน : ".$txtname." ".$txtlast);
+	echo "วันและเวลา".DateThai($date)." ".$time;
+	
+    echo "ผู้เขียน : ".$txtname." ".$txtlast;
    if(!empty($_GET['user_id'])){
     echo "<input type='hidden' name='user_user_id' value='$_GET[user_id]'/>";
     }
    if(!empty($user_id)){
     echo "<input type='hidden' name='user_user_id' value='$user_id'/>";
      }
+     echo "<input type='hidden' name='news_date' value='$datetime'/>";
     echo "<input type='hidden' name='id' value='$_GET[id]'/>";
     echo "<div class='newaddok'>".$button."</div>";
     echo $form->close();
