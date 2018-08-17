@@ -4,10 +4,17 @@
     $lbdatestart = new label('วันเริ่ม : ');
     $lbdateend = new label('วันสิ้นสุด : ');
     $lblink = new label('ลิ้ง : ');
+    $lbcolor = new label('สี : ');
+    $lbtqnenable = new label("สถานะการใช้งาน :");
     $txtname = new textfield('qtn_name','','form-control','','');
-//     $txtcolor = new textfield('qtn_color','','form-control','','');
     $txtlink = new textfield('qtn_link','','form-control','','');
     $datetime = date("Y-m-d H:i");
+    $radioqtnenable = new radioGroup();
+    $radioqtnenable->name = 'qtn_enable';
+      if(empty($id)){
+        	$radioqtnenable->add('ใช้งานได้',1,'');
+        	$radioqtnenable->add('ไม่สามารถใช้งานได้',0,'checked');
+        	}
     $button = new buttonok("ส่งแบบสอบถาม","","btn btn-success btn-lg btn-block bt3success col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","");
       if(!empty($_GET['user_id'])){
 	$id = $_GET['user_id'];
@@ -25,6 +32,13 @@
     $r2 = $db->findByPK('user','user_id',$user_id)->executeRow();
     $txtname= $r2['user_name'];
 	$txtlast= $r2['user_last'];
+	if($r["qtn_enable"] == 1){
+    	$radiozooenable->add('ใช้งานได้',1,'checked');
+    	$radiozooenable->add('ไม่สามารถใช้งานได้',0,'');
+    	}else if($r['qtn_enable'] == 0){
+        $radiozooenable->add('ใช้งานได้',1,'');
+        $radiozooenable->add('ไม่สามารถใช้งานได้',0,'checked');
+    	}
     }
 	echo '<div class="newaddbox">';
     echo $form->open("form_reg","form","","qtn_insert_question.php","");
@@ -33,7 +47,7 @@
 	?>
 	<div class='date-form dayinbox col-md-12 form-horizontal control-group controls input-group'>
 									<div class='input-group date' id ="datetimepicker1">
-										<input type='text' class="form-control datetimepicker " name="eventconfer_start" id='date1' readonly/>
+										<input type='text' class="form-control datetimepicker " name="qtn_datestart" id='date1' readonly/>
 											<span class="input-group-addon">
 												<span class="glyphicon glyphicon-calendar"></span>
 											</span>
@@ -44,7 +58,7 @@
 	?>
 	<div class='date-form dayinbox col-md-12 form-horizontal control-group controls input-group'>
 									<div class='input-group date' id ="datetimepicker2">
-										<input type='text' class="form-control datetimepicker" name="eventconfer_end" id='date2' readonly/>
+										<input type='text' class="form-control datetimepicker" name="qtn_dateend" id='date2' readonly/>
 											<span class="input-group-addon datetimepicker-addon">
 												<span class="glyphicon glyphicon-calendar"></span>
 											</span>
@@ -55,7 +69,7 @@
 	<input  type="color" id="qtn_color" name="qtn_color" value="#ff0000">
 	<?php
 	echo $lblink.$txtlink;
-
+    echo $radioqtnenable
    if(!empty($_GET['user_id'])){
     echo "<input type='hidden' name='user_user_id' value='$_GET[user_id]'/>";
     }
