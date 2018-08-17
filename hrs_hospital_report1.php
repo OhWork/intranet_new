@@ -85,7 +85,14 @@
 			</tr>
 		</table>
 		<!--บรรทัดที่ 13-->
-		<table style="margin-left:330px;margin-bottom:10px;">
+		<table style="margin-left:290px;">
+    		<tr>
+				<td style="font-size:14px;">(</td>
+				<td style="font-size:14px;">.............................................................</td>
+				<td style="font-size:14px;">)</td>
+			</tr>
+		</table>
+		<!--<table style="margin-left:330px;margin-bottom:10px;">
     		<tr>
 				<td style="font-size:14px;">(</td>
 				<td style="font-size:14px;">นายเบญจพล นาคประเสริฐ</td>
@@ -96,7 +103,7 @@
     		<tr>
 				<td style="font-size:14px;">ผู้อำนวยการองค์การสวนสัตว์</td>
 			</tr>
-		</table>
+		</table>-->
     </body>
 </html>
 <?php
