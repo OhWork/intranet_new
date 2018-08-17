@@ -69,7 +69,7 @@
 	<input  type="color" id="qtn_color" name="qtn_color" value="#ff0000">
 	<?php
 	echo $lblink.$txtlink;
-    echo $radioqtnenable
+    echo $radioqtnenable;
    if(!empty($_GET['user_id'])){
     echo "<input type='hidden' name='user_user_id' value='$_GET[user_id]'/>";
     }
