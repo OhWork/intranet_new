@@ -7,15 +7,12 @@
           <title>ระบบคอมพิวเตอร์เซอรวิส(New)</title>
 	</head>
 <?php
-	echo "<pre>";
-	print_r($_POST);
-	print_r($_FILES['filUpload']);
     include 'database/db_tools.php';
 	include 'connect.php';
-	if(!empty($_POST['ipzpo_id'])){
+	if(!empty($_POST['upweb_id'])){
 
-		$data['ipzpo_address'] = $_POST['ipzpo_address'];
-		$rsfix = $db->update('ipzpo',$data,'ipzpo_id',$_POST['ipzpo_id']);
+		$data['upweb_status'] = $_POST['upweb_status'];
+		$rsfix = $db->update('upweb',$data,'upweb_id',$_POST['upweb_id']);
 
 	    //Log
 		if(getenv(HTTP_X_FORWARDED_FOR)){
@@ -54,6 +51,7 @@
 	'upweb_name' => $_POST['upweb_name'],
 	'upweb_date' => date("Y-m-d"),
 	'upweb_detail' => $_POST['upweb_detail'],
+	'upweb_work' => $_POST['upweb_work'],
 	'upweb_uploadfile' => $img_new_name,
 	'upweb_email' => $_POST['upweb_email'],
 	'upweb_tel' => $_POST['upweb_tel'],

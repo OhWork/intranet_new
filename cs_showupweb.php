@@ -23,7 +23,7 @@
     $row = "<div class='row'>";
     $rowend = "</div>";
     $button = new buttonok('ค้นหา','','btn btn-primary','submit');
-            $rs = $db->findByPK32('upweb','zoo','subzoo','subzoo_subzoo_id','subzoo_id','subzoo_zoo_zoo_id','zoo_id')->execute();
+            $rs = $db->findByPK33('upweb','zoo','subzoo','subzoo_subzoo_id','subzoo_id','subzoo_zoo_zoo_id','zoo_id','upweb_status',"'W'")->execute();
 
 
 
