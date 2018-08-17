@@ -367,7 +367,10 @@
 			hrctf_position: "required",
 			hrhos_hosname: "required",
 			hrctf_hosprovince : "required",
-			hrctf_salary : "required",
+			hrctf_salary :{
+				required: true,
+				number: true,
+			},
 			hrctf_whoname : "required",
 			hrctf_whofu : "required",
 			hrctf_educationname : "required",

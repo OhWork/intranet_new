@@ -60,7 +60,7 @@
     	}else if($r["hrctf_moneyroom"] == 1200){
         $radiomoneyroom->add('800',800,'');
     	$radiomoneyroom->add('1200',1200,'checked');
-        } 
+        }
 	if($r["hrctf_familytype"] == 1){
     	$radiofamilytype->add('ข้าพเจ้า',1,'checked');
     	$radiofamilytype->add('คู่สมรส',2,'');
@@ -121,7 +121,7 @@
 					<?php echo $selectdevision->selectFromTBinDB('zoo','zoo_id','zoo_name','zoo_per_hrs','1',$r['zoo_zoo_id']); ?>
 				</div>
 				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-1">
-					
+
 					<?php if($r['typectf_typectf_id'] == 3){
     					    echo $lbeducation;
     					    echo $txteducation;
@@ -152,8 +152,8 @@
     					<?php echo $radiomoneyroom;  ?>
 				</div>
 				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-2">
-    					
-    				<?php	
+
+    				<?php
 						}else{
         					echo $lbdatework;
         					echo $txtdatestartwork;
@@ -161,7 +161,7 @@
         					echo $txtsalary;
     					}
 					?>
-                    
+
 				</div>
 				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-2">
 					<div class="row">
@@ -195,11 +195,5 @@
 	        ignoreReadonly: true,
 	        locale:moment.locale('th')
         })
-/*
-   $( document ).ready( function () {
-   $('#test').on('change',function(){
-    	   	console.log($('#test').val());
-   });
-   });
-*/
+// 	$("#").val('ผู้อำนวยการองค์การสวนสัตว์');
 </script>
