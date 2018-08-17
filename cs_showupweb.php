@@ -17,11 +17,6 @@
 <?php
     if (!empty($_SESSION['user_name'])):
     ?>
-
-            <div class="col-md-12" style="float: left;margin-top: 10px;">
-                <div class="col-md-2" style="float: left;"><a href="admin_index.php?url=cf_add_headnameconfer.php" class="btn btn-success">เพิ่มหัวข้อการประชุม</a>
-                </div>
-            </div>
             <div class="col-md-12" style="float: left;margin-top: 10px;">
             <?php
     $columns = array('upweb_name','upweb_detail','zoo_name','subzoo_name');
@@ -33,7 +28,7 @@
 
 
 			$grid = new gridView();
-			$grid->pr = 'headncf_id';
+			$grid->pr = 'upweb_id';
 			$grid->header = array('<b><center>ชื่อผู้ขอ</center></b>','<b><center>รายละเอียด</center></b>','<b><center>สำนัก/สวน</center></b>','<b><center>ฝ่าย</center></b>','<b><center>#</center></b>');
 			$grid->width = array('30%','40%','10%','10%','10%');
 			$grid->edit = 'admin_index.php?url=cs_editupweb.php';
