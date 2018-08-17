@@ -24,6 +24,7 @@
     $txthospital = new textfield('hrctf_hosname','','form-control','','');
     $txtprovince = new textfield('hrctf_hosprovince','','form-control','','');
     $txtsalary = new textfield('hrctf_salary','','form-control','','');
+    $txtsalary->functions ="onkeypress='CheckNum()' onClick='this.setSelectionRange(0, this.value.length)'";
     $txtwhoname = new textfield('hrctf_whoname','hrctf_ctfname_id','form-control','','');
     $txtwhofu = new textfield('hrctf_whofu','hrctf_ctfname_id','form-control','','');
     $txteducation = new textfield('hrctf_educationname','hrctf_ctfname_id','form-control','','');

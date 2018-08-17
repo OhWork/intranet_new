@@ -30,7 +30,7 @@
     $button = new buttonok('เปลี่ยนสถานะ','','btn btn-success col-12','');
     	
 	$strDate = $r['hrctf_datestartwork'];
-
+    $txtrecipient->value = "ผู้อำนวยการองค์การสวนสัตว์";
 
     if(!empty($_GET['id'])){
 		$id = $_GET['id'];
