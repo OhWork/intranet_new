@@ -5,7 +5,7 @@
                 </a>
               <!-- sub menu -->
               <ul class="sub-menu collapse" id="qtn">
-	                <a class="nav-link" href="admin_index.php?url=qtn_showreport.php">
+	                <a class="nav-link" href="admin_index.php?url=qtn_show_question.php">
 	                  จัดการแบบสำรวจ
 	                </a>
 	                <a class="nav-link" href="#">

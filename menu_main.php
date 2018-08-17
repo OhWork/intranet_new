@@ -61,7 +61,7 @@
 				</li>
 				<!-- end sub menu -->
 				<li class="nav-item">
-				<a class="nav-link collapsed" href="index.php?url=qtn_showall.php"><span data-feather="send"></span>แบบสำรวจ</a>
+				<a class="nav-link collapsed" href="index.php?url=qtn_show_qtnmain.php"><span data-feather="send"></span>แบบสำรวจ</a>
 				</li>
             </ul>
         </div>
