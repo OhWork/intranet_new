@@ -63,6 +63,7 @@
 	<?php
 	echo $lbcolor;?>
 	<input  type="color" id="qtn_color" name="qtn_color" value="#ff0000">
+	<input  type="text" id="color_rgb" name="qtn_color">
 	<?php
 	echo $lblink.$txtlink;
     echo $lbtqtnenable.$radioqtnenable;
@@ -104,4 +105,8 @@
             $('#datetimepicker1').data("DateTimePicker").maxDate(e.date);
         });
     });
+	 $("#color_rgb").val($("#qtn_color").val());
+	 $('#qtn_color').on("change",function(){
+    	$("#color_rgb").val($("#qtn_color").val());
+});
 </script>
