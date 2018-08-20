@@ -994,4 +994,6 @@
 .qtnblock {
 	white-space:normal;
 	text-align:left;
+	color:#ffffff;
+	border:solid 1px #ffffff;
 }
