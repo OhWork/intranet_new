@@ -20,6 +20,7 @@
 		$data['systemallow_touristreport'] = $_POST['systemallow_touristreport'];
 		$data['systemallow_drive'] = $_POST['systemallow_drive'];
 		$data['systemallow_hrs'] = $_POST['systemallow_hrs'];
+		$data['systemallow_qtn'] = $_POST['systemallow_qtn'];
 		$rsfix = $db->update('systemallow',$data,'systemallow_id',$_POST['user_id']);
 		
 		
@@ -38,13 +39,14 @@
         	));
 
 	}else{
-    $rsa = $db->insert('systemallow',array(
+    $rs = $db->insert('systemallow',array(
 	'systemallow_service' => $_POST['systemallow_service'],
 	'systemallow_news' => $_POST['systemallow_news'],
 	'systemallow_confer' => $_POST['systemallow_confer'],
 	'systemallow_admin' => $_POST['systemallow_admin'],
 	'systemallow_touristreport' => $_POST['systemallow_touristreport'],
 	'systemallow_hrs' => $_POST['systemallow_hrs'],
+	'systemallow_qtn' => $_POST['systemallow_qtn'],
 	'systemallow_drive' => $_POST['systemallow_drive']
 	));
 	
@@ -65,7 +67,7 @@
     	));
 	}
 
-	if(@$rsa || @$rsfix){
+	if(@$rs || @$rsfix){
     	if($rs){
     	    echo "<div class='statusok'>เพิ่มสำเร็จ</div>";
     	}else if($rsfix){

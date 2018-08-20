@@ -12,15 +12,15 @@
 	include 'connect.php';
 	
 	if(!empty($_POST['qtn_id'])){
-
+        $dateupdate = date("Y-m-d");
         $data['qtn_name'] = $_POST['qtn_name'];
 		$data['qtn_link'] = $_POST['qtn_link'];
 		$data['qtn_color'] = $_POST['qtn_color'];
 		$data['qtn_datestart'] = $_POST['qtn_datestart'];
 		$data['qtn_dateend'] = $_POST['qtn_dateend'];
-		$data['qtn_dateupdate'] = $_POST['qtn_dateupdate'];
+		$data['qtn_dateupdate'] = $dateupdate;
 		$data['qtn_enable'] = $_POST['qtn_enable'];
-		$rsfix = $db->update('qtn',$data,'qtn_id',$_POST['user_id']);
+		$rsfix = $db->update('qtn',$data,'qtn_id',$_POST['qtn_id']);
 		
 		
 		if(getenv(HTTP_X_FORWARDED_FOR)){
@@ -38,7 +38,7 @@
         	));
 
 	}else{
-    $rsa = $db->insert('qtn',array(
+    $rs = $db->insert('qtn',array(
 	'qtn_name' => $_POST['qtn_name'],
 	'qtn_link' => $_POST['qtn_link'],
 	'qtn_color' => $_POST['qtn_color'],
@@ -67,7 +67,7 @@
     	));
 	}
 
-	if(@$rsa || @$rsfix){
+	if(@$rs || @$rsfix){
     	if($rs){
     	    echo "<div class='statusok'>เพิ่มสำเร็จ</div>";
     	}else if($rsfix){
