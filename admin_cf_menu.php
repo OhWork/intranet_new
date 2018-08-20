@@ -3,7 +3,7 @@
                   ระบบจองห้องประชุม
                 </a>
               <!-- sub menu -->
-              <ul class="sub-menu collapse on-sub" id="confer">
+              <ul class="sub-menu collapse on-sub mmpd" id="confer">
                     <a class="nav-link collapsed py-1" href="#cf" data-toggle="collapse" data-target="#cf">จัดการห้องประชุม</a>
 	                <ul class="sub-menu collapse bnmenusub1" id="cf">
 	                <a class="nav-link dropdown-item bnmenusub2" href="#cfsub" data-toggle="collapse" data-target="#cfsub"><span data-feather="chevron-right"></span>องค์การสวนสัตว์</a>

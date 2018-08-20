@@ -1005,3 +1005,9 @@
 .shadow {
   box-shadow: 0 8px 6px -6px black;
 }
+.mmpd {
+	padding-left:25px;
+}
+.mmpd2 {
+	padding-left:10px;
+}

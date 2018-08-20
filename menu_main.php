@@ -24,10 +24,10 @@
 				</li>
 				<li class="nav-item">
 					<a class="nav-link collapsed" href="#cs" data-toggle="collapse" data-target="#cs"><span data-feather="cpu"></span>ระบบแจ้งซ่อมคอมพิวเตอร์</a>
-					<ul class="sub-menu collapse on-sub" id="cs">
+					<ul class="sub-menu collapse on-sub mmpd" id="cs">
 	                <!-- sub menu -->
 						<a class="nav-link" href="index.php?url=cs_add_problem.php">แบบฟอร์มแจ้งซ่อม</a>
-						<a class="nav-link" href="index.php?url=cs_register.php">แบบฟอร์มขอใช้Internet</a>
+						<a class="nav-link" href="index.php?url=cs_register.php">แบบฟอร์มขอใช้ Internet</a>
 						<a class="nav-link" href="index.php?url=cs_add_upweb.php">แบบฟอร์มขอให้อัพไฟล์ (กรณีไม่สามารถทำไดั)</a>
 						<a class="nav-link" href="index.php?url=cs_show_problem.php&subpage=1">รายการแจ้งซ่อม</a>
 					</ul>
@@ -35,28 +35,18 @@
 				<li class="nav-item">
 				<a class="nav-link collapsed" href="#trs" data-toggle="collapse" data-target="#trs"><span data-feather="bar-chart"></span>ระบบรายงานจำนวนผู้เข้าชม</a>
                 <!-- sub menu -->
-	                <ul class="sub-menu collapse" id="trs">
-						<a class="nav-link" href="index.php?url=trs_showallzoo.php">
-						รายงานจำนวนผู้เข้าชมของสวนสัตว์
-						</a>
-						<a class="nav-link" href="index.php?url=trs_showallzoo_old.php">
-						รายงานจำนวนผู้เข้าชมของสวนสัตว์แบบเก่า
-						</a>
-						<a class="nav-link" href="index.php?url=trs_showallvehicle.php">
-						รายงานจำนวนยานพาหนะ
-						</a>
+	                <ul class="sub-menu collapse mmpd" id="trs">
+						<a class="nav-link" href="index.php?url=trs_showallzoo.php">รายงานจำนวนผู้เข้าชมของสวนสัตว์</a>
+						<a class="nav-link" href="index.php?url=trs_showallzoo_old.php">รายงานจำนวนผู้เข้าชมของสวนสัตว์แบบเก่า</a>
+						<a class="nav-link" href="index.php?url=trs_showallvehicle.php">รายงานจำนวนยานพาหนะ</a>
 	                </ul>
 				</li>
 				<li class="nav-item">
 				<a class="nav-link collapsed" href="#hrs" data-toggle="collapse" data-target="#hrs"><span data-feather="send"></span>ระบบขอหนังสือรับรอง</a>
                 <!-- sub menu -->
-	                <ul class="sub-menu collapse" id="hrs">
-						<a class="nav-link" href="index.php?url=hrs_add_certificate.php">
-						ขอทำหนังสือรับรอง
-						</a>
-						<a class="nav-link" href="index.php?url=hrs_show_certificate.php">
-						รายการหนังสือรับรอง
-						</a>
+	                <ul class="sub-menu collapse mmpd" id="hrs">
+						<a class="nav-link" href="index.php?url=hrs_add_certificate.php">ขอทำหนังสือรับรอง</a>
+						<a class="nav-link" href="index.php?url=hrs_show_certificate.php">รายการหนังสือรับรอง</a>
 	                </ul>
 				</li>
 				<!-- end sub menu -->
