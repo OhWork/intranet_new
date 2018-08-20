@@ -991,3 +991,7 @@
 .hrsstpad {
 	padding-top:4px;
 }
+.qtnblock {
+	white-space:normal;
+	text-align:left;
+}
