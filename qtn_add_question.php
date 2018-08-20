@@ -108,5 +108,8 @@
 	 $("#color_rgb").val($("#qtn_color").val());
 	 $('#qtn_color').on("change",function(){
     	$("#color_rgb").val($("#qtn_color").val());
-});
+	 });
+	 $('#color_rgb').on("keyup",function(){
+    	$("#qtn_color").val($("#color_rgb").val());
+	 });
 </script>
