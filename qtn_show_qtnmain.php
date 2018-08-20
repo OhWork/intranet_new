@@ -44,9 +44,7 @@
 						$rs = $db->findAll('qtn')->execute();
 						foreach($rs as $rsshow){?>
 						<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4" style="padding:16px;float:left;">
-							<!--<div class="col-12 shadow" style="padding:4px;border-radius:6px;">-->
-								<a class="btn btn-light col-12 qtnblock shadow" style="background-color:red;" href="<?php $rsshow['qtn_link'];?>" role="button"><?php echo $rsshow['qtn_name'];?></a>
-							<!--</div>-->
+							<a class="btn btn-light col-12 qtnblock shadow" style="background-color:red;" href="<?php $rsshow['qtn_link'];?>" role="button"><?php echo $rsshow['qtn_name'];?></a>
 						</div>
 					<?php } ?>
 				</div>
