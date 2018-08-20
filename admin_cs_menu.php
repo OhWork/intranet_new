@@ -114,8 +114,9 @@
 				        <a class="nav-link collapsed py-1" href="admin_index.php?url=cs_showupweb.php"><span data-feather="settings"></span>รายการขอคำร้องขึ้นเว็บไซต์</a>
 		               <a class="nav-link collapsed py-1" href="#cssetting" data-toggle="collapse" data-target="#cssetting"><span data-feather="settings"></span>ตั้งค่า</a>
 		               <ul class="sub-menu collapse" id="cssetting">
-				          <a class="nav-link" href="#"><span data-feather="chevron-right"></span>จัดการชนิดอุปกรณ์</a>
-				          <a class="nav-link" href="#"><span data-feather="chevron-right"></span>จัดการรายการปัญหา</a>
+				          <a class="nav-link" href="admin_index.php?url=cs_add_typetools.php"><span data-feather="chevron-right"></span>จัดการชนิดอุปกรณ์(แจ้งซ่อม)</a>
+				          <a class="nav-link" href="admin_index.php?url=cs_add_problemlist.php"><span data-feather="chevron-right"></span>จัดการรายการปัญหา(แจ้งซ่อม)</a>
+				          <a class="nav-link" href="admin_index.php?url=cs_add_typeworkupweb.php"><span data-feather="chevron-right"></span>จัดการระบบ(ร้องขอขึ้นเว็บ)</a>
 		               </ul>
                 </ul>
               <!-- end sub menu -->

@@ -28,7 +28,7 @@
 	                <!-- sub menu -->
 						<a class="nav-link" href="index.php?url=cs_add_problem.php">แบบฟอร์มแจ้งซ่อม</a>
 						<a class="nav-link" href="index.php?url=cs_register.php">แบบฟอร์มขอใช้Internet</a>
-						<a class="nav-link" href="index.php?url=cs_upweb.php">แบบฟอร์มขอให้อัพไฟล์ (กรณีไม่สามารถทำไดั)</a>
+						<a class="nav-link" href="index.php?url=cs_add_upweb.php">แบบฟอร์มขอให้อัพไฟล์ (กรณีไม่สามารถทำไดั)</a>
 						<a class="nav-link" href="index.php?url=cs_show_problem.php&subpage=1">รายการแจ้งซ่อม</a>
 					</ul>
 				</li>

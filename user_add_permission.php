@@ -18,6 +18,7 @@ if (!empty($_SESSION['user_name'])):
   $lbzpodrive = new label("ระบบการจัดการเอกสาร");
   $lbconfer = new label("ระบบจองห้องประชุม");
   $lbhrs = new label("ระบบขอหนังสือรับรอง");
+  $lbqtn = new label("ระบบจัดการแบบสอบถาม");
   $lbradiotouristreport = new label("ระบบจัดการคนเข้าชมสวนสัตว์");
   $lbadmin = new label("ระบบจัดการผู้ใช้");
   $txtuser = new textfield('user_user','user_user','form-control css-require','');
@@ -80,6 +81,12 @@ if (!empty($_SESSION['user_name'])):
         $radiohrs->add('อนุญาต',1,'');
         $radiohrs->add('ไม่อนุญาต',0,'checked');
   }
+   $radioqtn = new radioGroup();
+  $radioqtn->name = 'systemallow_qtn';
+  if(empty($id)){
+        $radioqtn->add('อนุญาต',1,'');
+        $radioqtn->add('ไม่อนุญาต',0,'checked');
+  }
    $submit = new buttonok("ยืนยัน","btnSubmit","btn btn-success col-md-12","");
     if(!empty($_GET['id'])){
 	$id = $_GET['id'];
@@ -141,6 +148,13 @@ if (!empty($_SESSION['user_name'])):
     	}else if($sa['systemallow_hrs'] == 0){
         $radiohrs->add('อนุญาต',1,'');
         $radiohrs->add('ไม่อนุญาต',0,'checked');
+        }
+    if($sa["systemallow_qtn"] == 1){
+    	$radioqtn->add('อนุญาต',1,'checked');
+    	$radioqtn->add('ไม่อนุญาต',0,'');
+    	}else if($sa['systemallow_hrs'] == 0){
+        $radioqtn->add('อนุญาต',1,'');
+        $radioqtn->add('ไม่อนุญาต',0,'checked');
         }
 if($sa["systemallow_touristreport"] == 1){
     	$radiotouristreport->add('อนุญาต',1,'checked');
@@ -318,7 +332,13 @@ function autoTab2(obj,typeCheck){
 					<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6" style="padding-top: 8px;"><?php echo $lbhrs; ?></div>
 					<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6" style="padding-top: 8px;"><?php echo $radiohrs; ?></div>
 				</div>
-			</div>    
+			</div>
+			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" style="border-bottom:solid 1px #E0E0E0;">
+				<div class="row">
+					<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6" style="padding-top: 8px;"><?php echo $lbqtn; ?></div>
+					<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6" style="padding-top: 8px;"><?php echo $radioqtn; ?></div>
+				</div>
+			</div>        
 			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 				<div class="row">
 					<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6" style="padding-top: 8px;"><?php echo $lbadmin; ?></div>

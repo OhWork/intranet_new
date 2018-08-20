@@ -29,18 +29,18 @@
 				<div class="tab-content col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 					<div role="tabpanel" class="tab-pane active" id="wait" style="padding-left:16px;padding-right:16px;">
 					<?php
-						$columns = array('qtn_name','qtn_link','qtn_color');
+						$columns = array('qtn_name');
 						$rs = $db->findAll('qtn')->execute();
 								$grid = new gridView();
-								$grid->pr = 'hrctf_id';
-								$grid->sts_hrs = 'hrctf_status';
-								$grid->header = array('<b><center>แบบสำรวจ</center></b>','<b><center>ลิ้ง</center></b>','<b><center>สี</center></b>','<b><center>สถานะ</center></b>');
-								$grid->width = array('30%','30%','15%','10%');
-					// 			$grid->edit = '#';
-								$grid->name = 'table';
-								$grid->change = '#';
+								$grid->pr = 'qtn_id';
+								$grid->header = array('<b><center>แบบสำรวจ</center></b>','<b><center>#</center></b>');
+								$grid->width = array('80%','20%');
+					 			$grid->edit = 'admin_index.php?url=qtn_add_question.php';
+					 			$grid->name = 'table';
+					 			$grid->edittxt ='แก้ไข';
 								$grid->renderFromDB($columns,$rs);
 					   ?>
+					   
 					</div>
 				</div>
 			</div>

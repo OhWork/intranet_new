@@ -11,16 +11,16 @@
     include 'database/db_tools.php';
 	include 'connect.php';
 	
-	if(!empty($_POST['user_id'])){
+	if(!empty($_POST['qtn_id'])){
 
-        $data['systemallow_service'] = $_POST['systemallow_service'];
-		$data['systemallow_news'] = $_POST['systemallow_news'];
-		$data['systemallow_confer'] = $_POST['systemallow_confer'];
-		$data['systemallow_admin'] = $_POST['systemallow_admin'];
-		$data['systemallow_touristreport'] = $_POST['systemallow_touristreport'];
-		$data['systemallow_drive'] = $_POST['systemallow_drive'];
-		$data['systemallow_hrs'] = $_POST['systemallow_hrs'];
-		$rsfix = $db->update('systemallow',$data,'systemallow_id',$_POST['user_id']);
+        $data['qtn_name'] = $_POST['qtn_name'];
+		$data['qtn_link'] = $_POST['qtn_link'];
+		$data['qtn_color'] = $_POST['qtn_color'];
+		$data['qtn_datestart'] = $_POST['qtn_datestart'];
+		$data['qtn_dateend'] = $_POST['qtn_dateend'];
+		$data['qtn_dateupdate'] = $_POST['qtn_dateupdate'];
+		$data['qtn_enable'] = $_POST['qtn_enable'];
+		$rsfix = $db->update('qtn',$data,'qtn_id',$_POST['user_id']);
 		
 		
 		if(getenv(HTTP_X_FORWARDED_FOR)){
@@ -30,7 +30,7 @@
         }
             $ipshow = gethostbyaddr($ip);
             $log = $db->insert('log',array(
-        	'log_system' => 'UserSystem',
+        	'log_system' => 'questionare',
         	'log_action' => 'Edit',
         	'log_action_date' => date("Y-m-d H:i"),
         	'log_action_by' => $_POST['log_user'],
@@ -38,14 +38,16 @@
         	));
 
 	}else{
-    $rsa = $db->insert('systemallow',array(
-	'systemallow_service' => $_POST['systemallow_service'],
-	'systemallow_news' => $_POST['systemallow_news'],
-	'systemallow_confer' => $_POST['systemallow_confer'],
-	'systemallow_admin' => $_POST['systemallow_admin'],
-	'systemallow_touristreport' => $_POST['systemallow_touristreport'],
-	'systemallow_hrs' => $_POST['systemallow_hrs'],
-	'systemallow_drive' => $_POST['systemallow_drive']
+    $rsa = $db->insert('qtn',array(
+	'qtn_name' => $_POST['qtn_name'],
+	'qtn_link' => $_POST['qtn_link'],
+	'qtn_color' => $_POST['qtn_color'],
+	'qtn_datestart' => $_POST['qtn_datestart'],
+	'qtn_dateend' => $_POST['qtn_dateend'],
+	'qtn_datereg' => $_POST['qtn_datereg'],
+	'qtn_enable' => $_POST['qtn_enable'],
+	'qtn_no' => $_POST['qtn_no'],
+	'user_user_id' => $_POST['user_user_id']
 	));
 	
 	
@@ -57,7 +59,7 @@
         }
         $ipshow = gethostbyaddr($ip);
         $log = $db->insert('log',array(
-    	'log_system' => 'UserSystem',
+    	'log_system' => 'questionare',
     	'log_action' => 'Add',
     	'log_action_date' => date("Y-m-d H:i"),
     	'log_action_by' => $_POST['log_user'],

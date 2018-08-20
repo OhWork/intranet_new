@@ -35,16 +35,15 @@
 				    if($_SESSION['systemallow_hrs'] == 1){
 						include_once 'admin_hrs_menu.php';
 				        }
-// 				   if($_SESSION['systemallow_admin'] == 1){
+ 				   if($_SESSION['systemallow_admin'] == 1){
 						include_once 'admin_qtn_menu.php';
-// 				   }
-
+ 				       }
 					if($_SESSION['systemallow_km'] == 1){
 						include_once 'admin_km_menu.php';
 				        }
 					if($_SESSION['systemallow_admin'] == 1){
 						include_once 'admin_user_menu.php';
-				   }
+				        }
 				   ?>
 				</ul>
 			  </div>

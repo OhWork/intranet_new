@@ -341,6 +341,10 @@
 			$this->sql = "SELECT * FROM $table1 WHERE $column1 $value1";
 			return $this;
 		}
+		function findByPK12BETWEEN($table1,$column1,$value1,$column2,$value2){
+			$this->sql = "SELECT * FROM $table1 WHERE $column1 = $value1 && $column2 $value2";
+			return $this;
+		}
 		function findByPK35BETWEEN($table1,$table2,$table3,$column1,$value1,$column2,$value2,$column3,$value3,$column4,$value4,$column5,$value5){
 			$this->sql = "SELECT * FROM $table1,$table2,$table3 WHERE $column1 = $value1 && $column2 = $value2 && $column3 = $value3 && $column4 = $value4 && $column5 $value5";
 			return $this;
