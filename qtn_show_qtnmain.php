@@ -34,9 +34,9 @@
 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 	<div class="row">
 		<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1"></div>
-		<div class="col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10" style="background-color:#ffffff;border:1px solid #f5f5f5;border-radius:4px;">
+		<div class="col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10">
 			<div class="row">
-				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3" style="border-bottom:1px solid #f5f5f5;">
+				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3" style="border-bottom:1px solid #000000;">
 					<h3>แบบสอบถาม</h3>
 				</div>
 				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
@@ -44,9 +44,9 @@
 						$rs = $db->findAll('qtn')->execute();
 						foreach($rs as $rsshow){?>
 						<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4" style="padding:16px;float:left;">
-							<div class="col-12" style="padding:16px;background-color:red;">
-								<a class="btn btn-light col-12 qtnblock" style="background-color:red;" href="<?php $rsshow['qtn_link'];?>" role="button"><?php echo $rsshow['qtn_name'];?></a>
-							</div>
+							<!--<div class="col-12 shadow" style="padding:4px;border-radius:6px;">-->
+								<a class="btn btn-light col-12 qtnblock shadow" style="background-color:red;" href="<?php $rsshow['qtn_link'];?>" role="button"><?php echo $rsshow['qtn_name'];?></a>
+							<!--</div>-->
 						</div>
 					<?php } ?>
 				</div>
