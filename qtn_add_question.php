@@ -9,6 +9,8 @@
     $lbtqtnenable = new label("สถานะการใช้งาน :");
     $txtname = new textfield('qtn_name','','form-control','','');
     $txtlink = new textfield('qtn_link','','form-control','','');
+    $txtdatestart = new textfieldcalendarreadonly('qtn_datestart','datetimepicker1','','form-control','input-group-addon btn calen','datetimepicker1');
+    $txtdateend = new textfieldcalendarreadonly('qtn_dateend','datetimepicker2','','form-control','input-group-addon btn calen','datetimepicker2');
     $datetime = date("Y-m-d H:i");
     $radioqtnenable = new radioGroup();
     $radioqtnenable->name = 'qtn_enable';
@@ -23,6 +25,8 @@
     $r = $db->findByPK('qtn','qtn_id',$id)->executeRow();
      $txtname->value = $r['qtn_name'];
      $txtlink->value = $r['qtn_link'];
+     $txtdatestart->value = $r['qtn_datestart'];
+     $txtdateend->value = $r['qtn_dateend'];
 //     $txttime->value = $r['news_date'];
 //     $user_id = $r['user_user_id'];
 //     $r2 = $db->findByPK('user','user_id',$user_id)->executeRow();
@@ -39,8 +43,9 @@
 	echo '<div class="newaddbox">';
     echo $form->open("form_reg","form","","qtn_insert_question.php","");
     echo $lbname.$txtname;
-	echo $lbdatestart;
+	echo $lbdatestart.$txtdatestart;
 	?>
+<!--
 	<div class='date-form dayinbox col-md-12 form-horizontal control-group controls input-group'>
 									<div class='input-group date' id ="datetimepicker1">
 										<input type='text' class="form-control datetimepicker " name="qtn_datestart" id='date1' readonly/>
@@ -49,9 +54,11 @@
 											</span>
 									</div>
 								</div>
+-->
     <?php
-	echo $lbdateend;
+	echo $lbdateend.$txtdateend;
 	?>
+<!--
 	<div class='date-form dayinbox col-md-12 form-horizontal control-group controls input-group'>
 									<div class='input-group date' id ="datetimepicker2">
 										<input type='text' class="form-control datetimepicker" name="qtn_dateend" id='date2' readonly/>
@@ -60,6 +67,7 @@
 											</span>
 									</div>
 								</div>
+-->
 	<?php
 	echo $lbcolor;?>
 	<input  type="color" id="qtn_color" name="qtn_color" value="#ff0000">
@@ -71,7 +79,7 @@
 
         <input type='hidden' name='user_user_id' value='<?php echo $_SESSION['user_id']?>'/>
         <input type='hidden' name='qtn_datereg' value='<?php echo $datetime; ?>'/>
-<!--         <input type='hidden' name='id' value='$_GET[id]'/> -->
+        <input type='hidden' name='qtn_id' value='<?php echo $id; ?>'/>
 
     <?php
     echo "<div class='newaddok'>".$button."</div>";
