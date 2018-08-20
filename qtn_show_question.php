@@ -24,7 +24,7 @@
 						<a href="admin_index.php?url=qtn_add_question.php" class="btn btn-success col-12">เพิ่มแบบสอบถาม</a>
 					</div>
 				<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12'>
-				<h4>รายการหนังสือรับรอง</h4>
+				<h4>รายการแบบสอบถาม</h4>
 				</div>
 				<div class="tab-content col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 					<div role="tabpanel" class="tab-pane active" id="wait" style="padding-left:16px;padding-right:16px;">
