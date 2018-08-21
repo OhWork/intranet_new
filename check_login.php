@@ -37,11 +37,20 @@
 		$_SESSION['subzoo_subzoo_id'] = $rs['subzoo_subzoo_id'];
 		$_SESSION['subzoo_zoo_zoo_id'] = $rs['subzoo_zoo_zoo_id'];
 		?>
+		<div class="alert alert-success">
+		  <strong>ยินดีต้อนรับเข้าสู๋ระบบ!</strong>
+		</div>
+
 		<script>
-
-			alert('เข้าสู่ระบบได้เรียบร้อย');
-			window.location.href = 'admin_index.php';
-
+		    var counter = 5;
+			var int = setInterval(function() {
+			    counter--;
+				console.log(counter);
+			    if (counter == 0) {
+			        clearInterval(int);
+			        window.location.href = 'admin_index.php';
+			    }
+			}, 1000);
 		</script>
 		<?php
 		//header('location: admin_index.php');

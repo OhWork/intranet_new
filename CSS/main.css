@@ -1021,6 +1021,13 @@
   transition-duration: 0.50s;
   -webkit-transition-timing-function: ease;
   transition-timing-function: ease;
+animation: fade 2s linear;
+}
+
+
+@keyframes fade {
+  0%,100% { opacity: 0 }
+  50% { opacity: 1 }
 }
 .collapsing.width {
   -webkit-transition-property: width, visibility;

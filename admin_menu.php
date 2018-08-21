@@ -102,5 +102,8 @@
 
         });
     });
+    $( document ).ready( function () {
+    	$('.collapsing').fadeIn();
+    	});
 </script>
 
