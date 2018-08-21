@@ -102,8 +102,18 @@
 
         });
     });
-    $( document ).ready( function () {
-    	$('.collapsing').fadeIn();
-    	});
+/*
+ function animateNext() {
+  var elements = document.querySelectorAll('.collapsing a:not(.show)');
+  console.log(elements[0]);
+  if (elements.length) {
+    elements[0].classList.add('show');
+    setTimeout(animateNext,1000);
+    return false;
+  }
+}
+
+animateNext();
+*/
 </script>
 

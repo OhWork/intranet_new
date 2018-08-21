@@ -68,18 +68,22 @@
 	if($rs || $rsfix){
     	if($rs){
     	    echo "<div class='statusok'>เพิ่มสำเร็จ</div>";
+    	    $link = "index.php?url=cs_add_upweb.php"
     	}else if($rsfix){
             echo "<div class='statusok'>แก้ไขสำเร็จ</div>";
+             $link = "admin_index.php?url=cs_showupweb.php";
         }
         //แก้เรื่องการส่งค่ากลับปัจจุบัน เมื่อกดแก้ไขแล้วค่าจะแสดงผิด
+/*
             if(($_POST['subzoo_zoo_zoo_id']>1)  &&  ($_POST['subzoo_zoo_zoo_id'] <=10)){
-            $link = "admin_index.php?url=admin_cs_index.php&url2=cs_show_ip.php&id=1";
+            $link = "admin_index.php?url=";
             }
             else if($_POST['subzoo_zoo_zoo_id']==20){
             $link = "admin_index.php?url=admin_cs_index.php&url2=cs_show_ip.php&id=1";
             }else{
             $link = "admin_index.php?url=admin_cs_index.php&url2=cs_show_ip.php&id=".$_POST['subzoo_zoo_zoo_id'];
             }
+*/
             header( "Refresh: 1; $link" );
 }
 

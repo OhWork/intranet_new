@@ -1021,14 +1021,16 @@
   transition-duration: 0.50s;
   -webkit-transition-timing-function: ease;
   transition-timing-function: ease;
-animation: fade 2s linear;
+  animation: fadeIn .5s ease-in 1 forwards;
+  animation-fill-mode:both;
+}
+.collapsing a :nth-child(even) { transition-delay: calc(n*1s); }
+@keyframes fadeIn {
+  0% { opacity:0; transform:scale(.1);}
+  85% {opacity:1; transform:scale(1.05);}
+  100% {transform:scale(1); }
 }
 
-
-@keyframes fade {
-  0%,100% { opacity: 0 }
-  50% { opacity: 1 }
-}
 .collapsing.width {
   -webkit-transition-property: width, visibility;
   transition-property: width, visibility;
