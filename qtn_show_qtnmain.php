@@ -13,7 +13,8 @@
 				</div>
 				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 					<?php
-						$rs = $db->findAll('qtn')->execute();
+    					$date = date('Y-m-d');
+                        $rs = $db->specifytable('*','qtn',"qtn_enable = 1 AND '$date' BETWEEN qtn_datestart AND qtn_dateend")->execute();
 						foreach($rs as $rsshow){?>
 						<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4" style="padding:16px;float:left;">
 							<a class="btn btn-light col-12 qtnblock shadow" style="background-color:<?php echo $rsshow['qtn_color'];?>;" href="<?php echo $rsshow['qtn_link'];?>" role="button"><?php echo $rsshow['qtn_name'];?></a>
