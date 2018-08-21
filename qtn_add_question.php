@@ -1,16 +1,16 @@
 <?php
     $id = $_GET['id'];
     $form = new form();
-    $lbname = new label('ชื่อแบบสอบถาม : ');
-    $lbdatestart = new label('วันเริ่ม : ');
-    $lbdateend = new label('วันสิ้นสุด : ');
-    $lblink = new label('ลิ้ง : ');
-    $lbcolor = new label('สี : ');
+    $lbname = new label('ชื่อแบบสอบถาม ');
+    $lbdatestart = new label('วันที่เริ่มประกาศแบบสอบถาม');
+    $lbdateend = new label('วันที่แบบสอบถามสิ้นสุด');
+    $lblink = new label('แนบลิ้งที่ต้องการ');
+    $lbcolor = new label('สีป้ายประกาศ');
     $lbtqtnenable = new label("สถานะการใช้งาน :");
     $txtname = new textfield('qtn_name','','form-control','','');
     $txtlink = new textfield('qtn_link','','form-control','','');
-    $txtdatestart = new textfieldcalendarreadonly('qtn_datestart','datetimepicker1','','form-control','input-group-addon btn calen','datetimepicker1');
-    $txtdateend = new textfieldcalendarreadonly('qtn_dateend','datetimepicker2','','form-control','input-group-addon btn calen','datetimepicker2');
+    $txtdatestart = new textfieldcalendarreadonly('qtn_datestart','datetimepicker1','','form-control','input-group-addon','datetimepicker1');
+    $txtdateend = new textfieldcalendarreadonly('qtn_dateend','datetimepicker2','','form-control','input-group-addon','datetimepicker2');
     $datetime = date("Y-m-d H:i");
     $radioqtnenable = new radioGroup();
     $radioqtnenable->name = 'qtn_enable';
@@ -40,51 +40,90 @@
         $radioqtnenable->add('ไม่สามารถใช้งานได้',0,'checked');
     	}
     }
-	echo '<div class="newaddbox">';
-    echo $form->open("form_reg","form","","qtn_insert_question.php","");
-    echo $lbname.$txtname;
-	echo $lbdatestart.$txtdatestart;
-	?>
-<!--
-	<div class='date-form dayinbox col-md-12 form-horizontal control-group controls input-group'>
-									<div class='input-group date' id ="datetimepicker1">
-										<input type='text' class="form-control datetimepicker " name="qtn_datestart" id='date1' readonly/>
-											<span class="input-group-addon">
-												<span class="glyphicon glyphicon-calendar"></span>
-											</span>
-									</div>
-								</div>
--->
-    <?php
-	echo $lbdateend.$txtdateend;
-	?>
-<!--
-	<div class='date-form dayinbox col-md-12 form-horizontal control-group controls input-group'>
-									<div class='input-group date' id ="datetimepicker2">
-										<input type='text' class="form-control datetimepicker" name="qtn_dateend" id='date2' readonly/>
-											<span class="input-group-addon datetimepicker-addon">
-												<span class="glyphicon glyphicon-calendar"></span>
-											</span>
-									</div>
-								</div>
--->
-	<?php
-	echo $lbcolor;?>
-	<input  type="color" id="qtn_color" name="qtn_color" value="#ff0000">
-	<input  type="text" id="color_rgb" name="qtn_color">
-	<?php
-	echo $lblink.$txtlink;
-    echo $lbtqtnenable.$radioqtnenable;
-    ?>
-
-        <input type='hidden' name='user_user_id' value='<?php echo $_SESSION['user_id']?>'/>
-        <input type='hidden' name='qtn_datereg' value='<?php echo $datetime; ?>'/>
-        <input type='hidden' name='qtn_id' value='<?php echo $id; ?>'/>
-
-    <?php
-    echo "<div class='newaddok'>".$button."</div>";
+echo $form->open("form_reg","form","col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","qtn_insert_question.php","");
+?>
+<div class="row">
+	<div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3"></div>
+	<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6" style="padding-top:16px;background-color:#ffffff;border:solid 1px #E0E0E0;border-radius:7px;">
+		<div class="row">
+			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12"  style="border-bottom:solid 1px #E0E0E0;">
+				<h4>เพิ่มแบบสอบถาม</h4>
+			</div>
+			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3">
+				<?php echo $lbname; ?>
+			</div>
+			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+				<?php echo $txtname; ?>
+			</div>
+			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3">
+				<div class="row">
+					<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4" style="padding-right:0px;padding-top:5px;">
+						<?php echo $lbdatestart; ?>
+					</div>
+					<div class='date-form dayinbox col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8 form-horizontal control-group controls input-group'>
+						<div class='input-group date' id ="datetimepicker1">
+							<?php echo $txtdatestart; ?>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3">
+				<div class="row">
+					<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4" style="padding-right:0px;padding-top:5px;">
+						<?php echo $lbdateend; ?>
+					</div>
+					<div class='date-form dayinbox col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8 form-horizontal control-group controls input-group'>
+						<div class='input-group date' id ="datetimepicker1">
+							<?php echo $txtdateend; ?>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3">
+				<div class="row">
+					<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4" style="float:left;padding-top:5px;">
+						<?php echo $lbcolor; ?>
+					</div>
+					<div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8" style="float:left;">
+						<input class="col-6" type="color" id="qtn_color" name="qtn_color" value="#ff0000" style="height:38px;float:left;border-radius:0.25rem;">
+						<input class="col-6" type="text" id="color_rgb" name="qtn_color" style="height:38px;float:left;border-radius:0.25rem;">
+					</div>
+				</div>
+			</div>
+			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3">
+				<?php echo $lblink; ?>
+			</div>
+			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+				<?php echo $txtlink;?>
+			</div>
+			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3">
+				<div class="row">
+					<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
+						<?php echo $lbtqtnenable; ?>
+					</div>
+					<div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8">
+						<?php echo $radioqtnenable;?>
+					</div>
+				</div>		
+			</div>
+			<input type='hidden' name='user_user_id' value='<?php echo $_SESSION['user_id']?>'/>
+			<input type='hidden' name='qtn_datereg' value='<?php echo $datetime; ?>'/>
+			<input type='hidden' name='qtn_id' value='<?php echo $id; ?>'/>
+			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-1" style="padding-bottom:16px;">
+				<div class="row">
+					<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4"></div>
+					<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
+						<?php echo $button; ?>
+					</div>
+					<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3"></div>
+</div>
+<?php
     echo $form->close();
-	echo '</div>';
 ?>
 <script>
 	 $(function () {
