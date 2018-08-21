@@ -1,6 +1,4 @@
-<div class="bg-success" style="padding:15px;">
-    <i><img src="images/icons/glyphicons-609-newspaper.png" style="width: 17px; height: 15px;"></i> News
-</div>
+
 <?php
             $columns = array('news_head','news_date','user_name');
             if(empty($_GET["subpage"])){
@@ -9,6 +7,11 @@
             $page = (int) (!isset($_GET["subpage"]) ? 0 : $_GET["subpage"]);
 			$limit = 8; //จำนวนแสดงต่อหน้า
 			$startpoint = ($page * $limit) - $limit;
+			?>
+			            <div class="col-md-12" style="float: left;margin-top: 10px;">
+                <div class="col-md-2" style="float: left;"><a href="admin_index.php?url=news_add_news.php" class="btn btn-success">เพิ่มเมนูย่อย</a>
+                </div>
+			<?php
 
 			$rs2 = "problem,subzoo,typetools,subtypetools  where problem.subzoo_subzoo_id = subzoo.subzoo_id && problem.subtypetools_typetools_typetools_id = subtypetools.subtypetools_id && subtypetools.typetools_typetools_id = typetools.typetools_id";
 			$rs = $db->findByPK2Limit('news','user','news.user_user_id','user.user_id',$startpoint,$limit)->execute();

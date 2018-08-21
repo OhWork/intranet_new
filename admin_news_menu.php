@@ -5,7 +5,7 @@
                 </a>
               <!-- sub menu -->
               <ul class="sub-menu collapse" id="new">
-	                <a class="nav-link" href="#">
+	                <a class="nav-link" href="admin_index.php?url=news_show_news.php">
 	                  จัดการข่าว
 	                </a>
 	                <a class="nav-link" href="#">
