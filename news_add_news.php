@@ -11,7 +11,7 @@
     $txtdateend = new textfieldcalendarreadonly('qtn_dateend','datetimepicker2','','form-control','input-group-addon btn calen','datetimepicker2');
     $txtheadnews = new textfield('news_head','','form-control','','');
     $button = new buttonok("ต่อไป","","btn btn-success btn-lg btn-block bt3success col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","");
-      if(!empty($_GET['user_id'])){
+    if(!empty($_GET['user_id'])){
 	$id = $_GET['user_id'];
 	$r = $db->findByPK('user','user_id',$id)->executeRow();
 	$txtname= $r['user_name'];

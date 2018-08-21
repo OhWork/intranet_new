@@ -12,8 +12,8 @@
 	                  ตั้งค่า
 	                </a>
 	                 <ul class="sub-menu collapse" id="newsetting1">
-				          <a class="nav-link" href="#"><span data-feather="chevron-right"></span>1</a>
-				          <a class="nav-link" href="#"><span data-feather="chevron-right"></span>2</a>
+				          <a class="nav-link" href="admin_index.php?url=news_show_typenews.php"><span data-feather="chevron-right"></span>จัดการชนิดช่าวสาร</a>
+				          <a class="nav-link" href="admin_index.php?url=news_show_typeDesign.php"><span data-feather="chevron-right"></span>จัดการชนิดรูปแบบ</a>
 		             </ul>
               </ul>
               <!-- end sub menu -->
