@@ -42,7 +42,7 @@
 	                </ul>
 				</li>
 				<li class="nav-item">
-				<a class="nav-link collapsed" href="#hrs" data-toggle="collapse" data-target="#hrs"><span data-feather="check-square"></span>ระบบขอหนังสือรับรอง</a>
+				<a class="nav-link collapsed" href="#hrs" data-toggle="collapse" data-target="#hrs"><span data-feather="file"></span>ระบบขอหนังสือรับรอง</a>
                 <!-- sub menu -->
 	                <ul class="sub-menu collapse mmpd" id="hrs">
 						<a class="nav-link" href="index.php?url=hrs_add_certificate.php">ขอทำหนังสือรับรอง</a>
