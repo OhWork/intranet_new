@@ -34,6 +34,7 @@
 		$_SESSION['systemallow_touristreport'] = $rsallow['systemallow_touristreport'];
 		$_SESSION['systemallow_km'] = $rsallow['systemallow_km'];
 		$_SESSION['systemallow_hrs'] = $rsallow['systemallow_hrs'];
+		$_SESSION['systemallow_qtn'] = $rsallow['systemallow_qtn'];
 		$_SESSION['subzoo_subzoo_id'] = $rs['subzoo_subzoo_id'];
 		$_SESSION['subzoo_zoo_zoo_id'] = $rs['subzoo_zoo_zoo_id'];
 		?>
