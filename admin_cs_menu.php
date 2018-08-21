@@ -105,7 +105,7 @@
 						<?php }?>
 					</ul>
 			</ul>
-			<a class="nav-link collapsed py-1" href="admin_index.php?url=cs_showupweb.php"><span data-feather="settings"></span>รายการขอคำร้องขึ้นเว็บไซต์</a>
+			<a class="nav-link collapsed py-1" href="admin_index.php?url=cs_showupweb.php">รายการขอคำร้องขึ้นเว็บไซต์</a>
 		    <a class="nav-link collapsed py-1" href="#cssetting" data-toggle="collapse" data-target="#cssetting"><span data-feather="settings"></span>ตั้งค่า<span data-feather="chevron-right"></span></a>
 		        <ul class="sub-menu collapse mmpd2" id="cssetting">
 				    <a class="nav-link" href="admin_index.php?url=cs_add_typetools.php">จัดการชนิดอุปกรณ์ (แจ้งซ่อม)</a>
