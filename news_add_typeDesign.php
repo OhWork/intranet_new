@@ -1,11 +1,14 @@
 <?php
   $form = new form();
   $id = $_GET['id'];
-  $lbtypeDesignnews = new label("ชื่อชนิดรูปแบบ :");
+  $lbtypeDesignnewsname = new label("ชื่อชนิดรูปแบบ :");
+  $lbtypeDesignnewslink = new label("ลิ้ง :");
   $lbtypeDesignnewsenable = new label("สถานะการใช้งาน :");
   $txttypeDesignnewsname = new textfield('typeDesign_name','','form-control css-require','');
+  $txttypeDesignnewslink = new textfield('typeDesign_link','','form-control css-require','');
+  $inputpic = new inputFile('typeDesignnews_image','','');
   $radiotypeNewsenable = new radioGroup();
-  $radiotypeNewsenable->name = 'typeNews_enable';
+  $radiotypeNewsenable->name = 'typeDesignnews_enable';
   if(empty($id)){
     	$radiotypeNewsenable->add('ใช้งานได้',1,'');
     	$radiotypeNewsenable->add('ไม่สามารถใช้งานได้',0,'checked');
@@ -13,13 +16,13 @@
   $submit = new buttonok("ยืนยัน","","btn btn-success col-md-12","");
   
   if(!empty($_GET['id'])){
-	$r = $db->findByPK('typeNews','typeNews_id',$id)->executeRow();
+	$r = $db->findByPK('typeDesignnews','typeDesignnews_id',$id)->executeRow();
 	$txttypeNews->value = $r['typeNews_name'];
 	$txttypeNewsno->value = $r['typeNews_no'];
-  if($r["typeNews_enable"] == 1){
+  if($r["typeDesignnews_enable"] == 1){
     	$radiotypeNewsenable->add('ใช้งานได้',1,'checked');
     	$radiotypeNewsenable->add('ไม่สามารถใช้งานได้',0,'');
-    	}else if($r['typeNews_enable'] == 0){
+    	}else if($r['typeDesignnews_enable'] == 0){
         $radiotypeNewsenable->add('ใช้งานได้',1,'');
         $radiotypeNewsenable->add('ไม่สามารถใช้งานได้',0,'checked');
     	}
@@ -33,16 +36,10 @@ echo $form->open("form_reg","form","col-xl-12 col-lg-12 col-md-12 col-sm-12 col-
 				<h4>เพิ่มชนิดรูปแบบ</h4>
 			</div>
 			<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3'>
-				<?php echo $lbtypeNews ?>
+				<?php echo $lbtypeDesignnewsname.$txttypeDesignnewsname; ?>
 			</div>
 			<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 form-group has-feedback'>
-				<?php echo $txttypeNews ?>
-			</div>
-			<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12'>
-				<?php echo $lbtypeNewsno ?>
-			</div>
-			<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 form-group has-feedback'>
-				<?php echo $txttypeNewsno ?>
+				<?php echo $lbtypeDesignnewslink.$txttypeDesignnewslink; ?>
 			</div>
 			<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12'>
 				<div class="row">
