@@ -31,7 +31,7 @@
 
 	}
 	else{
-			$target_dir = 'images/test/';
+			$target_dir = 'temp/';
 			$target_file = $target_dir.basename($_FILES['filUpload']['name']);
 			$target_dir_save = 'storeuploadweb/'.basename($_FILES['filUpload']['name']);
 			move_uploaded_file($_FILES['filUpload']['tmp_name'], $target_dir_save);
