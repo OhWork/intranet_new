@@ -1,5 +1,5 @@
 <?php
-$inactive = 18000000000;
+$inactive = 1;
 	if( !isset($_SESSION['timeout']) )
 	$_SESSION['timeout'] = time() + $inactive;
 	$session_life = time() - $_SESSION['timeout'];

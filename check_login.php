@@ -46,14 +46,14 @@
 		    <div class="modal-content">
 		
 		      <!-- Modal Header -->
-		      <div class="modal-header">
-		        <button type="button" class="close" data-dismiss="modal">&times;</button>
-		      </div>
-		
+		      <div class="modal-header"></div>
 		      <!-- Modal body -->
 		      <div class="modal-body">
 		        ยินดีต้อนรับเข้าสู่ระบบ
 		      </div>
+		       <div class="modal-footer">
+			       <a href="admin_index.php"><button type="button" class="btn btn-primary">Ok</button></a>
+		       </div>
 		    </div>
 		  </div>
 		</div>
