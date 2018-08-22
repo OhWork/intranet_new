@@ -690,6 +690,7 @@
 	padding-right: 8px;
 	font-size: small;
 }
+.edittext {color:#ffffff;}
 .waitbox , .waitbox:hover {
 	color:#fff;
 }
@@ -844,7 +845,9 @@
 	margin-right : 70%;
 }
 .colorcfmenu{
-	background-color: #01579b;
+	background-color: #0069d9;
+	border-color: #0062cc;
+	color:#ffffff;
 }
 .pcfmenu{
 	word-warp:break-word;
@@ -1021,14 +1024,11 @@
   transition-duration: 0.50s;
   -webkit-transition-timing-function: ease;
   transition-timing-function: ease;
-}
-
-.animat-test{
- animation: fadeInRight .5s ease-in 1 forwards;
+  animation: fadeInright .5s ease-in 1 forwards;
   animation-fill-mode:both;
 }
-
-@keyframes fadeInRight {
+.collapsing a :nth-child(even) { transition-delay: calc(n*1s); }
++@keyframes fadeInRight {
    0% {
       opacity: 0;
       transform: translateX(20px);
@@ -1037,10 +1037,14 @@
       opacity: 1;
       transform: translateX(0);
    }
-}
+
 .collapsing.width {
   -webkit-transition-property: width, visibility;
   transition-property: width, visibility;
   width: 0;
   height: auto;
+}
+.newmini {
+	border-top-left-radius:4px;
+	border-top-right-radius:4px;
 }
