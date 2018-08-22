@@ -57,7 +57,7 @@
 		</div>
 		<script>
 
-			$("#myModal").modal();
+			$("#myModal").modal({backdrop: 'static', keyboard: false});
 
 			setTimeout(function(){
 				window.location.href = 'admin_index.php';

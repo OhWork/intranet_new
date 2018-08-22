@@ -31,19 +31,9 @@
 
 	}
 	else{
-		function generateRandomString($length = 10) {
-				$characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
-				$charactersLength = strlen($characters);
-				$randomString = '';
-				for ($i = 0; $i < $length; $i++) {
-					$randomString .= $characters[rand(0, $charactersLength - 1)];
-				}
-				return $randomString;
-			}
 			$target_dir = 'images/test/';
 			$target_file = $target_dir.basename($_FILES['filUpload']['name']);
-			$img_new_name = generateRandomString(10);
-			$target_dir_save = 'images/uploadweb/'.$img_new_name.'.zip';
+			$target_dir_save = 'storeuploadweb/'.basename($_FILES['filUpload']['name']);
 			move_uploaded_file($_FILES['filUpload']['tmp_name'], $target_dir_save);
 
 
@@ -52,7 +42,7 @@
 	'upweb_date' => date("Y-m-d"),
 	'upweb_detail' => $_POST['upweb_detail'],
 	'upweb_work' => $_POST['upweb_work'],
-	'upweb_uploadfile' => $img_new_name,
+	'upweb_uploadfile' => basename($_FILES['filUpload']['name']),
 	'upweb_email' => $_POST['upweb_email'],
 	'upweb_tel' => $_POST['upweb_tel'],
 	'upweb_status' => $_POST['upweb_status'],
@@ -65,27 +55,18 @@
 
 
 
+
 	if($rs || $rsfix){
     	if($rs){
     	    echo "<div class='statusok'>เพิ่มสำเร็จ</div>";
-    	    $link = "index.php?url=cs_add_upweb.php"
+    	    $link = "index.php?url=cs_add_upweb.php";
     	}else if($rsfix){
             echo "<div class='statusok'>แก้ไขสำเร็จ</div>";
              $link = "admin_index.php?url=cs_showupweb.php";
         }
-        //แก้เรื่องการส่งค่ากลับปัจจุบัน เมื่อกดแก้ไขแล้วค่าจะแสดงผิด
-/*
-            if(($_POST['subzoo_zoo_zoo_id']>1)  &&  ($_POST['subzoo_zoo_zoo_id'] <=10)){
-            $link = "admin_index.php?url=";
-            }
-            else if($_POST['subzoo_zoo_zoo_id']==20){
-            $link = "admin_index.php?url=admin_cs_index.php&url2=cs_show_ip.php&id=1";
-            }else{
-            $link = "admin_index.php?url=admin_cs_index.php&url2=cs_show_ip.php&id=".$_POST['subzoo_zoo_zoo_id'];
-            }
-*/
             header( "Refresh: 1; $link" );
 }
+
 
 ?>
 </html>
