@@ -107,102 +107,102 @@
             var conferid = $('#confer_id').val();
 			console.log(conferid);
 			if(conferid == 1){
-				$('#roomzpo1').removeClass('btn-info');
+				$('#roomzpo1').removeClass('btn-primary');
  				$('#roomzpo1').addClass('disabled');
 				$('#roomzpo1').addClass('colorcfmenu');
 			}
 			else if(conferid == 2){
-				$('#roomzpo2').removeClass('btn-info');
+				$('#roomzpo2').removeClass('btn-primary');
  				$('#roomzpo2').addClass('disabled');
 				$('#roomzpo2').addClass('colorcfmenu');
 			}
 			else if(conferid == 3){
-				$('#roomzpo3').removeClass('btn-info');
+				$('#roomzpo3').removeClass('btn-primary');
  				$('#roomzpo3').addClass('disabled');
 				$('#roomzpo3').addClass('colorcfmenu');
 			}
 			else if(conferid == 4){
-				$('#roomdusit1').removeClass('btn-info');
+				$('#roomdusit1').removeClass('btn-primary');
  				$('#roomdusit1').addClass('disabled');
 				$('#roomdusit1').addClass('colorcfmenu');
 			}
 			else if(conferid == 5){
-				$('#roomdusit2').removeClass('btn-info');
+				$('#roomdusit2').removeClass('btn-primary');
  				$('#roomdusit2').addClass('disabled');
 				$('#roomdusit2').addClass('colorcfmenu');
 			}
 			else if(conferid == 6){
-				$('#roomdusit3').removeClass('btn-info');
+				$('#roomdusit3').removeClass('btn-primary');
  				$('#roomdusit3').addClass('disabled');
 				$('#roomdusit3').addClass('colorcfmenu');
 			}
 			else if(conferid == 7){
-				$('#roomdusit4').removeClass('btn-info');
+				$('#roomdusit4').removeClass('btn-primary');
  				$('#roomdusit4').addClass('disabled');
 				$('#roomdusit4').addClass('colorcfmenu');
 			}
 			else if(conferid == 8){
-				$('#roomkorach1').removeClass('btn-info');
+				$('#roomkorach1').removeClass('btn-primary');
  				$('#roomkorach1').addClass('disabled');
 				$('#roomkorach1').addClass('colorcfmenu');
 			}
 			else if(conferid == 9){
-				$('#roomkorach2').removeClass('btn-info');
+				$('#roomkorach2').removeClass('btn-primary');
  				$('#roomkorach2').addClass('disabled');
 				$('#roomkorach2').addClass('colorcfmenu');
 			}
 			else if(conferid == 10){
-				$('#roomkhonkean1').removeClass('btn-info');
+				$('#roomkhonkean1').removeClass('btn-primary');
  				$('#roomkhonkean1').addClass('disabled');
 				$('#roomkhonkean1').addClass('colorcfmenu');
 			}
 			else if(conferid == 11){
-				$('#roomchangmai1').removeClass('btn-info');
+				$('#roomchangmai1').removeClass('btn-primary');
  				$('#roomchangmai1').addClass('disabled');
 				$('#roomchangmai1').addClass('colorcfmenu');
 			}
 			else if(conferid == 12){
-				$('#roomubon1').removeClass('btn-info');
+				$('#roomubon1').removeClass('btn-primary');
  				$('#roomubon1').addClass('disabled');
 				$('#roomubon1').addClass('colorcfmenu');
 			}
 			else if(conferid == 13){
-				$('#roomsongkhla1').removeClass('btn-info');
+				$('#roomsongkhla1').removeClass('btn-primary');
  				$('#roomsongkhla1').addClass('disabled');
 				$('#roomsongkhla1').addClass('colorcfmenu');
 			}
 			else if(conferid == 14){
-				$('#roomsongkhla1').removeClass('btn-info');
+				$('#roomsongkhla1').removeClass('btn-primary');
  				$('#roomsongkhla1').addClass('disabled');
 				$('#roomsongkhla1').addClass('colorcfmenu');
 			}
 			else if(conferid == 15){
-				$('#roomkkoz1').removeClass('btn-info');
+				$('#roomkkoz1').removeClass('btn-primary');
  				$('#roomkkoz1').addClass('disabled');
 				$('#roomkkoz1').addClass('colorcfmenu');
 			}
 			else if(conferid == 16){
-				$('#roomubon2').removeClass('btn-info');
+				$('#roomubon2').removeClass('btn-primary');
  				$('#roomubon2').addClass('disabled');
 				$('#roomubon2').addClass('colorcfmenu');
 			}
 			else if(conferid == 17){
-				$('#roomsr2').removeClass('btn-info');
+				$('#roomsr2').removeClass('btn-primary');
  				$('#roomsr2').addClass('disabled');
 				$('#roomsr2').addClass('colorcfmenu');
 			}
 			else if(conferid == 18){
-				$('#roomubon3').removeClass('btn-info');
+				$('#roomubon3').removeClass('btn-primary');
  				$('#roomubon3').addClass('disabled');
 				$('#roomubon3').addClass('colorcfmenu');
 			}
 			else if(conferid == 19){
-				$('#roomkkoz2').removeClass('btn-info');
+				$('#roomkkoz2').removeClass('btn-primary');
  				$('#roomkkoz2').addClass('disabled');
 				$('#roomkkoz2').addClass('colorcfmenu');
 			}
 			else if(conferid == 20){
-				$('#roomkkoz3').removeClass('btn-info');
+				$('#roomkkoz3').removeClass('btn-primary');
  				$('#roomkkoz3').addClass('disabled');
 				$('#roomkkoz3').addClass('colorcfmenu');
 			}
@@ -216,17 +216,17 @@
 							?>
 							<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mrgcfmenu">
 								<div class="row">
-									<a id="roomzpo1" class="btn btn-info col-12 pcfmenu" href="index.php?url=cf_calendar.php&id=1" at='1'>ห้องประชุม 1</a>
+									<a id="roomzpo1" class="btn btn-primary col-12 pcfmenu" href="index.php?url=cf_calendar.php&id=1" at='1'>ห้องประชุม 1</a>
 								</div>
 							</div>
 							<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" style="margin-top:8px;">
 								<div class="row">
-									<a id="roomzpo2" class="btn btn-info col-12 pcfmenu" href="index.php?url=cf_calendar.php&id=2" at='2'>ห้องประชุม 2</a>
+									<a id="roomzpo2" class="btn btn-primary col-12 pcfmenu" href="index.php?url=cf_calendar.php&id=2" at='2'>ห้องประชุม 2</a>
 								</div>
 							</div>
 							<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" style="margin-top:8px;">
 								<div class="row">
-									<a id="roomzpo3" class="btn btn-info col-12 pcfmenu" href="index.php?url=cf_calendar.php&id=3" at='3'>ห้องประชุม 3</a>
+									<a id="roomzpo3" class="btn btn-primary col-12 pcfmenu" href="index.php?url=cf_calendar.php&id=3" at='3'>ห้องประชุม 3</a>
 								</div>
 							</div>
 							<?php
@@ -237,22 +237,22 @@
 							?>
 							<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mrgcfmenu">
 								<div class="row">
-									<a id="roomdusit1" class="btn btn-info col-12 pcfmenu" href="index.php?url=cf_calendar.php&id=4" at='4'>ห้องประชุมเก้งเผือก</a>
+									<a id="roomdusit1" class="btn btn-primary col-12 pcfmenu" href="index.php?url=cf_calendar.php&id=4" at='4'>ห้องประชุมเก้งเผือก</a>
 								</div>
 							</div>
 							<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" style="margin-top:8px;">
 								<div class="row">
-									<a id="roomdusit2" class="btn btn-info col-12 pcfmenu" href="index.php?url=cf_calendar.php&id=5" at='5'>ห้องประชุมกวางดาว</a>
+									<a id="roomdusit2" class="btn btn-primary col-12 pcfmenu" href="index.php?url=cf_calendar.php&id=5" at='5'>ห้องประชุมกวางดาว</a>
 								</div>
 							</div>
 							<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" style="margin-top:8px;">
 								<div class="row">
-									<a id="roomdusit3" class="btn btn-info col-12 pcfmenu" href="index.php?url=cf_calendar.php&id=6" at='6'>ห้องประชุมมะลิ</a>
+									<a id="roomdusit3" class="btn btn-primary col-12 pcfmenu" href="index.php?url=cf_calendar.php&id=6" at='6'>ห้องประชุมมะลิ</a>
 								</div>
 							</div>
 							<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12v" style="margin-top:8px;">
 								<div class="row">
-									<a id="roomdusit4" class="btn btn-info col-12 pcfmenu" href="index.php?url=cf_calendar.php&id=7" at='7'>ห้องประชุมสักทอง</a>
+									<a id="roomdusit4" class="btn btn-primary col-12 pcfmenu" href="index.php?url=cf_calendar.php&id=7" at='7'>ห้องประชุมสักทอง</a>
 								</div>
 							</div>
 							<?php
@@ -263,12 +263,12 @@
 							?>
 							<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mrgcfmenu">
 								<div class="row">
-									<a id="roomkorach1" class="btn btn-info col-12 pcfmenu" href="index.php?url=cf_calendar.php&id=8" at='4'>ห้องประชุมฝ่ายบริหาร</a>
+									<a id="roomkorach1" class="btn btn-primary col-12 pcfmenu" href="index.php?url=cf_calendar.php&id=8" at='4'>ห้องประชุมฝ่ายบริหาร</a>
 								</div>
 							</div>
 							<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" style="margin-top:8px;">
 								<div class="row">
-									<a id="roomkorach2" class="btn btn-info col-12 pcfmenu" href="index.php?url=cf_calendar.php&id=9" at='5'>ห้องประชุมโรงบาลสัตว์</a>
+									<a id="roomkorach2" class="btn btn-primary col-12 pcfmenu" href="index.php?url=cf_calendar.php&id=9" at='5'>ห้องประชุมโรงบาลสัตว์</a>
 								</div>
 							</div>
 							<?php
@@ -279,7 +279,7 @@
 							?>
 							<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mrgcfmenu">
 								<div class="row">
-									<a id="roomkhonkean1" class="btn btn-info col-12 pcfmenu" href="index.php?url=cf_calendar.php&id=10" at='4'>ห้องประชุมฝ่ายบริหารงานทั่วไป</a>
+									<a id="roomkhonkean1" class="btn-primary col-12 pcfmenu" href="index.php?url=cf_calendar.php&id=10" at='4'>ห้องประชุมฝ่ายบริหารงานทั่วไป</a>
 								</div>
 							</div>
 
@@ -291,7 +291,7 @@
 							?>
 							<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mrgcfmenu">
 								<div class="row">
-									<a id="roomchangmai1" class="btn btn-info col-12 pcfmenu" href="index.php?url=cf_calendar.php&id=11" at='4'>ห้องประชุมชั้น 2 อาคารบริการนักท่องเที่ยว</a>
+									<a id="roomchangmai1" class="btn btn-primary col-12 pcfmenu" href="index.php?url=cf_calendar.php&id=11" at='4'>ห้องประชุมชั้น 2 อาคารบริการนักท่องเที่ยว</a>
 								</div>
 							</div>
 
@@ -305,17 +305,17 @@
 								<div class="row">
 									<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" style="margin-top:8px;">
 										<div class="row">
-											<a id="roomubon1" class="btn btn-info col-12 pcfmenu" href="index.php?url=cf_calendar.php&id=12" at='4'>ห้องประชุมอาคารสำนักงาน</a>
+											<a id="roomubon1" class="btn btn-primary col-12 pcfmenu" href="index.php?url=cf_calendar.php&id=12" at='4'>ห้องประชุมอาคารสำนักงาน</a>
 										</div>
 									</div>
 									<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" style="margin-top:8px;">
 										<div class="row">
-											<a id="roomubon2" class="btn btn-info col-12 pcfmenu" href="index.php?url=cf_calendar.php&id=16" at='4'>ห้องประชุม 2</a>
+											<a id="roomubon2" class="btn btn-primary col-12 pcfmenu" href="index.php?url=cf_calendar.php&id=16" at='4'>ห้องประชุม 2</a>
 										</div>
 									</div>
 									<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" style="margin-top:8px;">
 										<div class="row">
-											<a id="roomubon3" class="btn btn-info col-12 pcfmenu" href="index.php?url=cf_calendar.php&id=18" at='4'>ห้องประชุม 1 (ห้องประชุมใหญ่)</a>
+											<a id="roomubon3" class="btn btn-primary col-12 pcfmenu" href="index.php?url=cf_calendar.php&id=18" at='4'>ห้องประชุม 1 (ห้องประชุมใหญ่)</a>
 										</div>
 									</div>
 								</div>
@@ -329,7 +329,7 @@
 							?>
 							<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mrgcfmenu">
 								<div class="row">
-									<a id="roomsongkhla1" class="btn btn-info col-12 pcfmenu" href="index.php?url=cf_calendar.php&id=13" at='4'>ห้องประชุมนกเงือก</a>
+									<a id="roomsongkhla1" class="btn btn-primary col-12 pcfmenu" href="index.php?url=cf_calendar.php&id=13" at='4'>ห้องประชุมนกเงือก</a>
 								</div>
 							</div>
 
@@ -343,17 +343,17 @@
 								<div class="row">
 									<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" style="margin-top:8px;">
 										<div class="row">
-											<a id="roomkkoz1" class="btn btn-info col-12 pcfmenu" href="index.php?url=cf_calendar.php&id=15" at='4'>ห้องประชุมบาหลี</a>
+											<a id="roomkkoz1" class="btn btn-primary col-12 pcfmenu" href="index.php?url=cf_calendar.php&id=15" at='4'>ห้องประชุมบาหลี</a>
 										</div>
 									</div>
 									<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" style="margin-top:8px;">
 										<div class="row">
-											<a id="roomkkoz2" class="btn btn-info col-12 pcfmenu" href="index.php?url=cf_calendar.php&id=19" at='4'>ห้องประชุมบำรุงสัตว์</a>
+											<a id="roomkkoz2" class="btn btn-primary col-12 pcfmenu" href="index.php?url=cf_calendar.php&id=19" at='4'>ห้องประชุมบำรุงสัตว์</a>
 										</div>
 									</div>
 									<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" style="margin-top:8px;">
 										<div class="row">
-											<a id="roomkkoz3" class="btn btn-info col-12 pcfmenu" href="index.php?url=cf_calendar.php&id=20" at='4'>ห้องประชุมศูนย์บริการนักท่องเที่ยว(ห้องม่วง)</a>
+											<a id="roomkkoz3" class="btn btn-primary col-12 pcfmenu" href="index.php?url=cf_calendar.php&id=20" at='4'>ห้องประชุมศูนย์บริการนักท่องเที่ยว(ห้องม่วง)</a>
 										</div>
 									</div>
 								</div>
@@ -367,7 +367,7 @@
 							?>
 							<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mrgcfmenu">
 								<div class="row">
-									<a id="roomsr1" class="btn btn-info col-12 pcfmenu" href="index.php?url=cf_calendar.php&id=17" at='4'>ห้องประชุมคชอาณาจักร</a>
+									<a id="roomsr1" class="btn btn-primary col-12 pcfmenu" href="index.php?url=cf_calendar.php&id=17" at='4'>ห้องประชุมคชอาณาจักร</a>
 								</div>
 							</div>
 							<?php
