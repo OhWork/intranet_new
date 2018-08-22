@@ -9,7 +9,7 @@
 			$startpoint = ($page * $limit) - $limit;
 			?>
 			            <div class="col-md-12" style="float: left;margin-top: 10px;">
-                <div class="col-md-2" style="float: left;"><a href="admin_index.php?url=news_add_news.php" class="btn btn-success">เพิ่มเมนูย่อย</a>
+                <div class="col-md-2" style="float: left;"><a href="admin_index.php?url=news_add_news.php" class="btn btn-success">เพิ่มข่าว</a>
                 </div>
 			<?php
 

@@ -1,11 +1,9 @@
 <?php
   $form = new form();
   $id = $_GET['id'];
-  $lbtypeNews = new label("ชื่อชนิดรูปแบบ :");
-  $lbtypeNewsno = new label("ลำดับ :");
-  $lbtypeNewsenable = new label("สถานะการใช้งาน :");
-  $txttypeNews = new textfield('typeNews_name','','form-control css-require','');
-  $txttypeNewsno = new textfield('typeNews_no','','form-control css-require','');
+  $lbtypeDesignnews = new label("ชื่อชนิดรูปแบบ :");
+  $lbtypeDesignnewsenable = new label("สถานะการใช้งาน :");
+  $txttypeDesignnewsname = new textfield('typeDesign_name','','form-control css-require','');
   $radiotypeNewsenable = new radioGroup();
   $radiotypeNewsenable->name = 'typeNews_enable';
   if(empty($id)){
@@ -32,7 +30,7 @@ echo $form->open("form_reg","form","col-xl-12 col-lg-12 col-md-12 col-sm-12 col-
 	<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6 usubd">
 		<div class="row">
 			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-2" style="border-bottom:solid 1px #E0E0E0;">
-				<h4>เพิ่มชนิดข่าวสาร</h4>
+				<h4>เพิ่มชนิดรูปแบบ</h4>
 			</div>
 			<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3'>
 				<?php echo $lbtypeNews ?>

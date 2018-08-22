@@ -2,11 +2,13 @@
     $form = new form();
     $lbheadnews = new label('หัวข้อข่าว : ');
     $lbdetail = new label('รายละเอียด : ');
+    $lbpic = new label('ภาพปก : ');
         $lbdatestart = new label('วันเริ่ม : ');
     $lbdateend = new label('วันสิ้นสุด : ');
      $selecttypenews = new SelectFromDB();
      $selecttypenews->name = 'typeNews_typeNews_id';
      $selecttypenews->lists = 'โปรดระบุ ชนิดของข่าวสาร';
+     $filepic = new inputFile('','','');
      $txtdatestart = new textfieldcalendarreadonly('qtn_datestart','datetimepicker1','','form-control','input-group-addon btn calen','datetimepicker1');
     $txtdateend = new textfieldcalendarreadonly('qtn_dateend','datetimepicker2','','form-control','input-group-addon btn calen','datetimepicker2');
     $txtheadnews = new textfield('news_head','','form-control','','');
@@ -32,6 +34,7 @@
     echo $selecttypenews->selectFromTB('typeNews','typeNews_id','typeNews_name',$r['typeNews_typeNews_id']);
     echo $lbdatestart.$txtdatestart;
     echo $lbdateend.$txtdateend;
+    echo $lbpic.$filepic;
 	echo "วันและเวลา".DateThai($date)." ".$time;
 	
     echo "ผู้เขียน : ".$txtname." ".$txtlast;
