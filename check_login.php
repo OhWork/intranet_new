@@ -50,6 +50,7 @@
 		        ยินดีต้อนรับเข้าสู่ระบบ
 		      </div>
 		       <div class="modal-footer">
+			       <div id="showcountdown"></div>
 			       <a href="admin_index.php"><button type="button" class="btn btn-primary">Ok</button></a>
 		       </div>
 		    </div>
@@ -62,6 +63,18 @@
 			setTimeout(function(){
 				window.location.href = 'admin_index.php';
 			}, 5000);
+			var timeLeft = 4;
+			var elem = document.getElementById('showcountdown');
+			var timerId = setInterval(countdown, 1000);
+			
+			function countdown() {
+			    if (timeLeft == -1) {
+			        clearTimeout(timerId);
+			    } else {
+			        elem.innerHTML = timeLeft + ' seconds remaining';
+			        timeLeft--;
+			    }
+			}
 
 		</script>
 		<?php
