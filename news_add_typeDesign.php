@@ -51,7 +51,7 @@ echo $form->open("form_reg","form","col-xl-12 col-lg-12 col-md-12 col-sm-12 col-
 		    <div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 form-group has-feedback'>
 				<?php echo $lbtypeDesignnewslink.$inputpic; ?>
 			</div>
-			<input type='hidden' name='typeNews_id' value='<?php echo $_GET['id'];?>'/>
+			<input type='hidden' name='typeDesignnews_id' value='<?php echo $_GET['id'];?>'/>
 			<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3' style="margin-bottom: 16px;">
 				<div class='row'>
 					<div class='col-md-4'></div>

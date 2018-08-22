@@ -29,11 +29,10 @@
     	'log_ip' => $ipshow
     	));
 
-	}
-	else{
+	}else{
 			$target_dir = 'temp/';
 			$target_file = $target_dir.basename($_FILES['filUpload']['name']);
-			$target_dir_save = 'images/news/typeDesign'.basename($_FILES['filUpload']['name']);
+			$target_dir_save = 'images/news/typeDesign/'.basename($_FILES['filUpload']['name']);
 			move_uploaded_file($_FILES['filUpload']['tmp_name'], $target_dir_save);
 
 
@@ -42,7 +41,7 @@
 	'typeDesignnews_name' => $_POST['typeDesignnews_name'],
 	'typeDesignnews_link' => $_POST['typeDesignnews_link'],
 	'typeDesignnews_enable' => $_POST['typeDesignnews_enable'],
-	'typeDesignnews_image' => basename($_FILES['filUpload']['name'])
+	'typeDesignnews_image' => basename($_FILES['typeDesignnews_image']['name'])
 	));
 
 	}
@@ -53,6 +52,7 @@
 	if($rs || $rsfix){
     	if($rs){
     	    echo "<div class='statusok'>เพิ่มสำเร็จ</div>";
+    	    echo "";
     	    $link = "index.php?url=cs_add_upweb.php";
     	}else if($rsfix){
             echo "<div class='statusok'>แก้ไขสำเร็จ</div>";
