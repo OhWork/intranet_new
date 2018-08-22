@@ -45,8 +45,6 @@
 		  <div class="modal-dialog">
 		    <div class="modal-content">
 		
-		      <!-- Modal Header -->
-		      <div class="modal-header"></div>
 		      <!-- Modal body -->
 		      <div class="modal-body">
 		        ยินดีต้อนรับเข้าสู่ระบบ
