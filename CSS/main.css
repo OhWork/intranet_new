@@ -1024,25 +1024,19 @@
 }
 
 .animat-test{
- animation: fadeInLeft .5s ease-in 1 forwards;
+ animation: fadeInRight .5s ease-in 1 forwards;
   animation-fill-mode:both;
 }
 
-@keyframes fadeInLeft {
-    from {
-        opacity:0;
-        -webkit-transform: translatex(-100px);
-        -moz-transform: translatex(-100px);
-        -o-transform: translatex(-100px);
-        transform: translatex(-100px);
-    }
-    to {
-        opacity:1;
-        -webkit-transform: translatex(0);
-        -moz-transform: translatex(0);
-        -o-transform: translatex(0);
-        transform: translatex(0);
-    }
+@keyframes fadeInRight {
+   0% {
+      opacity: 0;
+      transform: translateX(20px);
+   }
+   100% {
+      opacity: 1;
+      transform: translateX(0);
+   }
 }
 .collapsing.width {
   -webkit-transition-property: width, visibility;

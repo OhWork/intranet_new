@@ -38,20 +38,15 @@
 		$_SESSION['subzoo_subzoo_id'] = $rs['subzoo_subzoo_id'];
 		$_SESSION['subzoo_zoo_zoo_id'] = $rs['subzoo_zoo_zoo_id'];
 		?>
-		<div class="alert alert-success">
-		  <strong>ยินดีต้อนรับเข้าสู๋ระบบ!</strong>
-		</div>
-
 		<script>
-		    var counter = 5;
-			var int = setInterval(function() {
-			    counter--;
-				console.log(counter);
-			    if (counter == 0) {
-			        clearInterval(int);
-			        window.location.href = 'admin_index.php';
-			    }
-			}, 1000);
+			var alertt = alert('ยินดีต้อนรับเข้าสู่ระบบ');
+
+			setTimeout(function(){
+			    alertt.close();
+				window.location.href = 'admin_index.php';
+			}, 30);
+
+
 		</script>
 		<?php
 		//header('location: admin_index.php');
@@ -74,7 +69,7 @@
 		?>
 		<script>
 			alert('ไอดีหรือรหัสผิดพลาด กรุณาลองใหม่');
-			window.location.href = 'index.php';
+			window.location.href = 'login.php';
 		</script>
 		<?php
 		//header('location: admin_index.php');
