@@ -10,6 +10,9 @@
         <link rel="stylesheet" href="CSS/bootstrap.css">
         <link rel="stylesheet" href="CSS/main.css">
           <title>ระบบintranet</title>
+		  <?php
+		  include_once 'inc_js.php';
+		  ?>
 	</head>
 <?php
 	include_once 'database/db_tools.php';
@@ -38,21 +41,36 @@
 		$_SESSION['subzoo_subzoo_id'] = $rs['subzoo_subzoo_id'];
 		$_SESSION['subzoo_zoo_zoo_id'] = $rs['subzoo_zoo_zoo_id'];
 		?>
+		<div class="modal" id="myModal">
+		  <div class="modal-dialog">
+		    <div class="modal-content">
+		
+		      <!-- Modal Header -->
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal">&times;</button>
+		      </div>
+		
+		      <!-- Modal body -->
+		      <div class="modal-body">
+		        ยินดีต้อนรับเข้าสู่ระบบ
+		      </div>
+		    </div>
+		  </div>
+		</div>
 		<script>
-			var alertt = alert('ยินดีต้อนรับเข้าสู่ระบบ');
+
+			$("#myModal").modal();
 
 			setTimeout(function(){
-			    alertt.close();
 				window.location.href = 'admin_index.php';
-			}, 30);
-
+			}, 5000);
 
 		</script>
 		<?php
 		//header('location: admin_index.php');
 		$log_user = $_SESSION['user_name']." ".$_SESSION['user_last'];
 		 //Log
-		if(getenv(HTTP_X_FORWARDED_FOR)){
+		if(@getenv(HTTP_X_FORWARDED_FOR)){
             $ip = $_SERVER['HTTP_X_FORWARDED_FOR']; // IP proxy
         }else{
             $ip = $_SERVER['REMOTE_ADDR'];
