@@ -1026,13 +1026,13 @@
   transition-timing-function: ease;
 }
 .animat-test{
- animation: fadeInLeft .5s ease-in 1 forwards;
+  animation: fadeInRight .5s ease-in 1 forwards;
   animation-fill-mode:both;
 }
-+@keyframes fadeInRight {
+@keyframes fadeInRight {
    0% {
       opacity: 0;
-      transform: translateX(20px);
+      transform: translateX(50px);
    }
    100% {
       opacity: 1;
