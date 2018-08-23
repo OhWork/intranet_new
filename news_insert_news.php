@@ -18,6 +18,12 @@
 		$rsfix = $db->update('news',$data,'news_id',$_POST['id']);
 	
 	}else{
+    
+    $target_dir = 'temp/';
+    $target_file = $target_dir.basename($_FILES['filUpload']['name']);
+    $target_dir_save = 'images/news/typeDesign/'.basename($_FILES['filUpload']['name']);
+    move_uploaded_file($_FILES['filUpload']['tmp_name'], $target_dir_save);	
+    	
 	$rs = $db->insert('news',array(
 	'news_head' => $_POST['news_head'],
 	'news_detail' => $_POST['news_detail'],

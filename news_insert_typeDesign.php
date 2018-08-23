@@ -31,9 +31,9 @@
 
 	}else{
 			$target_dir = 'temp/';
-			$target_file = $target_dir.basename($_FILES['filUpload']['name']);
-			$target_dir_save = 'images/news/typeDesign/'.basename($_FILES['filUpload']['name']);
-			move_uploaded_file($_FILES['filUpload']['tmp_name'], $target_dir_save);
+			$target_file = $target_dir.basename($_FILES['typeDesignnews_image']['name']);
+			$target_dir_save = 'images/news/typeDesign/'.basename($_FILES['typeDesignnews_image']['name']);
+			move_uploaded_file($_FILES['typeDesignnews_image']['tmp_name'], $target_dir_save);
 
 
 
@@ -53,10 +53,10 @@
     	if($rs){
     	    echo "<div class='statusok'>เพิ่มสำเร็จ</div>";
     	    echo "";
-    	    $link = "index.php?url=cs_add_upweb.php";
+    	    $link = "index.php?url=news_add_typeDesign.php.php";
     	}else if($rsfix){
             echo "<div class='statusok'>แก้ไขสำเร็จ</div>";
-             $link = "admin_index.php?url=cs_showupweb.php";
+             $link = "admin_index.php?url=news_show_typeDesign.php";
         }
             header( "Refresh: 1; $link" );
 }

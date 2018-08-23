@@ -8,9 +8,8 @@
      $selecttypenews = new SelectFromDB();
      $selecttypenews->name = 'typeNews_typeNews_id';
      $selecttypenews->lists = 'โปรดระบุ ชนิดของข่าวสาร';
-     $filepic = new inputFile('','','');
-     $txtdatestart = new textfieldcalendarreadonly('qtn_datestart','datetimepicker1','','form-control','input-group-addon btn calen','datetimepicker1');
-    $txtdateend = new textfieldcalendarreadonly('qtn_dateend','datetimepicker2','','form-control','input-group-addon btn calen','datetimepicker2');
+     $txtdatestart = new textfieldcalendarreadonly('newsdatestart','datetimepicker1','','form-control','input-group-addon btn calen','datetimepicker1');
+    $txtdateend = new textfieldcalendarreadonly('newsdateend','datetimepicker2','','form-control','input-group-addon btn calen','datetimepicker2');
     $txtheadnews = new textfield('news_head','','form-control','','');
     $button = new buttonok("ต่อไป","","btn btn-success btn-lg btn-block bt3success col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","");
 	$id = $_SESSION['user_id'];
