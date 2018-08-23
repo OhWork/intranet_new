@@ -8,9 +8,18 @@
 			$limit = 8; //จำนวนแสดงต่อหน้า
 			$startpoint = ($page * $limit) - $limit;
 			?>
-			            <div class="col-md-12" style="float: left;margin-top: 10px;">
-                <div class="col-md-2" style="float: left;"><a href="admin_index.php?url=news_add_news.php" class="btn btn-success">เพิ่มข่าว</a>
+<div class='col-xl-1col-lg-1 col-md-1 col-sm-1 col-1'></div>
+<div class='col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10'>
+	<div class='row'>
+		<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-1">
+			<div class='row'>
+				<div class='col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10'></div>
+                <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2">
+					<a href="admin_index.php?url=news_add_news.php" class="btn btn-success col-12">เพิ่มข่าว <span data-feather="plus"></span></a>
                 </div>
+			</div>
+		</div>
+		<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-1">
 			<?php
 
 			$rs2 = "problem,subzoo,typetools,subtypetools  where problem.subzoo_subzoo_id = subzoo.subzoo_id && problem.subtypetools_typetools_typetools_id = subtypetools.subtypetools_id && subtypetools.typetools_typetools_id = typetools.typetools_id";
@@ -29,3 +38,7 @@
 			echo pagination($rs2,$limit,$page,$url='cs_index.php?url=show_problem.php&');
 //             include_once 'cs_viewdetail.php';
 		?>
+		</div>
+	</div>
+</div>
+<div class='col-xl-1col-lg-1 col-md-1 col-sm-1 col-1'></div>
