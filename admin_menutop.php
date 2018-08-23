@@ -1,14 +1,25 @@
 <nav class="navbar navbar-expand-md navbar-dark bg-dark col-md-12">
-    <a class="navbar-brand brandedit" href="#" style="margin-right:90%;">
+    <a class="navbar-brand brandedit" href="#" style="margin-right:80%;">
 		<h4>Intranet</h4>
 	</a>
-	<div class="dropdown">
-		<button class="btn btn-primary rounded-circle" style="padding-left:8px;padding-right:8px;" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-			<span data-feather="users"></span>
-		</button>
-		<div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="left:-130px">
-			<a class="dropdown-item" href="#" style="border-bottom:1px solid #000000;"><?php echo "คุณ".$_SESSION['user_name']." ".$_SESSION['user_last'];?></a>
-			<a class="dropdown-item" href="logout.php" style="text-align:right;color:red;">Logout <span data-feather="log-out"></span></a>
+	<div class="dropdown" style="color:#ffffff;">
+		<div style="height:34px;" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			<div class="rounded-circle" style="height:31px;padding-left:8px;padding-right:8px;padding-top:3px;float:left;background-color:#455A64;margin-right:3px;">
+				<span data-feather="users"></span>
+			</div>
+			<div style="float:left;margin-top:4px;">
+				<?php echo "คุณ".$_SESSION['user_name']." ".$_SESSION['user_last'];?>
+			</div>
+			<div style="float:left;margin-top:4px;">
+				<span data-feather="chevrons-down"></span>
+			</div>
+		</div>
+		<div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="left:2px;background-color:#455A64;">
+			<a class="dropdown-item" href="#" style="color:#B0BEC5;">ประวัติ</a>
+			<a class="dropdown-item" href="#" style="color:#B0BEC5;">เปลี่ยนรหัสผ่าน</a>
+			<a class="dropdown-item" href="#" style="border-bottom:1px solid #ffffff;color:#B0BEC5;">แก้ไขบัญชีส่วนตัว</a>
+			<a class="dropdown-item" href="logout.php" style="color:#17a2b8;"><span data-feather="list"></span> ช่วยเหลือ</a>
+			<a class="dropdown-item" href="logout.php" style="color:#dc3545;"><span data-feather="log-out"></span> ออกจากระบบ</a>
 		</div>
 	</div>
 </nav>
