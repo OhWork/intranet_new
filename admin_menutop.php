@@ -11,7 +11,7 @@
 				<?php echo "คุณ".$_SESSION['user_name']." ".$_SESSION['user_last'];?>
 			</div>
 			<div style="float:left;margin-top:4px;">
-				<span data-feather="chevrons-down"></span>
+				<span data-feather="chevron-down"></span>
 			</div>
 		</div>
 		<div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="left:2px;background-color:#455A64;">
