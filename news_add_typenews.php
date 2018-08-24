@@ -1,9 +1,9 @@
 <?php
   $form = new form();
   $id = $_GET['id'];
-  $lbtypeNews = new label("ชื่อชนิดข่าวสาร :");
-  $lbtypeNewsno = new label("ลำดับ :");
-  $lbtypeNewsenable = new label("สถานะการใช้งาน :");
+  $lbtypeNews = new label("ชื่อชนิดข่าวสาร");
+  $lbtypeNewsno = new label("ลำดับ");
+  $lbtypeNewsenable = new label("สถานะการใช้งาน");
   $txttypeNews = new textfield('typeNews_name','','form-control css-require','');
   $txttypeNewsno = new textfield('typeNews_no','','form-control css-require','');
   $radiotypeNewsenable = new radioGroup();
@@ -35,22 +35,25 @@ echo $form->open("form_reg","form","col-xl-12 col-lg-12 col-md-12 col-sm-12 col-
 				<h4>เพิ่มชนิดข่าวสาร</h4>
 			</div>
 			<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3'>
-				<?php echo $lbtypeNews ?>
+				<?php echo $lbtypeNews; ?>
 			</div>
 			<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 form-group has-feedback'>
-				<?php echo $txttypeNews ?>
+				<?php echo $txttypeNews; ?>
 			</div>
 			<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12'>
-				<?php echo $lbtypeNewsno ?>
+				<?php echo $lbtypeNewsno; ?>
 			</div>
 			<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 form-group has-feedback'>
-				<?php echo $txttypeNewsno ?>
+				<?php echo $txttypeNewsno; ?>
 			</div>
 			<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12'>
 				<div class="row">
-					<div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3" style="padding-top: 14px;"><?php echo $lbtypeNewsenable; ?></div>
-					<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4" style="padding-top: 14px;"><?php echo $radiotypeNewsenable; ?></div>
-					<div class="col-xl-5 col-lg-5 col-md-5 col-sm-5 col-5"></div>
+					<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4" style="padding-top: 14px;">
+						<?php echo $lbtypeNewsenable; ?>
+					</div>
+					<div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8" style="padding-top: 14px;">
+						<?php echo $radiotypeNewsenable; ?>
+					</div>
 				</div>
 		    </div>
 			<input type='hidden' name='typeNews_id' value='<?php echo $_GET['id'];?>'/>

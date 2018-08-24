@@ -1,10 +1,10 @@
 <?php
   $form = new form();
   $id = $_GET['id'];
-  $lbtypeDesignnewsname = new label("ชื่อชนิดรูปแบบ :");
-  $lbtypeDesignnewslink = new label("ลิ้ง :");
-  $lbtypeDesignnewscover = new label("รูปหน้าปก :");
-  $lbtypeDesignnewsenable = new label("สถานะการใช้งาน :");
+  $lbtypeDesignnewsname = new label("ชื่อชนิดรูปแบบ");
+  $lbtypeDesignnewslink = new label("ลิ้ง");
+  $lbtypeDesignnewscover = new label("รูปหน้าปก");
+  $lbtypeDesignnewsenable = new label("สถานะการใช้งาน");
   $txttypeDesignnewsname = new textfield('typeDesignnews_name','','form-control css-require','');
   $txttypeDesignnewslink = new textfield('typeDesignnews_link','','form-control css-require','');
   $inputpic = new inputFile('typeDesignnews_image','','');
@@ -37,20 +37,32 @@ echo $form->open("form_reg","form","col-xl-12 col-lg-12 col-md-12 col-sm-12 col-
 				<h4>เพิ่มชนิดรูปแบบ</h4>
 			</div>
 			<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3'>
-				<?php echo $lbtypeDesignnewsname.$txttypeDesignnewsname; ?>
+				<?php echo $lbtypeDesignnewsname; ?>
 			</div>
 			<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 form-group has-feedback'>
-				<?php echo $lbtypeDesignnewslink.$txttypeDesignnewslink; ?>
+				<?php echo $txttypeDesignnewsname; ?>
+			</div>
+			<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12'>
+				<?php echo $lbtypeDesignnewslink; ?>
+			</div>
+			<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 form-group has-feedback'>
+				<?php echo $txttypeDesignnewslink; ?>
 			</div>
 			
-		    <div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 form-group has-feedback'>
-				<?php echo $lbtypeDesignnewscover.$inputpic; ?>
+		    <div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12'>
+				<div class="row">
+					<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
+						<?php echo $lbtypeDesignnewscover ?>
+					</div>
+					<div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8">
+						<?php echo $inputpic; ?>
+					</div>
+				</div>
 			</div>
 			<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12'>
 				<div class="row">
-					<div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3" style="padding-top: 14px;"><?php echo $lbtypeDesignnewsenable; ?></div>
-					<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4" style="padding-top: 14px;"><?php echo $radiotypeNewsenable; ?></div>
-					<div class="col-xl-5 col-lg-5 col-md-5 col-sm-5 col-5"></div>
+					<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4" style="padding-top: 14px;"><?php echo $lbtypeDesignnewsenable; ?></div>
+					<div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8" style="padding-top: 14px;"><?php echo $radiotypeNewsenable; ?></div>
 				</div>
 		    </div>
 			<input type='hidden' name='typeDesignnews_id' value='<?php echo $_GET['id'];?>'/>
