@@ -36,13 +36,33 @@
 			move_uploaded_file($_FILES['typeDesignnews_image']['tmp_name'], $target_dir_save);
 
 
+if(move_uploaded_file($_FILES['typeDesignnews_image']['tmp_name'], $target_dir_save)) {
+    echo "Uploaded";
+}else{
+   echo "File was not uploaded";
+   echo $target_file;
+}
+// // Check if image file is a actual image or fake image
+// if(isset($_FILES['typeDesignnews_image'])) {
+//     $check = getimagesize($_FILES["typeDesignnews_image"]["tmp_name"]);
+//     if($check !== false) {
+//         echo "File is an image - " . $check["mime"] . ".";
+//         $uploadOk = 1;
+//         echo $target_dir_save;
+//     } else {
+//         echo "File is not an image.";
+//         $uploadOk = 0;
+//     }
+// }
 
-	$rs = $db->insert('typeDesignnews',array(
-	'typeDesignnews_name' => $_POST['typeDesignnews_name'],
-	'typeDesignnews_link' => $_POST['typeDesignnews_link'],
-	'typeDesignnews_enable' => $_POST['typeDesignnews_enable'],
-	'typeDesignnews_image' => basename($_FILES['typeDesignnews_image']['name'])
-	));
+
+
+// 	$rs = $db->insert('typeDesignnews',array(
+// 	'typeDesignnews_name' => $_POST['typeDesignnews_name'],
+// 	'typeDesignnews_link' => $_POST['typeDesignnews_link'],
+// 	'typeDesignnews_enable' => $_POST['typeDesignnews_enable'],
+// 	'typeDesignnews_image' => basename($_FILES['typeDesignnews_image']['name'])
+// 	));
 
 	}
 

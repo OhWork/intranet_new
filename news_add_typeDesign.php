@@ -3,6 +3,7 @@
   $id = $_GET['id'];
   $lbtypeDesignnewsname = new label("ชื่อชนิดรูปแบบ :");
   $lbtypeDesignnewslink = new label("ลิ้ง :");
+  $lbtypeDesignnewscover = new label("รูปปก :");
   $lbtypeDesignnewsenable = new label("สถานะการใช้งาน :");
   $txttypeDesignnewsname = new textfield('typeDesignnews_name','','form-control css-require','');
   $txttypeDesignnewslink = new textfield('typeDesignnews_link','','form-control css-require','');
@@ -49,7 +50,7 @@ echo $form->open("form_reg","form","col-xl-12 col-lg-12 col-md-12 col-sm-12 col-
 				</div>
 		    </div>
 		    <div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 form-group has-feedback'>
-				<?php echo $lbtypeDesignnewslink.$inputpic; ?>
+				<?php echo $lbtypeDesignnewscover.$inputpic; ?>
 			</div>
 			<input type='hidden' name='typeDesignnews_id' value='<?php echo $_GET['id'];?>'/>
 			<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3' style="margin-bottom: 16px;">
