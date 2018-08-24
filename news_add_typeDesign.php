@@ -44,7 +44,7 @@ echo $form->open("form_reg","form","col-xl-12 col-lg-12 col-md-12 col-sm-12 col-
 			</div>
 			<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12'>
 				<div class="row">
-					<div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3" style="padding-top: 14px;"><?php echo $lbtypeNewsenable; ?></div>
+					<div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3" style="padding-top: 14px;"><?php echo $lbtypeDesignnewsenable; ?></div>
 					<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4" style="padding-top: 14px;"><?php echo $radiotypeNewsenable; ?></div>
 					<div class="col-xl-5 col-lg-5 col-md-5 col-sm-5 col-5"></div>
 				</div>
