@@ -2,6 +2,9 @@
 	session_start();
 	ob_start();
 // 	error_reporting(E_ERROR | E_WARNING | E_PARSE);
+	if(empty($_SESSION['user_name'])){
+	  header( "Refresh: 0; login.php" );
+	}
 ?>
 <!doctype html>
 <html lang="en">
