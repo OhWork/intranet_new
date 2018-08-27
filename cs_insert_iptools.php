@@ -55,7 +55,7 @@
             echo "<div class='statusok'>แก้ไขสำเร็จ</div>";
         }
 
-            $link = "url=admin_index.php?url=admin_cs_index.php";
+            $link = "url=admin_index.php";
             header( "Refresh: 2; $link" );
 }
 ?>

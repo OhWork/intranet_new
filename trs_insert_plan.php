@@ -10,10 +10,10 @@
 	include 'connect.php';
 	if(!empty($_POST['plan_id'])){
 		$data['plan_status'] = $_POST['plan_status'];
-				
+
 		$rs = $db->update('plan',$data,'plan_id',$_POST['plan_id']);
         if(getenv(HTTP_X_FORWARDED_FOR)){
-            $ip = $_SERVER['HTTP_X_FORWARDED_FOR']; // IP proxy 
+            $ip = $_SERVER['HTTP_X_FORWARDED_FOR']; // IP proxy
             }else{
             $ip = $_SERVER['REMOTE_ADDR'];
                 }
@@ -27,7 +27,7 @@
         	));
 	}else{
 	$rs = $db->insert('plan',array(
-    'plan_date' => $_POST['plan_date'],	
+    'plan_date' => $_POST['plan_date'],
 	'plan_adult' => $_POST['plan_adult'],
 	'plan_child' => $_POST['plan_child'],
 	'plan_ch_pj' => $_POST['plan_ch_pj'],
@@ -44,7 +44,7 @@
 	'plan_zoo_zoo_id' => $_POST['plan_zoo_zoo_id']
 	));
 	 if(getenv(HTTP_X_FORWARDED_FOR)){
-            $ip = $_SERVER['HTTP_X_FORWARDED_FOR']; // IP proxy 
+            $ip = $_SERVER['HTTP_X_FORWARDED_FOR']; // IP proxy
             }else{
             $ip = $_SERVER['REMOTE_ADDR'];
                 }
@@ -56,20 +56,20 @@
         	'log_action_by' => $_POST['log_user'],
         	'log_ip' => $ipshow
         	));
-	}	
+	}
 	if($rs || $rsfix){
     	if($rs){
     	    echo "<div class='statusok'>เพิ่มสำเร็จ</div>";
     	}else if($rsfix){
             echo "<div class='statusok'>แก้ไขสำเร็จ</div>";
         }
-            $link = "url=admin_index.php?url=admin_trs_index.php";
+            $link = "url=admin_index.php";
             header( "Refresh: 2; $link" );
 }else{
             echo "Error!!";
         }
 ?>
 </html>
-<?php					
-ob_end_flush();	
+<?php
+ob_end_flush();
 ?>

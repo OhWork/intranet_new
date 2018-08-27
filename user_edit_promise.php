@@ -17,22 +17,22 @@
 		$data['user_confer_allow'] = $_POST['user_confer_allow'];
 		$data['user_admin_allow'] = $_POST['user_admin_allow'];
 		$data['user_drive_allow'] = $_POST['user_drive_allow'];
-				
+
 		$rsfix = $db->update('user',$data,'user_id',$_POST['user_id']);
-	
+
 	}
-	
+
 	if($rs || $rsfix){
     	if($rs){
     	    echo "<div class='statusok'>เพิ่มสำเร็จ</div>";
     	}else if($rsfix){
             echo "<div class='statusok'>แก้ไขสำเร็จ</div>";
         }
-            $link = "admin_index.php?url=admin_cs_index.php&url2=cs_show_ip.php&id=".$_POST['subzoo_zoo_zoo_id'];
+            $link = "admin_index.php?url=cs_show_ip.php&id=".$_POST['subzoo_zoo_zoo_id'];
             header( "Refresh: 2; $link" );
 }
 ?>
 </html>
-<?php					
-ob_end_flush();	
+<?php
+ob_end_flush();
 ?>

@@ -23,7 +23,7 @@
 		$rsfix = $db->update('problem',$data,'problem_id',$_POST['problem_id']);
             //Log
 		if(getenv(HTTP_X_FORWARDED_FOR)){
-            $ip = $_SERVER['HTTP_X_FORWARDED_FOR']; // IP proxy 
+            $ip = $_SERVER['HTTP_X_FORWARDED_FOR']; // IP proxy
         }else{
             $ip = $_SERVER['REMOTE_ADDR'];
         }
@@ -44,11 +44,11 @@
     	}else if($rsfix){
             echo "<div class='statusok'>แก้ไขสำเร็จ</div>";
         }
-            $link = "admin_index.php?url=admin_cs_index.php&url2=cs_show_fixproblem.php";
+            $link = "admin_index.php?url=cs_show_fixproblem.php";
             header( "Refresh: 2; $link" );
 }
 ?>
 </html>
-<?php					
-ob_end_flush();	
+<?php
+ob_end_flush();
 ?>

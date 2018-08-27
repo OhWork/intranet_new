@@ -22,7 +22,7 @@
 	'headncf_name' => $_POST['headncf_name'],
 	'headncf_no' => $_POST['headncf_no'],
 	'headncf_enable' => $_POST['headncf_enable']
-	
+
 	));
                 //Log
 		if(getenv(HTTP_X_FORWARDED_FOR)){
@@ -46,7 +46,7 @@
     	}else if($rsfix){
             echo "<div class='statusok'>แก้ไขสำเร็จ</div>";
         }
-            $link = "admin_index.php?url=admin_cf_index.php&url2=cf_show_headconfer.php";
+            $link = "admin_index.php?url=cf_show_headconfer.php";
             header( "Refresh: 2; $link" );
 }
 ?>

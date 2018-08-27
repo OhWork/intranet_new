@@ -39,7 +39,7 @@
 			</ul>
 		<a class="nav-link collapsed py-1 nav-link-10" id="nav-1-animate-3" href="#csipacc" data-toggle="collapse" data-target="#csipacc">IP-อุปกรณ์<span data-feather="chevron-right"></span></a>
 			<ul class="sub-menu collapse mmpd2" id="csipacc">
-				<a class="nav-link" id="nav-10-animate-1" href="admin_index.php?url=admin_cs_index.php&url2=cs_show_iptools.php&id=1">Server</a>
+				<a class="nav-link" id="nav-10-animate-1" href="admin_index.php?url=cs_show_iptools.php&id=1">Server</a>
 			</ul>
 		<a class="nav-link collapsed py-1 nav-link-11" id="nav-1-animate-4" href="#csreport" data-toggle="collapse" data-target="#csreport">รายงาน<span data-feather="chevron-right"></a>
 		    <ul class="sub-menu collapse mmpd2" id="csreport">
@@ -77,28 +77,28 @@
 				<a class="nav-link collapsed py-1 nav-link-13" id="nav-11-animate-3" href="#csreportip" data-toggle="collapse" data-target="#csreportip">รายงานสรุปไอพีที่ใช้<span data-feather="chevron-right"></span></a>
 					<ul class="sub-menu collapse mmpd2" id="csreportip">
 				        <?php if($user_zoo == 10){?>
-								<a class="dropdown-item" id="nav-13-animate-1" href="admin_index.php?url=admin_cs_index.php&url2=cs_totalservicemonthzpo.php">องค์การสวนสัตว์</a>
+								<a class="dropdown-item" id="nav-13-animate-1" href="admin_index.php?url=cs_totalservicemonthzpo.php">องค์การสวนสัตว์</a>
 						<?php }
 							  if($user_zoo == 10 || $user_zoo == 11){?>
-								<a class="dropdown-item" id="nav-13-animate-2" href="admin_index.php?url=admin_cs_index.php&url2=cs_totalservicemonthzoo.php&zoo=11">สวนสัตว์ดุสิต</a>
+								<a class="dropdown-item" id="nav-13-animate-2" href="admin_index.php?url=cs_totalservicemonthzoo.php&zoo=11">สวนสัตว์ดุสิต</a>
 						<?php }
 							  if($user_zoo == 10 || $user_zoo == 12){?>
-								<a class="dropdown-item" id="nav-13-animate-3" href="admin_index.php?url=admin_cs_index.php&url2=cs_totalservicemonthzoo.php&zoo=12">สวนสัตว์เปิดเขาเขียว</a>
+								<a class="dropdown-item" id="nav-13-animate-3" href="admin_index.php?url=cs_totalservicemonthzoo.php&zoo=12">สวนสัตว์เปิดเขาเขียว</a>
 						<?php }
 							  if($user_zoo == 10 || $user_zoo == 13){?>
-								<a class="dropdown-item" id="nav-13-animate-4" href="admin_index.php?url=admin_cs_index.php&url2=cs_totalservicemonthzoo.php&zoo=13">สวนสัตว์เชียงใหม่</a>
+								<a class="dropdown-item" id="nav-13-animate-4" href="admin_index.php?url=cs_totalservicemonthzoo.php&zoo=13">สวนสัตว์เชียงใหม่</a>
 						<?php }
 							  if($user_zoo == 10 || $user_zoo == 14){?>
-								<a class="dropdown-item" id="nav-13-animate-5" href="admin_index.php?url=admin_cs_index.php&url2=cs_totalservicemonthzoo.php&zoo=14">สวนสัตว์นครราชสีมา</a>
+								<a class="dropdown-item" id="nav-13-animate-5" href="admin_index.php?url=cs_totalservicemonthzoo.php&zoo=14">สวนสัตว์นครราชสีมา</a>
 						<?php }
 							  if($user_zoo == 10 || $user_zoo == 15){?>
-								<a class="dropdown-item" id="nav-13-animate-6" href="admin_index.php?url=admin_cs_index.php&url2=cs_totalservicemonthzoo.php&zoo=15">สวนสัตว์สงขลา</a>
+								<a class="dropdown-item" id="nav-13-animate-6" href="admin_index.php?url=cs_totalservicemonthzoo.php&zoo=15">สวนสัตว์สงขลา</a>
 						<?php }
 							  if($user_zoo == 10 || $user_zoo == 16){?>
-								<a class="dropdown-item" id="nav-13-animate-7" href="admin_index.php?url=admin_cs_index.php&url2=cs_totalservicemonthzoo.php&zoo=16">สวนสัตว์อุบลราชธานี</a>
+								<a class="dropdown-item" id="nav-13-animate-7" href="admin_index.php?url=cs_totalservicemonthzoo.php&zoo=16">สวนสัตว์อุบลราชธานี</a>
 						<?php }
 							  if($user_zoo == 10 || $user_zoo == 17){?>
-								<a class="dropdown-item" id="nav-13-animate-8" href="admin_index.php?url=admin_cs_index.php&url2=cs_totalservicemonthzoo.php&zoo=17">สวนสัตว์ขอนแก่น</a>
+								<a class="dropdown-item" id="nav-13-animate-8" href="admin_index.php?url=cs_totalservicemonthzoo.php&zoo=17">สวนสัตว์ขอนแก่น</a>
 						<?php }
 							  if($user_zoo == 10 || $user_zoo == 18){?>
 								<a class="dropdown-item" id="nav-13-animate-9" href="#">โครงการคชอาณาจักร</a>
