@@ -6,7 +6,7 @@ header("Cache-Control: post-check=0, pre-check=0", false);
 	include "../connect.php";
 if(isset($_GET['gData']) && $_GET['gData']|=""){
 	$id = $_GET['gData'];
-	$result = $db->findByPK22('eventconfer','headncf','headncf_headncf_id','headncf_id','confer_confer_id',$id)->execute();
+	$result = $db->findByPK33('eventconfer','headncf','zoo','headncf_headncf_id','headncf_id','subzoo_zoo_zoo_id','zoo_id','confer_confer_id',$id)->execute();
  while($rs=$result->fetch_object()){
         $bgColor= "#BDE4F4";
         $textColor= "#00204A";
@@ -150,9 +150,12 @@ if(isset($_GET['gData']) && $_GET['gData']|=""){
 												</div>
 											</div>
 										</div>
-									</div>",
+									</div>"
+									,
              "color"=> $bgColor,
-             "textColor" => $textColor
+             "textColor" => $textColor,
+             "zoo_name" =>$rs->zoo_name,
+             "zoo_type" =>$rs->zoo_type,
 
         );
     }

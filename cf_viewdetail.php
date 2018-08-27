@@ -8,7 +8,7 @@
                 <div id="modalBody" class="modal-body"></div>
                 <?php
 					$rs = $db->findByPK('conferroom','confer_id',$id)->executeAssoc();
-					if($rs['zoo_zoo_id']== 3){
+					if($rs['zoo_zoo_id']== 3 || $rs['zoo_zoo_id']== 15){
 				?>
                 	<div class="modal-footer" id="modalFooter"></div>
                 <?php

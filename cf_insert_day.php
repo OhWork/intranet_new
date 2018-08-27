@@ -69,7 +69,7 @@
 
     	if($rs){
     	    echo "<div class='statusok'>เพิ่มสำเร็จ</div>";
-    	    $link = "cf_index.php?url=cf_calendar.php";
+    	    $link = "index.php?url=cf_listcfr.php";
             header( "Refresh: 2; $link" );
         }else{
             echo "เกิดปัญหา";
