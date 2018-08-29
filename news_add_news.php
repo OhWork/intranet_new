@@ -1,9 +1,9 @@
 <?php
     $form = new form();
-    $lbheadnews = new label('หัวข้อข่าว');
+    $lbheadnews = new label('หัวข้อข่าวสาร');
     $lbdetail = new label('รายละเอียด');
-    $lbtypeDesign = new label('รูปแบบ :');
-    $lbpic = new label('ภาพปก');
+    $lbtypeDesign = new label('เลือกรูปแบบข่าวสาร');
+    $lbpic = new label('ภาพหน้าปก');
     $lbdatestart = new label('วันเริ่ม');
     $lbdateend = new label('วันสิ้นสุด');
     $selecttypenews = new SelectFromDB();
@@ -16,11 +16,11 @@
     $radiotypedesign = new radioGroup();
     $radiotypedesign->name = 'typeDesignnews_id';
     if(empty($id)){
-    	$radiotypedesign->add('<img src="images/news/typeDesign/Banner.jpg">',1,'');
-    	$radiotypedesign->add('<img src="images/news/typeDesign/Banner.jpg">',2,'checked');
-    	$radiotypedesign->add('<img src="images/news/typeDesign/Banner.jpg">',3,'checked');
-    	$radiotypedesign->add('<img src="images/news/typeDesign/Banner.jpg">',4,'checked');
-    	$radiotypedesign->add('<img src="images/news/typeDesign/Banner.jpg">',5,'checked');
+    	$radiotypedesign->add(' รูปแบบที่ 1',1,'');
+    	$radiotypedesign->add(' รูปแบบที่ 2',2,'checked');
+    	$radiotypedesign->add(' รูปแบบที่ 3',3,'checked');
+    	$radiotypedesign->add(' รูปแบบที่ 4',4,'checked');
+    	$radiotypedesign->add(' รูปแบบที่ 5',5,'checked');
     	}
     $button = new buttonok("ต่อไป","","btn btn-success btn-lg btn-block bt3success col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","");
 	$id = $_SESSION['user_id'];
@@ -78,6 +78,16 @@
 		<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3">
 			<div class="row">
 				<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
+					<?php echo $lbpic; ?>
+				</div>
+				<div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8">
+					<?php echo $filepic; ?>
+				</div>
+			</div>
+		</div>
+		<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3">
+			<div class="row">
+				<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
 					<?php echo $lbtypeDesign; ?>
 				</div>
 				<div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8">
@@ -88,10 +98,30 @@
 		<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3">
 			<div class="row">
 				<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
-					<?php echo $lbpic; ?>
+					<p><center>รูปแบบที่ 1</center><p>
+					<img class="w-100" style="height:100%;" src="images/news/typeDesign/Banner.jpg">
 				</div>
-				<div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8">
-					<?php echo $filepic; ?>
+				<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
+					<p><center>รูปแบบที่ 2</center><p>
+					<img class="w-100" style="height:100%;" src="images/news/typeDesign/Banner.jpg">
+				</div>
+				<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
+					<p><center>รูปแบบที่ 3</center><p>
+					<img class="w-100" style="height:100%;" src="images/news/typeDesign/Banner.jpg">
+				</div>
+			</div>
+		</div>
+		<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3">
+			<div class="row">
+				<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
+					<p><center>รูปแบบที่ 4</center><p>
+					<img class="w-100" style="height:100%;" src="images/news/typeDesign/Banner.jpg">
+				</div>
+				<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
+					<p><center>รูปแบบที่ 5</center><p>
+					<img class="w-100" style="height:100%;" src="images/news/typeDesign/Banner.jpg">
+				</div>
+				<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
 				</div>
 			</div>
 		</div>
