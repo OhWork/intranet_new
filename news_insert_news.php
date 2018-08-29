@@ -13,7 +13,7 @@
 
 		$data['news_head'] = $_POST['news_head'];
 		$data['news_detail'] = $_POST['news_detail'];
-		$data['news_date'] = $_POST['news_date'];
+		$data['news_cover'] = $_POST['news_cover'];
 		$data['user_user_id'] = $_POST['user_user_id'];
 		$rsfix = $db->update('news',$data,'news_id',$_POST['id']);
 	
@@ -26,9 +26,10 @@
     	
 	$rs = $db->insert('news',array(
 	'news_head' => $_POST['news_head'],
-	'news_detail' => $_POST['news_detail'],
-	'news_date' => $_POST['news_date'],
-	'user_user_id' => $_POST['user_user_id']
+	'newsdatestart' => $_POST['newsdatestart'],
+	'newsdateend' => $_POST['newsdateend'],
+	'news_cover' => $_POST['news_cover'],
+	'typeNews_typeNews_id' => $_POST['typeNews_typeNews_id']
 	));
 	}	
 	
