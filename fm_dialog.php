@@ -808,15 +808,6 @@ $files=$sorted;
 	<!-- breadcrumb div start -->
 
 	<div class="row-fluid">
-	<?php
-		if(!empty($_SESSION['subzoo_zoo_zoo_id'])){
-		$link="admin_index.php?url=fm_dialog.php&?".$get_params;
-		}
-		else{
-			$link="index.php?url=fm_dialog.php&?".$get_params;
-
-		}
-	?>
 	<ul class="breadcrumb">
 	<li class="pull-left"><a href="<?php echo $link?>/"><i class="icon-home"></i></a></li>
 	<li><span class="divider">/</span></li>
