@@ -58,7 +58,7 @@ session_start();
 					</div>
 				</div>
 			</nav>
-			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 showindex">
+			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 showindex" >
 				<div class="row">
 					<?php include 'menu_main.php'; ?>
 					<div class="col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10 showindex">
