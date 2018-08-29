@@ -86,42 +86,27 @@
 			</div>
 		</div>
 		<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3">
-			<div class="row">
-				<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
-					<?php echo $lbtypeDesign; ?>
-				</div>
-				<div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8">
-					<?php echo $radiotypedesign; ?>
-				</div>
-			</div>
+			<?php echo $lbtypeDesign; ?>
 		</div>
-		<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3">
-			<div class="row">
-				<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
-					<p><center>รูปแบบที่ 1</center><p>
-					<img class="w-100" style="height:100%;" src="images/news/typeDesign/Banner.jpg">
-				</div>
-				<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
-					<p><center>รูปแบบที่ 2</center><p>
-					<img class="w-100" style="height:100%;" src="images/news/typeDesign/Banner.jpg">
-				</div>
-				<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
-					<p><center>รูปแบบที่ 3</center><p>
-					<img class="w-100" style="height:100%;" src="images/news/typeDesign/Banner.jpg">
-				</div>
-			</div>
+		<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-2">
+			<?php echo $radiotypedesign; ?>
 		</div>
-		<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3">
+		<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-1">
 			<div class="row">
-				<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
-					<p><center>รูปแบบที่ 4</center><p>
-					<img class="w-100" style="height:100%;" src="images/news/typeDesign/Banner.jpg">
+				<div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2" style="margin-left:16px;">
+					<img style="width:50px;height:50px;" src="images/news/typeDesign/Banner.jpg">
 				</div>
-				<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
-					<p><center>รูปแบบที่ 5</center><p>
-					<img class="w-100" style="height:100%;" src="images/news/typeDesign/Banner.jpg">
+				<div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2" style="margin-left:8px;">
+					<img style="width:50px;height:50px;" src="images/news/typeDesign/Banner.jpg">
 				</div>
-				<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
+				<div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2" style="margin-left:5px;">
+					<img style="width:50px;height:50px;" src="images/news/typeDesign/Banner.jpg">
+				</div>
+				<div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2" style="margin-left:5px;">
+					<img style="width:50px;height:50px;" src="images/news/typeDesign/Banner.jpg">
+				</div>
+				<div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2" style="margin-left:5px;">
+					<img style="width:50px;height:50px;" src="images/news/typeDesign/Banner.jpg">
 				</div>
 			</div>
 		</div>
