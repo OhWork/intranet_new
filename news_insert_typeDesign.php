@@ -35,13 +35,6 @@
 			$target_dir_save = 'images/news/typeDesign/'.basename($_FILES['typeDesignnews_image']['name']);
 			move_uploaded_file($_FILES['typeDesignnews_image']['tmp_name'], $target_dir_save);
 
-
-if(move_uploaded_file($_FILES['typeDesignnews_image']['tmp_name'], $target_dir_save)) {
-    echo "Uploaded";
-}else{
-   echo "File was not uploaded";
-   echo $target_file;
-}
 // // Check if image file is a actual image or fake image
 // if(isset($_FILES['typeDesignnews_image'])) {
 //     $check = getimagesize($_FILES["typeDesignnews_image"]["tmp_name"]);
@@ -57,12 +50,12 @@ if(move_uploaded_file($_FILES['typeDesignnews_image']['tmp_name'], $target_dir_s
 
 
 
-// 	$rs = $db->insert('typeDesignnews',array(
-// 	'typeDesignnews_name' => $_POST['typeDesignnews_name'],
-// 	'typeDesignnews_link' => $_POST['typeDesignnews_link'],
-// 	'typeDesignnews_enable' => $_POST['typeDesignnews_enable'],
-// 	'typeDesignnews_image' => basename($_FILES['typeDesignnews_image']['name'])
-// 	));
+	$rs = $db->insert('typeDesignnews',array(
+	'typeDesignnews_name' => $_POST['typeDesignnews_name'],
+	'typeDesignnews_link' => $_POST['typeDesignnews_link'],
+	'typeDesignnews_enable' => $_POST['typeDesignnews_enable'],
+	'typeDesignnews_image' => basename($_FILES['typeDesignnews_image']['name'])
+	));
 
 	}
 
@@ -73,7 +66,7 @@ if(move_uploaded_file($_FILES['typeDesignnews_image']['tmp_name'], $target_dir_s
     	if($rs){
     	    echo "<div class='statusok'>เพิ่มสำเร็จ</div>";
     	    echo "";
-    	    $link = "index.php?url=news_add_typeDesign.php.php";
+    	    $link = "index.php?url=news_add_typeDesign.php";
     	}else if($rsfix){
             echo "<div class='statusok'>แก้ไขสำเร็จ</div>";
              $link = "admin_index.php?url=news_show_typeDesign.php";

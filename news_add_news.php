@@ -2,6 +2,7 @@
     $form = new form();
     $lbheadnews = new label('หัวข้อข่าว');
     $lbdetail = new label('รายละเอียด');
+    $lbtypeDesign = new label('รูปแบบ :');
     $lbpic = new label('ภาพปก');
     $lbdatestart = new label('วันเริ่ม');
     $lbdateend = new label('วันสิ้นสุด');
@@ -12,6 +13,15 @@
     $txtdatestart = new textfieldcalendarreadonly('newsdatestart','datetimepicker1','','form-control','input-group-addon','datetimepicker1');
     $txtdateend = new textfieldcalendarreadonly('newsdateend','datetimepicker2','','form-control','input-group-addon','datetimepicker2');
     $txtheadnews = new textfield('news_head','','form-control','','');
+    $radiotypedesign = new radioGroup();
+    $radiotypedesign->name = 'typeDesignnews_id';
+    if(empty($id)){
+    	$radiotypedesign->add('<img src="images/news/typeDesign/Banner.jpg">',1,'');
+    	$radiotypedesign->add('<img src="images/news/typeDesign/Banner.jpg">',2,'checked');
+    	$radiotypedesign->add('<img src="images/news/typeDesign/Banner.jpg">',3,'checked');
+    	$radiotypedesign->add('<img src="images/news/typeDesign/Banner.jpg">',4,'checked');
+    	$radiotypedesign->add('<img src="images/news/typeDesign/Banner.jpg">',5,'checked');
+    	}
     $button = new buttonok("ต่อไป","","btn btn-success btn-lg btn-block bt3success col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","");
 	$id = $_SESSION['user_id'];
 	$r = $db->findByPK('user','user_id',$id)->executeRow();
@@ -32,11 +42,11 @@
 <div class='col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3'></div>
 <div class='col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6' style="padding-top:16px;background-color:#ffffff;border:solid 1px #E0E0E0;border-radius:7px;">
 	<div class='row'>
-		<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12'>
+		<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12'><img src=""
 			<?php echo $lbheadnews; ?>
 		</div>
 		<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12'>
-			<?php echo$txtheadnews; ?>
+			<?php echo $txtheadnews; ?>
 		</div>
 		<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3'>
 			<?php echo $selecttypenews->selectFromTB('typeNews','typeNews_id','typeNews_name',$r['typeNews_typeNews_id']); ?>
@@ -68,6 +78,16 @@
 		<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3">
 			<div class="row">
 				<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
+					<?php echo $lbtypeDesign; ?>
+				</div>
+				<div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8">
+					<?php echo $radiotypedesign; ?>
+				</div>
+			</div>
+		</div>
+		<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3">
+			<div class="row">
+				<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
 					<?php echo $lbpic; ?>
 				</div>
 				<div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8">
@@ -92,13 +112,13 @@
 				</div>
 			</div>
 		</div>
-		<input type='hidden' name='news_date' value='$datetime'/>
-		<input type='hidden' name='id' value='$_GET[id]'/>
+		<input type='hidden' name='news_date' value='<?php echo $datetime; ?>'/>
+		<input type='hidden' name='id' value='<?php echo $_GET["id"]; ?>'/>
 		<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-1" style="padding-bottom:16px;">
 			<div class="row">
 				<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4"></div>
 				<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
-					<?php echo$button; ?>
+					<?php echo $button; ?>
 				</div>
 					<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4"></div>
 				</div>

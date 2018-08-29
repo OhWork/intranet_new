@@ -20,9 +20,9 @@
 	}else{
     
     $target_dir = 'temp/';
-    $target_file = $target_dir.basename($_FILES['filUpload']['name']);
-    $target_dir_save = 'images/news/typeDesign/'.basename($_FILES['filUpload']['name']);
-    move_uploaded_file($_FILES['filUpload']['tmp_name'], $target_dir_save);	
+    $target_file = $target_dir.basename($_FILES['news_cover']['name']);
+    $target_dir_save = 'images/news/typeDesign/'.basename($_FILES['news_cover']['name']);
+    move_uploaded_file($_FILES['news_cover']['tmp_name'], $target_dir_save);	
     	
 	$rs = $db->insert('news',array(
 	'news_head' => $_POST['news_head'],
