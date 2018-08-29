@@ -83,7 +83,7 @@ $config = array(
 	| with final /
 	|
 	*/
-	'current_path' => '../source/',
+	'current_path' => '/source/',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -94,7 +94,7 @@ $config = array(
 	| DO NOT put inside upload folder
 	|
 	*/
-	'thumbs_base_path' => '../thumbs/',
+	'thumbs_base_path' => 'thumbs/',
 
 
 	/*
@@ -443,7 +443,7 @@ if(@$_SESSION['subzoo_zoo_zoo_id']==10){
 	 $config['edit_text_files'] = true;
 	 $config['create_text_files'] = false;
 	 $config['upload_dir'] = 'source/';
-	 $config['current_path'] = '../source/';
+	 $config['current_path'] = 'source/';
 	 }
 //สวนสัตว์ดุสิต
 	 else if(@$_SESSION['subzoo_zoo_zoo_id']==11){
@@ -463,11 +463,11 @@ if(@$_SESSION['subzoo_zoo_zoo_id']==10){
 	 $config['create_text_files'] = false;
 	 if($_SESSION['subzoo_subzoo_id']==88){
 	 $config['upload_dir'] = 'source/15_สวนสัตว์ดุสิต/01_ฝ่ายบริหารงานทั่วไป/';
-	 $config['current_path'] = '../source/15_สวนสัตว์ดุสิต/01_ฝ่ายบริหารงานทั่วไป/';
+	 $config['current_path'] = 'source/15_สวนสัตว์ดุสิต/01_ฝ่ายบริหารงานทั่วไป/';
 	 }
 	 else{
 	 $config['upload_dir'] = 'source/15_สวนสัตว์ดุสิต/';
-	 $config['current_path'] = '../source/15_สวนสัตว์ดุสิต/';
+	 $config['current_path'] = 'source/15_สวนสัตว์ดุสิต/';
 	 }
 	 }
 //สวนสัตว์เปิดเขาเขียว
@@ -487,7 +487,7 @@ if(@$_SESSION['subzoo_zoo_zoo_id']==10){
 	 $config['edit_text_files'] = true;
 	 $config['create_text_files'] = false;
 	 $config['upload_dir'] = 'source/16_สวนสัตว์เปิดเขาเขียว/';
-	 $config['current_path'] = '../source/16_สวนสัตว์เปิดเขาเขียว/';
+	 $config['current_path'] = 'source/16_สวนสัตว์เปิดเขาเขียว/';
 	 }
 //สวนสัตว์เชียงใหม่
 else if(@$_SESSION['subzoo_zoo_zoo_id']==13){
@@ -506,7 +506,7 @@ else if(@$_SESSION['subzoo_zoo_zoo_id']==13){
 	 $config['edit_text_files'] = true;
 	 $config['create_text_files'] = false;
 	 $config['upload_dir'] = 'source/17_สวนสัตว์เชียงใหม่/';
-	 $config['current_path'] = '../source/17_สวนสัตว์เชียงใหม่/';
+	 $config['current_path'] = 'source/17_สวนสัตว์เชียงใหม่/';
 	 }
 //สวนสัตว์โคราช
 	 else if(@$_SESSION['subzoo_zoo_zoo_id']==14){
@@ -525,7 +525,7 @@ else if(@$_SESSION['subzoo_zoo_zoo_id']==13){
 	 $config['edit_text_files'] = true;
 	 $config['create_text_files'] = false;
 	 $config['upload_dir'] = 'source/18_สวนสัตว์นครราชสีมา/';
-	 $config['current_path'] = '../source/18_สวนสัตว์นครราชสีมา/';
+	 $config['current_path'] = 'source/18_สวนสัตว์นครราชสีมา/';
 	 }
 //สวนสัตว์สงขลา
 	 else if(@$_SESSION['subzoo_zoo_zoo_id']==15){
@@ -544,7 +544,7 @@ else if(@$_SESSION['subzoo_zoo_zoo_id']==13){
 	 $config['edit_text_files'] = true;
 	 $config['create_text_files'] = false;
 	 $config['upload_dir'] = 'source/19_สวนสัตว์สงขลา/';
-	 $config['current_path'] = '../source/19_สวนสัตว์สงขลา/';
+	 $config['current_path'] = 'source/19_สวนสัตว์สงขลา/';
 	 }
 //สวนสัตว์อุบล
 	 else if(@$_SESSION['subzoo_zoo_zoo_id']==16){
@@ -563,7 +563,7 @@ else if(@$_SESSION['subzoo_zoo_zoo_id']==13){
 	 $config['edit_text_files'] = true;
 	 $config['create_text_files'] = false;
 	 $config['upload_dir'] = 'source/20_สวนสัตว์อุบลราชธานี/';
-	 $config['current_path'] = '../source/20_สวนสัตว์อุบลราชธานี/';
+	 $config['current_path'] = 'source/20_สวนสัตว์อุบลราชธานี/';
 	 }
 //สวนสัตว์ขอนแก่น
 	 else if(@$_SESSION['subzoo_zoo_zoo_id']==17){
@@ -582,7 +582,7 @@ else if(@$_SESSION['subzoo_zoo_zoo_id']==13){
 	 $config['edit_text_files'] = true;
 	 $config['create_text_files'] = false;
 	 $config['upload_dir'] = 'source/21_สวนสัตว์ขอนแก่น/';
-	 $config['current_path'] = '../source/21_สวนสัตว์ขอนแก่น/';
+	 $config['current_path'] = 'source/21_สวนสัตว์ขอนแก่น/';
 	 }
 //USER
 	 else{
@@ -601,7 +601,7 @@ else if(@$_SESSION['subzoo_zoo_zoo_id']==13){
 	 $config['edit_text_files'] = false;
 	 $config['create_text_files'] = false;
 	 $config['upload_dir'] = 'source/';
-	 $config['current_path'] = '../source/';
+	 $config['current_path'] = 'source/';
 
 	 }
 return array_merge(

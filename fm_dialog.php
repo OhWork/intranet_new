@@ -1,7 +1,7 @@
 <?php
 $time = time();
 
-$config = include 'config/config.php';
+$config = include 'fm_config/fm_config.php';
 
 
 //TODO switch to array
@@ -22,11 +22,11 @@ if (USE_ACCESS_KEYS == TRUE){
 $_SESSION['RF']["verify"] = "RESPONSIVEfilemanager";
 
 if(isset($_POST['submit'])){
-	include 'upload.php';
+	include 'fm_upload.php';
 }else{
 
 $lang = $config['default_language'];
-$languages = include 'lang/languages.php';
+$languages = include 'fm_lang/languages.php';
 if (isset($_GET['lang']))
 {
 	$lang = strip_tags($_GET['lang']);
@@ -39,7 +39,7 @@ if (isset($_GET['lang']))
 		$_SESSION['RF']['language'] = $lang;
 	}
 }
-include 'include/utils.php';
+include 'fm_include/fm_utils.php';
 
 if (isset($_GET['fldr'])
 	&& !empty($_GET['fldr'])
@@ -129,9 +129,9 @@ if(!$ftp){
 		$i++;
 		if ($parent=="./") $parent="";
 
-		if (file_exists($current_path.$parent."config.php"))
+		if (file_exists($current_path.$parent."fm_config.php"))
 		{
-			$configTemp = include $current_path.$parent.'config.php';
+			$configTemp = include $current_path.$parent.'fm_config.php';
 			$config = $config + $configTemp;
 			extract($config, EXTR_OVERWRITE);
 			$cycle = FALSE;
@@ -283,13 +283,13 @@ $get_params = http_build_query($get_params);
 		<meta name="robots" content="noindex,nofollow">
 		<title>ระบบจัดการไฟล์</title>
 		<!-- CSS to style the file input field as button and adjust the Bootstrap progress bars -->
-		<link rel="stylesheet" href="css/jquery.fileupload.css">
-		<link rel="stylesheet" href="css/jquery.fileupload-ui.css">
+		<link rel="stylesheet" href="CSS/fm_css/fm_jquery.fileupload.css">
+		<link rel="stylesheet" href="CSS/fm_css/fm_jquery.fileupload-ui.css">
 		<!-- CSS adjustments for browsers with JavaScript disabled -->
-		<noscript><link rel="stylesheet" href="css/jquery.fileupload-noscript.css"></noscript>
-		<noscript><link rel="stylesheet" href="css/jquery.fileupload-ui-noscript.css"></noscript>
-		<link href="js/jPlayer/skin/blue.monday/jplayer.blue.monday.css" rel="stylesheet" type="text/css">
-		<link href="css/style.css?v=<?php echo $version; ?>" rel="stylesheet" type="text/css" />
+		<noscript><link rel="stylesheet" href="CSS/fm_css/fm_jquery.fileupload-noscript.css"></noscript>
+		<noscript><link rel="stylesheet" href="CSS/fm_css/fm_jquery.fileupload-ui-noscript.css"></noscript>
+		<link href="jquery/fm_js/fm_jPlayer/skin/blue.monday/jplayer.blue.monday.css" rel="stylesheet" type="text/css">
+		<link href="CSS/fm_css/fm_style.css?v=<?php echo $version; ?>" rel="stylesheet" type="text/css" />
 	<!--[if lt IE 8]><style>
 	.img-container span, .img-container-mini span {
 		display: inline-block;
@@ -298,17 +298,17 @@ $get_params = http_build_query($get_params);
 	</style><![endif]-->
 
 <!-- 	<script src="js/jquery1.12.js"></script> -->
-	<script src="js/jquery-ui.js" type="text/javascript"></script>
-	<script src="js/plugins.js?v=<?php echo $version; ?>"></script>
-	<script src="js/jPlayer/jquery.jplayer/jquery.jplayer.js"></script>
-	<script src="js/modernizr.custom.js"></script>
+	<script src="jquery/fm_js/fm_jquery-ui.js" type="text/javascript"></script>
+	<script src="jquery/fm_js/fm_plugins.js?v=<?php echo $version; ?>"></script>
+	<script src="jquery/fm_js/fm_jPlayer/jquery.jplayer/jquery.jplayer.js"></script>
+	<script src="jquery/fm_js/fm_modernizr.custom.js"></script>
 
 	<?php
 	if ($aviary_active){
 	if (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' || $_SERVER['SERVER_PORT'] == 443) { ?>
-		<script src="js/editor.js"></script>
+		<script src="jquery/fm_js/fm_editor.js"></script>
 	<?php }else{ ?>
-		<script src="js/editor.js"></script>
+		<script src="jquery/fm_js/fm_editor.js"></script>
 	<?php }} ?>
 
 	<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
@@ -335,7 +335,7 @@ $get_params = http_build_query($get_params);
 				img.src = newURL;
 				$.ajax({
 					type: "POST",
-					url: "ajax_calls.php?action=save_img",
+					url: "fm_ajax_calls.php?action=save_img",
 					data: { url: newURL, path:$('#sub_folder').val()+$('#fldr_value').val(), name:$('#aviary_img').attr('data-name') }
 				}).done(function( msg ) {
 					featherEditor.close();
@@ -358,31 +358,31 @@ $get_params = http_build_query($get_params);
 	});
 		}
 	</script>
-	<script src="js/include.js?v=<?php echo $version; ?>"></script>
+	<script src="jquery/fm_js/fm_include.js?v=<?php echo $version; ?>"></script>
 </head>
 <body>
 <!-- The Templates plugin is included to render the upload/download listings -->
-<script src="js/tmpl.min.js"></script>
+<script src="jquery/fm_js/fm_tmpl.min.js"></script>
 <!-- The Load Image plugin is included for the preview images and image resizing functionality -->
-<script src="js/load-image.all.min.js"></script>
+<script src="jquery/fm_js/fm_load-image.all.min.js"></script>
 <!-- The Canvas to Blob plugin is included for image resizing functionality -->
-<script src="js/canvas-to-blob.min.js"></script>
+<script src="jquery/fm_js/fm_canvas-to-blob.min.js"></script>
 <!-- The Iframe Transport is required for browsers without support for XHR file uploads -->
-<script src="js/jquery.iframe-transport.js"></script>
+<script src="jquery/fm_js/fm_jquery.iframe-transport.js"></script>
 <!-- The basic File Upload plugin -->
-<script src="js/jquery.fileupload.js"></script>
+<script src="jquery/fm_js/fm_jquery.fileupload.js"></script>
 <!-- The File Upload processing plugin -->
-<script src="js/jquery.fileupload-process.js"></script>
+<script src="jquery/fm_js/fm_jquery.fileupload-process.js"></script>
 <!-- The File Upload image preview & resize plugin -->
-<script src="js/jquery.fileupload-image.js"></script>
+<script src="jquery/fm_js/fm_jquery.fileupload-image.js"></script>
 <!-- The File Upload audio preview plugin -->
-<script src="js/jquery.fileupload-audio.js"></script>
+<script src="jquery/fm_js/fm_jquery.fileupload-audio.js"></script>
 <!-- The File Upload video preview plugin -->
-<script src="js/jquery.fileupload-video.js"></script>
+<script src="jquery/fm_js/fm_jquery.fileupload-video.js"></script>
 <!-- The File Upload validation plugin -->
-<script src="js/jquery.fileupload-validate.js"></script>
+<script src="jquery/fm_js/fm_jquery.fileupload-validate.js"></script>
 <!-- The File Upload user interface plugin -->
-<script src="js/jquery.fileupload-ui.js"></script>
+<script src="jquery/fm_js/fm_jquery.fileupload-ui.js"></script>
 
 	<input type="hidden" id="ftp" value="<?php echo !!$ftp; ?>" />
 	<input type="hidden" id="popup" value="<?php echo $popup;?>" />
@@ -810,10 +810,10 @@ $files=$sorted;
 	<div class="row-fluid">
 	<?php
 		if(!empty($_SESSION['subzoo_zoo_zoo_id'])){
-		$link="admin_index.php?url=dialog.php&?".$get_params;
+		$link="admin_index.php?url=fm_dialog.php&?".$get_params;
 		}
 		else{
-			$link="index.php?url=dialog.php&?".$get_params;
+			$link="index.php?url=fm_dialog.php&?".$get_params;
 
 		}
 	?>
@@ -840,10 +840,10 @@ $files=$sorted;
 	<?php }
 		if(!empty($_SESSION['subzoo_zoo_zoo_id'])){
 	?>
-	<li class="pull-right"><a id="refresh" class="btn-small" href="admin_index.php?url=dialog.php&?<?php echo $get_params.$subdir."&".uniqid() ?>"><i class="icon-refresh"></i></a></li>
+	<li class="pull-right"><a id="refresh" class="btn-small" href="admin_index.php?url=fm_dialog.php&?<?php echo $get_params.$subdir."&".uniqid() ?>"><i class="icon-refresh"></i></a></li>
 	<?php
 		}else{ ?>
-			<li class="pull-right"><a id="refresh" class="btn-small" href="index.php?url=dialog.php&?<?php echo $get_params.$subdir."&".uniqid() ?>"><i class="icon-refresh"></i></a></li>
+			<li class="pull-right"><a id="refresh" class="btn-small" href="index.php?url=fm_dialog.php&?<?php echo $get_params.$subdir."&".uniqid() ?>"><i class="icon-refresh"></i></a></li>
 		<?php
 			}
 	?>
@@ -952,19 +952,19 @@ if(!empty($_POST['searchall'])){
 								$folder_path_name[] = $folder_name;
 								$path_file = $result['folder_name'];
 									   ?>
-						<a href="../source<?php for($i = count($folder_path_name[0]); $i>=0; $i--){
+						<a href="source<?php for($i = count($folder_path_name[0]); $i>=0; $i--){
 							$path_search  = $folder_path_name[0][$i]['folder_name'].'/';
 							echo ($path_search);}
 							echo $path_file.'/'.$result['files_name'];
 							?>"><i class=" icon-eye-open"></i></a>
-						<a href="../source<?php for($i = count($folder_path_name[0]); $i>=0; $i--){
+						<a href="source<?php for($i = count($folder_path_name[0]); $i>=0; $i--){
 							$path_search  = $folder_path_name[0][$i]['folder_name'].'/';
 							echo ($path_search);}
 							echo $path_file.'/'.$result['files_name'];?>" download="<?php echo $result['files_name'];?>"><i class="icon-download"></i></a>
 						<?php }
 							else{ ?>
-						<a href="../source/<?php echo $result['folder_name']."/".$result['files_name'];?>"><i class=" icon-eye-open"></i></a>
-						<a href="../source/<?php echo $result['folder_name'].'/'.$result['files_name'];?>" download="<?php echo $result['files_name'];?>"><i class="icon-download"></i></a>
+						<a href="source/<?php echo $result['folder_name']."/".$result['files_name'];?>"><i class=" icon-eye-open"></i></a>
+						<a href="source/<?php echo $result['folder_name'].'/'.$result['files_name'];?>" download="<?php echo $result['files_name'];?>"><i class="icon-download"></i></a>
 						<?php } ?>
 						</div>
 					</div>
@@ -990,11 +990,11 @@ if(!empty($_POST['searchall'])){
 					<?php
 						if(!empty($_SESSION['subzoo_zoo_zoo_id'])){
 					?>
-					<a href="admin_index.php?url=dialog.php&?editor=0&type=0&lang=en_EN&popup=0&crossdomain=0&field_id=&relative_url=0&akey=key&fldr=<?php echo $result['folder_name']?>"><?php echo $result['folder_name']; ?></a>
+					<a href="admin_index.php?url=fm_dialog.php&?editor=0&type=0&lang=en_EN&popup=0&crossdomain=0&field_id=&relative_url=0&akey=key&fldr=<?php echo $result['folder_name']?>"><?php echo $result['folder_name']; ?></a>
 					<?php
 						}
 						else{ ?>
-					<a href="index.php?url=dialog.php&?editor=0&type=0&lang=en_EN&popup=0&crossdomain=0&field_id=&relative_url=0&akey=key&fldr=<?php echo $result['folder_name']?>"><?php echo $result['folder_name']; ?></a>
+					<a href="index.php?url=fm_dialog.php&?editor=0&type=0&lang=en_EN&popup=0&crossdomain=0&field_id=&relative_url=0&akey=key&fldr=<?php echo $result['folder_name']?>"><?php echo $result['folder_name']; ?></a>
 					<?php
 						}
 					?>
@@ -1048,23 +1048,23 @@ if(!empty($_POST['searchall'])){
 				<?php }
 					if(!empty($_SESSION['subzoo_zoo_zoo_id'])){
 				?>
-				<a class="folder-link" href="admin_index.php?url=dialog.php&?<?php echo $get_params.rawurlencode($src)."&".($callback?'callback='.$callback."&":'').uniqid() ?>">
+				<a class="folder-link" href="admin_index.php?url=fm_dialog.php&?<?php echo $get_params.rawurlencode($src)."&".($callback?'callback='.$callback."&":'').uniqid() ?>">
 					<?php
 						}
 						else{ ?>
-					<a class="folder-link" href="index.php?url=dialog.php&?<?php echo $get_params.rawurlencode($src)."&".($callback?'callback='.$callback."&":'').uniqid() ?>">
+					<a class="folder-link" href="index.php?url=fm_dialog.php&?<?php echo $get_params.rawurlencode($src)."&".($callback?'callback='.$callback."&":'').uniqid() ?>">
 					<?php
 						}
 					?>
 					<div class="img-precontainer">
 							<div class="img-container directory"><span></span>
-							<img class="directory-img" data-src="img/<?php echo $icon_theme;?>/folder<?php if($file==".."){ echo "_back"; }?>.png" />
+							<img class="directory-img" data-src="fm_img/<?php echo $icon_theme;?>/folder<?php if($file==".."){ echo "_back"; }?>.png" />
 							</div>
 					</div>
 					<div class="img-precontainer-mini directory">
 							<div class="img-container-mini">
 							<span></span>
-							<img class="directory-img" data-src="img/<?php echo $icon_theme;?>/folder<?php if($file==".."){ echo "_back"; }?>.png" />
+							<img class="directory-img" data-src="fm_img/<?php echo $icon_theme;?>/folder<?php if($file==".."){ echo "_back"; }?>.png" />
 							</div>
 					</div>
 			<?php if($file==".."){ ?>
@@ -1078,10 +1078,10 @@ if(!empty($_POST['searchall'])){
 					<div class="box">
 					<h4 class="<?php
 						if(!empty($_SESSION['subzoo_zoo_zoo_id'])){
-							if($ellipsis_title_after_first_row){ echo "ellipsis"; } ?>"><a class="folder-link" data-file="<?php echo $file ?>" href="admin_index.php?url=dialog.php&?<?php echo $get_params.rawurlencode($src)."&".uniqid() ?>"><?php echo $file;?></a><?php
+							if($ellipsis_title_after_first_row){ echo "ellipsis"; } ?>"><a class="folder-link" data-file="<?php echo $file ?>" href="admin_index.php?url=fm_dialog.php&?<?php echo $get_params.rawurlencode($src)."&".uniqid() ?>"><?php echo $file;?></a><?php
 							}
 							else{
-							if($ellipsis_title_after_first_row){ echo "ellipsis"; } ?>"><a class="folder-link" data-file="<?php echo $file ?>" href="index.php?url=dialog.php&?<?php echo $get_params.rawurlencode($src)."&".uniqid() ?>"><?php echo $file;?></a>
+							if($ellipsis_title_after_first_row){ echo "ellipsis"; } ?>"><a class="folder-link" data-file="<?php echo $file ?>" href="index.php?url=fm_dialog.php&?<?php echo $get_params.rawurlencode($src)."&".uniqid() ?>"><?php echo $file;?></a>
 						<?php
 							}
 						?></h4>
@@ -1195,10 +1195,10 @@ if(!empty($_POST['searchall'])){
 				$no_thumb=false;
 				if($src_thumb==""){
 					$no_thumb=true;
-					if(file_exists('filemanager/img/'.$icon_theme.'/'.$file_array['extension'].".jpg")){
-						$src_thumb ='filemanager/img/'.$icon_theme.'/'.$file_array['extension'].".jpg";
+					if(file_exists('fm_img/'.$icon_theme.'/'.$file_array['extension'].".jpg")){
+						$src_thumb ='fm_img/'.$icon_theme.'/'.$file_array['extension'].".jpg";
 					}else{
-						$src_thumb = "filemanager/img/".$icon_theme."/default.jpg";
+						$src_thumb = "fm_img/".$icon_theme."/default.jpg";
 					}
 					$is_icon_thumb=true;
 				}
@@ -1337,7 +1337,7 @@ if(!empty($_POST['searchall'])){
 	<!-- loading div start -->
 	<div id="loading_container" style="display:none;">
 		<div id="loading" style="background-color:#000; position:fixed; width:100%; height:100%; top:0px; left:0px;z-index:100000"></div>
-		<img id="loading_animation" src="img/storing_animation.gif" alt="loading" style="z-index:10001; margin-left:-32px; margin-top:-32px; position:fixed; left:50%; top:50%"/>
+		<img id="loading_animation" src="fm_img/storing_animation.gif" alt="loading" style="z-index:10001; margin-left:-32px; margin-top:-32px; position:fixed; left:50%; top:50%"/>
 	</div>
 	<!-- loading div end -->
 

@@ -1359,8 +1359,8 @@ class UploadHandler
  					for($i= 0; $i<count($path_foldercutpath); $i++){
 					}
 					$countpath=$i-2;
-					include_once '../database/db_tools.php';
-					include_once '../connect.php';
+					include_once 'database/db_tools.php';
+					include_once 'connect.php';
 					$selectid = $db->findByPK('folder','folder_name',"'$path_foldercutpath[$countpath]'")->executeAssoc();
  					$date = date("Y-m-d");
 					$rs = $db->insert('files',array(

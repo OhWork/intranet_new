@@ -14,7 +14,7 @@
 					<a class="nav-link" href="http://mail.zoothailand.org"><span data-feather="mail"></span>อีเมล์</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="filemanager/index.php?url=dialog.php">
+					<a class="nav-link" href="index.php?url=fm_dialog.php">
                     <span data-feather="database"></span>
 					ระบบฝากไฟล์
 					</a>

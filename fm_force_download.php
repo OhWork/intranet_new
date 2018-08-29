@@ -1,13 +1,13 @@
 <?php
 
-$config = include 'config/config.php';
-include '../database/db_tools.php';
-include '../connect.php';
+$config = include 'fm_config/fm_config.php';
+include 'database/db_tools.php';
+include 'connect.php';
 
 //TODO switch to array
 extract($config, EXTR_OVERWRITE);
 
-include 'include/utils.php';
+include 'fm_include/fm_utils.php';
 
 $ftp = ftp_con($config);
 
@@ -17,7 +17,7 @@ if ($_SESSION['RF']["verify"] != "RESPONSIVEfilemanager")
 	exit;
 }
 
-include 'include/mime_type_lib.php';
+include 'fm_include/fm_mime_type_lib.php';
 
 
 if (

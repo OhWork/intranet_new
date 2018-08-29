@@ -4,7 +4,7 @@ if ($_SESSION['RF']["verify"] != "RESPONSIVEfilemanager")
 {
 	die('forbiden');
 }
-require dirname(__FILE__) . '/Response.php';
+require dirname(__FILE__) . '/fm_Response.php';
 
 if ( ! function_exists('response'))
 {
@@ -44,8 +44,8 @@ if ( ! function_exists('trans'))
 
 	// language
 	if ( ! isset($_SESSION['RF']['language'])
-		|| file_exists('lang/' . basename($_SESSION['RF']['language']) . '.php') === false
-		|| ! is_readable('lang/' . basename($_SESSION['RF']['language']) . '.php')
+		|| file_exists('fm_lang/' . basename($_SESSION['RF']['language']) . '.php') === false
+		|| ! is_readable('fm_lang/' . basename($_SESSION['RF']['language']) . '.php')
 	)
 	{
 		$lang = $default_language;
@@ -60,7 +60,7 @@ if ( ! function_exists('trans'))
 		{
 			$path_parts = pathinfo($lang);
 			$lang = $path_parts['basename'];
-			$languages = include 'lang/languages.php';
+			$languages = include 'fm_lang/languages.php';
 		}
 
 		// add lang file to session for easy include
@@ -68,10 +68,10 @@ if ( ! function_exists('trans'))
 	}
 	else
 	{
-		if(file_exists('lang/languages.php')){
-			$languages = include 'lang/languages.php';
+		if(file_exists('fm_lang/languages.php')){
+			$languages = include 'fm_lang/languages.php';
 		}else{
-			$languages = include '../lang/languages.php';
+			$languages = include 'fm_lang/languages.php';
 		}
 
 		if(array_key_exists($_SESSION['RF']['language'],$languages)){
@@ -83,9 +83,9 @@ if ( ! function_exists('trans'))
 
 	}
 	if(file_exists('lang/' . $lang . '.php')){
-		$lang_vars = include 'lang/' . $lang . '.php';
+		$lang_vars = include 'fm__lang/' . $lang . '.php';
 	}else{
-		$lang_vars = include '../lang/' . $lang . '.php';
+		$lang_vars = include 'fm_lang/' . $lang . '.php';
 	}
 
 	if ( ! is_array($lang_vars))
@@ -260,8 +260,8 @@ function rename_folder($old_path, $name, $ftp = null, $config = null)
 function ftp_con($config){
 	if(isset($config['ftp_host']) && $config['ftp_host']){
 		// *** Include the class
-		include('include/FtpClient.php');
-		include('include/FtpException.php');
+		include('fm_include/fm_FtpClient.php');
+		include('fm_include/fm_FtpException.php');
 		include('include/FtpWrapper.php');
 
 		$ftp = new \FtpClient\FtpClient();

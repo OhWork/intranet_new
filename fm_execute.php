@@ -1,12 +1,12 @@
 <?php
-$config = include 'config/config.php';
-	include '../database/db_tools.php';
-	include '../connect.php';
+$config = include 'fm_config/fm_config.php';
+	include 'database/db_tools.php';
+	include 'connect.php';
 $date = date("Y-m-d");
 //TODO switch to array
 extract($config, EXTR_OVERWRITE);
 
-include 'include/utils.php';
+include 'fm_include/fm_utils.php';
 
 if ($_SESSION['RF']["verify"] != "RESPONSIVEfilemanager")
 {
@@ -26,7 +26,7 @@ if (strpos($_POST['path'],'/')===0
 
 if (isset($_SESSION['RF']['language']) && file_exists('lang/' . basename($_SESSION['RF']['language']) . '.php'))
 {
-	$languages = include 'lang/languages.php';
+	$languages = include 'fm_lang/fm_languages.php';
 	if(array_key_exists($_SESSION['RF']['language'],$languages)){
 		include 'lang/' . basename($_SESSION['RF']['language']) . '.php';
 	}else{
