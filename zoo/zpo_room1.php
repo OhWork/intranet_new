@@ -6,7 +6,7 @@ header("Cache-Control: post-check=0, pre-check=0", false);
 	include "../connect.php";
 if(isset($_GET['gData']) && $_GET['gData']|=""){
 	$id = $_GET['gData'];
-	$result = $db->findByPK33('eventconfer','headncf','zoo','headncf_headncf_id','headncf_id','subzoo_zoo_zoo_id','zoo_id','confer_confer_id',$id)->execute();
+	$result = $db->findByPK44('eventconfer','headncf','zoo','conferroom','headncf_headncf_id','headncf_id','subzoo_zoo_zoo_id','zoo_id','confer_confer_id','confer_id','confer_confer_id',$id)->execute();
  while($rs=$result->fetch_object()){
         $bgColor= "#BDE4F4";
         $textColor= "#00204A";
@@ -130,8 +130,11 @@ if(isset($_GET['gData']) && $_GET['gData']|=""){
 													</div>
 													<div class='col-md-7' style='padding-left:0;padding-right:0;'>
 														<p id='comment' class='col-md-12' style='text-align:left;padding-left:0;padding-right:0;padding-top:4px;'>เนื่องจาก : ".$rs->eventconfer_comment."</p>
-														<div class='col-md-12 reportconfer' style='text-align: center;'>
-															<a class='btn btn-info' style='padding-left:5px;padding-top:5px;padding-right:5px;padding-bottom:5px;float:right;' href='cf_report.php?id=".$rs->eventconfer_id."'>พิมพ์ใบจองห้องประชุม</a>
+														<div class='col-md-12 reportconferzpo' style='text-align: center;'>
+															<a class='btn btn-info' id='zpo' style='padding-left:5px;padding-top:5px;padding-right:5px;padding-bottom:5px;float:right;' href='cf_report.php?id=".$rs->eventconfer_id."'>พิมพ์ใบจองห้องประชุม</a>
+														</div>
+														<div class='col-md-12 reportconfersongkla' style='text-align: center;'>
+															<a class='btn btn-info' id='songkla'style='padding-left:5px;padding-top:5px;padding-right:5px;padding-bottom:5px;float:right;' href='cf_report_songkra.php?id=".$rs->eventconfer_id."'>พิมพ์ใบจองห้องประชุม</a>
 														</div>
 													</div>
 												</div>
@@ -155,7 +158,7 @@ if(isset($_GET['gData']) && $_GET['gData']|=""){
              "color"=> $bgColor,
              "textColor" => $textColor,
              "zoo_name" =>$rs->zoo_name,
-             "zoo_type" =>$rs->zoo_type,
+             "zoo_zoo_id" =>$rs->zoo_zoo_id,
 
         );
     }

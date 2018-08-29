@@ -22,54 +22,104 @@
                     $('#modalBody').html(event.description);
                     $('#modalFooter').html(event.statusfootermodal);
                     $('#fullCalModal').modal();
-                   if (event.status_confer == 'W' && event.status_online == 'W'){
+                   if(event.zoo_zoo_id == 3){
+	                   if (event.status_confer == 'W' && event.status_online == 'W'){
+						   $('#confer').removeClass('col-md-5');
+						   $('#confer').addClass('col-md-6');
+						   $('#txtconfer').removeClass('col-md-8');
+						   $('#txtconfer').addClass('col-md-7');
+						   $('#statusconferrence').addClass('text-warning');
+						   $('#comment').hide();
+						   $('#txtconferonline').hide();
+						   $('#statusconferrenceonline').hide();
+		                   $('.reportconferzpo').hide();
+		                   $('.reportconfersongkla').hide();
+		                   $('.reportconferonline').hide();
+	                   }
+	                   else if((event.status_confer == 'N')){
+						   $('#statusconferrence').addClass('text-danger');
+						   $('#txtconferonline').hide();
+						   $('#statusconferrenceonline').hide();
+		                   $('.reportconferzpo').hide();
+		                   $('.reportconfersongkla').hide();
+		                   $('.reportconferonline').hide();;
+	                   }
+	                   else if((event.status_confer == 'Y' && event.status_online == 'W') || (event.status_confer == 'Y' && event.status_online == 'N') || (event.status_confer == 'Y' && event.status_online == 'C')){
+						   $('#statusconferrence').addClass('text-success');
+		                   $('.reportconferzpo').show();
+		                   $('.reportconfersongkla').hide();
+		                   $('#comment').hide();
+		                   $('#txtconferonline').hide();
+						   $('#statusconferrenceonline').hide();
+		                   $('.reportconferonline').hide();
 
-					   $('#confer').removeClass('col-md-5');
-					   $('#confer').addClass('col-md-6');
-					   $('#txtconfer').removeClass('col-md-8');
-					   $('#txtconfer').addClass('col-md-7');
-					   $('#statusconferrence').addClass('text-warning');
-					   $('#comment').hide();
-					   $('#txtconferonline').hide();
-					   $('#statusconferrenceonline').hide();
-	                   $('.reportconfer').hide();
-	                   $('.reportconferonline').hide();
-                   }
-                   else if((event.status_confer == 'N')){
+	                   }
+	                  else if(event.status_confer == 'Y' && event.status_online == 'Y'){
+						   $('#statusconferrence').addClass('text-success');
+						   $('#statusconferrenceonline').addClass('text-success');
+						   $('#comment').hide();
+		                   $('.reportconferzpo').show();
+		                   $('.reportconfersongkla').hide();
+		                   $('.reportconferonline').show();
+	                   }
+	                    else if(event.status_confer == 'C'){
+						  $('#statusconferrence').addClass('textor');
+		                   $('#txtconferonline').hide();
+						   $('#statusconferrenceonline').hide();
+		                   $('.reportconferzpo').hide();
+		                   $('.reportconfersongkla').hide();
+		                   $('.reportconferonline').hide();
+	                   }
+				   }
+				   else if(event.zoo_zoo_id == 15){
+				   	if (event.status_confer == 'W' && event.status_online == 'W'){
+						   $('#confer').removeClass('col-md-5');
+						   $('#confer').addClass('col-md-6');
+						   $('#txtconfer').removeClass('col-md-8');
+						   $('#txtconfer').addClass('col-md-7');
+						   $('#statusconferrence').addClass('text-warning');
+						   $('#comment').hide();
+						   $('#txtconferonline').hide();
+						   $('#statusconferrenceonline').hide();
+		                   $('.reportconferzpo').hide();
+		                   $('.reportconfersongkla').hide();
+		                   $('.reportconferonline').hide();
+	                   }
+	                   else if((event.status_confer == 'N')){
+						   $('#statusconferrence').addClass('text-danger');
+						   $('#txtconferonline').hide();
+						   $('#statusconferrenceonline').hide();
+		                   $('.reportconferzpo').hide();
+		                   $('.reportconfersongkla').hide();
+		                   $('.reportconferonline').hide();;
+	                   }
+	                   else if((event.status_confer == 'Y' && event.status_online == 'W') || (event.status_confer == 'Y' && event.status_online == 'N') || (event.status_confer == 'Y' && event.status_online == 'C')){
+						   $('#statusconferrence').addClass('text-success');
+		                   $('.reportconferzpo').hide();
+		                   $('.reportconfersongkla').show();
+		                   $('#comment').hide();
+		                   $('#txtconferonline').hide();
+						   $('#statusconferrenceonline').hide();
+		                   $('.reportconferonline').hide();
 
-					   $('#statusconferrence').addClass('text-danger');
-					   $('#txtconferonline').hide();
-					   $('#statusconferrenceonline').hide();
-	                   $('.reportconfer').hide();
-	                   $('.reportconferonline').hide();;
-                   }
-                   else if((event.status_confer == 'Y' && event.status_online == 'W') || (event.status_confer == 'Y' && event.status_online == 'N') || (event.status_confer == 'Y' && event.status_online == 'C')){
-
-					   $('#statusconferrence').addClass('text-success');
-	                   $('.reportconfer').show();
-	                    $('#comment').hide();
-	                   $('#txtconferonline').hide();
-					   $('#statusconferrenceonline').hide();
-	                   $('.reportconferonline').hide();
-
-                   }
-                  else if(event.status_confer == 'Y' && event.status_online == 'Y'){
-
-					   $('#statusconferrence').addClass('text-success');
-					   $('#statusconferrenceonline').addClass('text-success');
-					    $('#comment').hide();
-	                   $('.reportconfer').show();
-	                   $('.reportconferonline').show();
-                   }
-                    else if(event.status_confer == 'C'){
-
-					  $('#statusconferrence').addClass('textor');
-	                   $('#txtconferonline').hide();
-					   $('#statusconferrenceonline').hide();
-	                   $('.reportconfer').hide();
-	                   $('.reportconferonline').hide();
-                   }
-
+	                   }
+	                  else if(event.status_confer == 'Y' && event.status_online == 'Y'){
+						   $('#statusconferrence').addClass('text-success');
+						   $('#statusconferrenceonline').addClass('text-success');
+						   $('#comment').hide();
+		                   $('.reportconferzpo').hide();
+		                   $('.reportconfersongkla').show();
+		                   $('.reportconferonline').show();
+	                   }
+	                    else if(event.status_confer == 'C'){
+						  $('#statusconferrence').addClass('textor');
+		                   $('#txtconferonline').hide();
+						   $('#statusconferrenceonline').hide();
+		                   $('.reportconferzpo').hide();
+		                   $('.reportconfersongkla').hide();
+		                   $('.reportconferonline').hide();
+	                   }
+				   }
 
                    return false;
                 },
@@ -105,7 +155,6 @@
 
             });
             var conferid = $('#confer_id').val();
-			console.log(conferid);
 			if(conferid == 1){
 				$('#roomzpo1').removeClass('btn-primary');
  				$('#roomzpo1').addClass('disabled');
