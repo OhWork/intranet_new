@@ -724,7 +724,7 @@ $files=$sorted;
 ?>
 <!-- header div start -->
 <div class="navbar1">
-	<div class="navbar1-inner" style="width:100%;">
+	<div class="navbar1-inner" >
 		<div class="container-fluid">
 		<button type="button" class="btn btn-navbar1" data-toggle="collapse" data-target=".nav-collapse">
 		<span class="icon-bar"></span>

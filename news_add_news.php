@@ -130,3 +130,32 @@
 <?php
     echo $form->close();
 ?>
+<script>
+	$(function () {
+        $('#datetimepicker1').datetimepicker({
+	        format:'YYYY-MM-DD H:mm',
+	        useCurrent: false,
+	        ignoreReadonly: true,
+            sideBySide: true,
+            allowInputToggle: true,
+	        locale:moment.locale('th'),
+	        stepping: 30
+        });
+        $('#datetimepicker2').datetimepicker({
+	        format:'YYYY-MM-DD H:mm',
+            useCurrent: false,
+            ignoreReadonly: true,
+            sideBySide: true,
+            allowInputToggle: true,
+            locale:moment.locale('th'),
+            stepping: 30
+        });
+        $("#datetimepicker1").on("dp.change", function (e) {
+            $('#datetimepicker2').data("DateTimePicker").minDate(e.date);
+        });
+        $("#datetimepicker2").on("dp.change", function (e) {
+            $('#datetimepicker1').data("DateTimePicker").maxDate(e.date);
+        });
+    });
+
+</script>
