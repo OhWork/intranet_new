@@ -133,7 +133,7 @@
 			var myOption = new Option('โปรดระบุ','');
 			frmMain.ddlSubzoo.options[frmMain.ddlSubzoo.length]= myOption;
 
-			<?
+			<?php
 			$intRows = 0;
 			$rs = $db->findPK1ASC('subzoo','subzoo_enable',1,'subzoo_no')->execute();
 			$intRows = 0;
@@ -141,12 +141,12 @@
 			{
 			$intRows++;
 			?>
-				x = <?=$intRows;?>;
+				x = <?php echo $intRows;?>;
 				mySubList = new Array();
 
-				strGroup = <?=$objResult["zoo_zoo_id"];?>;
-				strValue = "<?=$objResult["subzoo_id"];?>";
-				strItem = "<?=$objResult["subzoo_name"];?>";
+				strGroup = <?php echo $objResult["zoo_zoo_id"];?>;
+				strValue = "<?php echo $objResult["subzoo_id"];?>";
+				strItem = "<?php echo $objResult["subzoo_name"];?>";
 				mySubList[x,0] = strItem;
 				mySubList[x,1] = strGroup;
 				mySubList[x,2] = strValue;
@@ -154,7 +154,7 @@
 					var myOption = new Option(mySubList[x,0], mySubList[x,2])
 					frmMain.ddlSubzoo.options[frmMain.ddlSubzoo.length]= myOption
 				}
-			<?
+			<?php
 			}
 			?>
 		}
