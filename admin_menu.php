@@ -125,7 +125,6 @@
 						if (i <= menusum) {
 							if(i == menusum){
 	      						nav_status = 1;
-		  						console.log('.nav-link-'+menuid+' : เปิดแล้ว');
       						}
 	  						document.getElementById("nav-"+menuid+"-animate-"+i).style.visibility = "visible";
 	  						document.getElementById("nav-"+menuid+"-animate-"+i).classList.add("animat-test");
@@ -142,7 +141,6 @@
 				}
 
 				nav_status = 0;
-				console.log('.nav-link-'+menuid+' : ปิดแล้ว');
 			}
   		});
     }

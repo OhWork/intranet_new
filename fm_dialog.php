@@ -281,7 +281,6 @@ $get_params = http_build_query($get_params);
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 		<meta name="robots" content="noindex,nofollow">
-		<title>ระบบจัดการไฟล์</title>
 		<!-- CSS to style the file input field as button and adjust the Bootstrap progress bars -->
 		<link rel="stylesheet" href="CSS/fm_css/fm_jquery.fileupload.css">
 		<link rel="stylesheet" href="CSS/fm_css/fm_jquery.fileupload-ui.css">

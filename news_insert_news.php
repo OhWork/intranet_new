@@ -16,11 +16,12 @@
 		$data['news_cover'] = $_POST['news_cover'];
 		$data['user_user_id'] = $_POST['user_user_id'];
 		$rsfix = $db->update('news',$data,'news_id',$_POST['id']);
-	
+
 	}else{
-    
+
     $target_dir = 'temp/';
     $target_file = $target_dir.basename($_FILES['news_cover']['name']);
+<<<<<<< HEAD
     $target_dir_save = 'images/news/'.basename($_FILES['news_cover']['name']);
     move_uploaded_file($_FILES['news_cover']['tmp_name'], $target_dir_save);	
     	
@@ -28,12 +29,23 @@
 	'news_head' => $_POST['news_head'],
 	'news_datestart' => $_POST['news_datestart'],
 	'news_dateend' => $_POST['news_dateend'],
+=======
+    $target_dir_save = 'images/news/typeDesign/'.basename($_FILES['news_cover']['name']);
+    move_uploaded_file($_FILES['news_cover']['tmp_name'], $target_dir_save);
+
+	$rs = $db->insert('news',array(
+	'news_head' => $_POST['news_head'],
+/*
+	'newsdatestart' => $_POST['newsdatestart'],
+	'newsdateend' => $_POST['newsdateend'],
+>>>>>>> 5ec133f5686b76b6ec72f255f25e82bdd70220ed
 	'news_cover' => basename($_FILES['news_cover']['name']),
 	'typeNews_typeNews_id' => $_POST['typeNews_typeNews_id'],
 	'typeDesignnews_id' => $_POST['typeDesignnews_id'],
 	'user_user_id' => $_POST['user_user_id']
+*/
 	));
-	}	
+	}
 	if($rs || $rsfix){
     	if($rs){
     	    echo "<div class='statusok'>เพิ่มสำเร็จ</div>";
@@ -47,6 +59,6 @@
         }
 //             $link = "url=admin_index.php?url=admin_news_index.php&user_id=".$_POST['user_user_id'];
             header( "Refresh: 2; $link" );
-}		
-ob_end_flush();		
+}
+ob_end_flush();
 ?>
