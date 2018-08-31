@@ -21,13 +21,13 @@
     
     $target_dir = 'temp/';
     $target_file = $target_dir.basename($_FILES['news_cover']['name']);
-    $target_dir_save = 'images/news/typeDesign/'.basename($_FILES['news_cover']['name']);
+    $target_dir_save = 'images/news/'.basename($_FILES['news_cover']['name']);
     move_uploaded_file($_FILES['news_cover']['tmp_name'], $target_dir_save);	
     	
 	$rs = $db->insert('news',array(
 	'news_head' => $_POST['news_head'],
-	'newsdatestart' => $_POST['newsdatestart'],
-	'newsdateend' => $_POST['newsdateend'],
+	'news_datestart' => $_POST['news_datestart'],
+	'news_dateend' => $_POST['news_dateend'],
 	'news_cover' => basename($_FILES['news_cover']['name']),
 	'typeNews_typeNews_id' => $_POST['typeNews_typeNews_id'],
 	'typeDesignnews_id' => $_POST['typeDesignnews_id'],
