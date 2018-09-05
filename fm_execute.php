@@ -24,11 +24,11 @@ if (strpos($_POST['path'],'/')===0
 	exit;
 }
 
-if (isset($_SESSION['RF']['language']) && file_exists('lang/' . basename($_SESSION['RF']['language']) . '.php'))
+if (isset($_SESSION['RF']['language']) && file_exists('fm_lang/' . basename($_SESSION['RF']['language']) . '.php'))
 {
-	$languages = include 'fm_lang/fm_languages.php';
+	$languages = include 'fm_lang/languages.php';
 	if(array_key_exists($_SESSION['RF']['language'],$languages)){
-		include 'lang/' . basename($_SESSION['RF']['language']) . '.php';
+		include 'fm_lang/' . basename($_SESSION['RF']['language']) . '.php';
 	}else{
 		response(trans('Lang_Not_Found').AddErrorLocation())->send();
 		exit;
@@ -52,9 +52,9 @@ while($cycle && $i<$max_cycles)
 	$i++;
 	if ($path == $base)  $cycle=FALSE;
 
-	if (file_exists($path."config.php"))
+	if (file_exists($path."fm_config.php"))
 	{
-		require_once $path."config.php";
+		require_once $path."fm_config.php";
 		$cycle = FALSE;
 	}
 	$path = fix_dirname($path)."/";
@@ -101,7 +101,7 @@ if (isset($_GET['action']))
 				}else{
 
 
-					$path_folder = substr($path, 10);
+					$path_folder = substr($path, 7);
 					$path_foldercutpath = explode('/',$path_folder);
 					for($i= 0; $i<count($path_foldercutpath); $i++){
 					}
@@ -162,7 +162,7 @@ if (isset($_GET['action']))
 
 					if (is_dir($path))
 					{
-						$path_folder = substr($path, 10);
+						$path_folder = substr($path, 7);
 						$path_foldercutpath = explode('/',$path_folder);
 						for($i= 0; $i<count($path_foldercutpath); $i++){}
 						$countpath=$i-1;
@@ -195,13 +195,14 @@ if (isset($_GET['action']))
 
 				create_folder(fix_path($path,$config),fix_path($path_thumb,$config),$ftp,$config);
 
-				$path_folder = substr($path, 10);
+				$path_folder = substr($path, 7);
 				$path_foldercutpath = explode('/',$path_folder);
 				for($i= 0; $i<count($path_foldercutpath); $i++){
 			}
 			$countpath=$i-2;
-
 				$selectid = $db->findByPK('folder','folder_name',"'$path_foldercutpath[$countpath]'")->executeAssoc();
+				foreach($selectid as $test){
+				}
  				/*
  				$path_foldercount = mb_strlen($path_folder,'UTF-8');
  				$path_foldercountfolder = mb_strlen($path_foldercutpath[0],'UTF-8');
@@ -260,7 +261,7 @@ if (isset($_GET['action']))
 						exit;
 					}
  					$baowiw = $_POST['name'];
- 					$path_folder = substr($path, 10);
+ 					$path_folder = substr($path, 7);
  					$path_foldercutpath = explode('/',$path_folder);
  					for($i= 0; $i<count($path_foldercutpath); $i++){
 			}
@@ -269,6 +270,7 @@ if (isset($_GET['action']))
 			//$countpath เอาไว้เช็คชื่อ folder ที่ต้องการแก้ไข
 			//$countpath2 เช็คpath ก่อนหน้า​โฟลเดอร์ที่อยู่ปัจจุบัน
  			$selectid = $db->findByPK('folder','folder_name',"'$path_foldercutpath[$countpath2]'")->executeAssoc();
+ 			echo $selectid['folder_id'];
 			$rsrename = $db->updatefolder('folder','folder_name',"'$baowiw'",'folder_name',"'$path_foldercutpath[$countpath]'",'folder_position',$selectid['folder_id']);
  				if($rsrename){
  						rename_folder($path_thumb,$name,$ftp,$config);

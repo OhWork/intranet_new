@@ -60,7 +60,7 @@ while ($cycle && $i < $max_cycles)
 	$path = fix_dirname($path).'/';
 }
 
-require('UploadHandler.php');
+require('fm_UploadHandler.php');
 $messages = null;
 if(trans("Upload_error_messages")!=="Upload_error_messages"){
 	$messages = trans("Upload_error_messages");

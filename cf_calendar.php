@@ -141,6 +141,9 @@
 				        element.find('div.fc-content').prepend("<img class='mb-1 mr-1' src='images/red.png' width='10px' height='10px'>");
 			        }
 			        else if(event.status_confer == 'Y'){
+				        if(event.status_online == 'Y'){
+					       element.find('div.fc-content').prepend("<img class='mb-1 mr-1' src='images/imgvdo.jpg' width='10px' height='10px'>");
+				        }
 				        element.find('div.fc-content').prepend("<img class='mb-1 mr-1' src='images/green.png' width='10px' height='10px'>");
 			        }
 			        else if(event.status_confer == 'C'){

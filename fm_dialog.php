@@ -277,10 +277,12 @@ $get_params = http_build_query($get_params);
 <!DOCTYPE html>
 <html xmlns="https://www.w3.org/1999/xhtml">
 	<head>
+<!--
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 		<meta name="robots" content="noindex,nofollow">
+-->
 		<!-- CSS to style the file input field as button and adjust the Bootstrap progress bars -->
 		<link rel="stylesheet" href="CSS/fm_css/fm_jquery.fileupload.css">
 		<link rel="stylesheet" href="CSS/fm_css/fm_jquery.fileupload-ui.css">
@@ -1261,7 +1263,7 @@ if(!empty($_POST['searchall'])){
 				<div class='img-dimension'><center><?php echo $sql3['cdl_count']; ?></center></div>
 <!-- 				<div class='file-extension'><?php echo $file_array['extension'];?></div> -->
 				<figcaption>
-					<form action="force_download.php" method="post" class="download-form" id="form<?php echo $nu;?>">
+					<form action="fm_force_download.php" method="post" class="download-form" id="form<?php echo $nu;?>">
 					<input type="hidden" name="path" value="<?php echo $rfm_subfolder.$subdir?>"/>
 					<input type="hidden" class="name_download" name="name" value="<?php echo $file?>"/>
 

@@ -11,9 +11,9 @@ if ($_SESSION['RF']["verify"] != "RESPONSIVEfilemanager")
 	response(trans('forbiden').AddErrorLocation())->send();
 	exit;
 }
-$languages = include 'fm_lang/fm_languages.php';
+$languages = include 'fm_lang/languages.php';
 
-if (isset($_SESSION['RF']['language']) && file_exists('lang/' . basename($_SESSION['RF']['language']) . '.php'))
+if (isset($_SESSION['RF']['language']) && file_exists('fm_lang/' . basename($_SESSION['RF']['language']) . '.php'))
 {
 	if(array_key_exists($_SESSION['RF']['language'],$languages)){
 		include 'fm_lang/' . basename($_SESSION['RF']['language']) . '.php';
