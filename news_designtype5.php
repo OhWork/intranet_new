@@ -33,6 +33,27 @@
 				<div class='col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2'></div>
 			</div>
 		</div>
+		<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3 mb-3'>
+			<div class='row'>
+				<div class='col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2'>
+					<img height="100" width="100%" src='images/view.jpg' />
+				</div>
+				<div class='col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2'>
+					<img height="100" width="100%" src='images/view2.jpg' />
+				</div>
+				<div class='col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2'>
+					<img height="100" width="100%" src='images/view.jpg' />
+				</div>
+				<div class='col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2'>
+					<img height="100" width="100%" src='images/view2.jpg' />
+				</div>
+				<div class='col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2'>
+					<img height="100" width="100%" src='images/view.jpg' />
+				</div>
+				<div class='col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2'>
+					<img height="100" width="100%" src='images/view2.jpg' />
+				</div>
+			</div>
 		</div>
 	</div>
 </div>
