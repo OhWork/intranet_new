@@ -10,9 +10,10 @@
 <?php
     include 'database/db_tools.php';
 	include 'connect.php';
-	
+
+	print_r($_POST);
 	if(!empty($_POST['user_id'])){
-        
+
 		$data['user_name'] = $_POST['user_name'];
 		$data['user_last'] = $_POST['user_last'];
 		$data['user_nameeng'] = $_POST['user_nameeng'];
@@ -23,8 +24,8 @@
 		$data['user_enable'] = $_POST['user_enable'];
 		$data['subzoo_subzoo_id'] = $_POST['subzoo_subzoo_id'];
 		$data['subzoo_zoo_zoo_id'] = $_POST['subzoo_zoo_zoo_id'];
-		$rsfix = $db->update('user',$data,'user_id',$_POST['user_id']);		
-		
+		$rsfix = $db->update('user',$data,'user_id',$_POST['user_id']);
+
 		if(getenv(HTTP_X_FORWARDED_FOR)){
             $ip = $_SERVER['HTTP_X_FORWARDED_FOR']; // IP proxy
         }else{
@@ -49,7 +50,7 @@
 // 	'systemallow_hrs' => $_POST['systemallow_hrs'],
 // 	'systemallow_drive' => $_POST['systemallow_drive']
 // 	));
-// 	
+//
 // 	$last_id = $db->specifytable2('systemallow_id','systemallow','ORDER BY systemallow_id DESC LIMIT 0 , 1')->executeAssoc();
 // 	if($last_id){
     $rs = $db->insert('user',array(
@@ -84,7 +85,7 @@
     	));
 	}
 
-	if(@$rsa || @$rsfix){
+	if(@$rs || @$rsfix){
     	if($rs){
     	    echo "<div class='statusok'>เพิ่มสำเร็จ</div>";
     	}else if($rsfix){

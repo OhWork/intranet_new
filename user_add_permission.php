@@ -338,16 +338,27 @@ function autoTab2(obj,typeCheck){
 					<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6" style="padding-top: 8px;"><?php echo $lbqtn; ?></div>
 					<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6" style="padding-top: 8px;"><?php echo $radioqtn; ?></div>
 				</div>
-			</div>        
+			</div>
 			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 				<div class="row">
 					<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6" style="padding-top: 8px;"><?php echo $lbadmin; ?></div>
 					<div class='col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6' style="padding-top: 8px;"><?php echo $radioadmin; ?></div>
 				</div>
-			</div>	
+			</div>
 			<input type='hidden' name='log_user' value='<?php echo $log_user; ?>'/>
-			<input type='hidden' name='user_id' value='<?php echo $_GET['id'];?>'/>
-			<input type='hidden' name='systemallow_id' value='<?php echo $_GET['id'];?>'/>
+			<input type='text' name='user_id' value='<?php echo $_GET['id'];?>'/>
+			<?php
+				$rs = $db->findByPK('user','user_id',$id)->executeAssoc();
+				if($rs['systemallow_systemallow_id'] == 0){
+			?>
+			<input type='hidden' name='systemallow_id' value=''/>
+			<?php
+				}
+				else{ ?>
+				<input type='hidden' name='systemallow_id' value='<?php echo $_GET['id'];?>'/>
+			<?php
+				}
+			?>
 			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3" style="margin-bottom: 16px;">
 				<div class="row">
 					<div class="col-md-4"></div>

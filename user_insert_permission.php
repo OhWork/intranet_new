@@ -10,8 +10,8 @@
 <?php
     include 'database/db_tools.php';
 	include 'connect.php';
-	
-	if(!empty($_POST['user_id'])){
+
+	if(!empty($_POST['user_id']) && !empty($_POST['systemallow_id'])){
 
         $data['systemallow_service'] = $_POST['systemallow_service'];
 		$data['systemallow_news'] = $_POST['systemallow_news'];
@@ -22,8 +22,8 @@
 		$data['systemallow_hrs'] = $_POST['systemallow_hrs'];
 		$data['systemallow_qtn'] = $_POST['systemallow_qtn'];
 		$rsfix = $db->update('systemallow',$data,'systemallow_id',$_POST['user_id']);
-		
-		
+
+
 		if(getenv(HTTP_X_FORWARDED_FOR)){
             $ip = $_SERVER['HTTP_X_FORWARDED_FOR']; // IP proxy
         }else{
@@ -49,8 +49,11 @@
 	'systemallow_qtn' => $_POST['systemallow_qtn'],
 	'systemallow_drive' => $_POST['systemallow_drive']
 	));
-	
-	
+
+	$last_id = $db->specifytable2('systemallow_id','systemallow','ORDER BY systemallow_id DESC LIMIT 0 , 1')->executeAssoc();
+	$data['systemallow_systemallow_id'] = $last_id['systemallow_id'];
+ 	$rsa = $db->update('user',$data,'user_id',$_POST['user_id']);
+
 	 //Log
 		if(getenv(HTTP_X_FORWARDED_FOR)){
             $ip = $_SERVER['HTTP_X_FORWARDED_FOR']; // IP proxy
@@ -66,7 +69,6 @@
     	'log_ip' => $ipshow
     	));
 	}
-
 	if(@$rs || @$rsfix){
     	if($rs){
     	    echo "<div class='statusok'>เพิ่มสำเร็จ</div>";
