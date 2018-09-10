@@ -9,84 +9,28 @@
 		</div>
 		<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3'>
 			<div class='row'>
-				<div class='col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8'>
+				<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12'>
 					<div class='row'>
-						<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12'>
-							<div class='row'>
-								<div class='col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2'></div>
-								<div class='col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8'>
-									<img height="250" width="100%" src='images/view2.jpg' />
-								</div>
-								<div class='col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2'></div>
-							</div>
+						<div class='col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3'></div>
+						<div class='col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6'>
+							<img height="250" width="100%" src='images/view2.jpg' />
 						</div>
-						<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-2">
+						<div class='col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3'></div>
+					</div>
+				</div>
+				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-2">
+					<div class='row'>
+						<div class='col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1'></div>
+						<div class='col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10'>
 							How Did van Gogh’s Turbulent Mind Depict One of the Most How Did van Gogh’s Turbulent Mind Depict One 
 							of the Most How Did van Gogh’s Turbulent Mind Depict One of the Most How Did van Gogh’s Turbulent Mind
 							Depict One of the Most How Did van Gogh’s Turbulent Mind Depict One of the Most How Did van Gogh’s 
 							Turbulent Mind Depict One of the Most How Did van Gogh’s Turbulent Mind Depict One of the Most How 
 							Did van Gogh’s Turbulent Mind Depict One of the Most
 						</div>
+						<div class='col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1'></div>
 					</div>
 				</div>
-				<div class='col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4' style="border:1px solid #f5f5f5;border-radius:5px;">
-					<div class='row'>
-						<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3'>
-							<h4> OLD NEWS </h4>
-						</div>
-						<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12'>
-							<div class='row'>
-								<div class='col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6'>
-									<div class='row'>
-										<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-2'>
-											<div class='row'>
-												<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12'>
-													<img height="100" width="100%" src='images/view.jpg' />
-												</div>
-												<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-2" style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis; ">
-													How Did van Gogh’s Turbulent Mind Depict One of the Most ....
-												</div>
-											</div>
-										</div>
-										<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-2'>
-											<div class='row'>
-												<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12'>
-													<img height="100" width="100%" src='images/view.jpg' />
-												</div>
-												<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-2" style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis; ">
-													How Did van Gogh’s Turbulent Mind Depict One of the Most ....
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class='col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6'>
-									<div class='row'>
-										<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-2'>
-											<div class='row'>
-												<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12'>
-													<img height="100" width="100%" src='images/view2.jpg' />
-												</div>
-												<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-2" style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis; ">
-													How Did van Gogh’s Turbulent Mind Depict One of the Most ....
-												</div>
-											</div>
-										</div>
-										<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-2'>
-											<div class='row'>
-												<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12'>
-													<img height="100" width="100%" src='images/view2.jpg' />
-												</div>
-												<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-2" style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis; ">
-													How Did van Gogh’s Turbulent Mind Depict One of the Most ....
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
 				</div>
 			</div>
 		</div>
