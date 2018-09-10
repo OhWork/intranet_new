@@ -39,9 +39,9 @@
     	if($rs){
     	    echo "<div class='statusok'>เพิ่มสำเร็จ</div>";
     	    if($_POST['typeDesignnews_id'] == 1 ){
-    	    $link = "index.php?url=news_add_news/news_designtype1.php";
+    	    $link = "index.php?url=news_designtype1.php";
     	    }else if($_POST['typeDesignnews_id'] == 2 ){
-            $link = "index.php?url=news_add_news/news_designtype2.php";
+            $link = "index.php?url=news_designtype2.php";
     	    }
     	}else if($rsfix){
             echo "<div class='statusok'>แก้ไขสำเร็จ</div>";
