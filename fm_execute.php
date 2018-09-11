@@ -110,7 +110,7 @@ if (isset($_GET['action']))
 					$selectid = $db->findByPK('folder','folder_name',"'$path_foldercutpath[$countpath2]'")->executeAssoc();
 					$selectidfiles = $db->findByPK('files','files_name',"'$path_foldercutpath[$countpath]'")->executeAssoc();
 					$rsdeletecdl = $db->delete('cdl','files_files_id',$selectidfiles['files_id']);
-					$rsdeletefile = $db->deletefolder('files','files_name',"'$path_foldercutpath[$countpath]'",'folder_position',$selectid['folder_id']);
+					$rsdeletefile = $db->deletefolder('files','files_name',"'$path_foldercutpath[$countpath]'",'folder_folder_id',$selectid['folder_id']);
 					if($rsdeletefile){
 	  				unlink($path);
   					}
