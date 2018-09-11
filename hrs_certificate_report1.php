@@ -35,9 +35,9 @@
 		<!--บรรทัดที่ 3-->
 		<table style="margin-bottom:30px;">
     		<tr>
-				<td style="font-size:14px;line-height:28px;letter-spacing:nomal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; หนังสือฉบับนี้เพื่อรับรองว่า
+				<td style="font-size:14px;line-height:28px;letter-spacing:nomal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; หนังสือฉบับนี้เพื่อรับรองว่า
 				<?php echo $show['hrctf_name'];?> ปัจจุบันปฏิบัติงานในตำแหน่ง <?php echo thainumDigit($show['hrctf_position']);?> 
-				สังกัด <?php echo $show['zoo_name'];?> องค์การสวนสัตว์ กระทรวงทรัพยาการธรรมชาติและสิ่งแวดล้อม ได้เข้าทำงานเมื่อวันที่ 
+				สังกัด <?php echo $show['zoo_name'];?> องค์การสวนสัตว์ กระทรวงทรัพยากรธรรมชาติและสิ่งแวดล้อม ได้เข้าทำงานเมื่อวันที่ 
 				<?php $datethai = DateThai($show['hrctf_datestartwork']); echo thainumDigit($datethai);?> 
 				ปัจจุบันอัตราเงินเดือน <?php $salary = number_format($show['hrctf_salary']);
     				                        echo thainumDigit($salary);?> บาท <!--ใส่โค๊ตตรงนี้ เงินเป็นตัวหนังสือ--></td>
@@ -45,7 +45,7 @@
 		</table>
 		<table style="margin-bottom:100px;">
     		<tr>
-				<td style="font-size:14px;letter-spacing:nomal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ให้ไว้ ณ วันที่ <!--ใส่โค๊ตตรงนี้ วันที่--></td>
+				<td style="font-size:14px;letter-spacing:nomal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ให้ไว้ ณ วันที่ <!--ใส่โค๊ตตรงนี้ วันที่--></td>
 			</tr>
 		</table>
 		<!--บรรทัดที่ 6-->

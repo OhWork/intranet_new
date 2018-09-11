@@ -34,7 +34,7 @@
     		<tr>
 				<td style="font-size:14px;">ที่</td>
 				<td style="font-size:14px;">ทส ๑๑๑๙ /</td>
-				<td style="width: 350px;"></td>
+				<td style="width:290px;"></td>
 				<td style="font-size:14px;">วันที่</td>
 				<td style="font-size:14px;"><!--ใส่โค๊ตตรงนี้--></td>
 			</tr>
@@ -54,7 +54,7 @@
 		<!--บรรทัดที่ 5-->
 		<table>
     		<tr>
-				<td style="font-size:14px;line-height:24px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ตามที่ 
+				<td style="font-size:14px;line-height:24px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ตามที่ 
 				<?php echo $show['hrctf_name'];?> <?php echo $show['hrctf_position'];?>
 				 สังกัด <?php echo $show['zoo_name'];?> ได้ยื่นความประสงค์ขอหนังสือรับรองเงินเดือนพนักงานองค์การสวนสัตว์จำนวน ๑ ฉบับ เพื่อประกอบการกู้เงินจากสถาบันการเงิน</td>
 			</tr>
@@ -62,14 +62,14 @@
 		<!--บรรทัดที่ 6-->
 		<table style="margin-bottom:30px">
     		<tr>
-				<td style="font-size:14px;line-height:24px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; สำนักบริหารทรัพยากรบุคคล ฝ่ายสวัสดิการและแรงงานสัมพันธ์ ได้ดำเนินการตรวจสอบและจัดทำหนังสือรับ
+				<td style="font-size:14px;line-height:24px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; สำนักบริหารทรัพยากรบุคคล ฝ่ายสวัสดิการและแรงงานสัมพันธ์ ได้ดำเนินการตรวจสอบและจัดทำหนังสือรับ
 				รองเงินเดือนพนักงานองค์การสวนสัตว์ <?php echo $show['hrctf_name'];?> เพื่อพิจารณาลงนามด้วยแล้ว</td>
 			</tr>
 		</table>
 		<!--บรรทัดที่ 7-->
 		<table  style="margin-bottom:100px">
     		<tr>
-				<td style="font-size:14px;line-height:24px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; จึงเรียนมาเพื่อโปรดพิจารณา</td>
+				<td style="font-size:14px;line-height:24px;letter-spacing:nomal;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; จึงเรียนมาเพื่อโปรดพิจารณา</td>
 			</tr>
 		</table>
 		<!--บรรทัดที่ 8-->

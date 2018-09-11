@@ -41,13 +41,13 @@
 		<!--บรรทัดที่ 4-->
 		<table style="margin-bottom:20px;">
     		<tr>
-				<td style="font-size:14px;">เรียน ผู้อำนวยการ<!--ชื่อสถานพยาบาลที่เข้ารับการรักษา--></td>
+				<td style="font-size:14px;">เรียน ผู้อำนวยการ<?php echo $show['hrctf_hosname'];?></td>
 			</tr>
 		</table>
 		<!--บรรทัดที่ 4-->
 		<table>
     		<tr>
-				<td style="font-size:14px;line-height:24px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  ด้วย 
+				<td style="font-size:14px;line-height:24px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ด้วย 
 					<?php echo $show['hrctf_familyname']?>
 					<?php if($show['hrctf_familytype'] == 2){
     				    echo "คู่สมรส"; 
@@ -59,14 +59,14 @@
         				echo "บุตร"; 
     				}
 					?> ของ <?php echo $show['hrctf_name'];?> พนักงานองค์การสวนสัตว์ ตำแหน่ง <?php echo $show['hrctf_position'];?> สังกัด <?php echo $show['zoo_name'];?> 
-				องค์การสวนสัตว์  ได้เข้ารับการรักษาพยาบาล ณ สถานพยาบาลแห่งนี้ ตั้งแต่วันที่ <?php echo DateThai($show['hrctf_datestarthos']);?> ประเภทคนไข้ใน
+				องค์การสวนสัตว์  ได้เข้ารับการรักษาพยาบาล ณ สถานพยาบาลแห่งนี้ ในวันที่ <?php echo DateThai($show['hrctf_datestarthos']);?> ประเภทคนไข้ใน
 				</td>
 			</tr>
 		</table>
 		<!--บรรทัดที่ 7-->
 		<table style="margin-bottom:30px;">
     		<tr>
-				<td style="font-size:14px;line-height:24px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; องค์การสวนสัตว์ เป็นหน่วยงานรัฐวิสาหกิจ สังกัดกระทรวงทรัพยากรธรรมชาติและสิ่งแวดล้อมขอรับรองว่า
+				<td style="font-size:14px;line-height:24px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;องค์การสวนสัตว์ เป็นหน่วยงานรัฐวิสาหกิจ สังกัดกระทรวงทรัพยากรธรรมชาติและสิ่งแวดล้อม ขอรับรองว่า
 				<?php echo $show['hrctf_familyname'];?> มีสิทธิได้รับสวัสดิการค่ารักษาพยาบาลตามระเบียบขององค์การสวนสัตว์ โดยค่าห้องรวมค่า
 				อาหารเบิกได้วันละไม่เกิน <?php echo $show['hrctf_moneyroom'];?> บาท จึงขอให้ <?php echo $show['hrctf_hosname'];?> เรียก เก็บเงินค่ารักษาพยาบาล ของ 
 				<?php echo $show['hrctf_familyname'];?> ได้โดยตรงกับองค์การสวนสัตว์ ๗๑ ถนนพระราม ๕ เขตดุสิต กรุงเทพมหานคร ๑๐๓๐๐ จักขอบคุณยิ่ง</td>
@@ -75,7 +75,7 @@
 		<!--บรรทัดที่ 12-->
 		<table style="margin-bottom:30px;">
     		<tr>
-				<td style="font-size:14px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; จึงเรียนมาเพื่อโปรดพิจารณา</td>
+				<td style="font-size:14px;letter-spacing:nomal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;จึงเรียนมาเพื่อโปรดพิจารณา</td>
 			</tr>
 		</table>
 		<!--บรรทัดที่ 13-->

@@ -35,7 +35,7 @@
 		<!--บรรทัดที่ 3-->
 		<table style="margin-bottom:30px;">
     		<tr>
-				<td style="font-size:14px;line-height:28px;letter-spacing:nomal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; หนังสือฉบับนี้เพื่อรับรองว่า
+				<td style="font-size:14px;line-height:28px;letter-spacing:nomal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; หนังสือฉบับนี้เพื่อรับรองว่า
 				<?php echo $show['hrctf_name'];?> ปัจจุบันปฏิบัติงานในตำแหน่ง <?php echo thainumDigit($show['hrctf_position']);?> 
 				สังกัด <?php echo $show['zoo_name'];?> องค์การสวนสัตว์ กระทรวงทรัพยาการธรรมชาติและสิ่งแวดล้อม ได้เข้าทำงานเมื่อวันที่ 
 				<?php $datethai = DateThai($show['hrctf_datestartwork']); echo thainumDigit($datethai);?> 
@@ -45,13 +45,13 @@
 		</table>
 		<table style="margin-bottom:100px;">
     		<tr>
-				<td style="font-size:14px;letter-spacing:nomal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ให้ไว้ ณ วันที่ <!--ใส่โค๊ตตรงนี้ วันที่--></td>
+				<td style="font-size:14px;letter-spacing:nomal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ให้ไว้ ณ วันที่ <!--ใส่โค๊ตตรงนี้ วันที่--></td>
 			</tr>
 		</table>
 		<!--บรรทัดที่ 6-->
-		<table style="margin-left:330px;margin-bottom:10px;">
+		<table style="margin-left:345px;margin-bottom:10px;">
     		<tr>
-				<td style="font-size:14px;"><b>นายเบญจพล นาคประเสริฐ</b></td>
+				<td style="font-size:14px;"><b>เบญจพล นาคประเสริฐ</b></td>
 			</tr>
 		</table>
 		<table style="margin-left:330px;margin-bottom:10px;">
