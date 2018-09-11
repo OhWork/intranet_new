@@ -277,12 +277,10 @@ $get_params = http_build_query($get_params);
 <!DOCTYPE html>
 <html xmlns="https://www.w3.org/1999/xhtml">
 	<head>
-<!--
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 		<meta name="robots" content="noindex,nofollow">
--->
 		<!-- CSS to style the file input field as button and adjust the Bootstrap progress bars -->
 		<link rel="stylesheet" href="CSS/fm_css/fm_jquery.fileupload.css">
 		<link rel="stylesheet" href="CSS/fm_css/fm_jquery.fileupload-ui.css">
@@ -298,7 +296,7 @@ $get_params = http_build_query($get_params);
 	}
 	</style><![endif]-->
 
-<!-- 	<script src="js/jquery1.12.js"></script> -->
+	<script src="jquery/fm_js/fm_jquery1.12.js"></script>
 	<script src="jquery/fm_js/fm_jquery-ui.js" type="text/javascript"></script>
 	<script src="jquery/fm_js/fm_plugins.js?v=<?php echo $version; ?>"></script>
 	<script src="jquery/fm_js/fm_jPlayer/jquery.jplayer/jquery.jplayer.js"></script>
@@ -362,6 +360,7 @@ $get_params = http_build_query($get_params);
 	<script src="jquery/fm_js/fm_include.js?v=<?php echo $version; ?>"></script>
 </head>
 <body>
+
 <!-- The Templates plugin is included to render the upload/download listings -->
 <script src="jquery/fm_js/fm_tmpl.min.js"></script>
 <!-- The Load Image plugin is included for the preview images and image resizing functionality -->
@@ -810,7 +809,7 @@ $files=$sorted;
 
 	<div class="row-fluid">
 	<ul class="breadcrumb">
-	<li class="pull-left"><a href="<?php echo $link?>/"><i class="icon-home"></i></a></li>
+	<li class="pull-left"><a href="admin_index.php?url=fm_dialog.php"><i class="icon-home"></i></a></li>
 	<li><span class="divider">/</span></li>
 	<?php
 	$bc=explode("/",$subdir);
@@ -825,25 +824,16 @@ $files=$sorted;
 	<?php }
 	}
 	?>
-
-	<li class="pull-right"><a class="btn-small" href="javascript:void('')" id="info"><i class="icon-question-sign"></i></a></li>
-	<?php if($show_language_selection){ ?>
-	<li class="pull-right"><a class="btn-small" href="javascript:void('')" id="change_lang_btn"><i class="icon-globe"></i></a></li>
-	<?php }
-		if(!empty($_SESSION['subzoo_zoo_zoo_id'])){
-	?>
-	<li class="pull-right"><a id="refresh" class="btn-small" href="admin_index.php?url=fm_dialog.php&?<?php echo $get_params.$subdir."&".uniqid() ?>"><i class="icon-refresh"></i></a></li>
-	<?php
-		}else{ ?>
-			<li class="pull-right"><a id="refresh" class="btn-small" href="index.php?url=fm_dialog.php&?<?php echo $get_params.$subdir."&".uniqid() ?>"><i class="icon-refresh"></i></a></li>
-		<?php
-			}
-	?>
-	<li class="pull-right">
+	<li><small class="hidden-phone">(<span id="files_number"><?php echo $current_files_number."</span> ".trans('Files')." - <span id='folders_number'>".$current_folders_number."</span> ".trans('Folders');?>)</small></li>
+	<?php if($show_total_size){ ?>
+	<li><small class="hidden-phone"><span title="<?php echo trans('total size').$MaxSizeTotal;?>"><?php echo trans('total size').": ".makeSize($sizeCurrentFolder).(($MaxSizeTotal !== false && is_int($MaxSizeTotal))? '/'.$MaxSizeTotal.' '.trans('MB'):'');?></span></small>
+	</li>
+	<?php } ?>
+	<div class="pull-right">
+	<li class="pull-left">
 		<div class="btn-group">
 		<a class="btn dropdown-toggle sorting-btn" data-toggle="dropdown" href="#">
 		<i class="icon-signal"></i>
-		<span class="caret"></span>
 		</a>
 		<ul class="dropdown-menu pull-left sorting">
 			<li class="text-center"><strong><?php echo trans('Sorting') ?></strong></li>
@@ -854,11 +844,20 @@ $files=$sorted;
 		</ul>
 		</div>
 	</li>
-	<li><small class="hidden-phone">(<span id="files_number"><?php echo $current_files_number."</span> ".trans('Files')." - <span id='folders_number'>".$current_folders_number."</span> ".trans('Folders');?>)</small></li>
-	<?php if($show_total_size){ ?>
-	<li><small class="hidden-phone"><span title="<?php echo trans('total size').$MaxSizeTotal;?>"><?php echo trans('total size').": ".makeSize($sizeCurrentFolder).(($MaxSizeTotal !== false && is_int($MaxSizeTotal))? '/'.$MaxSizeTotal.' '.trans('MB'):'');?></span></small>
-	</li>
-	<?php } ?>
+	<?php if($show_language_selection){ ?>
+	<li class="pull-left"><a class="btn-small" href="javascript:void('')" id="change_lang_btn"><i class="icon-globe"></i></a></li>
+	<?php }
+		if(!empty($_SESSION['subzoo_zoo_zoo_id'])){
+	?>
+	<li class="pull-left"><a id="refresh" class="btn-small" href="admin_index.php?url=fm_dialog.php&?<?php echo $get_params.$subdir."&".uniqid() ?>"><i class="icon-refresh"></i></a></li>
+	<?php
+		}else{ ?>
+			<li class="pull-left"><a id="refresh" class="btn-small" href="index.php?url=fm_dialog.php&?<?php echo $get_params.$subdir."&".uniqid() ?>"><i class="icon-refresh"></i></a></li>
+		<?php
+			}
+	?>
+	<li class="pull-left"><a class="btn-small" href="javascript:void('')" id="info"><i class="icon-question-sign"></i></a></li>
+	</div>
 	</ul>
 	</div>
 	<!-- breadcrumb div end -->
