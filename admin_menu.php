@@ -66,7 +66,6 @@
 				   	$(this).parents(0).attr("aria-expanded", true);
             }
             else if(urlcheck != (this.href)) {
-	            console.log(1234);
 				if(this.href.match("user_add_user")){
 				   	$('#user').addClass("show");
 				   	$('#nav-22-animate-1').addClass("active");
