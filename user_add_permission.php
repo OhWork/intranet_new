@@ -346,7 +346,7 @@ function autoTab2(obj,typeCheck){
 				</div>
 			</div>
 			<input type='hidden' name='log_user' value='<?php echo $log_user; ?>'/>
-			<input type='text' name='user_id' value='<?php echo $_GET['id'];?>'/>
+			<input type='hidden' name='user_id' value='<?php echo $_GET['id'];?>'/>
 			<?php
 				$rs = $db->findByPK('user','user_id',$id)->executeAssoc();
 				if($rs['systemallow_systemallow_id'] == 0){
