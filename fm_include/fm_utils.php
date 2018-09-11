@@ -315,7 +315,7 @@ function create_img($imgfile, $imgthumb, $newwidth, $newheight = null, $option =
 	if(file_exists($imgfile) || strpos($imgfile,'http')===0){
 		if (strpos($imgfile,'http')===0 || image_check_memory_usage($imgfile, $newwidth, $newheight))
 		{
-			require_once('php_image_magician.php');
+			require_once('fm_php_image_magician.php');
 			try{
 				$magicianObj = new imageLib($imgfile);
 				$magicianObj->resizeImage($newwidth, $newheight, $option);

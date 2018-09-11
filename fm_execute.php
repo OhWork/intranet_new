@@ -108,7 +108,8 @@ if (isset($_GET['action']))
 					$countpath=$i-1;
 					$countpath2=$i-2;
 					$selectid = $db->findByPK('folder','folder_name',"'$path_foldercutpath[$countpath2]'")->executeAssoc();
-
+					$selectidfiles = $db->findByPK('files','files_name',"'$path_foldercutpath[$countpath]'")->executeAssoc();
+					$rsdeletecdl = $db->delete('cdl','files_files_id',$selectidfiles['files_id']);
 					$rsdeletefile = $db->deletefolder('files','files_name',"'$path_foldercutpath[$countpath]'",'folder_position',$selectid['folder_id']);
 					if($rsdeletefile){
 	  				unlink($path);
@@ -270,7 +271,6 @@ if (isset($_GET['action']))
 			//$countpath เอาไว้เช็คชื่อ folder ที่ต้องการแก้ไข
 			//$countpath2 เช็คpath ก่อนหน้า​โฟลเดอร์ที่อยู่ปัจจุบัน
  			$selectid = $db->findByPK('folder','folder_name',"'$path_foldercutpath[$countpath2]'")->executeAssoc();
- 			echo $selectid['folder_id'];
 			$rsrename = $db->updatefolder('folder','folder_name',"'$baowiw'",'folder_name',"'$path_foldercutpath[$countpath]'",'folder_position',$selectid['folder_id']);
  				if($rsrename){
  						rename_folder($path_thumb,$name,$ftp,$config);
