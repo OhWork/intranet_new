@@ -744,8 +744,8 @@ $files=$sorted;
 					</form>
 				</div>
 			</div>
-			<div class="row-fluid">
-			<div class="span4 half">
+			<div class="row">
+			<div class="col-md-4 half">
 				<?php if($upload_files){ ?>
 				<button class="tip btn upload-btn" title="<?php echo  trans('Upload_file');?>"><i class="rficon-upload"></i></button>
 				<?php } ?>
@@ -760,14 +760,14 @@ $files=$sorted;
 				<button class="tip btn clear-clipboard-btn" title="<?php echo trans('Clear_Clipboard');?>"><i class="rficon-clipboard-clear"></i></button>
 				<?php } ?>
 			</div>
-			<div class="span2 half view-controller" style="margin-left: 170px;">
+			<div class="col-md-4 half view-controller">
 				<center>
 				<button class="btn tip<?php if($view==0) echo " btn-inverse";?>" id="view0" data-value="0" title="<?php echo trans('View_boxes');?>"><i class="icon-th <?php if($view==0) echo "icon-white";?>"></i></button>
 				<button class="btn tip<?php if($view==1) echo " btn-inverse";?>" id="view1" data-value="1" title="<?php echo trans('View_list');?>"><i class="icon-align-justify <?php if($view==1) echo "icon-white";?>"></i></button>
 				<button class="btn tip<?php if($view==2) echo " btn-inverse";?>" id="view2" data-value="2" title="<?php echo trans('View_columns_list');?>"><i class="icon-fire <?php if($view==2) echo "icon-white";?>"></i></button>
 				</center>
 			</div>
-			<div class="span4 entire types" style="float: right;">
+			<div class="col-md-4 entire types" style="float: right;">
 				<span><?php echo trans('Filters');?>:</span>
 				<?php if($_GET['type']!=1 && $_GET['type']!=3 && $show_filter_buttons){ ?>
 					<?php if(count($ext_file)>0 or false){ ?>
@@ -995,6 +995,7 @@ if(!empty($_POST['searchall'])){
 			}
 		}
 }
+else{
 		foreach ($files as $file_array) {
 			$file=$file_array['file'];
 			if($file == '.' || ( substr($file, 0, 1) == '.' && isset( $file_array[ 'extension' ] ) && $file_array[ 'extension' ] == strtolower(trans( 'Type_dir' ) )) || (isset($file_array['extension']) && $file_array['extension']!=strtolower(trans('Type_dir'))) || ($file == '..' && $subdir == '') || in_array($file, $hidden_folders) || ($filter!='' && $n_files>$file_number_limit_js && $file!=".." && stripos($file,$filter)===false)){
@@ -1356,4 +1357,5 @@ if(!empty($_POST['searchall'])){
 </body>
 </html>
 <?php
+	}
 ?>
