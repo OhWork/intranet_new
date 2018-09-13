@@ -1,7 +1,12 @@
 <?php
 
 			$rs2 = "problem,subzoo,typetools,subtypetools  where problem.subzoo_subzoo_id = subzoo.subzoo_id && problem.subtypetools_typetools_typetools_id = subtypetools.subtypetools_id && subtypetools.typetools_typetools_id = typetools.typetools_id";
-			$rs = $db->findByPK21('news','user','news.user_user_id','user.user_id',$startpoint,$limit,'news_date')->execute();
+ 			$rs = $db->findAllDESC('news','news_id')->executeAssoc();
+ 			echo "Test";
+ 			for($i=1;$i<count($rs);$i++){
+     			echo $i;
+     			echo $rs[$i];
+ 			}
 ?>
 <div class='col-xl-1col-lg-1 col-md-1 col-sm-1 col-1'></div>
 <div class='col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10'>

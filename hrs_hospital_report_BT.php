@@ -64,7 +64,7 @@
 				<?php echo $show['hrctf_name'];?>
 				จะเข้ารับการรักษาพยาบาลที่ 
 				<?php echo $show['hrctf_hosname'];?> 
-				ในวันที่ <?php echo $show['hrctf_datestarthos'];?> นั้น</td>
+				ในวันที่ <?php echo DateThai($show['hrctf_datestarthos']);?> นั้น</td>
 			</tr>
 		</table>
 		<!--บรรทัดที่ 8-->

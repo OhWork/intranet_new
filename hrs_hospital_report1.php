@@ -41,7 +41,7 @@
 		<!--บรรทัดที่ 4-->
 		<table style="margin-bottom:20px;">
     		<tr>
-				<td style="font-size:14px;">เรียน ผู้อำนวยการ<!--ชื่อสถานพยาบาลที่เข้ารับการรักษา--></td>
+				<td style="font-size:14px;">เรียน ผู้อำนวยการ<?php echo $show['hrctf_hosname'];?></td>
 			</tr>
 		</table>
 		<!--บรรทัดที่ 4-->

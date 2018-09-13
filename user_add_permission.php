@@ -152,7 +152,7 @@ if (!empty($_SESSION['user_name'])):
     if($sa["systemallow_qtn"] == 1){
     	$radioqtn->add('อนุญาต',1,'checked');
     	$radioqtn->add('ไม่อนุญาต',0,'');
-    	}else if($sa['systemallow_hrs'] == 0){
+    	}else if($sa['systemallow_qtn'] == 0){
         $radioqtn->add('อนุญาต',1,'');
         $radioqtn->add('ไม่อนุญาต',0,'checked');
         }
