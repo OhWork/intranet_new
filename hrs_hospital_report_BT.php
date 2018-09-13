@@ -36,7 +36,7 @@
     		<tr>
 				<td style="font-size:14px;">ที่</td>
 				<td style="font-size:14px;">ทส ๑๑๑๙ /</td>
-				<td style="width: 350px;"></td>
+				<td style="width:290px;"></td>
 				<td style="font-size:14px;">วันที่</td>
 				<td><?php 
     				$datenow = Date("Y-m-d");
@@ -58,7 +58,7 @@
 		<!--บรรทัดที่ 5-->
 		<table>
     		<tr>
-				<td style="font-size:14px;line-height:24px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ด้วย <?php echo $show['hrctf_name'];?> <?php echo $show['hrctf_position'];?> 
+				<td style="font-size:14px;line-height:24px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ด้วย <?php echo $show['hrctf_name'];?> <?php echo $show['hrctf_position'];?> 
 				สังกัด <?php echo $show['zoo_name'];?>มีความประสงค์ขอหนังสือรับรองการมีสิทธิรับเงินช่วยเหลือค่ารักษาพยาบาลซึ่ง 
 				<?php echo $show['hrctf_familyname'];?>
 				<?php echo $show['hrctf_name'];?>
@@ -70,7 +70,7 @@
 		<!--บรรทัดที่ 8-->
 		<table>
     		<tr>
-				<td style="font-size:14px;line-height:24px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; สำนักบริหารทรัพยากรบุคคล ได้จัดทำหนังสือรับรองการมีสิทธิรับเงินช่วยเหลือค่ารักษาพยาบาล
+				<td style="font-size:14px;line-height:24px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; สำนักบริหารทรัพยากรบุคคล ได้จัดทำหนังสือรับรองการมีสิทธิรับเงินช่วยเหลือค่ารักษาพยาบาล
 				<!-- ใส่โค๊ต บิดา บุตร มารดา-->
 				<?php echo $show['hrctf_name'];?> เรียบร้อยแล้ว</td>
 			</tr>
@@ -78,7 +78,7 @@
 		<!--บรรทัดที่ 9-->
 		<table style="margin-bottom:100px">
     		<tr>
-				<td style="font-size:14px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  จึงเรียนมาเพื่อโปรดพิจารณา หากเห็นชอบเพื่อโปรดลงนามในหนังสือรับรองที่แนบมาพร้อมนี้</td>
+				<td style="font-size:14px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;จึงเรียนมาเพื่อโปรดพิจารณา หากเห็นชอบเพื่อโปรดลงนามในหนังสือรับรองที่แนบมาพร้อมนี้</td>
 			</tr>
 		</table>
 		<!--บรรทัดที่ 10-->

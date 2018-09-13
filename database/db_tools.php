@@ -51,7 +51,7 @@
 		}
 		function deletefolder($table,$field,$value,$field2,$value2){
     		$con = $this->connect();
-			$this->sql = "DELETE FROM $table WHERE $field = $value";
+			$this->sql = "DELETE FROM $table WHERE $field = $value AND $field2 = $value2";
 			return mysqli_query($con,$this->sql);
 		}
 
