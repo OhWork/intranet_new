@@ -8,7 +8,6 @@
 <?php
     include 'database/db_tools.php';
 	include 'connect.php';
-	print_r($_POST);
 	if(!empty($_POST['id'])){
 
 		$data['news_head'] = $_POST['news_head'];
@@ -24,21 +23,27 @@
     $target_dir_save = 'images/news/'.basename($_FILES['news_cover']['name']);
     move_uploaded_file($_FILES['news_cover']['tmp_name'], $target_dir_save);
 
+
+	$selectiddetail = $db->findAllDESC('newsDetails','newsDetails_id')->executeAssoc();
 	$rs = $db->insert('news',array(
 	'news_head' => $_POST['news_head'],
-/*
-	'news_datestart' => $_POST['newsdatestart'],
-	'news_dateend' => $_POST['newsdateend'],
-*/
+// 	'news_datestart' => $_POST['newsdatestart'],
+// 	'news_dateend' => $_POST['newsdateend'],
 // 	'news_cover' => basename($_FILES['news_cover']['name']),
 	'typeNews_typeNews_id' => $_POST['typeNews_typeNews_id'],
 	'typeDesignnews_typeDesignnews_id' => $_POST['typeDesignnews_id'],
+	'typeDesignnews_typeDesignnews_id' => $_POST['typeDesignnews_id'],
+	'news_newsDetails_id' => $selectiddetail['newsDetails_id']+1,
 	'user_user_id' => $_POST['user_user_id']
 	));
-	}
-	if(@$rs || @$rsfix){
 
-    	if(@$rs){
+	$rs2 = $db->insert('newsDetails',array(
+	'newsDetails_name' => $_POST['news_detail']
+	));
+	}
+	if(@$rs || @$rsfix || @$rs2){
+
+    	if(@$rs && $rs2){
 	    	echo 'สำเร็จจ้า' ;
     	    echo "<div class='statusok'>เพิ่มสำเร็จ</div>";
     	    if($_POST['typeDesignnews_id'] == 1 ){
