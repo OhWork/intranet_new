@@ -67,7 +67,7 @@
 //             $link = "url=admin_index.php?url=admin_news_index.php&user_id=".$_POST['user_user_id'];
             header( "Refresh: 200; $link" );
 */
-}
+}}
 ob_end_flush();
 ?>
 <script>
