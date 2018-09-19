@@ -333,9 +333,16 @@ $( document ).ready( function () {
 	        ignoreReadonly: true,
 	        showClose:true,
 	        locale:moment.locale('th')
-        }).mouseleave(function (e) {
-          $('#datetimepicker1').data("DateTimePicker").hide();
-   });
+        });
+		$("#datetimepicker1").on("dp.change", function (e) {
+            var widget = $(this).find(".bootstrap-datetimepicker-widget");
+                if (widget.length > 0) {
+                    widget.toggle("dp.hide");
+                    $(this).find(".form-control").blur();
+                }
+        });
+
+});
 	$("#form_reg").validate({
 		rules: {
 			subzoo_zoo_zoo_id: "required",

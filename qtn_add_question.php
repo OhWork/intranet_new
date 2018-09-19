@@ -104,7 +104,7 @@ echo $form->open("form_reg","form","col-xl-12 col-lg-12 col-md-12 col-sm-12 col-
 					<div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8">
 						<?php echo $radioqtnenable;?>
 					</div>
-				</div>		
+				</div>
 			</div>
 			<input type='hidden' name='user_user_id' value='<?php echo $_SESSION['user_id']?>'/>
 			<input type='hidden' name='qtn_datereg' value='<?php echo $datetime; ?>'/>
@@ -147,9 +147,19 @@ echo $form->open("form_reg","form","col-xl-12 col-lg-12 col-md-12 col-sm-12 col-
         });
         $("#datetimepicker1").on("dp.change", function (e) {
             $('#datetimepicker2').data("DateTimePicker").minDate(e.date);
+            var widget = $(this).find(".bootstrap-datetimepicker-widget");
+                if (widget.length > 0) {
+                    widget.toggle("dp.hide");
+                    $(this).find(".form-control").blur();
+                }
         });
         $("#datetimepicker2").on("dp.change", function (e) {
             $('#datetimepicker1').data("DateTimePicker").maxDate(e.date);
+            var widget = $(this).find(".bootstrap-datetimepicker-widget");
+                if (widget.length > 0) {
+                    widget.toggle("dp.hide");
+                    $(this).find(".form-control").blur();
+                }
         });
     });
 	 $("#color_rgb").val($("#qtn_color").val());

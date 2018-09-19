@@ -572,7 +572,7 @@
 											<li data-target="#myCarousel18" data-slide-to="0" class="active"></li>
 											<li data-target="#myCarousel18" data-slide-to="1"></li>
 										</ol>
-										<div class='carousel-inner slidewarpper' role='listbox'>										
+										<div class='carousel-inner slidewarpper' role='listbox'>
 											<div class='carousel-item active'>
 												<img class="d-block w-100" src='images/conferroom/ubon/ubon_confer_2_1.jpg' alt="First slide">																			</div>
 											<div class='carousel-item'>
@@ -606,7 +606,7 @@
 											<div class='carousel-item'>
 												<img class="d-block w-100" src='images/conferroom/kkoz/kkoz_confer_3_6.jpg' alt="First slide">																			</div>
 											<div class='carousel-item'>
-												<img class="d-block w-100" src='images/conferroom/kkoz/kkoz_confer_3_7.jpg' alt="First slide">				
+												<img class="d-block w-100" src='images/conferroom/kkoz/kkoz_confer_3_7.jpg' alt="First slide">
 											</div>
 										</div>
 									</div>
@@ -627,7 +627,7 @@
 											<div class='carousel-item'>
 												<img class="d-block w-100" src='images/conferroom/kkoz/kkoz_confer_2_3.jpg' alt="First slide">																			</div>
 											<div class='carousel-item'>
-												<img class="d-block w-100" src='images/conferroom/kkoz/kkoz_confer_2_4.jpg' alt="First slide">	
+												<img class="d-block w-100" src='images/conferroom/kkoz/kkoz_confer_2_4.jpg' alt="First slide">
 											</div>
 										</div>
 									</div>
@@ -973,11 +973,11 @@
 								<div class='col-md-12 showrequired'>
 									<?php echo $tel; ?>
 								</div>
-								<?php 
+								<?php
 									$datenow = date("Y-m-d");
 									$timenow = date("H:i");
 									$adddatenow = $datenow."&nbsp;".$timenow;
-								?>                                  
+								?>
 								<input type='hidden' name='adddatenow' value='<?php echo $adddatenow; ?>'/>
 								<input type='hidden' id='status_event' name='eventconfer_status' value='W'/>
 								<input type='hidden' id='confer_id' name='confer_confer_id' value="<?php echo $id;?>">
@@ -1024,9 +1024,19 @@
         });
         $("#datetimepicker1").on("dp.change", function (e) {
             $('#datetimepicker2').data("DateTimePicker").minDate(e.date);
+            var widget = $(this).find(".bootstrap-datetimepicker-widget");
+                if (widget.length > 0) {
+                    widget.toggle("dp.hide");
+                    $(this).find(".form-control").blur();
+                }
         });
         $("#datetimepicker2").on("dp.change", function (e) {
             $('#datetimepicker1').data("DateTimePicker").maxDate(e.date);
+            var widget = $(this).find(".bootstrap-datetimepicker-widget");
+                if (widget.length > 0) {
+                    widget.toggle("dp.hide");
+                    $(this).find(".form-control").blur();
+                }
         });
     });
 
