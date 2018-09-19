@@ -28,11 +28,11 @@
 	$selectiddetail = $db->findAllDESC('newsDetails','newsDetails_id')->executeAssoc();
 	$rs = $db->insert('news',array(
 	'news_head' => $_POST['news_head'],
-// 	'news_datestart' => $_POST['newsdatestart'],
-// 	'news_dateend' => $_POST['newsdateend'],
-// 	'news_cover' => basename($_FILES['news_cover']['name']),
+	'news_datestart' => $_POST['newsdatestart'],
+	'news_dateend' => $_POST['newsdateend'],
+	'news_cover' => basename($_FILES['news_cover']['name']),
 	'typeNews_typeNews_id' => $_POST['typeNews_typeNews_id'],
-	'typeDesignnews_typeDesignnews_id' => $_POST['typeDesignnews_id'],
+	'typeDesignnews_id' => $_POST['typeDesignnews_id'],
 	'news_newsDetails_id' => $selectiddetail['newsDetails_id']+1,
 	'user_user_id' => $_POST['user_user_id']
 	));
@@ -66,7 +66,8 @@
 //             $link = "url=admin_index.php?url=admin_news_index.php&user_id=".$_POST['user_user_id'];
             header( "Refresh: 200; $link" );
 */
-}}
+}
+}
 ob_end_flush();
 ?>
 <script>
