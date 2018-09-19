@@ -45,7 +45,8 @@
 	if(@$rs || @$rsfix){
 
     	if(@$rs){
-	      	    if($_POST['typeDesignnews_id'] == 1 ){
+	    	 echo "<div class='statusok'>เพิ่มสำเร็จ</div>";
+	      	if($_POST['typeDesignnews_id'] == 1 ){
     	    $link = "index.php?url=news_designtype1.php";
     	    }else if($_POST['typeDesignnews_id'] == 2 ){
             $link = "index.php?url=news_designtype2.php";
@@ -54,7 +55,7 @@
             echo "<div class='statusok'>แก้ไขสำเร็จ</div>";
         }
 //             $link = "url=admin_index.php?url=admin_news_index.php&user_id=".$_POST['user_user_id'];
-            header( "Refresh: 200; $link" );
+            header( "Refresh: 2; $link" );
 }
 ob_end_flush();
 ?>
