@@ -33,7 +33,6 @@
 // 	'news_cover' => basename($_FILES['news_cover']['name']),
 	'typeNews_typeNews_id' => $_POST['typeNews_typeNews_id'],
 	'typeDesignnews_typeDesignnews_id' => $_POST['typeDesignnews_id'],
-	'typeDesignnews_typeDesignnews_id' => $_POST['typeDesignnews_id'],
 	'news_newsDetails_id' => $selectiddetail['newsDetails_id']+1,
 	'user_user_id' => $_POST['user_user_id']
 	));
