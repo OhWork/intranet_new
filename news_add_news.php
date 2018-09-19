@@ -79,18 +79,6 @@
 		</div>
 		<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3">
 			<div class="row">
-				<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4" style="padding-right:0px;padding-top:5px;">
-					<?php echo $lbdetail; ?>
-				</div>
-				<div class='date-form dayinbox col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8 form-horizontal control-group controls input-group'>
-					<div class='input-group date' id ="datetimepicker2">
-						<?php echo $txtdetailnews; ?>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3">
-			<div class="row">
 				<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
 					<?php echo $lbpic; ?>
 				</div>
