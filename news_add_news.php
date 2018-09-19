@@ -169,9 +169,19 @@
         });
         $("#datetimepicker1").on("dp.change", function (e) {
             $('#datetimepicker2').data("DateTimePicker").minDate(e.date);
+            var widget = $(this).find(".bootstrap-datetimepicker-widget");
+                if (widget.length > 0) {
+                    widget.toggle("dp.hide");
+                    $(this).find(".form-control").blur();
+                }
         });
         $("#datetimepicker2").on("dp.change", function (e) {
             $('#datetimepicker1').data("DateTimePicker").maxDate(e.date);
+            var widget = $(this).find(".bootstrap-datetimepicker-widget");
+                if (widget.length > 0) {
+                    widget.toggle("dp.hide");
+                    $(this).find(".form-control").blur();
+                }
         });
     });
 
