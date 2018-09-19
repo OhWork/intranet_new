@@ -104,18 +104,21 @@ class textfieldcalendarreadonly{
 	}
 #---------------Text Area---------------#
 	class textArea{
-		public $rows,$cols,$id,$name,$value;
+		public $rows,$cols,$idtf,$name,$value;
 
-		function __construct($name,$cass,$idtf,$hold){
+		function __construct($name,$cass,$idtf,$hold,$cols,$rows,$value){
 			$this->name = $name;
 			$this->cass = $cass;
 			$this->idtf = $idtf;
 			$this->hold = $hold;
+			$this->cols = $cols;
+			$this->rows = $rows;
+			$this->value = $value;
 
 		}
 
 		function __toString(){
-			return "<textarea cols='{$this->cols}'rows='{$this->rows}'id='{$this->id}'name='{$this->name}'class='{$this->cass}'>{$this->value}</textarea>";
+			return "<textarea cols='{$this->cols}'rows='{$this->rows}'id='{$this->idtf}'name='{$this->name}'class='{$this->cass}'>{$this->value}</textarea>";
 		}
 	}
 	class textAreaCf{

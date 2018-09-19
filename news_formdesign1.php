@@ -1,3 +1,9 @@
+<?php
+	$lbdetailnews = new label('รายละเอียด');
+	$lbpic = new label('ภาพ');
+	$filepic = new inputFile('news_detail','','');
+	$detailnews = new textArea('detail_news','form-control','textediter','','5','5','หากต้องการกรอกรายละเอียดกรุณาคลิก');
+?>
 <div class='col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1'></div>
 <div class='col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10 pb-3' style="background-color:#ffffff;">
 	<div class='row'>
@@ -12,8 +18,10 @@
 				<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12'>
 					<div class='row'>
 						<div class='col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3'></div>
-						<div class='col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6 w-100'style="height:250px;padding-top:120px;border:solid 1px #757575;border-radius:7px;">
-							<center><span data-feather="plus"></span></center>
+						<div class='col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6 w-100'>
+							<?php
+								echo $lbpic;
+								echo $filepic;?>
 						</div>
 						<div class='col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3'></div>
 					</div>
@@ -21,8 +29,11 @@
 				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-2">
 					<div class='row'>
 						<div class='col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1'></div>
-						<div class='col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10'>
-							<input class="form-control" type="text" value="Text new"/>
+						<div class='col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10' id="text_detail">
+							<?php
+								echo $lbdetailnews;
+								echo $detailnews;?>
+							<input type="button" id="button_adddetail" value="บันทึก">
 						</div>
 						<div class='col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1'></div>
 					</div>
@@ -40,3 +51,16 @@
 	</div>
 </div>
 <div class='col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1'></div>
+<script>
+                // Replace the <textarea id="editor1"> with a CKEditor
+                // instance, using default configuration.
+                $('#button_adddetail').hide();
+                $('#text_detail').on('click',function(){
+	                 CKEDITOR.replace( 'textediter' );
+					 $('#button_adddetail').show();
+                });
+                $('#button_adddetail').on('click',function(){
+	                var checktext = $('#textediter').val();
+	                console.log(checktext);
+                });
+</script>
