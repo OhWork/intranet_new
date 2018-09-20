@@ -1,8 +1,9 @@
 <?php
+	$form = new form();
 	$lbdetailnews = new label('รายละเอียด');
 	$lbpic = new label('ภาพ');
 	$filepic = new inputFile('news_detail','','');
-	$detailnews = new textArea('detail_news','form-control','textediter','','5','5');
+	$detailnews = new textArea('detail_news','form-control','text_editer','','5','5');
 ?>
 <div class='col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1'></div>
 <div class='col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10 pb-3' style="background-color:#ffffff;">
@@ -33,7 +34,7 @@
 							<?php
 								echo $lbdetailnews;
 								echo $detailnews;?>
-							<input type="button" id="button_adddetail" value="บันทึก">
+							<input type="submit" id="button_adddetail" value="บันทึก">
 						</div>
 						<div class='col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1'></div>
 					</div>
@@ -52,15 +53,22 @@
 </div>
 <div class='col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1'></div>
 <script>
-                // Replace the <textarea id="editor1"> with a CKEditor
-                // instance, using default configuration.
                 $('#button_adddetail').hide();
                 $('#text_detail').on('click',function(){
-	                 CKEDITOR.replace( 'textediter' );
+	                 CKEDITOR.replace( 'detail_news' );
 					 $('#button_adddetail').show();
-                });
-                $('#button_adddetail').on('click',function(){
-// 	                var checktext = $('#textediter').val();
-	                console.log($('#textediter').val());
+					  $('#button_adddetail').on('click',function(){
+						  var news_detetail = CKEDITOR.instances["text_editer"].getData();
+						  $.ajax({
+					            url: "news_insert_detail.php",
+					            data: {news_detail : news_detetail },
+					            type: "POST",
+					            success: function(data) {
+						           	console.log('ยู้หู้วววว');
+					            }
+					        });
+
+					  });
                 });
 </script>
+
