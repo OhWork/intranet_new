@@ -40,7 +40,7 @@
 								echo $lbdetailnews;
 								echo $detailnews;?>
 							<input type="submit" id="button_adddetail" value="บันทึก">
-							<input type="button" id="button_cenceletail" value="ยกเลิก">
+							<input type="button" id="button_canceletail" value="ยกเลิก">
 						</div>
 						<div class='col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1'></div>
 					</div>
@@ -61,15 +61,15 @@
 <div class='col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1'></div>
 <script>
                 $('#button_adddetail').hide();
-                $('#button_cenceletail').hide();
+                $('#button_canceletail').hide();
                 $('#text_detail').on('click',function(){
 	                 CKEDITOR.replace( 'text_editer', {
 					    uiColor: '#9AB8F3',
-					    removeButtons : 'Styles,Scayt'
+					    removeButtons : 'Styles,Scayt,Format'
 
 					});;
 					 $('#button_adddetail').show();
-					 $('#button_cenceletail').show();
+					 $('#button_canceletail').show();
 					 $("#text_editer").removeAttr("readonly");
 					 var id_news = $('#id').val();
  					 if(id_news == ''){
@@ -85,12 +85,11 @@
 						           	console.log('ยู้หู้วววว');
 					            }
 					        });
-/*
-					        $('#button_cencaldetail').on('click',function(){
-								$("#text_editer").attr("readonly", "readonly");
-					        });
-*/
-					  });
+					   });
                 });
+                $('#button_canceletail').on('click',function(){
+						        console.log(1234);
+								CKEDITOR.instances['text_editer'].destroy(true);
+				});
 </script>
 
