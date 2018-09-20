@@ -30,7 +30,7 @@
 <script src="jquery/fullcalendar.min.js"></script>
 <!-- จบ Fullcalendar -->
 <!-- ชุดCKeditor -->
-<script src="jquery/ckeditor.js"></script>
+<script src="jquery/ckeditor/ckeditor.js"></script>
 <!-- หาก เปิดใช้ การทำงานของฟังก์ชั่น StartDate และ endDate ของ Datepicker จะไม่สามารถทำงานได้ -->
 <!-- <script src="jquery/datatables.js"></script> -->
 <!-- <script src="jquery/jstree.min.js"></script> -->
