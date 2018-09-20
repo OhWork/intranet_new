@@ -40,6 +40,7 @@
 								echo $lbdetailnews;
 								echo $detailnews;?>
 							<input type="submit" id="button_adddetail" value="บันทึก">
+							<input type="button" id="button_cenceletail" value="ยกเลิก">
 						</div>
 						<div class='col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1'></div>
 					</div>
@@ -51,7 +52,7 @@
 			<div class='col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10'></div>
 			<div class='col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2'>
 				<input class="btn btn-success w-100" type="submit" value="submit" />
-				<input  type="text" id="id" value="<?php echo $id;?>" />
+				<input  type="hidden" id="id" value="<?php echo $id;?>" />
 			</div>
 			</div>
 		</div>
@@ -60,9 +61,15 @@
 <div class='col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1'></div>
 <script>
                 $('#button_adddetail').hide();
+                $('#button_cenceletail').hide();
                 $('#text_detail').on('click',function(){
-	                 CKEDITOR.replace( 'detail_news' );
+	                 CKEDITOR.replace( 'text_editer', {
+					    uiColor: '#9AB8F3',
+					    removeButtons : 'Styles,Scayt'
+
+					});;
 					 $('#button_adddetail').show();
+					 $('#button_cenceletail').show();
 					 $("#text_editer").removeAttr("readonly");
 					 var id_news = $('#id').val();
  					 if(id_news == ''){
@@ -78,7 +85,11 @@
 						           	console.log('ยู้หู้วววว');
 					            }
 					        });
-
+/*
+					        $('#button_cencaldetail').on('click',function(){
+								$("#text_editer").attr("readonly", "readonly");
+					        });
+*/
 					  });
                 });
 </script>
