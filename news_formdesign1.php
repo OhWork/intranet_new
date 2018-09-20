@@ -65,7 +65,7 @@
                 $('#text_detail').on('click',function(){
 	                 CKEDITOR.replace( 'text_editer', {
 					    uiColor: '#9AB8F3',
-					    removeButtons : 'Styles,Scayt,Format'
+					    removeButtons : 'Styles,Scayt,Format,Source,Strike,Maximize,About,Image'
 
 					});;
 					 $('#button_adddetail').show();
