@@ -63,33 +63,35 @@
                 $('#button_adddetail').hide();
                 $('#button_canceletail').hide();
                 $('#text_detail').on('click',function(){
-	                 CKEDITOR.replace( 'text_editer', {
+	                CKEDITOR.replace( 'text_editer', {
 					    uiColor: '#9AB8F3',
-					    removeButtons : 'Styles,Scayt,Format,Source,Strike,Maximize,About,Image'
-
+					    removeButtons : 'Styles,Scayt,Format,Source,Strike,Maximize,About,Image',
+					    enterMode : CKEDITOR.ENTER_BR
 					});;
-					 $('#button_adddetail').show();
-					 $('#button_canceletail').show();
-					 $("#text_editer").removeAttr("readonly");
-					 var id_news = $('#id').val();
- 					 if(id_news == ''){
-					 $('#text_editer').val('');
+					$('#button_adddetail').show();
+					$('#button_canceletail').show();
+					$("#text_editer").removeAttr("readonly");
+					var id_news = $('#id').val();
+ 					if(id_news == ''){
+					 	$('#text_editer').val('');
  					 }
-					  $('#button_adddetail').on('click',function(){
-						  var news_detetail = CKEDITOR.instances["text_editer"].getData();
-						  $.ajax({
-					            url: "news_insert_detail.php",
-					            data: {news_detail : news_detetail },
-					            type: "POST",
-					            success: function(data) {
-						           	console.log('ยู้หู้วววว');
-					            }
-					        });
-					   });
+					$('#button_adddetail').on('click',function(){
+					 	var news_detetail = CKEDITOR.instances["text_editer"].getData();
+						$.ajax({
+					    	url: "news_insert_detail.php",
+					        data: {news_detail : news_detetail },
+					        type: "POST",
+					        success: function(data) {
+						        $('#text_editer').val(data);
+						    	CKEDITOR.instances['text_editer'].destroy(true);
+						        $('#button_adddetail').hide();
+								$('#button_canceletail').hide();
+					        }
+					    });
+					});
+					$('#button_canceletail').on('click',function(){
+						CKEDITOR.instances['text_editer'].destroy(true);
+					});
                 });
-                $('#button_canceletail').on('click',function(){
-						        console.log(1234);
-								CKEDITOR.instances['text_editer'].destroy(true);
-				});
 </script>
 

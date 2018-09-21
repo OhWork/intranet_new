@@ -1,10 +1,4 @@
 <?php  ob_start();?>
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html" charset="utf-8">
-        <link rel="stylesheet" href="CSS/bootstrap.css">
-        <link rel="stylesheet" href="CSS/main.css">
-	</head>
 <?php
     include 'database/db_tools.php';
 	include 'connect.php';
@@ -25,9 +19,11 @@
 	if(@$rs || @$rsfix){
 
     	if(@$rs){
-	    	 echo "<div class='statusok'>เพิ่มสำเร็จ</div>";
+	    	$selectiddetail = $db->findAllDESC('newsDetails','newsDetails_id')->executeAssoc();
+	    	$lastiddetail = $selectiddetail['newsDetails_id'];
+	    	$rsshowdetail = $db->findByPK('newsDetails','newsDetails_id',$lastiddetail)->executeAssoc();
+	    	echo $rsshowdetail['newsDetails_name'];
     	}else if(@$rsfix){
-            echo "<div class='statusok'>แก้ไขสำเร็จ</div>";
         }
 }
 ob_end_flush();
