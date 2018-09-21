@@ -91,8 +91,9 @@
 					});
 					$('#button_canceletail').on('click',function(e){
 						if(CKEDITOR.instances['text_editer']){
-							console.log('โคตรเท่');
 							CKEDITOR.instances['text_editer'].destroy(true);
+							$('#button_adddetail').hide();
+							$('#button_canceletail').hide();
 							e.stopPropagation();
 						}
 					});
