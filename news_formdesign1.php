@@ -83,9 +83,11 @@
 					        type: "POST",
 					        success: function(data) {
 						        $('#text_editer').val(data);
-						    	CKEDITOR.instances['text_editer'].destroy(true);
-						        $('#button_adddetail').hide();
-								$('#button_canceletail').hide();
+						        if(CKEDITOR.instances['text_editer']){
+							    	CKEDITOR.instances['text_editer'].destroy(true);
+							        $('#button_adddetail').hide();
+									$('#button_canceletail').hide();
+								}
 					        }
 					    });
 					});
