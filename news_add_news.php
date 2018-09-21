@@ -9,7 +9,6 @@
     $selecttypenews = new SelectFromDB();
     $selecttypenews->name = 'typeNews_typeNews_id';
     $selecttypenews->lists = 'โปรดระบุ ชนิดของข่าวสาร';
-    $lbdetail = new label('รายละเอียดข่าวสาร');
     $filepic = new inputFile('news_cover','','');
     $txtdatestart = new textfieldcalendarreadonly('newsdatestart','datetimepicker1','','form-control','input-group-addon','datetimepicker1');
     $txtdateend = new textfieldcalendarreadonly('newsdateend','datetimepicker2','','form-control','input-group-addon','datetimepicker2');
@@ -131,6 +130,7 @@
 		</div>
 		<input type='hidden' name='news_date' value='<?php echo $datetime; ?>'/>
 		<input type='hidden' name='user_user_id' value='<?php echo $user_id; ?>'/>
+		<input type='hidden' name='id' value='<?php echo $id; ?>'/>
 		<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-1" style="padding-bottom:16px;">
 			<div class="row">
 				<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4"></div>

@@ -46,8 +46,11 @@
 
     	if(@$rs){
 	    	 echo "<div class='statusok'>เพิ่มสำเร็จ</div>";
+	    	$selectiddetail = $db->findAllDESC('news','news_id')->executeAssoc();
+			echo $selectiddetail['news_id'];
+			$idnew = $selectiddetail['news_id'];
 	      	if($_POST['typeDesignnews_id'] == 1 ){
-    	    $link = "index.php?url=news_formdesign1.php";
+    	    $link = "index.php?url=news_formdesign1.php&id=$idnew";
     	    }else if($_POST['typeDesignnews_id'] == 2 ){
             $link = "index.php?url=news_designtype2.php";
     	    }

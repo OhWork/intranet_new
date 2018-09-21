@@ -1,11 +1,15 @@
 <?php
 	$form = new form();
 	$lbdetailnews = new label('รายละเอียด');
+	$lbheadnews = new label('หัวข้อข่าวสาร');
+	$txtheadnews = new textfield('news_head','','form-control','','');
 	$lbpic = new label('ภาพ');
 	$filepic = new inputFile('news_detail','','');
 	$detailnews = new textAreareadonly('detail_news','form-control','text_editer','','5','5','หากต้องการใส่รายละเอียดกรุณาคลิก');
 	if(!empty($_GET['id'])){
 	$id=$_GET['id'];
+	$r = $db->findByPK('news','news_id',$id)->executeRow();
+	$txtheadnews->value = $r['news_head'];
 	$r = $db->findByPK('newsDetails','newsDetails_id',$id)->executeRow();
 	$detailnews->value = $r['newsDetails_name'];
 	}
@@ -14,7 +18,9 @@
 <div class='col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10 pb-3' style="background-color:#ffffff;">
 	<div class='row'>
 		<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3'>
-			<input class="form-control" type="text" value="Head NEWS"/>
+			<?php
+				echo $lbheadnews;
+				echo $txtheadnews;?>
 		</div>
 		<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3' style="color:#007bff;">
 			post by choatchaw 22 aug 2561 10.00am
@@ -85,6 +91,7 @@
 						        $('#text_editer').val(data);
 						        if(CKEDITOR.instances['text_editer']){
 							    	CKEDITOR.instances['text_editer'].destroy(true);
+							    	$('#text_editer').attr('readonly', true);
 							        $('#button_adddetail').hide();
 									$('#button_canceletail').hide();
 								}
@@ -94,6 +101,7 @@
 					$('#button_canceletail').on('click',function(e){
 						if(CKEDITOR.instances['text_editer']){
 							CKEDITOR.instances['text_editer'].destroy(true);
+							$('#text_editer').attr('readonly', true);
 							$('#button_adddetail').hide();
 							$('#button_canceletail').hide();
 							e.stopPropagation();
