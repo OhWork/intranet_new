@@ -5,13 +5,18 @@
 	$txtheadnews = new textfield('news_head','','form-control','','');
 	$lbpic = new label('ภาพ');
 	$filepic = new inputFile('news_detail','','');
-	$detailnews = new textAreareadonly('detail_news','form-control','text_editer','','5','5','หากต้องการใส่รายละเอียดกรุณาคลิก');
+	$detailnews = new textAreareadonly('detail_news','form-control','text_editer','','5','5','');
 	if(!empty($_GET['id'])){
-	$id=$_GET['id'];
-	$r = $db->findByPK('news','news_id',$id)->executeRow();
-	$txtheadnews->value = $r['news_head'];
-	$r = $db->findByPK('newsDetails','newsDetails_id',$id)->executeRow();
-	$detailnews->value = $r['newsDetails_name'];
+		$id=$_GET['id'];
+		$r2 = $db->findByPK('news','news_id',$id)->executeRow();
+		$txtheadnews->value = $r2['news_head'];
+		$r = $db->findByPK('newsDetails','newsDetails_id',$r2['news_newsDetails_id'])->executeRow();
+		if($r2['news_newsDetails_id'] == '' || $r2['news_newsDetails_id'] != $r['newsDetails_id']){
+			$detailnews->value = 'หากต้องการเพิ่มรายละเอียดกรุณาคลิก';
+		}
+		else{
+				$detailnews->value = $r['newsDetails_name'];
+		}
 	}
 ?>
 <div class='col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1'></div>
@@ -53,7 +58,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-2">
+		<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3">
 			<div class='row'>
 			<div class='col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10'></div>
 			<div class='col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2'>
@@ -77,15 +82,12 @@
 					$('#button_adddetail').show();
 					$('#button_canceletail').show();
 					$("#text_editer").removeAttr("readonly");
-					var id_news = $('#id').val();
- 					if(id_news == ''){
-					 	$('#text_editer').val('');
- 					 }
+					$("#text_editer").val('');
 					$('#button_adddetail').on('click',function(){
 					 	var news_detetail = CKEDITOR.instances["text_editer"].getData();
 						$.ajax({
 					    	url: "news_insert_detail.php",
-					        data: {news_detail : news_detetail },
+					        data: {news_detail : news_detetail , text : '' },
 					        type: "POST",
 					        success: function(data) {
 						        $('#text_editer').val(data);
@@ -100,11 +102,22 @@
 					});
 					$('#button_canceletail').on('click',function(e){
 						if(CKEDITOR.instances['text_editer']){
-							CKEDITOR.instances['text_editer'].destroy(true);
-							$('#text_editer').attr('readonly', true);
-							$('#button_adddetail').hide();
-							$('#button_canceletail').hide();
-							e.stopPropagation();
+							$.ajax({
+					    	url: "news_insert_detail.php",
+					        data: {text : 'cancel'},
+					        type: "POST",
+					        success: function(data) {
+						        console.log(data);
+						        $('#text_editer').val(data);
+						        if(CKEDITOR.instances['text_editer']){
+							    		CKEDITOR.instances['text_editer'].destroy(true);
+										$('#text_editer').attr('readonly', true);
+										$('#button_adddetail').hide();
+										$('#button_canceletail').hide();
+										e.stopPropagation();
+								}
+					        	}
+					    	});
 						}
 					});
                 });
