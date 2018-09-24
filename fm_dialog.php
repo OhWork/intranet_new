@@ -737,8 +737,8 @@ $files=$sorted;
 			<div class="row-fluid">
 				<div class="span12 entire types">
 					<form method="post">
-					<input type="radio" name="type" class="type" value="1" checked>ค้นหาไฟล์
-					<input type="radio" name="type" class="type" value="2">ค้นหาโฟลเดอร์
+					<input type="radio" name="type" id="search_file" class="type" value="1" checked><label for="search_file">ค้นหาไฟล์</label>
+					<input type="radio" name="type" id="search_folder" class="type" value="2"><label for="search_folder">ค้นหาโฟลเดอร์</label>
 					<input type="text" id="searchall" name="searchall" class="form-control" placeholder="ค้นหาไฟล์ที่ต้องการใช้ !" autocomplete="off" style="margin-top:5px; width: 300px; height:30px;">
 					<input type="submit" value="ค้นหา" style="margin-top:-5px;">
 					</form>
@@ -856,7 +856,6 @@ $files=$sorted;
 		<?php
 			}
 	?>
-	<li class="pull-left"><a class="btn-small" href="javascript:void('')" id="info"><i class="icon-question-sign"></i></a></li>
 	</div>
 	</ul>
 	</div>
@@ -898,101 +897,102 @@ $files=$sorted;
 
 if(!empty($_POST['searchall'])){
 		if($_POST['type'] == 1){
-	?>
-			<div class="span12" id="datadialog">
-					<div class="span4">
-						<center>
-							ชื่อไฟล์
-						</center>
-					</div>
-					<div class="span4">
-						<center>
-							อยู่ในโฟลเดอร์
-						</center>
-					</div>
-					<div class="span4">
-						<center>
-						เพิ่มเติม
-						</center>
-					</div>
-			</div>
-			<?php
-			 	while ($result = mysqli_fetch_assoc($query)) {
+			while ($result = mysqli_fetch_assoc($query)) {
 			?>
-					<div class="span12">
-						<div class="span4">	<?php echo $result['files_name']; ?> </div>
-						<div class="span4"> <?php echo $result['folder_name']; ?></div>
-						<div class="span4">
-						<?php if($result['folder_position'] != 0){
-								 $getposition = $result['folder_position'];
-/*
-							do {
-								 $select =$db->findByPK('folder','folder_id',$baowiw,'folder_position')->executeAssoc();
-								 $baowiw = $select['folder_position'];
-								  echo "<pre>";
-								  $kuy[] = $select;
-								  print_r($kuy);
-								 echo "</pre>";
-							   } while ($select['folder_position'] !=0);
-*/
-								while ($getposition !=0){
-									$select =$db->findByPK('folder','folder_id',$getposition,'folder_position')->executeAssoc();
-									$getposition = $select['folder_position'];
-									$folder_name[] = $select;
-								}
-								$folder_path_name[] = $folder_name;
-								$path_file = $result['folder_name'];
-									   ?>
-						<a href="source<?php for($i = count($folder_path_name[0]); $i>=0; $i--){
-							$path_search  = $folder_path_name[0][$i]['folder_name'].'/';
-							echo ($path_search);}
-							echo $path_file.'/'.$result['files_name'];
-							?>"><i class=" icon-eye-open"></i></a>
-						<a href="source<?php for($i = count($folder_path_name[0]); $i>=0; $i--){
-							$path_search  = $folder_path_name[0][$i]['folder_name'].'/';
-							echo ($path_search);}
-							echo $path_file.'/'.$result['files_name'];?>" download="<?php echo $result['files_name'];?>"><i class="icon-download"></i></a>
-						<?php }
-							else{ ?>
-						<a href="source/<?php echo $result['folder_name']."/".$result['files_name'];?>"><i class=" icon-eye-open"></i></a>
-						<a href="source/<?php echo $result['folder_name'].'/'.$result['files_name'];?>" download="<?php echo $result['files_name'];?>"><i class="icon-download"></i></a>
-						<?php } ?>
+			<li>
+				<figure data-name="<?php $result['files_name'];?>" data-type="<?php if($is_img){ echo "img"; }else{ echo "file"; } ?>">
+					<div class="img-precontainer">
+						<div class="img-container-mini">
+							<img data-src="source/<?php echo $result['folder_name']."/".$result['files_name'];?>">
 						</div>
 					</div>
+						<div class="box">
+							<h4><?php echo $result['files_name']; ?></h4>
+							<figcaption>
+							<?php if($result['folder_position'] != 0){
+									 $getposition = $result['folder_position'];
+	/*
+								do {
+									 $select =$db->findByPK('folder','folder_id',$baowiw,'folder_position')->executeAssoc();
+									 $baowiw = $select['folder_position'];
+									  echo "<pre>";
+									  $kuy[] = $select;
+									  print_r($kuy);
+									 echo "</pre>";
+								   } while ($select['folder_position'] !=0);
+	*/
+									while ($getposition !=0){
+										$select =$db->findByPK('folder','folder_id',$getposition,'folder_position')->executeAssoc();
+										$getposition = $select['folder_position'];
+										$folder_name[] = $select;
+									}
+									$folder_path_name[] = $folder_name;
+									$path_file = $result['folder_name'];
+										   ?>
+							<a href="source<?php for($i = count($folder_path_name[0]); $i>=0; $i--){
+								$path_search  = $folder_path_name[0][$i]['folder_name'].'/';
+								echo ($path_search);}
+								echo $path_file.'/'.$result['files_name'];
+								?>"><i class=" icon-eye-open"></i></a>
+							<a href="source<?php for($i = count($folder_path_name[0]); $i>=0; $i--){
+								$path_search  = $folder_path_name[0][$i]['folder_name'].'/';
+								echo ($path_search);}
+								echo $path_file.'/'.$result['files_name'];?>" download="<?php echo $result['files_name'];?>"><i class="icon-download"></i></a>
+							<?php }
+								else{ ?>
+							<a href="source/<?php echo $result['folder_name']."/".$result['files_name'];?>"><i class=" icon-eye-open"></i></a>
+							<a href="source/<?php echo $result['folder_name'].'/'.$result['files_name'];?>" download="<?php echo $result['files_name'];?>"><i class="icon-download"></i></a>
+						    </figcaption>
+						<?php } ?>
+						</div>
+				</figure>
+			</li>
 		<?php
 					}
 		}
 		elseif($_POST['type'] == 2){
 
 			$query = $db->specifytable("*","folder","folder_name LIKE '%{$searchall}%'")->execute();
-			?>
-			<div class="span12" id="datadialog">
-					<div class="span5">
-						<center>
-							โฟลเดอร์
-						</center>
-					</div>
-			</div>
-			<?php
 			 while ($result = mysqli_fetch_assoc($query)) {
 			?>
-			<div class="span12" id="datadialog">
-				<div class="span5">
-					<?php
-						if(!empty($_SESSION['subzoo_zoo_zoo_id'])){
-					?>
-					<a href="admin_index.php?url=fm_dialog.php&?editor=0&type=0&lang=en_EN&popup=0&crossdomain=0&field_id=&relative_url=0&akey=key&fldr=<?php echo $result['folder_name']?>"><?php echo $result['folder_name']; ?></a>
-					<?php
-						}
-						else{ ?>
-					<a href="index.php?url=fm_dialog.php&?editor=0&type=0&lang=en_EN&popup=0&crossdomain=0&field_id=&relative_url=0&akey=key&fldr=<?php echo $result['folder_name']?>"><?php echo $result['folder_name']; ?></a>
-					<?php
-						}
-					?>
+		<li>
+			<?php  if(!empty($_SESSION['subzoo_zoo_zoo_id'])){ ?>
+			<figure class="<?php if($file=="..") echo "back-";?>directory" data-name="<?php echo $result['folder_name'];?>"  data-type="<?php if($file!=".."){ echo "dir"; } ?>">
+				<a class="folder-link" href="admin_index.php?url=fm_dialog.php&?editor=0&type=0&lang=en_EN&popup=0&crossdomain=0&field_id=&relative_url=0&akey=key&fldr=<?php echo $result['folder_name']?>">
+					<div class="img-precontainer-mini directory">
+						<div class="img-container-mini">
+							<span></span>
+							<img class="directory-img" data-src="fm_img/<?php echo $icon_theme;?>/folder<?php if($file==".."){ echo "_back"; }?>.png" />
+						</div>
+					</div>
+				</a>
+				<div class="box">
+					<h4><?php echo $result['folder_name']; ?></h4>
 				</div>
-			</div>
-		<?php
+			</figure>
+			<?php
 			}
+			else{
+				?>
+			<figure class="<?php if($file=="..") echo "back-";?>directory" data-name="<?php echo $result['folder_name'];?>"  data-type="<?php if($file!=".."){ echo "dir"; } ?>">
+				<a class="folder-link" href="index.php?url=fm_dialog.php&?editor=0&type=0&lang=en_EN&popup=0&crossdomain=0&field_id=&relative_url=0&akey=key&fldr=<?php echo $result['folder_name']?>">
+						<div class="img-precontainer-mini directory" style="margin-top: -5px;">
+							<div class="img-container-mini">
+								<span></span>
+								<img class="directory-img" data-src="fm_img/<?php echo $icon_theme;?>/folder<?php if($file==".."){ echo "_back"; }?>.png" />
+							</div>
+						</div>
+				</a>
+				<div class="box">
+					<h4><?php echo $result['folder_name']; ?></h4>
+				</div>
+			</figure>
+				<?php
+					}
+				?>
+		</li>
+		<?php
+		}
 		}
 }
 else{
