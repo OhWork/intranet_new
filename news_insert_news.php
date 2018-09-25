@@ -18,29 +18,25 @@
 
 	}else{
 
-    $target_dir = 'temp/';
-    $target_file = $target_dir.basename($_FILES['news_cover']['name']);
-    $target_dir_save = 'images/news/'.basename($_FILES['news_cover']['name']);
-    move_uploaded_file($_FILES['news_cover']['tmp_name'], $target_dir_save);
+	    $target_dir = 'temp/';
+	    $target_file = $target_dir.basename($_FILES['news_cover']['name']);
+	    $target_dir_save = 'images/news/'.basename($_FILES['news_cover']['name']);
+	    move_uploaded_file($_FILES['news_cover']['tmp_name'], $target_dir_save);
 
 
-	$selectiddetail = $db->findAllDESC('newsDetails','newsDetails_id')->executeAssoc();
-	$rs = $db->insert('news',array(
-	'news_head' => $_POST['news_head'],
-	'news_datestart' => $_POST['newsdatestart'],
-	'news_dateend' => $_POST['newsdateend'],
-	'news_cover' => basename($_FILES['news_cover']['name']),
-	'typeNews_typeNews_id' => $_POST['typeNews_typeNews_id'],
-	'typeDesignnews_id' => $_POST['typeDesignnews_id'],
-	'news_newsDetails_id' => $selectiddetail['newsDetails_id']+1,
-	'user_user_id' => $_POST['user_user_id']
-	));
+		$selectiddetail = $db->findAllDESC('newsDetails','newsDetails_id')->executeAssoc();
+		$rs = $db->insert('news',array(
+		'news_head' => $_POST['news_head'],
+		'news_datestart' => $_POST['newsdatestart'],
+		'news_dateend' => $_POST['newsdateend'],
+		'news_cover' => basename($_FILES['news_cover']['name']),
+		'news_dateupdate' => $_POST['news_date'],
+		'typeNews_typeNews_id' => $_POST['typeNews_typeNews_id'],
+		'typeDesignnews_id' => $_POST['typeDesignnews_id'],
+		'news_newsDetails_id' => $selectiddetail['newsDetails_id']+1,
+		'user_user_id' => $_POST['user_user_id']
+		));
 
-/*
-	$rs2 = $db->insert('newsDetails',array(
-	'newsDetails_name' => $_POST['news_detail']
-	));
-*/
 	}
 	if(@$rs || @$rsfix){
 
@@ -50,9 +46,15 @@
 			echo $selectiddetail['news_id'];
 			$idnew = $selectiddetail['news_id'];
 	      	if($_POST['typeDesignnews_id'] == 1 ){
-    	    $link = "index.php?url=news_formdesign1.php&id=$idnew";
+    	    $link = "admin_index.php?url=news_formdesign1.php&id=$idnew";
     	    }else if($_POST['typeDesignnews_id'] == 2 ){
-            $link = "index.php?url=news_designtype2.php";
+            $link = "admin_index.php?url=news_formdesign2.php&id=$idnew";
+    	    }else if($_POST['typeDesignnews_id'] == 3 ){
+            $link = "admin_index.php?url=news_formdesign3.php&id=$idnew";
+    	    }else if($_POST['typeDesignnews_id'] == 4 ){
+            $link = "admin_index.php?url=news_formdesign4.php&id=$idnew";
+    	    }else if($_POST['typeDesignnews_id'] == 5 ){
+            $link = "admin_index.php?url=news_formdesign5.php&id=$idnew";
     	    }
     	}else if(@$rsfix){
             echo "<div class='statusok'>แก้ไขสำเร็จ</div>";

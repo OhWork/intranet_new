@@ -1,10 +1,11 @@
 <?php
+	$datetime = date("Y-m-d H:i");
 	$form = new form();
 	$lbdetailnews = new label('รายละเอียด');
 	$lbheadnews = new label('หัวข้อข่าวสาร');
 	$txtheadnews = new textfield('news_head','','form-control','','');
 	$lbpic = new label('ภาพ');
-	$filepic = new inputFile('news_detail','','');
+	$filepic = new inputFile('news_detail','','file_id');
 	$detailnews = new textAreareadonly('detail_news','form-control','text_editer','','5','5','');
 	if(!empty($_GET['id'])){
 		$id=$_GET['id'];
@@ -28,7 +29,9 @@
 				echo $txtheadnews;?>
 		</div>
 		<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3' style="color:#007bff;">
-			post by choatchaw 22 aug 2561 10.00am
+			<?php $rs = $db->findByPK22('news','user','user_user_id','user_id','news_id',$_GET['id'])->executeAssoc();
+				echo 'เพิ่มข่าวสารโดยคุณ ',$rs['user_name'],' ',$rs['user_last'],' ',$rs['news_dateupdate'];
+			?>
 		</div>
 		<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3'>
 			<div class='row'>
@@ -62,8 +65,8 @@
 			<div class='row'>
 			<div class='col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10'></div>
 			<div class='col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2'>
-				<input class="btn btn-success w-100" type="submit" value="submit" />
-				<input  type="hidden" id="id" value="<?php echo $id;?>" />
+				<input  type="hidden" id="id" name="new_id" value="<?php echo $id;?>" />
+				<input  type="hidden" id="datetime" name="date_time" value="<?php echo $datetime;?>" />
 			</div>
 			</div>
 		</div>
@@ -85,9 +88,12 @@
 					$("#text_editer").val('');
 					$('#button_adddetail').on('click',function(){
 					 	var news_detetail = CKEDITOR.instances["text_editer"].getData();
+					 	var datetime = $('#datetime').val();
+					 	var new_id = $('#id').val();
+					 	var news_picdetail = $('#file_id').val();
 						$.ajax({
 					    	url: "news_insert_detail.php",
-					        data: {news_detail : news_detetail , text : '' },
+					        data: {news_detail : news_detetail , text : '', datetime: datetime , new_id : new_id , news_picdetail : news_picdetail },
 					        type: "POST",
 					        success: function(data) {
 						        $('#text_editer').val(data);

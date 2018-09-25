@@ -6,7 +6,6 @@
 	$text = $_POST['text'];
 	if($text == ''){
 		if(!empty($_POST['id'])){
-
 			$data['news_head'] = $_POST['news_head'];
 			$data['news_detail'] = $_POST['news_detail'];
 			$data['news_cover'] = $_POST['news_cover'];
@@ -15,12 +14,15 @@
 
 		}else{
 			$rs = $db->insert('newsDetails',array(
-			'newsDetails_name' => $_POST['news_detail']
+				'newsDetails_name' => $_POST['news_detail']
 			));
-
-			}
+			$rspic = $db->insert('newsImg',array(
+				'newsImg_name' => $_POST['']
+			));
+		}
 			if(@$rs || @$rsfix){
-
+				$data['news_dateupdate'] = $_POST['datetime'];
+				$rseditdate = $db->update('news',$data,'news_id',$_POST['new_id']);
 		    	if(@$rs){
 			    	$selectiddetail = $db->findAllDESC('newsDetails','newsDetails_id')->executeAssoc();
 			    	$lastiddetail = $selectiddetail['newsDetails_id'];
@@ -35,11 +37,6 @@
 		$lastiddetailintbnew = $selectiddetail['news_newsDetails_id'];
 		$rsshowdetail = $db->findByPK('newsDetails','newsDetails_id',$lastiddetailintbnew)->executeAssoc();
 		$lastiddetailintbdetail = $rsshowdetail['newsDetails_id']+1;
-/*
- 		print_r($rsshowdetail);
-		echo $rsshowdetail['newsDetails_name'];
-		echo $rsshowdetail['newsDetails_id'];
-*/
 		if($lastiddetailintbnew != $lastiddetailintbdetail){
 			echo 'หากต้องการเพิ่มรายละเอียดกรุณาคลิกที่กล่อง';
 		}

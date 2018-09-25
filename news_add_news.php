@@ -1,4 +1,5 @@
 <?php
+	$datetime = date("Y-m-d H:i");
     $form = new form();
     $lbheadnews = new label('หัวข้อข่าวสาร');
     $lbdetail = new label('รายละเอียด');
