@@ -9,10 +9,10 @@
 <script src="jquery/bootstrap-datetimepicker.js"></script>
 <script src="jquery/jquery-ui.js"></script>
 <script src="jquery/jquery.dataTables.js"></script>
-<script src="jquery/dropdown.js"></script>
+<!-- <script src="jquery/dropdown.js"></script> -->
 <script src="jquery/dropdown2.js"></script>
-<script src="jquery/collapse.js"></script>
-<script src="jquery/carousel.js"></script>
+<!-- <script src="jquery/collapse.js"></script> -->
+<!-- <script src="jquery/carousel.js"></script> -->
 <script src="jquery/checksubmit.js"></script>
 <script src="jquery/getpassword.js"></script>
 <script src="jquery/autocomplete.js"></script>

@@ -286,10 +286,10 @@
 							<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 form-group has-feedback test'>
 								<select class='form-control' id="ddlsubtypetools" name="subtypetools_subtypetools_id"></select>
 							</div>
-							<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+							<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 ohter">
 								<label><?php echo $lbdetail;?></label>
 							</div>
-							<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 form-group test'>
+							<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 form-group test ohter'>
 								<?php echo $txtdetail;?>
 							</div>
 								<input type='hidden' name='problem_status' value='N'>
@@ -370,7 +370,7 @@ $( document ).ready( function () {
 				unhighlight: function (element, errorClass, validClass) {
 					$( element ).parents( ".test" ).addClass( "text-success" ).removeClass( " text-danger" );
 				}	});
-$('.ohter').hide();
+				        $('.ohter').hide();
 $('#ddlsubtypetools').on("change",function(e) {
 	var check =  $("#ddlsubtypetools>option:selected").html();
 	console.log(check.match("ปัญหาอื่นๆ"));
@@ -381,6 +381,7 @@ $('#ddlsubtypetools').on("change",function(e) {
 		$('.ohter').hide("slow");
 	}
 	});
+
 	function make_autocom(autoObj,showObj){
     var mkAutoObj=autoObj;
     var mkSerValObj=showObj;

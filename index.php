@@ -19,7 +19,7 @@ session_start();
         <link rel="stylesheet" href="CSS/dashboard.css" >
         <link rel="stylesheet" href="CSS/jquery-ui.css">
         <link rel="stylesheet" href="CSS/sticky-footer.css">
-        <link rel="stylesheet" href="CSS/dataTables.bootstrap4.css">
+<!--         <link rel="stylesheet" href="CSS/dataTables.bootstrap4.css"> -->
 		<link rel="stylesheet" href="CSS/fullcalendar.min.css">
 		<link rel="stylesheet" href="CSS/jquery.dataTables.css">
 <!--         <link rel="stylesheet" href="CSS/jquery.fancybox.css"> -->
