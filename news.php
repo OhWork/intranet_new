@@ -1,7 +1,7 @@
 <?php
  			$rs = $db->findByPKDESCLimit21('news','user','user_user_id','user_id','news_id',4)->execute();
 //  			for($i=0;$i<4;$i++){
-		while ($show = mysqli_fetch_array($rs)){
+			foreach($rs as $show){
      			echo "<pre>";
      			print_r($show);
      			echo "</pre>";
