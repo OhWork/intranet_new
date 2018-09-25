@@ -289,6 +289,11 @@ $get_params = http_build_query($get_params);
 		<noscript><link rel="stylesheet" href="CSS/fm_css/fm_jquery.fileupload-ui-noscript.css"></noscript>
 		<link href="jquery/fm_js/fm_jPlayer/skin/blue.monday/jplayer.blue.monday.css" rel="stylesheet" type="text/css">
 		<link href="CSS/fm_css/fm_style.css?v=<?php echo $version; ?>" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" href="CSS/bootstrap.min.css">
+        <link rel="stylesheet" href="CSS/dashboard.css" >
+        <link rel="stylesheet" href="CSS/jquery-ui.css">
+		<link rel="stylesheet" href="CSS/select2.min.css">
+        <link rel="stylesheet" href="CSS/main.css">
 	<!--[if lt IE 8]><style>
 	.img-container span, .img-container-mini span {
 		display: inline-block;
@@ -737,10 +742,10 @@ $files=$sorted;
 			<div class="row-fluid">
 				<div class="span12 entire types">
 					<form method="post">
-					<input type="radio" name="type" id="search_file" class="type" value="1" checked><label for="search_file">ค้นหาไฟล์</label>
-					<input type="radio" name="type" id="search_folder" class="type" value="2"><label for="search_folder">ค้นหาโฟลเดอร์</label>
-					<input type="text" id="searchall" name="searchall" class="form-control" placeholder="ค้นหาไฟล์ที่ต้องการใช้ !" autocomplete="off" style="margin-top:5px; width: 300px; height:30px;">
-					<input type="submit" value="ค้นหา" style="margin-top:-5px;">
+					<input style="margin-top:0px;" type="radio" name="type" id="search_file" class="type" value="1" checked><label style="margin-top:16px;" for="search_file">ค้นหาไฟล์</label>
+					<input style="margin-top:0px;" type="radio" name="type" id="search_folder" class="type" value="2"><label style="margin-top:16px;" for="search_folder">ค้นหาโฟลเดอร์</label>
+					<input type="text" id="searchall" name="searchall" class="form-control" placeholder="ค้นหาไฟล์ที่ต้องการใช้ !" autocomplete="off" style="margin-top:8px; width: 300px; height:30px;">
+					<input class="btn btn-secondary"type="submit" value="ค้นหา" style="margin-top:0px;font-size:14px;padding:5px 8px;">
 					</form>
 				</div>
 			</div>
@@ -1060,23 +1065,27 @@ else{
 							</div>
 					</div>
 			<?php if($file==".."){ ?>
-					<div class="box no-effect">
-					<h4><?php echo trans('Back') ?></h4>
+					<div class="box no-effect" style="color:#000000;">
+					<?php echo trans('Back') ?>
 					</div>
 					</a>
 
 			<?php }else{ ?>
 					</a>
 					<div class="box">
-					<h4 class="<?php
+					<div class="<?php
 						if(!empty($_SESSION['subzoo_zoo_zoo_id'])){
-							if($ellipsis_title_after_first_row){ echo "ellipsis"; } ?>"><a class="folder-link" data-file="<?php echo $file ?>" href="admin_index.php?url=fm_dialog.php&?<?php echo $get_params.rawurlencode($src)."&".uniqid() ?>"><?php echo $file;?></a><?php
+							if($ellipsis_title_after_first_row){ echo "ellipsis"; } ?>">
+							<a class="folder-link" style="color:#000000;" data-file="<?php echo $file ?>" href="admin_index.php?url=fm_dialog.php&?<?php echo $get_params.rawurlencode($src)."&".uniqid() ?>">
+							<?php echo $file;?></a>
+							<?php
 							}
 							else{
-							if($ellipsis_title_after_first_row){ echo "ellipsis"; } ?>"><a class="folder-link" data-file="<?php echo $file ?>" href="index.php?url=fm_dialog.php&?<?php echo $get_params.rawurlencode($src)."&".uniqid() ?>"><?php echo $file;?></a>
+							if($ellipsis_title_after_first_row){ echo "ellipsis"; } ?>">
+							<a class="folder-link" style="color:#000000;" data-file="<?php echo $file ?>" href="index.php?url=fm_dialog.php&?<?php echo $get_params.rawurlencode($src)."&".uniqid() ?>"><?php echo $file;?></a>
 						<?php
 							}
-						?></h4>
+						?></div>
 					</div>
 					<input type="hidden" class="name" value="<?php echo $file_array['file_lcase'];?>"/>
 					<input type="hidden" class="date" value="<?php echo $file_array['date'];?>"/>
@@ -1245,9 +1254,9 @@ else{
 				<?php } ?>
 				</a>
 				<a href="javascript:void('')" class="link" data-file="<?php echo $file;?>" data-function="<?php echo $apply;?>">
-				<div class="box">
-				<h4 class="<?php if($ellipsis_title_after_first_row){ echo "ellipsis"; } ?>">
-				<?php echo $filename;?></h4>
+				<div class="box" style="color:#000000;">
+				<div class="<?php if($ellipsis_title_after_first_row){ echo "ellipsis"; } ?>">
+				<?php echo $filename;?></div>
 				</div></a>
 				<?php
 						$sql2 = $db->findByPK('files','files_name',"'$file'")->executeAssoc();
