@@ -5,7 +5,7 @@
 	$lbheadnews = new label('หัวข้อข่าวสาร');
 	$txtheadnews = new textfield('news_head','','form-control','','');
 	$lbpic = new label('ภาพ');
-	$filepic = new inputFile('news_detail','','file_id');
+	$filepic = new inputFile('news_picdetail','','file_id');
 	$detailnews = new textAreareadonly('detail_news','form-control','text_editer','','5','5','');
 	if(!empty($_GET['id'])){
 		$id=$_GET['id'];
@@ -19,6 +19,7 @@
 				$detailnews->value = $r['newsDetails_name'];
 		}
 	}
+	echo $form->open("form_detail","form","col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","","");
 ?>
 <div class='col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1'></div>
 <div class='col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10 pb-3' style="background-color:#ffffff;">
@@ -77,35 +78,38 @@
                 $('#button_adddetail').hide();
                 $('#button_canceletail').hide();
                 $('#text_detail').on('click',function(){
+	                if(!CKEDITOR.instances['text_editer']){
 	                CKEDITOR.replace( 'text_editer', {
 					    uiColor: '#9AB8F3',
 					    removeButtons : 'Styles,Scayt,Format,Source,Strike,Maximize,About,Image',
 					    enterMode : CKEDITOR.ENTER_BR
-					});;
+					});
+					}
 					$('#button_adddetail').show();
 					$('#button_canceletail').show();
 					$("#text_editer").removeAttr("readonly");
 					$("#text_editer").val('');
-					$('#button_adddetail').on('click',function(){
-					 	var news_detetail = CKEDITOR.instances["text_editer"].getData();
-					 	var datetime = $('#datetime').val();
-					 	var new_id = $('#id').val();
-					 	var news_picdetail = $('#file_id').val();
+					$("#form_detail").on('submit',(function(e) {
+						CKEDITOR.instances[ 'text_editer' ].updateElement();
 						$.ajax({
-					    	url: "news_insert_detail.php",
-					        data: {news_detail : news_detetail , text : '', datetime: datetime , new_id : new_id , news_picdetail : news_picdetail },
-					        type: "POST",
-					        success: function(data) {
-						        $('#text_editer').val(data);
-						        if(CKEDITOR.instances['text_editer']){
-							    	CKEDITOR.instances['text_editer'].destroy(true);
-							    	$('#text_editer').attr('readonly', true);
-							        $('#button_adddetail').hide();
+							url: "news_insert_detail.php",
+							type: "POST",
+							data:  new FormData(this),
+							contentType: false,
+							cache: false,
+							processData:false,
+							success: function(data) {
+								$('#text_editer').val(data);
+								if(CKEDITOR.instances['text_editer']){
+									CKEDITOR.instances['text_editer'].destroy(true);
+									$('#text_editer').attr('readonly', true);
+									$('#button_adddetail').hide();
 									$('#button_canceletail').hide();
 								}
-					        }
-					    });
-					});
+						}
+						});
+						e.stopPropagation();
+					}));
 					$('#button_canceletail').on('click',function(e){
 						if(CKEDITOR.instances['text_editer']){
 							$.ajax({

@@ -13,15 +13,20 @@
 			$rsfix = $db->update('news',$data,'news_id',$_POST['id']);
 
 		}else{
+			$target_dir = 'temp/';
+		    $target_file = $target_dir.basename($_FILES['news_picdetail']['name']);
+		    $target_dir_save = 'images/news/'.basename($_FILES['news_picdetail']['name']);
+		    move_uploaded_file($_FILES['news_picdetail']['tmp_name'], $target_dir_save);
+
 			$rs = $db->insert('newsDetails',array(
-				'newsDetails_name' => $_POST['news_detail']
+				'newsDetails_name' => $_POST['detail_news']
 			));
 			$rspic = $db->insert('newsImg',array(
-				'newsImg_name' => $_POST['']
+				'newsImg_name' => basename($_FILES['news_picdetail']['name'])
 			));
 		}
 			if(@$rs || @$rsfix){
-				$data['news_dateupdate'] = $_POST['datetime'];
+				$data['news_dateupdate'] = $_POST['date_time'];
 				$rseditdate = $db->update('news',$data,'news_id',$_POST['new_id']);
 		    	if(@$rs){
 			    	$selectiddetail = $db->findAllDESC('newsDetails','newsDetails_id')->executeAssoc();
@@ -46,7 +51,9 @@
 		else{
 			echo $rsshowdetail['newsDetails_name'];
 		}
+
 	}
+
 
 ob_end_flush();
 ?>
