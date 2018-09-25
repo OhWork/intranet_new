@@ -12,6 +12,7 @@
 		<h4>ข่าวสารภายในองค์การสวนสัตว์</h4>
 	</div>
    	<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-1">
+	<div class='row'>
         <?php foreach($rs as $show){ 
             if($show['typeDesignnews_id'] == 1){
                 $design = "news_designtype1";
@@ -25,7 +26,7 @@
                 $design = "news_designtype5";
             }		
         ?>
-			<div class="col-xl-7 col-lg-7 col-md-7 col-sm-7 col-7">
+			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-2">
 				<div class='row'>
 					<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 shadow" style="background-color:#ffffff;">
 						<div class='row'>
