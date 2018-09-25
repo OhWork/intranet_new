@@ -17,6 +17,12 @@
                 $design = "news_designtype1";
             }else if($show['typeDesignnews_id'] == 2){
                 $design = "news_designtype2";
+            }else if($show['typeDesignnews_id'] == 3){
+                $design = "news_designtype3";
+            }else if($show['typeDesignnews_id'] == 4){
+                $design = "news_designtype4";
+            }else if($show['typeDesignnews_id'] == 5){
+                $design = "news_designtype5";
             }		
         ?>
 			<div class="col-xl-7 col-lg-7 col-md-7 col-sm-7 col-7">
