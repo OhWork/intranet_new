@@ -1,11 +1,12 @@
 <?php
 
 			$rs2 = "problem,subzoo,typetools,subtypetools  where problem.subzoo_subzoo_id = subzoo.subzoo_id && problem.subtypetools_typetools_typetools_id = subtypetools.subtypetools_id && subtypetools.typetools_typetools_id = typetools.typetools_id";
- 			$rs = $db->findAllDESC('news','news_id')->executeAssoc();
- 			echo "Test";
- 			for($i=1;$i<count($rs);$i++){
+ 			$rs = $db->findByPKDESCLimit21('news','user','user_user_id','user_id','news_id',4)->executeAssoc();
+ 			for($i=0;$i<4;$i++){
      			echo $i;
-     			echo $rs[$i];
+      			echo $rs[$i],['news_head'];
+      			echo $rs[$i],['news_date'];
+      			echo $rs[$i],['user_name'],"<br>";
  			}
 ?>
 <div class='col-xl-1col-lg-1 col-md-1 col-sm-1 col-1'></div>
