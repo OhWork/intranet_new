@@ -1065,8 +1065,8 @@ else{
 							</div>
 					</div>
 			<?php if($file==".."){ ?>
-					<div class="box no-effect">
-					<h4><?php echo trans('Back') ?></h4>
+					<div class="box no-effect" style="color:#000000;">
+					<?php echo trans('Back') ?>
 					</div>
 					</a>
 
@@ -1075,10 +1075,14 @@ else{
 					<div class="box">
 					<div class="<?php
 						if(!empty($_SESSION['subzoo_zoo_zoo_id'])){
-							if($ellipsis_title_after_first_row){ echo "ellipsis"; } ?>"><a class="folder-link" data-file="<?php echo $file ?>" href="admin_index.php?url=fm_dialog.php&?<?php echo $get_params.rawurlencode($src)."&".uniqid() ?>"><?php echo $file;?></a><?php
+							if($ellipsis_title_after_first_row){ echo "ellipsis"; } ?>">
+							<a class="folder-link" style="color:#000000;" data-file="<?php echo $file ?>" href="admin_index.php?url=fm_dialog.php&?<?php echo $get_params.rawurlencode($src)."&".uniqid() ?>">
+							<?php echo $file;?></a>
+							<?php
 							}
 							else{
-							if($ellipsis_title_after_first_row){ echo "ellipsis"; } ?>"><a class="folder-link" data-file="<?php echo $file ?>" href="index.php?url=fm_dialog.php&?<?php echo $get_params.rawurlencode($src)."&".uniqid() ?>"><?php echo $file;?></a>
+							if($ellipsis_title_after_first_row){ echo "ellipsis"; } ?>">
+							<a class="folder-link" style="color:#000000;" data-file="<?php echo $file ?>" href="index.php?url=fm_dialog.php&?<?php echo $get_params.rawurlencode($src)."&".uniqid() ?>"><?php echo $file;?></a>
 						<?php
 							}
 						?></div>
@@ -1250,9 +1254,9 @@ else{
 				<?php } ?>
 				</a>
 				<a href="javascript:void('')" class="link" data-file="<?php echo $file;?>" data-function="<?php echo $apply;?>">
-				<div class="box">
-				<h4 class="<?php if($ellipsis_title_after_first_row){ echo "ellipsis"; } ?>">
-				<?php echo $filename;?></h4>
+				<div class="box" style="color:#000000;">
+				<div class="<?php if($ellipsis_title_after_first_row){ echo "ellipsis"; } ?>">
+				<?php echo $filename;?></div>
 				</div></a>
 				<?php
 						$sql2 = $db->findByPK('files','files_name',"'$file'")->executeAssoc();
