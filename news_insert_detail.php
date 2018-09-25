@@ -34,12 +34,16 @@
 		$selectiddetail = $db->findAllDESC('news','news_id')->executeAssoc();
 		$lastiddetailintbnew = $selectiddetail['news_newsDetails_id'];
 		$rsshowdetail = $db->findByPK('newsDetails','newsDetails_id',$lastiddetailintbnew)->executeAssoc();
+		$lastiddetailintbdetail = $rsshowdetail['newsDetails_id']+1;
 /*
  		print_r($rsshowdetail);
 		echo $rsshowdetail['newsDetails_name'];
 		echo $rsshowdetail['newsDetails_id'];
 */
-		if($rsshowdetail['newsDetails_id'] == ''){
+		if($lastiddetailintbnew != $lastiddetailintbdetail){
+			echo 'หากต้องการเพิ่มรายละเอียดกรุณาคลิกที่กล่อง';
+		}
+		else if($lastiddetailintbnew != $rsshowdetail['newsDetails_id']){
 			echo 'หากต้องการเพิ่มรายละเอียดกรุณาคลิกที่กล่อง';
 		}
 		else{

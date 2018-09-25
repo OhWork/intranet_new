@@ -1,13 +1,13 @@
 <?php
+ 			$rs = $db->findByPKDESCLimit21('news','user','user_user_id','user_id','news_id',4)->execute();
+//  			for($i=0;$i<4;$i++){
+		while ($show = mysqli_fetch_array($rs)){
+//      			echo $i;
+     			echo "<pre>";
+     			print_r($show);
+     			echo "</pre>";
 
-			$rs2 = "problem,subzoo,typetools,subtypetools  where problem.subzoo_subzoo_id = subzoo.subzoo_id && problem.subtypetools_typetools_typetools_id = subtypetools.subtypetools_id && subtypetools.typetools_typetools_id = typetools.typetools_id";
- 			$rs = $db->findByPKDESCLimit21('news','user','user_user_id','user_id','news_id',4)->executeAssoc();
- 			for($i=0;$i<4;$i++){
-     			echo $i;
-      			echo $rs[$i],['news_head'];
-      			echo $rs[$i],['news_date'];
-      			echo $rs[$i],['user_name'],"<br>";
- 			}
+      		}
 ?>
 <div class='col-xl-1col-lg-1 col-md-1 col-sm-1 col-1'></div>
 <div class='col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10'>
