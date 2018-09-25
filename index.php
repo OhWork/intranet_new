@@ -24,7 +24,6 @@ session_start();
 		<link rel="stylesheet" href="CSS/jquery.dataTables.css">
 <!--         <link rel="stylesheet" href="CSS/jquery.fancybox.css"> -->
 		<link rel="stylesheet" href="CSS/select2.min.css">
-		<link rel="stylesheet" href="CSS/main.css">
         <link rel="stylesheet" href="CSS/fullcalendar.print.min.css" media="print">
         <link rel="stylesheet" href="CSS/main.css">
 		<link rel="stylesheet" href="CSS/print.css" media="print">
