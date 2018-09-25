@@ -18,7 +18,7 @@
     $txttime->value = $year."-".$md." ".$time;
     $txtcall = new textfield('problem_tel','','form-control','','');
     $txtposition = new textfield('problem_position','problem_position','form-control','','');
-    $txtdetail = new textarea('problem_detail','aprob','','');
+    $txtdetail = new textarea('problem_detail','aprob','','','','','');
     $txtdetail->rows = 5;
     $button = new buttonok("ส่งแบบฟอร์มแจ้งซ่อม","","btn btn-success btn-lg btn-block bt3success col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","");
     ?>

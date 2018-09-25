@@ -4,7 +4,7 @@
   $lbupdatedetail = new label("รายละเอียดการอัพเดท :");
   $lbupdatedate = new label("วันที่ :");
   $txtupdateversion = new textfield('updatereport_version','','form-control css-require','');
-  $txtupdatedetail = new textarea('updatereport_detail','ckeditor col-md-12','','');
+  $txtupdatedetail = new textarea('updatereport_detail','ckeditor col-md-12','','','','','');
     $txtupdatedetail->rows = 5;
   $txtday = new textfieldcalendarreadonly('updatereport_date','date-picker-1','','date-picker form-control datetimepicker','input-group-addon','date-picker-1');
   $txtday->value = date("Y-m-d");

@@ -36,7 +36,7 @@
 			$grid->pr = 'headncf_id';
 			$grid->header = array('<b><center>ชื่อหัวข้อข่าว</center></b>','<b><center>ลำดับ</center></b>','<b><center>#</center></b>');
 			$grid->width = array('80%','10%','10%');
-			$grid->edit = 'admin_index.php?url=admin_cf_index.php&url2=cf_add_headnameconfer.php';
+			$grid->edit = 'admin_index.php?url=cf_add_headnameconfer.php';
 			$grid->name = 'table';
 			$grid->edittxt ='แก้ไข';
 			$grid->renderFromDB($columns,$rs);

@@ -77,7 +77,7 @@
 							$grid->name = 'table';
 							$grid->edittxt ='สถานะ';
 							$grid->renderFromDB($columns,$rs);
-				   ?> 
+				   ?>
 				</div>
 				<div role="tabpanel" class="tab-pane inf1" id="pass" style="padding-left:16px;padding-right:16px;">
 					<?php
@@ -93,7 +93,7 @@
 								$grid->name = 'table2';
 								$grid->edittxt ='สถานะ';
 								$grid->renderFromDB($columns2,$rs2);
-					?> 
+					?>
 				</div>
 				<div role="tabpanel" class="tab-pane inf1" id="nopass" style="padding-left:16px;padding-right:16px;">
 					<?php
@@ -109,7 +109,7 @@
 								$grid->name = 'table3';
 								$grid->edittxt ='สถานะ';
 								$grid->renderFromDB($columns3,$rs3);
-					?> 
+					?>
 				</div>
 				<div role="tabpanel" class="tab-pane inf1" id="cancelpass" style="padding-left:16px;padding-right:16px;">
 					<?php
@@ -125,7 +125,7 @@
 								$grid->name = 'table3';
 								$grid->edittxt ='สถานะ';
 								$grid->renderFromDB($columns,$rs);
-					?> 
+					?>
 				</div>
 			</div>
 		</div>

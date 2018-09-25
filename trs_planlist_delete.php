@@ -21,7 +21,7 @@
     $rowend = "</div>";
     $form = new form();
 
-            $rs = $db->findAll('plan')->execute();   
+            $rs = $db->findAll('plan')->execute();
             echo "<div class='col-md-12'>"."<h2>รายการแผน</h2>".$rowend;
 
 			$grid = new gridView();
@@ -29,7 +29,7 @@
 			$grid->sts = 'plan_status';
 			$grid->header = array('<b><center>วันที่</center></b>','<b><center>ครั้งที่</center></b>','<b><center>#</center></b>','<b><center>สถานะ</center></b>');
 			$grid->width = array('30%','30%','20%','10%','10%');
-			$grid->edit = 'admin_index.php?url=admin_trs_index.php&url2=trs_addplan.php';
+			$grid->edit = 'admin_index.php?url=trs_addplan.php';
 			$grid->name = 'table';
 			$grid->change = '#';
 			$grid->edittxt ='แก้ไข';

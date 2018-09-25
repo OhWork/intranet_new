@@ -767,36 +767,36 @@ $files=$sorted;
 				<button class="btn tip<?php if($view==2) echo " btn-inverse";?>" id="view2" data-value="2" title="<?php echo trans('View_columns_list');?>"><i class="icon-fire <?php if($view==2) echo "icon-white";?>"></i></button>
 				</center>
 			</div>
-			<div class="col-md-4 entire types" style="float: right;">
-				<span><?php echo trans('Filters');?>:</span>
-				<?php if($_GET['type']!=1 && $_GET['type']!=3 && $show_filter_buttons){ ?>
-					<?php if(count($ext_file)>0 or false){ ?>
-				<input id="select-type-1" name="radio-sort" type="radio" data-item="ff-item-type-1" checked="checked"  class="hide"  />
-				<label id="ff-item-type-1" title="<?php echo trans('Files');?>" for="select-type-1" class="tip btn ff-label-type-1"><i class="icon-file"></i></label>
+				<figcaption>
+					<span><?php echo trans('Filters');?>:</span>
+					<?php if($_GET['type']!=1 && $_GET['type']!=3 && $show_filter_buttons){ ?>
+						<?php if(count($ext_file)>0 or false){ ?>
+					<input id="select-type-1" name="radio-sort" type="radio" data-item="ff-item-type-1" checked="checked"  class="hide"  />
+					<label id="ff-item-type-1" title="<?php echo trans('Files');?>" for="select-type-1" class="tip btn ff-label-type-1"><i class="icon-file"></i></label>
+						<?php } ?>
+						<?php if(count($ext_img)>0 or false){ ?>
+					<input id="select-type-2" name="radio-sort" type="radio" data-item="ff-item-type-2" class="hide"  />
+					<label id="ff-item-type-2" title="<?php echo trans('Images');?>" for="select-type-2" class="tip btn ff-label-type-2"><i class="icon-picture"></i></label>
+						<?php } ?>
+						<?php if(count($ext_misc)>0 or false){ ?>
+					<input id="select-type-3" name="radio-sort" type="radio" data-item="ff-item-type-3" class="hide"  />
+					<label id="ff-item-type-3" title="<?php echo trans('Archives');?>" for="select-type-3" class="tip btn ff-label-type-3"><i class="icon-inbox"></i></label>
+						<?php } ?>
+						<?php if(count($ext_video)>0 or false){ ?>
+					<input id="select-type-4" name="radio-sort" type="radio" data-item="ff-item-type-4" class="hide"  />
+					<label id="ff-item-type-4" title="<?php echo trans('Videos');?>" for="select-type-4" class="tip btn ff-label-type-4"><i class="icon-film"></i></label>
+						<?php } ?>
+						<?php if(count($ext_music)>0 or false){ ?>
+					<input id="select-type-5" name="radio-sort" type="radio" data-item="ff-item-type-5" class="hide"  />
+					<label id="ff-item-type-5" title="<?php echo trans('Music');?>" for="select-type-5" class="tip btn ff-label-type-5"><i class="icon-music"></i></label>
+						<?php } ?>
 					<?php } ?>
-					<?php if(count($ext_img)>0 or false){ ?>
-				<input id="select-type-2" name="radio-sort" type="radio" data-item="ff-item-type-2" class="hide"  />
-				<label id="ff-item-type-2" title="<?php echo trans('Images');?>" for="select-type-2" class="tip btn ff-label-type-2"><i class="icon-picture"></i></label>
-					<?php } ?>
-					<?php if(count($ext_misc)>0 or false){ ?>
-				<input id="select-type-3" name="radio-sort" type="radio" data-item="ff-item-type-3" class="hide"  />
-				<label id="ff-item-type-3" title="<?php echo trans('Archives');?>" for="select-type-3" class="tip btn ff-label-type-3"><i class="icon-inbox"></i></label>
-					<?php } ?>
-					<?php if(count($ext_video)>0 or false){ ?>
-				<input id="select-type-4" name="radio-sort" type="radio" data-item="ff-item-type-4" class="hide"  />
-				<label id="ff-item-type-4" title="<?php echo trans('Videos');?>" for="select-type-4" class="tip btn ff-label-type-4"><i class="icon-film"></i></label>
-					<?php } ?>
-					<?php if(count($ext_music)>0 or false){ ?>
-				<input id="select-type-5" name="radio-sort" type="radio" data-item="ff-item-type-5" class="hide"  />
-				<label id="ff-item-type-5" title="<?php echo trans('Music');?>" for="select-type-5" class="tip btn ff-label-type-5"><i class="icon-music"></i></label>
-					<?php } ?>
-				<?php } ?>
-				<input accesskey="f" type="text" class="filter-input <?php echo (($_GET['type']!=1 && $_GET['type']!=3) ? '' : 'filter-input-notype');?>" id="filter-input" name="filter" placeholder="<?php echo fix_strtolower(trans('Text_filter'));?>..." value="<?php echo $filter;?>"/><?php if($n_files>$file_number_limit_js){ ?><label id="filter" class="btn"><i class="icon-play"></i></label><?php } ?>
+					<input accesskey="f" type="text" class="filter-input <?php echo (($_GET['type']!=1 && $_GET['type']!=3) ? '' : 'filter-input-notype');?>" id="filter-input" name="filter" placeholder="<?php echo fix_strtolower(trans('Text_filter'));?>..." value="<?php echo $filter;?>"/><?php if($n_files>$file_number_limit_js){ ?><label id="filter" class="btn"><i class="icon-play"></i></label><?php } ?>
 
-				<input id="select-type-all" name="radio-sort" type="radio" data-item="ff-item-type-all" class="hide"  />
-				<label id="ff-item-type-all" title="<?php echo trans('All');?>" <?php if($_GET['type']==1 || $_GET['type']==3){ ?>style="visibility: hidden;" <?php } ?> data-item="ff-item-type-all" for="select-type-all" style="margin-rigth:0px;" class="tip btn btn-inverse ff-label-type-all"><i class="icon-remove icon-white"></i></label>
+					<input id="select-type-all" name="radio-sort" type="radio" data-item="ff-item-type-all" class="hide"  />
+					<label id="ff-item-type-all" title="<?php echo trans('All');?>" <?php if($_GET['type']==1 || $_GET['type']==3){ ?>style="visibility: hidden;" <?php } ?> data-item="ff-item-type-all" for="select-type-all" style="margin-rigth:0px;" class="tip btn btn-inverse ff-label-type-all"><i class="icon-remove icon-white"></i></label>
 
-			</div>
+				</figcaption>
 			</div>
 <!-- 		</div> -->
 		</div>

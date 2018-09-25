@@ -37,9 +37,9 @@
     $txtserialNo = new textfield('problem_serial','','form-control css-require','','');
     $txtplace = new textfield('problem_place','','form-control css-require','','');
     $txtserialorganize = new textfield('problem_serialorganize','','form-control css-require','','');
-    $txtcompletedetail = new textarea('problem_detailcomplete','form-control','','');
+    $txtcompletedetail = new textarea('problem_detailcomplete','form-control','','','','','');
     $txtcompletedetail->rows = 5;
-    $txtnocompletedetail = new textarea('problem_detailwaitcomplete','form-control','','');
+    $txtnocompletedetail = new textarea('problem_detailwaitcomplete','form-control','','','','','');
     $txtnocompletedetail->rows = 5;
     $button = new buttonok('อัพเดทสถานะการบริการ','','btn btn-success col-12','');
     if(!empty($_GET['id'])){

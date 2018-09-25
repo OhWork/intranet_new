@@ -21,7 +21,7 @@
     $rowend = "</div>";
     $form = new form();
 
-            $rs = $db->findByPK44('iptools','subzoo','zoo','typetoolsforip','iptools.subzoo_subzoo_id','subzoo.subzoo_id','subzoo.zoo_zoo_id','zoo.zoo_id','iptools.typetoolsforip_typetoolsforip_id','typetoolsforip.typetoolsforip_id','typetoolsforip.typetoolsforip_id',$id,'iptools_id')->execute();   
+            $rs = $db->findByPK44('iptools','subzoo','zoo','typetoolsforip','iptools.subzoo_subzoo_id','subzoo.subzoo_id','subzoo.zoo_zoo_id','zoo.zoo_id','iptools.typetoolsforip_typetoolsforip_id','typetoolsforip.typetoolsforip_id','typetoolsforip.typetoolsforip_id',$id,'iptools_id')->execute();
             echo "<div class='col-md-12'>"."<h2>รายการ IP address ของอุปกรณ์ต่างๆ</h2>".$rowend;
 
 			$grid = new gridView();
@@ -30,7 +30,7 @@
 			$grid->header = array('<b><center>IP-Address</center></b>','<b><center>NAT</center></b>','<b><center>Name/System</center></b>','<b><center>Detail</center></b>','<b><center>ฝ่าย</center></b>','<b><center>สังกัด</center></b>','<b><center>#</center></b>');
 			$grid->width = array('10%','10%','20%','15%','25%','15%','5%');
 // 			$grid->delete = 'delete_confer.php';
-			$grid->edit = 'admin_index.php?url=admin_cs_index.php&url2=cs_add_iptools.php';
+			$grid->edit = 'admin_index.php?url=cs_add_iptools.php';
 			$grid->name = 'table';
 			$grid->edittxt ='แก้ไข';
 			$grid->renderFromDB($columns,$rs);

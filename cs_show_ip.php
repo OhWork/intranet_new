@@ -27,7 +27,7 @@
     if (!empty($_SESSION['user_name'])):
     $columns = array('ipzpo_address','ipzpo_user','typetools_name','ipzpo_detail','ipzpo_comname','ipzpo_comgroup','subzoo_name','zoo_name');
     $form = new form();
-    $rs = $db->findByPK44ASC('ipzpo','subzoo','zoo','typetools','ipzpo.subzoo_subzoo_id','subzoo.subzoo_id','subzoo.zoo_zoo_id','zoo.zoo_id','ipzpo.typetools_typetools_id','typetools.typetools_id',$type,$id,'ipzpo_id')->execute();   
+    $rs = $db->findByPK44ASC('ipzpo','subzoo','zoo','typetools','ipzpo.subzoo_subzoo_id','subzoo.subzoo_id','subzoo.zoo_zoo_id','zoo.zoo_id','ipzpo.typetools_typetools_id','typetools.typetools_id',$type,$id,'ipzpo_id')->execute();
 ?>
 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3">
 	<div class="row">
@@ -42,7 +42,7 @@
 				$grid->pr = 'ipzpo_id';
 				$grid->header = array('<b><center>IP-Address</center></b>','<b><center>Name/System</center></b>','<b><center>Type</center></b>','<b><center>Detail</center></b>','<b><center>ComputerName</center></b>','<b><center>Workgroup</center></b>','<b><center>ฝ่าย</center></b>','<b><center>สังกัด</center></b>','<b><center>#</center></b>');
 				$grid->width = array('6%','20%','10%','20%','7%','3%','15%','14%','5%');
-				$grid->edit = 'admin_index.php?url=admin_cs_index.php&url2=cs_add_ip.php';
+				$grid->edit = 'admin_index.php?url=cs_add_ip.php';
 				$grid->name = 'table';
 				$grid->edittxt ='แก้ไข';
 				$grid->renderFromDB($columns,$rs);

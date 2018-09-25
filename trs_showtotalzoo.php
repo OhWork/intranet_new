@@ -106,7 +106,7 @@
 		</div>
 	</div>
 </div>
-<?php	        
+<?php
 	echo $form->close();
 	if (isset($_POST['submit'])) {
     //ปี
@@ -218,7 +218,7 @@ if($date){
 			                      '<center>ผู้ใหญ่</center>',
 			                      '<center>เด็ก</center>');
 			$grid->width = array('4%','4%','4%','4%','4%','4%','4%','4%','4%','4%','4%','4%','4%','4%','4%','4%','4%');
-			$grid->edit = 'admin_index.php?url=admin_trs_index.php&url2=trs_add_trs.php';
+			$grid->edit = 'admin_index.php?url=trs_add_trs.php';
 			$grid->name = 'table';
 			$grid->edittxt = 'แก้ไข';
 			$grid->special = 5;

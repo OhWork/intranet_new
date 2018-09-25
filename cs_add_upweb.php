@@ -15,7 +15,7 @@
     $txtname = new textfield('upweb_name','','form-control','','');
     $txtwork = new textfield('upweb_work','','form-control','','');
     $txtposition = new textfield('upweb_position','','form-control','','');
-    $txtdetail = new textarea('upweb_detail','form-control','','');
+    $txtdetail = new textarea('upweb_detail','form-control','','','','','');
 ?>
     <script language = "JavaScript">
 

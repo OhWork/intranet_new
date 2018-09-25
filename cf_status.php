@@ -33,9 +33,9 @@
     $txtplace = new textfield('problem_place','','form-control css-require','','');
     $txtcause = new textAreaCf(5,5,'eventconfer_comment','form-control','comment','');
     $txtserialorganize = new textfield('problem_serialorganize','','form-control css-require','','');
-    $txtcompletedetail = new textarea('problem_detailcomplete','form-control','','');
+//     $txtcompletedetail = new textarea('problem_detailcomplete','form-control','','','','','');
     $txtcompletedetail->rows = 5;
-    $txtnocompletedetail = new textarea('problem_detailwaitcomplete','form-control','','');
+//     $txtnocompletedetail = new textarea('problem_detailwaitcomplete','form-control','','','','','');
     $txtnocompletedetail->rows = 5;
     $button = new buttonok('เปลี่ยนสถานะ','','btn btn-success col-md-12','');
     if(!empty($_GET['id'])){
@@ -88,7 +88,7 @@
 						<div class='col-md-6 statustext'><?php echo $r['headncf_name'] ?></div>
 					</div>
 				</div>
-				<?php 
+				<?php
     				if(($r['headncf_id'] == 1)||($r['headncf_id'] == 2)){
     				 ?>
 				<div class='col-md-12'>

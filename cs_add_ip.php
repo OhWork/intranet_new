@@ -21,7 +21,7 @@
     $txtcomgroup = new textfield('ipzpo_comgroup','','form-control','','');
     $txtcomgroup->value = 'WorkGroup';
 //     $txtdetail = new textfield('ipzpo_detail','','form-control','','');
-    $txtdetail = new textarea('ipzpo_detail','form-control','','');
+    $txtdetail = new textarea('ipzpo_detail','form-control','','','','','');
     $selectstatus = new SelectFromDB();
     $selectstatus->name = 'status_status_id';
     $selectstatus->lists = 'โปรดระบุ';
