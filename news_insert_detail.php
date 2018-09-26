@@ -34,8 +34,8 @@
 			    	$rsshowdetail = $db->findByPK('newsDetails','newsDetails_id',$lastiddetail)->executeAssoc();
 			    	echo $rsshowdetail['newsDetails_name'];
 		    	}else if(@$rsfix){
-		        }
-		}
+		    	}
+			}
 	}
 	else{
 		$selectiddetail = $db->findAllDESC('news','news_id')->executeAssoc();

@@ -74,6 +74,9 @@
 	</div>
 </div>
 <div class='col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1'></div>
+<?php
+    echo $form->close();
+?>
 <script>
                 $('#button_adddetail').hide();
                 $('#button_canceletail').hide();
@@ -89,7 +92,8 @@
 					$('#button_canceletail').show();
 					$("#text_editer").removeAttr("readonly");
 					$("#text_editer").val('');
-					$("#form_detail").on('submit',(function(e) {
+					$("form").on('submit',function(e) {
+						e.preventDefault();
 						CKEDITOR.instances[ 'text_editer' ].updateElement();
 						$.ajax({
 							url: "news_insert_detail.php",
@@ -106,10 +110,11 @@
 									$('#button_adddetail').hide();
 									$('#button_canceletail').hide();
 								}
-						}
+
+							}
 						});
-						e.stopPropagation();
-					}));
+						e.stopImmediatePropagation();
+					});
 					$('#button_canceletail').on('click',function(e){
 						if(CKEDITOR.instances['text_editer']){
 							$.ajax({
