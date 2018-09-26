@@ -1,9 +1,9 @@
 <?php
  			$rs = $db->findByPKDESCLimit21('news','user','user_user_id','user_id','news_id',4)->execute();
-	
-     			
 
-      		
+
+
+
 ?>
 <div class='col-xl-1col-lg-1 col-md-1 col-sm-1 col-1'></div>
 <div class='col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10'>
@@ -13,7 +13,7 @@
 	</div>
    	<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-1">
 	<div class='row'>
-        <?php foreach($rs as $show){ 
+        <?php foreach($rs as $show){
             if($show['typeDesignnews_id'] == 1){
                 $design = "news_designtype1";
             }else if($show['typeDesignnews_id'] == 2){
@@ -24,7 +24,7 @@
                 $design = "news_designtype4";
             }else if($show['typeDesignnews_id'] == 5){
                 $design = "news_designtype5";
-            }		
+            }
         ?>
 			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-2">
 				<div class='row'>
@@ -38,7 +38,7 @@
 							<div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8">
 								<div class='row'>
 									<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3">
-										<a href="index.php?url=<?php echo $design;?>.php&id=<?php echo $show['news_newsDetails_id']?>" style="color:#000000;"><?php echo $show['news_head']; ?></a>
+										<a href="index.php?url=<?php echo $design;?>.php&id=<?php echo $show['news_id']?>" style="color:#000000;"><?php echo $show['news_head']; ?></a>
 									</div>
 									<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" style="color:#8d8d8d;">
 										choatchaw on aug 29,2018 at 12:00 am
@@ -48,13 +48,13 @@
 						</div>
 					</div>
 				</div>
-			</div>	
+			</div>
 <?php } ?>
-				
-            
+
+
         </div>
     </div>
-    
+
 </div>
 </div>
 </div>

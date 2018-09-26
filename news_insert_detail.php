@@ -22,7 +22,8 @@
 				'newsDetails_name' => $_POST['detail_news']
 			));
 			$rspic = $db->insert('newsImg',array(
-				'newsImg_name' => basename($_FILES['news_picdetail']['name'])
+				'newsImg_name' => basename($_FILES['news_picdetail']['name']),
+				'newsImg_path' => 'images/news/',
 			));
 		}
 			if(@$rs || @$rsfix){
