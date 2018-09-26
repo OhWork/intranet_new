@@ -13,19 +13,23 @@
 			$rsfix = $db->update('news',$data,'news_id',$_POST['id']);
 
 		}else{
-			$target_dir = 'temp/';
-		    $target_file = $target_dir.basename($_FILES['news_picdetail']['name']);
-		    $target_dir_save = 'images/news/'.basename($_FILES['news_picdetail']['name']);
-		    move_uploaded_file($_FILES['news_picdetail']['tmp_name'], $target_dir_save);
+			for($i = 0; $i<count($_FILES['news_picdetail']['name']); $i++){
+				$target_dir = 'temp/';
+			    $target_file = $target_dir.basename($_FILES['news_picdetail']['name'][$i]);
+			    $target_dir_save = 'images/news/'.basename($_FILES['news_picdetail']['name'][$i]);
+			    move_uploaded_file($_FILES['news_picdetail']['tmp_name'][$i], $target_dir_save);
 
+				$rspic = $db->insert('newsImg',array(
+					'newsImg_name' => basename($_FILES['news_picdetail']['name'][$i]),
+					'newsImg_path' => 'images/news/',
+					'newsImg_position' => 2,
+					'newsImg_connect' => $_POST['new_id']
+				));
+			}
 			$rs = $db->insert('newsDetails',array(
 				'newsDetails_name' => $_POST['detail_news']
 			));
-			$rspic = $db->insert('newsImg',array(
-				'newsImg_name' => basename($_FILES['news_picdetail']['name']),
-				'newsImg_path' => 'images/news/',
-			));
-		}
+					}
 			if(@$rs || @$rsfix){
 				$data['news_dateupdate'] = $_POST['date_time'];
 				$rseditdate = $db->update('news',$data,'news_id',$_POST['new_id']);

@@ -5,7 +5,7 @@
 	$lbheadnews = new label('หัวข้อข่าวสาร');
 	$txtheadnews = new textfield('news_head','','form-control','','');
 	$lbpic = new label('ภาพ');
-	$filepic = new inputFile('news_picdetail','','file_id');
+	$filepic = new inputFile('news_picdetail[]','','file_id');
 	$detailnews = new textAreareadonly('detail_news','form-control','text_editer','','5','5','');
 	if(!empty($_GET['id'])){
 		$id=$_GET['id'];
@@ -39,12 +39,22 @@
 				<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12'>
 					<div class='row'>
 						<div class='col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3'></div>
-						<div class='col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6 w-100'>
+						<div class='col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3'>
 							<?php
 								echo $lbpic;
-								echo $filepic;?>
+							?>
 						</div>
-						<div class='col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3'></div>
+						<div class='col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3'>
+							<?php
+								echo $filepic;
+							?>
+								<span id="mySpan">
+								</span>
+					</div>
+						<div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3" id="add">
+							<input class="btn btn-primary col-12" name="btnButton" id="btnButton" type="button" value="เพิ่ม" onClick="JavaScript:fncCreateElement();">
+						</div>
+
 					</div>
 				</div>
 				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-2">
@@ -136,5 +146,23 @@
 						}
 					});
                 });
+            var i = 1 ;
+		$('#btnButton').on('click',function(){
+			i++;
+			console.log(i);
+			if(i == 6){
+				document.getElementById("add").innerHTML = "เพิ่มรูปภาพได้ไม่เกิน 6 รูปภาพครับ";
+				$('#add').addClass('text-danger');
+			}
+		});
+           function fncCreateElement(){
+
+		   		var mySpan = document.getElementById('mySpan');
+				var myElement1 = document.createElement('input');
+				myElement1.setAttribute('type',"file");
+				myElement1.setAttribute('name',"news_picdetail[]");
+				mySpan.appendChild(myElement1);
+	}
+
 </script>
 
