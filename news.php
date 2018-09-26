@@ -38,7 +38,7 @@
 							<div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8">
 								<div class='row'>
 									<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3">
-										<a href="index.php?url=<?php echo $design;?>.php&id=1" style="color:#000000;"><?php echo $show['news_head']; ?></a>
+										<a href="index.php?url=<?php echo $design;?>.php&id=<?php echo $show['news_newsDetails_id']?>" style="color:#000000;"><?php echo $show['news_head']; ?></a>
 									</div>
 									<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" style="color:#8d8d8d;">
 										choatchaw on aug 29,2018 at 12:00 am
