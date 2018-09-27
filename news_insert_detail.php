@@ -18,12 +18,13 @@
 				for($i = 0; $i<count($_FILES['news_picdetail']['name']); $i++){
 					$target_dir = 'temp/';
 				    $target_file = $target_dir.basename($_FILES['news_picdetail']['name'][$i]);
-				    $target_dir_save = 'images/news/'.basename($_FILES['news_picdetail']['name'][$i]);
+				    $path = 'images/news/newsImg/';
+				    $target_dir_save = $path.basename($_FILES['news_picdetail']['name'][$i]);
 				    move_uploaded_file($_FILES['news_picdetail']['tmp_name'][$i], $target_dir_save);
 
 					$rspic = $db->insert('newsImg',array(
 						'newsImg_name' => basename($_FILES['news_picdetail']['name'][$i]),
-						'newsImg_path' => 'images/news/',
+						'newsImg_path' => $path,
 						'newsImg_position' => 2,
 						'newsImg_connect' => $_POST['new_id']
 					));
