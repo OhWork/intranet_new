@@ -13,34 +13,42 @@
 			$rsfix = $db->update('news',$data,'news_id',$_POST['id']);
 
 		}else{
-			for($i = 0; $i<count($_FILES['news_picdetail']['name']); $i++){
-				$target_dir = 'temp/';
-			    $target_file = $target_dir.basename($_FILES['news_picdetail']['name'][$i]);
-			    $target_dir_save = 'images/news/'.basename($_FILES['news_picdetail']['name'][$i]);
-			    move_uploaded_file($_FILES['news_picdetail']['tmp_name'][$i], $target_dir_save);
+			$form_design = $_POST['form_design'];
+			if($form_design == 1){
+				for($i = 0; $i<count($_FILES['news_picdetail']['name']); $i++){
+					$target_dir = 'temp/';
+				    $target_file = $target_dir.basename($_FILES['news_picdetail']['name'][$i]);
+				    $target_dir_save = 'images/news/'.basename($_FILES['news_picdetail']['name'][$i]);
+				    move_uploaded_file($_FILES['news_picdetail']['tmp_name'][$i], $target_dir_save);
 
-				$rspic = $db->insert('newsImg',array(
-					'newsImg_name' => basename($_FILES['news_picdetail']['name'][$i]),
-					'newsImg_path' => 'images/news/',
-					'newsImg_position' => 2,
-					'newsImg_connect' => $_POST['new_id']
+					$rspic = $db->insert('newsImg',array(
+						'newsImg_name' => basename($_FILES['news_picdetail']['name'][$i]),
+						'newsImg_path' => 'images/news/',
+						'newsImg_position' => 2,
+						'newsImg_connect' => $_POST['new_id']
+					));
+				}
+				$rs = $db->insert('newsDetails',array(
+					'newsDetails_name' => $_POST['detail_news']
 				));
 			}
-			$rs = $db->insert('newsDetails',array(
-				'newsDetails_name' => $_POST['detail_news']
-			));
-					}
-			if(@$rs || @$rsfix){
-				$data['news_dateupdate'] = $_POST['date_time'];
-				$rseditdate = $db->update('news',$data,'news_id',$_POST['new_id']);
-		    	if(@$rs){
-			    	$selectiddetail = $db->findAllDESC('newsDetails','newsDetails_id')->executeAssoc();
-			    	$lastiddetail = $selectiddetail['newsDetails_id'];
-			    	$rsshowdetail = $db->findByPK('newsDetails','newsDetails_id',$lastiddetail)->executeAssoc();
-			    	echo $rsshowdetail['newsDetails_name'];
-		    	}else if(@$rsfix){
-		    	}
+			else if($form_design == 2){
+				$rs = $db->insert('newsDetails',array(
+					'newsDetails_name' => $_POST['detail_news']
+				));
 			}
+		}
+		if(@$rs || @$rsfix){
+			$data['news_dateupdate'] = $_POST['date_time'];
+			$rseditdate = $db->update('news',$data,'news_id',$_POST['new_id']);
+			if(@$rs){
+				$selectiddetail = $db->findAllDESC('newsDetails','newsDetails_id')->executeAssoc();
+				$lastiddetail = $selectiddetail['newsDetails_id'];
+				$rsshowdetail = $db->findByPK('newsDetails','newsDetails_id',$lastiddetail)->executeAssoc();
+				echo $rsshowdetail['newsDetails_name'];
+			}else if(@$rsfix){
+			}
+		}
 	}
 	else{
 		$selectiddetail = $db->findAllDESC('news','news_id')->executeAssoc();

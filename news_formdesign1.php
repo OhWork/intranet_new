@@ -78,6 +78,7 @@
 			<div class='col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2'>
 				<input  type="hidden" id="id" name="new_id" value="<?php echo $id;?>" />
 				<input  type="hidden" id="datetime" name="date_time" value="<?php echo $datetime;?>" />
+				<input  type="hidden" id="datetime" name="form_design" value="1" />
 			</div>
 			</div>
 		</div>
