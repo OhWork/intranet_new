@@ -11,8 +11,15 @@
 			if($form_design == 1){
 				$pic = $db->findbyPK('newsImg','newsImg_connect',$id)->execute();
 				foreach($pic as $show){
-					print_r($show);
+					$count = array_count_values($show);
+					echo $count[$id];
+/*
+					for($i = 0; $i<count();){
+
+					}
+*/
 				}
+
 /*
 				$target_dir = 'temp/';
 				$target_file = $target_dir.basename($_FILES['news_picdetail']['name'][$i]);
