@@ -9,16 +9,8 @@
 	if($text == ''){
 		if(!empty($_POST['last_detail_id'])){
 			if($form_design == 1){
-				$pic = $db->findbyPK('newsImg','newsImg_connect',$id)->execute();
-				foreach($pic as $show){
-					$count = array_count_values($show);
-					echo $count[$id];
-/*
-					for($i = 0; $i<count();){
-
-					}
-*/
-				}
+				$pic = $db->specifytable('COUNT(*)','newsImg',"newsImg_connect = '$id'")->executeAssoc();
+				echo $pic['COUNT(*)'];
 
 /*
 				$target_dir = 'temp/';
