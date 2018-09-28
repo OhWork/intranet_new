@@ -41,7 +41,7 @@
 										<a href="index.php?url=<?php echo $design;?>.php&id=<?php echo $show['news_id']?>" style="color:#000000;"><?php echo $show['news_head']; ?></a>
 									</div>
 									<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" style="color:#8d8d8d;">
-										choatchaw on aug 29,2018 at 12:00 am
+										<?php echo $show['user_name'],' ',$show['user_last'],' ',$show['news_dateupdate']; ?>
 									</div>
 								</div>
 							</div>

@@ -1,13 +1,19 @@
+<script>
+            $(document).ready(function() {
 
-<?php
-            $columns = array('news_head','news_date','user_name');
-            if(empty($_GET["subpage"])){
-                 $_GET["subpage"] = 1;
-            }
-            $page = (int) (!isset($_GET["subpage"]) ? 0 : $_GET["subpage"]);
-			$limit = 8; //จำนวนแสดงต่อหน้า
-			$startpoint = ($page * $limit) - $limit;
-			?>
+                $('#table').DataTable( {
+                "ordering": false,
+                "lengthMenu": [[10, 20, 50, -1], [10, 20, 50, "ทุกหน้า"]],
+                "language": {
+                    "lengthMenu": "แสดง _MENU_ แถวต่อหน้า",
+                    "zeroRecords": "ไม่พบข้อมูล",
+                    "info": "แสดงหน้าที่ _PAGE_ ถึง _PAGES_",
+                    "infoEmpty": "ไม่พบข้อมูล",
+                    "infoFiltered": "(filtered from _MAX_ total records)"
+                }
+    } );
+} );
+</script>
 <div class='col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1'></div>
 <div class='col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10'>
 	<div class='row'>
@@ -21,23 +27,17 @@
 		</div>
 		<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-1">
 			<?php
+			$rs = $db->findByPK21DESC('news','user','user_user_id','user_id','news_id')->execute();
+            $columns = array('news_head','news_date','user_name');  
 
-			$rs2 = "problem,subzoo,typetools,subtypetools  where problem.subzoo_subzoo_id = subzoo.subzoo_id && problem.subtypetools_typetools_typetools_id = subtypetools.subtypetools_id && subtypetools.typetools_typetools_id = typetools.typetools_id";
-			$rs = $db->findByPK2Limit('news','user','news.user_user_id','user.user_id',$startpoint,$limit)->execute();
-
-
-			$grid2 = new gridView();
-			$grid2->pr = 'news_id';
-			$grid2->header = array('<b><center>หัวข้อข่าว</center></b>','<b><center>วันและเวลา</center></b>','<b><center>เขียนโดย</center></b>','<b><center>#</center></b>');
-			$grid2->width = array('50%','21%','21%','8%');
-//  			$grid2->view = '#';
- 			$grid2->edittxt = 'แก้ไข';
- 			$grid2->edit ='admin_index.php?url=admin_news_index.php&url2=news_add_news.php';
-//  			$grid2->viewtxt =' รายละเอียด';
-			$grid2->renderFromDB($columns,$rs);
-			echo pagination($rs2,$limit,$page,$url='cs_index.php?url=show_problem.php&');
-//             include_once 'cs_viewdetail.php';
-		?>
+			$grid = new gridView();
+				$grid->pr = 'news_id';
+				$grid->header = array('<b><center>หัวข้อข่าว</center></b>','<b><center>วันที่</center></b>','<b><center>ผู้ลงข่าว</center></b>','<b><center>#</center></b>');
+				$grid->width = array('15%','14%','14%','5%');
+				$grid->edit = 'admin_index.php?url=news_add_news.php';
+				$grid->name = 'table';
+				$grid->edittxt ='แก้ไข';
+				$grid->renderFromDB($columns,$rs);		?>
 		</div>
 	</div>
 </div>

@@ -11,8 +11,8 @@
 	if(!empty($_POST['id'])){
 
 		$data['news_head'] = $_POST['news_head'];
-		$data['news_detail'] = $_POST['news_detail'];
-		$data['news_cover'] = $_POST['news_cover'];
+		$data['news_datestart'] = $_POST['news_datestart'];
+		$data['news_dateend'] = $_POST['news_dateend'];
 		$data['user_user_id'] = $_POST['user_user_id'];
 		$rsfix = $db->update('news',$data,'news_id',$_POST['id']);
 
@@ -28,6 +28,7 @@
 		$selectidpic = $db->findAllDESC('newsImg','newsImg_id')->executeAssoc();
 		$rs = $db->insert('news',array(
 		'news_head' => $_POST['news_head'],
+		'news_date' => $_POST['news_date'],
 		'news_datestart' => $_POST['newsdatestart'],
 		'news_dateend' => $_POST['newsdateend'],
 		'news_cover' => basename($_FILES['news_cover']['name']),
@@ -43,7 +44,7 @@
 	if(@$rs || @$rsfix){
 
     	if(@$rs){
-	    	 echo "<div class='statusok'>เพิ่มสำเร็จ</div>";
+	    	 echo "<div class='statusok'>รอซักครู่ กำลังไปหน้าถัดไป</div>";
 	    	$selectiddetail = $db->findAllDESC('news','news_id')->executeAssoc();
 			$idnew = $selectiddetail['news_id'];
 	      	if($_POST['typeDesignnews_id'] == 1 ){
@@ -58,10 +59,23 @@
             $link = "admin_index.php?url=news_formdesign5.php&id=$idnew";
     	    }
     	}else if(@$rsfix){
-            echo "<div class='statusok'>แก้ไขสำเร็จ</div>";
+            echo "<div class='statusok'>แก้ไขแล้ว กำลังไปหน้าถัดไป </div>";
+            $selectiddetail = $db->findAllDESC('news','news_id')->executeAssoc();
+			$idnew = $selectiddetail['news_id'];
+            if($_POST['typeDesignnews_id'] == 1 ){
+    	    $link = "admin_index.php?url=news_formdesign1.php&id=$idnew";
+    	    }else if($_POST['typeDesignnews_id'] == 2 ){
+            $link = "admin_index.php?url=news_formdesign2.php&id=$idnew";
+    	    }else if($_POST['typeDesignnews_id'] == 3 ){
+            $link = "admin_index.php?url=news_formdesign3.php&id=$idnew";
+    	    }else if($_POST['typeDesignnews_id'] == 4 ){
+            $link = "admin_index.php?url=news_formdesign4.php&id=$idnew";
+    	    }else if($_POST['typeDesignnews_id'] == 5 ){
+            $link = "admin_index.php?url=news_formdesign5.php&id=$idnew";
+    	    }
         }
 //             $link = "url=admin_index.php?url=admin_news_index.php&user_id=".$_POST['user_user_id'];
-            header( "Refresh: 2; $link" );
+            header( "Refresh: 1; $link" );
 }
 ob_end_flush();
 ?>

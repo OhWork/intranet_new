@@ -227,6 +227,10 @@
 			$this->sql = "SELECT * FROM $table WHERE $column = $value ORDER BY $order DESC";
 			return $this;
 		}
+		function findByPK21DESC($table,$table2,$column,$value,$order){
+			$this->sql = "SELECT * FROM $table,$table2 WHERE $column = $value ORDER BY $order DESC";
+			return $this;
+		}
 		function findByPKDESCLimit21($table,$table2,$column,$value,$order,$limit){
 			$this->sql = "SELECT * FROM $table,$table2 WHERE $column = $value ORDER BY $order DESC LIMIT $limit";
 			return $this;
@@ -303,23 +307,6 @@
 		function findByPK55($table1,$table2,$table3,$table4,$table5,$column1,$value1,$column2,$value2,$column3,$value3,$column4,$value4,$column5,$value5){
 			$this->sql = "SELECT * FROM $table1,$table2,$table3,$table4,$table5 WHERE $column1 = $value1 && $column2 = $value2 && $column3 = $value3 && $column4 = $value4 && $column5 = $value5";
 			return $this;
-		}
-		function findByPK1Limit($table,$column1,$value1,$column2,$value2,$start,$per_page){
-    		$this->sql = "SELECT * FROM $table WHERE $column1 = '$value1' AND $column2 = '$value2' LIMIT $start, $per_page";
-    		return $this;
-		}
-		function findByPK2Limit($table,$table2,$column1,$value1,$start,$per_page){
-    		$this->sql = "SELECT * FROM $table,$table2 WHERE $column1 = $value1 LIMIT  $start, $per_page";
-    		return $this;
-		}
-		function findByPK2LimitDESC($table,$table2,$column1,$value1,$start,$per_page,$order){
-    		$this->sql = "SELECT * FROM $table,$table2 WHERE $column1 = $value1 ORDER BY $order DESC LIMIT  $start, $per_page";
-    		return $this;
-		}
-
-		function findByPK3Limit2($table,$table2,$table3,$column1,$value1,$column2,$value2,$column3,$value3,$start,$per_page){
-    		$this->sql = "SELECT * FROM $table,$table2,$table3 WHERE $column1 = $value1 AND $column2 = $value2 AND $column3 = $value3 LIMIT  $start, $per_page";
-    		return $this;
 		}
 		function findByPK34ASC($table,$table2,$table3,$column1,$value1,$column2,$value2,$column3,$value3,$column4,$value4,$order){
     		$this->sql = "SELECT * FROM $table,$table2,$table3 WHERE $column1 = $value1 AND $column2 = $value2 AND $column3 = $value3 AND $column4 = $value4 ORDER BY $order ASC";

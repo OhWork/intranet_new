@@ -2,7 +2,7 @@
 	$datetime = date("Y-m-d H:i");
 	$form = new form();
 	$lbdetailnews = new label('รายละเอียด');
-	$lbheadnews = new label('หัวข้อข่าวสาร');
+	$lbheadnews = new label('หัวข้อ : ');
 	$txtheadnews = new textfield('news_head','','form-control','','');
 	$lbpic = new label('ภาพ');
 	$filepic = new inputFile('news_picdetail[]','','file_id');
@@ -27,7 +27,7 @@
 		<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3'>
 			<?php
 				echo $lbheadnews;
-				echo $txtheadnews;?>
+				echo $r2['news_head'];?>
 		</div>
 		<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3' style="color:#007bff;">
 			<?php $rs = $db->findByPK22('news','user','user_user_id','user_id','news_id',$_GET['id'])->executeAssoc();
