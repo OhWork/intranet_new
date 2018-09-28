@@ -78,7 +78,8 @@
 			<div class='col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2'>
 				<input  type="hidden" id="id" name="new_id" value="<?php echo $id;?>" />
 				<input  type="hidden" id="datetime" name="date_time" value="<?php echo $datetime;?>" />
-				<input  type="hidden" id="datetime" name="form_design" value="1" />
+				<input  type="hidden" name="form_design" value="1" />
+				<input  type="text" id="last_detail_id" name="last_detail_id" value="" />
 			</div>
 			</div>
 		</div>
@@ -113,8 +114,12 @@
 							contentType: false,
 							cache: false,
 							processData:false,
+							dataType: 'json',
 							success: function(data) {
-								$('#text_editer').val(data);
+								console.log(data[0].lastiddetail);
+								console.log(data[0].detail);
+								$('#text_editer').val(data[0].detail);
+								$('#last_detail_id').val(data[0].lastiddetail);
 								if(CKEDITOR.instances['text_editer']){
 									CKEDITOR.instances['text_editer'].destroy(true);
 									$('#text_editer').attr('readonly', true);
@@ -133,8 +138,9 @@
 					        data: {text : 'cancel'},
 					        type: "POST",
 					        success: function(data) {
-						        console.log(data);
-						        $('#text_editer').val(data);
+						       var json1 = JSON.parse(data);
+						       console.log(json1.detail);
+						        $('#text_editer').val(data.detail);
 						        if(CKEDITOR.instances['text_editer']){
 							    		CKEDITOR.instances['text_editer'].destroy(true);
 										$('#text_editer').attr('readonly', true);

@@ -3,18 +3,31 @@
 	ob_start();
     include 'database/db_tools.php';
 	include 'connect.php';
+	$id = $_POST['new_id'];
 	$text = $_POST['text'];
+	$form_design = $_POST['form_design'];
 	if($text == ''){
-		if(!empty($_POST['id'])){
-			$data['news_head'] = $_POST['news_head'];
-			$data['news_detail'] = $_POST['news_detail'];
-			$data['news_cover'] = $_POST['news_cover'];
-			$data['user_user_id'] = $_POST['user_user_id'];
-			$rsfix = $db->update('news',$data,'news_id',$_POST['id']);
-
-		}else{
-			$form_design = $_POST['form_design'];
+		if(!empty($_POST['last_detail_id'])){
 			if($form_design == 1){
+				$pic = $db->findbyPK('newsImg','newsImg_connect',$id)->execute();
+				foreach($pic as $show){
+					print_r($show);
+				}
+/*
+				$target_dir = 'temp/';
+				$target_file = $target_dir.basename($_FILES['news_picdetail']['name'][$i]);
+				$path = 'images/news/newsImg/';
+				$target_dir_save = $path.basename($_FILES['news_picdetail']['name'][$i]);
+				move_uploaded_file($_FILES['news_picdetail']['tmp_name'][$i], $target_dir_save);
+				$data['news_head'] = $_POST['news_head'];
+				$data['news_detail'] = $_POST['news_detail'];
+				$data['news_cover'] = $_POST['news_cover'];
+				$data['user_user_id'] = $_POST['user_user_id'];
+				$rsfix = $db->update('news',$data,'news_id',$_POST['id']);
+*/
+			}
+		}else{
+		if($form_design == 1){
 				for($i = 0; $i<count($_FILES['news_picdetail']['name']); $i++){
 					$target_dir = 'temp/';
 				    $target_file = $target_dir.basename($_FILES['news_picdetail']['name'][$i]);
@@ -33,12 +46,12 @@
 					'newsDetails_name' => $_POST['detail_news']
 				));
 			}
-			else if($form_design == 2){
+		else if($form_design == 2){
 				$rs = $db->insert('newsDetails',array(
 					'newsDetails_name' => $_POST['detail_news']
 				));
 			}
-			else if($form_design == 3){
+		else if($form_design == 3){
 				$target_dir = 'temp/';
 				$target_file = $target_dir.basename($_FILES['news_videodetail']['name']);
 				$path = 'images/news/newsVideo/';
@@ -55,7 +68,7 @@
 					'newsDetails_name' => $_POST['detail_news']
 				));
 			}
-			else if($form_design == 4){
+		else if($form_design == 4){
 				for($i = 0; $i<count($_POST['detail_news']); $i++){
 					$rs = $db->insert('newsDetails',array(
 						'newsDetails_name' => $_POST['detail_news'][$i],
@@ -83,7 +96,7 @@
 					));
 				}
 			}
-			else if($form_design == 5){
+		else if($form_design == 5){
 					$rs = $db->insert('newsDetails',array(
 						'newsDetails_name' => $_POST['detail_news'],
 					));
@@ -115,9 +128,17 @@
 			$rseditdate = $db->update('news',$data,'news_id',$_POST['new_id']);
 			if(@$rs){
 				$selectiddetail = $db->findAllDESC('newsDetails','newsDetails_id')->executeAssoc();
+				$selectidpic = $db->findAllDESC('newsImg','newsImg_id')->executeAssoc();
+				$selectidvideo = $db->findAllDESC('newsVideo','newsVideo_id')->executeAssoc();
 				$lastiddetail = $selectiddetail['newsDetails_id'];
 				$rsshowdetail = $db->findByPK('newsDetails','newsDetails_id',$lastiddetail)->executeAssoc();
-				echo $rsshowdetail['newsDetails_name'];
+				$json_data[]=array(
+					 'detail'=>$rsshowdetail['newsDetails_name'],
+					 'lastiddetail'=>$lastiddetail,
+					 );
+				$json= json_encode($json_data);
+				echo $json;
+
 			}else if(@$rsfix){
 			}
 		}
