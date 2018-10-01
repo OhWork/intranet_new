@@ -10,20 +10,27 @@
 		if(!empty($_POST['last_detail_id'])){
 			if($form_design == 1){
 				$pic = $db->specifytable('COUNT(*)','newsImg',"newsImg_connect = '$id'")->executeAssoc();
-				echo $pic['COUNT(*)'];
-
+				$k = 0;
+				for($i = 0; $i<$pic['COUNT(*)']; $i++){
+					$target_dir = 'temp/';
+					$target_file = $target_dir.basename($_FILES['news_picdetail']['name'][$i]);
+					$path = 'images/news/newsImg/';
+					$target_dir_save = $path.$name_img;
+					move_uploaded_file($_FILES['news_picdetail']['tmp_name'][$i], $target_dir_save);
+					echo "<pre>";
+					print_r($_FILES['news_picdetail']['name'][$i]);
+					$name_img = basename($_FILES['news_picdetail']['name'][$i]);
+					$data['newsImg_name'] = $name_img;
+					$rseditpic = $db->update('newsImg',$data,'newsImg_connect',$id);
+					$k++;
 /*
-				$target_dir = 'temp/';
-				$target_file = $target_dir.basename($_FILES['news_picdetail']['name'][$i]);
-				$path = 'images/news/newsImg/';
-				$target_dir_save = $path.basename($_FILES['news_picdetail']['name'][$i]);
-				move_uploaded_file($_FILES['news_picdetail']['tmp_name'][$i], $target_dir_save);
-				$data['news_head'] = $_POST['news_head'];
-				$data['news_detail'] = $_POST['news_detail'];
-				$data['news_cover'] = $_POST['news_cover'];
-				$data['user_user_id'] = $_POST['user_user_id'];
-				$rsfix = $db->update('news',$data,'news_id',$_POST['id']);
+					$data['news_head'] = $_POST['news_head'];
+					$data['news_detail'] = $_POST['news_detail'];
+					$data['news_cover'] = $_POST['news_cover'];
+					$data['user_user_id'] = $_POST['user_user_id'];
+					$rsfix = $db->update('news',$data,'news_id',$_POST['id']);
 */
+				}
 			}
 		}else{
 		if($form_design == 1){
