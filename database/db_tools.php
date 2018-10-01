@@ -71,7 +71,7 @@
 			$this->sql = "UPDATE $table SET $rows WHERE $field = $value";
 			return mysqli_query($con,$this->sql);
 		}
-		function update($table, $data, $field, $value ,$field2 ,$value2){
+		function update2con($table, $data, $field, $value ,$field2 ,$value2){
     		$con = $this->connect();
 			$rows ="";
 			$i=0;
@@ -234,6 +234,10 @@
 		}
 		function findByPK($table,$column,$value){
 			$this->sql = "SELECT * FROM $table WHERE $column = $value";
+			return $this;
+		}
+		function findByPKLimit($table,$column,$value,$limit){
+			$this->sql = "SELECT * FROM $table WHERE $column = $value LIMIT $limit";
 			return $this;
 		}
 		function findByPKASC($table,$column,$value,$order){
