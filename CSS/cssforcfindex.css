@@ -1,0 +1,80 @@
+@media (min-width: 375px) {
+.container {
+	width: 350px;
+}
+}
+/*.........................................................................*/
+@media (min-width: 576px){
+.container {
+	width: 540px;
+}
+}
+/*.........................................................................*/
+@media (min-width: 768px){
+.container {
+	width: 720px;
+}
+.backhome_cf {
+	margin-top: 9px;
+	margin-right: 100px;
+}
+}
+/*.........................................................................*/
+@media (min-width: 992px) {
+.container {
+	width: 960px;
+}
+.backhome_cf {
+	margin-top: 9px;
+	margin-right: 540px;
+}
+}
+/*.........................................................................*/
+@media (min-width: 1200px) {
+.container {
+	width: 1170px;
+}
+.backhome_cf {
+	margin-top: 9px;
+	margin-right: 720px;
+}
+}
+@media (min-width: 1360px) {
+.container {
+	width: 1170px;
+}
+.backhome_cf {
+	margin-top: 9px;
+	margin-right: 720px;
+}
+}
+@media only screen and (min-width: 1600px) {
+.container {
+    width: 1570px;	
+}
+.backhome_cf {
+	margin-top: 9px;
+	margin-right: 1150px;
+}
+}
+.btn {
+    border: none; /* Remove borders */
+    color: white; /* Add a text color */
+    padding: 14px 28px; /* Add some padding */
+    cursor: pointer; /* Add a pointer cursor on mouse-over */
+    font-size: 16px;
+}
+.menuup {
+    font-size: 16px;
+}
+.addmenu {
+    font-size: 16px;
+}
+.imgcfold {
+	padding: 0px;
+	padding-top: 8px;
+	margin-right : 16px;
+}
+.homecfold {
+	padding-top: 12px;
+}
