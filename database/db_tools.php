@@ -111,7 +111,7 @@
 					$i++;
 				}
 			}
-			$this->sql = "UPDATE $table,$table2 SET $rows , $rows2 WHERE $field = $value AND $field2 = $value2";
+			$this->sql = "UPDATE $table,$table2 SET $rows,$rows2 WHERE $field = $value AND $field2 = $value2";
 			return mysqli_query($con,$this->sql);
 		}
 		function updatefolder($table,$field1,$change,$field,$value,$field2,$value2){

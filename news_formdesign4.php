@@ -104,10 +104,10 @@
 			<div class='row'>
 				<div class='col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10'></div>
 				<div class='col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2'>
-					<input class="btn btn-success w-100" type="submit" value="submit" />
 					<input  type="hidden" id="new_id" name ="new_id" value="<?php echo $id;?>" />
 					<input  type="hidden" id="datetime" name="date_time" value="<?php echo $datetime;?>" />
 					<input  type="hidden" id="datetime" name="form_design" value="4" />
+				<input  type="text" id="last_detail_id" name="last_detail_id" value="" />
 				</div>
 			</div>
 		</div>
@@ -150,11 +150,17 @@
 							contentType: false,
 							cache: false,
 							processData:false,
+							dataType: 'json',
 							success: function(data) {
-								$("input[name*='detail_news[]']").val(data);
-								if(CKEDITOR.instances['text_editer']){
+								console.log(data);
+								$("#text_editer").val(data[0].detail);
+								$("#text_editer2").val(data[1].detail);
+								$('#last_detail_id').val(data[0].lastiddetail);
+								if(CKEDITOR.instances['text_editer'] || CKEDITOR.instances['text_editer2']){
 									CKEDITOR.instances['text_editer'].destroy(true);
+									CKEDITOR.instances['text_editer2'].destroy(true);
 									$('#text_editer').attr('readonly', true);
+									$('#text_editer2').attr('readonly', true);
 									$('#button_adddetail').hide();
 									$('#button_canceletail').hide();
 								}

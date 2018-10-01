@@ -45,10 +45,10 @@
 			<div class='row'>
 			<div class='col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10'></div>
 			<div class='col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2'>
-				<input class="btn btn-success w-100" type="submit" value="submit" />
 				<input  type="hidden" id="id" value="<?php echo $id;?>" />
 				<input  type="hidden" id="datetime" name="date_time" value="<?php echo $datetime;?>" />
 				<input  type="hidden" id="datetime" name="form_design" value="2" />
+				<input  type="text" id="last_detail_id" name="last_detail_id" value="" />
 			</div>
 			</div>
 		</div>
@@ -80,8 +80,10 @@
 							contentType: false,
 							cache: false,
 							processData:false,
+							dataType: 'json',
 							success: function(data) {
-								$('#text_editer').val(data);
+								$('#text_editer').val(data[0].detail);
+								$('#last_detail_id').val(data[0].lastiddetail);
 								if(CKEDITOR.instances['text_editer']){
 									CKEDITOR.instances['text_editer'].destroy(true);
 									$('#text_editer').attr('readonly', true);

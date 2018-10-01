@@ -75,6 +75,7 @@
 				<input  type="hidden" id="id" name="new_id" value="<?php echo $id;?>" />
 				<input  type="hidden" id="datetime" name="date_time" value="<?php echo $datetime;?>" />
 				<input  type="hidden" id="datetime" name="form_design" value="3" />
+				<input  type="text" id="last_detail_id" name="last_detail_id" value="" />
 			</div>
 			</div>
 		</div>
@@ -109,8 +110,10 @@
 							contentType: false,
 							cache: false,
 							processData:false,
+							dataType: 'json',
 							success: function(data) {
-								$('#text_editer').val(data);
+								$('#text_editer').val(data[0].detail);
+								$('#last_detail_id').val(data[0].lastiddetail);
 								if(CKEDITOR.instances['text_editer']){
 									CKEDITOR.instances['text_editer'].destroy(true);
 									$('#text_editer').attr('readonly', true);

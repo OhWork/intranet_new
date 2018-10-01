@@ -26,9 +26,9 @@
 
 		$selectiddetail = $db->findAllDESC('newsDetails','newsDetails_id')->executeAssoc();
 		$selectidpic = $db->findAllDESC('newsImg','newsImg_id')->executeAssoc();
+		$selectidvideo = $db->findAllDESC('newsVideo','newsVideo_id')->executeAssoc();
 		$rs = $db->insert('news',array(
 		'news_head' => $_POST['news_head'],
-		'news_date' => $_POST['news_date'],
 		'news_datestart' => $_POST['newsdatestart'],
 		'news_dateend' => $_POST['newsdateend'],
 		'news_cover' => basename($_FILES['news_cover']['name']),
@@ -37,6 +37,7 @@
 		'typeDesignnews_id' => $_POST['typeDesignnews_id'],
 		'news_newsDetails_id' => $selectiddetail['newsDetails_id']+1,
 		'news_newsImg_id' => $selectidpic['newsImg_id']+1,
+		'news_newsVideo_id' => $selectidvideo['newsVideo_id']+1,
 		'user_user_id' => $_POST['user_user_id']
 		));
 
