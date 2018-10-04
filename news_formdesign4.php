@@ -10,18 +10,27 @@
 	$filepic = new inputFile('news_picdetail[]','','file_id');
 	$detailnews = new textAreareadonly('detail_news[]','form-control','text_editer','','5','5','');
 	$detailnews2 = new textAreareadonly('detail_news[]','form-control','text_editer2','','5','5','');
+	$last_detail_id = new hiddenfield('last_detail_id','last_detail_id','form-control','','');
 	if(!empty($_GET['id'])){
 		$id=$_GET['id'];
 		$r2 = $db->findByPK('news','news_id',$id)->executeRow();
 		$txtheadnews->value = $r2['news_head'];
-		$r = $db->findByPK('newsDetails','newsDetails_id',$r2['news_newsDetails_id'])->executeRow();
-		if($r2['news_newsDetails_id'] == '' || $r2['news_newsDetails_id'] != $r['newsDetails_id']){
+		$r = $db->findByPK('newsDetails','newsDetails_connect',$id)->execute();
+		foreach($r as $showr){
+		if($r2['news_newsDetails_id'] == '' || $r2['news_newsDetails_id'] != $showr['newsDetails_id']){
 			$detailnews->value = 'หากต้องการเพิ่มรายละเอียดกรุณาคลิก';
 			$detailnews2->value = 'หากต้องการเพิ่มรายละเอียดกรุณาคลิก';
+			$last_detail_id->value = '';
 
 		}
 		else{
+
+				print_r($showr);
+/*
 				$detailnews->value = $r['newsDetails_name'];
+				$last_detail_id->value = $r['newsDetails_id'];
+*/
+				}
 		}
 	}
 	echo $form->open("form_detail","form","col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","","");
@@ -107,7 +116,7 @@
 					<input  type="hidden" id="new_id" name ="new_id" value="<?php echo $id;?>" />
 					<input  type="hidden" id="datetime" name="date_time" value="<?php echo $datetime;?>" />
 					<input  type="hidden" id="datetime" name="form_design" value="4" />
-				<input  type="text" id="last_detail_id" name="last_detail_id" value="" />
+				<input  type="hidden" id="last_detail_id" name="last_detail_id" value="" />
 				</div>
 			</div>
 		</div>

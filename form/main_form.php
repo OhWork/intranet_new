@@ -8,7 +8,29 @@
 			return "</form>";
 		}
 	}
+#---------------Hidden-------------------#
+class hiddenfield{
+		public $name,$id = null,$cass = null,$hold = null;
+		public $value=null,$functions=null;
 
+		function __construct($name,$id,$cass,$value){
+			$this->name = $name;
+			$this->cass = $cass;
+			$this->id = $id;
+			$this->value = $value;
+
+		}
+		function __toString(){
+			return "<input type='hidden'
+			        id='{$this->id}'
+					class='{$this->cass}'
+					name='{$this->name}'
+					value='{$this->value}'
+					{$this->functions}
+					placeholder='{$this->hold}'/>";
+		}
+}
+#---------------End Hidden-------------------#
 #---------------Text-------------------#
 	class textfield{
 		public $name,$id = null,$cass = null,$hold = null;

@@ -6,6 +6,7 @@
 	$id = $_POST['new_id'];
 	$text = $_POST['text'];
 	$form_design = $_POST['form_design'];
+	$lastiddetail =$_POST['last_detail_id'];
 	if($text == ''){
 		if(!empty($_POST['last_detail_id'])){
 			$last_id_detail = $_POST['last_detail_id'];
@@ -95,18 +96,16 @@
 					$rseditpic = $db->update2con('newsImg',$data3,'newsImg_connect',$id,'newsImg_id',$newimg_id);
 				}
 			}
-			if(@$rseditpic){
+			if(@$rseditpic || $rseditdetail){
 			$data['news_dateupdate'] = $_POST['date_time'];
 			$rseditdate = $db->update('news',$data,'news_id',$_POST['new_id']);
-			if(@$rseditpic){
+			if(@$rseditpic || $rseditdetail){
 				$selectiddetail = $db->findAllDESC('newsDetails','newsDetails_id')->executeAssoc();
 				$selectidpic = $db->findAllDESC('newsImg','newsImg_id')->executeAssoc();
 				$selectidvideo = $db->findAllDESC('newsVideo','newsVideo_id')->executeAssoc();
-				$lastiddetail = $selectiddetail['newsDetails_id'];
 				$rsshowdetail = $db->findByPK('newsDetails','newsDetails_id',$lastiddetail)->executeAssoc();
 				$json_data[]=array(
 					 'detail'=>$rsshowdetail['newsDetails_name'],
-					 'lastiddetail'=>$lastiddetail,
 					 );
 				$json= json_encode($json_data);
 				echo $json;
@@ -193,7 +192,7 @@
 					'newsVideo_name' => basename($_FILES['news_videodetail']['name']),
 					'newsVideo_link' => $path,
 					'newsVideo_position' => 2,
-// 					'newsImg_connect' => $_POST['new_id']
+					'newsImg_connect' => $_POST['new_id']
 				));
 				for($i = 0; $i<count($_FILES['news_picdetail']['name']); $i++){
 					$target_dir = 'temp/';

@@ -7,6 +7,7 @@
 	$lbpic = new label('ภาพ');
 	$filepic = new inputFile('news_picdetail[]','','file_id');
 	$detailnews = new textAreareadonly('detail_news','form-control','text_editer','','5','5','');
+	$last_detail_id = new hiddenfield('last_detail_id','last_detail_id','form-control','1','');
 	if(!empty($_GET['id'])){
 		$id=$_GET['id'];
 		$r2 = $db->findByPK('news','news_id',$id)->executeRow();
@@ -14,9 +15,11 @@
 		$r = $db->findByPK('newsDetails','newsDetails_id',$r2['news_newsDetails_id'])->executeRow();
 		if($r2['news_newsDetails_id'] == '' || $r2['news_newsDetails_id'] != $r['newsDetails_id']){
 			$detailnews->value = 'หากต้องการเพิ่มรายละเอียดกรุณาคลิก';
+			$last_detail_id->value = '';
 		}
 		else{
-				$detailnews->value = $r['newsDetails_name'];
+			$detailnews->value = $r['newsDetails_name'];
+			$last_detail_id->value = $r['newsDetails_id'];
 		}
 	}
 	echo $form->open("form_detail","form","col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","","");
@@ -79,7 +82,7 @@
 				<input  type="hidden" id="id" name="new_id" value="<?php echo $id;?>" />
 				<input  type="hidden" id="datetime" name="date_time" value="<?php echo $datetime;?>" />
 				<input  type="hidden" name="form_design" value="1" />
-				<input  type="text" id="last_detail_id" name="last_detail_id" value="" />
+				<input  type="hidden" id="last_detail_id" name="last_detail_id" value="" />
 			</div>
 			</div>
 		</div>
@@ -103,7 +106,6 @@
 					$('#button_adddetail').show();
 					$('#button_canceletail').show();
 					$("#text_editer").removeAttr("readonly");
-					$("#text_editer").val('');
 					$("form").on('submit',function(e) {
 						e.preventDefault();
 						CKEDITOR.instances[ 'text_editer' ].updateElement();
@@ -116,8 +118,7 @@
 							processData:false,
 							dataType: 'json',
 							success: function(data) {
-								console.log(data[0].lastiddetail);
-								console.log(data[0].detail);
+								console.log(data);
 								$('#text_editer').val(data[0].detail);
 								$('#last_detail_id').val(data[0].lastiddetail);
 								if(CKEDITOR.instances['text_editer']){

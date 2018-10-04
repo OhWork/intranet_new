@@ -93,7 +93,7 @@
 				<input  type="hidden" id="id" name="new_id" value="<?php echo $id;?>" />
 				<input  type="hidden" id="datetime" name="date_time" value="<?php echo $datetime;?>" />
 				<input  type="hidden" id="datetime" name="form_design" value="5" />
-				<input  type="text" id="last_detail_id" name="last_detail_id" value="" />
+				<input  type="hidden" id="last_detail_id" name="last_detail_id" value="" />
 				</div>
 			</div>
 		</div>
