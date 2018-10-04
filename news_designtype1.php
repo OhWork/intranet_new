@@ -1,6 +1,6 @@
 <?php
     $id = $_GET['id'];
-    $rs = $db->findByPK44('news','newsDetails','newsImg','user','news_newsDetails_id','newsDetails_id','news_newsImg_id','newsImg_id','user_user_id','user_id','news_id',$id)->executeAssoc();
+	    $rs = $db->findByPK44('news','newsDetails','newsImg','user','news_newsDetails_id','newsDetails_id','news_newsImg_id','newsImg_id','user_user_id','user_id','news_id',$id)->executeAssoc();
 ?>
 <div class='col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1'></div>
 <div class='col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10' style="background-color:#ffffff;">
