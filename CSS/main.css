@@ -1034,7 +1034,7 @@
 }
 .bcmn {
 	background-color:#1DE9B6;
-	color:#424242;
+	color:#ffffff;
 }
 .bcmn:hover {
 	background-color:#1DE9B6;
@@ -1052,7 +1052,7 @@
 	color:#424242;
 }
 .bcnm {
-	color:#424242;
+	color:#ffffff;
 }
 .alltxh {
 	color:#1DE9B6;
@@ -1077,4 +1077,11 @@
 .newmini {
 	border-top-left-radius:4px;
 	border-top-right-radius:4px;
+}
+.arrow-left {
+	width: 0; 
+	height: 0; 
+	border-top: 50px solid transparent;
+	border-right: 100px solid red;
+	border-bottom: 50px solid transparent; 
 }

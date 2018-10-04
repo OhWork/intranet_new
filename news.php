@@ -2,12 +2,13 @@
  			$rs = $db->findByPKDESCLimit21('news','user','user_user_id','user_id','news_id',4)->execute();
 ?>
 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+	<div class='row'>
 		<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" style="background-color:#ffffff;">
 			<div class='row'>
 				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3 alltxh">
 					<h4>ข่าวสารภายในองค์การสวนสัตว์</h4>
 				</div>
-				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3 pb-4">
+				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3">
 						<?php foreach($rs as $show){
 							if($show['typeDesignnews_id'] == 1){
 								$design = "news_designtype1";
@@ -46,8 +47,18 @@
 							</div>
 				<?php } ?>
 				</div>
+				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3 pb-4">
+					<div class='row'>
+						<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4"></div>
+						<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
+							<a class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 btn btn-success" style="color:#ffffff;">ดูทั้งหมด</a>
+						</div>
+						<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4"></div>
+					</div>
+				</div>
 			</div>
 		</div>
+	</div>
 </div>
 <script>
 $('tr[data-href]').on("click", function() {
