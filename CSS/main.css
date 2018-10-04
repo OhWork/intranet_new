@@ -503,6 +503,9 @@
 .addmenu a{
 	color: #ffffff;
 }
+.mucl {
+	border-bottom:2px solid #424242;
+}
 /*trs show*/
 .fieldset1 {
     border: 1px solid #000000;
@@ -1028,6 +1031,13 @@
 .animat-test{
   animation: fadeInRight .5s ease-in 1 forwards;
   animation-fill-mode:both;
+}
+.bcmn {
+	background-color:#1DE9B6;
+	color:#424242;
+}
+.bcnm {
+	color:#424242;
 }
 @keyframes fadeInRight {
    0% {

@@ -194,7 +194,8 @@ function uncheckAll(id)
             if (url == (this.href)) {
 // 	            console.log(1234);
                 $(this).parents(0).addClass("show");
-                $(this).addClass("active");
+                $(this).addClass("bcmn");
+				$('.edittext').addClass('bcnm');
                 //for making parent of submenu active
                //$(this).closest("li").parent().parent().addClass("active");
                $(this).parents(0).attr("aria-expanded", true);
