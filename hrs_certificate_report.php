@@ -14,52 +14,61 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
     </head>
-    <body>
-		<table style="margin-bottom:200px;">
-    		<tr>
-        		<td></td>
-    		</tr>
-		</table>
+    <body font="th-saraban">
 		<!--บรรทัดที่ 1-->
-		<table style="margin-bottom:50px;">
+		<table style="margin-bottom:20px;">
     		<tr>
-        		<td  style="font-size:14px;">ที่ ทส.๑๑๐๑/</td>
-    		</tr>
-		</table>
-		<!--บรรทัดที่ 2-->
-		<table style="margin-left:280px;margin-bottom:50px;">
-    		<tr>
-				<td style="font-size:20px;"><b>หนังสือรับรอง</b></td>
+                <td style="font-size:24px;padding-left:295px;"><img style='width:90px;' src='images/Logo/ZPO.png'></td>
+			</tr>
+			<tr>
+				<td style="font-size:24px;padding-left:230px;"><b>คำขอหนังสือรับรอง</b></td>
 			</tr>
 		</table>
-		<!--บรรทัดที่ 3-->
-		<table style="margin-bottom:30px;">
+		<!--บรรทัดที่ 4-->
+		<table>
     		<tr>
-				<td style="font-size:14px;line-height:28px;letter-spacing:nomal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; หนังสือฉบับนี้เพื่อรับรองว่า
-				<?php echo $show['hrctf_name'];?> ปัจจุบันปฏิบัติงานในตำแหน่ง <?php echo thainumDigit($show['hrctf_position']);?> 
-				สังกัด <?php echo $show['zoo_name'];?> องค์การสวนสัตว์ กระทรวงทรัพยาการธรรมชาติและสิ่งแวดล้อม ได้เข้าทำงานเมื่อวันที่ 
-				<?php $datethai = DateThai($show['hrctf_datestartwork']); echo thainumDigit($datethai);?> 
-				ปัจจุบันอัตราเงินเดือน <?php $salary = number_format($show['hrctf_salary']);
-    				                        echo thainumDigit($salary);?> บาท <!--ใส่โค๊ตตรงนี้ เงินเป็นตัวหนังสือ--></td>
+				<td style="font-size:14px;"><b>เรียน ผู้อำนวยการองค์การสวนสัตว์</b></td>
 			</tr>
 		</table>
-		<table style="margin-bottom:100px;">
+		<!--บรรทัดที่ 5-->
+		<table>
     		<tr>
-				<td style="font-size:14px;letter-spacing:nomal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ให้ไว้ ณ วันที่ <!--ใส่โค๊ตตรงนี้ วันที่--></td>
+				<td style="font-size:14px;line-height:24px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ๑. ข้าพเจ้า
+				<?php echo $show['hrctf_name'];?> <?php echo $show['hrctf_position'];?>
+				 สังกัด <?php echo $show['zoo_name'];?> ได้รับการบรรจุเป็นพนักงานเมื่อวันที่<!--ตรงนี้ใส่code วันที่บรรจุ -->อัตราเงินเดือนปัจจุบัน<!--ตรงนี้ใส่code เงินเดือนปัจจุบัน --></td>
 			</tr>
 		</table>
 		<!--บรรทัดที่ 6-->
+		<table style="margin-bottom:30px">
+    		<tr>
+				<td style="font-size:14px;line-height:24px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ๒. วัตถุประสงค์เพื่อ
+			</tr>
+		</table>
+		<!--บรรทัดที่ 7-->
+		<table  style="margin-bottom:30px">
+    		<tr>
+				<td style="font-size:14px;line-height:24px;letter-spacing:nomal;">ข้าพเจ้าขอรับรองว่า ข้อความดังกล่าวข้างต้นเป็นความจริงทุกประการ</td>
+			</tr>
+		</table>
+		<!--บรรทัดที่ 8-->
 		<table>
     		<tr>
-				<td style="font-size:14px;padding-left:280px;">(</td>
+				<td style="font-size:14px;">ลงชื่อ</td>
+				<td style="font-size:14px;">.............................................</td>
+				<td style="font-size:14px;">ผู้ขอ</td>
+			</tr>
+		</table>
+		<!--บรรทัดที่ 8-->
+		<table>
+			<tr>
+				<td style="font-size:14px;padding-left:28px;">(</td>
 				<td style="font-size:14px;">.............................................</td>
 				<td style="font-size:14px;">)</td>
 			</tr>
 		</table>
-		<!--บรรทัดที่ 7-->
-		<table style="margin-left:280px;">
+		<table>
     		<tr>
-				<td><!--ใส่เส้นปะ--></td>
+				<td style="font-size:14px;">วันที่</td>
 			</tr>
 		</table>
     </body>
