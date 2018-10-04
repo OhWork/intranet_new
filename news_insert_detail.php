@@ -48,7 +48,7 @@
 				$pic = $db->specifytable('COUNT(*)','newsImg',"newsImg_connect = '$id'")->executeAssoc();
 				$detail = $db->specifytable('COUNT(*)','newsDetails',"newsDetails_connect = '$id'")->executeAssoc();
 				for($i = 0; $i<$detail['COUNT(*)']; $i++){
-					$data['newsDetails_name'] = $_POST['detail_news'][$i],
+					$data['newsDetails_name'] = $_POST['detail_news'][$i];
 					$rseditdetail = $db->update2con('newsImg',$data,'newsImg_connect',$id,'newsImg_id',$newimg_id);
 				}
 					$target_dir = 'temp/';
@@ -70,7 +70,7 @@
 					$rseditpic = $db->update2con('newsImg',$data3,'newsImg_connect',$id,'newsImg_id',$newimg_id);
 				}
 			}
-			else if($form_design == 5)){
+			else if($form_design == 5){
 				$pic = $db->specifytable('COUNT(*)','newsImg',"newsImg_connect = '$id'")->executeAssoc();
 
 				$data['newsDetails_name'] = $_POST['detail_news'];
