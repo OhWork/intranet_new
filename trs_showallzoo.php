@@ -66,13 +66,13 @@
 	$buttonprintpdf = new buttonok('ค้นหา','','btn btn-default trspdf','submit');
 
      ?>
-<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3">
+<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3" style="background-color:#ffffff;">
 	<div class='row'>
-		<div class='col-md-12 printdisplaynone'>
+		<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 alltxh printdisplaynone'>
 			<h4>รายงานจำนวนผู้เข้าชมของสวนสัตว์</h4>
 		</div>
 <?php echo $form->open('form_reg','myform','','',''); ?>
-        <div class='col-md-12 printdisplaynone'>
+        <div class='col-md-12 mt-3 printdisplaynone'>
             <div class='row'>
                 <div class='col-md-1 printdisplaynone'></div>
                 <div class='col-md-2 azchoice border border-dark'>
@@ -116,7 +116,7 @@
                         </div>
                         <div class='col-md-12'>
 							<div class="row">
-								<input type="button" class='btn btn-success' style="margin-left:10px;margin-right:5px;" value="ทุกสวนสัตว์" onClick="checkAll('check_list')">
+								<input type="button" class='btn btn-success ml-1' style="margin-right:5px;" value="ทุกสวนสัตว์" onClick="checkAll('check_list')">
 								<input type="button" class='btn btn-danger' value="ยกเลิก" onClick="uncheckAll('check_list')">	
 							</div>
 						</div>

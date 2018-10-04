@@ -1036,8 +1036,27 @@
 	background-color:#1DE9B6;
 	color:#424242;
 }
+.bcmn:hover {
+	background-color:#1DE9B6;
+	color:#424242;
+}
+.mucls {
+	color:#ffffff;
+}
+.mucls:hover {
+	background-color:#1DE9B6;
+	color:#424242;
+}
+.mucl:hover {
+	background-color:#1DE9B6;
+	color:#424242;
+}
 .bcnm {
 	color:#424242;
+}
+.alltxh {
+	color:#1DE9B6;
+	border-bottom:2px solid #F5F5F5;
 }
 @keyframes fadeInRight {
    0% {

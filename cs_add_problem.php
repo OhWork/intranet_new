@@ -20,7 +20,7 @@
     $txtposition = new textfield('problem_position','problem_position','form-control','','');
     $txtdetail = new textarea('problem_detail','aprob','','','','','');
     $txtdetail->rows = 5;
-    $button = new buttonok("ส่งแบบฟอร์มแจ้งซ่อม","","btn btn-success btn-lg btn-block bt3success col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","");
+    $button = new buttonok("ส่งแบบฟอร์มแจ้งซ่อม","","btn btn-success btn-block bt3success col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","");
     ?>
     <script language = "JavaScript">
 
@@ -196,12 +196,12 @@
 	<div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2"></div>
 	<div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8" style="padding-top:16px;background-color:#ffffff;border:solid 1px #E0E0E0;border-radius:7px;">
 		<div class="row">
-			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-					<h4>แบบฟอร์มแจ้งซ่อม</h4>
+			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 alltxh">
+				<h4>แบบฟอร์มแจ้งซ่อม</h4>
 			</div>
-			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" style="border-top:solid 1px #E0E0E0;">
+			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 				<div class="row">
-					<div class='col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8' style="border-right:solid 1px #E0E0E0;">
+					<div class='col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8' style="border-right:solid 1px #f5f5f5;">
 						<div class='row'>
 							<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3">
 								<label>สำนัก/สวน</label>
@@ -295,11 +295,11 @@
 								<input type='hidden' name='problem_status' value='N'>
 							<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 								<div class='row'>
-									<div class='col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3'></div>
-									<div class='col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6 form-group'>
+									<div class='col-xl-3 col-lg-3 col-md-2 col-sm-2 col-2'></div>
+									<div class='col-xl-6 col-lg-6 col-md-8 col-sm-8 col-8 form-group'>
 										<?php echo $button;?>
 									</div>
-									<div class='col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3'></div>
+									<div class='col-xl-3 col-lg-3 col-md-2 col-sm-2 col-2'></div>
 								</div>
 							</div>
 						</div>

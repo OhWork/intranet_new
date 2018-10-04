@@ -13,9 +13,9 @@ session_start();
               include 'connect.php';
 			?>    </head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-        <link rel="stylesheet" href="CSS/bootstrap.min.css">
         <link rel="stylesheet" href="CSS/bootstrap-datetimepicker-standalone.css">
         <link rel="stylesheet" href="CSS/bootstrap-datetimepicker.css">
+		<link rel="stylesheet" href="CSS/bootstrap.min.css">
         <link rel="stylesheet" href="CSS/dashboard.css" >
         <link rel="stylesheet" href="CSS/jquery-ui.css">
         <link rel="stylesheet" href="CSS/sticky-footer.css">
@@ -53,7 +53,7 @@ session_start();
           </li> -->
 					</ul>
 					<div class="form-inline mt-2 mt-md-0">
-						<a class="btn btn-outline-success my-2 my-sm-0" href="login.php">เข้าสู่ระบบ</a>
+						<a class="btn my-2 my-sm-0 mucls" href="login.php">เข้าสู่ระบบ</a>
 					</div>
 				</div>
 			</nav>

@@ -66,14 +66,14 @@
 	$buttonprintpdf = new buttonok('ค้นหา','','btn btn-default','');
 
      ?>
-	<div class='col-12' style="margin-top:16px;">
+	<div class='col-12' style="margin-top:16px;background-color:#ffffff;">
         <div class='row'>
-			    <div class='col-md-12 printdisplaynone' style="float: left;">
+			    <div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 alltxh printdisplaynone' style="float: left;">
 				    <h4>รายงานจำนวนผู้เข้าชมของสวนสัตว์แบบเก่า</h4>
 				</div>
 					<?php echo $form->open('form_reg','myform','','','');
 					?>
-                <div class='col-md-12 printdisplaynone' style="float: left;">
+                <div class='col-md-12 mt-3 printdisplaynone' style="float: left;">
                    	<div class='row'>
 						<div class='col-md-1 printdisplaynone' style="float: left;"></div>
                     	<div class='col-md-2 azchoice border border-dark' style="float: left;">
