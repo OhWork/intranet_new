@@ -36,7 +36,7 @@ session_start();
     <![endif]-->
 <body>
 			<nav class="navbar navbar-expand-md navbar-dark bg-dark col-md-12">
-				<a class="navbar-brand brandedit" href="#"><h4>องค์การสวนสัตว์</h4></a>
+				<a class="navbar-brand brandedit" href="#"><h4>องค์การสวนสัตว์ ในพระบรมราชูปถัมภ์</h4></a>
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 				</button>

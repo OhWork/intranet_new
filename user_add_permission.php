@@ -81,7 +81,7 @@ if (!empty($_SESSION['user_name'])):
         $radiohrs->add('อนุญาต',1,'');
         $radiohrs->add('ไม่อนุญาต',0,'checked');
   }
-   $radioqtn = new radioGroup();
+  $radioqtn = new radioGroup();
   $radioqtn->name = 'systemallow_qtn';
   if(empty($id)){
         $radioqtn->add('อนุญาต',1,'');
