@@ -65,14 +65,14 @@ session_start();
 							<?php include 'content.php'; ?>
 						<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 							<div class="indexft"><a href="http://www.zoothailand.org" target="_blank"><img src="images/Logo/ZPO.png"/></a></div>
-							<div class="indexft"><a href="http://www.dusitzoo.org" target="_blank"><img src="images/Logo/Dusitzoo.png"></a></div>
-							<div class="indexft"><a href="http://kkopenzoo.com/newversion_index.php"><img src="images/Logo/KKOzoo.png"></a></div>
-							<div class="indexft"><a href="http://www.chiangmaizoo.com" target="_blank"><img src="images/Logo/chiangmai.png"></a></div>
-							<div class="indexft"><a href="http://www.koratzoo.org" target="_blank"><img src="images/Logo/Nakhonrachsimazoo.png"></a></div>
-							<div class="indexft"><a href="http://www.songkhlazoo.com" target="_blank"><img src="images/Logo/Songkhlazoo.png"></a></div>
-							<div class="indexft"><a href="http://www.ubon-zoo.com" target="_blank"><img src="images/Logo/Ubonzoo.png"></a></div>
-							<div class="indexft"><a href="http://www.khonkaenzoo.com" target="_blank"><img src="images/Logo/KKzoo.png"></a></div>
-							<div class="indexft"><a href="#" target="_blank"><img src="images/Logo/surin.png"></a></div>
+							<div class="indexft"><a href="http://www.dusit.zoothailand.org" target="_blank"><img src="images/Logo/Dusitzoo.png"></a></div>
+							<div class="indexft"><a href="http://www.khaokheow.zoothailand.org"><img src="images/Logo/KKOzoo.png"></a></div>
+							<div class="indexft"><a href="http://www.chiangmai.zoothailand.org" target="_blank"><img src="images/Logo/chiangmai.png"></a></div>
+							<div class="indexft"><a href="http://www.korat.zoothailand.org" target="_blank"><img src="images/Logo/Nakhonrachsimazoo.png"></a></div>
+							<div class="indexft"><a href="http://www.songkhla.zoothailand.org" target="_blank"><img src="images/Logo/Songkhlazoo.png"></a></div>
+							<div class="indexft"><a href="http://www.ubon.zoothailand.org" target="_blank"><img src="images/Logo/Ubonzoo.png"></a></div>
+							<div class="indexft"><a href="http://www.khonkaen.zoothailand.org" target="_blank"><img src="images/Logo/KKzoo.png"></a></div>
+							<div class="indexft"><a href="http://www.surin.zoothailand.org" target="_blank"><img src="images/Logo/surin.png"></a></div>
 						</div>
 					</div>
 					</div>

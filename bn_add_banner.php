@@ -5,20 +5,12 @@
     $lbpic = new label('ภาพป้าย');
     $lbdatestart = new label('วันเริ่ม');
     $lbdateend = new label('วันสิ้นสุด');
-    $filepic = new inputFile('news_cover','','');
+    $filepic = new inputFile('bn_img','','');
     $txtdatestart = new textfieldcalendarreadonly('newsdatestart','datetimepicker1','','form-control','input-group-addon','datetimepicker1');
     $txtdateend = new textfieldcalendarreadonly('newsdateend','datetimepicker2','','form-control','input-group-addon','datetimepicker2');
     $txtheadnews = new textfield('news_head','','form-control','','');
-    $txtdetailnews = new textfield('news_detail','','form-control','','');
-    $radiotypedesign = new radioGroup();
-    $radiotypedesign->name = 'typeDesignnews_id';
-    if(empty($id)){
-    	$radiotypedesign->add(' รูปแบบที่ 1',1,'checked');
-    	$radiotypedesign->add(' รูปแบบที่ 2',2,'');
-    	$radiotypedesign->add(' รูปแบบที่ 3',3,'');
-    	$radiotypedesign->add(' รูปแบบที่ 4',4,'');
-    	$radiotypedesign->add(' รูปแบบที่ 5',5,'');
-    	}
+//     $txtdetailnews = new textfield('news_detail','','form-control','','');
+
     $button = new buttonok("ต่อไป","","btn btn-success btn-lg btn-block bt3success col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","");
 	$user_id = $_SESSION['user_id'];
 	$r = $db->findByPK('user','user_id',$user_id)->executeRow();
@@ -33,7 +25,7 @@
     $txtname= $r2['user_name'];
 	$txtlast= $r2['user_last'];
     }
-    echo $form->open("form_reg","form","col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","news_insert_news.php","");
+    echo $form->open("form_reg","form","col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","bn_insert_banner.php","");
 ?>
 <div class="row">
 <div class='col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3'></div>
