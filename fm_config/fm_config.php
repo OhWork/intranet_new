@@ -313,7 +313,7 @@ $config = array(
 	'create_text_files'                       => false, // only create files with exts. defined in $editable_text_file_exts
 
 	// you can preview these type of files if $preview_text_files is true
-	'previewable_text_file_exts'              => array( "bsh", "c","css", "cc", "cpp", "cs", "csh", "cyc", "cv", "htm", "html", "java", "js", "m", "mxml", "perl", "pl", "pm", "py", "rb", "sh", "xhtml", "xml","xsl" ),
+	'previewable_text_file_exts'              => array( "bsh", "c","css", "cc", "cpp", "cs", "csh", "cyc", "cv", "htm", "html", "java", "js", "m", "mxml", "perl", "pl", "pm", "py", "rb", "sh", "xhtml", "xml","xsl",'pdf'),
 	'previewable_text_file_exts_no_prettify'  => array( 'txt', 'log' ),
 
 	// you can edit these type of files if $edit_text_files is true (only text based files)

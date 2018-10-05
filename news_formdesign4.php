@@ -11,26 +11,25 @@
 	$detailnews = new textAreareadonly('detail_news[]','form-control','text_editer','','5','5','');
 	$detailnews2 = new textAreareadonly('detail_news[]','form-control','text_editer2','','5','5','');
 	$last_detail_id = new hiddenfield('last_detail_id','last_detail_id','form-control','','');
+	$last_detail_id2 = new hiddenfield('last_detail_id2','last_detail_id2','form-control','','');
 	if(!empty($_GET['id'])){
 		$id=$_GET['id'];
 		$r2 = $db->findByPK('news','news_id',$id)->executeRow();
 		$txtheadnews->value = $r2['news_head'];
-		$r = $db->findByPK('newsDetails','newsDetails_connect',$id)->execute();
-		foreach($r as $showr){
-		if($r2['news_newsDetails_id'] == '' || $r2['news_newsDetails_id'] != $showr['newsDetails_id']){
+		$r = $db->findByPK('newsDetails','newsDetails_connect',$id)->executeRow();
+		if($r2['news_newsDetails_id'] == '' || $r2['news_newsDetails_id'] != $r['newsDetails_id']){
 			$detailnews->value = 'หากต้องการเพิ่มรายละเอียดกรุณาคลิก';
 			$detailnews2->value = 'หากต้องการเพิ่มรายละเอียดกรุณาคลิก';
 			$last_detail_id->value = '';
 
 		}
 		else{
-
-				print_r($showr);
-/*
-				$detailnews->value = $r['newsDetails_name'];
-				$last_detail_id->value = $r['newsDetails_id'];
-*/
-				}
+			$rsdetail = $db->findByPKLimit('newsDetails','newsDetails_connect',$id,1)->executeAssoc();
+				$detailnews->value = $rsdetail['newsDetails_name'];
+				$last_detail_id->value = $rsdetail['newsDetails_id'];
+			$rsdetail2 = $db->findByPKDESC('newsDetails','newsDetails_connect',$id,'newsDetails_id')->executeAssoc();
+				$detailnews2->value = $rsdetail2['newsDetails_name'];
+				$last_detail_id2->value = $rsdetail2['newsDetails_id'];
 		}
 	}
 	echo $form->open("form_detail","form","col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","","");
@@ -116,7 +115,9 @@
 					<input  type="hidden" id="new_id" name ="new_id" value="<?php echo $id;?>" />
 					<input  type="hidden" id="datetime" name="date_time" value="<?php echo $datetime;?>" />
 					<input  type="hidden" id="datetime" name="form_design" value="4" />
-				<input  type="hidden" id="last_detail_id" name="last_detail_id" value="" />
+					<?php echo $last_detail_id;
+						  echo $last_detail_id2;
+					?>
 				</div>
 			</div>
 		</div>
@@ -165,6 +166,7 @@
 								$("#text_editer").val(data[0].detail);
 								$("#text_editer2").val(data[1].detail);
 								$('#last_detail_id').val(data[0].lastiddetail);
+								$('#last_detail_id').val(data[1].lastiddetail);
 								if(CKEDITOR.instances['text_editer'] || CKEDITOR.instances['text_editer2']){
 									CKEDITOR.instances['text_editer'].destroy(true);
 									CKEDITOR.instances['text_editer2'].destroy(true);
