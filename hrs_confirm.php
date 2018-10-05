@@ -261,9 +261,10 @@ echo $form->open("form_reg","form","col-xl-12 col-lg-12 col-md-12 col-sm-12 col-
         			?>
 				<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-2'>
 					<div class='row'>
+						<div class='col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6'></div>
 						<div class='col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3'>
 							<div class='row'>
-								<div class='col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3'></div>
+								<div class='col-xl-5 col-lg-5 col-md-5 col-sm-5 col-5'></div>
 								<div class='col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6'>
 									<div class='row'>
 										<a href="hrs_hospital_report_BT.php?id=<?php echo $_GET['id']; ?>" class="btn btn-primary rounded-circle" style="margin-left:8px;background-color:#90CAF9;">
@@ -274,58 +275,7 @@ echo $form->open("form_reg","form","col-xl-12 col-lg-12 col-md-12 col-sm-12 col-
 										</div>
 									</div>
 								</div>
-								<div class='col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3'></div>
-							</div>
-						</div>
-						<div class='col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3'>
-							<div class='row'>
-								<div class='col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3'></div>
-								<div class='col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6'>
-									<div class='row'>
-										<a href="hrs_hospital_report1.php?id=<?php echo $_GET['id']; ?>" class="btn btn-primary rounded-circle" 
-										style="margin-left:8px;background-color:#42A5F5;">
-										<img width="30" height="40" style="margin:10px;" src='images/icons/glyphicons-40-notes@2x.png'/>
-										</a>
-										<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12' style="padding-left:2px;padding-right:0px;">
-											หนังสือส่งออก1
-										</div>
-									</div>
-								</div>
-								<div class='col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3'></div>
-							</div>
-						</div>
-						<div class='col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3'>
-							<div class='row'>
-								<div class='col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3'></div>
-								<div class='col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6'>
-									<div class='row'>
-										<a href="hrs_hospital_report2.php?id=<?php echo $_GET['id']; ?>" class="btn btn-primary rounded-circle" 
-										style="margin-left:8px;background-color:#1E88E5;">
-										<img width="30" height="40" style="margin:10px;" src='images/icons/glyphicons-40-notes@2x.png'/>
-										</a>
-										<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12' style="padding-left:2px;padding-right:0px;">
-											หนังสือส่งออก2
-										</div>
-									</div>
-								</div>
-								<div class='col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3'></div>
-							</div>
-						</div>
-						<div class='col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3'>
-							<div class='row'>
-								<div class='col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3'></div>
-								<div class='col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6'>
-									<div class='row'>
-										<a href="hrs_hospital_report3.php?id=<?php echo $_GET['id']; ?>" class="btn btn-primary rounded-circle" 
-										style="margin-left:8px;background-color:#1565C0;">
-										<img width="30" height="40" style="margin:10px;" src='images/icons/glyphicons-40-notes@2x.png'/>
-										</a>
-										<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12' style="padding-left:2px;padding-right:0px;">
-											หนังสือส่งออก3
-										</div>
-									</div>
-								</div>
-								<div class='col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3'></div>
+								<div class='col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1'></div>
 							</div>
 						</div>
 					</div>
@@ -337,9 +287,10 @@ echo $form->open("form_reg","form","col-xl-12 col-lg-12 col-md-12 col-sm-12 col-
                 ?>
                 <div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-2'>
 					<div class='row'>
+						<div class='col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6'></div>
 						<div class='col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3'>
 							<div class='row'>
-								<div class='col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3'></div>
+								<div class='col-xl-5 col-lg-5 col-md-5 col-sm-5 col-5'></div>
 								<div class='col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6'>
 									<div class='row'>
 										<a href="hrs_certificate_report_new.php?id=<?php echo $_GET['id']; ?>" class="btn btn-primary rounded-circle" style="margin-left:8px;background-color:#90CAF9;">
@@ -350,58 +301,7 @@ echo $form->open("form_reg","form","col-xl-12 col-lg-12 col-md-12 col-sm-12 col-
 										</div>
 									</div>
 								</div>
-								<div class='col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3'></div>
-							</div>
-						</div>
-						<div class='col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3'>
-							<div class='row'>
-								<div class='col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3'></div>
-								<div class='col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6'>
-									<div class='row'>
-										<a href="hrs_certificate_report1.php?id=<?php echo $_GET['id']; ?>" class="btn btn-primary rounded-circle" 
-										style="margin-left:8px;background-color:#42A5F5;">
-										<img width="30" height="40" style="margin:10px;" src='images/icons/glyphicons-40-notes@2x.png'/>
-										</a>
-										<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12' style="padding-left:2px;padding-right:0px;">
-											หนังสือส่งออก1
-										</div>
-									</div>
-								</div>
-								<div class='col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3'></div>
-							</div>
-						</div>
-						<div class='col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3'>
-							<div class='row'>
-								<div class='col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3'></div>
-								<div class='col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6'>
-									<div class='row'>
-										<a href="hrs_certificate_report2.php?id=<?php echo $_GET['id']; ?>" class="btn btn-primary rounded-circle" 
-										style="margin-left:8px;background-color:#1E88E5;">
-										<img width="30" height="40" style="margin:10px;" src='images/icons/glyphicons-40-notes@2x.png'/>
-										</a>
-										<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12' style="padding-left:2px;padding-right:0px;">
-											หนังสือส่งออก2
-										</div>
-									</div>
-								</div>
-								<div class='col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3'></div>
-							</div>
-						</div>
-						<div class='col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3'>
-							<div class='row'>
-								<div class='col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3'></div>
-								<div class='col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6'>
-									<div class='row'>
-										<a href="hrs_certificate_report3.php?id=<?php echo $_GET['id']; ?>" class="btn btn-primary rounded-circle" 
-										style="margin-left:8px;background-color:#1565C0;">
-										<img width="30" height="40" style="margin:10px;" src='images/icons/glyphicons-40-notes@2x.png'/>
-										</a>
-										<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12' style="padding-left:2px;padding-right:0px;">
-											หนังสือส่งออก3
-										</div>
-									</div>
-								</div>
-								<div class='col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3'></div>
+								<div class='col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1'></div>
 							</div>
 						</div>
 					</div>
