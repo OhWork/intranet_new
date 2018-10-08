@@ -5,19 +5,15 @@
 	<div class="row">
 		<a class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
 			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 bcmn" style="height:150px;padding-top:10px;border-radius:5px;"></div>
-			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" style="text-align:center;">Link1</div>
 		</a>
 		<a class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
 			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 bcmn" style="height:150px;padding-top:10px;border-radius:5px;"></div>
-			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" style="text-align:center;">Link1</div>
 		</a>
 		<a class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
 			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 bcmn" style="height:150px;padding-top:10px;border-radius:5px;"></div>
-			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" style="text-align:center;">Link1</div>
 		</a>
 		<a class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
-			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 bcmn" style="height:150px;padding-top:10px;border-radius:5px;"></div>
-			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" style="text-align:center;">อื่น ๆ</div>
+			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 bcmn" style="height:150px;padding-top:10px;border-radius:5px;text-align:center;">อื่น ๆ</div>
 		</a>
 	</div>
 </div>
