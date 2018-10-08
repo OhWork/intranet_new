@@ -1061,6 +1061,21 @@ body {
 	color:#1DE9B6;
 	border-bottom:2px solid #F5F5F5;
 }
+.lgn {
+	background-color:#1DE9B6;
+	color:#424242;
+	border:1px solid #26A69A;
+}
+.lgn2 {
+	background-color:#424242;
+	color:#1DE9B6;
+	border-radius: 4px;
+}
+.lgn:hover,.lgn1:hover {
+	color:#ffffff;
+	background-color:#26A69A;
+	border:1px solid #4DB6AC;
+}
 @keyframes fadeInRight {
    0% {
       opacity: 0;
