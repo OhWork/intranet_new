@@ -1,3 +1,6 @@
+body {
+	background-color:#F5F5F5;
+}
 @media (min-width: 375px) {
 .container {
 	max-width: 350px;

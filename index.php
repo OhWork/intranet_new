@@ -53,7 +53,10 @@ session_start();
           </li> -->
 					</ul>
 					<div class="form-inline mt-2 mt-md-0">
-						<a class="btn my-2 my-sm-0 mucls" href="login.php">เข้าสู่ระบบ</a>
+						<a class="btn my-2 my-sm-0 mucls" href="http://www.zoothailand.org/ewt_news.php?nid=246">เกี่ยวกับเรา</a>
+					</div>
+					<div class="form-inline mt-2 mt-md-0">
+						<a class="btn my-2 my-sm-0 mucls" href="login.php" title="เข้าสู่ระบบ"><span data-feather="log-in"></span></a>
 					</div>
 				</div>
 			</nav>
