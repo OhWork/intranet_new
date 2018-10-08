@@ -63,7 +63,7 @@ session_start();
 					<div class="col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10 showindex">
 						<div class="row">
 							<?php include 'content.php'; ?>
-						<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-4" style="margin-left:15%;">
+						<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3" style="margin-left:15%;">
 							<div class="row">
 								<div class="indexft"><a href="http://www.zoothailand.org" target="_blank"><img src="images/Logo/ZPO.png"/></a></div>
 								<div class="indexft"><a href="http://www.dusit.zoothailand.org" target="_blank"><img src="images/Logo/Dusitzoo.png"></a></div>

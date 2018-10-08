@@ -277,23 +277,7 @@ $get_params = http_build_query($get_params);
 <!DOCTYPE html>
 <html xmlns="https://www.w3.org/1999/xhtml">
 	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-		<meta name="robots" content="noindex,nofollow">
-		<!-- CSS to style the file input field as button and adjust the Bootstrap progress bars -->
-		<link rel="stylesheet" href="CSS/fm_css/fm_jquery.fileupload.css">
-		<link rel="stylesheet" href="CSS/fm_css/fm_jquery.fileupload-ui.css">
-		<!-- CSS adjustments for browsers with JavaScript disabled -->
-		<noscript><link rel="stylesheet" href="CSS/fm_css/fm_jquery.fileupload-noscript.css"></noscript>
-		<noscript><link rel="stylesheet" href="CSS/fm_css/fm_jquery.fileupload-ui-noscript.css"></noscript>
-		<link href="jquery/fm_js/fm_jPlayer/skin/blue.monday/jplayer.blue.monday.css" rel="stylesheet" type="text/css">
-		<link href="CSS/fm_css/fm_style.css?v=<?php echo $version; ?>" rel="stylesheet" type="text/css" />
-		<link rel="stylesheet" href="CSS/bootstrap.min.css">
-        <link rel="stylesheet" href="CSS/dashboard.css" >
-        <link rel="stylesheet" href="CSS/jquery-ui.css">
-		<link rel="stylesheet" href="CSS/select2.min.css">
-        <link rel="stylesheet" href="CSS/main.css">
+		
 	<!--[if lt IE 8]><style>
 	.img-container span, .img-container-mini span {
 		display: inline-block;
@@ -363,6 +347,22 @@ $get_params = http_build_query($get_params);
 		}
 	</script>
 	<script src="jquery/fm_js/fm_include.js?v=<?php echo $version; ?>"></script>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<meta name="robots" content="noindex,nofollow">
+		<!-- CSS to style the file input field as button and adjust the Bootstrap progress bars -->
+		<link rel="stylesheet" href="CSS/fm_css/fm_jquery.fileupload.css">
+		<link rel="stylesheet" href="CSS/fm_css/fm_jquery.fileupload-ui.css">
+		<!-- CSS adjustments for browsers with JavaScript disabled -->
+		<noscript><link rel="stylesheet" href="CSS/fm_css/fm_jquery.fileupload-noscript.css"></noscript>
+		<noscript><link rel="stylesheet" href="CSS/fm_css/fm_jquery.fileupload-ui-noscript.css"></noscript>
+		<link href="jquery/fm_js/fm_jPlayer/skin/blue.monday/jplayer.blue.monday.css" rel="stylesheet" type="text/css">
+		<link href="CSS/fm_css/fm_style.css?v=<?php echo $version; ?>" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" href="CSS/bootstrap.min.css">
+        <link rel="stylesheet" href="CSS/dashboard.css" >
+        <link rel="stylesheet" href="CSS/jquery-ui.css">
+        <link rel="stylesheet" href="CSS/main.css">
 </head>
 <body>
 
@@ -728,7 +728,7 @@ $files=$sorted;
 
 ?>
 <!-- header div start -->
-<div class="navbar1">
+<div class="navbar1 maa">
 	<div class="navbar1-inner" >
 		<div class="container-fluid">
 		<button type="button" class="btn btn-navbar1" data-toggle="collapse" data-target=".nav-collapse">
