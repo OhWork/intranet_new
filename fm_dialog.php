@@ -277,7 +277,7 @@ $get_params = http_build_query($get_params);
 <!DOCTYPE html>
 <html xmlns="https://www.w3.org/1999/xhtml">
 	<head>
-		
+
 	<!--[if lt IE 8]><style>
 	.img-container span, .img-container-mini span {
 		display: inline-block;
@@ -814,7 +814,7 @@ $files=$sorted;
 
 	<div class="row-fluid">
 	<ul class="breadcrumb">
-	<li class="pull-left"><a href="admin_index.php?url=fm_dialog.php"><i class="icon-home"></i></a></li>
+	<li class="pull-left"><a href="admin_index.php?url=fm_dialog.php#"><i class="icon-home"></i></a></li>
 	<li><span class="divider">/</span></li>
 	<?php
 	$bc=explode("/",$subdir);
@@ -1366,6 +1366,9 @@ else{
 		if(isAndroid) {
 			$('li').draggable({ disabled: false });
 		}
+$( document ).ready( function () {
+		$('.icon-home').removeClass('bcnm');
+		});
 	</script>
 </body>
 </html>
