@@ -52,7 +52,7 @@
 				for($i = 0; $i<$detail['COUNT(*)']; $i++){
 					$newdetail_id = $firstiddetail+$i;
 					$data['newsDetails_name'] = $_POST['detail_news'][$i];
-					$rseditpic = $db->update2con('newsDetails',$data,'newsImg_connect',$id,'newsDetails_connect',$newdetail_id);
+					$rseditpic = $db->update2con('newsDetails',$data,'newsDetails_connect',$id,'newsDetails_id',$newdetail_id);
 				}
 					$target_dir = 'temp/';
 					$target_file = $target_dir.basename($_FILES['news_videodetail']['name']);

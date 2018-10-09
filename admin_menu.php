@@ -40,7 +40,7 @@
  				       }
  				   ?>
  				   <li class="nav-item">
-					<a class="nav-link edittext mucl" href="admin_index.php?url=fm_dialog.php">
+					<a class="nav-link edittext mucl" href="#">
 						<span data-feather="airplay"></span>
 						ระบบbanner
 					</a>
