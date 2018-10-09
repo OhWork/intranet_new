@@ -4,17 +4,17 @@
 <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2" style="height: 100%;">
 	<div class="row">
 		<div class="list-group" style="height: 100%;">
-			<nav class="d-none d-md-block bg-light sidebar">
+			<nav class="d-none d-md-block bg-dark sidebar mnpb" style="height: 100%;padding-bottom:100%;">
 			  <div class="sidebar-sticky">
 				<ul class="nav flex-column">
 				  <li class="nav-item">
-					<a class="nav-link" href="admin_index.php">
+					<a class="nav-link edittext mucl" href="admin_index.php">
 					  <span data-feather="home"></span>หน้าหลัก <span class="sr-only">(current)</span>
 					</a>
 				  </li>
 				  <?php if($_SESSION['systemallow_drive'] == 1){ ?>
 				  <li class="nav-item">
-					<a class="nav-link" href="admin_index.php?url=fm_dialog.php">
+					<a class="nav-link edittext mucl" href="admin_index.php?url=fm_dialog.php">
 						<span data-feather="database"></span>
 						ระบบฝากไฟล์
 					</a>

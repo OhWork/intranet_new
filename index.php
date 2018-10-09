@@ -199,7 +199,6 @@ function uncheckAll(id)
 // 	            console.log(1234);
                 $(this).parents(0).addClass("show");
                 $(this).addClass("bcmn");
-				$(this).addClass("arrow-left");
 				$(this).children().addClass('bcnm');
                 //for making parent of submenu active
                //$(this).closest("li").parent().parent().addClass("active");
