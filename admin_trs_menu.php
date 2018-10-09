@@ -28,7 +28,7 @@
                         <a class="nav-link edittext mucl" id="nav-17-animate-8" href="admin_index.php?url=trs_showtotalzoo.php&zoo=?">โครงการคชอาณาจักร</a>
                 <?php }?>
 	        </ul>
-	    <a class="nav-link collapsed py-1 nav-link-18" id="nav-16-animate-2" href="#trsreportold" data-toggle="collapse" data-target="#trsreportold">รายงานจำนวนผู้เข้าชมสวนสัตว์เก่า<br>(ตุลาคม 2559 - กันยายน 2560)<span data-feather="chevron-right"></span></a>
+	    <a class="nav-link collapsed py-1 nav-link-18 edittext mucl" id="nav-16-animate-2" href="#trsreportold" data-toggle="collapse" data-target="#trsreportold">รายงานจำนวนผู้เข้าชมสวนสัตว์เก่า<br>(ตุลาคม 2559 - กันยายน 2560)<span data-feather="chevron-right"></span></a>
 	        <ul class="sub-menu collapse mmpd2" id="trsreportold">
 				<?php  if($user_zoo == 7 || $user_zoo == 10 || $user_zoo == 11){?>
                         <a class="nav-link edittext mucl" id="nav-18-animate-1" href="admin_index.php?url=trs_showtotalzoo_old.php&zoo=11">สวนสัตว์ดุสิต</a>
