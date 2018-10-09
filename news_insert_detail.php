@@ -9,7 +9,6 @@
 	$lastiddetail =$_POST['last_detail_id'];
 	if($text == ''){
 		if(!empty($_POST['last_detail_id'])){
-			$last_id_detail = $_POST['last_detail_id'];
 			$idfirstinnewimg = $db->findByPKLimit('newsImg','newsImg_connect',$id,1)->executeAssoc();
 			$firstidimg = $idfirstinnewimg['newsImg_id'];
 			if($form_design == 1){
@@ -48,9 +47,12 @@
 			else if($form_design == 4){
 				$pic = $db->specifytable('COUNT(*)','newsImg',"newsImg_connect = '$id'")->executeAssoc();
 				$detail = $db->specifytable('COUNT(*)','newsDetails',"newsDetails_connect = '$id'")->executeAssoc();
+				$idfirstinnewdetail = $db->findByPKLimit('newsDetails','newsDetails_connect',$id,1)->executeAssoc();
+				$firstiddetail = $idfirstinnewdetail['newsDetails_id'];
 				for($i = 0; $i<$detail['COUNT(*)']; $i++){
+					$newdetail_id = $firstiddetail+$i;
 					$data['newsDetails_name'] = $_POST['detail_news'][$i];
-					$rseditdetail = $db->update2con('newsImg',$data,'newsImg_connect',$id,'newsImg_id',$newimg_id);
+					$rseditpic = $db->update2con('newsDetails',$data,'newsImg_connect',$id,'newsDetails_connect',$newdetail_id);
 				}
 					$target_dir = 'temp/';
 					$target_file = $target_dir.basename($_FILES['news_videodetail']['name']);
@@ -96,21 +98,29 @@
 					$rseditpic = $db->update2con('newsImg',$data3,'newsImg_connect',$id,'newsImg_id',$newimg_id);
 				}
 			}
-			if(@$rseditpic || $rseditdetail){
+			if(@$rseditpic || @$rseditdetail || @$rseditvideo){
 			$data['news_dateupdate'] = $_POST['date_time'];
 			$rseditdate = $db->update('news',$data,'news_id',$_POST['new_id']);
-			if(@$rseditpic || $rseditdetail){
 				$selectiddetail = $db->findAllDESC('newsDetails','newsDetails_id')->executeAssoc();
 				$selectidpic = $db->findAllDESC('newsImg','newsImg_id')->executeAssoc();
 				$selectidvideo = $db->findAllDESC('newsVideo','newsVideo_id')->executeAssoc();
 				$rsshowdetail = $db->findByPK('newsDetails','newsDetails_id',$lastiddetail)->executeAssoc();
-				$json_data[]=array(
-					 'detail'=>$rsshowdetail['newsDetails_name'],
+				if($form_design == 4){
+					$rsshowdetail2 = $db->findByPK('newsDetails','newsDetails_connect',$id)->execute();
+					foreach($rsshowdetail2 as $abc){
+						$json_data[]=array(
+						 'detail'=>$abc['newsDetails_name'],
+						 'lastiddetail'=>$abc['newsDetails_id'],
+						 );
+					}
+				}
+				else{
+					$json_data[]=array(
+						 'detail'=>$rsshowdetail['newsDetails_name'],
 					 );
+				}
 				$json= json_encode($json_data);
 				echo $json;
-
-			}
 		}
 		}else{
 		if($form_design == 1){

@@ -166,7 +166,7 @@
 								$("#text_editer").val(data[0].detail);
 								$("#text_editer2").val(data[1].detail);
 								$('#last_detail_id').val(data[0].lastiddetail);
-								$('#last_detail_id').val(data[1].lastiddetail);
+								$('#last_detail_id2').val(data[1].lastiddetail);
 								if(CKEDITOR.instances['text_editer'] || CKEDITOR.instances['text_editer2']){
 									CKEDITOR.instances['text_editer'].destroy(true);
 									CKEDITOR.instances['text_editer2'].destroy(true);

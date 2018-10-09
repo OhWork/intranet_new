@@ -61,40 +61,47 @@
 	        var urlcheck = url.split('#');
             // checks if its the same on the address bar
             if (urlcheck == (this.href)) {
-	               	$(this).parents(0).addClass("show");
-				   	$(this).addClass("active");
-				   	$(this).parents(0).attr("aria-expanded", true);
+	            $(this).parents(0).addClass("show");
+                $(this).addClass("bcmn");
+				$(this).children(0).addClass('bcnm');
+				$(this).parents(0).attr("aria-expanded", true);
             }
             else if(urlcheck != (this.href)) {
 				if(this.href.match("user_add_user")){
 				   	$('#user').addClass("show");
-				   	$('#nav-22-animate-1').addClass("active");
+				   	$('#nav-22-animate-1').addClass("bcmn");
+				   	$('#nav-22-animate-1').children().addClass('bcnm');
 				   	$('#user').attr("aria-expanded", true);
 
 				}
 				else if(this.href.match("user_add_permission")){
 					$('#user').addClass("show");
-					$('#nav-22-animate-2').addClass("active");
+				   	$('#nav-22-animate-2').addClass("bcmn");
+				   	$('#nav-22-animate-2').children().addClass('bcnm');
 					$('#user').attr("aria-expanded", true);
 				}
 				else if(this.href.match("user_add_division")){
 					$('#user').addClass("show");
-					$('#nav-22-animate-3').addClass("active");
+				   	$('#nav-22-animate-3').addClass("bcmn");
+				   	$('#nav-22-animate-3').children().addClass('bcnm');
 					$('#user').attr("aria-expanded", true);
 				}
 				else if(this.href.match("user_add_zoo")){
 					$('#user').addClass("show");
-					$('#nav-22-animate-4').addClass("active");
+				   	$('#nav-22-animate-4').addClass("bcmn");
+				   	$('#nav-22-animate-4').children().addClass('bcnm');
 					$('#user').attr("aria-expanded", true);
 				}
 				else if(this.href.match("user_add_submenu")){
 					$('#user').addClass("show");
-					$('#nav-22-animate-5').addClass("active");
+				   	$('#nav-22-animate-5').addClass("bcmn");
+				   	$('#nav-22-animate-5').children().addClass('bcnm');
 					$('#user').attr("aria-expanded", true);
 				}
 				else if(this.href.match("user_add_mainmenu")){
 					$('#user').addClass("show");
-					$('#nav-22-animate-6').addClass("active");
+				   	$('#nav-22-animate-6').addClass("bcmn");
+				   	$('#nav-22-animate-6').children().addClass('bcnm');
 					$('#user').attr("aria-expanded", true);
 				}
             }
