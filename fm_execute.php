@@ -201,41 +201,9 @@ if (isset($_GET['action']))
 				for($i= 0; $i<count($path_foldercutpath); $i++){
 			}
 			$countpath=$i-2;
-				$selectid = $db->findByPK('folder','folder_name',"'$path_foldercutpath[$countpath]'")->executeAssoc();
-				foreach($selectid as $test){
-				}
- 				/*
- 				$path_foldercount = mb_strlen($path_folder,'UTF-8');
- 				$path_foldercountfolder = mb_strlen($path_foldercutpath[0],'UTF-8');
- 				$totalcount_pathfolder = $path_foldercount - $path_foldercountfolder;
-				echo $path_foldercount;
-				echo $path_foldercountfolder;
-				echo $totalcount_pathfolder;
-				switch ($path_foldercutpath[0]) {
-						case "01_คณะกรรมการองค์การสวนสัตว์": $path_folder = 1; break;
-						case "02_รองผู้อำนวยการ-(ฝ่ายบริหาร)": $path_folder = 2; break;
-						case "03_รองผู้อำนวยการ-(ฝ่ายอนุรักษ์และวิจัย)": $path_folder = 3; break;
-						case "04_รองผู้อำนวยการ-(ฝ่ายปฏิบัติการ)": $path_folder = 4; break;
-						case "05_สำนักตรวจสอบ": $path_folder = 5; break;
-						case "06_สำนักบริหารกลาง": $path_folder = 6; break;
-						case "07_สำนักการเงินและทรัพย์สิน": $path_folder = 7; break;
-						case "08_สำนักยุทธศาสตร์และแผน": $path_folder = 8; break;
-						case "09_สำนักกฏหมาย": $path_folder = 9; break;
-						case "10_สำนักอนุรักษ์และวิจัย": $path_folder = 10; break;
-						case "11_สำนักพัฒนาธุรกิจ": $path_folder = 11; break;
-						case "12_สำนักเทคโนโลยีสารสนเทศ": $path_folder = 12; break;
-						case "13_สำนักบริหารทรัพยากรบุคคล": $path_folder = 13; break;
-						case "14_สถาบันบริหารจัดการสวนสัตว์": $path_folder = 14; break;
-						case "15_สวนสัตว์ดุสิต": $path_folder = 15; break;
-						case "16_สวนสัตว์เปิดเขาเขียว": $path_folder = 16; break;
-						case "17_สวนสัตว์เชียงใหม่": $path_folder = 17; break;
-						case "18_สวนสัตว์นครราชสีมา": $path_folder = 18; break;
-						case "19_สวนสัตว์สงขลา": $path_folder = 19; break;
-						case "20_สวนสัตว์อุบลราชธานี": $path_folder = 20; break;
-						case "21_สวนสัตว์ขอนแก่น": $path_folder = 21; break;
-					}
-*/
+			$selectid = $db->findByPK('folder','folder_name',"'$path_foldercutpath[$countpath]'")->executeAssoc();
 
+			if(!empty($selectid)){
 				$rs = $db->insert('folder',array(
 					'folder_name' => $name,
 					'folder_date' => $date,
@@ -244,6 +212,16 @@ if (isset($_GET['action']))
 					'subzoo_zoo_zoo_id' => $_SESSION['subzoo_zoo_zoo_id'],
 				));
 			}
+			else{
+				$rs = $db->insert('folder',array(
+					'folder_name' => $name,
+					'folder_date' => $date,
+					'folder_position'=>0,
+					'subzoo_subzoo_id' => $_SESSION['subzoo_subzoo_id'],
+					'subzoo_zoo_zoo_id' => $_SESSION['subzoo_zoo_zoo_id'],
+				));
+			}
+		}
 			break;
 
 		case 'rename_folder':
@@ -270,8 +248,15 @@ if (isset($_GET['action']))
 			$countpath2=$i-2;
 			//$countpath เอาไว้เช็คชื่อ folder ที่ต้องการแก้ไข
 			//$countpath2 เช็คpath ก่อนหน้า​โฟลเดอร์ที่อยู่ปัจจุบัน
+			if(count($path_foldercutpath) == 2){
  			$selectid = $db->findByPK('folder','folder_name',"'$path_foldercutpath[$countpath2]'")->executeAssoc();
-			$rsrename = $db->updatefolder('folder','folder_name',"'$baowiw'",'folder_name',"'$path_foldercutpath[$countpath]'",'folder_position',$selectid['folder_id']);
+ 			$rsrename = $db->updatefolder('folder','folder_name',"'$baowiw'",'folder_name',"'$path_foldercutpath[$countpath]'",'folder_position',$selectid['folder_id']);
+ 			}
+ 			else{
+	 			$selectid = $db->findByPK('folder','folder_name',"'$path_foldercutpath[$countpath]'")->executeAssoc();
+	 		$rsrename = $db->updatefolder('folder','folder_name',"'$baowiw'",'folder_name',"'$path_foldercutpath[$countpath]'",'folder_position',0);
+ 			}
+
  				if($rsrename){
  						rename_folder($path_thumb,$name,$ftp,$config);
 				}
