@@ -38,6 +38,14 @@
  				   if($_SESSION['systemallow_admin'] == 1){
 						include_once 'admin_qtn_menu.php';
  				       }
+ 				   ?>
+ 				   <li class="nav-item">
+					<a class="nav-link edittext mucl" href="admin_index.php?url=fm_dialog.php">
+						<span data-feather="airplay"></span>
+						ระบบbanner
+					</a>
+				  </li>
+ 				   <?php
 					if($_SESSION['systemallow_km'] == 1){
 						include_once 'admin_km_menu.php';
 				        }
