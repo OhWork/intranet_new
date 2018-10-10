@@ -2,10 +2,10 @@
 if (!empty($_SESSION['user_name'])):
 $id = $_GET['id'];
   $form = new form();
-  $lbsubmenuname = new label("เมนูย่อย :");
-  $lbsubmenulink = new label("ลิ้ง :");
-  $lbsubmenuno = new label("ลำดับ :");
-  $lbradiosubmenu = new label("สถานะ :");
+  $lbsubmenuname = new label("เมนูย่อย");
+  $lbsubmenulink = new label("ลิ้ง");
+  $lbsubmenuno = new label("ลำดับ");
+  $lbradiosubmenu = new label("สถานะ");
   $txtsubmenuname = new textfield('submenu_name','','form-control','');
   $txtsubmenulink = new textfield('submenu_link','','form-control','');
   $txtsubmenuno = new textfield('submenu_no','','form-control','');
@@ -32,70 +32,74 @@ $id = $_GET['id'];
     	}
 	}
 	
-  echo $form->open("form_reg","form","maxw","user_insert_submenu.php","");
+  echo $form->open("form_reg","form","col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","user_insert_submenu.php","");
   if(empty($_GET['id'])){ ?>
-<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3">
 	<div class="row">
-		<div class="col-md-3"></div>
-		<div class="col-md-6">  
-			<div class='col-md-12' style="padding-top:14px;">
-				<h4>เพิ่มเมนูย่อย</h4>
-			</div>
-			<div class='col-md-12'><?php echo $lbmenu.$selectmenu->selectFromTB('menu','menu_id','menu_name',''); ?></div>
-			<div class='col-md-12' style="padding-top:16px;">
-				<div class='row'>
-					<div class='col-md-2' style='padding-top:8px;'><?php echo $lbsubmenuname; ?></div>
-					<div class='col-md-8 form-group has-feedback'><?php echo $txtsubmenuname; ?></div>
+		<div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3"></div>
+		<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6 pb-3" style="background-color:#ffffff;border-radius:8px;"> 
+			<div class='row'>
+				<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3 alltxh'>
+					<h4>เพิ่มเมนูย่อย</h4>
 				</div>
-			</div>
+				<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12'>
+					<?php echo $lbmenu.$selectmenu->selectFromTB('menu','menu_id','menu_name',''); ?>
+				</div>
+				<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3'>
+					<?php echo $lbsubmenuname; ?>
+				</div>
+				<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12'>
+					<?php echo $txtsubmenuname; ?>
+				</div>
 			<?php  }
-			  if(!empty($_GET['id'])){ ?>
-<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+	if(!empty($_GET['id'])){ ?>
+<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3">
 	<div class="row">
-		<div class="col-md-3"></div>
-		<div class="col-md-6">
-			<div class='col-md-12'style="padding-top:14px;">
+		<div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3"></div>
+		<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6 pb-3" style="background-color:#ffffff;border-radius:8px;">
+			<div class='row'>
+			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3">
 				<h4>แก้ไข</h4>
 			</div>
-			<div class='col-md-12'>
-				<div class='row'>
-					<div class='col-md-2'><?php echo $lbsubmenuname; ?></div>
-					<div class='col-md-8 form-group has-feedback'><?php echo $txtsubmenuname; ?></div>
-				</div>
+			<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3'>
+				<?php echo $lbsubmenuname; ?>
+			</div>
+			<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12'>
+				<?php echo $txtsubmenuname; ?>
 			</div>
 			 <?php } ?>
-			 <div class='col-md-12'>
-				<div class='row'>
-					<div class='col-md-2' style="padding-top:8px;"><?php echo $lbsubmenulink; ?></div>
-					<div class='col-md-8 form-group has-feedback'><?php echo $txtsubmenulink; ?></div>
-				</div>
+			<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3'>
+				<?php echo $lbsubmenulink; ?>
 			</div>
-			<div class='col-md-12'>
-				<div class='row'>
-					<div class='col-md-2' style="padding-top:8px;"><?php echo $lbsubmenuno; ?></div>
-					<div class='col-md-8 form-group has-feedback'><?php echo $txtsubmenuno; ?></div>
-				</div>
+			<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12'>
+				<?php echo $txtsubmenulink; ?>
 			</div>
-			<div class='col-md-12'>
-				<div class='row'>
-					<div class='col-md-2' style="padding-top:8px;"><?php echo $lbradiomenuzoo; ?></div>
-					<div class='col-md-8' style="padding-top:8px;"><?php echo $radiomenuzoo; ?></div>
-				</div>
+			<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3'>
+				<?php echo $lbsubmenuno; ?>
 			</div>
-			<div class='col-md-12' style="padding-top:16px;">
+			<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12'>
+				<?php echo $txtsubmenuno; ?>
+			</div>
+			<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3'>
+				<?php echo $lbradiomenuzoo; ?>
+			</div>
+			<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12'>
+				<?php echo $radiomenuzoo; ?>
+			</div>
+			<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3'>
 				<div class="row">
-					<div class="col-md-4"></div>
-					<div class="col-md-4">
-					<input type='hidden' name='submenu_id' value="<?php echo $_GET['id']; ?>"/>
-					<?php echo $submit; ?>
+					<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4"></div>
+					<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
+						<input type='hidden' name='submenu_id' value="<?php echo $_GET['id']; ?>"/>
+						<?php echo $submit; ?>
 					</div>
-					<div class="col-md-3"></div>
+					<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4"></div>
 				</div>
 			</div>
 			<?php echo $form->close();
 						endif;
 			?>
 		</div>
-		<div class="col-md-3"></div>		
+		<div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3"></div>		
 	</div>	
 </div>

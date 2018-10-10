@@ -20,25 +20,23 @@
     $selectmainmenu->name = 'menu_id';
     $selectmainmenu->lists = 'โปรดระบุ';
     $columns = array('menu_name','menu_no');
-    $row = "<div class='row'>";
-    $rowend = "</div>";
     $button = new buttonok('ค้นหา','','btn btn-primary','submit');
     $form = new form();
     
     
-    echo $form->open('form_reg','myform','','',''); ?>
-    
-            <div class="col-md-12" style="float: left;margin-top: 10px;">
-                <div class="col-md-2" style="float: left;"><a href="admin_index.php?url=user_add_mainmenu.php" class="btn btn-success">เพิ่มเมนูหลัก</a>
-                </div>
+    echo $form->open('form_reg','myform','col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12','',''); ?>
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3">
+				<div class="row">
+					<div class="col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10"></div>
+					<div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2"><a href="admin_index.php?url=user_add_mainmenu.php" class="btn btn-success">เพิ่มเมนูหลัก</a>
+				</div>
             </div>
-            <div class="col-md-12" style="float: left;margin-top: 10px;">            
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3">   
+				
         <?php
             $rs = $db->findAll('menu')->execute();  
              
-    echo $form->close(); ?>
-            
-         <?php
+    
 			$grid = new gridView();
 			$grid->pr = 'menu_id';
 			$grid->header = array('<b><center>เมนูหลัก</center></b>','<b><center>ลำดับ</center></b>','<b><center>#</center></b>');
@@ -50,3 +48,5 @@
 			endif;
 		?>
             </div>
+			<?php
+echo $form->close(); ?>

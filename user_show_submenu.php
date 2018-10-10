@@ -20,33 +20,36 @@
     $selectmenu->name = 'menu_id';
     $selectmenu->lists = 'โปรดระบุ';
     $columns = array('submenu_name','submenu_no');
-    $row = "<div class='row'>";
-    $rowend = "</div>";
-    $button = new buttonok('ค้นหา','','btn btn-primary','submit');
+    $button = new buttonok('ค้นหา','','btn btn-primary col-12','submit');
     $form = new form();
     
     
-    echo $form->open('form_reg','myform','','',''); ?>
+    echo $form->open('form_reg','myform','col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12','',''); ?>
     
-            <div class="col-md-12" style="float: left;margin-top: 10px;">
-                <div class="col-md-2" style="float: left;"><a href="admin_index.php?url=user_add_submenu.php" class="btn btn-success">เพิ่มเมนูย่อย</a>
+    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3">
+		<div class="row">
+				<div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2"></div>
+                <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2">
+					<a href="admin_index.php?url=user_add_submenu.php" class="btn btn-success col-12">เพิ่มเมนูย่อย</a>
                 </div>
-                <div class="col-md-6" style="float: left;"><?php echo $selectmenu->selectFromTB('menu','menu_id','menu_name',$r['typetools_typetools_id']);?>
+                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
+					<?php echo $selectmenu->selectFromTB('menu','menu_id','menu_name',$r['typetools_typetools_id']);?>
                 </div>
-                <div class="col-md-2" style="float: left;"><?php echo $button; ?>
+                <div class="col-md-col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2">
+					<?php echo $button; ?>
                 </div>
-                <div class="col-md-2" style="float: left;">
-                </div>
-            </div>
-            <div class="col-md-12" style="float: left;margin-top: 10px;">            
+				<div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2"></div>
+		</div>
+    </div>
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3">            
         <?php
             @$zoo = $_POST['menu_id'];
             $rs = $db->findByPK('submenu','menu_menu_id',$zoo)->execute();  
             $rs2 = $db->findByPK('menu','menu_id',$zoo)->executeAssoc();
             $zoo_name = $rs2['menu_name'];
              
-    echo $form->close(); ?>
-            
+
+            ?>
 
 <!--
             <div class="col-md-12">
@@ -66,3 +69,4 @@
 			endif;
 		?>
             </div>
+<?php     echo $form->close(); ?>
