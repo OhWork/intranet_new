@@ -1067,6 +1067,21 @@ body {
 .lgn:hover {
 	color:#1DE9B6;
 }
+keyframes fadeOutUp {
+   0% {
+      opacity: 1;
+      transform: translateY(0);
+   }
+   100% {
+      opacity: 0;
+      transform: translateY(-20px);
+   }
+}
+.animat-out{
+  animation: fadeOutUp .5s ease-in 1 forwards;
+  animation-fill-mode:both;
+}
+
 @keyframes fadeInRight {
    0% {
       opacity: 0;

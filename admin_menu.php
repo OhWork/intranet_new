@@ -121,10 +121,16 @@
 		var checkde = e.currentTarget;
 		var b = 0;
 		if (checkde.getAttribute('aria-expanded') != 'true') {
-			$('.nav-link').attr( 'aria-expanded', 'false');
+			$('.nav-link').attr( 'aria-expanded','false');
 			$('.sub-menu').removeClass('show');
-	        $(this).attr( 'aria-expanded', 'true');
+	        $(this).attr( 'aria-expanded','true');
 		    $(this).parents(0).addClass("show");
+/*
+		    if($('.nav-link').hasClass("animat-test")){
+			$( ".sub-menu" ).children().not(this).addClass("animat-out");
+			console.log(1234);
+		    }
+*/
 		    nav_status = 0 ;
 		    $('.nav-link').removeClass("animat-test");
 	        }
