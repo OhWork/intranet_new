@@ -8,7 +8,7 @@
 		<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1"></div>
 		<div class="col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10" style="background-color:#ffffff;">
 			<div class="row">
-				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3" style="color:#1DE9B6;border-bottom:2px solid #F5F5F5;">
+				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3" style="color:#424242;border-bottom:2px solid #F5F5F5;">
 					<h3>แบบสอบถาม</h3>
 				</div>
 				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
