@@ -265,7 +265,7 @@
                 $yearqua = $yearthaiez+543;
             break;
             case 2:
-                $qua="touristreport_date BETWEEN '$yearthai-01-01' AND '$yearthai-3-31' AND ";
+                $qua="touristreport_date BETWEEN '$yearthai-01-01' AND '$yearthai-03-31' AND ";
                 $textqua = "ไตรมาสที่ 2 (1 ม.ค. - 31 มี.ค.)";
             break;
             case 3:
@@ -279,7 +279,7 @@
         }
     }else if($yearonly){
         $yearthaichange = $yearonly-543;
-        $qua = "touristreport_date BETWEEN '$yearthaichange-01-01' AND  '$yearthaichange-12-31' AND ";
+        $qua = "touristreport_date BETWEEN '$yearthaichange-10-01' AND  '$yearthaichange-09-30' AND ";
     }else{
         $date = date("Y-m-d");
         $qua = "touristreport_date BETWEEN '$date' AND  '$date' AND ";
