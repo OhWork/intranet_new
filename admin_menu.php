@@ -116,8 +116,6 @@
 
         });
     });
-
-
     function navAnimate(id,sub){
 	    var nav_status = 0;
 		var menusum  = sub;
@@ -182,6 +180,8 @@
 	navAnimate(22,7);
 	navAnimate(23,2);
 	navAnimate(24,2);
-
+	$('.nav-link').on('click',function(){
+	console.log(1234);
+	});
   	</script>
 

@@ -117,7 +117,7 @@
                         <div class='col-md-12'>
 							<div class="row">
 								<input type="button" class='btn btn-success ml-1' style="margin-right:5px;" value="ทุกสวนสัตว์" onClick="checkAll('check_list')">
-								<input type="button" class='btn btn-danger' value="ยกเลิก" onClick="uncheckAll('check_list')">	
+								<input type="button" class='btn btn-danger' value="ยกเลิก" onClick="uncheckAll('check_list')">
 							</div>
 						</div>
 					</div>
@@ -532,14 +532,7 @@
                 </div>
 </div>
 <script>
-   $.fn.datepicker.dates['th'] = {
-                                days: ["อาทิตย์", "จันทร์", "อังคาร", "พุธ", "พฤหัส", "ศุกร์", "เสาร์", "อาทิตย์"],
-                                daysShort: ["อา", "จ", "อ", "พ", "พฤ", "ศ", "ส", "อา"],
-                                daysMin: ["อา", "จ", "อ", "พ", "พฤ", "ศ", "ส", "อา"],
-                                months: ["มกราคม", "กุมภาพันธ์", "มีนาคม", "เมษายน", "พฤษภาคม", "มิถุนายน", "กรกฎาคม", "สิงหาคม", "กันยายน", "ตุลาคม", "พฤศจิกายน", "ธันวาคม"],
-                                monthsShort: ["ม.ค.", "ก.พ.", "มี.ค.", "เม.ย.", "พ.ค.", "มิ.ย.", "ก.ค.", "ส.ค.", "ก.ย.", "ต.ค.", "พ.ย.", "ธ.ค."],
-                                today: "วันนี้"
-};
+
   $( function() {
    	$('.datetimepicker').datetimepicker({
 		 format: 'YYYY-MM-DD',
