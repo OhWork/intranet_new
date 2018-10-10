@@ -19,7 +19,12 @@
 						<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4" style="padding:16px;float:left;">
 							<a class="btn btn-light col-12 qtnblock shadow" style="background-color:<?php echo $rsshow['qtn_color'];?>;" href="<?php echo $rsshow['qtn_link'];?>" role="button"><?php echo $rsshow['qtn_name'];?></a>
 						</div>
-					<?php } ?>
+					<?php }
+    					if(!empty($rs)){
+        					echo "<h4>ไม่มีแบบสอบถามในขณะนี้</h4>";
+    					}
+    					 ?>
+					
 				</div>
 			</div>
 		</div>
