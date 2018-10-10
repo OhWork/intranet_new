@@ -817,9 +817,9 @@ $files=$sorted;
 		<?php
 	if (!empty($_SESSION['user_name'])){
 	?>
-	<li class="pull-left"><a href="admin_index.php?url=fm_dialog.php"><i class="icon-home"></i></a></li>
+	<li class="pull-left"><a class="noac" href="admin_index.php?url=fm_dialog.php"><i class="icon-home"></i></a></li>
 	<?php }else{ ?>
-	<li class="pull-left"><a href="index.php?url=fm_dialog.php"><i class="icon-home"></i></a></li>
+	<li class="pull-left"><a class="noac"href="index.php?url=fm_dialog.php"><i class="icon-home"></i></a></li>
 	<?php }?>
 	<li><span class="divider">/</span></li>
 	<?php
@@ -1372,9 +1372,8 @@ else{
 		if(isAndroid) {
 			$('li').draggable({ disabled: false });
 		}
-$( document ).ready( function () {
-		$('.icon-home').removeClass('bcnm');
-		});
+		$('.noac').removeClass('show');
+		$('.noac').children(0).removeClass('bcnm');
 	</script>
 </body>
 </html>

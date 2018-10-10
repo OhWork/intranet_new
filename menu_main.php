@@ -60,8 +60,20 @@
 </div>
 </div>
 <script>
+	var nav_status;
+    $('.nav-link').on('click',function(e){
+		var checkde = e.currentTarget;
+		if (checkde.getAttribute('aria-expanded') != 'true') {
+			$('.nav-link').attr( 'aria-expanded', 'false');
+			$('.sub-menu').removeClass('show');
+	        $(this).attr( 'aria-expanded', 'true');
+		    $(this).parents(0).addClass("show");
+		    nav_status = 0 ;
+		    $('.nav-link').removeClass("animat-test");
+	        }
+		});
+
 	function navAnimate(id,sub){
-	    var nav_status = 0;
 		var menusum  = sub;
 		var menuid = id;
 
