@@ -267,7 +267,7 @@ echo $form->open("form_reg","form","col-xl-12 col-lg-12 col-md-12 col-sm-12 col-
 								<div class='col-xl-5 col-lg-5 col-md-5 col-sm-5 col-5'></div>
 								<div class='col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6'>
 									<div class='row'>
-										<a href="hrs_hospital_report_BT.php?id=<?php echo $_GET['id']; ?>" class="btn btn-primary rounded-circle" style="margin-left:8px;background-color:#90CAF9;">
+										<a href="hrs_hospital_report.php?id=<?php echo $_GET['id']; ?>" class="btn btn-primary rounded-circle" style="margin-left:8px;background-color:#90CAF9;">
 										<img width="30" height="40" style="margin:10px;" src='images/icons/glyphicons-40-notes@2x.png'/>
 										</a>
 										<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12' style="padding-left:6px;padding-right:0px;">
@@ -293,7 +293,7 @@ echo $form->open("form_reg","form","col-xl-12 col-lg-12 col-md-12 col-sm-12 col-
 								<div class='col-xl-5 col-lg-5 col-md-5 col-sm-5 col-5'></div>
 								<div class='col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6'>
 									<div class='row'>
-										<a href="hrs_certificate_report_new.php?id=<?php echo $_GET['id']; ?>" class="btn btn-primary rounded-circle" style="margin-left:8px;background-color:#90CAF9;">
+										<a href="hrs_certificate_report.php?id=<?php echo $_GET['id']; ?>" class="btn btn-primary rounded-circle" style="margin-left:8px;background-color:#90CAF9;">
 										<img width="30" height="40" style="margin:10px;" src='images/icons/glyphicons-40-notes@2x.png'/>
 										</a>
 										<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12' style="padding-left:6px;padding-right:0px;">
