@@ -119,21 +119,15 @@
     var nav_status;
     $('.nav-link').on('click',function(e){
 		var checkde = e.currentTarget;
-		var b =0;
+		var b = 0;
 		if (checkde.getAttribute('aria-expanded') != 'true') {
-			b = 1;
 			$('.nav-link').attr( 'aria-expanded', 'false');
 			$('.sub-menu').removeClass('show');
 	        $(this).attr( 'aria-expanded', 'true');
 		    $(this).parents(0).addClass("show");
 		    nav_status = 0 ;
-		    console.log('if');
-		    if(b == 1){
-		        console.log('else');
-				nav_status = 1;
+		    $('.nav-link').removeClass("animat-test");
 	        }
-	        }
-
 		});
     function navAnimate(id,sub){
 		var menusum  = sub;
