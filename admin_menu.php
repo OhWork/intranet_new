@@ -61,6 +61,15 @@
 </div>
 <?php endif; ?>
  <script>
+	 	$('.nav-link').on('click',function(e){
+	var checkde = e.currentTarget;
+	if (checkde.getAttribute('aria-expanded') != 'true') {
+		$('.nav-link').attr( 'aria-expanded', 'false');
+		$('.sub-menu').removeClass('show');
+        $(this).attr( 'aria-expanded', 'true');
+	    $(this).parents(0).addClass("show");
+        }
+	});
     $(function() {
         // this will get the full URL at the address bar
         var url = window.location.href;
@@ -180,14 +189,5 @@
 	navAnimate(22,7);
 	navAnimate(23,2);
 	navAnimate(24,2);
-	$('.nav-link').on('click',function(e){
-	var checkde = e.currentTarget;
-	if (checkde.getAttribute('aria-expanded') != 'true') {
-		$('.nav-link').attr( 'aria-expanded', 'false');
-		$('.sub-menu').removeClass('show');
-        $(this).attr( 'aria-expanded', 'true');
-        } else {
-             }
-	});
   	</script>
 
