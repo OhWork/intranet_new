@@ -814,7 +814,13 @@ $files=$sorted;
 
 	<div class="row-fluid">
 	<ul class="breadcrumb">
-	<li class="pull-left"><a href="admin_index.php?url=fm_dialog.php#"><i class="icon-home"></i></a></li>
+		<?php
+	if (!empty($_SESSION['user_name'])){
+	?>
+	<li class="pull-left"><a href="admin_index.php?url=fm_dialog.php"><i class="icon-home"></i></a></li>
+	<?php }else{ ?>
+	<li class="pull-left"><a href="index.php?url=fm_dialog.php"><i class="icon-home"></i></a></li>
+	<?php }?>
 	<li><span class="divider">/</span></li>
 	<?php
 	$bc=explode("/",$subdir);

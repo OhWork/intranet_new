@@ -119,23 +119,21 @@
     var nav_status;
     $('.nav-link').on('click',function(e){
 		var checkde = e.currentTarget;
+		var b =0;
 		if (checkde.getAttribute('aria-expanded') != 'true') {
+			b = 1;
 			$('.nav-link').attr( 'aria-expanded', 'false');
 			$('.sub-menu').removeClass('show');
 	        $(this).attr( 'aria-expanded', 'true');
 		    $(this).parents(0).addClass("show");
 		    nav_status = 0 ;
+		    console.log('if');
+		    if(b == 1){
+		        console.log('else');
+				nav_status = 1;
 	        }
-	        else{
-		       for(var i = 1;i <= menusum;i++){
-					document.getElementById("nav-"+menuid+"-animate-"+i).style.visibility = "hidden";
-					document.getElementById("nav-"+menuid+"-animate-"+i).classList.remove("animat-test");
-				}
-				console.log(nav_status);
-				console.log('else');
+	        }
 
-				nav_status = 0;
-	        }
 		});
     function navAnimate(id,sub){
 		var menusum  = sub;
@@ -164,16 +162,11 @@
       				}, 200)
 				}
 				myLoop();
-				console.log(nav_status);
-				console.log('if');
 			}else if(nav_status == 1){
 				for(var i = 1;i <= menusum;i++){
 					document.getElementById("nav-"+menuid+"-animate-"+i).style.visibility = "hidden";
 					document.getElementById("nav-"+menuid+"-animate-"+i).classList.remove("animat-test");
 				}
-				console.log(nav_status);
-				console.log('else');
-
 				nav_status = 0;
 			}
   		});
