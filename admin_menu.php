@@ -126,6 +126,16 @@
 		    $(this).parents(0).addClass("show");
 		    nav_status = 0 ;
 	        }
+	        else{
+		       for(var i = 1;i <= menusum;i++){
+					document.getElementById("nav-"+menuid+"-animate-"+i).style.visibility = "hidden";
+					document.getElementById("nav-"+menuid+"-animate-"+i).classList.remove("animat-test");
+				}
+				console.log(nav_status);
+				console.log('else');
+
+				nav_status = 0;
+	        }
 		});
     function navAnimate(id,sub){
 		var menusum  = sub;
@@ -134,8 +144,6 @@
 			var targetmenu = event.target.dataset.target;
 			var cuttarrgetmenu = targetmenu.substring(1);
 			var submenu = document.getElementById(cuttarrgetmenu);
-
-		console.log(nav_status);
 			if(nav_status == 0){
 				for(var i = 1;i <= menusum;i++){
 					document.getElementById("nav-"+menuid+"-animate-"+i).style.visibility = "hidden";
@@ -156,11 +164,15 @@
       				}, 200)
 				}
 				myLoop();
+				console.log(nav_status);
+				console.log('if');
 			}else if(nav_status == 1){
 				for(var i = 1;i <= menusum;i++){
 					document.getElementById("nav-"+menuid+"-animate-"+i).style.visibility = "hidden";
 					document.getElementById("nav-"+menuid+"-animate-"+i).classList.remove("animat-test");
 				}
+				console.log(nav_status);
+				console.log('else');
 
 				nav_status = 0;
 			}
