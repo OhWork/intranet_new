@@ -201,16 +201,18 @@ if (isset($_GET['action']))
 				for($i= 0; $i<count($path_foldercutpath); $i++){
 			}
 			$countpath=$i-2;
+			if(count($path_foldercutpath) == 2){
 			$selectid = $db->findByPK('folder','folder_name',"'$path_foldercutpath[$countpath]'")->executeAssoc();
 
-			if(!empty($selectid)){
-				$rs = $db->insert('folder',array(
-					'folder_name' => $name,
-					'folder_date' => $date,
-					'folder_position'=>$selectid['folder_id'],
-					'subzoo_subzoo_id' => $_SESSION['subzoo_subzoo_id'],
-					'subzoo_zoo_zoo_id' => $_SESSION['subzoo_zoo_zoo_id'],
-				));
+				if(!empty($selectid)){
+					$rs = $db->insert('folder',array(
+						'folder_name' => $name,
+						'folder_date' => $date,
+						'folder_position'=>$selectid['folder_id'],
+						'subzoo_subzoo_id' => $_SESSION['subzoo_subzoo_id'],
+						'subzoo_zoo_zoo_id' => $_SESSION['subzoo_zoo_zoo_id'],
+					));
+				}
 			}
 			else{
 				$rs = $db->insert('folder',array(
