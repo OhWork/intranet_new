@@ -131,19 +131,13 @@
 				if($('.sub-menu').hasClass("animat-out")){
 						setTimeout(function(){
 							if(!idmenu.classList.contains('show')){
-							console.log(111);
 							$( ".sub-menu" ).not(idmenu).removeClass('show');
 							idmenu.parentNode.classList.add("show");
 					        idmenu.parentNode.classList.remove("animat-out");
-					        console.log(idmenu);
-					        if(!idmenu.classList.contains('collapsing')){
-						        console.log(4+'show');
 /*
-								idmenu.parentNode.classList.add("show");
-								idmenu.parentNode.classList.remove("animat-out");
+							idmenu.closest('#confer').classList.remove("animat-out");
+							idmenu.closest('#confer').classList.add("show");
 */
-							}
-// 							console.log(idmenu.childNodes);
 							}
 				        }, 300)
 				        idmenu.classList.remove("animat-out");
