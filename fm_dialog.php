@@ -285,7 +285,7 @@ $get_params = http_build_query($get_params);
 	}
 	</style><![endif]-->
 
-	<script src="jquery/fm_js/fm_jquery1.12.js"></script>
+<!-- 	<script src="jquery/fm_js/fm_jquery1.12.js"></script> -->
 	<script src="jquery/fm_js/fm_jquery-ui.js" type="text/javascript"></script>
 	<script src="jquery/fm_js/fm_plugins.js?v=<?php echo $version; ?>"></script>
 	<script src="jquery/fm_js/fm_jPlayer/jquery.jplayer/jquery.jplayer.js"></script>
@@ -817,9 +817,9 @@ $files=$sorted;
 		<?php
 	if (!empty($_SESSION['user_name'])){
 	?>
-	<li class="pull-left"><a class="noac" href="admin_index.php?url=fm_dialog.php"><i class="icon-home"></i></a></li>
+	<li class="pull-left"><a id="noac" href="admin_index.php?url=fm_dialog.php"><i class="icon-home"></i></a></li>
 	<?php }else{ ?>
-	<li class="pull-left"><a class="noac"href="index.php?url=fm_dialog.php"><i class="icon-home"></i></a></li>
+	<li class="pull-left"><a id="noac" href="index.php?url=fm_dialog.php"><i class="icon-home"></i></a></li>
 	<?php }?>
 	<li><span class="divider">/</span></li>
 	<?php
@@ -1372,8 +1372,7 @@ else{
 		if(isAndroid) {
 			$('li').draggable({ disabled: false });
 		}
-		$('.noac').removeClass('show');
-		$('.noac').children(0).removeClass('bcnm');
+		$('#noac').removeClass('bcmn');
 	</script>
 </body>
 </html>
