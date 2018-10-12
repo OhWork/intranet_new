@@ -285,7 +285,7 @@ $get_params = http_build_query($get_params);
 	}
 	</style><![endif]-->
 
-<!-- 	<script src="jquery/fm_js/fm_jquery1.12.js"></script> -->
+	<script src="jquery/fm_js/fm_jquery1.12.js"></script>
 	<script src="jquery/fm_js/fm_jquery-ui.js" type="text/javascript"></script>
 	<script src="jquery/fm_js/fm_plugins.js?v=<?php echo $version; ?>"></script>
 	<script src="jquery/fm_js/fm_jPlayer/jquery.jplayer/jquery.jplayer.js"></script>
@@ -1372,7 +1372,6 @@ else{
 		if(isAndroid) {
 			$('li').draggable({ disabled: false });
 		}
-		$('#noac').removeClass('bcmn');
 	</script>
 </body>
 </html>

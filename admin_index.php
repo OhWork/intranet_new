@@ -36,6 +36,7 @@
         <link rel="stylesheet" href="CSS/bootstrap-datetimepicker.css">
         <link rel="stylesheet" href="CSS/jquery.mapify.css">
         <link rel="stylesheet" href="CSS/jquery.datetimepicker.css">
+        <link rel="stylesheet" href="CSS/animate.css">
         <link rel="stylesheet" href="CSS/main.css">
         <link rel="stylesheet" href="CSS/print.css" media="print">
         <link rel="stylesheet" href="CSS/font-awesome.css">

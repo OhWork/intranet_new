@@ -73,6 +73,7 @@
                 $(this).addClass("bcmn");
 				$(this).children(0).addClass('bcnm');
 				$(this).parents(0).attr("aria-expanded", true);
+				$('#noac').removeClass('bcmn');
             }
             else if(urlcheck != (this.href)) {
 				if(this.href.match("user_add_user")){
@@ -143,7 +144,7 @@
 							}
 */
 							}
-				        }, 300)
+				        }, 400)
 				        idmenu.classList.remove("animat-out");
 				        if(idmenu.getAttribute('aria-expanded') != 'true'){
 // 					        idmenu.childNodes.classList.add("show");
@@ -151,7 +152,6 @@
 					        idmenu.parentNode.classList.remove("animat-out");
 					        idmenu.parentNode.parentNode.classList.remove("animat-out");
 							idmenu.parentNode.parentNode.classList.add("show");
-							idmenu.classList.add("animat-test");
 						}
 				}
 		    }
