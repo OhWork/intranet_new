@@ -95,19 +95,19 @@
 		</div>
 		<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-1">
 			<div class="row">
-				<div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2" style="margin-left:16px;">
+				<div class="" style="margin-left:32px;">
 					<img style="width:50px;height:50px;" src="images/news/typeDesign/new1.png">
 				</div>
-				<div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2" style="margin-left:8px;">
+				<div class="" style="margin-left:48px;">
 					<img style="width:50px;height:50px;" src="images/news/typeDesign/new2.png">
 				</div>
-				<div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2" style="margin-left:5px;">
+				<div class="" style="margin-left:48px;">
 					<img style="width:50px;height:50px;" src="images/news/typeDesign/new3.png">
 				</div>
-				<div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2" style="margin-left:5px;">
+				<div class="" style="margin-left:50px;">
 					<img style="width:50px;height:50px;" src="images/news/typeDesign/new4.png">
 				</div>
-				<div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2" style="margin-left:5px;">
+				<div class="" style="margin-left:50px;">
 					<img style="width:50px;height:50px;" src="images/news/typeDesign/new5.png">
 				</div>
 			</div>
