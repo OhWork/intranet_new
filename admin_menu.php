@@ -134,9 +134,13 @@
 							$( ".sub-menu" ).not(idmenu).removeClass('show');
 							idmenu.parentNode.classList.add("show");
 					        idmenu.parentNode.classList.remove("animat-out");
+					        idmenu.parentNode.parentNode.classList.remove("animat-out");
+							idmenu.parentNode.parentNode.classList.add("show");
 /*
+					        if(idmenu == 'confer'){
 							idmenu.closest('#confer').classList.remove("animat-out");
 							idmenu.closest('#confer').classList.add("show");
+							}
 */
 							}
 				        }, 300)
@@ -145,6 +149,9 @@
 // 					        idmenu.childNodes.classList.add("show");
 					        idmenu.parentNode.classList.add("show");
 					        idmenu.parentNode.classList.remove("animat-out");
+					        idmenu.parentNode.parentNode.classList.remove("animat-out");
+							idmenu.parentNode.parentNode.classList.add("show");
+							idmenu.classList.add("animat-test");
 						}
 				}
 		    }
