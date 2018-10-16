@@ -17,7 +17,7 @@
     $txtdetailnews = new textfield('news_detail','','form-control','','');
     $radiotypedesign = new radioGroup();
     $radiotypedesign->name = 'typeDesignnews_id';
-    if(empty($id)){
+    if(empty($_GET['id'])){
     	$radiotypedesign->add(' รูปแบบที่ 1',1,'checked');
     	$radiotypedesign->add(' รูปแบบที่ 2',2,'');
     	$radiotypedesign->add(' รูปแบบที่ 3',3,'');
@@ -26,17 +26,51 @@
     	}
     $button = new buttonok("ต่อไป","","btn btn-success btn-lg btn-block bt3success col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","");
 	$user_id = $_SESSION['user_id'];
-	$r = $db->findByPK('user','user_id',$user_id)->executeRow();
-	$txtname= $r['user_name'];
-	$txtlast= $r['user_last'];
     if(!empty($_GET['id'])){
-    $id = $_GET['id'];
-    $r = $db->findByPK('news','news_id',$id)->executeRow();
-    $txtheadnews->value = $r['news_head'];
-    $user_id = $r['user_user_id'];
-    $r2 = $db->findByPK('user','user_id',$user_id)->executeRow();
-    $txtname= $r2['user_name'];
-	$txtlast= $r2['user_last'];
+	    $id = $_GET['id'];
+	    $r = $db->findByPK('news','news_id',$id)->executeRow();
+	    $txtheadnews->value = $r['news_head'];
+	    $txtdatestart->value = $r['news_datestart'];
+		$txtdateend->value = $r['news_dateend'];
+	    $user_id = $r['user_user_id'];
+	    $r2 = $db->findByPK('user','user_id',$user_id)->executeRow();
+	    $txtname= $r2['user_name'];
+		$txtlast= $r2['user_last'];
+		if($r['typeDesignnews_id'] == 1){
+			$radiotypedesign->add(' รูปแบบที่ 1',1,'checked');
+	    	$radiotypedesign->add(' รูปแบบที่ 2',2,'');
+	    	$radiotypedesign->add(' รูปแบบที่ 3',3,'');
+	    	$radiotypedesign->add(' รูปแบบที่ 4',4,'');
+	    	$radiotypedesign->add(' รูปแบบที่ 5',5,'');
+		}
+		if($r['typeDesignnews_id'] == 2){
+			$radiotypedesign->add(' รูปแบบที่ 1',1,'');
+	    	$radiotypedesign->add(' รูปแบบที่ 2',2,'checked');
+	    	$radiotypedesign->add(' รูปแบบที่ 3',3,'');
+	    	$radiotypedesign->add(' รูปแบบที่ 4',4,'');
+	    	$radiotypedesign->add(' รูปแบบที่ 5',5,'');
+		}
+		if($r['typeDesignnews_id'] == 3){
+			$radiotypedesign->add(' รูปแบบที่ 1',1,'');
+	    	$radiotypedesign->add(' รูปแบบที่ 2',2,'');
+	    	$radiotypedesign->add(' รูปแบบที่ 3',3,'checked');
+	    	$radiotypedesign->add(' รูปแบบที่ 4',4,'');
+	    	$radiotypedesign->add(' รูปแบบที่ 5',5,'');
+		}
+		if($r['typeDesignnews_id'] == 4){
+			$radiotypedesign->add(' รูปแบบที่ 1',1,'');
+	    	$radiotypedesign->add(' รูปแบบที่ 2',2,'');
+	    	$radiotypedesign->add(' รูปแบบที่ 3',3,'');
+	    	$radiotypedesign->add(' รูปแบบที่ 4',4,'checked');
+	    	$radiotypedesign->add(' รูปแบบที่ 5',5,'');
+	    }
+		if($r['typeDesignnews_id'] == 5){
+			$radiotypedesign->add(' รูปแบบที่ 1',1,'');
+	    	$radiotypedesign->add(' รูปแบบที่ 2',2,'');
+	    	$radiotypedesign->add(' รูปแบบที่ 3',3,'');
+	    	$radiotypedesign->add(' รูปแบบที่ 4',4,'');
+	    	$radiotypedesign->add(' รูปแบบที่ 5',5,'checked');
+		}
     }
     echo $form->open("form_reg","form","col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","news_insert_news.php","");
 ?>
@@ -84,6 +118,7 @@
 				</div>
 				<div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8">
 					<?php echo $filepic; ?>
+
 				</div>
 			</div>
 		</div>
@@ -118,20 +153,13 @@
 					<label>ผู้เขียนข่าว </label>
 				</div>
 				<div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8">
-					<?php echo $txtname." ".$txtlast;
-// 						if(!empty($_GET['user_id'])){
-// 						echo "<input type='hidden' name='user_user_id' value='$_GET[user_id]'/>";
-// 						}
-// 						if(!empty($user_id)){
-// 						echo "<input type='hidden' name='user_user_id' value='$user_id'/>";
-// 						}
-					?>
+					<?php echo $txtname." ".$txtlast;?>
 				</div>
 			</div>
 		</div>
 		<input type='hidden' name='news_date' value='<?php echo $datetime; ?>'/>
 		<input type='hidden' name='user_user_id' value='<?php echo $user_id; ?>'/>
-		<input type='hidden' name='id' value='<?php echo $id; ?>'/>
+		<input type='hidden' name='id' value='<?php echo $_GET['id']; ?>'/>
 		<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-1" style="padding-bottom:16px;">
 			<div class="row">
 				<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4"></div>

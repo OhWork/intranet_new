@@ -63,7 +63,8 @@
 							<?php
 								echo $lbdetailnews;
 								echo $detailnews;?>
-
+								<input type="submit" id="button_adddetail" value="บันทึก">
+								<input type="button" id="button_canceletail" value="ยกเลิก">
 						</div>
 						<div class='col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1'></div>
 					</div>
@@ -88,10 +89,8 @@
     echo $form->close();
 ?>
 <script>
-/*
                 $('#button_adddetail').hide();
                 $('#button_canceletail').hide();
-*/
                 $('#text_detail').on('click',function(){
 	                if(!CKEDITOR.instances['text_editer']){
 	                CKEDITOR.replace( 'text_editer', {
@@ -100,10 +99,8 @@
 					    enterMode : CKEDITOR.ENTER_BR
 					});
 					}
-/*
 					$('#button_adddetail').show();
 					$('#button_canceletail').show();
-*/
 					$("#text_editer").removeAttr("readonly");
 					$("#text_editer").val('');
 					$("form").on('submit',function(e) {
@@ -123,10 +120,8 @@
 								if(CKEDITOR.instances['text_editer']){
 									CKEDITOR.instances['text_editer'].destroy(true);
 									$('#text_editer').attr('readonly', true);
-/*
 									$('#button_adddetail').hide();
 									$('#button_canceletail').hide();
-*/
 								}
 
 							}
@@ -145,10 +140,8 @@
 						        if(CKEDITOR.instances['text_editer']){
 							    		CKEDITOR.instances['text_editer'].destroy(true);
 										$('#text_editer').attr('readonly', true);
-/*
 										$('#button_adddetail').hide();
 										$('#button_canceletail').hide();
-*/
 										e.stopPropagation();
 								}
 					        	}

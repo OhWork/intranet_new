@@ -1,6 +1,6 @@
 <?php
     $id = $_GET['id'];
-    $rs = $db->findByPK55('news','newsDetails','newsVideo','newsImg','user','news_newsDetails_id','newsDetails_id','news_newsImg_id','newsImg_id','news_newsVideo_id','newsVideo_id','user_user_id','user_id','news_id',$id)->executeAssoc();
+    $rs = $db->findByPK33('news','newsVideo','user','news_newsVideo_id','newsVideo_id','user_user_id','user_id','news_id',$id)->executeAssoc();
 ?>
 
 <div class='col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1'></div>
@@ -32,8 +32,8 @@
 						</div>
 						<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-2">
 							<?php
-								$rsdetail1 = $db->findByPK12('newsDetails','newsDetails_position',1,'newsDetails_connect',$id)->execute();
-								echo $rs['newsDetails_name'];
+								$rsdetail1 = $db->findByPK12('newsDetails','newsDetails_position',0,'newsDetails_connect',$id)->executeAssoc();
+								echo $rsdetail1['newsDetails_name'];
 							?>
 						</div>
 						<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12'>
@@ -47,8 +47,8 @@
 						</div>
 						<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-2">
 							<?php
-								$rsdetail2 = $db->findByPK12('newsDetails','newsDetails_position',2,'newsDetails_connect',$id)->execute();
-								echo $rs['newsDetails_name'];
+								$rsdetail2 = $db->findByPK12('newsDetails','newsDetails_position',1,'newsDetails_connect',$id)->executeAssoc();
+								echo $rsdetail2['newsDetails_name'];
 							?>
 						</div>
 					</div>

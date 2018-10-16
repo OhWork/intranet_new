@@ -173,11 +173,16 @@
 
 					));
 				}
-				$rspic = $db->insert('newsVideo',array(
+				$target_dir = 'temp/';
+				$target_file = $target_dir.basename($_FILES['news_videodetail']['name']);
+				$path = 'images/news/newsVideo/';
+				$target_dir_save = $path.basename($_FILES['news_videodetail']['name']);
+				move_uploaded_file($_FILES['news_videodetail']['tmp_name'], $target_dir_save);
+				$rsvideo= $db->insert('newsVideo',array(
 					'newsVideo_name' => basename($_FILES['news_videodetail']['name']),
 					'newsVideo_link' => $path,
-					'newsVideo_position' => 2,
-					'newsImg_connect' => $_POST['new_id']
+					'newsVideo_position' => 1,
+					'newsVideo_connect' => $_POST['new_id']
 				));
 				for($i = 0; $i<count($_FILES['news_picdetail']['name']); $i++){
 					$target_dir = 'temp/';
@@ -198,11 +203,17 @@
 					$rs = $db->insert('newsDetails',array(
 						'newsDetails_name' => $_POST['detail_news'],
 					));
-				$rspic = $db->insert('newsVideo',array(
+				$target_dir = 'temp/';
+				$target_file = $target_dir.basename($_FILES['news_videodetail']['name']);
+				$path = 'images/news/newsVideo/';
+				$target_dir_save = $path.basename($_FILES['news_videodetail']['name']);
+				move_uploaded_file($_FILES['news_videodetail']['tmp_name'], $target_dir_save);
+
+				$rsvideo = $db->insert('newsVideo',array(
 					'newsVideo_name' => basename($_FILES['news_videodetail']['name']),
 					'newsVideo_link' => $path,
-					'newsVideo_position' => 2,
-					'newsImg_connect' => $_POST['new_id']
+					'newsVideo_position' => 1,
+					'newsVideo_connect' => $_POST['new_id']
 				));
 				for($i = 0; $i<count($_FILES['news_picdetail']['name']); $i++){
 					$target_dir = 'temp/';
