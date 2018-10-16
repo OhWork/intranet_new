@@ -123,12 +123,10 @@
 		var idmenushow = e.target.dataset.target;
 		var cutidmenu = idmenushow.substring(1);
 		var idmenu = document.getElementById(cutidmenu);
-// 		console.log(idmenu);
 		if (checkde.getAttribute('aria-expanded') != 'true') {
 			$('.nav-link').attr( 'aria-expanded','false');
 			if($('.sub-menu').hasClass("show")){
 			 $('.sub-menu').addClass("animat-out");
-// 				$('.sub-menu').children(0).removeClass("animat-test");
 				if($('.sub-menu').hasClass("animat-out")){
 						setTimeout(function(){
 							if(!idmenu.classList.contains('show')){
@@ -137,17 +135,11 @@
 					        idmenu.parentNode.classList.remove("animat-out");
 					        idmenu.parentNode.parentNode.classList.remove("animat-out");
 							idmenu.parentNode.parentNode.classList.add("show");
-/*
-					        if(idmenu == 'confer'){
-							idmenu.closest('#confer').classList.remove("animat-out");
-							idmenu.closest('#confer').classList.add("show");
-							}
-*/
+
 							}
 				        }, 400)
 				        idmenu.classList.remove("animat-out");
 				        if(idmenu.getAttribute('aria-expanded') != 'true'){
-// 					        idmenu.childNodes.classList.add("show");
 					        idmenu.parentNode.classList.add("show");
 					        idmenu.parentNode.classList.remove("animat-out");
 					        idmenu.parentNode.parentNode.classList.remove("animat-out");

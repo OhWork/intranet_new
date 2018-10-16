@@ -1067,7 +1067,7 @@ body {
 .lgn:hover {
 	color:#1DE9B6;
 }
-keyframes fadeOutUp {
+@keyframes fadeOutUp {
    0% {
       opacity: 1;
       transform: translateY(0);

@@ -63,16 +63,32 @@
 	var nav_status;
     $('.nav-link').on('click',function(e){
 		var checkde = e.currentTarget;
+		var idmenushow = e.target.dataset.target;
+		var cutidmenu = idmenushow.substring(1);
+		var idmenu = document.getElementById(cutidmenu);
 		if (checkde.getAttribute('aria-expanded') != 'true') {
-			$('.nav-link').attr( 'aria-expanded', 'false');
-			$('.sub-menu').removeClass('show');
-	        $(this).attr( 'aria-expanded', 'true');
-		    $(this).parents(0).addClass("show");
+			$('.nav-link').attr( 'aria-expanded','false');
+			if($('.sub-menu').hasClass("show")){
+			 $('.sub-menu').addClass("animat-out");
+				if($('.sub-menu').hasClass("animat-out")){
+						setTimeout(function(){
+							if(!idmenu.classList.contains('show')){
+							$( ".sub-menu" ).not(idmenu).removeClass('show');
+							idmenu.parentNode.classList.add("show");
+					        idmenu.parentNode.classList.remove("animat-out");
+							}
+				        }, 400)
+				        idmenu.classList.remove("animat-out");
+				        if(idmenu.getAttribute('aria-expanded') != 'true'){
+					        idmenu.parentNode.classList.add("show");
+					        idmenu.parentNode.classList.remove("animat-out");
+						}
+				}
+		    }
 		    nav_status = 0 ;
 		    $('.nav-link').removeClass("animat-test");
 	        }
 		});
-
 	function navAnimate(id,sub){
 		var menusum  = sub;
 		var menuid = id;
@@ -93,7 +109,6 @@
 						if (i <= menusum) {
 							if(i == menusum){
 	      						nav_status = 1;
-		  						console.log('.nav-link-'+menuid+' : เปิดแล้ว');
       						}
 	  						document.getElementById("nav-"+menuid+"-animate-"+i).style.visibility = "visible";
 	  						document.getElementById("nav-"+menuid+"-animate-"+i).classList.add("animat-test");
@@ -110,7 +125,6 @@
 				}
 
 				nav_status = 0;
-				console.log('.nav-link-'+menuid+' : ปิดแล้ว');
 			}
   		});
     }
