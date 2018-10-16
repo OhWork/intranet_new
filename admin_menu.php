@@ -124,22 +124,25 @@
 		var cutidmenu = idmenushow.substring(1);
 		var idmenu = document.getElementById(cutidmenu);
 		if (checkde.getAttribute('aria-expanded') != 'true') {
+			console.log('if 1');
 			$('.nav-link').attr( 'aria-expanded','false');
 			if($('.sub-menu').hasClass("show")){
+				console.log('if 2');
 			 $('.sub-menu').addClass("animat-out");
 				if($('.sub-menu').hasClass("animat-out")){
+					console.log('if3');
 						setTimeout(function(){
 							if(!idmenu.classList.contains('show')){
-							$( ".sub-menu" ).not(idmenu).removeClass('show');
-							idmenu.parentNode.classList.add("show");
-					        idmenu.parentNode.classList.remove("animat-out");
-					        idmenu.parentNode.parentNode.classList.remove("animat-out");
-							idmenu.parentNode.parentNode.classList.add("show");
-
+								$( ".sub-menu" ).not(idmenu).removeClass('show');
+								idmenu.parentNode.classList.add("show");
+						        idmenu.parentNode.classList.remove("animat-out");
+						        idmenu.parentNode.parentNode.classList.remove("animat-out");
+								idmenu.parentNode.parentNode.classList.add("show");
 							}
 				        }, 400)
 				        idmenu.classList.remove("animat-out");
 				        if(idmenu.getAttribute('aria-expanded') != 'true'){
+							idmenu.classList.remove('animat-out');
 					        idmenu.parentNode.classList.add("show");
 					        idmenu.parentNode.classList.remove("animat-out");
 					        idmenu.parentNode.parentNode.classList.remove("animat-out");
@@ -147,8 +150,13 @@
 						}
 				}
 		    }
+		    else{
+			    console.log('else di wa');
+			    idmenu.classList.remove('animat-out');
+		    }
 		    nav_status = 0 ;
 		    $('.nav-link').removeClass("animat-test");
+
 	        }
 		});
     function navAnimate(id,sub){
