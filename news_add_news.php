@@ -10,7 +10,7 @@
     $selecttypenews = new SelectFromDB();
     $selecttypenews->name = 'typeNews_typeNews_id';
     $selecttypenews->lists = 'โปรดระบุ ชนิดของข่าวสาร';
-    $filepic = new inputFile('news_cover','','');
+    $filepic = new inputFile('news_cover','','cover_new');
     $txtdatestart = new textfieldcalendarreadonly('newsdatestart','datetimepicker1','','form-control','input-group-addon','datetimepicker1');
     $txtdateend = new textfieldcalendarreadonly('newsdateend','datetimepicker2','','form-control','input-group-addon','datetimepicker2');
     $txtheadnews = new textfield('news_head','','form-control','','');
@@ -37,7 +37,7 @@
 	    $txtname= $r2['user_name'];
 		$txtlast= $r2['user_last'];
 		if($r['typeDesignnews_id'] == 1){
-			$radiotypedesign->add(' รูปแบบที่ 1',1,'checked');
+			$radiotypedesign->add(' รูปแบบที่ 1',1,'checked','');
 	    	$radiotypedesign->add(' รูปแบบที่ 2',2,'');
 	    	$radiotypedesign->add(' รูปแบบที่ 3',3,'');
 	    	$radiotypedesign->add(' รูปแบบที่ 4',4,'');
@@ -118,7 +118,7 @@
 				</div>
 				<div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8">
 					<?php echo $filepic; ?>
-
+					<img src="images/news/<?php echo $r['news_cover'];?>" width="100px;" height="100px;">
 				</div>
 			</div>
 		</div>
@@ -213,5 +213,13 @@
                 }
         });
     });
-
+	$('#cover_new').on('change',function(){
+	<?php
+/*
+		if(!empty($r['news_cover'])){
+			unlink('images/news/'.$r['news_cover']);
+		}
+*/
+	?>
+	});
 </script>

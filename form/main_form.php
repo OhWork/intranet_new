@@ -243,7 +243,7 @@ class textfieldcalendarreadonly{
 			$html.="<div style='float:left;padding-right: 20px;'><input type='radio'
 					name='$this->name'
 					$item[checked]
-					value='$item[value]'";
+					value='$item[value]' $item[readonly]";
 			$html.=	"/>$item[label]</div>";
 		}
 		return $html;
