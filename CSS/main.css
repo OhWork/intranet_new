@@ -1078,7 +1078,7 @@ body {
    }
 }
 .animat-out{
-  animation: fadeOutUp .5s ease-in 1 forwards;
+  animation: fadeOutRight .5s ease-in 1 forwards;
   animation-fill-mode:both;
 }
 
