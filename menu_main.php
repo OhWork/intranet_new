@@ -85,6 +85,10 @@
 						}
 				}
 		    }
+		    else{
+			    console.log('else di wa');
+			    idmenu.classList.remove('animat-out');
+		    }
 		    nav_status = 0 ;
 		    $('.nav-link').removeClass("animat-test");
 	        }
