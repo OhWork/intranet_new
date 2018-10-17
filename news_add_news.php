@@ -159,7 +159,7 @@
 		</div>
 		<input type='hidden' name='news_date' value='<?php echo $datetime; ?>'/>
 		<input type='hidden' name='user_user_id' value='<?php echo $user_id; ?>'/>
-		<input type='hidden' name='id' value='<?php echo $_GET['id']; ?>'/>
+		<input type='hidden' name='id' id="new_id" value='<?php echo $_GET['id']; ?>'/>
 		<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-1" style="padding-bottom:16px;">
 			<div class="row">
 				<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4"></div>
@@ -224,19 +224,17 @@
             reader.readAsDataURL(input.files[0]);
         }
     }
-
+    var news_id = $('#new_id').val();
+    console.log(news_id);
+    if(news_id ==''){
+		$('#preimg').hide();
+	}
+	else{
+	    $('#preimg').show();
+	}
     $("#cover_new").change(function(){
+	    $('#preimg').show();
         readURL(this);
     });
-/*
-	$('#cover_new').on('change',function(){
-	<?php
-/*
-		if(!empty($r['news_cover'])){
-			unlink('images/news/'.$r['news_cover']);
-		}
-*/
-	?>
-	});
-*/
+
 </script>

@@ -9,21 +9,24 @@
     include 'database/db_tools.php';
 	include 'connect.php';
 	$id = $_POST['id'];
+	$select = $db ->findByPK('news','news_id',$id)->executeAssoc();
 	if(!empty($_POST['id'])){
-		$target_dir = 'temp/';
-	    $target_file = $target_dir.basename($_FILES['news_cover']['name']);
-	    $target_dir_save = 'images/news/'.basename($_FILES['news_cover']['name']);
-	    move_uploaded_file($_FILES['news_cover']['tmp_name'], $target_dir_save);
+		if(unlink('images/news/'.$select['news_cover'])){
+			$target_dir = 'temp/';
+		    $target_file = $target_dir.basename($_FILES['news_cover']['name']);
+		    $target_dir_save = 'images/news/'.basename($_FILES['news_cover']['name']);
+		    move_uploaded_file($_FILES['news_cover']['tmp_name'], $target_dir_save);
 
-		$data['news_head'] = $_POST['news_head'];
-		$data['news_datestart'] = $_POST['news_datestart'];
-		$data['news_dateend'] = $_POST['news_dateend'];
-		$data['news_cover'] = basename($_FILES['news_cover']['name']);
-		$data['news_dateupdate'] = $_POST['news_date'];
-		$data['typeNews_typeNews_id'] = $_POST['typeNews_typeNews_id'];
-		$data['typeDesignnews_id'] = $_POST['typeDesignnews_id'];
-		$data['user_user_id'] = $_POST['user_user_id'];
-		$rsfix = $db->update('news',$data,'news_id',$_POST['id']);
+			$data['news_head'] = $_POST['news_head'];
+			$data['news_datestart'] = $_POST['news_datestart'];
+			$data['news_dateend'] = $_POST['news_dateend'];
+			$data['news_cover'] = basename($_FILES['news_cover']['name']);
+			$data['news_dateupdate'] = $_POST['news_date'];
+			$data['typeNews_typeNews_id'] = $_POST['typeNews_typeNews_id'];
+			$data['typeDesignnews_id'] = $_POST['typeDesignnews_id'];
+			$data['user_user_id'] = $_POST['user_user_id'];
+			$rsfix = $db->update('news',$data,'news_id',$_POST['id']);
+		}
 
 	}else{
 
