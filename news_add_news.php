@@ -118,7 +118,7 @@
 				</div>
 				<div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8">
 					<?php echo $filepic; ?>
-					<img src="images/news/<?php echo $r['news_cover'];?>" width="100px;" height="100px;">
+					<img id ="preimg" src="images/news/<?php echo $r['news_cover'];?>" width="100px;" height="100px;">
 				</div>
 			</div>
 		</div>
@@ -213,6 +213,22 @@
                 }
         });
     });
+    function readURL(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                $('#preimg').attr('src', e.target.result);
+            }
+
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+
+    $("#cover_new").change(function(){
+        readURL(this);
+    });
+/*
 	$('#cover_new').on('change',function(){
 	<?php
 /*
@@ -222,4 +238,5 @@
 */
 	?>
 	});
+*/
 </script>
