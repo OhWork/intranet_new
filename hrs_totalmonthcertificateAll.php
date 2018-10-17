@@ -50,21 +50,20 @@
     $selectroom->name = 'confer_confer_id';
     $selectroom->idtf = 'confer_idtf';
 	$button = new buttonok('ค้นหา','submit','btn btn-success col-md-12 printdisplaynone','submit');
-	   echo $form->open('','','','','');
+echo $form->open('','','col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12','','');
 	   ?>
 <div class='col-md-12 printcenter printdisplaynone' style="padding-bottom:40px;border:solid #ddd 1px;border-radius: 7px;margin-top:16px;">
-    <div class='row'>
         <div class='col-md-12 printdisplaynone' style="border-bottom:solid 1px #666666;padding-top:14px;">
             <h4>เลือกสิ่งที่ต้องการค้นหา</h4>
         </div>
 <!-- ปุ่มตกลง -->
 		<div class="col-md-12 printdisplaynone" style="margin-top: 40px;">
 			<div class="row">
-				<div class='col-md-2' style="float:left;"></div>
-				<div class='col-md-2' style="float:left;"><?php echo $selectmonth;?></div>
-				<div class='col-md-3' style="padding-top: 7px;float:left;"><center><?php echo $lbyear;?></center></div>
-				<div class='col-md-1' style="float:left;"><?php echo $txtyearmonth;?></div>
-				<div class='col-md-2' style="float:left;"></div>
+				<div class='col-md-2'></div>
+				<div class='col-md-3'><?php echo $selectmonth;?></div>
+				<div class='col-md-4 pt-2'><center><?php echo $lbyear;?></center></div>
+				<div class='col-md-1'><?php echo $txtyearmonth;?></div>
+				<div class='col-md-2'></div>
 			</div>
 		</div>
 		<div class="col-md-12 printdisplaynone" style="margin-top: 16px;">
@@ -74,7 +73,6 @@
 				<div class='col-md-5' style="float:left;"></div>
 			</div>
 		</div>
-	</div>
 </div>
 <?php
        echo $form->close();
