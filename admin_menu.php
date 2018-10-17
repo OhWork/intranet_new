@@ -113,6 +113,12 @@
 				   	$('#nav-22-animate-6').children().addClass('bcnm');
 					$('#user').attr("aria-expanded", true);
 				}
+				else if(this.href.match("qtn_add_question")){
+					$('#qtn').addClass("show");
+				   	$('#nav-21-animate-1').addClass("bcmn");
+				   	$('#nav-21-animate-1').children().addClass('bcnm');
+					$('#qtn').attr("aria-expanded", true);
+				}
             }
 
         });
