@@ -53,8 +53,7 @@
     		<tr>
 				<td style="font-size:14px;line-height:24px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ข้าพเจ้า <?php echo $show['hrctf_name'];?>
 				ตำแหน่ง <?php echo $show['hrctf_position'];?> 
-				สังกัด <?php echo $show['zoo_name'];?> มีความประสงค์จะขอหนังสือรับรองการมีสิทธิรับเงินช่วยเหลือ ของ
-				<?php if($show['hrctf_familytype'] == 1){ 
+				สังกัด <?php echo $show['zoo_name'];?> มีความประสงค์จะขอหนังสือรับรองการมีสิทธิรับเงินช่วยเหลือ ของ<?php if($show['hrctf_familytype'] == 1){ 
     				        echo "ข้าพเจ้า",$show['hrctf_name'];
     				    }else if($show['hrctf_familytype'] == 2){
         				    echo "คู่สมรส ชื่อ",$show['hrctf_name'];
@@ -65,7 +64,7 @@
     				    }else if($show['hrctf_familytype'] == 5){
         				    echo "บุตร ชื่อ",$show['hrctf_name'];
     				    }
-    				?>
+    				?> ซึ่งได้รับการรักษาพยาบาลจากสถานพยาบาล<?php echo $show['hrctf_hosname']; ?> จังหวัด<?php echo $show['hrctf_hosprovince']; ?> ตั้งแต่วันที่ <?php echo thainumDigit($datestarthos); ?>
 			</tr>
 		</table>
 		<!--บรรทัดที่ 8-->
@@ -104,19 +103,14 @@
 -->
 		<table>
     		<tr>
-				<td style="font-size:14px;">ซึ่งได้รับการรักษาพยาบาลจากสถานพยาบาล<?php echo $show['hrctf_hosname']; ?> จังหวัด<?php echo $show['hrctf_hosprovince']; ?> ตั้งแต่วันที่<?php echo thainumDigit($datestarthos); ?></td>
-			</tr>
-		</table>
-		<table>
-    		<tr>
 				<td style="font-size:14px;line-height:24px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
 				ข้าพเจ้าขอรับรองว่า ข้าพเจ้ามีสิทธิได้รับเงินช่วยเหลือเกี่ยวกับการรักษาพยาบาลตามระเบียบการช่วยเหลือพนักงานเกี่ยวกับการรักษาพยาบาลสำหรับบุคคลที่เข้ารับการรักษาพยาบาลดังกล่าวเต็มจำนวน
 			</tr>
 		</table>
 		<table style="margin-bottom:64px">
     		<tr>
-				<td style="font-size:14px;line-height:24px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-				ข้าพเจ้าขอสัญญาว่า หากองค์การสวนสัตว์จ่ายเงินค่าใช้จ่ายในการรักษาพยาบาลเป็นจำนวนมากกว่าสิทธิที่ข้าพเจ้าจะพึงได้รับ ข้าพเจ้าจะชดใช้เงินคืนภายใน ๑๐ วัน นับแต่วันที่ได้รับทราบ ถ้าหากข้าพเจ้าไม่ชดใช้เงินคืนภายในกำหนดดังกล่าว ข้าพเจ้ายินยอมให้ทางองค์การสวนสัตว์หักเงินเดือนหรือเงินอื่นที่ข้าพเจ้าพึ่งได้รับจากทางองค์การสวนสัตว์ชดใช้จนครบถ้วน
+				<td style="font-size:14px;line-height:24px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				ข้าพเจ้าขอสัญญาว่า หากองค์การสวนสัตว์จ่ายเงินค่าใช้จ่ายในการรักษาพยาบาลเป็นจำนวนมากกว่าสิทธิที่ข้าพเจ้าจะพึงได้รับ ข้าพเจ้าจะชดใช้เงินคืนภายใน ๑๐ วัน นับแต่วันที่ได้รับทราบ ถ้าหากข้าพเจ้าไม่ชดใช้เงินคืนภายในกำหนดดังกล่าว ข้าพเจ้ายินยอมให้ทางองค์การสวนสัตว์หักเงินเดือนหรือเงินอื่นที่ ข้าพเจ้าพึ่งได้รับจากทางองค์การสวนสัตว์ชดใช้จนครบถ้วน
 			</tr>
 		</table>
 		<table>

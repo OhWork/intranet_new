@@ -36,26 +36,26 @@
 		<table>
     		<tr>
 				<td style="font-size:14px;line-height:24px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ๑. ข้าพเจ้า
-				<?php echo $show['hrctf_name']; echo thainumDigit($show['hrctf_position']);?>
-				 สังกัด <?php echo $show['zoo_name'];?> ได้รับการบรรจุเป็นพนักงานเมื่อวันที่<?php echo thainumDigit($datestartwork);?>อัตราเงินเดือนปัจจุบัน<?php echo thainumDigit($show['hrctf_salary']);?> บาท</td>
+				<?php echo $show['hrctf_name'];?> <?php echo thainumDigit($show['hrctf_position']);?>
+				 สังกัด <?php echo $show['zoo_name'];?> ได้รับการบรรจุเป็นพนักงานเมื่อวันที่ <?php echo thainumDigit($datestartwork);?> อัตราเงินเดือนปัจจุบัน <?php echo thainumDigit($show['hrctf_salary']);?> บาท</td>
 			</tr>
 		</table>
 		<!--บรรทัดที่ 6-->
-		<table style="margin-bottom:30px">
+		<table style="margin-bottom:30px;">
     		<tr>
-				<td style="font-size:14px;line-height:24px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ๒. วัตถุประสงค์เพื่อ <?php echo $show['typectf_name'];?>
+				<td style="font-size:14px;line-height:24px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ๒. วัตถุประสงค์เพื่อ<?php echo $show['typectf_name'];?>
 			</tr>
 		</table>
 		<!--บรรทัดที่ 7-->
-		<table  style="margin-bottom:30px">
+		<table style="margin-bottom:30px;">
     		<tr>
-				<td style="font-size:14px;line-height:24px;letter-spacing:nomal;">ข้าพเจ้าขอรับรองว่า ข้อความดังกล่าวข้างต้นเป็นความจริงทุกประการ</td>
+				<td style="font-size:14px;line-height:24px;letter-spacing:nomal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ข้าพเจ้าขอรับรองว่า ข้อความดังกล่าวข้างต้นเป็นความจริงทุกประการ</td>
 			</tr>
 		</table>
 		<!--บรรทัดที่ 8-->
 		<table>
     		<tr>
-				<td style="font-size:14px;">ลงชื่อ</td>
+				<td style="font-size:14px;padding-left:340px;">ลงชื่อ</td>
 				<td style="font-size:14px;"><?php echo $show['hrctf_name'];?></td>
 				<td style="font-size:14px;">ผู้ขอ</td>
 			</tr>
@@ -63,14 +63,14 @@
 		<!--บรรทัดที่ 8-->
 		<table>
 			<tr>
-				<td style="font-size:14px;padding-left:28px;">(</td>
+				<td style="font-size:14px;padding-left:368px;">(</td>
 				<td style="font-size:14px;"><?php echo $show['hrctf_name'];?></td>
 				<td style="font-size:14px;">)</td>
 			</tr>
 		</table>
 		<table>
     		<tr>
-				<td style="font-size:14px;">วันที่<?php echo thainumDigit($datenow); ?></td>
+				<td style="font-size:14px;padding-left:340px;">วันที่ <?php echo thainumDigit($datenow); ?></td>
 			</tr>
 		</table>
     </body>
