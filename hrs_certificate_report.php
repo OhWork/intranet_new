@@ -9,6 +9,8 @@
     $id = $_GET['id'];
     $rs = $rs = $db->findByPK33('hrctf','typectf','zoo','typectf_typectf_id','typectf_id','zoo_zoo_id','zoo_id','hrctf_id',$id)->execute();
     $show = mysqli_fetch_assoc($rs);
+    $datestartwork = DateThai($show['hrctf_datestartwork']);
+    $datenow = DateThai(date("d-m-Y"));
 ?>
 <html>
     <head>
@@ -34,14 +36,14 @@
 		<table>
     		<tr>
 				<td style="font-size:14px;line-height:24px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ๑. ข้าพเจ้า
-				<?php echo $show['hrctf_name'];?> <?php echo $show['hrctf_position'];?>
-				 สังกัด <?php echo $show['zoo_name'];?> ได้รับการบรรจุเป็นพนักงานเมื่อวันที่<!--ตรงนี้ใส่code วันที่บรรจุ -->อัตราเงินเดือนปัจจุบัน<!--ตรงนี้ใส่code เงินเดือนปัจจุบัน --></td>
+				<?php echo $show['hrctf_name']; echo thainumDigit($show['hrctf_position']);?>
+				 สังกัด <?php echo $show['zoo_name'];?> ได้รับการบรรจุเป็นพนักงานเมื่อวันที่<?php echo thainumDigit($datestartwork);?>อัตราเงินเดือนปัจจุบัน<?php echo thainumDigit($show['hrctf_salary']);?> บาท</td>
 			</tr>
 		</table>
 		<!--บรรทัดที่ 6-->
 		<table style="margin-bottom:30px">
     		<tr>
-				<td style="font-size:14px;line-height:24px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ๒. วัตถุประสงค์เพื่อ
+				<td style="font-size:14px;line-height:24px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ๒. วัตถุประสงค์เพื่อ <?php echo $show['typectf_name'];?>
 			</tr>
 		</table>
 		<!--บรรทัดที่ 7-->
@@ -54,7 +56,7 @@
 		<table>
     		<tr>
 				<td style="font-size:14px;">ลงชื่อ</td>
-				<td style="font-size:14px;">.............................................</td>
+				<td style="font-size:14px;"><?php echo $show['hrctf_name'];?></td>
 				<td style="font-size:14px;">ผู้ขอ</td>
 			</tr>
 		</table>
@@ -62,13 +64,13 @@
 		<table>
 			<tr>
 				<td style="font-size:14px;padding-left:28px;">(</td>
-				<td style="font-size:14px;">.............................................</td>
+				<td style="font-size:14px;"><?php echo $show['hrctf_name'];?></td>
 				<td style="font-size:14px;">)</td>
 			</tr>
 		</table>
 		<table>
     		<tr>
-				<td style="font-size:14px;">วันที่</td>
+				<td style="font-size:14px;">วันที่<?php echo thainumDigit($datenow); ?></td>
 			</tr>
 		</table>
     </body>
