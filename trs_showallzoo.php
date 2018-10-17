@@ -302,12 +302,12 @@
             $sqlplus = "11,12,13,14,15,16,17";
         }
     if($search == 1){ ?>
-    <div class='col-md-12' style="float: left;">
-        <div class='col-md-12'><h3>รายงานผู้เข้าชมประจำ<?php echo $thai_date; ?></h3>
+    <div class='col-12 mt-3' style="float: left;">
+        <div class='col-12'><h3>รายงานผู้เข้าชมประจำ<?php echo $thai_date; ?></h3>
     <?php
     }else if($search == 2){ ?>
-    <div class='col-md-12' style="float: left;">
-        <div class='col-md-12'><h3>รายงานผู้เข้าชมระหว่างวันที่<?php echo $thai_date2_1; ?> ถึง <?php echo $thai_date2_2; ?></h3>
+    <div class='col-12 mt-3' style="float: left;">
+        <div class='col-12'><h3>รายงานผู้เข้าชมระหว่างวันที่<?php echo $thai_date2_1; ?> ถึง <?php echo $thai_date2_2; ?></h3>
 <?php
     }else if($search == 3){
     switch($month){
@@ -324,20 +324,20 @@
         case 11: $monthtxt = "พฤศจิกายน"; break;
         case 12: $monthtxt = "ธันวาคม"; break;
     } ?>
-        <div class='col-md-12' style="float: left;">
-			<div class='col-md-12'>
+        <div class='col-12 mt-3' style="float: left;">
+			<div class='col-12'>
 				<h3>รายงานผู้เข้าชมประจำเดือน <?php echo $monthtxt; ?> พ.ศ. <?php echo $yearmonth; ?></h3>
     <?php }else if($search == 4){ ?>
-	    <div class='col-md-12' style="float: left;">
-			<div class='col-md-12'>
+	    <div class='col-12 mt-3' style="float: left;">
+			<div class='col-12'>
 				<h3>รายงานผู้เข้าชมประจำ <?php echo $textqua; ?> พ.ศ. <?php echo $yearqua; ?></h3>
 	<?php }else if($search == 5){ ?>
-	    <div class='col-md-12' style="float: left;">
-			<div class='col-md-12'>
+	    <div class='col-12 mt-3' style="float: left;">
+			<div class='col-12'>
 				<h3>รายงานผู้เข้าชมประจำปี <?php echo $yearonly; ?></h3><!-- //แสดงวันที่ -->
     <?php }else{ ?>
-        <div class='col-md-12' style="float: left;">
-			<div class='col-md-12'>
+        <div class='col-12 mt-3' style="float: left;">
+			<div class='col-12'>
 				<h3>รายงานผู้เข้าชม <?php echo $thai_date;?></h3>
 	<?php }
 

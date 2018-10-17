@@ -21,6 +21,9 @@
     <body>
 		<!--บรรทัดที่ 1-->
 		<table align="left">
+			<tr>
+                <td style="font-size:24px;padding-left:295px;padding-bottom:30px;"><img style='width:90px;' src='images/Logo/ZPO.png'></td>
+			</tr>
     		<tr>
 				<td style="font-size: 14px;padding-left:170px;">คำขอหนังสือรับรองการมีสิทธิรับเงินช่วยเหลือค่ารักษาพยาบาล</td>
 			</tr>

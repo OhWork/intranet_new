@@ -36,7 +36,7 @@ session_start();
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 <body>
-			<nav class="navbar navbar-expand-md navbar-dark bg-dark col-md-12">
+			<nav class="navbar navbar-expand-md navbar-dark bg-dark col-md-12 printdisplaynone">
 				<a class="navbar-brand brandedit" href="#"><h4>องค์การสวนสัตว์ ในพระบรมราชูปถัมภ์</h4></a>
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
@@ -74,7 +74,7 @@ session_start();
 					</div>
 				</div>
 			</div>
-			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-5" style="margin-left:15%;">
+			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-5 printdisplaynone" style="margin-left:15%;">
 				<div class="row">
 					<div class="indexft"><a href="http://www.zoothailand.org" target="_blank"><img src="images/Logo/ZPO.png"/></a></div>
 					<div class="indexft"><a href="http://www.dusit.zoothailand.org" target="_blank"><img src="images/Logo/Dusitzoo.png"></a></div>
