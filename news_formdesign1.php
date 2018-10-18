@@ -5,7 +5,7 @@
 	$lbheadnews = new label('หัวข้อ : ');
 	$txtheadnews = new textfield('news_head','','form-control','','');
 	$lbpic = new label('ภาพ');
-	$filepic = new inputFile('news_picdetail[]','','file_id');
+	$filepic = new inputFile('news_picdetail[]','file_id','file_id');
 	$detailnews = new textAreareadonly('detail_news','form-control','text_editer','','5','5','');
 	$last_detail_id = new hiddenfield('last_detail_id','last_detail_id','form-control','1','');
 	if(!empty($_GET['id'])){
@@ -79,9 +79,11 @@
 						<div class='col-xl-9 col-lg-9 col-md-9 col-sm-9 col-9'>
 							<?php
 								$r3=$db->findByPK('newsImg','newsImg_connect',$id)->execute();
+								$i = 0;
 								foreach($r3 as $showpic){
+									$i++;
 								?>
-								<img src="<?php echo $showpic['newsImg_path'],$showpic['newsImg_name'];?>" width="100px" height="100px">
+								<img id="preimg<?php echo $i;?>" class="preimg" src="<?php echo $showpic['newsImg_path'],$showpic['newsImg_name'];?>" width="100px" height="100px">
 								<?php
 								}
 							?>
@@ -184,29 +186,27 @@
 				var myElement1 = document.createElement('input');
 				myElement1.setAttribute('type',"file");
 				myElement1.setAttribute('name',"news_picdetail[]");
+				myElement1.setAttribute('class',"file_id");
 				mySpan.appendChild(myElement1);
 	}
+	console.log($('.preimg').length);
 	function readURL(input) {
         if (input.files && input.files[0]) {
             var reader = new FileReader();
 
             reader.onload = function (e) {
-                $('#preimg').attr('src', e.target.result);
+	            for(var i=0; i <= $('.preimg').length; i++){
+		            console.log(i);
+                	$('#preimg'+i).attr('src', e.target.result);
+                	console.log($('#preimg'+i));
+                }
             }
 
             reader.readAsDataURL(input.files[0]);
         }
     }
-    var news_id = $('#new_id').val();
-    console.log(news_id);
-    if(news_id ==''){
-		$('#preimg').hide();
-	}
-	else{
-	    $('#preimg').show();
-	}
-    $("#cover_new").change(function(){
-	    $('#preimg').show();
+
+    $(".file_id").change(function(){
         readURL(this);
     });
 
