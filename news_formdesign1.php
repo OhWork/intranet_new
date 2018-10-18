@@ -173,8 +173,6 @@
                 });
         function readURL(input) {
 	        if (input.files && input.files[0]) {
-
-// 		        for(var i=0; i <= $('.preimg').length; i++){
 		            var reader = new FileReader();
 
 		            reader.onload = function (e) {
@@ -182,7 +180,6 @@
 		            }
 
 					reader.readAsDataURL(input.files[0]);
-// 	            }
 	        }
     	}
 
