@@ -7,7 +7,7 @@
 	$lbpic = new label('ภาพ');
 	$lbvdo = new label('วีดีโอ');
 	$filevideo = new inputFile('news_videodetail','','file_id');
-	$filepic = new inputFile('news_picdetail[]','','file_id');
+	$filepic = new inputFile('news_picdetail[]','file','file_id');
 	$detailnews = new textAreareadonly('detail_news[]','form-control','text_editer','','5','5','');
 	$detailnews2 = new textAreareadonly('detail_news[]','form-control','text_editer2','','5','5','');
 	$last_detail_id = new hiddenfield('last_detail_id','last_detail_id','form-control','','');
@@ -92,18 +92,36 @@
 							<input type="button" id="button_canceletail" value="ยกเลิก">
 						</div>
 						<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12'>
-					<div class='row'>
-						<div class='col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3'></div>
-						<div class='col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3'>
-								<span id="mySpan">
-								</span>
-					</div>
-						<div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3" id="add">
-							<input class="btn btn-primary col-12" name="btnButton" id="btnButton" type="button" value="เพิ่ม" onClick="JavaScript:fncCreateElement();">
+							<div class='row'>
+								<div class='col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3'></div>
+								<div class='col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3'>
+										<span id="mySpan">
+										</span>
+								</div>
+								<div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3" id="add">
+									<input class="btn btn-primary col-12" name="btnButton" id="btnButton" type="button" value="เพิ่ม" onClick="JavaScript:fncCreateElement();">
+								</div>
+							</div>
 						</div>
+						<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-2">
+					<div class='row'>
+						<div class='col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2'></div>
+						<div class='col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10'>
+							<?php
+								$r3=$db->findByPK('newsImg','newsImg_connect',$id)->execute();
+								$i = 0;
+								foreach($r3 as $showpic){
+									$i++;
+								?>
+								<img id="preimg<?php echo $i;?>" class="preimg" src="<?php echo $showpic['newsImg_path'],$showpic['newsImg_name'];?>" width="100px" height="100px">
+								<?php
+								}
+							?>
+						</div>
+					</div>
+				</div>
+			</div>
 
-					</div>
-					</div>
 				</div>
 				<div class='col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2'></div>
 			</div>
@@ -202,11 +220,23 @@
 						}
 					});
                 });
-                   var i = 1 ;
+        function readURL(input) {
+	        if (input.files && input.files[0]) {
+		            var reader = new FileReader();
+
+		            reader.onload = function (e) {
+		                	$('#preimg'+i).attr('src', e.target.result);
+		            }
+
+					reader.readAsDataURL(input.files[0]);
+	        }
+    	}
+
+        var i = 1 ;
 		$('#btnButton').on('click',function(){
 			i++;
 			console.log(i);
-			if(i == 6){
+			if(i == 5){
 				document.getElementById("add").innerHTML = "เพิ่มรูปภาพได้ไม่เกิน 6 รูปภาพครับ";
 				$('#add').addClass('text-danger');
 			}
@@ -217,6 +247,13 @@
 				var myElement1 = document.createElement('input');
 				myElement1.setAttribute('type',"file");
 				myElement1.setAttribute('name',"news_picdetail[]");
+				myElement1.className = "file";
 				mySpan.appendChild(myElement1);
+				$(".file").on('change',function(){
+			        readURL(this,'#preimg'+i);
+			    });
 	}
+    $(".file").on('change',function(){
+        readURL(this,'#preimg'+i);
+    });
 </script>
