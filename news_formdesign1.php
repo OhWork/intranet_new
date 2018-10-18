@@ -73,6 +73,21 @@
 						<div class='col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1'></div>
 					</div>
 				</div>
+				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-2">
+					<div class='row'>
+						<div class='col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3'></div>
+						<div class='col-xl-9 col-lg-9 col-md-9 col-sm-9 col-9'>
+							<?php
+								$r3=$db->findByPK('newsImg','newsImg_connect',$id)->execute();
+								foreach($r3 as $showpic){
+								?>
+								<img src="<?php echo $showpic['newsImg_path'],$showpic['newsImg_name'];?>" width="100px" height="100px">
+								<?php
+								}
+							?>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 		<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3">
@@ -171,6 +186,31 @@
 				myElement1.setAttribute('name',"news_picdetail[]");
 				mySpan.appendChild(myElement1);
 	}
+	function readURL(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                $('#preimg').attr('src', e.target.result);
+            }
+
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+    var news_id = $('#new_id').val();
+    console.log(news_id);
+    if(news_id ==''){
+		$('#preimg').hide();
+	}
+	else{
+	    $('#preimg').show();
+	}
+    $("#cover_new").change(function(){
+	    $('#preimg').show();
+        readURL(this);
+    });
+
+
 
 </script>
 
