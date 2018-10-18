@@ -63,7 +63,7 @@
 					foreach($rsimg as $showimg){
 				?>
 				<div class='col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2'>
-					<img height="100" width="100%" src='<?php echo $showimg['newsImg_path'],$showimg['newsImg_name'] ; ?>' />
+					<img height="100" width="100%" class="pop" src='<?php echo $showimg['newsImg_path'],$showimg['newsImg_name'] ; ?>' />
 				</div>
 				<?php  } ?>
 
@@ -72,3 +72,22 @@
 	</div>
 </div>
 <div class='col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1'></div>
+<div class="modal fade" id="imagemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+		<img src="" class="imagepreview" style="width: 100%; height:100%;">
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  $(function() {
+          $('.pop').on('click', function() {
+	          console.log($(this).attr('src'));
+              $('.imagepreview').attr('src', $(this).attr('src'));
+              $('#imagemodal').modal('show');
+          });
+  });
+</script>
