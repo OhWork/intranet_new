@@ -104,22 +104,22 @@
 							</div>
 						</div>
 						<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-2">
-					<div class='row'>
-						<div class='col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2'></div>
-						<div class='col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10'>
-							<?php
-								$r3=$db->findByPK('newsImg','newsImg_connect',$id)->execute();
-								$i = 0;
-								foreach($r3 as $showpic){
-									$i++;
-								?>
-								<img id="preimg<?php echo $i;?>" class="preimg" src="<?php echo $showpic['newsImg_path'],$showpic['newsImg_name'];?>" width="100px" height="100px">
-								<?php
-								}
-							?>
+							<div class='row'>
+								<div class='col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2'></div>
+								<div class='col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10'>
+									<?php
+										$r3=$db->findByPK('newsImg','newsImg_connect',$id)->execute();
+										$i = 0;
+										foreach($r3 as $showpic){
+											$i++;
+										?>
+										<img id="preimg<?php echo $i;?>" class="preimg" src="<?php echo $showpic['newsImg_path'],$showpic['newsImg_name'];?>" width="100px" height="100px">
+										<?php
+										}
+									?>
+								</div>
+							</div>
 						</div>
-					</div>
-				</div>
 			</div>
 
 				</div>
@@ -237,7 +237,7 @@
 			i++;
 			console.log(i);
 			if(i == 5){
-				document.getElementById("add").innerHTML = "เพิ่มรูปภาพได้ไม่เกิน 6 รูปภาพครับ";
+				document.getElementById("add").innerHTML = "เพิ่มรูปภาพได้ไม่เกิน 5 รูปภาพครับ";
 				$('#add').addClass('text-danger');
 			}
 		});

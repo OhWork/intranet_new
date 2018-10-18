@@ -187,7 +187,7 @@
 		$('#btnButton').on('click',function(){
 			i++;
 			if(i == 5){
-				document.getElementById("add").innerHTML = "เพิ่มรูปภาพได้ไม่เกิน 6 รูปภาพครับ";
+				document.getElementById("add").innerHTML = "เพิ่มรูปภาพได้ไม่เกิน 5 รูปภาพครับ";
 				$('#add').addClass('text-danger');
 			}
 		});
