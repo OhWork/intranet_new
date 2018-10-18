@@ -5,7 +5,7 @@
 	$lbheadnews = new label('หัวข้อ : ');
 	$txtheadnews = new textfield('news_head','','form-control','','');
 	$lbpic = new label('ภาพ');
-	$filepic = new inputFile('news_picdetail[]','file_id','file_id');
+	$filepic = new inputFile('news_picdetail[]','file','file_id');
 	$detailnews = new textAreareadonly('detail_news','form-control','text_editer','','5','5','');
 	$last_detail_id = new hiddenfield('last_detail_id','last_detail_id','form-control','1','');
 	if(!empty($_GET['id'])){
@@ -171,11 +171,25 @@
 						}
 					});
                 });
+        function readURL(input) {
+	        if (input.files && input.files[0]) {
+
+// 		        for(var i=0; i <= $('.preimg').length; i++){
+		            var reader = new FileReader();
+
+		            reader.onload = function (e) {
+		                	$('#preimg'+i).attr('src', e.target.result);
+		            }
+
+					reader.readAsDataURL(input.files[0]);
+// 	            }
+	        }
+    	}
+
             var i = 1 ;
 		$('#btnButton').on('click',function(){
 			i++;
-			console.log(i);
-			if(i == 6){
+			if(i == 5){
 				document.getElementById("add").innerHTML = "เพิ่มรูปภาพได้ไม่เกิน 6 รูปภาพครับ";
 				$('#add').addClass('text-danger');
 			}
@@ -186,31 +200,18 @@
 				var myElement1 = document.createElement('input');
 				myElement1.setAttribute('type',"file");
 				myElement1.setAttribute('name',"news_picdetail[]");
-				myElement1.setAttribute('class',"file_id");
+				myElement1.className = "file";
 				mySpan.appendChild(myElement1);
+				$(".file").on('change',function(){
+			        readURL(this,'#preimg'+i);
+			        console.log(this);
+					console.log(i);
+			    });
 	}
-	console.log($('.preimg').length);
-	function readURL(input) {
-        if (input.files && input.files[0]) {
-            var reader = new FileReader();
-
-            reader.onload = function (e) {
-	            for(var i=0; i <= $('.preimg').length; i++){
-		            console.log(i);
-                	$('#preimg'+i).attr('src', e.target.result);
-                	console.log($('#preimg'+i));
-                }
-            }
-
-            reader.readAsDataURL(input.files[0]);
-        }
-    }
-
-    $(".file_id").change(function(){
-        readURL(this);
+    $(".file").on('change',function(){
+        readURL(this,'#preimg'+i);
+		console.log(this);
+		console.log(i);
     });
-
-
-
 </script>
 
