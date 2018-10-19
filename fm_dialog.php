@@ -976,10 +976,10 @@ if(!empty($_POST['searchall'])){
 							<img class="directory-img" data-src="fm_img/<?php echo $icon_theme;?>/folder<?php if($file==".."){ echo "_back"; }?>.png" />
 						</div>
 					</div>
+					<div class="box">
+						<h4><?php echo $result['folder_name']; ?></h4>
+					</div>
 				</a>
-				<div class="box">
-					<h4><?php echo $result['folder_name']; ?></h4>
-				</div>
 			</figure>
 			<?php
 			}
@@ -993,10 +993,10 @@ if(!empty($_POST['searchall'])){
 								<img class="directory-img" data-src="fm_img/<?php echo $icon_theme;?>/folder<?php if($file==".."){ echo "_back"; }?>.png" />
 							</div>
 						</div>
+					<div class="box">
+						<h4><?php echo $result['folder_name']; ?></h4>
+					</div>
 				</a>
-				<div class="box">
-					<h4><?php echo $result['folder_name']; ?></h4>
-				</div>
 			</figure>
 				<?php
 					}
