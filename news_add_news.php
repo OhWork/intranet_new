@@ -26,6 +26,9 @@
     	}
     $button = new buttonok("ต่อไป","","btn btn-success btn-lg btn-block bt3success col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","");
 	$user_id = $_SESSION['user_id'];
+	$r2 = $db->findByPK('user','user_id',$user_id)->executeRow();
+	$txtname= $r2['user_name'];
+	$txtlast= $r2['user_last'];
     if(!empty($_GET['id'])){
 	    $id = $_GET['id'];
 	    $r = $db->findByPK('news','news_id',$id)->executeRow();
@@ -33,9 +36,6 @@
 	    $txtdatestart->value = $r['news_datestart'];
 		$txtdateend->value = $r['news_dateend'];
 	    $user_id = $r['user_user_id'];
-	    $r2 = $db->findByPK('user','user_id',$user_id)->executeRow();
-	    $txtname= $r2['user_name'];
-		$txtlast= $r2['user_last'];
 		if($r['typeDesignnews_id'] == 1){
 			$radiotypedesign->add(' รูปแบบที่ 1',1,'checked','');
 	    	$radiotypedesign->add(' รูปแบบที่ 2',2,'');
@@ -153,7 +153,8 @@
 					<label>ผู้เขียนข่าว </label>
 				</div>
 				<div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8">
-					<?php echo $txtname." ".$txtlast;?>
+					<?php echo $txtname." ".$txtlast;
+					?>
 				</div>
 			</div>
 		</div>
