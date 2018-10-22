@@ -882,7 +882,6 @@ $files=$sorted;
 		<div class="alert alert-block"><?php echo $folder_message;?></div>
 		<?php } ?>
 		<?php
-			if(empty($_POST['searchall'])){
 			if($show_sorting_bar){ ?>
 		<!-- sorter -->
 		<div class="sorter-container <?php echo "list-view".$view;?>">
@@ -893,7 +892,7 @@ $files=$sorted;
 		<div class='file-extension'><a class="sorter sort-extension <?php if($sort_by=="extension"){ echo ($descending)?"descending":"ascending"; } ?>" href="javascript:void('')" data-sort="extension"><?php echo trans('Type');?></a></div>
 		<div class='file-operations'><?php echo trans('Operations');?></div>
 		</div>
-		<?php } } ?>
+		<?php }?>
 
 		<input type="hidden" id="file_number" value="<?php echo $n_files;?>" />
 		<!--ul class="thumbnails ff-items"-->
@@ -904,7 +903,7 @@ $files=$sorted;
         @$searchall = $_POST['searchall'];
 
 
-            $query = $db->specifytable('*','files JOIN folder ON files.folder_folder_id = folder.folder_id',"files_name LIKE '%{$searchall}%'")->execute();
+            $query = $db->specifytable('*','files JOIN folder ON files.folder_folder_id = folder.folder_id JOIN cdl ON files.files_id = cdl.files_files_id',"files_name LIKE '%{$searchall}%'")->execute();
 
 if(!empty($_POST['searchall'])){
 		if($_POST['type'] == 1){
@@ -919,6 +918,9 @@ if(!empty($_POST['searchall'])){
 					</div>
 						<div class="box">
 							<h4><?php echo $result['files_name']; ?></h4>
+							<figcaption>
+							<h4><?php echo $result['cdl_count']; ?></h4>
+							</figcaption>
 							<figcaption>
 							<?php if($result['folder_position'] != 0){
 									 $getposition = $result['folder_position'];
