@@ -8,7 +8,7 @@
 	$filepic = new inputFile('news_picdetail','file','file_id');
 	$filepic2 = new inputFile('news_picdetail2[]','file','file_id');
 	$detailnews = new textAreareadonly('detail_news','form-control','text_editer','','5','5','');
-	$last_detail_id = new hiddenfield('last_detail_id','last_detail_id','form-control','1','');
+	$last_detail_id = new hiddenfield('last_detail_id','last_detail_id','form-control','','');
 	$button = new buttonok("บันทึก","","btn btn-success btn-lg btn-block bt3success col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","");
 	if(!empty($_GET['id'])){
 		$id=$_GET['id'];
@@ -75,13 +75,20 @@
 						<div class='col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2'></div>
 						<div class='col-xl-9 col-lg-9 col-md-9 col-sm-9 col-9'>
 							<?php
-								$r3=$db->findByPK12('newsImg','newsImg_position',2,'newsImg_connect',$id)->executeAssoc();
-								echo $r3['newsImg_id'];
-								for($j=0; $j<5; $j++){
-								?>
-									<img id="preimg<?php echo $i;?>" class="preimg" src="<?php echo $r3['newsImg_path'],$r3['newsImg_name'];?>" width="100px" height="100px">
-								<?php
-									echo $filepic2;
+								if($last_detail_id->value != ''){
+									$r3=$db->findByPK12('newsImg','newsImg_position',2,'newsImg_connect',$id)->execute();
+									$i = 0;
+									foreach($r3 as $showimg){
+											$i++;
+									?>
+										<img id="preimg<?php echo $i;?>" class="preimg" src="<?php echo $showimg['newsImg_path'],$showimg['newsImg_name'];?>" width="100px" height="100px">
+									<?php
+										echo $filepic2;
+									}
+								}else{
+									for($j=0; $j<5; $j++){
+										echo $filepic2;
+									}
 								}
 							?>
 						</div>
@@ -99,7 +106,7 @@
 				<input  type="hidden" id="id" name="new_id" value="<?php echo $id;?>" />
 				<input  type="hidden" id="datetime" name="date_time" value="<?php echo $datetime;?>" />
 				<input  type="hidden" name="form_design" value="1" />
-				<input  type="hidden" id="last_detail_id" name="last_detail_id" value="" />
+				<?php echo $last_detail_id;?>
 			</div>
 			</div>
 		</div>
