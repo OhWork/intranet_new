@@ -13,6 +13,7 @@
 	$filepic6 = new inputFile('news_picdetail6','file','file_id6');
 	$detailnews = new textAreareadonly('detail_news','form-control','text_editer','','5','5','');
 	$last_detail_id = new hiddenfield('last_detail_id','last_detail_id','form-control','','');
+	$button = new buttonok("บันทึก","submit","btn btn-success btn-lg btn-block bt3success col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","");
 	$button1 = new buttonok("บันทึก","submit1","btn btn-success btn-lg btn-block bt3success col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","");
 	$button2 = new buttonok("บันทึก","submit2","btn btn-success btn-lg btn-block bt3success col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","");
 	$button3 = new buttonok("บันทึก","submit3","btn btn-success btn-lg btn-block bt3success col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","");
@@ -59,7 +60,18 @@
 						</div>
 						<div class='col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3'>
 							<?php
+								$rsshowimg = $db->findByPK12('newsImg','newsImg_position',1,'newsImg_connect',$_GET['id'])->executeAssoc();
+								if(!empty($rsshowimg['newsImg_id'])){
+								?>
+								<img id="preimg" class="preimg" src="<?php echo $rsshowimg['newsImg_path'],$rsshowimg['newsImg_name'];?>" width="100px" height="100px">
+								<?php
+								}else{
+								?>
+								<img id="preimg" class="preimg" src="" width="100px" height="100px">
+								<?php
+								}
 								echo $filepic;
+								echo $button;
 							?>
 						</div>
 
@@ -240,6 +252,26 @@
 						}
 					});
                 });
+        $('#submit').on('click',function(e){
+	        e.preventDefault();
+	        var fd = new FormData();
+			var files = $('#file_id')[0].files[0];
+			var new_id = $('#new_id').val();
+			fd.append('news_picdetail',files);
+			fd.append('new_id',new_id);
+			$.ajax({
+				url: "news_insert_medie.php",
+				type: "POST",
+				data:  fd,
+				contentType: false,
+				cache: false,
+				processData:false,
+				success: function(data) {
+					console.log(1234);
+					console.log(data);
+				}
+			});
+		});
         $('#submit1').on('click',function(e){
 	        e.preventDefault();
 	        var fd = new FormData();
