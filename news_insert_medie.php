@@ -5,7 +5,7 @@
     include 'database/db_tools.php';
 	include 'connect.php';
 	$rs = $db-> findByPK('newsImg','newsImg_connect',$_POST['new_id'])->executeAssoc();
-	if(!empty($rs['newsImg_id'])){
+	if(!empty($rs['newsImg_id']) && !empty($_POST['last_detail_id'])){
 		if(!empty($_FILES['news_picdetail'])){
 			$data['newsImg_name'] = basename($_FILES['news_picdetail']['name']);
 			$rseditpic = $db->update2con('newsImg',$data,'newsImg_position',1,'newsImg_connect',$_POST['new_id']);
