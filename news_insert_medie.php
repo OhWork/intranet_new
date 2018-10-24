@@ -3,6 +3,10 @@
 	ob_start();
     include 'database/db_tools.php';
 	include 'connect.php';
+	if(!empty($_POST['last_detail_id'])){
+
+	}
+	else{
 		if(!empty($_FILES['news_picdetail'])){
 			$target_dir = 'temp/';
 			$target_file = $target_dir.basename($_FILES['news_picdetail']['name']);
@@ -41,6 +45,7 @@
 					'newsVideo_connect' => $_POST['new_id'],
 				));
 		}
+	}
 		if(@$rspic || $rspic2 || $rsvdo){
 	    	 echo "<div class='statusok'>บันทึกเสร็จสิ้น</div>";
 			 $link = "admin_index.php?url=news_show_news.php";

@@ -6,8 +6,8 @@
 	$txtheadnews = new textfield('news_head','','form-control','','');
 	$lbpic = new label('ภาพ');
 	$lbvdo = new label('วีดีโอ');
-	$filevideo = new inputFile('news_videodetail','','file_id');
-	$filepic = new inputFile('news_picdetail[]','file','file_id');
+	$filepic = new inputFile('news_picdetail','file','file_id');
+	$txtlinkvdo = new textfield('news_vdo','','form-control','','');
 	$detailnews = new textAreareadonly('detail_news[]','form-control','text_editer','','5','5','');
 	$detailnews2 = new textAreareadonly('detail_news[]','form-control','text_editer2','','5','5','');
 	$last_detail_id = new hiddenfield('last_detail_id','last_detail_id','form-control','','');
@@ -60,7 +60,7 @@
 								<div class='col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8'>
 									<?php
 										echo $lbvdo;
-										echo $filevideo;
+										echo $txtlinkvdo;
 									?>
 								</div>
 								<div class='col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2'></div>

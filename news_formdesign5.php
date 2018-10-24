@@ -7,8 +7,10 @@
 	$lbpic = new label('ภาพ');
 	$lbvdo = new label('วีดีโอ');
 	$filevideo = new inputFile('news_videodetail','','file_id');
-	$filepic = new inputFile('news_picdetail[]','file','file_id');
+	$filepic = new inputFile('news_picdetail','file','file_id');
+	$txtlinkvdo = new textfield('news_vdo','','form-control','','');
 	$detailnews = new textAreareadonly('detail_news','form-control','text_editer','','5','5','');
+	$button = new buttonok("บันทึก","","btn btn-success btn-lg btn-block bt3success col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","");
 	if(!empty($_GET['id'])){
 		$id=$_GET['id'];
 		$r2 = $db->findByPK('news','news_id',$id)->executeRow();
@@ -21,7 +23,7 @@
 		else{
 				$detailnews->value = $r['newsDetails_name'];
 		}
-	}echo $form->open("form_detail","form","col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","","");
+	}echo $form->open("form_detail","form","col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","news_insert_medie.php","");
 ?>
 <div class='col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1'></div>
 <div class='col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10 pb-3' style="background-color:#ffffff;">
@@ -71,32 +73,40 @@
 								?>
 							</div>
 							<div class='col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3'>
-								<?php
-									echo $filepic;
-								?>
-								<span id="mySpan">
-								</span>
 							</div>
 							<div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3" id="add">
-								<input class="btn btn-primary col-12" name="btnButton" id="btnButton" type="button" value="เพิ่ม" onClick="JavaScript:fncCreateElement();">
 							</div>
 						</div>
 					</div>
 					<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-2">
 							<div class='row'>
 								<div class='col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2'></div>
-								<div class='col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10'>
+								<div class='col-xl-9 col-lg-9 col-md-9 col-sm-9 col-9'>
 									<?php
-										$r3=$db->findByPK('newsImg','newsImg_connect',$id)->execute();
-										$i = 0;
-										foreach($r3 as $showpic){
+								if($last_detail_id->value != ''){
+									$r3=$db->findByPK12('newsImg','newsImg_position',2,'newsImg_connect',$id)->execute();
+									$i = 0;
+									foreach($r3 as $showimg){
 											$i++;
-										?>
-										<img id="preimg<?php echo $i;?>" class="preimg" src="<?php echo $showpic['newsImg_path'],$showpic['newsImg_name'];?>" width="100px" height="100px">
-										<?php
-										}
 									?>
-								</div>
+										<img id="preimg<?php echo $i;?>" class="preimg" src="<?php echo $showimg['newsImg_path'],$showimg['newsImg_name'];?>" width="100px" height="100px">
+									<?php
+										echo $filepic2;
+									}
+								}else{
+									for($j=1; $j<6; $j++){
+										?>
+										<img id="preimg<?php echo $j;?>" class="preimg" src="" width="100px" height="100px">
+										<input  type="file" name="news_picdetail2[]" id="file_id<?php echo $j;?>" class="file"/>
+										<?php
+									}
+								}
+							?>
+						</div>
+						<div class='col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1'>
+							<?php echo $button;?>
+						</div>
+
 							</div>
 						</div>
 				</div>
@@ -181,7 +191,9 @@
 						}
 					});
                 });
-         function readURL(input) {
+
+		var i = 0 ;
+        function readURL(input) {
 	        if (input.files && input.files[0]) {
 		            var reader = new FileReader();
 
@@ -192,29 +204,11 @@
 					reader.readAsDataURL(input.files[0]);
 	        }
     	}
-
-        var i = 1 ;
-		$('#btnButton').on('click',function(){
-			i++;
-			console.log(i);
-			if(i == 5){
-				document.getElementById("add").innerHTML = "เพิ่มรูปภาพได้ไม่เกิน 5 รูปภาพครับ";
-				$('#add').addClass('text-danger');
-			}
-		});
-           function fncCreateElement(){
-
-		   		var mySpan = document.getElementById('mySpan');
-				var myElement1 = document.createElement('input');
-				myElement1.setAttribute('type',"file");
-				myElement1.setAttribute('name',"news_picdetail[]");
-				myElement1.className = "file";
-				mySpan.appendChild(myElement1);
-				$(".file").on('change',function(){
-			        readURL(this,'#preimg'+i);
-			    });
-	}
     $(".file").on('change',function(){
+		console.log(i);
         readURL(this,'#preimg'+i);
-    });</script>
+        i++;
+    });
+
+</script>
 
