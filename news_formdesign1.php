@@ -86,8 +86,11 @@
 										echo $filepic2;
 									}
 								}else{
-									for($j=0; $j<5; $j++){
-										echo $filepic2;
+									for($j=1; $j<6; $j++){
+										?>
+										<img id="preimg<?php echo $j;?>" class="preimg" src="" width="100px" height="100px">
+										<input  type="file" name="news_picdetail2[]" id="file_id<?php echo $j;?>" class="file"/>
+										<?php
 									}
 								}
 							?>
@@ -178,19 +181,23 @@
 						}
 					});
                 });
+
+        var i = 0 ;
         function readURL(input) {
 	        if (input.files && input.files[0]) {
 		            var reader = new FileReader();
 
 		            reader.onload = function (e) {
-		                	$('#preimg').attr('src', e.target.result);
+		                	$('#preimg'+i).attr('src', e.target.result);
 		            }
 
 					reader.readAsDataURL(input.files[0]);
 	        }
     	}
     $(".file").on('change',function(){
-        readURL(this,'#preimg');
+		console.log(i);
+        readURL(this,'#preimg'+i);
+        i++;
     });
 </script>
 
