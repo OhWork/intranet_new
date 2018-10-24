@@ -5,9 +5,11 @@
 	$lbheadnews = new label('หัวข้อ : ');
 	$txtheadnews = new textfield('news_head','','form-control','','');
 	$lbpic = new label('ภาพ');
-	$filepic = new inputFile('news_picdetail[]','file','file_id');
+	$filepic = new inputFile('news_picdetail','file','file_id');
+	$filepic2 = new inputFile('news_picdetail2[]','file','file_id');
 	$detailnews = new textAreareadonly('detail_news','form-control','text_editer','','5','5','');
 	$last_detail_id = new hiddenfield('last_detail_id','last_detail_id','form-control','1','');
+	$button = new buttonok("บันทึก","","btn btn-success btn-lg btn-block bt3success col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","");
 	if(!empty($_GET['id'])){
 		$id=$_GET['id'];
 		$r2 = $db->findByPK('news','news_id',$id)->executeRow();
@@ -51,11 +53,6 @@
 							<?php
 								echo $filepic;
 							?>
-								<span id="mySpan">
-								</span>
-					</div>
-						<div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3" id="add">
-							<input class="btn btn-primary col-12" name="btnButton" id="btnButton" type="button" value="เพิ่ม" onClick="JavaScript:fncCreateElement();">
 						</div>
 
 					</div>
@@ -75,18 +72,24 @@
 				</div>
 				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-2">
 					<div class='row'>
-						<div class='col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3'></div>
+						<div class='col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2'></div>
 						<div class='col-xl-9 col-lg-9 col-md-9 col-sm-9 col-9'>
 							<?php
 								$r3=$db->findByPK('newsImg','newsImg_connect',$id)->execute();
 								$i = 0;
-								foreach($r3 as $showpic){
-									$i++;
-								?>
-								<img id="preimg<?php echo $i;?>" class="preimg" src="<?php echo $showpic['newsImg_path'],$showpic['newsImg_name'];?>" width="100px" height="100px">
-								<?php
-								}
+									foreach($r3 as $showpic){
+										$i++;
+									?>
+									<img id="preimg<?php echo $i;?>" class="preimg" src="<?php echo $showpic['newsImg_path'],$showpic['newsImg_name'];?>" width="100px" height="100px">
+									<?php
+									}
+									for($j=0; $j<5; $j++){
+										echo $filepic2;
+									}
 							?>
+						</div>
+						<div class='col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1'>
+							<?php echo $b?>
 						</div>
 					</div>
 				</div>

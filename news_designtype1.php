@@ -19,7 +19,7 @@
 					<div class='row'>
 						<div class='col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3'></div>
 						<div class='col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6'>
-							<img height="250" width="100%" class="pop" src='images/news/<?php echo $rs['news_cover'];?>' />
+							<img height="250" width="100%" class="pop" src='<?php echo $rs['newsImg_path'],$rs['news_cover'];?>' />
 						</div>
 						<div class='col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3'></div>
 					</div>

@@ -124,20 +124,34 @@
 		}
 		}else{
 		if($form_design == 1){
-				for($i = 0; $i<count($_FILES['news_picdetail']['name']); $i++){
-					$target_dir = 'temp/';
-				    $target_file = $target_dir.basename($_FILES['news_picdetail']['name'][$i]);
+				$target_dir = 'temp/';
+				    $target_file = $target_dir.basename($_FILES['news_picdetail']['name']);
 				    $path = 'images/news/newsImg/';
-				    $target_dir_save = $path.basename($_FILES['news_picdetail']['name'][$i]);
-				    move_uploaded_file($_FILES['news_picdetail']['tmp_name'][$i], $target_dir_save);
+				    $target_dir_save = $path.basename($_FILES['news_picdetail']['name']);
+				    move_uploaded_file($_FILES['news_picdetail']['tmp_name'], $target_dir_save);
 
 					$rspic = $db->insert('newsImg',array(
-						'newsImg_name' => basename($_FILES['news_picdetail']['name'][$i]),
+						'newsImg_name' => basename($_FILES['news_picdetail']['name']),
+						'newsImg_path' => $path,
+						'newsImg_position' => 1,
+						'newsImg_connect' => $_POST['new_id']
+					));
+/*
+				for($i = 0; $i<count($_FILES['news_picdetail2']['name']); $i++){
+					$target_dir = 'temp/';
+				    $target_file = $target_dir.basename($_FILES['news_picdetail2']['name'][$i]);
+				    $path = 'images/news/newsImg/';
+				    $target_dir_save = $path.basename($_FILES['news_picdetail2']['name'][$i]);
+				    move_uploaded_file($_FILES['news_picdetail2']['tmp_name'][$i], $target_dir_save);
+
+					$rspic = $db->insert('newsImg',array(
+						'newsImg_name' => basename($_FILES['news_picdetail2']['name'][$i]),
 						'newsImg_path' => $path,
 						'newsImg_position' => 2,
 						'newsImg_connect' => $_POST['new_id']
 					));
 				}
+*/
 				$rs = $db->insert('newsDetails',array(
 					'newsDetails_name' => $_POST['detail_news']
 				));
