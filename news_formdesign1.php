@@ -58,9 +58,6 @@
 								<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mb-4'>
 									<?php echo $lbpic; ?>
 								</div>
-								<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-5 pt-1'>
-									<p>เลือกเพื่อเปลี่ยนรูปภาพหน้าปก</p>
-								</div>
 							</div>
 						</div>
 						<div class='col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3'>
@@ -90,7 +87,7 @@
 											<?php echo $button; ?>
 										</div>
 										<div class='col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6 pl-0'>
-											<button class="btn btn-danger" type="button" id="cancel_pic" value="ยกเลิก">ยกเลิก</button>
+											<button class="btn btn-danger col-12" type="button" id="cancel_pic" value="ยกเลิก">ยกเลิก</button>
 										</div>
 									</div>
 								</div>
@@ -119,9 +116,6 @@
 								<div class='col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3'>
 									<div class='row'>
 										<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-											<?php echo $lbpic2; ?>
-										</div>
-										<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 											<?php $rsshowimg1 = $db->findByPK12('newsImg','newsImg_position',2,'newsImg_connect',$_GET['id'])->executeAssoc(); ?>
 											<input  type="hidden" id="pic_id2" name="pic_id2" value="<?php echo $rsshowimg1['newsImg_id'];?>" />
 											<?php
@@ -135,7 +129,7 @@
 											<?php
 											} ?>
 										</div>
-										<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+										<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-1">
 											<?php echo $filepic2; ?>
 										</div>
 										<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-1'>
@@ -153,9 +147,6 @@
 								<div class='col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3'>
 									<div class='row'>
 										<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-											<?php echo $lbpic2; ?>
-										</div>
-										<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 											<?php $rsshowimg2 = $db->findByPK12('newsImg','newsImg_position',3,'newsImg_connect',$_GET['id'])->executeAssoc();
 											?>
 											<input type="hidden" id="pic_id3" name="pic_id" value="<?php echo $rsshowimg2['newsImg_id'];?>" />
@@ -170,7 +161,7 @@
 											<?php
 											} ?>
 										</div>
-										<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+										<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-1">
 											<?php echo $filepic3; ?>
 										</div>
 										<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-1'>
@@ -188,9 +179,6 @@
 								<div class='col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3'>
 									<div class='row'>
 										<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-											<?php echo $lbpic2; ?>
-										</div>
-										<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 											<?php $rsshowimg3 = $db->findByPK12('newsImg','newsImg_position',4,'newsImg_connect',$_GET['id'])->executeAssoc();
 											?>
 											<input  type="hidden" id="pic_id4" name="pic_id" value="<?php echo $rsshowimg3['newsImg_id'];?>" />
@@ -205,7 +193,7 @@
 											<?php
 											} ?>
 										</div>
-										<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+										<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-1">
 											<?php echo $filepic4; ?>
 										</div>
 										<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-1'>
@@ -223,9 +211,6 @@
 								<div class='col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3'>
 									<div class='row'>
 										<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-											<?php echo $lbpic2; ?>
-										</div>
-										<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 											<?php $rsshowimg4 = $db->findByPK12('newsImg','newsImg_position',5,'newsImg_connect',$_GET['id'])->executeAssoc();
 											?>
 											<input  type="hidden" id="pic_id5" name="pic_id" value="<?php echo $rsshowimg4['newsImg_id'];?>" />
@@ -240,7 +225,7 @@
 											<?php
 											} ?>
 										</div>
-										<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+										<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-1">
 											<?php echo $filepic5; ?>
 										</div>
 										<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-1'>
@@ -255,11 +240,8 @@
 										</div>
 									</div>
 								</div>
-								<div class='col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3'>
+								<div class='col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3 mt-2'>
 									<div class='row'>
-										<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-											<?php echo $lbpic2; ?>
-										</div>
 										<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 											<?php $rsshowimg5 = $db->findByPK12('newsImg','newsImg_position',6,'newsImg_connect',$_GET['id'])->executeAssoc();
 											?>
@@ -275,7 +257,7 @@
 											<?php
 											} ?>
 										</div>
-										<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+										<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-1">
 											<?php echo $filepic6; ?>
 										</div>
 										<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-1'>
