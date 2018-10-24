@@ -9,8 +9,14 @@
 	$lastiddetail =$_POST['last_detail_id'];
 	if($text == ''){
 		if(!empty($_POST['last_detail_id'])){
-			$data2['newsDetails_name'] = $_POST['detail_news'];
-			$rseditdetail = $db->update('newsDetails',$data2,'newsDetails_id',$lastiddetail);
+
+// 		print_r($_POST);
+			$data['newsDetails_name'] = $_POST['detail_news'];
+			$rseditdetail = $db->update2con('newsDetails',$data,'newsDetails_position',1,'newsDetails_connect',$_POST['new_id']);
+			if(!empty($_POST['detail_news2'])){
+			$data2['newsDetails_name'] = $_POST['detail_news2'];
+			$rseditdetail = $db->update2con('newsDetails',$data2,'newsDetails_position',2,'newsDetails_connect',$_POST['new_id']);
+			}
 		}else{
 				$rs = $db->insert('newsDetails',array(
 					'newsDetails_name' => $_POST['detail_news'],
@@ -18,7 +24,7 @@
 					'newsDetails_connect' => $_POST['new_id']
 
 				));
-				if($_POST['detail_news2']){
+				if(!empty($_POST['detail_news2'])){
 					$rs2 = $db->insert('newsDetails',array(
 					'newsDetails_name' => $_POST['detail_news2'],
 					'newsDetails_position' => 2,
@@ -33,9 +39,9 @@
 			$rseditdate = $db->update('news',$data,'news_id',$_POST['new_id']);
 				$selectiddetail = $db->findAllDESC('newsDetails','newsDetails_id')->executeAssoc();
 				$lastiddetail = $selectiddetail['newsDetails_id'];
-				$rsshowdetail = $db->findByPK('newsDetails','newsDetails_id',$lastiddetail)->executeAssoc();
+				$rsshowdetail = $db->findByPK12('newsDetails','newsDetails_position',1,'newsDetails_connect',$_POST['new_id'])->executeAssoc();
 				if($form_design == 4){
-					$rsshowdetail2 = $db->findByPK('newsDetails','newsDetails_connect',$id)->execute();
+					$rsshowdetail2 = $db->findByPK12('newsDetails','newsDetails_position',2,'newsDetails_connect',$_POST['new_id'])->execute();
 					foreach($rsshowdetail2 as $abc){
 						$json_data[]=array(
 						 'detail'=>$abc['newsDetails_name'],
@@ -46,7 +52,7 @@
 				else{
 					$json_data[]=array(
 					 'detail'=>$rsshowdetail['newsDetails_name'],
-					 'lastiddetail'=>$lastiddetail,
+					 'lastiddetail'=>$rsshowdetail['newsDetails_id'],
 					 );
 				}
 				$json= json_encode($json_data);
