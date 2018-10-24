@@ -1,9 +1,11 @@
+<meta charset="UTF-8">
 <?php
 	error_reporting(E_ERROR | E_WARNING | E_PARSE);
 	ob_start();
     include 'database/db_tools.php';
 	include 'connect.php';
-	if(!empty($_POST['last_detail_id'])){
+	$rs = $db-> findByPK('newsImg','newsImg_connect',$_POST['new_id'])->executeAssoc();
+	if(!empty($rs['newsImg_id'])){
 		if(!empty($_FILES['news_picdetail'])){
 			$data['newsImg_name'] = basename($_FILES['news_picdetail']['name']);
 			$rseditpic = $db->update2con('newsImg',$data,'newsImg_position',1,'newsImg_connect',$_POST['new_id']);
@@ -30,7 +32,6 @@
 		}
 	}
 	else{
-		print_r($_POST);
 		if(!empty($_FILES['news_picdetail'])){
 			$target_dir = 'temp/';
 			$target_file = $target_dir.basename($_FILES['news_picdetail']['name']);
@@ -129,8 +130,14 @@
 */
 	}
 		if(@$rspic || $rspic2 || $rseditpic){
+			if(@$rseditpic){
+				echo "<div class='statusok'>แก้ไขเสร็จสิ้น</div>";
+// 				$link = "admin_index.php?url=news_show_news.php";
+			}
+			else{
 	    	 echo "<div class='statusok'>บันทึกเสร็จสิ้น</div>";
-			 $link = "admin_index.php?url=news_show_news.php";
-    	     header( "Refresh: 1; $link" );
+// 			 $link = "admin_index.php?url=news_show_news.php";
+			 }
+//     	     header( "Refresh: 1; $link" );
     	    }
 ?>

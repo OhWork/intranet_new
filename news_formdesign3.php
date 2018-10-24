@@ -6,7 +6,7 @@
 	$txtheadnews = new textfield('news_head','','form-control','','');
 	$lbvdo = new label('วีดีโอ');
 	$filepic = new inputFile('news_videodetail','','file_id');
-	$txtlinkvdo = new textfield('news_vdo','','form-control','','');
+	$txtlinkvdo = new textfield('news_vdo','','form-control','กรุณาก็อบ link จาก YouTubeมาใส่','');
 	$detailnews = new textAreareadonly('detail_news','form-control','text_editer','','5','5','');
 	$last_detail_id = new hiddenfield('last_detail_id','last_detail_id','form-control','','');
 	$button = new buttonok("บันทึก","","btn btn-success btn-lg btn-block bt3success col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","");
