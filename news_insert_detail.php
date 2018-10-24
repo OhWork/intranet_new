@@ -1,4 +1,3 @@
-<meta charset="UTF-8">
 <?php
 	error_reporting(E_ERROR | E_WARNING | E_PARSE);
 	ob_start();
@@ -7,37 +6,30 @@
 	$id = $_POST['new_id'];
 	$text = $_POST['text'];
 	$form_design = $_POST['form_design'];
-// 	$lastiddetail =$_POST['last_detail_id'];
+	$lastiddetail =$_POST['last_detail_id'];
 	if($text == ''){
-/*
 		if(!empty($_POST['last_detail_id'])){
 
 		}else{
-*/
-// 			if($_POST['detail_news']){
 				$rs = $db->insert('newsDetails',array(
 					'newsDetails_name' => $_POST['detail_news'],
 					'newsDetails_position' => 1,
 					'newsDetails_connect' => $_POST['new_id']
 
 				));
-// 			}
-/*
-			if($_POST['detail_news2']){
-				$rs2 = $db->insert('newsDetails',array(
+				if($_POST['detail_news2']){
+					$rs2 = $db->insert('newsDetails',array(
 					'newsDetails_name' => $_POST['detail_news2'],
 					'newsDetails_position' => 2,
 					'newsDetails_connect' => $_POST['new_id']
 
 				));
-// 			}
+				}
 
 		}
-*/
-		if(@$rs){
+		if(@$rs || @$rs2){
 			$data['news_dateupdate'] = $_POST['date_time'];
 			$rseditdate = $db->update('news',$data,'news_id',$_POST['new_id']);
-			if(@$rs){
 				$selectiddetail = $db->findAllDESC('newsDetails','newsDetails_id')->executeAssoc();
 				$selectidpic = $db->findAllDESC('newsImg','newsImg_id')->executeAssoc();
 				$selectidvideo = $db->findAllDESC('newsVideo','newsVideo_id')->executeAssoc();
@@ -48,7 +40,7 @@
 					foreach($rsshowdetail2 as $abc){
 						$json_data[]=array(
 						 'detail'=>$abc['newsDetails_name'],
-						 'lastiddetail'=>$lastiddetail,
+						 'lastiddetail'=>$abc['newsDetails_id'],
 						 );
 					}
 				}
@@ -60,11 +52,8 @@
 				}
 				$json= json_encode($json_data);
 				echo $json;
-
-			}
 		}
-	}
-/*
+		}
 	else{
 		$selectiddetail = $db->findAllDESC('news','news_id')->executeAssoc();
 		$lastiddetailintbnew = $selectiddetail['news_newsDetails_id'];
@@ -81,7 +70,6 @@
 		}
 
 	}
-*/
 
 
 ob_end_flush();
