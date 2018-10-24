@@ -6,10 +6,18 @@
 	$txtheadnews = new textfield('news_head','','form-control','','');
 	$lbpic = new label('ภาพ');
 	$filepic = new inputFile('news_picdetail','file','file_id');
-	$filepic2 = new inputFile('news_picdetail2[]','file','file_id');
+	$filepic2 = new inputFile('news_picdetail2','file','file_id2');
+	$filepic3 = new inputFile('news_picdetail3','file','file_id3');
+	$filepic4 = new inputFile('news_picdetail4','file','file_id4');
+	$filepic5 = new inputFile('news_picdetail5','file','file_id5');
+	$filepic6 = new inputFile('news_picdetail6','file','file_id6');
 	$detailnews = new textAreareadonly('detail_news','form-control','text_editer','','5','5','');
 	$last_detail_id = new hiddenfield('last_detail_id','last_detail_id','form-control','','');
-	$button = new buttonok("บันทึก","","btn btn-success btn-lg btn-block bt3success col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","");
+	$button1 = new buttonok("บันทึก","submit1","btn btn-success btn-lg btn-block bt3success col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","");
+	$button2 = new buttonok("บันทึก","submit2","btn btn-success btn-lg btn-block bt3success col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","");
+	$button3 = new buttonok("บันทึก","submit3","btn btn-success btn-lg btn-block bt3success col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","");
+	$button4 = new buttonok("บันทึก","submit4","btn btn-success btn-lg btn-block bt3success col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","");
+	$button5 = new buttonok("บันทึก","submit5","btn btn-success btn-lg btn-block bt3success col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","");
 	if(!empty($_GET['id'])){
 		$id=$_GET['id'];
 		$r2 = $db->findByPK('news','news_id',$id)->executeRow();
@@ -24,7 +32,7 @@
 			$last_detail_id->value = $r['newsDetails_id'];
 		}
 	}
-	echo $form->open("form_detail","form","col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","news_insert_medie.php","");
+	echo $form->open("form_detail","form","col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","","");
 ?>
 <div class='col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1'></div>
 <div class='col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10 pb-3' style="background-color:#ffffff;">
@@ -75,28 +83,78 @@
 						<div class='col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2'></div>
 						<div class='col-xl-9 col-lg-9 col-md-9 col-sm-9 col-9'>
 							<?php
-								if($last_detail_id->value != ''){
-									$r3=$db->findByPK12('newsImg','newsImg_position',2,'newsImg_connect',$id)->execute();
-									$i = 0;
-									foreach($r3 as $showimg){
-											$i++;
-									?>
-										<img id="preimg<?php echo $i;?>" class="preimg" src="<?php echo $showimg['newsImg_path'],$showimg['newsImg_name'];?>" width="100px" height="100px">
-									<?php
-										echo $filepic2;
-									}
+								echo $lbpic;
+								$rsshowimg1 = $db->findByPK12('newsImg','newsImg_position',2,'newsImg_connect',$_GET['id'])->executeAssoc();
+								if(!empty($rsshowimg1['newsImg_id'])){
+								?>
+								<img id="preimg2" class="preimg" src="<?php echo $rsshowimg1['newsImg_path'],$rsshowimg1['newsImg_name'];?>" width="100px" height="100px">
+								<?php
 								}else{
-									for($j=1; $j<6; $j++){
-										?>
-										<img id="preimg<?php echo $j;?>" class="preimg" src="" width="100px" height="100px">
-										<input  type="file" name="news_picdetail2[]" id="file_id<?php echo $j;?>" class="file"/>
-										<?php
-									}
+								?>
+								<img id="preimg2" class="preimg" src="" width="100px" height="100px">
+								<?php
 								}
+								echo $filepic2;
+								echo $button1;
+								echo "<br/>";
+								echo $lbpic;
+								$rsshowimg2 = $db->findByPK12('newsImg','newsImg_position',3,'newsImg_connect',$_GET['id'])->executeAssoc();
+								if(!empty($rsshowimg2['newsImg_id'])){
+								?>
+								<img id="preimg3" class="preimg" src="<?php echo $rsshowimg2['newsImg_path'],$rsshowimg2['newsImg_name'];?>" width="100px" height="100px">
+								<?php
+								}else{
+								?>
+								<img id="preimg3" class="preimg" src="" width="100px" height="100px">
+								<?php
+								}
+								echo $filepic3;
+								echo $button2;
+								echo "<br/>";
+								echo $lbpic;
+								$rsshowimg3 = $db->findByPK12('newsImg','newsImg_position',4,'newsImg_connect',$_GET['id'])->executeAssoc();
+								if(!empty($rsshowimg3['newsImg_id'])){
+								?>
+								<img id="preimg4" class="preimg" src="<?php echo $rsshowimg3['newsImg_path'],$rsshowimg3['newsImg_name'];?>" width="100px" height="100px">
+								<?php
+								}else{
+								?>
+								<img id="preimg4" class="preimg" src="" width="100px" height="100px">
+								<?php
+								}
+								echo $filepic4;
+								echo $button3;
+								echo "<br/>";
+								echo $lbpic;
+								$rsshowimg4 = $db->findByPK12('newsImg','newsImg_position',5,'newsImg_connect',$_GET['id'])->executeAssoc();
+								if(!empty($rsshowimg4['newsImg_id'])){
+								?>
+								<img id="preimg5" class="preimg" src="<?php echo $rsshowimg4['newsImg_path'],$rsshowimg4['newsImg_name'];?>" width="100px" height="100px">
+								<?php
+								}else{
+								?>
+								<img id="preimg5" class="preimg" src="" width="100px" height="100px">
+								<?php
+								}
+								echo $filepic5;
+								echo $button4;
+								echo "<br/>";
+								echo $lbpic;
+								$rsshowimg5 = $db->findByPK12('newsImg','newsImg_position',6,'newsImg_connect',$_GET['id'])->executeAssoc();
+								if(!empty($rsshowimg5['newsImg_id'])){
+								?>
+								<img id="preimg6" class="preimg" src="<?php echo $rsshowimg5['newsImg_path'],$rsshowimg5['newsImg_name'];?>" width="100px" height="100px">
+								<?php
+								}else{
+								?>
+								<img id="preimg6" class="preimg" src="" width="100px" height="100px">
+								<?php
+								}
+								echo $filepic6;
+								echo $button5;
 							?>
 						</div>
 						<div class='col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1'>
-							<?php echo $button;?>
 						</div>
 					</div>
 				</div>
@@ -106,7 +164,7 @@
 			<div class='row'>
 			<div class='col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10'></div>
 			<div class='col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2'>
-				<input  type="hidden" id="id" name="new_id" value="<?php echo $id;?>" />
+				<input  type="hidden" id="new_id" name="new_id" value="<?php echo $id;?>" />
 				<input  type="hidden" id="datetime" name="date_time" value="<?php echo $datetime;?>" />
 				<input  type="hidden" name="form_design" value="1" />
 				<?php echo $last_detail_id;?>
@@ -182,14 +240,114 @@
 						}
 					});
                 });
-
-        var i = 0 ;
-        function readURL(input) {
+        $('#submit1').on('click',function(e){
+	        e.preventDefault();
+	        var fd = new FormData();
+			var files = $('#file_id2')[0].files[0];
+			var new_id = $('#new_id').val();
+			fd.append('news_picdetail2',files);
+			fd.append('new_id',new_id);
+			$.ajax({
+				url: "news_insert_medie.php",
+				type: "POST",
+				data:  fd,
+				contentType: false,
+				cache: false,
+				processData:false,
+				success: function(data) {
+					console.log(1234);
+					console.log(data);
+				}
+			});
+		});
+		$('#submit2').on('click',function(e){
+	        e.preventDefault();
+	        var fd = new FormData();
+			var files = $('#file_id3')[0].files[0];
+			var new_id = $('#new_id').val();
+			fd.append('news_picdetail3',files);
+			fd.append('new_id',new_id);
+			$.ajax({
+				url: "news_insert_medie.php",
+				type: "POST",
+				data:  fd,
+				contentType: false,
+				cache: false,
+				processData:false,
+				success: function(data) {
+					console.log(1234);
+					console.log(data);
+				}
+			});
+		});
+		$('#submit3').on('click',function(e){
+	        e.preventDefault();
+	        var fd = new FormData();
+			var files = $('#file_id4')[0].files[0];
+			var new_id = $('#new_id').val();
+			fd.append('news_picdetail4',files);
+			fd.append('new_id',new_id);
+			$.ajax({
+				url: "news_insert_medie.php",
+				type: "POST",
+				data:  fd,
+				contentType: false,
+				cache: false,
+				processData:false,
+				success: function(data) {
+					console.log(1234);
+					console.log(data);
+				}
+			});
+		});
+		$('#submit4').on('click',function(e){
+	        e.preventDefault();
+	        var fd = new FormData();
+			var files = $('#file_id5')[0].files[0];
+			var new_id = $('#new_id').val();
+			fd.append('news_picdetail5',files);
+			fd.append('new_id',new_id);
+			$.ajax({
+				url: "news_insert_medie.php",
+				type: "POST",
+				data:  fd,
+				contentType: false,
+				cache: false,
+				processData:false,
+				success: function(data) {
+					console.log(1234);
+					console.log(data);
+				}
+			});
+		});
+	$('#submit5').on('click',function(e){
+	        e.preventDefault();
+	        var fd = new FormData();
+			var files = $('#file_id6')[0].files[0];
+			var new_id = $('#new_id').val();
+			fd.append('news_picdetail6',files);
+			fd.append('new_id',new_id);
+			$.ajax({
+				url: "news_insert_medie.php",
+				type: "POST",
+				data:  fd,
+				contentType: false,
+				cache: false,
+				processData:false,
+				success: function(data) {
+					console.log(1234);
+					console.log(data);
+				}
+			});
+		});
+        function readURL(input,idimg) {
+	        var nameidimg = idimg ;
 	        if (input.files && input.files[0]) {
 		            var reader = new FileReader();
 
 		            reader.onload = function (e) {
-		                	$('#preimg'+i).attr('src', e.target.result);
+		                	$(nameidimg).attr('src', e.target.result);
+
 		            }
 
 					reader.readAsDataURL(input.files[0]);
@@ -202,10 +360,20 @@
 	else{
 	    $('.preimg').show();
 	}
-    $(".file").on('change',function(){
-		console.log(i);
-        readURL(this,'#preimg'+i);
-        i++;
+    $("#file_id2").on('change',function(){
+        readURL(this,'#preimg2');
+    });
+    $("#file_id3").on('change',function(){
+        readURL(this,'#preimg3');
+    });
+    $("#file_id4").on('change',function(){
+        readURL(this,'#preimg4');
+    });
+    $("#file_id5").on('change',function(){
+        readURL(this,'#preimg5');
+    });
+    $("#file_id6").on('change',function(){
+        readURL(this,'#preimg6');
     });
 </script>
 
