@@ -257,8 +257,10 @@
 	        var fd = new FormData();
 			var files = $('#file_id')[0].files[0];
 			var new_id = $('#new_id').val();
+			var last_detail_id = $('#last_detail_id').val();
 			fd.append('news_picdetail',files);
 			fd.append('new_id',new_id);
+			fd.append('last_detail_id',last_detail_id);
 			$.ajax({
 				url: "news_insert_medie.php",
 				type: "POST",
@@ -277,8 +279,10 @@
 	        var fd = new FormData();
 			var files = $('#file_id2')[0].files[0];
 			var new_id = $('#new_id').val();
+			var last_detail_id = $('#last_detail_id').val();
 			fd.append('news_picdetail2',files);
 			fd.append('new_id',new_id);
+			fd.append('last_detail_id',last_detail_id);
 			$.ajax({
 				url: "news_insert_medie.php",
 				type: "POST",
@@ -297,8 +301,10 @@
 	        var fd = new FormData();
 			var files = $('#file_id3')[0].files[0];
 			var new_id = $('#new_id').val();
+			var last_detail_id = $('#last_detail_id').val();
 			fd.append('news_picdetail3',files);
 			fd.append('new_id',new_id);
+			fd.append('last_detail_id',last_detail_id);
 			$.ajax({
 				url: "news_insert_medie.php",
 				type: "POST",
@@ -317,8 +323,10 @@
 	        var fd = new FormData();
 			var files = $('#file_id4')[0].files[0];
 			var new_id = $('#new_id').val();
+			var last_detail_id = $('#last_detail_id').val();
 			fd.append('news_picdetail4',files);
 			fd.append('new_id',new_id);
+			fd.append('last_detail_id',last_detail_id);
 			$.ajax({
 				url: "news_insert_medie.php",
 				type: "POST",
@@ -337,8 +345,10 @@
 	        var fd = new FormData();
 			var files = $('#file_id5')[0].files[0];
 			var new_id = $('#new_id').val();
+			var last_detail_id = $('#last_detail_id').val();
 			fd.append('news_picdetail5',files);
 			fd.append('new_id',new_id);
+			fd.append('last_detail_id',last_detail_id);
 			$.ajax({
 				url: "news_insert_medie.php",
 				type: "POST",
@@ -357,8 +367,10 @@
 	        var fd = new FormData();
 			var files = $('#file_id6')[0].files[0];
 			var new_id = $('#new_id').val();
+			var last_detail_id = $('#last_detail_id').val();
 			fd.append('news_picdetail6',files);
 			fd.append('new_id',new_id);
+			fd.append('last_detail_id',last_detail_id);
 			$.ajax({
 				url: "news_insert_medie.php",
 				type: "POST",
@@ -392,6 +404,9 @@
 	else{
 	    $('.preimg').show();
 	}
+	$("#file_id").on('change',function(){
+        readURL(this,'#preimg');
+    });
     $("#file_id2").on('change',function(){
         readURL(this,'#preimg2');
     });

@@ -4,7 +4,30 @@
     include 'database/db_tools.php';
 	include 'connect.php';
 	if(!empty($_POST['last_detail_id'])){
-
+		if(!empty($_FILES['news_picdetail'])){
+			$data['newsImg_name'] = basename($_FILES['news_picdetail']['name']);
+			$rseditpic = $db->update2con('newsImg',$data,'newsImg_position',1,'newsImg_connect',$_POST['new_id']);
+		}
+		if(!empty($_FILES['news_picdetail2'])){
+			$data['newsImg_name'] = basename($_FILES['news_picdetail2']['name']);
+			$rseditpic = $db->update2con('newsImg',$data,'newsImg_position',2,'newsImg_connect',$_POST['new_id']);
+		}
+		if(!empty($_FILES['news_picdetail3'])){
+			$data['newsImg_name'] = basename($_FILES['news_picdetail3']['name']);
+			$rseditpic = $db->update2con('newsImg',$data,'newsImg_position',3,'newsImg_connect',$_POST['new_id']);
+		}
+		if(!empty($_FILES['news_picdetail4'])){
+			$data['newsImg_name'] = basename($_FILES['news_picdetail4']['name']);
+			$rseditpic = $db->update2con('newsImg',$data,'newsImg_position',4,'newsImg_connect',$_POST['new_id']);
+		}
+		if(!empty($_FILES['news_picdetail5'])){
+			$data['newsImg_name'] = basename($_FILES['news_picdetail5']['name']);
+			$rseditpic = $db->update2con('newsImg',$data,'newsImg_position',5,'newsImg_connect',$_POST['new_id']);
+		}
+		if(!empty($_FILES['news_picdetail5'])){
+			$data['newsImg_name'] = basename($_FILES['news_picdetail5']['name']);
+			$rseditpic = $db->update2con('newsImg',$data,'newsImg_position',6,'newsImg_connect',$_POST['new_id']);
+		}
 	}
 	else{
 		print_r($_POST);
@@ -105,7 +128,7 @@
 		}
 */
 	}
-		if(@$rspic || $rspic2 || $rsvdo){
+		if(@$rspic || $rspic2 || $rseditpic){
 	    	 echo "<div class='statusok'>บันทึกเสร็จสิ้น</div>";
 			 $link = "admin_index.php?url=news_show_news.php";
     	     header( "Refresh: 1; $link" );
