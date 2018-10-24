@@ -61,17 +61,20 @@
 						<div class='col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3'>
 							<?php
 								$rsshowimg = $db->findByPK12('newsImg','newsImg_position',1,'newsImg_connect',$_GET['id'])->executeAssoc();
+							?>
+								<input  type="hidden" id="pic_id" name="pic_id" value="<?php echo $rsshowimg['newsImg_id'];?>" />
+								<?php
 								if(!empty($rsshowimg['newsImg_id'])){
 								?>
 								<img id="preimg" class="preimg" src="<?php echo $rsshowimg['newsImg_path'],$rsshowimg['newsImg_name'];?>" width="100px" height="100px">
 								<?php
 								}else{
 								?>
-								<img id="preimg" class="preimg" src="" width="100px" height="100px">
+								<img id="preimg" class="preimg" src="images/no_pic.png" width="100px" height="100px">
 								<?php
 								}
 								echo $filepic;
-								echo $button;
+								echo $button;echo '<input type="button" id="cancel_pic" value="ยกเลิก">';
 							?>
 						</div>
 
@@ -97,73 +100,93 @@
 							<?php
 								echo $lbpic;
 								$rsshowimg1 = $db->findByPK12('newsImg','newsImg_position',2,'newsImg_connect',$_GET['id'])->executeAssoc();
+								?>
+								<input  type="hidden" id="pic_id2" name="pic_id2" value="<?php echo $rsshowimg1['newsImg_id'];?>" />
+								<?php
 								if(!empty($rsshowimg1['newsImg_id'])){
 								?>
 								<img id="preimg2" class="preimg" src="<?php echo $rsshowimg1['newsImg_path'],$rsshowimg1['newsImg_name'];?>" width="100px" height="100px">
 								<?php
 								}else{
 								?>
-								<img id="preimg2" class="preimg" src="" width="100px" height="100px">
+								<img id="preimg2" class="preimg" src="images/no_pic.png" width="100px" height="100px">
 								<?php
 								}
 								echo $filepic2;
 								echo $button1;
+								echo '<input type="button" id="cancel_pic2" value="ยกเลิก">';
 								echo "<br/>";
 								echo $lbpic;
 								$rsshowimg2 = $db->findByPK12('newsImg','newsImg_position',3,'newsImg_connect',$_GET['id'])->executeAssoc();
+								?>
+								<input type="hidden" id="pic_id3" name="pic_id" value="<?php echo $rsshowimg2['newsImg_id'];?>" />
+								<?php
 								if(!empty($rsshowimg2['newsImg_id'])){
 								?>
 								<img id="preimg3" class="preimg" src="<?php echo $rsshowimg2['newsImg_path'],$rsshowimg2['newsImg_name'];?>" width="100px" height="100px">
 								<?php
 								}else{
 								?>
-								<img id="preimg3" class="preimg" src="" width="100px" height="100px">
+								<img id="preimg3" class="preimg" src="images/no_pic.png" width="100px" height="100px">
 								<?php
 								}
 								echo $filepic3;
 								echo $button2;
+								echo '<input type="button" id="cancel_pic3" value="ยกเลิก">';
 								echo "<br/>";
 								echo $lbpic;
 								$rsshowimg3 = $db->findByPK12('newsImg','newsImg_position',4,'newsImg_connect',$_GET['id'])->executeAssoc();
+								?>
+								<input  type="hidden" id="pic_id4" name="pic_id" value="<?php echo $rsshowimg3['newsImg_id'];?>" />
+								<?php
 								if(!empty($rsshowimg3['newsImg_id'])){
 								?>
 								<img id="preimg4" class="preimg" src="<?php echo $rsshowimg3['newsImg_path'],$rsshowimg3['newsImg_name'];?>" width="100px" height="100px">
 								<?php
 								}else{
 								?>
-								<img id="preimg4" class="preimg" src="" width="100px" height="100px">
+								<img id="preimg4" class="preimg" src="images/no_pic.png" width="100px" height="100px">
 								<?php
 								}
 								echo $filepic4;
 								echo $button3;
+								echo '<input type="button" id="cancel_pic4" value="ยกเลิก">';
 								echo "<br/>";
 								echo $lbpic;
 								$rsshowimg4 = $db->findByPK12('newsImg','newsImg_position',5,'newsImg_connect',$_GET['id'])->executeAssoc();
+								?>
+								<input  type="hidden" id="pic_id5" name="pic_id" value="<?php echo $rsshowimg4['newsImg_id'];?>" />
+								<?php
 								if(!empty($rsshowimg4['newsImg_id'])){
 								?>
 								<img id="preimg5" class="preimg" src="<?php echo $rsshowimg4['newsImg_path'],$rsshowimg4['newsImg_name'];?>" width="100px" height="100px">
 								<?php
 								}else{
 								?>
-								<img id="preimg5" class="preimg" src="" width="100px" height="100px">
+								<img id="preimg5" class="preimg" src="images/no_pic.png" width="100px" height="100px">
 								<?php
 								}
 								echo $filepic5;
 								echo $button4;
+								echo '<input type="button" id="cancel_pic5" value="ยกเลิก">';
 								echo "<br/>";
 								echo $lbpic;
 								$rsshowimg5 = $db->findByPK12('newsImg','newsImg_position',6,'newsImg_connect',$_GET['id'])->executeAssoc();
+								?>
+								<input  type="hidden" id="pic_id6" name="pic_id" value="<?php echo $rsshowimg5['newsImg_id'];?>" />
+								<?php
 								if(!empty($rsshowimg5['newsImg_id'])){
 								?>
 								<img id="preimg6" class="preimg" src="<?php echo $rsshowimg5['newsImg_path'],$rsshowimg5['newsImg_name'];?>" width="100px" height="100px">
 								<?php
 								}else{
 								?>
-								<img id="preimg6" class="preimg" src="" width="100px" height="100px">
+								<img id="preimg6" class="preimg" src="images/no_pic.png" width="100px" height="100px">
 								<?php
 								}
 								echo $filepic6;
 								echo $button5;
+								echo '<input type="button" id="cancel_pic6" value="ยกเลิก">';
 							?>
 						</div>
 						<div class='col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1'>
@@ -269,8 +292,6 @@
 				cache: false,
 				processData:false,
 				success: function(data) {
-					console.log(1234);
-					console.log(data);
 				}
 			});
 		});
@@ -291,8 +312,6 @@
 				cache: false,
 				processData:false,
 				success: function(data) {
-					console.log(1234);
-					console.log(data);
 				}
 			});
 		});
@@ -313,8 +332,6 @@
 				cache: false,
 				processData:false,
 				success: function(data) {
-					console.log(1234);
-					console.log(data);
 				}
 			});
 		});
@@ -335,8 +352,6 @@
 				cache: false,
 				processData:false,
 				success: function(data) {
-					console.log(1234);
-					console.log(data);
 				}
 			});
 		});
@@ -357,8 +372,6 @@
 				cache: false,
 				processData:false,
 				success: function(data) {
-					console.log(1234);
-					console.log(data);
 				}
 			});
 		});
@@ -379,8 +392,6 @@
 				cache: false,
 				processData:false,
 				success: function(data) {
-					console.log(1234);
-					console.log(data);
 				}
 			});
 		});
@@ -397,13 +408,6 @@
 					reader.readAsDataURL(input.files[0]);
 	        }
     	}
-    var last_id = $('#last_detail_id').val();
-    if(last_id ==''){
-		$('.preimg').hide();
-	}
-	else{
-	    $('.preimg').show();
-	}
 	$("#file_id").on('change',function(){
         readURL(this,'#preimg');
     });
@@ -422,5 +426,59 @@
     $("#file_id6").on('change',function(){
         readURL(this,'#preimg6');
     });
+    $('#cancel_pic').on('click',function(e){
+	    var pic_id = $('#pic_id').val();
+	    if(pic_id == ""){
+        $('#preimg').attr('src', 'images/no_pic.png');
+	    }
+	    else{
+		  $('#preimg').attr('src', '<?php echo $rsshowimg['newsImg_path'],$rsshowimg['newsImg_name'] ;?>');
+	    }
+	});
+	$('#cancel_pic2').on('click',function(e){
+	    var pic_id2 = $('#pic_id2').val();
+	    if(pic_id2 == ""){
+        $('#preimg2').attr('src', 'images/no_pic.png');
+	    }
+	    else{
+		  $('#preimg2').attr('src', '<?php echo $rsshowimg1['newsImg_path'],$rsshowimg1['newsImg_name'] ;?>');
+	    }
+	});
+	$('#cancel_pic3').on('click',function(e){
+	    var pic_id3 = $('#pic_id3').val();
+	    if(pic_id3 == ""){
+        $('#preimg3').attr('src', 'images/no_pic.png');
+	    }
+	    else{
+		  $('#preimg3').attr('src', '<?php echo $rsshowimg2['newsImg_path'],$rsshowimg2['newsImg_name'] ;?>');
+	    }
+	});
+	$('#cancel_pic4').on('click',function(e){
+	    var pic_id4 = $('#pic_id4').val();
+	    if(pic_id4 == ""){
+        $('#preimg4').attr('src', 'images/no_pic.png');
+	    }
+	    else{
+		  $('#preimg4').attr('src', '<?php echo $rsshowimg3['newsImg_path'],$rsshowimg3['newsImg_name'] ;?>');
+	    }
+	});
+	$('#cancel_pic5').on('click',function(e){
+	    var pic_id5 = $('#pic_id5').val();
+	    if(pic_id5 == ""){
+        $('#preimg5').attr('src', 'images/no_pic.png');
+	    }
+	    else{
+		  $('#preimg5').attr('src', '<?php echo $rsshowimg4['newsImg_path'],$rsshowimg4['newsImg_name'] ;?>');
+	    }
+	});
+	$('#cancel_pic6').on('click',function(e){
+	    var pic_id5 = $('#pic_id5').val();
+	    if(pic_id5 == ""){
+        $('#preimg5').attr('src', 'images/no_pic.png');
+	    }
+	    else{
+		  $('#preimg5').attr('src', '<?php echo $rsshowimg5['newsImg_path'],$rsshowimg5['newsImg_name'] ;?>');
+	    }
+	});
 </script>
 

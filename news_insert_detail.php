@@ -41,7 +41,7 @@
 				$lastiddetail = $selectiddetail['newsDetails_id'];
 				$rsshowdetail = $db->findByPK12('newsDetails','newsDetails_position',1,'newsDetails_connect',$_POST['new_id'])->executeAssoc();
 				if($form_design == 4){
-					$rsshowdetail2 = $db->findByPK12('newsDetails','newsDetails_position',2,'newsDetails_connect',$_POST['new_id'])->execute();
+					$rsshowdetail2 = $db->findByPK('newsDetails','newsDetails_connect',$_POST['new_id'])->execute();
 					foreach($rsshowdetail2 as $abc){
 						$json_data[]=array(
 						 'detail'=>$abc['newsDetails_name'],
