@@ -8,8 +8,8 @@
 	$lbvdo = new label('วีดีโอ');
 	$filepic = new inputFile('news_picdetail','file','file_id');
 	$txtlinkvdo = new textfield('news_vdo','','form-control','','');
-	$detailnews = new textAreareadonly('detail_news[]','form-control','text_editer','','5','5','');
-	$detailnews2 = new textAreareadonly('detail_news[]','form-control','text_editer2','','5','5','');
+	$detailnews = new textAreareadonly('detail_news','form-control','text_editer','','5','5','');
+	$detailnews2 = new textAreareadonly('detail_news2','form-control','text_editer2','','5','5','');
 	$last_detail_id = new hiddenfield('last_detail_id','last_detail_id','form-control','','');
 	$last_detail_id2 = new hiddenfield('last_detail_id2','last_detail_id2','form-control','','');
 	$button = new buttonok("บันทึก","","btn btn-success btn-lg btn-block bt3success col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","");
@@ -80,6 +80,7 @@
 										echo $lbpic;
 										echo $filepic;
 									?>
+									<img id ="preimg" class= "preimg"src="images/news/<?php echo $r['news_cover'];?>" width="100px;" height="100px;">
 								</div>
 								<div class='col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2'></div>
 							</div>
@@ -243,6 +244,13 @@
 					reader.readAsDataURL(input.files[0]);
 	        }
     	}
+	var last_id = $('#last_detail_id').val();
+    if(last_id ==''){
+		$('.preimg').hide();
+	}
+	else{
+	    $('.preimg').show();
+	}
     $(".file").on('change',function(){
 		console.log(i);
         readURL(this,'#preimg'+i);

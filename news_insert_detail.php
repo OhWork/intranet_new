@@ -1,3 +1,4 @@
+<meta charset="UTF-8">
 <?php
 	error_reporting(E_ERROR | E_WARNING | E_PARSE);
 	ob_start();
@@ -6,17 +7,33 @@
 	$id = $_POST['new_id'];
 	$text = $_POST['text'];
 	$form_design = $_POST['form_design'];
-	$lastiddetail =$_POST['last_detail_id'];
-// 	if($text == ''){
+// 	$lastiddetail =$_POST['last_detail_id'];
+	if($text == ''){
+/*
 		if(!empty($_POST['last_detail_id'])){
 
 		}else{
+*/
+// 			if($_POST['detail_news']){
 				$rs = $db->insert('newsDetails',array(
-					'newsDetails_name' => $_POST['detail_news']
+					'newsDetails_name' => $_POST['detail_news'],
+					'newsDetails_position' => 1,
+					'newsDetails_connect' => $_POST['new_id']
+
 				));
+// 			}
+/*
+			if($_POST['detail_news2']){
+				$rs2 = $db->insert('newsDetails',array(
+					'newsDetails_name' => $_POST['detail_news2'],
+					'newsDetails_position' => 2,
+					'newsDetails_connect' => $_POST['new_id']
+
+				));
+// 			}
 
 		}
-/*
+*/
 		if(@$rs){
 			$data['news_dateupdate'] = $_POST['date_time'];
 			$rseditdate = $db->update('news',$data,'news_id',$_POST['new_id']);
@@ -47,6 +64,7 @@
 			}
 		}
 	}
+/*
 	else{
 		$selectiddetail = $db->findAllDESC('news','news_id')->executeAssoc();
 		$lastiddetailintbnew = $selectiddetail['news_newsDetails_id'];

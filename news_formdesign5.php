@@ -204,6 +204,13 @@
 					reader.readAsDataURL(input.files[0]);
 	        }
     	}
+    var last_id = $('#last_detail_id').val();
+    if(last_id ==''){
+		$('.preimg').hide();
+	}
+	else{
+	    $('.preimg').show();
+	}
     $(".file").on('change',function(){
 		console.log(i);
         readURL(this,'#preimg'+i);
