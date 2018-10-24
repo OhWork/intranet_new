@@ -24,7 +24,7 @@
 			$last_detail_id->value = $r['newsDetails_id'];
 		}
 	}
-	echo $form->open("form_detail","form","col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","","");
+	echo $form->open("form_detail","form","col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","news_insert_pic.php","");
 ?>
 <div class='col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1'></div>
 <div class='col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10 pb-3' style="background-color:#ffffff;">
@@ -75,21 +75,17 @@
 						<div class='col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2'></div>
 						<div class='col-xl-9 col-lg-9 col-md-9 col-sm-9 col-9'>
 							<?php
-								$r3=$db->findByPK('newsImg','newsImg_connect',$id)->execute();
-								$i = 0;
-									foreach($r3 as $showpic){
-										$i++;
-									?>
-									<img id="preimg<?php echo $i;?>" class="preimg" src="<?php echo $showpic['newsImg_path'],$showpic['newsImg_name'];?>" width="100px" height="100px">
-									<?php
-									}
-									for($j=0; $j<5; $j++){
-										echo $filepic2;
-									}
+								$r3=$db->findByPK12('newsImg','newsImg_position',2,'newsImg_connect',$id)->executeAssoc();
+								for($j=0; $j<5; $j++){
+								?>
+									<img id="preimg<?php echo $i;?>" class="preimg" src="<?php echo $r3['newsImg_path'],$r3['newsImg_name'];?>" width="100px" height="100px">
+								<?php
+									echo $filepic2;
+								}
 							?>
 						</div>
 						<div class='col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1'>
-							<?php echo $b?>
+							<?php echo $button;?>
 						</div>
 					</div>
 				</div>
@@ -179,39 +175,14 @@
 		            var reader = new FileReader();
 
 		            reader.onload = function (e) {
-		                	$('#preimg'+i).attr('src', e.target.result);
+		                	$('#preimg').attr('src', e.target.result);
 		            }
 
 					reader.readAsDataURL(input.files[0]);
 	        }
     	}
-
-            var i = 1 ;
-		$('#btnButton').on('click',function(){
-			i++;
-			if(i == 5){
-				document.getElementById("add").innerHTML = "เพิ่มรูปภาพได้ไม่เกิน 5 รูปภาพครับ";
-				$('#add').addClass('text-danger');
-			}
-		});
-           function fncCreateElement(){
-
-		   		var mySpan = document.getElementById('mySpan');
-				var myElement1 = document.createElement('input');
-				myElement1.setAttribute('type',"file");
-				myElement1.setAttribute('name',"news_picdetail[]");
-				myElement1.className = "file";
-				mySpan.appendChild(myElement1);
-				$(".file").on('change',function(){
-			        readURL(this,'#preimg'+i);
-			        console.log(this);
-					console.log(i);
-			    });
-	}
     $(".file").on('change',function(){
-        readURL(this,'#preimg'+i);
-		console.log(this);
-		console.log(i);
+        readURL(this,'#preimg');
     });
 </script>
 

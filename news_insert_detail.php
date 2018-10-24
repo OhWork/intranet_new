@@ -124,6 +124,7 @@
 		}
 		}else{
 		if($form_design == 1){
+/*
 				$target_dir = 'temp/';
 				    $target_file = $target_dir.basename($_FILES['news_picdetail']['name']);
 				    $path = 'images/news/newsImg/';
@@ -136,6 +137,7 @@
 						'newsImg_position' => 1,
 						'newsImg_connect' => $_POST['new_id']
 					));
+*/
 /*
 				for($i = 0; $i<count($_FILES['news_picdetail2']['name']); $i++){
 					$target_dir = 'temp/';
