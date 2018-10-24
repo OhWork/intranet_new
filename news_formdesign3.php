@@ -6,8 +6,10 @@
 	$txtheadnews = new textfield('news_head','','form-control','','');
 	$lbvdo = new label('วีดีโอ');
 	$filepic = new inputFile('news_videodetail','','file_id');
+	$txtlinkvdo = new textfield('news_vdo','','form-control','','');
 	$detailnews = new textAreareadonly('detail_news','form-control','text_editer','','5','5','');
 	$last_detail_id = new hiddenfield('last_detail_id','last_detail_id','form-control','','');
+	$button = new buttonok("บันทึก","","btn btn-success btn-lg btn-block bt3success col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","");
 	if(!empty($_GET['id'])){
 		$id=$_GET['id'];
 		$r2 = $db->findByPK('news','news_id',$id)->executeRow();
@@ -22,7 +24,7 @@
 			$last_detail_id->value = $r['newsDetails_id'];
 		}
 	}
-	echo $form->open("form_detail","form","col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","","");
+	echo $form->open("form_detail","form","col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","news_insert_medie.php","");
 ?>
 
 <div class='col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1'></div>
@@ -50,13 +52,13 @@
 								<div class='col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8'>
 									<?php
 										echo $lbvdo;
-										echo $filepic;
+										echo $txtlinkvdo;
 									?>
 								</div>
 								<div class='col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2'></div>
 							</div>
 						</div>
-						<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-2">
+				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-2">
 					<div class='row'>
 						<div class='col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1'></div>
 						<div class='col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10' id="text_detail">
@@ -66,7 +68,17 @@
 								<input type="submit" id="button_adddetail" value="บันทึก">
 								<input type="button" id="button_canceletail" value="ยกเลิก">
 						</div>
+					</div>
+				</div>
+				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-2">
+					<div class='row'>
 						<div class='col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1'></div>
+						<div class='col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10' id="text_detail">
+							<?php echo $button;?>
+						</div>
+						<div class='col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1'>
+
+						</div>
 					</div>
 				</div>
 			</div>

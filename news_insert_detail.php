@@ -7,14 +7,16 @@
 	$text = $_POST['text'];
 	$form_design = $_POST['form_design'];
 	$lastiddetail =$_POST['last_detail_id'];
-	if($text == ''){
+// 	if($text == ''){
 		if(!empty($_POST['last_detail_id'])){
 
 		}else{
 				$rs = $db->insert('newsDetails',array(
 					'newsDetails_name' => $_POST['detail_news']
 				));
+
 		}
+/*
 		if(@$rs){
 			$data['news_dateupdate'] = $_POST['date_time'];
 			$rseditdate = $db->update('news',$data,'news_id',$_POST['new_id']);
@@ -61,6 +63,7 @@
 		}
 
 	}
+*/
 
 
 ob_end_flush();
