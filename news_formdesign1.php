@@ -76,6 +76,7 @@
 						<div class='col-xl-9 col-lg-9 col-md-9 col-sm-9 col-9'>
 							<?php
 								$r3=$db->findByPK12('newsImg','newsImg_position',2,'newsImg_connect',$id)->executeAssoc();
+								echo $r3['newsImg_id'];
 								for($j=0; $j<5; $j++){
 								?>
 									<img id="preimg<?php echo $i;?>" class="preimg" src="<?php echo $r3['newsImg_path'],$r3['newsImg_name'];?>" width="100px" height="100px">

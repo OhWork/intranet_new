@@ -11,7 +11,7 @@
 	$id = $_POST['id'];
 	$select = $db ->findByPK('news','news_id',$id)->executeAssoc();
 	if(!empty($_POST['id'])){
-		if(unlink('images/news/'.$select['news_cover'])){
+// 		if(unlink('images/news/'.$select['news_cover'])){
 			$target_dir = 'temp/';
 		    $target_file = $target_dir.basename($_FILES['news_cover']['name']);
 		    $target_dir_save = 'images/news/'.basename($_FILES['news_cover']['name']);
@@ -26,7 +26,7 @@
 			$data['typeDesignnews_id'] = $_POST['typeDesignnews_id'];
 			$data['user_user_id'] = $_POST['user_user_id'];
 			$rsfix = $db->update('news',$data,'news_id',$_POST['id']);
-		}
+// 		}
 
 	}else{
 
