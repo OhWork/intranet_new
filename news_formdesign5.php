@@ -489,12 +489,12 @@
 	    }
 	});
 	$('#cancel_pic6').on('click',function(e){
-	    var pic_id5 = $('#pic_id5').val();
-	    if(pic_id5 == ""){
-        $('#preimg5').attr('src', 'images/no_pic.png');
+	    var pic_id6 = $('#pic_id6').val();
+	    if(pic_id6 == ""){
+        $('#preimg6').attr('src', 'images/no_pic.png');
 	    }
 	    else{
-		  $('#preimg5').attr('src', '<?php echo $rsshowimg5['newsImg_path'],$rsshowimg5['newsImg_name'] ;?>');
+		  $('#preimg6').attr('src', '<?php echo $rsshowimg5['newsImg_path'],$rsshowimg5['newsImg_name'] ;?>');
 	    }
 	});
 
