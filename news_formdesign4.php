@@ -28,6 +28,8 @@
 		$id=$_GET['id'];
 		$r2 = $db->findByPK('news','news_id',$id)->executeRow();
 		$txtheadnews->value = $r2['news_head'];
+		$r3 = $db->findByPK('newsVideo','newsVideo_connect',$id)->executeRow();
+		$txtlinkvdo->value = $r3['newsVideo_link'];
 		$r = $db->findByPK('newsDetails','newsDetails_connect',$id)->executeRow();
 		if($r2['news_newsDetails_id'] == '' || $r2['news_newsDetails_id'] != $r['newsDetails_id']){
 			$detailnews->value = 'หากต้องการเพิ่มรายละเอียดกรุณาคลิก';
@@ -52,7 +54,7 @@
 		<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3'>
 			<?php
 				echo $lbheadnews;
-				echo $txtheadnews;
+				echo $r2['news_head'];
 			?>
 		</div>
 		<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3'>
@@ -239,7 +241,7 @@
 				<div class='col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2'>
 					<input  type="hidden" id="new_id" name ="new_id" value="<?php echo $id;?>" />
 					<input  type="hidden" id="datetime" name="date_time" value="<?php echo $datetime;?>" />
-					<input  type="hidden" id="datetime" name="form_design" value="4" />
+					<input  type="hidden" id="form_design" name="form_design" value="4" />
 					<?php echo $last_detail_id;
 						  echo $last_detail_id2;
 					?>
@@ -309,17 +311,20 @@
 						if(CKEDITOR.instances['text_editer']){
 							$.ajax({
 					    	url: "news_insert_detail.php",
-					        data: {text : 'cancel'},
+					        data: {text : 'cancel' , last_detail_id : $('#last_detail_id').val(), new_id: $('#new_id').val(), form_design : $('#form_design').val()},
 					        type: "POST",
+							dataType: 'json',
 					        success: function(data) {
 						        console.log(data);
-						        $('#text_editer').val(data);
-						        $('#text_editer2').val(data);
-						        if(CKEDITOR.instances['text_editer']){
-							    		CKEDITOR.instances['text_editer'].destroy(true);
-										$('#text_editer').attr('readonly', true);
-										$('#button_adddetail').hide();
-										$('#button_canceletail').hide();
+						        $('#text_editer').val(data[0].detail);
+						        $('#text_editer2').val(data[1].detail);
+						       if(CKEDITOR.instances['text_editer'] || CKEDITOR.instances['text_editer2']){
+									CKEDITOR.instances['text_editer'].destroy(true);
+									CKEDITOR.instances['text_editer2'].destroy(true);
+									$('#text_editer').attr('readonly', true);
+									$('#text_editer2').attr('readonly', true);
+									$('#button_adddetail').hide();
+									$('#button_canceletail').hide();
 										e.stopPropagation();
 								}
 					        	}

@@ -22,9 +22,10 @@
 							<div class='row'>
 								<div class='col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2'></div>
 								<div class='col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8'>
-									<video width="320" height="240" controls>
-									<source src="<?php echo $rs['newsVideo_link'],$rs['newsVideo_name'] ;?>" type="video/mp4">
-								  	</video>
+									<?php
+										$rsvdo = $db->findByPK12('newsVideo','newsVideo_position',1,'newsVideo_connect',$id)->executeAssoc();
+									?>
+									<iframe class="w-100" height="505" src="<?php echo $rsvdo['newsVideo_link'];?>" allow='autoplay'></iframe>
 								</div>
 								<div class='col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2'></div>
 							</div>

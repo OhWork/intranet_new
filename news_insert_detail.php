@@ -62,7 +62,20 @@
 	else{
 		$rsshowdetail = $db->findByPK('newsDetails','newsDetails_id',$_POST['last_detail_id'])->executeAssoc();
 		if(!empty($_POST['last_detail_id'])){
-			echo $rsshowdetail['newsDetails_name'];
+			if($form_design == 4){
+				$rsshowdetail2 = $db->findByPK('newsDetails','newsDetails_connect',$_POST['new_id'])->execute();
+				foreach($rsshowdetail2 as $abc){
+					$json_data[]=array(
+					 'detail'=>$abc['newsDetails_name'],
+					 'lastiddetail'=>$abc['newsDetails_id'],
+					 );
+				}
+				$json= json_encode($json_data);
+				echo $json;
+			}
+			else{
+				echo $rsshowdetail['newsDetails_name'];
+			}
 		}
 		else{
 			echo 'หากต้องการเพิ่มรายละเอียดกรุณาคลิกที่กล่อง';

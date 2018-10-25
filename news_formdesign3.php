@@ -6,14 +6,16 @@
 	$txtheadnews = new textfield('news_head','','form-control','','');
 	$lbvdo = new label('วีดีโอ');
 	$filepic = new inputFile('news_videodetail','','file_id');
-	$txtlinkvdo = new textfield('news_vdo','','form-control','กรุณาก็อบ link จาก YouTubeมาใส่','');
+	$txtlinkvdo = new textfield('news_vdo','news_vdo_id','form-control','กรุณาก็อบ link จาก YouTubeมาใส่','');
 	$detailnews = new textAreareadonly('detail_news','form-control','text_editer','','5','5','');
 	$last_detail_id = new hiddenfield('last_detail_id','last_detail_id','form-control','','');
-	$button = new buttonok("บันทึก","","btn btn-success btn-lg btn-block bt3success col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","");
+	$button = new buttonok("บันทึก","submitvdo","btn btn-success btn-lg btn-block bt3success col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","");
 	if(!empty($_GET['id'])){
 		$id=$_GET['id'];
 		$r2 = $db->findByPK('news','news_id',$id)->executeRow();
 		$txtheadnews->value = $r2['news_head'];
+		$r3 = $db->findByPK('newsVideo','newsVideo_connect',$id)->executeRow();
+		$txtlinkvdo->value = $r3['newsVideo_link'];
 		$r = $db->findByPK('newsDetails','newsDetails_id',$r2['news_newsDetails_id'])->executeRow();
 		if($r2['news_newsDetails_id'] == '' || $r2['news_newsDetails_id'] != $r['newsDetails_id']){
 			$detailnews->value = 'หากต้องการเพิ่มรายละเอียดกรุณาคลิก';
@@ -87,7 +89,7 @@
 			<div class='row'>
 			<div class='col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10'></div>
 			<div class='col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2'>
-				<input  type="hidden" id="id" name="new_id" value="<?php echo $id;?>" />
+				<input  type="hidden" id="new_id" name="new_id" value="<?php echo $id;?>" />
 				<input  type="hidden" id="datetime" name="date_time" value="<?php echo $datetime;?>" />
 				<input  type="hidden" id="datetime" name="form_design" value="3" />
 				<?php echo $last_detail_id;?>
@@ -144,7 +146,7 @@
 						if(CKEDITOR.instances['text_editer']){
 							$.ajax({
 					    	url: "news_insert_detail.php",
-					        data: {text : 'cancel'},
+					        data: {text : 'cancel' , last_detail_id : $('#last_detail_id').val()},
 					        type: "POST",
 					        success: function(data) {
 						        console.log(data);
@@ -161,4 +163,22 @@
 						}
 					});
                 });
-           </script>
+        $('#submitvdo').on('click',function(e){
+	        e.preventDefault();
+	        var fd = new FormData();
+			var linkvdo = $('#news_vdo_id').val();
+			var new_id = $('#new_id').val();
+			fd.append('news_vdo',linkvdo);
+			fd.append('new_id',new_id);
+			$.ajax({
+				url: "news_insert_medie.php",
+				type: "POST",
+				data:  fd,
+				contentType: false,
+				cache: false,
+				processData:false,
+				success: function(data) {
+				}
+			});
+		});
+</script>
