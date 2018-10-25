@@ -341,7 +341,7 @@
 						if(CKEDITOR.instances['text_editer']){
 							$.ajax({
 					    	url: "news_insert_detail.php",
-					        data: {text : 'cancel'},
+					        data: {text : 'cancel', last_detail_id : $('#last_detail_id').val()},
 					        type: "POST",
 					        success: function(data) {
 						       console.log(data);
