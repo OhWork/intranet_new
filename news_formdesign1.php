@@ -263,10 +263,10 @@
 										<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-1'>
 											<div class='row'>
 												<div class='col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6 pr-0'>
-													<?php echo $button4; ?>
+													<?php echo $button5; ?>
 												</div>
 												<div class='col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6 pl-0'>
-													<button class="btn btn-danger col-12" type="button" id="cancel_pic" value="ยกเลิก">ยกเลิก</button>
+													<button class="btn btn-danger col-12" type="button" id="cancel_pic6" value="ยกเลิก">ยกเลิก</button>
 												</div>
 											</div>
 										</div>
@@ -555,12 +555,12 @@
 	    }
 	});
 	$('#cancel_pic6').on('click',function(e){
-	    var pic_id5 = $('#pic_id5').val();
-	    if(pic_id5 == ""){
-        $('#preimg5').attr('src', 'images/no_pic.png');
+	    var pic_id6 = $('#pic_id6').val();
+	    if(pic_id6 == ""){
+        $('#preimg6').attr('src', 'images/no_pic.png');
 	    }
 	    else{
-		  $('#preimg5').attr('src', '<?php echo $rsshowimg5['newsImg_path'],$rsshowimg5['newsImg_name'] ;?>');
+		  $('#preimg6').attr('src', '<?php echo $rsshowimg5['newsImg_path'],$rsshowimg5['newsImg_name'] ;?>');
 	    }
 	});
 </script>
