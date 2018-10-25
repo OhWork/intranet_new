@@ -13,9 +13,9 @@
 	$filepic4 = new inputFile('news_picdetail4','file','file_id4');
 	$filepic5 = new inputFile('news_picdetail5','file','file_id5');
 	$filepic6 = new inputFile('news_picdetail6','file','file_id6');
-
-	$txtlinkvdo = new textfield('news_vdo','','form-control','กรุณาก็อบ link จาก YouTubeมาใส่','');
+	$txtlinkvdo = new textfield('news_vdo','news_vdo_id','form-control','กรุณาก็อบ link จาก YouTubeมาใส่','');
 	$detailnews = new textAreareadonly('detail_news','form-control','text_editer','','5','5','');
+	$buttonvdo = new buttonok("บันทึก","submitvdo","btn btn-success btn-lg btn-block bt3success col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","");
 	$button = new buttonok("บันทึก","submit","btn btn-success btn-lg btn-block bt3success col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","");
 	$button1 = new buttonok("บันทึก","submit1","btn btn-success btn-lg btn-block bt3success col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","");
 	$button2 = new buttonok("บันทึก","submit2","btn btn-success btn-lg btn-block bt3success col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","");
@@ -63,6 +63,7 @@
 									<?php
 										echo $lbvdo;
 										echo $txtlinkvdo;
+										echo $buttonvdo;
 									?>
 								</div>
 								<div class='col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2'></div>
@@ -198,7 +199,7 @@
 			<div class='row'>
 				<div class='col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10'></div>
 				<div class='col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2'>
-				<input  type="hidden" id="id" name="new_id" value="<?php echo $id;?>" />
+				<input  type="hidden" id="new_id" name="new_id" value="<?php echo $id;?>" />
 				<input  type="hidden" id="datetime" name="date_time" value="<?php echo $datetime;?>" />
 				<input  type="hidden" id="datetime" name="form_design" value="5" />
 				<input  type="hidden" id="last_detail_id" name="last_detail_id" value="" />
@@ -382,6 +383,24 @@
 			fd.append('news_picdetail6',files);
 			fd.append('new_id',new_id);
 			fd.append('last_detail_id',last_detail_id);
+			$.ajax({
+				url: "news_insert_medie.php",
+				type: "POST",
+				data:  fd,
+				contentType: false,
+				cache: false,
+				processData:false,
+				success: function(data) {
+				}
+			});
+		});
+		$('#submitvdo').on('click',function(e){
+	        e.preventDefault();
+	        var fd = new FormData();
+			var linkvdo = $('#news_vdo_id').val();
+			var new_id = $('#new_id').val();
+			fd.append('news_vdo',linkvdo);
+			fd.append('new_id',new_id);
 			$.ajax({
 				url: "news_insert_medie.php",
 				type: "POST",

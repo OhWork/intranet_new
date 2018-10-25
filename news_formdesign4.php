@@ -12,11 +12,12 @@
 	$filepic4 = new inputFile('news_picdetail4','file','file_id4');
 	$filepic5 = new inputFile('news_picdetail5','file','file_id5');
 	$filepic6 = new inputFile('news_picdetail6','file','file_id6');
-	$txtlinkvdo = new textfield('news_vdo','','form-control','กรุณาก็อบ link จาก YouTubeมาใส่','');
+	$txtlinkvdo = new textfield('news_vdo','news_vdo_id','form-control','กรุณาก็อบ link จาก YouTubeมาใส่','');
 	$detailnews = new textAreareadonly('detail_news','form-control','text_editer','','5','5','');
 	$detailnews2 = new textAreareadonly('detail_news2','form-control','text_editer2','','5','5','');
 	$last_detail_id = new hiddenfield('last_detail_id','last_detail_id','form-control','','');
 	$last_detail_id2 = new hiddenfield('last_detail_id2','last_detail_id2','form-control','','');
+	$buttonvdo = new buttonok("บันทึก","submitvdo","btn btn-success btn-lg btn-block bt3success col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","");
 	$button = new buttonok("บันทึก","submit","btn btn-success btn-lg btn-block bt3success col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","1234");
 	$button1 = new buttonok("บันทึก","submit1","btn btn-success btn-lg btn-block bt3success col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","");
 	$button2 = new buttonok("บันทึก","submit2","btn btn-success btn-lg btn-block bt3success col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","");
@@ -71,6 +72,7 @@
 									<?php
 										echo $lbvdo;
 										echo $txtlinkvdo;
+										echo $buttonvdo;
 									?>
 								</div>
 								<div class='col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2'></div>
@@ -445,6 +447,25 @@
 				}
 			});
 		});
+		$('#submitvdo').on('click',function(e){
+	        e.preventDefault();
+	        var fd = new FormData();
+			var linkvdo = $('#news_vdo_id').val();
+			var new_id = $('#new_id').val();
+			fd.append('news_vdo',linkvdo);
+			fd.append('new_id',new_id);
+			$.ajax({
+				url: "news_insert_medie.php",
+				type: "POST",
+				data:  fd,
+				contentType: false,
+				cache: false,
+				processData:false,
+				success: function(data) {
+				}
+			});
+		});
+
         function readURL(input,idimg) {
 	        var nameidimg = idimg ;
 	        if (input.files && input.files[0]) {

@@ -4,30 +4,45 @@
 	ob_start();
     include 'database/db_tools.php';
 	include 'connect.php';
-	$rs = $db-> findByPK('newsImg','newsImg_connect',$_POST['new_id'])->executeAssoc();
-	if(!empty($rs['newsImg_id']) && !empty($_POST['last_detail_id'])){
+	$rs = $db-> findByPK12('newsImg','newsImg_position',1,'newsImg_connect',$_POST['new_id'])->executeAssoc();
+	$rs2 = $db-> findByPK12('newsImg','newsImg_position',2,'newsImg_connect',$_POST['new_id'])->executeAssoc();
+	$rs3 = $db-> findByPK12('newsImg','newsImg_position',3,'newsImg_connect',$_POST['new_id'])->executeAssoc();
+	$rs4 = $db-> findByPK12('newsImg','newsImg_position',4,'newsImg_connect',$_POST['new_id'])->executeAssoc();
+	$rs5 = $db-> findByPK12('newsImg','newsImg_position',5,'newsImg_connect',$_POST['new_id'])->executeAssoc();
+	$rs6 = $db-> findByPK12('newsImg','newsImg_position',6,'newsImg_connect',$_POST['new_id'])->executeAssoc();
+	if(!empty($rs['newsImg_id'])){
 		if(!empty($_FILES['news_picdetail'])){
 			$data['newsImg_name'] = basename($_FILES['news_picdetail']['name']);
 			$rseditpic = $db->update2con('newsImg',$data,'newsImg_position',1,'newsImg_connect',$_POST['new_id']);
 		}
+	}
+	if(!empty($rs2['newsImg_id'])){
 		if(!empty($_FILES['news_picdetail2'])){
 			$data['newsImg_name'] = basename($_FILES['news_picdetail2']['name']);
 			$rseditpic = $db->update2con('newsImg',$data,'newsImg_position',2,'newsImg_connect',$_POST['new_id']);
 		}
+	}
+	if(!empty($rs3['newsImg_id'])){
 		if(!empty($_FILES['news_picdetail3'])){
 			$data['newsImg_name'] = basename($_FILES['news_picdetail3']['name']);
 			$rseditpic = $db->update2con('newsImg',$data,'newsImg_position',3,'newsImg_connect',$_POST['new_id']);
 		}
+	}
+	if(!empty($rs4['newsImg_id'])){
 		if(!empty($_FILES['news_picdetail4'])){
 			$data['newsImg_name'] = basename($_FILES['news_picdetail4']['name']);
 			$rseditpic = $db->update2con('newsImg',$data,'newsImg_position',4,'newsImg_connect',$_POST['new_id']);
 		}
+	}
+	if(!empty($rs5['newsImg_id'])){
 		if(!empty($_FILES['news_picdetail5'])){
 			$data['newsImg_name'] = basename($_FILES['news_picdetail5']['name']);
 			$rseditpic = $db->update2con('newsImg',$data,'newsImg_position',5,'newsImg_connect',$_POST['new_id']);
 		}
-		if(!empty($_FILES['news_picdetail5'])){
-			$data['newsImg_name'] = basename($_FILES['news_picdetail5']['name']);
+	}
+	if(!empty($rs6['newsImg_id'])){
+		if(!empty($_FILES['news_picdetail6'])){
+			$data['newsImg_name'] = basename($_FILES['news_picdetail6']['name']);
 			$rseditpic = $db->update2con('newsImg',$data,'newsImg_position',6,'newsImg_connect',$_POST['new_id']);
 		}
 	}
@@ -118,7 +133,6 @@
 					'newsImg_connect' => $_POST['new_id']
 				));
 		}
-/*
 		if($_POST['news_vdo'] != ''){
 					$rsvdo = $db->insert('newsVideo',array(
 // 					'newsVideo_name' => $_POST['detail_news'],
@@ -127,9 +141,8 @@
 					'newsVideo_connect' => $_POST['new_id'],
 				));
 		}
-*/
 	}
-		if(@$rspic || $rspic2 || $rseditpic){
+		if(@$rspic || $rspic2 || $rseditpic || $rsvdo){
 			if(@$rseditpic){
 				echo "<div class='statusok'>แก้ไขเสร็จสิ้น</div>";
 // 				$link = "admin_index.php?url=news_show_news.php";
