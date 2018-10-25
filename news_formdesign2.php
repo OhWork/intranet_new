@@ -50,7 +50,7 @@
 			<div class='row'>
 			<div class='col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10'></div>
 			<div class='col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2'>
-				<input  type="hidden" id="id" value="<?php echo $id;?>" />
+				<input  type="hidden" id="id" name="new_id" value="<?php echo $id;?>" />
 				<input  type="hidden" id="datetime" name="date_time" value="<?php echo $datetime;?>" />
 				<input  type="hidden" id="datetime" name="form_design" value="2" />
 				<?php echo $last_detail_id;?>
@@ -103,7 +103,7 @@
 						if(CKEDITOR.instances['text_editer']){
 							$.ajax({
 					    	url: "news_insert_detail.php",
-					        data: {text : 'cancel'},
+					        data: {text : 'cancel', last_detail_id : $('#last_detail_id').val()},
 					        type: "POST",
 					        success: function(data) {
 						        console.log(data);
