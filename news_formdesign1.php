@@ -376,6 +376,7 @@
 				processData:false,
 				success: function(data) {
 					$('#submit').hide();
+					$('#cancel_pic').hide();
 				}
 			});
 		});
@@ -398,6 +399,7 @@
 				success: function(data) {
 
 					$('#submit1').hide();
+					$('#cancel_pic2').hide();
 				}
 			});
 		});
@@ -420,6 +422,7 @@
 				success: function(data) {
 
 					$('#submit2').hide();
+					$('#cancel_pic3').hide();
 				}
 			});
 		});
@@ -442,6 +445,7 @@
 				success: function(data) {
 
 					$('#submit3').hide();
+					$('#cancel_pic4').hide();
 				}
 			});
 		});
@@ -464,6 +468,7 @@
 				success: function(data) {
 
 					$('#submit4').hide();
+					$('#cancel_pic5').hide();
 				}
 			});
 		});
@@ -486,6 +491,7 @@
 				success: function(data) {
 
 					$('#submit5').hide();
+					$('#cancel_pic6').hide();
 				}
 			});
 		});
@@ -504,24 +510,35 @@
     	}
 	$("#file_id").on('change',function(){
         readURL(this,'#preimg');
+		$('#submit').show();
+		$('#cancel_pic').show();
     });
     $("#file_id2").on('change',function(){
         readURL(this,'#preimg2');
+		$('#submit1').show();
+		$('#cancel_pic2').show();
     });
     $("#file_id3").on('change',function(){
         readURL(this,'#preimg3');
+		$('#submit2').show();
+		$('#cancel_pic3').show();
     });
     $("#file_id4").on('change',function(){
         readURL(this,'#preimg4');
+		$('#submit3').show();
+		$('#cancel_pic4').show();
     });
     $("#file_id5").on('change',function(){
         readURL(this,'#preimg5');
+		$('#submit4').show();
+		$('#cancel_pic5').show();
     });
     $("#file_id6").on('change',function(){
         readURL(this,'#preimg6');
+		$('#submit5').show();
+		$('#cancel_pic6').show();
     });
     $('#cancel_pic').on('click',function(e){
-		$('#submit').show();
 	    var pic_id = $('#pic_id').val();
 	    if(pic_id == ""){
         $('#preimg').attr('src', 'images/no_pic.png');
