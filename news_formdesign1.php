@@ -344,9 +344,8 @@
 					        data: {text : 'cancel'},
 					        type: "POST",
 					        success: function(data) {
-						       var json1 = JSON.parse(data);
-						       console.log(json1.detail);
-						        $('#text_editer').val(data.detail);
+						       console.log(data);
+						        $('#text_editer').val(data);
 						        if(CKEDITOR.instances['text_editer']){
 							    		CKEDITOR.instances['text_editer'].destroy(true);
 										$('#text_editer').attr('readonly', true);
