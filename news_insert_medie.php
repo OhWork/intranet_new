@@ -10,6 +10,7 @@
 	$rs4 = $db-> findByPK12('newsImg','newsImg_position',4,'newsImg_connect',$_POST['new_id'])->executeAssoc();
 	$rs5 = $db-> findByPK12('newsImg','newsImg_position',5,'newsImg_connect',$_POST['new_id'])->executeAssoc();
 	$rs6 = $db-> findByPK12('newsImg','newsImg_position',6,'newsImg_connect',$_POST['new_id'])->executeAssoc();
+	$rsvdo = $db-> findByPK12('newsVideo','newsVideo_position',1,'newsVideo_connect',$_POST['new_id'])->executeAssoc();
 	if(!empty($rs['newsImg_id'])){
 		if(!empty($_FILES['news_picdetail'])){
 			$data['newsImg_name'] = basename($_FILES['news_picdetail']['name']);
@@ -44,6 +45,12 @@
 		if(!empty($_FILES['news_picdetail6'])){
 			$data['newsImg_name'] = basename($_FILES['news_picdetail6']['name']);
 			$rseditpic = $db->update2con('newsImg',$data,'newsImg_position',6,'newsImg_connect',$_POST['new_id']);
+		}
+	}
+	if(!empty($rs6['newsImg_id'])){
+		if($_POST['news_vdo'] != ''){
+			$data['newsVideo_link'] = $_POST['news_vdo'];
+			$rseditpic = $db->update2con('newsVideo',$data,'newsVideo_position',1,'newsVideo_connect',$_POST['new_id']);
 		}
 	}
 	else{
