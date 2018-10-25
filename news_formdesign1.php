@@ -375,6 +375,7 @@
 				cache: false,
 				processData:false,
 				success: function(data) {
+					$('#submit').hide();
 				}
 			});
 		});
@@ -395,6 +396,8 @@
 				cache: false,
 				processData:false,
 				success: function(data) {
+
+					$('#submit1').hide();
 				}
 			});
 		});
@@ -415,6 +418,8 @@
 				cache: false,
 				processData:false,
 				success: function(data) {
+
+					$('#submit2').hide();
 				}
 			});
 		});
@@ -435,6 +440,8 @@
 				cache: false,
 				processData:false,
 				success: function(data) {
+
+					$('#submit3').hide();
 				}
 			});
 		});
@@ -455,6 +462,8 @@
 				cache: false,
 				processData:false,
 				success: function(data) {
+
+					$('#submit4').hide();
 				}
 			});
 		});
@@ -475,6 +484,8 @@
 				cache: false,
 				processData:false,
 				success: function(data) {
+
+					$('#submit5').hide();
 				}
 			});
 		});
@@ -510,6 +521,7 @@
         readURL(this,'#preimg6');
     });
     $('#cancel_pic').on('click',function(e){
+		$('#submit').show();
 	    var pic_id = $('#pic_id').val();
 	    if(pic_id == ""){
         $('#preimg').attr('src', 'images/no_pic.png');
@@ -519,6 +531,7 @@
 	    }
 	});
 	$('#cancel_pic2').on('click',function(e){
+		$('#submit1').show();
 	    var pic_id2 = $('#pic_id2').val();
 	    if(pic_id2 == ""){
         $('#preimg2').attr('src', 'images/no_pic.png');
@@ -528,6 +541,7 @@
 	    }
 	});
 	$('#cancel_pic3').on('click',function(e){
+		$('#submit2').show();
 	    var pic_id3 = $('#pic_id3').val();
 	    if(pic_id3 == ""){
         $('#preimg3').attr('src', 'images/no_pic.png');
@@ -537,6 +551,7 @@
 	    }
 	});
 	$('#cancel_pic4').on('click',function(e){
+		$('#submit3').show();
 	    var pic_id4 = $('#pic_id4').val();
 	    if(pic_id4 == ""){
         $('#preimg4').attr('src', 'images/no_pic.png');
@@ -546,6 +561,7 @@
 	    }
 	});
 	$('#cancel_pic5').on('click',function(e){
+		$('#submit4').show();
 	    var pic_id5 = $('#pic_id5').val();
 	    if(pic_id5 == ""){
         $('#preimg5').attr('src', 'images/no_pic.png');
@@ -555,6 +571,7 @@
 	    }
 	});
 	$('#cancel_pic6').on('click',function(e){
+		$('#submit5').show();
 	    var pic_id6 = $('#pic_id6').val();
 	    if(pic_id6 == ""){
         $('#preimg6').attr('src', 'images/no_pic.png');

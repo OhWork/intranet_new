@@ -19,7 +19,10 @@
 					<div class='row'>
 						<div class='col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3'></div>
 						<div class='col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6'>
-							<img height="250" width="100%" class="pop" src='<?php echo $rs['newsImg_path'],$rs['news_cover'];?>' />
+							<?php
+								$rscover = $db->findByPK12('newsImg','newsImg_position',1,'newsImg_connect',$id)->executeAssoc();
+							?>
+							<img height="250" width="100%" class="pop" src='<?php echo $rscover['newsImg_path'],$rscover['newsImg_name'];?>' />
 						</div>
 						<div class='col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3'></div>
 					</div>
