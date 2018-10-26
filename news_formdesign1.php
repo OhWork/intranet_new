@@ -50,19 +50,19 @@
 		</div>
 		<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3'>
 			<div class='row'>
-				<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12'>
+				<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12' style="border-top: 2px solid #F5F5F5;border-bottom: 2px solid #F5F5F5;">
 					<div class='row'>
 						<div class='col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1'></div>
-						<div class='col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4'>
+						<div class='col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4' style="border-right: 2px solid #F5F5F5;">
 							<div class='row'>
-								<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mb-4'>
+								<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 pt-2'>
 									<?php echo $lbpic; ?>
 								</div>
 							</div>
 						</div>
-						<div class='col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3'>
+						<div class='col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3  pt-2 pb-2'>
 							<div class='row'>
-								<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12'>
+								<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12' align="center">
 									<?php
 										$rsshowimg = $db->findByPK12('newsImg','newsImg_position',1,'newsImg_connect',$_GET['id'])->executeAssoc();
 									?>
@@ -96,15 +96,24 @@
 						<div class='col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4'></div>
 					</div>
 				</div>
-				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-2">
+				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-2 pb-2" style="border-bottom: 2px solid #F5F5F5;">
 					<div class='row'>
 						<div class='col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1'></div>
 						<div class='col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10' id="text_detail">
 							<?php
 								echo $lbdetailnews;
 								echo $detailnews;?>
-							<input type="submit" id="button_adddetail" value="บันทึก">
-							<input type="button" id="button_canceletail" value="ยกเลิก">
+							<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-2'>
+								<div class='row'>
+									<div class='col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8'></div>
+									<div class='col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4'>
+										<div class='row'>
+											<button class="btn btn-success col-6" type="submit" id="button_adddetail" value="บันทึก">บันทึก</button>
+											<button class="btn btn-danger col-6" type="button" id="button_canceletail" value="ยกเลิก">ยกเลิก</button>
+										</div>
+									</div>
+								</div>
+							</div>
 						</div>
 						<div class='col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1'></div>
 					</div>
@@ -115,7 +124,7 @@
 							<div class='row'>
 								<div class='col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3'>
 									<div class='row'>
-										<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+										<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" align="center">
 											<?php $rsshowimg1 = $db->findByPK12('newsImg','newsImg_position',2,'newsImg_connect',$_GET['id'])->executeAssoc(); ?>
 											<input  type="hidden" id="pic_id2" name="pic_id2" value="<?php echo $rsshowimg1['newsImg_id'];?>" />
 											<?php
@@ -146,7 +155,7 @@
 								</div>
 								<div class='col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3'>
 									<div class='row'>
-										<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+										<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" align="center">
 											<?php $rsshowimg2 = $db->findByPK12('newsImg','newsImg_position',3,'newsImg_connect',$_GET['id'])->executeAssoc();
 											?>
 											<input type="hidden" id="pic_id3" name="pic_id" value="<?php echo $rsshowimg2['newsImg_id'];?>" />
@@ -178,7 +187,7 @@
 								</div>
 								<div class='col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3'>
 									<div class='row'>
-										<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+										<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" align="center">
 											<?php $rsshowimg3 = $db->findByPK12('newsImg','newsImg_position',4,'newsImg_connect',$_GET['id'])->executeAssoc();
 											?>
 											<input  type="hidden" id="pic_id4" name="pic_id" value="<?php echo $rsshowimg3['newsImg_id'];?>" />
@@ -210,7 +219,7 @@
 								</div>
 								<div class='col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3'>
 									<div class='row'>
-										<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+										<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" align="center">
 											<?php $rsshowimg4 = $db->findByPK12('newsImg','newsImg_position',5,'newsImg_connect',$_GET['id'])->executeAssoc();
 											?>
 											<input  type="hidden" id="pic_id5" name="pic_id" value="<?php echo $rsshowimg4['newsImg_id'];?>" />
@@ -242,7 +251,7 @@
 								</div>
 								<div class='col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3 mt-2'>
 									<div class='row'>
-										<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+										<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" align="center">
 											<?php $rsshowimg5 = $db->findByPK12('newsImg','newsImg_position',6,'newsImg_connect',$_GET['id'])->executeAssoc();
 											?>
 											<input  type="hidden" id="pic_id6" name="pic_id" value="<?php echo $rsshowimg5['newsImg_id'];?>" />
