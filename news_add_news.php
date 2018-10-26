@@ -131,10 +131,10 @@
 		<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-1">
 			<div class="row">
 				<div class="" style="margin-left:32px;">
-					<img style="width:50px;height:50px;" src="images/news/typeDesign/new1.png">
+					<img style="width:50px;height:50px;" src="images/news/typeDesign/new2.png">
 				</div>
 				<div class="" style="margin-left:48px;">
-					<img style="width:50px;height:50px;" src="images/news/typeDesign/new2.png">
+					<img style="width:50px;height:50px;" src="images/news/typeDesign/new1.png">
 				</div>
 				<div class="" style="margin-left:48px;">
 					<img style="width:50px;height:50px;" src="images/news/typeDesign/new3.png">

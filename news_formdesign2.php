@@ -24,17 +24,14 @@
 	}
 	echo $form->open("form_detail","form","col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","","");
 ?>
-
+<div class='row'>
 <div class='col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1'></div>
 <div class='col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10 pb-3' style="background-color:#ffffff;">
 	<div class='row'>
 		<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3'>
-			<?php
-				echo $lbheadnews;
-				echo $r2['news_head'];
-			?>
+			<h5><?php echo $lbheadnews, $r2['news_head'];?></h5>
 		</div>
-		<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3' style="color:#007bff;">
+		<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-1' style="color:#007bff;">
 			<?php $rs = $db->findByPK22('news','user','user_user_id','user_id','news_id',$_GET['id'])->executeAssoc();
 				echo 'เพิ่มข่าวสารโดยคุณ ',$rs['user_name'],' ',$rs['user_last'],' ',$rs['news_dateupdate'];
 			?>
@@ -43,8 +40,13 @@
 			<?php
 				echo $lbdetailnews;
 				echo $detailnews;?>
-				<input type="submit" id="button_adddetail" value="บันทึก">
-				<input type="button" id="button_canceletail" value="ยกเลิก">
+			<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-2'>
+				<div class='row'>
+					<div class='col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8'></div>
+					<div class='col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4'>
+						<div class='row'>
+							<button class="btn btn-success col-6" type="submit" id="button_adddetail" value="บันทึก">บันทึก</button>
+							<button class="btn btn-danger col-6" type="button" id="button_canceletail" value="ยกเลิก">ยกเลิก</button>
 		</div>
 		<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3">
 			<div class='row'>
@@ -60,6 +62,7 @@
 	</div>
 </div>
 <div class='col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1'></div>
+</div>
 <script>
                 $('#button_adddetail').hide();
                 $('#button_canceletail').hide();
