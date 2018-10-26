@@ -137,7 +137,7 @@
 								echo $lbpic;
 								$rsshowimg1 = $db->findByPK12('newsImg','newsImg_position',2,'newsImg_connect',$_GET['id'])->executeAssoc();
 								?>
-								<input  type="hidden" id="pic_id2" name="pic_id2" value="<?php echo $rsshowimg1['newsImg_id'];?>" />
+								<input type="hidden" id="pic_id2" name="pic_id2" value="<?php echo $rsshowimg1['newsImg_id'];?>" />
 								<?php
 								if(!empty($rsshowimg1['newsImg_id'])){
 								?>
@@ -349,6 +349,8 @@
 				cache: false,
 				processData:false,
 				success: function(data) {
+					$('#submit').hide();
+					$('#cancel_pic').hide();
 				}
 			});
 		});
@@ -369,6 +371,9 @@
 				cache: false,
 				processData:false,
 				success: function(data) {
+
+					$('#submit1').hide();
+					$('#cancel_pic2').hide();
 				}
 			});
 		});
@@ -389,6 +394,9 @@
 				cache: false,
 				processData:false,
 				success: function(data) {
+
+					$('#submit2').hide();
+					$('#cancel_pic3').hide();
 				}
 			});
 		});
@@ -409,6 +417,9 @@
 				cache: false,
 				processData:false,
 				success: function(data) {
+
+					$('#submit3').hide();
+					$('#cancel_pic4').hide();
 				}
 			});
 		});
@@ -429,6 +440,9 @@
 				cache: false,
 				processData:false,
 				success: function(data) {
+
+					$('#submit4').hide();
+					$('#cancel_pic5').hide();
 				}
 			});
 		});
@@ -449,6 +463,9 @@
 				cache: false,
 				processData:false,
 				success: function(data) {
+
+					$('#submit5').hide();
+					$('#cancel_pic6').hide();
 				}
 			});
 		});
@@ -470,7 +487,6 @@
 				}
 			});
 		});
-
         function readURL(input,idimg) {
 	        var nameidimg = idimg ;
 	        if (input.files && input.files[0]) {
@@ -486,21 +502,33 @@
     	}
 	$("#file_id").on('change',function(){
         readURL(this,'#preimg');
+		$('#submit').show();
+		$('#cancel_pic').show();
     });
     $("#file_id2").on('change',function(){
         readURL(this,'#preimg2');
+		$('#submit1').show();
+		$('#cancel_pic2').show();
     });
     $("#file_id3").on('change',function(){
         readURL(this,'#preimg3');
+		$('#submit2').show();
+		$('#cancel_pic3').show();
     });
     $("#file_id4").on('change',function(){
         readURL(this,'#preimg4');
+		$('#submit3').show();
+		$('#cancel_pic4').show();
     });
     $("#file_id5").on('change',function(){
         readURL(this,'#preimg5');
+		$('#submit4').show();
+		$('#cancel_pic5').show();
     });
     $("#file_id6").on('change',function(){
         readURL(this,'#preimg6');
+		$('#submit5').show();
+		$('#cancel_pic6').show();
     });
     $('#cancel_pic').on('click',function(e){
 	    var pic_id = $('#pic_id').val();
@@ -556,5 +584,4 @@
 		  $('#preimg6').attr('src', '<?php echo $rsshowimg5['newsImg_path'],$rsshowimg5['newsImg_name'] ;?>');
 	    }
 	});
-
 </script>

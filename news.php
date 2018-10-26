@@ -28,8 +28,12 @@
 										<div class='row'>
 											<div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2" style="margin-right:10px;">
 												<div class='row'>
-<!-- 													<img height="100" src='images/news/<?php echo $show['news_cover']; ?>' /> -->
+													<?php
+														if(!empty($show['news_cover'])){
+													?>
+													<img height="100" src='images/news/<?php echo $show['news_cover']; ?>' />
 														<?php
+															}else{
 														if($show['subzoo_zoo_zoo_id'] == 11){
 														?>
                                                         	<img height="100" src='images/logo/Dusitzoo.png' />
@@ -62,6 +66,7 @@
                                                         ?>
                                                         	<img height="100" src='images/logo/ZPO.png' />
                                                         <?php
+	                                                    }
 	                                                    }
                                                         ?>
 												</div>

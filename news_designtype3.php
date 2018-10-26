@@ -24,8 +24,9 @@
 								<div class='col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8'>
 									<?php
 										$rsvdo = $db->findByPK12('newsVideo','newsVideo_position',1,'newsVideo_connect',$id)->executeAssoc();
+										echo $rsvdo['newsVideo_link'];
 									?>
-									<iframe class="w-100" height="505" src="<?php echo $rsvdo['newsVideo_link'];?>" allow='autoplay'></iframe>
+<!-- 									<iframe class="w-100" height="505" src="<?php echo $rsvdo['newsVideo_link'];?>" allow='autoplay'></iframe> -->
 								</div>
 								<div class='col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2'></div>
 							</div>
