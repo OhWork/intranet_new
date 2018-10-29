@@ -123,12 +123,15 @@
 				}
 		}
 		if($_POST['news_vdo'] != ''){
+			$linkvideo = $_POST['news_vdo'];
+			$namevideo = substr($linkvideo, -11);
 			if(!empty($rsvdo['newsVideo_id'])){
 				$data['newsVideo_link'] = $_POST['news_vdo'];
+				$data['newsVideo_name'] = $namevideo;
 				$rseditpic = $db->update2con('newsVideo',$data,'newsVideo_position',1,'newsVideo_connect',$_POST['new_id']);
 			}else{
 				$rsvdo = $db->insert('newsVideo',array(
-	// 				'newsVideo_name' => $_POST['detail_news'],
+					'newsVideo_name' => $namevideo,
 					'newsVideo_link' => $_POST['news_vdo'],
 					'newsVideo_position' => 1,
 					'newsVideo_connect' => $_POST['new_id'],

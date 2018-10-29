@@ -27,6 +27,8 @@
 		$id=$_GET['id'];
 		$r2 = $db->findByPK('news','news_id',$id)->executeRow();
 		$txtheadnews->value = $r2['news_head'];
+		$r3 = $db->findByPK('newsVideo','newsVideo_connect',$id)->executeRow();
+		$txtlinkvdo->value = $r3['newsVideo_link'];
 		$r = $db->findByPK('newsDetails','newsDetails_id',$r2['news_newsDetails_id'])->executeRow();
 		if($r2['news_newsDetails_id'] == '' || $r2['news_newsDetails_id'] != $r['newsDetails_id']){
 			$detailnews->value = 'หากต้องการเพิ่มรายละเอียดกรุณาคลิก';
@@ -43,7 +45,7 @@
 		<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3'>
 			<?php
 				echo $lbheadnews;
-				echo $txtheadnews;
+				echo $r2['news_head'];
 			?>
 		</div>
 		<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3'>
@@ -274,7 +276,7 @@
 					});
                 });
 
-		$('#submit').on('click',function(e){
+		  $('#submit').on('click',function(e){
 	        e.preventDefault();
 	        var fd = new FormData();
 			var files = $('#file_id')[0].files[0];
@@ -291,6 +293,8 @@
 				cache: false,
 				processData:false,
 				success: function(data) {
+					$('#submit').hide();
+					$('#cancel_pic').hide();
 				}
 			});
 		});
@@ -311,6 +315,9 @@
 				cache: false,
 				processData:false,
 				success: function(data) {
+
+					$('#submit1').hide();
+					$('#cancel_pic2').hide();
 				}
 			});
 		});
@@ -331,6 +338,9 @@
 				cache: false,
 				processData:false,
 				success: function(data) {
+
+					$('#submit2').hide();
+					$('#cancel_pic3').hide();
 				}
 			});
 		});
@@ -351,6 +361,9 @@
 				cache: false,
 				processData:false,
 				success: function(data) {
+
+					$('#submit3').hide();
+					$('#cancel_pic4').hide();
 				}
 			});
 		});
@@ -371,6 +384,9 @@
 				cache: false,
 				processData:false,
 				success: function(data) {
+
+					$('#submit4').hide();
+					$('#cancel_pic5').hide();
 				}
 			});
 		});
@@ -391,6 +407,9 @@
 				cache: false,
 				processData:false,
 				success: function(data) {
+
+					$('#submit5').hide();
+					$('#cancel_pic6').hide();
 				}
 			});
 		});
@@ -427,21 +446,33 @@
     	}
 	$("#file_id").on('change',function(){
         readURL(this,'#preimg');
+		$('#submit').show();
+		$('#cancel_pic').show();
     });
     $("#file_id2").on('change',function(){
         readURL(this,'#preimg2');
+		$('#submit1').show();
+		$('#cancel_pic2').show();
     });
     $("#file_id3").on('change',function(){
         readURL(this,'#preimg3');
+		$('#submit2').show();
+		$('#cancel_pic3').show();
     });
     $("#file_id4").on('change',function(){
         readURL(this,'#preimg4');
+		$('#submit3').show();
+		$('#cancel_pic4').show();
     });
     $("#file_id5").on('change',function(){
         readURL(this,'#preimg5');
+		$('#submit4').show();
+		$('#cancel_pic5').show();
     });
     $("#file_id6").on('change',function(){
         readURL(this,'#preimg6');
+		$('#submit5').show();
+		$('#cancel_pic6').show();
     });
     $('#cancel_pic').on('click',function(e){
 	    var pic_id = $('#pic_id').val();

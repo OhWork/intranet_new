@@ -23,9 +23,11 @@
 							<div class='row'>
 								<div class='col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2'></div>
 								<div class='col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8'>
-									<video width="320" height="240" controls>
-									<source src="<?php echo $rs['newsVideo_link'],$rs['newsVideo_name'] ;?>" type="video/mp4">
-								  	</video>
+									<?php
+										$rsvdo = $db->findByPK12('newsVideo','newsVideo_position',1,'newsVideo_connect',$id)->executeAssoc();
+// 										echo $rsvdo['newsVideo_link'];
+									?>
+									<div id="ytplayer"></div>
 								</div>
 								<div class='col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2'></div>
 							</div>
@@ -114,4 +116,20 @@
               $('#imagemodal').modal('show');
           });
   });
+  // Load the IFrame Player API code asynchronously.
+  var tag = document.createElement('script');
+  tag.src = "https://www.youtube.com/player_api";
+  var firstScriptTag = document.getElementsByTagName('script')[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+  // Replace the 'ytplayer' element with an <iframe> and
+  // YouTube player after the API code downloads.
+  var player;
+  function onYouTubePlayerAPIReady() {
+    player = new YT.Player('ytplayer', {
+      height: '360',
+      width: '640',
+      videoId: '<?php echo $rsvdo['newsVideo_name'];?>'
+    });
+  }
 </script>
