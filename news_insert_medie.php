@@ -11,7 +11,6 @@
 	$rs5 = $db-> findByPK12('newsImg','newsImg_position',5,'newsImg_connect',$_POST['new_id'])->executeAssoc();
 	$rs6 = $db-> findByPK12('newsImg','newsImg_position',6,'newsImg_connect',$_POST['new_id'])->executeAssoc();
 	$rsvdo = $db-> findByPK12('newsVideo','newsVideo_position',1,'newsVideo_connect',$_POST['new_id'])->executeAssoc();
-
 		if(!empty($_FILES['news_picdetail'])){
 			$target_dir = 'temp/';
 			$target_file = $target_dir.basename($_FILES['news_picdetail']['name']);
@@ -50,11 +49,12 @@
 				}
 		}
 		if(!empty($_FILES['news_picdetail3'])){
+			echo "in";
 				$target_dir = 'temp/';
 				$target_file = $target_dir.basename($_FILES['news_picdetail3']['name']);
 				$path = 'images/news/newsImg/';
 				$target_dir_save = $path.basename($_FILES['news_picdetail3']['name']);
-				move_uploaded_file($_FILES['news_picdetail2']['tmp_name'], $target_dir_save);
+				move_uploaded_file($_FILES['news_picdetail3']['tmp_name'], $target_dir_save);
 				if(!empty($rs3['newsImg_id'])){
 					$data['newsImg_name'] = basename($_FILES['news_picdetail3']['name']);
 					$rseditpic = $db->update2con('newsImg',$data,'newsImg_position',3,'newsImg_connect',$_POST['new_id']);
@@ -73,7 +73,7 @@
 				$target_file = $target_dir.basename($_FILES['news_picdetail4']['name']);
 				$path = 'images/news/newsImg/';
 				$target_dir_save = $path.basename($_FILES['news_picdetail4']['name']);
-				move_uploaded_file($_FILES['news_picdetail2']['tmp_name'], $target_dir_save);
+				move_uploaded_file($_FILES['news_picdetail4']['tmp_name'], $target_dir_save);
 				if(!empty($rs4['newsImg_id'])){
 					$data['newsImg_name'] = basename($_FILES['news_picdetail4']['name']);
 					$rseditpic = $db->update2con('newsImg',$data,'newsImg_position',4,'newsImg_connect',$_POST['new_id']);
