@@ -237,5 +237,8 @@
 	    $('#preimg').show();
         readURL(this);
     });
-
+	var id_new = $('#new_id').val();
+	if(id_new != ''){
+	$('input[name=typeDesignnews_id]').slice(0).prop("disabled", true);
+	}
 </script>
