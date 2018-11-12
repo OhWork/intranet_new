@@ -1,5 +1,3 @@
-<div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2 printdisplaynone" style="height: 100%;">
-<div class="row">
 <div class="list-group" style="height: 100%;">
 	<nav class="d-none d-md-block bg-dark sidebar mnpb" style="height: 100%;padding-bottom:100%;">
         <div class="sidebar-sticky">
@@ -56,8 +54,6 @@
             </ul>
         </div>
     </nav>
-</div>
-</div>
 </div>
 <script>
 	var nav_status;

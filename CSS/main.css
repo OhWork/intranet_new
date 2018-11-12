@@ -1091,7 +1091,7 @@ body {
       opacity: 1;
       transform: translateX(0);
    }
-
+}
 .collapsing.width {
   -webkit-transition-property: width, visibility;
   transition-property: width, visibility;
@@ -1104,4 +1104,10 @@ body {
 }
 .maa {
 	color:#adfdaa;
+}
+.bner {
+	padding-top:15%;
+	padding-bottom:15%;
+	border-radius:5px;
+	text-align:center;
 }
