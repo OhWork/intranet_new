@@ -632,6 +632,23 @@
 										</div>
 									</div>
 								</div>
+								<div class='col-md-12 picbackground' id="room21">
+								<div id='myCarousel21' class='carousel slide' data-ride='carousel'>
+									<ol class="carousel-indicators">
+										<li data-target="#myCarousel21" data-slide-to="0" class="active"></li>
+										<li data-target="#myCarousel21" data-slide-to="1"></li>
+										<li data-target="#myCarousel21" data-slide-to="2"></li>
+									</ol>
+									<div class='carousel-inner slidewarpper' role='listbox'>
+										<div class='carousel-item active'>
+											<img class="d-block w-100" src='images/conferroom/kkoz/kkoz_confer_4_1.jpg' alt="First slide">																		</div>
+										<div class='carousel-item'>
+											<img class="d-block w-100" src='images/conferroom/kkoz/kkoz_confer_4_2.jpg' alt="First slide">																		</div>
+										<div class='carousel-item'>
+											<img class="d-block w-100" src='images/conferroom/kkoz/kkoz_confer_4_3.jpg' alt="First slide">																		</div>
+									</div>
+								</div>
+							</div>
 								<div class='col-md-12  mt-3'>
 									<div class='row'>
 										<div class='text-danger col-md-1'><label class="col-md-12 ml-1">1. </label></div>
@@ -1212,6 +1229,7 @@ $("#form_reg").validate({
 			$('#room18').hide();
 			$('#room19').hide();
 			$('#room20').hide();
+			$('#room21').hide();
 		}
 		else if(idconfer == 2){
 			$('#room2').show();
@@ -1233,6 +1251,7 @@ $("#form_reg").validate({
 			$('#room18').hide();
 			$('#room19').hide();
 			$('#room20').hide();
+			$('#room21').hide();
 		}
 		else if(idconfer == 3){
 			$('#room3').show();
@@ -1254,6 +1273,7 @@ $("#form_reg").validate({
 			$('#room18').hide();
 			$('#room19').hide();
 			$('#room20').hide();
+			$('#room21').hide();
 			$('.vdocon').hide();
 		}
 		else if(idconfer == 4){
@@ -1275,6 +1295,7 @@ $("#form_reg").validate({
 			$('#room18').hide();
 			$('#room19').hide();
 			$('#room20').hide();
+			$('#room21').hide();
 			$('#room4').show();
 		}
 		else if(idconfer == 5){
@@ -1297,6 +1318,7 @@ $("#form_reg").validate({
 			$('#room18').hide();
 			$('#room19').hide();
 			$('#room20').hide();
+			$('#room21').hide();
 			$('#room5').show();
 		}
 		else if(idconfer == 6){
@@ -1318,6 +1340,7 @@ $("#form_reg").validate({
 			$('#room18').hide();
 			$('#room19').hide();
 			$('#room20').hide();
+			$('#room21').hide();
 			$('#room6').show();
 		}
 		else if(idconfer == 7){
@@ -1340,6 +1363,7 @@ $("#form_reg").validate({
 			$('#room18').hide();
 			$('#room19').hide();
 			$('#room20').hide();
+			$('#room21').hide();
 			$('#room7').show();
 		}
 		else if(idconfer == 8){
@@ -1362,6 +1386,7 @@ $("#form_reg").validate({
 			$('#room18').hide();
 			$('#room19').hide();
 			$('#room20').hide();
+			$('#room21').hide();
 			$('#room8').show();
 		}
 		else if(idconfer == 9){
@@ -1385,6 +1410,7 @@ $("#form_reg").validate({
 			$('#room18').hide();
 			$('#room19').hide();
 			$('#room20').hide();
+			$('#room21').hide();
 			$('#room9').show();
 		}
 		else if(idconfer == 10){
@@ -1407,6 +1433,7 @@ $("#form_reg").validate({
 			$('#room18').hide();
 			$('#room19').hide();
 			$('#room20').hide();
+			$('#room21').hide();
 			$('#room10').show();
 		}
 		else if(idconfer == 11){
@@ -1429,6 +1456,7 @@ $("#form_reg").validate({
 			$('#room18').hide();
 			$('#room19').hide();
 			$('#room20').hide();
+			$('#room21').hide();
 			$('#room11').show();
 		}
 		else if(idconfer == 12){
@@ -1451,6 +1479,7 @@ $("#form_reg").validate({
 			$('#room18').hide();
 			$('#room19').hide();
 			$('#room20').hide();
+			$('#room21').hide();
 			$('#room12').show();
 
 		}
@@ -1474,6 +1503,7 @@ $("#form_reg").validate({
 			$('#room18').hide();
 			$('#room19').hide();
 			$('#room20').hide();
+			$('#room21').hide();
 			$('#room13').show();
 
 		}
@@ -1497,6 +1527,7 @@ $("#form_reg").validate({
 			$('#room18').hide();
 			$('#room19').hide();
 			$('#room20').hide();
+			$('#room21').hide();
 			$('#room15').show();
 
 		}
@@ -1520,6 +1551,7 @@ $("#form_reg").validate({
 			$('#room18').hide();
 			$('#room19').hide();
 			$('#room20').hide();
+			$('#room21').hide();
 			$('#room16').show();
 
 		}
@@ -1542,6 +1574,7 @@ $("#form_reg").validate({
 			$('#room18').hide();
 			$('#room19').hide();
 			$('#room20').hide();
+			$('#room21').hide();
 			$('#room17').show();
 
 		}
@@ -1565,6 +1598,7 @@ $("#form_reg").validate({
 			$('#room17').hide();
 			$('#room19').hide();
 			$('#room20').hide();
+			$('#room21').hide();
 			$('#room18').show();
 
 		}
@@ -1588,6 +1622,7 @@ $("#form_reg").validate({
 			$('#room17').hide();
 			$('#room18').hide();
 			$('#room20').hide();
+			$('#room21').hide();
 			$('#room19').show();
 
 		}
@@ -1611,8 +1646,32 @@ $("#form_reg").validate({
 			$('#room17').hide();
 			$('#room18').hide();
 			$('#room19').hide();
+			$('#room21').hide();
 			$('#room20').show();
 
+		}
+		else if(idconfer == 21){
+			$('#room1').hide();
+			$('#room2').hide();
+			$('#room3').hide();
+			$('#room4').hide();
+			$('#room5').hide();
+			$('#room5').hide();
+			$('#room6').hide();
+			$('#room7').hide();
+			$('#room8').hide();
+			$('#room9').hide();
+			$('#room10').hide();
+			$('#room11').hide();
+			$('#room12').hide();
+			$('#room13').hide();
+			$('#room15').hide();
+			$('#room16').hide();
+			$('#room17').hide();
+			$('#room18').hide();
+			$('#room19').hide();
+			$('#room20').hide();
+			$('#room21').show();
 		}
 
     //ตรวจค่าตัวเลข

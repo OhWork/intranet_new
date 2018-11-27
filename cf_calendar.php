@@ -258,6 +258,11 @@
  				$('#roomkkoz3').addClass('disabled');
 				$('#roomkkoz3').addClass('colorcfmenu');
 			}
+			else if(conferid == 21){
+				$('#roomkkoz4').removeClass('btn-primary');
+ 				$('#roomkkoz4').addClass('disabled');
+				$('#roomkkoz4').addClass('colorcfmenu');
+			}
          });
      </script>
 			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" style="margin-top: 16px;">
@@ -389,7 +394,7 @@
 								}
 							?>
 							<?php
-								if($id == 15 || $id == 19 || $id == 20){
+								if($id == 15 || $id == 19 || $id == 20 || $id == 21){
 							?>
 							<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mrgcfmenu">
 								<div class="row">
@@ -406,6 +411,11 @@
 									<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" style="margin-top:8px;">
 										<div class="row">
 											<a id="roomkkoz3" class="btn btn-primary col-12 pcfmenu" href="index.php?url=cf_calendar.php&id=20" at='4'>ห้องประชุมศูนย์บริการนักท่องเที่ยว(ห้องม่วง)</a>
+										</div>
+									</div>
+									<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" style="margin-top:8px;">
+										<div class="row">
+											<a id="roomkkoz4" class="btn btn-primary col-12 pcfmenu" href="index.php?url=cf_calendar.php&id=21" at='4'>ห้องประชุมศูนย์อนุรักษ์</a>
 										</div>
 									</div>
 								</div>
