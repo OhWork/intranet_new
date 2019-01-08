@@ -23,13 +23,13 @@
                 <td style="font-size:24px;padding-left:295px;"><img style='width:90px;' src='images/Logo/ZPO.png'></td>
 			</tr>
 			<tr>
-				<td style="font-size:24px;padding-left:230px;"><b>คำขอหนังสือรับรอง</b></td>
+				<td style="font-size:24px;padding-left:247px;">คำขอหนังสือรับรอง</td>
 			</tr>
 		</table>
 		<!--บรรทัดที่ 4-->
 		<table>
     		<tr>
-				<td style="font-size:14px;"><b>เรียน ผู้อำนวยการองค์การสวนสัตว์</b></td>
+				<td style="font-size:14px;">เรียน ผู้อำนวยการองค์การสวนสัตว์</td>
 			</tr>
 		</table>
 		<!--บรรทัดที่ 5-->
