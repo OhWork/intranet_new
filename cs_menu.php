@@ -10,6 +10,7 @@
 		</a>
 		<h3 style="margin-bottom:0px;padding-top:4px;">ระบบแจ้งซ่อมคอมพิวเตอร์ออนไลน์</h3>
 		<a class="nav-item nav-link" href="cs_index.php?url=cs_add_problem.php" style="padding-top:12px;">แบบฟอร์มแจ้งซ่อม </a>
+		<a class="nav-item nav-link" href="#">แบบฟอร์มขอใช้อินเตอร์เน็ต </a>
 <!--
 		<a class="nav-item nav-link" href="cs_index.php?url2=cs_register.php" style="padding-top:12px;">แบบฟอร์มขอใช้ </a>
 		<a class="nav-item nav-link" href="cs_index.php?url2=cs_upweb.php" style="padding-top:12px;">ขอให้ขึ้นเว็บไซต์ </a>
