@@ -1111,3 +1111,8 @@ body {
 	border-radius:5px;
 	text-align:center;
 }
+.bordernew {
+	border-radius: 5px;
+	border: 1px solid black;
+	box-shadow: 0px 2px 6px black;
+}
