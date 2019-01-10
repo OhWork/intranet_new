@@ -91,7 +91,7 @@
 					<div class='row'>
 						<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4"></div>
 						<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
-							<a class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 btn btn-success" style="color:#ffffff;">ดูทั้งหมด</a>
+							<a href="index.php?url=news_showall.php" class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 btn btn-success" style="color:#ffffff;">ดูทั้งหมด</a>
 						</div>
 						<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4"></div>
 					</div>
