@@ -11,6 +11,7 @@
 				</div>
 -->
 				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3">
+					<div class="row">
 						<?php foreach($rs as $show){
 							if($show['typeDesignnews_id'] == 1){
 								$design = "news_designtype1";
@@ -28,7 +29,7 @@
 								<div class='row'>
 									<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 shadow" style="background-color:#ffffff;">
 										<div class='row'>
-											<div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2" style="margin-right:10px;">
+											<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
 												<div class='row'>
 													<?php
 														if(!empty($show['news_cover'])){
@@ -87,7 +88,8 @@
 									</div>
 								</div>
 							</div>
-<?php } ?>
+						<?php } ?>
+					</div>
 				</div>
 			</div>
 		</div>
