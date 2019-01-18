@@ -1,6 +1,9 @@
 body {
 	background-color:#F5F5F5;
 }
+a:hover {
+	text-decoration:none;
+}
 @media (min-width: 375px) {
 .container {
 	max-width: 350px;
