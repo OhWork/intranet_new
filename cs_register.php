@@ -112,10 +112,10 @@
 				<label>สำนัก/สวน</label>
 			</div>
 			<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 form-group has-feedback test'>
-				
+
 			</div>
 			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-				
+
 			</div>
 			<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 form-group has-feedback test' style="float: left;">
 				<select class='form-control' id="ddlSubzoo" name="subzoo_subzoo_id"></select>
@@ -126,46 +126,46 @@
 					<div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8">
 						<div class="row">
 							<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-								<input type="radio" name="hrhos_familytype" id="parent1" value="1"> ระบบอินเทอร์เน็ตองค์การสวนสัตว์
+								<input type="checkbox" name="hrhos_familytype" id="parent1" value="1"> ระบบอินเทอร์เน็ตองค์การสวนสัตว์
 							</div>
 							<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-								<input type="radio" name="hrhos_familytype"  id="parent2" value="2"> ระบบอินเทอร์เน็ตโมบาย
+								<input type="checkbox" name="hrhos_familytype"  id="parent2" value="2"> ระบบอินเทอร์เน็ตโมบาย
 							</div>
 							<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-								<input type="radio" name="hrhos_familytype"  id="parent3" value="3"> ระบบ ZPO data center
+								<input type="checkbox" name="hrhos_familytype"  id="parent3" value="3"> ระบบ ZPO data center
 							</div>
 							<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-									<input type="radio" name="hrhos_familytype" id="parent4" value="4"> ระบบ E-Project
+									<input type="checkbox" name="hrhos_familytype" id="parent4" value="4"> ระบบ E-Project
 							</div>
 							<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-								<input type="radio" name="hrhos_familytype" id="parent5" value="5"> ระบบทะเบียนสัตว์
+								<input type="checkbox" name="hrhos_familytype" id="parent5" value="5"> ระบบทะเบียนสัตว์
 							</div>
 							<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-								<input type="radio" name="hrhos_familytype" id="parent5" value="5"> ระบบบริหารงานบุคคล
+								<input type="checkbox" name="hrhos_familytype" id="parent5" value="5"> ระบบบริหารงานบุคคล
 							</div>
 							<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-								<input type="radio" name="hrhos_familytype" id="parent5" value="5"> www.zoothailand.org
+								<input type="checkbox" name="hrhos_familytype" id="parent5" value="5"> www.zoothailand.org
 							</div>
 							<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-								<input type="radio" name="hrhos_familytype" id="parent5" value="5"> ระบบสารบรรณอิเล็กทรอนิกส์ สรอ.
+								<input type="checkbox" name="hrhos_familytype" id="parent5" value="5"> ระบบสารบรรณอิเล็กทรอนิกส์ สรอ.
 							</div>
 							<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 								<div class="row">
 									<div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8">
-										<input type="radio" name="hrhos_familytype" id="parent5" value="5"> Username และ Password ในกรณีทำหายของระบบ
+										<input type="checkbox" name="hrhos_familytype" id="parent5" value="5"> Username และ Password ในกรณีทำหายของระบบ
 									</div>
 									<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
-										(ช่องว่าง)
+										<input type="text" name="name">
 									</div>
 								</div>
 							</div>
 							<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 								<div class="row">
 									<div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8">
-										<input type="radio" name="hrhos_familytype" id="parent5" value="5"> อื่นๆ
+										<input type="checkbox" name="hrhos_familytype" id="parent5" value="5"> อื่นๆ
 									</div>
 									<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
-										(ช่องว่าง)
+										<input type="text" name="name">
 									</div>
 								</div>
 							</div>
