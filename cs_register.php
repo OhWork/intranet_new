@@ -1,11 +1,9 @@
 <?php
     date_default_timezone_set('Asia/Bangkok');
     $form = new form();
-    $lbname = new label('ข้าพเจ้า');
-    $lblast = new label('นามสกุล');
+    $lbname = new label('ชื่อ - นามสกุล');
+    $lbname_eng = new label('ชื่อ - นามสกุล (ภาษาอังกฤษ)');
     $lbposition = new label('ตำแหน่ง');
-    $lbname_eng = new label('ชื่อภาษาอังกฤษ(First Name)');
-    $lblast_eng = new label('นามสกุลภาษาอังกฤษ(Last Name)');
     $lbdevision = new label('สำนัก/สวน');
     $lbwork = new label('งาน');
     $lbidcard = new label('รหัสบัตรประชาชน');
@@ -56,20 +54,10 @@
 	<div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8" style="padding-top:16px;background-color:#ffffff;border:solid 1px #E0E0E0;border-radius:7px;">
 		<div class="row">
 			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 alltxh">
-				<h4>แบบฟอร์มขอใช้ Internet</h4>
+				<h4>แบบฟอร์ม การขอชื่อผู้ใช้และรหัสผ่านสำหรับใช้งานระบบเทคโนโลยีสารสนเทศ </h4>
 			</div>
 			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3">
 				<?php echo $lbname; ?>
-			</div>
-			<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 form-group has-feedback'>
-			</div>
-			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-				<?php echo $lblast; ?>
-			</div>
-			<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 form-group has-feedback'>
-			</div>
-			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-				<?php echo $lbposition; ?>
 			</div>
 			<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 form-group has-feedback'>
 			</div>
@@ -79,7 +67,7 @@
 			<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 form-group has-feedback'>
 			</div>
 			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-				<?php echo $lblast_eng; ?>
+				<?php echo $lbposition; ?>
 			</div>
 			<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 form-group has-feedback'>
 			</div>
@@ -87,6 +75,23 @@
 				<?php echo $lbdevision; ?>
 			</div>
 			<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 form-group has-feedback'>
+                                                                <select class='form-control' id="ddlZoo" name="subzoo_zoo_zoo_id" onchange = "ListSubzoo(this.value)">
+					<option selected value="">โปรดระบุ</option>
+						<?php $rs = $db->findAllASC('zoo','zoo_no')->execute();
+						while($objResult = mysqli_fetch_array($rs,MYSQLI_ASSOC))
+						{
+						?>
+						<option value="<?=$objResult["zoo_id"];?>"><?=$objResult["zoo_name"];?></option>
+						<?php
+						}
+						?>
+				</select>
+			</div>
+                                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+				<label>ฝ่าย</label>
+			</div>
+			<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 form-group has-feedback'>
+                                                                <select class='form-control' id="ddlSubzoo" name="subzoo_subzoo_id"></select>
 			</div>
 			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 				<?php echo $lbwork; ?>
@@ -107,20 +112,10 @@
 				<label>สำนัก/สวน</label>
 			</div>
 			<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 form-group has-feedback test'>
-				<select class='form-control' id="ddlZoo" name="subzoo_zoo_zoo_id" onchange = "ListSubzoo(this.value)">
-					<option selected value="">โปรดระบุ</option>
-						<? $rs = $db->findAllASC('zoo','zoo_no')->execute();
-						while($objResult = mysqli_fetch_array($rs,MYSQLI_ASSOC))
-						{
-						?>
-						<option value="<?=$objResult["zoo_id"];?>"><?=$objResult["zoo_name"];?></option>
-						<?
-						}
-						?>
-				</select>
+				
 			</div>
 			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-				<label>ฝ่าย</label>
+				
 			</div>
 			<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 form-group has-feedback test' style="float: left;">
 				<select class='form-control' id="ddlSubzoo" name="subzoo_subzoo_id"></select>

@@ -32,7 +32,7 @@
 			var myOption = new Option('โปรดระบุ','null')
 			frmMain.ddlSubzoo.options[frmMain.ddlSubzoo.length]= myOption
 
-			<?
+			<?php
 			$intRows = 0;
 			$rs = $db->findPK1ASC('subzoo','subzoo_enable',1,'subzoo_no')->execute();
 			$intRows = 0;
@@ -55,7 +55,7 @@
 					var myOption = new Option(mySubList[x,0], mySubList[x,3])
 					frmMain.ddlSubzoo.options[frmMain.ddlSubzoo.length]= myOption
 				}
-			<?
+			<?php
 			}
 			?>
 		}
@@ -66,7 +66,7 @@
 			var myOption = new Option('โปรดระบุ','null')
 			frmMain.ddlsubtypetools.options[frmMain.ddlsubtypetools.length]= myOption
 
-			<?
+			<?php
 			$intRows = 0;
 			$rs = $db->orderASC('subtypetools','subtypetools_id')->execute();
 			$intRows = 0;
@@ -87,13 +87,13 @@
 					var myOption = new Option(mySubList[x,0], mySubList[x,2])
 					frmMain.ddlsubtypetools.options[frmMain.ddlsubtypetools.length]= myOption
 				}
-			<?
+			<?php
 			}
 			?>
 		}
 			function setDefault()
 		{
-			<?
+			<?php
 				/*** ค่า Default ที่ได้จากการจัดเก็บ ***/
 				$r2 = $db->findByPK('user','user_id',$id)->executeRow();
 				$strZoo = $r2['subzoo_zoo_zoo_id'];
@@ -101,7 +101,7 @@
 
 			?>
 
-				<?
+				<?php
 				/*** Default Zoo  ***/
 				if($strZoo != "")
 				{
@@ -117,11 +117,11 @@
 					}
 
 					ListSubzoo(<?=$strZoo;?>)
-				<?
+				<?php
 				}
 				?>
 
-				<?
+				<?php
 				/*** Default Subzoo  ***/
 				if($strSubzoo != "")
 				{
@@ -135,7 +135,7 @@
 							break;
 						}
 					}
-				<?
+				<?php
 				}
 				?>
 
@@ -143,7 +143,7 @@
 		//typetools
 			function setDefault()
 		{
-			<?
+			<?php
 				/*** ค่า Default ที่ได้จากการจัดเก็บ ***/
 				$r2 = $db->findByPK('user','user_id',$id)->executeRow();
 				$strZoo = $r2['subzoo_zoo_zoo_id'];
@@ -151,7 +151,7 @@
 
 			?>
 
-				<?
+				<?php
 				/*** Default typetools  ***/
 				if($strZoo != "")
 				{
@@ -167,11 +167,11 @@
 					}
 
 					ListSubzoo(<?=$strZoo;?>)
-				<?
+				<?php
 				}
 				?>
 
-				<?
+				<?php
 				/*** Default Subtypetools  ***/
 				if($strSubzoo != "")
 				{
@@ -185,7 +185,7 @@
 							break;
 						}
 					}
-				<?
+				<?php
 				}
 				?>
 
