@@ -1,11 +1,9 @@
 <?php
     date_default_timezone_set('Asia/Bangkok');
     $form = new form();
-    $lbname = new label('ข้าพเจ้า');
-    $lblast = new label('นามสกุล');
+    $lbname = new label('ชื่อ - นามสกุล');
     $lbposition = new label('ตำแหน่ง');
-    $lbname_eng = new label('ชื่อภาษาอังกฤษ(First Name)');
-    $lblast_eng = new label('นามสกุลภาษาอังกฤษ(Last Name)');
+    $lbname_eng = new label('ชื่อ - นามสกุล (ภาษาอังกฤษ)');
     $lbdevision = new label('สำนัก/สวน');
     $lbwork = new label('งาน');
     $lbidcard = new label('รหัสบัตรประชาชน');
@@ -56,15 +54,10 @@
 	<div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8" style="padding-top:16px;background-color:#ffffff;border:solid 1px #E0E0E0;border-radius:7px;">
 		<div class="row">
 			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 alltxh">
-				<h4>แบบฟอร์มขอใช้ Internet</h4>
+				<h4>แบบฟอร์ม การขอชื่อผู้ใช้และรหัสผ่านสำหรับใช้งานระบบเทคโนโลยีสารสนเทศ </h4>
 			</div>
 			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3">
 				<?php echo $lbname; ?>
-			</div>
-			<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 form-group has-feedback'>
-			</div>
-			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-				<?php echo $lblast; ?>
 			</div>
 			<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 form-group has-feedback'>
 			</div>
@@ -75,11 +68,6 @@
 			</div>
 			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 				<?php echo $lbname_eng; ?>
-			</div>
-			<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 form-group has-feedback'>
-			</div>
-			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-				<?php echo $lblast_eng; ?>
 			</div>
 			<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 form-group has-feedback'>
 			</div>
