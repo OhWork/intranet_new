@@ -27,7 +27,7 @@
 				<?php
 				if($_POST['searchnew']){
 					$searcnew = $_POST['searchnew'];
-					$query = $db->specifytable("*","news","news_head LIKE '%{$searcnew}%'")->execute();
+					$query = $db->specifytable("*","news JOIN user ON user_user_id = user_id ","news_head LIKE '%{$searcnew}%'")->execute();
 					foreach($query as $shownewsearch){
 						if($shownewsearch['typeDesignnews_id'] == 1){
 							$design = "news_designtype1";
