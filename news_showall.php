@@ -50,40 +50,40 @@
 															<?php
 																if(!empty($shownewsearch['news_cover'])){
 															?>
-																	<img class="w-100" height="150" src='images/news/<?php echo $shownewsearch['news_cover']; ?>' />
+																	<img class="w-75 " height="150" src='images/news/<?php echo $shownewsearch['news_cover']; ?>' />
 																<?php
 																	}else{
 																if($shownewsearch['subzoo_zoo_zoo_id'] == 11){
 																?>
-		                                                        	<img class="w-100" height="150" src='images/logo/Dusitzoo.png' />
+		                                                        	<img class="w-50 mx-auto" height="150" src='images/logo/Dusitzoo.png' />
 		                                                        <?php
 			                                                    }else if($shownewsearch['subzoo_zoo_zoo_id'] == 12){
 				                                                ?>
-				                                                   	<img class="w-100" height="150" src='images/logo/KKOzoo.png' />
+				                                                   	<img class="w-50 mx-auto" height="150" src='images/logo/KKOzoo.png' />
 				                                                <?php
 			                                                     }else if($shownewsearch['subzoo_zoo_zoo_id'] == 13){
 				                                                ?>
-				                                                   	<img class="w-100" height="150" src='images/logo/chiangmai.png' />
+				                                                   	<img class="w-50 mx-auto" height="150" src='images/logo/chiangmai.png' />
 				                                                <?php
 			                                                     }else if($shownewsearch['subzoo_zoo_zoo_id'] == 14){
 				                                                ?>
-				                                                   	<img class="w-100" height="150" src='images/logo/Nakhonrachsimazoo.png' />
+				                                                   	<img class="w-50 mx-auto" height="150" src='images/logo/Nakhonrachsimazoo.png' />
 				                                                <?php
 			                                                     }else if($shownewsearch['subzoo_zoo_zoo_id'] == 15){
 				                                                ?>
-				                                                   	<img class="w-100" height="150" src='images/logo/Songkhlazoo.png' />
+				                                                   	<img class="w-50 mx-auto" height="150" src='images/logo/Songkhlazoo.png' />
 				                                                <?php
 			                                                     }else if($shownewsearch['subzoo_zoo_zoo_id'] == 16){
 				                                                ?>
-				                                                   	<img class="w-100" height="150" src='images/logo/Ubonzoo.png' />
+				                                                   	<img class="w-50 mx-auto" height="150" src='images/logo/Ubonzoo.png' />
 				                                                <?php
 			                                                     }else if($shownewsearch['subzoo_zoo_zoo_id'] == 17){
 				                                                ?>
-				                                                   	<img class="w-100" height="150" src='images/logo/KKzoo.png' />
+				                                                   	<img class="w-50 mx-auto" height="150" src='images/logo/KKzoo.png' />
 				                                                <?php
 			                                                     }else{
 		                                                        ?>
-		                                                        	<img class="w-100" height="150" src='images/logo/ZPO.png' />
+		                                                        	<img class="w-50 mx-auto" height="150" src='images/logo/ZPO.png' />
 		                                                        <?php
 			                                                    }
 			                                                    }
@@ -128,40 +128,40 @@
 															<?php
 																if(!empty($show['news_cover'])){
 															?>
-																	<img class="w-100" height="150" src='images/news/<?php echo $show['news_cover']; ?>' />
+																	<img class="w-75" height="150" src='images/news/<?php echo $show['news_cover']; ?>' />
 																<?php
 																	}else{
 																if($show['subzoo_zoo_zoo_id'] == 11){
 																?>
-		                                                        	<img class="w-100" height="150" src='images/logo/Dusitzoo.png' />
+		                                                        	<img class="w-50 mx-auto" height="150" src='images/logo/Dusitzoo.png' />
 		                                                        <?php
 			                                                    }else if($show['subzoo_zoo_zoo_id'] == 12){
 				                                                ?>
-				                                                   	<img class="w-100" height="150" src='images/logo/KKOzoo.png' />
+				                                                   	<img class="w-50 mx-auto" height="150" src='images/logo/KKOzoo.png' />
 				                                                <?php
 			                                                     }else if($show['subzoo_zoo_zoo_id'] == 13){
 				                                                ?>
-				                                                   	<img class="w-100" height="150" src='images/logo/chiangmai.png' />
+				                                                   	<img class="w-50 mx-auto" height="150" src='images/logo/chiangmai.png' />
 				                                                <?php
 			                                                     }else if($show['subzoo_zoo_zoo_id'] == 14){
 				                                                ?>
-				                                                   	<img class="w-100" height="150" src='images/logo/Nakhonrachsimazoo.png' />
+				                                                   	<img class="w-50 mx-auto" height="150" src='images/logo/Nakhonrachsimazoo.png' />
 				                                                <?php
 			                                                     }else if($show['subzoo_zoo_zoo_id'] == 15){
 				                                                ?>
-				                                                   	<img class="w-100" height="150" src='images/logo/Songkhlazoo.png' />
+				                                                   	<img class="w-50 mx-auto" height="150" src='images/logo/Songkhlazoo.png' />
 				                                                <?php
 			                                                     }else if($show['subzoo_zoo_zoo_id'] == 16){
 				                                                ?>
-				                                                   	<img class="w-100" height="150" src='images/logo/Ubonzoo.png' />
+				                                                   	<img class="w-50 mx-auto" height="150" src='images/logo/Ubonzoo.png' />
 				                                                <?php
 			                                                     }else if($show['subzoo_zoo_zoo_id'] == 17){
 				                                                ?>
-				                                                   	<img class="w-100" height="150" src='images/logo/KKzoo.png' />
+				                                                   	<img class="w-50 mx-auto" height="150" src='images/logo/KKzoo.png' />
 				                                                <?php
 			                                                     }else{
 		                                                        ?>
-		                                                        	<img class="w-100" height="150" src='images/logo/ZPO.png' />
+		                                                        	<img class="w-50 mx-auto" height="150" src='images/logo/ZPO.png' />
 		                                                        <?php
 			                                                    }
 			                                                    }
