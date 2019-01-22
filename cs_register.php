@@ -20,7 +20,7 @@
 			var myOption = new Option('โปรดระบุ','null')
 			frmMain.ddlSubzoo.options[frmMain.ddlSubzoo.length]= myOption
 
-			<?
+			<?php
 			$intRows = 0;
 			$rs = $db->findPK1ASC('subzoo','subzoo_enable',1,'subzoo_no')->execute();
 			$intRows = 0;
@@ -43,7 +43,7 @@
 					var myOption = new Option(mySubList[x,0], mySubList[x,3])
 					frmMain.ddlSubzoo.options[frmMain.ddlSubzoo.length]= myOption
 				}
-			<?
+			<?php
 			}
 			?>
 		}
@@ -118,7 +118,6 @@
 
 			</div>
 			<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 form-group has-feedback test' style="float: left;">
-				<select class='form-control' id="ddlSubzoo" name="subzoo_subzoo_id"></select>
 			</div>
 			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 				<div class="row">
