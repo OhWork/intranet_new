@@ -198,20 +198,20 @@
 							<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 								<div class="row">
 									<div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8">
-										<input type="checkbox" name="hrhos_familytype" id="parent5" value="5"> Username และ Password ในกรณีทำหายของระบบ
+										<input type="checkbox" name="hrhos_familytype" id="forgetusercheck" value="5"> Username และ Password ในกรณีทำหายของระบบ
 									</div>
 									<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
-										<input type="text" name="name">
+										<input type="text" name="name" id="forgetuser" class="form-control">
 									</div>
 								</div>
 							</div>
 							<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 								<div class="row">
 									<div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8">
-										<input type="checkbox" name="hrhos_familytype" id="parent5" value="5"> อื่นๆ
+										<input type="checkbox" name="hrhos_familytype" id="ohter" value="5"> อื่นๆ
 									</div>
 									<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
-										<input type="text" name="name">
+										<input type="text" name="name" id="textohter" class="form-control">
 									</div>
 								</div>
 							</div>
@@ -224,3 +224,24 @@
 	</div>
 </div>
 <?php echo $form->close(); ?>
+<script>
+	$('#forgetuser').prop("disabled", true);
+	$('#textohter').prop("disabled", true);
+	$('#forgetusercheck').click(function() {
+	  if ($(this).is(':checked')) {
+	    // Do stuff
+	    $('#forgetuser').prop("disabled", false);
+	  }else{
+	  	$('#forgetuser').prop("disabled", true);
+	  }
+	});
+	$('#ohter').click(function() {
+		console.log(123);
+	  if ($(this).is(':checked')) {
+	    // Do stuff
+	    $('#textohter').prop("disabled", false);
+	  }else{
+	  	$('#textohter').prop("disabled", true);
+	  }
+	});
+</script>
