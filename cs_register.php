@@ -2,8 +2,8 @@
     date_default_timezone_set('Asia/Bangkok');
     $form = new form();
     $lbname = new label('ชื่อ - นามสกุล');
-    $lbposition = new label('ตำแหน่ง');
     $lbname_eng = new label('ชื่อ - นามสกุล (ภาษาอังกฤษ)');
+    $lbposition = new label('ตำแหน่ง');
     $lbdevision = new label('สำนัก/สวน');
     $lbwork = new label('งาน');
     $lbidcard = new label('รหัสบัตรประชาชน');
@@ -62,12 +62,12 @@
 			<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 form-group has-feedback'>
 			</div>
 			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-				<?php echo $lbposition; ?>
+				<?php echo $lbname_eng; ?>
 			</div>
 			<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 form-group has-feedback'>
 			</div>
 			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-				<?php echo $lbname_eng; ?>
+				<?php echo $lbposition; ?>
 			</div>
 			<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 form-group has-feedback'>
 			</div>
@@ -75,6 +75,23 @@
 				<?php echo $lbdevision; ?>
 			</div>
 			<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 form-group has-feedback'>
+                                                                <select class='form-control' id="ddlZoo" name="subzoo_zoo_zoo_id" onchange = "ListSubzoo(this.value)">
+					<option selected value="">โปรดระบุ</option>
+						<?php $rs = $db->findAllASC('zoo','zoo_no')->execute();
+						while($objResult = mysqli_fetch_array($rs,MYSQLI_ASSOC))
+						{
+						?>
+						<option value="<?=$objResult["zoo_id"];?>"><?=$objResult["zoo_name"];?></option>
+						<?php
+						}
+						?>
+				</select>
+			</div>
+                                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+				<label>ฝ่าย</label>
+			</div>
+			<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 form-group has-feedback'>
+                                                                <select class='form-control' id="ddlSubzoo" name="subzoo_subzoo_id"></select>
 			</div>
 			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 				<?php echo $lbwork; ?>
@@ -95,20 +112,10 @@
 				<label>สำนัก/สวน</label>
 			</div>
 			<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 form-group has-feedback test'>
-				<select class='form-control' id="ddlZoo" name="subzoo_zoo_zoo_id" onchange = "ListSubzoo(this.value)">
-					<option selected value="">โปรดระบุ</option>
-						<? $rs = $db->findAllASC('zoo','zoo_no')->execute();
-						while($objResult = mysqli_fetch_array($rs,MYSQLI_ASSOC))
-						{
-						?>
-						<option value="<?=$objResult["zoo_id"];?>"><?=$objResult["zoo_name"];?></option>
-						<?
-						}
-						?>
-				</select>
+				
 			</div>
 			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-				<label>ฝ่าย</label>
+				
 			</div>
 			<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 form-group has-feedback test' style="float: left;">
 				<select class='form-control' id="ddlSubzoo" name="subzoo_subzoo_id"></select>
