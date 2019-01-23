@@ -8,6 +8,12 @@
     $lbwork = new label('งาน');
     $lbidcard = new label('รหัสบัตรประชาชน');
     $lbtel = new label('เบอร์ติดต่อ');
+    $txtnameth = new textfield('reguser_name_th','','form-control css-require','','');
+    $txtnameen = new textfield('reguser_name_en','','form-control css-require','','');
+    $txtwork = new textfield('reguser_work','','form-control css-require','','');
+    $txtposition = new textfield('reguser_position','','form-control css-require','','');
+    $txtidcard = new textfield('reguser_idcard','','form-control css-require','','');
+    $txttel = new textfield('reguser_tel','','form-control css-require','','');
     $button = new buttonok("ส่งแบบฟอร์ม","","btn btn-success btn-lg btn-block bt3success col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","");
     ?>
 	<script language = "JavaScript">
@@ -106,16 +112,19 @@
 				<?php echo $lbname; ?>
 			</div>
 			<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 form-group has-feedback'>
+                                                                <?php echo $txtnameth; ?>
 			</div>
 			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 				<?php echo $lbname_eng; ?>
 			</div>
 			<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 form-group has-feedback'>
+                                                                 <?php echo $txtnameen; ?>
 			</div>
 			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 				<?php echo $lbposition; ?>
 			</div>
 			<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 form-group has-feedback'>
+                                                                 <?php echo $txtposition; ?>
 			</div>
 			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 				<?php echo $lbdevision; ?>
@@ -144,16 +153,19 @@
 				<?php echo $lbwork; ?>
 			</div>
 			<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 form-group has-feedback'>
+                                                                 <?php echo $txtwork; ?>
 			</div>
 			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 				<?php echo $lbidcard; ?>
 			</div>
 			<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 form-group has-feedback'>
+                                                                 <?php echo $txtidcard; ?>
 			</div>
 			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 				<?php echo $lbtel; ?>
 			</div>
 			<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 form-group has-feedback'>
+                                                                <?php echo $txttel; ?>
 			</div>
 			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 				
