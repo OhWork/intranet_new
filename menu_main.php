@@ -72,9 +72,9 @@
 				if($('.sub-menu').hasClass("animat-out")){
 						setTimeout(function(){
 							if(!idmenu.classList.contains('show')){
-							$( ".sub-menu" ).not(idmenu).removeClass('show');
-							idmenu.parentNode.classList.add("show");
-					        idmenu.parentNode.classList.remove("animat-out");
+								$( ".sub-menu" ).not(idmenu).removeClass('show');
+								idmenu.parentNode.classList.add("show");
+						        idmenu.parentNode.classList.remove("animat-out");
 							}
 				        }, 400)
 				        idmenu.classList.remove("animat-out");
@@ -87,11 +87,12 @@
 		    else{
 			    console.log('else di wa');
 			    idmenu.classList.remove('animat-out');
+			    console.log(idmenu.classList);
 		    }
 		    nav_status = 0 ;
 		    $('.nav-link').removeClass("animat-test");
-	        }
-		});
+	    }
+	});
 	function navAnimate(id,sub){
 		var menusum  = sub;
 		var menuid = id;
