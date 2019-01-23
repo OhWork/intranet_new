@@ -13,7 +13,7 @@ session_start();
               include 'connect.php';
 			?>    </head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-        <link rel="stylesheet" href="CSS/bootstrap-datetimepicker-standalone.css">
+<!--         <link rel="stylesheet" href="CSS/bootstrap-datetimepicker-standalone.css"> -->
         <link rel="stylesheet" href="CSS/bootstrap-datetimepicker.css">
 		<link rel="stylesheet" href="CSS/bootstrap.min.css">
         <link rel="stylesheet" href="CSS/dashboard.css" >
