@@ -464,7 +464,6 @@ if(@$_SESSION ==''){
 	 $config['current_path'] = 'source/';
 }else{
 	$rs = $db->findByPK('folder','subzoo_zoo_zoo_id',$_SESSION['subzoo_zoo_zoo_id'])->executeAssoc();
-	print_r($rs);
 	$rssubfolall = $db->findByPK('folder','folder_position',$rs['folder_id'])->execute();
 	foreach($rssubfolall as $show){
 		if($_SESSION['subzoo_subzoo_id'] == $show['subzoo_subzoo_id']){
