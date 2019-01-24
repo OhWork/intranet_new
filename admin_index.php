@@ -32,7 +32,7 @@
         <!-- Custom styles for this template -->
         <link rel="stylesheet" href="CSS/dashboard.css">
 		<link rel="stylesheet" href="CSS/jquery.dataTables.css">
-<!--         <link rel="stylesheet" href="CSS/bootstrap-datetimepicker-standalone.css"> -->
+        <link rel="stylesheet" href="CSS/bootstrap-datetimepicker-standalone.css">
         <link rel="stylesheet" href="CSS/bootstrap-datetimepicker.css">
         <link rel="stylesheet" href="CSS/jquery.mapify.css">
         <link rel="stylesheet" href="CSS/jquery.datetimepicker.css">
