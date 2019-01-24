@@ -180,8 +180,8 @@
 			</div>
 			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 				<div class="row">
-					<div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2"></div>
-					<div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8">
+					<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1"></div>
+					<div class="col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10">
 						<div class="row">
 							<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 								<input type="checkbox" name="reguser_internet_use" id="parent1" value="1"> ระบบอินเทอร์เน็ตองค์การสวนสัตว์
@@ -193,7 +193,7 @@
 								<input type="checkbox" name="reguser_intranet_use"  id="parent3" value="3"> ระบบ ZPO data center
 							</div>
 							<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-									<input type="checkbox" name="reguser_eproject_use" id="parent4" value="4"> ระบบ E-Project
+								<input type="checkbox" name="reguser_eproject_use" id="parent4" value="4"> ระบบ E-Project
 							</div>
 							<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 								<input type="checkbox" name="reguser_animal_use" id="parent5" value="5"> ระบบทะเบียนสัตว์
@@ -209,27 +209,27 @@
 							</div>
 							<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 								<div class="row">
-									<div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8">
+									<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 										<input type="checkbox" name="reguser_userpasslost" id="forgetusercheck" value="5"> Username และ Password ในกรณีทำหายของระบบ
 									</div>
-									<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
+									<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 										<input type="text" name="reguser_sent_email" id="forgetuser" class="form-control">
 									</div>
 								</div>
 							</div>
 							<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 								<div class="row">
-									<div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8">
+									<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 										<input type="checkbox" name="reguser_other" id="ohter" value="5"> อื่นๆ
 									</div>
-									<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
+									<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 										<input type="text" name="reguser_other_detail" id="textohter" class="form-control">
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-					<div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2"></div>
+					<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1"></div>
 				</div>
 			</div>
 		</div>
