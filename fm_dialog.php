@@ -359,7 +359,7 @@ $get_params = http_build_query($get_params);
 		<noscript><link rel="stylesheet" href="CSS/fm_css/fm_jquery.fileupload-ui-noscript.css"></noscript>
 		<link href="jquery/fm_js/fm_jPlayer/skin/blue.monday/jplayer.blue.monday.css" rel="stylesheet" type="text/css">
 		<link href="CSS/fm_css/fm_style.css?v=<?php echo $version; ?>" rel="stylesheet" type="text/css" />
-		<link rel="stylesheet" href="CSS/bootstrap.min.css">
+<!-- 		<link rel="stylesheet" href="CSS/bootstrap.min.css"> -->
         <link rel="stylesheet" href="CSS/dashboard.css" >
         <link rel="stylesheet" href="CSS/jquery-ui.css">
         <link rel="stylesheet" href="CSS/main.css">

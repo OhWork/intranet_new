@@ -297,19 +297,20 @@ $config = array(
 	//*************************
 	//Permissions configuration
 	//******************
-	'delete_files'                            => false,
-	'create_folders'                          => false,
-	'delete_folders'                          => false,
-	'upload_files'                            => false,
-	'rename_files'                            => false,
-	'rename_folders'                          => false,
-	'duplicate_files'                         => false,
-	'copy_cut_files'                          => false, // for copy/cut files
-	'copy_cut_dirs'                           => false, // for copy/cut directories
+
+	'delete_files'                            => true,
+	'create_folders'                          => true,
+	'delete_folders'                          => true,
+	'upload_files'                            => true,
+	'rename_files'                            => true,
+	'rename_folders'                          => true,
+	'duplicate_files'                         => true,
+	'copy_cut_files'                          => true, // for copy/cut files
+	'copy_cut_dirs'                           => true, // for copy/cut directories
 	'chmod_files'                             => false, // change file permissions
 	'chmod_dirs'                              => false, // change folder permissions
-	'preview_text_files'                      => false, // eg.: txt, log etc.
-	'edit_text_files'                         => false, // eg.: txt, log etc.
+	'preview_text_files'                      => true, // eg.: txt, log etc.
+	'edit_text_files'                         => true, // eg.: txt, log etc.
 	'create_text_files'                       => false, // only create files with exts. defined in $editable_text_file_exts
 
 	// you can preview these type of files if $preview_text_files is true
@@ -426,166 +427,7 @@ $config = array(
 	'remember_text_filter'                    => false,
 
 );
-//สำนักเทคโนโลยีสารสนเทศ
-if(@$_SESSION['subzoo_zoo_zoo_id']==10){
-	 $config['delete_files'] = true;
-	 $config['create_folders'] = true;
-	 $config['delete_folders'] = true;
-	 $config['upload_files'] = true;
-	 $config['rename_files'] = true;
-	 $config['rename_folders'] = true;
-	 $config['duplicate_files'] = true;
-	 $config['copy_cut_files'] = true;
-	 $config['copy_cut_dirs'] = true;
-	 $config['chmod_files'] = true;
-	 $config['chmod_dirs'] = true;
-	 $config['preview_text_files'] = true;
-	 $config['edit_text_files'] = true;
-	 $config['create_text_files'] = false;
-	 $config['upload_dir'] = 'source/';
-	 $config['current_path'] = 'source/';
-	 }
-//สวนสัตว์ดุสิต
-	 else if(@$_SESSION['subzoo_zoo_zoo_id']==11){
-	 $config['delete_files'] = true;
-	 $config['create_folders'] = true;
-	 $config['delete_folders'] = true;
-	 $config['upload_files'] = true;
-	 $config['rename_files'] = true;
-	 $config['rename_folders'] = true;
-	 $config['duplicate_files'] = true;
-	 $config['copy_cut_files'] = true;
-	 $config['copy_cut_dirs'] = true;
-	 $config['chmod_files'] = true;
-	 $config['chmod_dirs'] = true;
-	 $config['preview_text_files'] = true;
-	 $config['edit_text_files'] = true;
-	 $config['create_text_files'] = false;
-	 if($_SESSION['subzoo_subzoo_id']==88){
-	 $config['upload_dir'] = 'source/15_สวนสัตว์ดุสิต/01_ฝ่ายบริหารงานทั่วไป/';
-	 $config['current_path'] = 'source/15_สวนสัตว์ดุสิต/01_ฝ่ายบริหารงานทั่วไป/';
-	 }
-	 else{
-	 $config['upload_dir'] = 'source/15_สวนสัตว์ดุสิต/';
-	 $config['current_path'] = 'source/15_สวนสัตว์ดุสิต/';
-	 }
-	 }
-//สวนสัตว์เปิดเขาเขียว
-	 else if(@$_SESSION['subzoo_zoo_zoo_id']==12){
-	 $config['delete_files'] = true;
-	 $config['create_folders'] = true;
-	 $config['delete_folders'] = true;
-	 $config['upload_files'] = true;
-	 $config['rename_files'] = true;
-	 $config['rename_folders'] = true;
-	 $config['duplicate_files'] = true;
-	 $config['copy_cut_files'] = true;
-	 $config['copy_cut_dirs'] = true;
-	 $config['chmod_files'] = true;
-	 $config['chmod_dirs'] = true;
-	 $config['preview_text_files'] = true;
-	 $config['edit_text_files'] = true;
-	 $config['create_text_files'] = false;
-	 $config['upload_dir'] = 'source/16_สวนสัตว์เปิดเขาเขียว/';
-	 $config['current_path'] = 'source/16_สวนสัตว์เปิดเขาเขียว/';
-	 }
-//สวนสัตว์เชียงใหม่
-else if(@$_SESSION['subzoo_zoo_zoo_id']==13){
-	 $config['delete_files'] = true;
-	 $config['create_folders'] = true;
-	 $config['delete_folders'] = true;
-	 $config['upload_files'] = true;
-	 $config['rename_files'] = true;
-	 $config['rename_folders'] = true;
-	 $config['duplicate_files'] = true;
-	 $config['copy_cut_files'] = true;
-	 $config['copy_cut_dirs'] = true;
-	 $config['chmod_files'] = true;
-	 $config['chmod_dirs'] = true;
-	 $config['preview_text_files'] = true;
-	 $config['edit_text_files'] = true;
-	 $config['create_text_files'] = false;
-	 $config['upload_dir'] = 'source/17_สวนสัตว์เชียงใหม่/';
-	 $config['current_path'] = 'source/17_สวนสัตว์เชียงใหม่/';
-	 }
-//สวนสัตว์โคราช
-	 else if(@$_SESSION['subzoo_zoo_zoo_id']==14){
-	 $config['delete_files'] = true;
-	 $config['create_folders'] = true;
-	 $config['delete_folders'] = true;
-	 $config['upload_files'] = true;
-	 $config['rename_files'] = true;
-	 $config['rename_folders'] = true;
-	 $config['duplicate_files'] = true;
-	 $config['copy_cut_files'] = true;
-	 $config['copy_cut_dirs'] = true;
-	 $config['chmod_files'] = true;
-	 $config['chmod_dirs'] = true;
-	 $config['preview_text_files'] = true;
-	 $config['edit_text_files'] = true;
-	 $config['create_text_files'] = false;
-	 $config['upload_dir'] = 'source/18_สวนสัตว์นครราชสีมา/';
-	 $config['current_path'] = 'source/18_สวนสัตว์นครราชสีมา/';
-	 }
-//สวนสัตว์สงขลา
-	 else if(@$_SESSION['subzoo_zoo_zoo_id']==15){
-	 $config['delete_files'] = true;
-	 $config['create_folders'] = true;
-	 $config['delete_folders'] = true;
-	 $config['upload_files'] = true;
-	 $config['rename_files'] = true;
-	 $config['rename_folders'] = true;
-	 $config['duplicate_files'] = true;
-	 $config['copy_cut_files'] = true;
-	 $config['copy_cut_dirs'] = true;
-	 $config['chmod_files'] = true;
-	 $config['chmod_dirs'] = true;
-	 $config['preview_text_files'] = true;
-	 $config['edit_text_files'] = true;
-	 $config['create_text_files'] = false;
-	 $config['upload_dir'] = 'source/19_สวนสัตว์สงขลา/';
-	 $config['current_path'] = 'source/19_สวนสัตว์สงขลา/';
-	 }
-//สวนสัตว์อุบล
-	 else if(@$_SESSION['subzoo_zoo_zoo_id']==16){
-	 $config['delete_files'] = true;
-	 $config['create_folders'] = true;
-	 $config['delete_folders'] = true;
-	 $config['upload_files'] = true;
-	 $config['rename_files'] = true;
-	 $config['rename_folders'] = true;
-	 $config['duplicate_files'] = true;
-	 $config['copy_cut_files'] = true;
-	 $config['copy_cut_dirs'] = true;
-	 $config['chmod_files'] = true;
-	 $config['chmod_dirs'] = true;
-	 $config['preview_text_files'] = true;
-	 $config['edit_text_files'] = true;
-	 $config['create_text_files'] = false;
-	 $config['upload_dir'] = 'source/20_สวนสัตว์อุบลราชธานี/';
-	 $config['current_path'] = 'source/20_สวนสัตว์อุบลราชธานี/';
-	 }
-//สวนสัตว์ขอนแก่น
-	 else if(@$_SESSION['subzoo_zoo_zoo_id']==17){
-	 $config['delete_files'] = true;
-	 $config['create_folders'] = true;
-	 $config['delete_folders'] = true;
-	 $config['upload_files'] = true;
-	 $config['rename_files'] = true;
-	 $config['rename_folders'] = true;
-	 $config['duplicate_files'] = true;
-	 $config['copy_cut_files'] = true;
-	 $config['copy_cut_dirs'] = true;
-	 $config['chmod_files'] = true;
-	 $config['chmod_dirs'] = true;
-	 $config['preview_text_files'] = true;
-	 $config['edit_text_files'] = true;
-	 $config['create_text_files'] = false;
-	 $config['upload_dir'] = 'source/21_สวนสัตว์ขอนแก่น/';
-	 $config['current_path'] = 'source/21_สวนสัตว์ขอนแก่น/';
-	 }
-//USER
-	 else{
+if(@$_SESSION ==''){
 	 $config['delete_files'] = false;
 	 $config['create_folders'] = false;
 	 $config['delete_folders'] = false;
@@ -603,7 +445,34 @@ else if(@$_SESSION['subzoo_zoo_zoo_id']==13){
 	 $config['upload_dir'] = 'source/';
 	 $config['current_path'] = 'source/';
 
-	 }
+	 }else if(@$_SESSION['subzoo_zoo_zoo_id']==10 && $_SESSION['user_id'] == 1){
+	 $config['delete_files'] = true;
+	 $config['create_folders'] = true;
+	 $config['delete_folders'] = true;
+	 $config['upload_files'] = true;
+	 $config['rename_files'] = true;
+	 $config['rename_folders'] = true;
+	 $config['duplicate_files'] = true;
+	 $config['copy_cut_files'] = true;
+	 $config['copy_cut_dirs'] = true;
+	 $config['chmod_files'] = true;
+	 $config['chmod_dirs'] = true;
+	 $config['preview_text_files'] = true;
+	 $config['edit_text_files'] = true;
+	 $config['create_text_files'] = false;
+	 $config['upload_dir'] = 'source/';
+	 $config['current_path'] = 'source/';
+}else{
+	$rs = $db->findByPK('folder','subzoo_zoo_zoo_id',$_SESSION['subzoo_zoo_zoo_id'])->executeAssoc();
+	print_r($rs);
+	$rssubfolall = $db->findByPK('folder','folder_position',$rs['folder_id'])->execute();
+	foreach($rssubfolall as $show){
+		if($_SESSION['subzoo_subzoo_id'] == $show['subzoo_subzoo_id']){
+			$config['upload_dir'] = 'source/'.$rs["folder_name"].'/'.$show["folder_name"];
+			$config['current_path'] = 'source/'.$rs["folder_name"].'/'.$show["folder_name"];
+		}
+	}
+}
 return array_merge(
 	$config,
 	array(
