@@ -1,7 +1,8 @@
 <?php
-$config = include 'fm_config/fm_config.php';
 	include 'database/db_tools.php';
 	include 'connect.php';
+$config = include 'fm_config/fm_config.php';
+
 $date = date("Y-m-d");
 //TODO switch to array
 extract($config, EXTR_OVERWRITE);
@@ -215,13 +216,17 @@ if (isset($_GET['action']))
 				}
 			}
 			else{
+				$rs = @$db->findByPK('folder','subzoo_zoo_zoo_id',$_SESSION['subzoo_zoo_zoo_id'])->executeAssoc();
+				$rssubfolall = @$db->findByPK('folder','folder_position',$rs['folder_id'])->execute();
+				foreach($rssubfolall as $show){
 				$rs = $db->insert('folder',array(
 					'folder_name' => $name,
 					'folder_date' => $date,
-					'folder_position'=>0,
+					'folder_position'=>$show['folder_id'],
 					'subzoo_subzoo_id' => $_SESSION['subzoo_subzoo_id'],
 					'subzoo_zoo_zoo_id' => $_SESSION['subzoo_zoo_zoo_id'],
 				));
+				}
 			}
 		}
 			break;

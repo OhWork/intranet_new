@@ -1,6 +1,5 @@
 <?php
 $time = time();
-
 $config = include 'fm_config/fm_config.php';
 
 
@@ -825,7 +824,7 @@ $files=$sorted;
 	<?php
 	$bc=explode("/",$subdir);
 	$tmp_path='';
-	if(!empty($bc)){
+	if(!empty(array_filter($bc))){
 	foreach($bc as $k=>$b){
 		$tmp_path.=$b."/";
 		if($k==count($bc)-2){
@@ -836,8 +835,9 @@ $files=$sorted;
 	}
 	}else{
 		$rsshownamefol = $db->findByPK('folder','subzoo_subzoo_id',$_SESSION['subzoo_subzoo_id'])->executeAssoc();
+		$rsshowsubfol = $db->findByPK('folder','folder_position',$rsshownamefol['folder_id'])->executeAssoc();
 		?>
-		<li class="active"><?php echo $rsshownamefol['folder_name'] ?></li>
+		<li class="active"><?php echo $rsshownamefol['folder_name'].'/'.$rsshowsubfol['folder_name'] ?></li>
 	<?php
 	}
 	?>

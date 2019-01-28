@@ -463,12 +463,12 @@ if(@$_SESSION ==''){
 	 $config['upload_dir'] = 'source/';
 	 $config['current_path'] = 'source/';
 }else{
-	$rs = $db->findByPK('folder','subzoo_zoo_zoo_id',$_SESSION['subzoo_zoo_zoo_id'])->executeAssoc();
-	$rssubfolall = $db->findByPK('folder','folder_position',$rs['folder_id'])->execute();
+	$rs = @$db->findByPK('folder','subzoo_zoo_zoo_id',$_SESSION['subzoo_zoo_zoo_id'])->executeAssoc();
+	$rssubfolall = @$db->findByPK('folder','folder_position',$rs['folder_id'])->execute();
 	foreach($rssubfolall as $show){
 		if($_SESSION['subzoo_subzoo_id'] == $show['subzoo_subzoo_id']){
-			$config['upload_dir'] = 'source/'.$rs["folder_name"].'/'.$show["folder_name"];
-			$config['current_path'] = 'source/'.$rs["folder_name"].'/'.$show["folder_name"];
+			$config['upload_dir'] = 'source/'.$rs["folder_name"].'/'.$show["folder_name"].'/';
+			$config['current_path'] = 'source/'.$rs["folder_name"].'/'.$show["folder_name"].'/';
 		}
 	}
 }
