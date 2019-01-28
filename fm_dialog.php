@@ -825,7 +825,7 @@ $files=$sorted;
 	<?php
 	$bc=explode("/",$subdir);
 	$tmp_path='';
-	if(!empty($bc))
+	if(!empty($bc)){
 	foreach($bc as $k=>$b){
 		$tmp_path.=$b."/";
 		if($k==count($bc)-2){
@@ -833,6 +833,12 @@ $files=$sorted;
 		}elseif($b!=""){ ?>
 		<li><a href="<?php echo $link.$tmp_path?>"><?php echo $b?></a></li><li><span class="divider"><?php echo "/";?></span></li>
 	<?php }
+	}
+	}else{
+		$rsshownamefol = $db->findByPK('folder','subzoo_subzoo_id',$_SESSION['subzoo_subzoo_id'])->executeAssoc();
+		?>
+		<li class="active"><?php echo $rsshownamefol['folder_name'] ?></li>
+	<?php
 	}
 	?>
 	<li><small class="hidden-phone">(<span id="files_number"><?php echo $current_files_number."</span> ".trans('Files')." - <span id='folders_number'>".$current_folders_number."</span> ".trans('Folders');?>)</small></li>
