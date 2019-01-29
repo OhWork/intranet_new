@@ -9,56 +9,68 @@
 <?php
     include 'database/db_tools.php';
 	include 'connect.php';
-	$zoo = $_POST['subzoo_zoo_zoo_id'];
-// 	 if(($zoo >= 12) && ($zoo <=18)){
-//     	echo "ยังไม่เปิดให้บริการในหน่วยงานนี้";
-// 	}else{
-	if(!empty($_POST['problem_id'])){
 
-		$data['problem_name'] = $_POST['problem_name'];
-		$data['problem_position'] = $_POST['problem_position'];
-		$data['problem_work'] = $_POST['problem_work'];
-		$data['problem_ip'] = $_POST['problem_ip'];
-		$data['problem_tel'] = $_POST['problem_tel'];
-		$data['problem_detail'] = $_POST['problem_detail'];
-		$data['problem_date'] = $_POST['problem_date'];
-		$data['problem_detail'] = $_POST['problem_detail'];
-        $data['problem_adminfix'] = $_POST['problem_adminfix'];
-		$data['subtypetools_subtypetools_id'] = $_POST['subtypetools_subtypetools_id'];
-		$data['subtypetools_typetools_typetools_id'] = $_POST['subtypetools_typetools_typetools_id'];
-		$data['subzoo_subzoo_id'] = $_POST['subzoo_subzoo_id'];
+//เนื่องจากรับข้อมูลทางเดียว
+//	if(!empty($_POST['iptools_id'])){
+//		$data['iptools_address'] = $_POST['iptools_address'];
+//		$data['iptools_name'] = $_POST['iptools_name'];
+//		$data['iptools_detail'] = $_POST['iptools_detail'];
+//		$data['iptools_NAT'] = $_POST['iptools_NAT'];
+//		$data['subzoo_subzoo_id'] = $_POST['subzoo_subzoo_id'];
+//		$data['subzoo_zoo_zoo_id'] = $_POST['subzoo_zoo_zoo_id'];
+//		$data['typetoolsforip_typetoolsforip_id'] = $_POST['typetoolsforip_typetoolsforip_id'];
+//        $rsfix = $db->update('iptools',$data,'iptools_id',$_POST['iptools_id']);
 
-		$rs = $db->update('problem',$data,'problem_id',$_POST['problem_id'])->execute();
-
+    //Log
+		if(getenv('HTTP_X_FORWARDED_FOR')){
+            $ip = $_SERVER['HTTP_X_FORWARDED_FOR']; // IP proxy
+        }else{
+            $ip = $_SERVER['REMOTE_ADDR'];
+        }
+    $ipshow = gethostbyaddr($ip);
+    $log = $db->insert('log',array(
+	'log_system' => 'IP-tools',
+	'log_action' => 'Edit',
+	'log_action_date' => date("Y-m-d H:i"),
+	'log_action_by' => $_POST['log_user'],
+	'log_ip' => $ipshow
+	));
 	}else{
-      if($_POST['subzoo_zoo_zoo_id'] == '' || $_POST['subtypetools_subtypetools_id'] == 0 || $_POST['subtypetools_typetools_typetools_id'] == 0 || $_POST['subzoo_subzoo_id'] == 0 || $_POST['subzoo_zoo_zoo_id'] == 0){
-          echo("กรุณาติดต่อเจ้าหน้าที่ไอที Call 1040");
-      }else{
-        	$rs = $db->insert('problem',array(
-        	'problem_name' => $_POST['problem_name'],
-        	'problem_position' => $_POST['problem_position'],
-        	'problem_work' => $_POST['problem_work'],
-        	'problem_ip' => $_POST['problem_ip'],
-            'problem_tel' => $_POST['problem_tel'],
-        	'problem_status' => $_POST['problem_status'],
-        	'problem_date' => $_POST['problem_date'],
-        	'problem_detail' => $_POST['problem_detail'],
-        	'subtypetools_subtypetools_id' => $_POST['subtypetools_subtypetools_id'],
-        	'subtypetools_typetools_typetools_id' => $_POST['subtypetools_typetools_typetools_id'],
-        	'subzoo_subzoo_id' => $_POST['subzoo_subzoo_id'],
-        	'subzoo_zoo_zoo_id' => $_POST['subzoo_zoo_zoo_id']
-    	));
-	    }
-	}
-// 	}
+	@$rs = $db->insert('reguser',array(
+	'reguser_name_th' => $_POST['reguser_name_th'],
+	'reguser_name_en' => $_POST['reguser_name_en'],
+	'reguser_position' => $_POST['reguser_position'],
+	'reguser_work' => $_POST['reguser_work'],
+                'reguser_date' => $_POST['reguser_date'],
+                'reguser_idcard' => $_POST['reguser_idcard'],
+                'reguser_tel' => $_POST['reguser_tel'],
+                'reguser_internet_use' => $_POST['reguser_internet_use'],
+                'reguser_minternet_use' => $_POST['reguser_minternet_use'],
+                'reguser_intranet_use' => $_POST['reguser_intranet_use'],
+                'reguser_eproject_use' => $_POST['reguser_eproject_use'],
+                'reguser_animal_use' => $_POST['reguser_animal_use'],
+                'reguser_hrsys_use' => $_POST['reguser_hrsys_use'],
+                'reguser_website_use' => $_POST['reguser_website_use'],
+                'reguser_esarabun_use' => $_POST['reguser_esarabun_use'],
+                'reguser_userpasslost' => $_POST['reguser_userpasslost'],
+                'reguser_other' => $_POST['reguser_other'],
+                'reguser_other_detail' => $_POST['reguser_other_detail'],
+                'reguser_sent_email' => $_POST['reguser_sent_email'],
+                'reguser_reson_detail' => $_POST['reguser_reson_detail'],
+	'subzoo_subzoo_id' => $_POST['subzoo_subzoo_id'],
+	'subzoo_zoo_zoo_id' => $_POST['subzoo_zoo_zoo_id']
+	));
 
-	if($rs || $rsfix){
-    	if($rs){
+	}
+
+	if(@$rs || $rsfix){
+    	if(@$rs){
     	    echo "<div class='statusok'>เพิ่มสำเร็จ</div>";
     	}else if($rsfix){
             echo "<div class='statusok'>แก้ไขสำเร็จ</div>";
         }
-            $link = "cs_index.php?url=cs_add_problem.php";
+
+            $link = "url=admin_index.php";
             header( "Refresh: 2; $link" );
 }
 ?>
