@@ -1,7 +1,7 @@
 <?php
 
 include 'database/db_tools.php';
-	include 'connect.php';
+include 'connect.php';
 if (!isset($config)){
   $config = include 'fm_config/fm_config.php';
 }
