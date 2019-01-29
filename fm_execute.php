@@ -164,15 +164,27 @@ if (isset($_GET['action']))
 
 					if (is_dir($path))
 					{
+
 						$path_folder = substr($path, 7);
 						$path_foldercutpath = explode('/',$path_folder);
+						$rscheckid= $db->findByPK('folder','folder_name',"'$path_foldercutpath[0]'")->executeAssoc();
+						$rschecksubfol = $db->findByPK('folder','folder_position',$rscheckid['folder_id'])->execute();
+						foreach($rschecksubfol as $show){
+						print_r($show);
+						if($rschecksubfol != ''){
+							echo "ไม่สามารถลบได้เนื่องจากภายในโฟล์เดอร์ยังมีโฟลเดอร์ย่อยอยู่";
+						}
+						else{
 						for($i= 0; $i<count($path_foldercutpath); $i++){}
 						$countpath=$i-1;
 						$countpath2=$i-2;
-						$selectid = $db->findByPK('folder','folder_name',"'$path_foldercutpath[$countpath2]'")->executeAssoc();
+/*						$selectid = $db->findByPK('folder','folder_name',"'$path_foldercutpath[$countpath2]'")->executeAssoc();
 						$rsdelete = $db->deletefolder('folder','folder_name',"'$path_foldercutpath[$countpath]'",'folder_position',$selectid['folder_id']);
 						if($rsdelete){
 							deleteDir($path);
+						}
+*/
+						}
 						}
 						if ($fixed_image_creation)
 						{
