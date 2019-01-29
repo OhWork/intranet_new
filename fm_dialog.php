@@ -879,12 +879,6 @@ $files=$sorted;
 	<!-- breadcrumb div end -->
 	<div class="row-fluid ff-container">
 	<div class="span12">
-		<?php
-		$rsshownamefol = $db->findByPK('folder','subzoo_subzoo_id',$_SESSION['subzoo_subzoo_id'])->executeAssoc();
-		$rsshowsubfol = $db->findByPK('folder','folder_position',$rsshownamefol['folder_id'])->executeAssoc();
-		$cutrsshowsubfol = substr($rsshowsubfol['folder_name'], 3);
-		?>
-		<h2><b><?php echo $cutrsshowsubfol;?></b></h2>
 		<?php if( ($ftp && !$ftp->isDir($ftp_base_folder.$upload_dir.$rfm_subfolder.$subdir))  || (!$ftp && @opendir($current_path.$rfm_subfolder.$subdir)===FALSE)){ ?>
 		<br/>
 		<div class="alert alert-error">There is an error! The upload folder there isn't. Check your config.php file. </div>
