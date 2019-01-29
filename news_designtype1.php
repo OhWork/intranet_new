@@ -8,12 +8,12 @@
 		<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3'>
 			<h3> <?php echo $rs['news_head'];?> </h3>
 		</div>
-		<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3' style="color:#007bff;">
+		<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-1' style="color:#BDBDBD;">
 		<?php
 			echo 'เพิ่มข่าวสารโดยคุณ ',$rs['user_name'],' ',$rs['user_last'],' ',$rs['news_dateupdate'];
 		?>
 		</div>
-		<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3'>
+		<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-4'>
 			<div class='row'>
 				<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12'>
 					<div class='row'>
@@ -22,15 +22,15 @@
 							<?php
 								$rscover = $db->findByPK12('newsImg','newsImg_position',1,'newsImg_connect',$id)->executeAssoc();
 							?>
-							<img height="250" width="100%" class="pop" src='<?php echo $rscover['newsImg_path'],$rscover['newsImg_name'];?>' />
+							<img height="250" class="pop w-100" src='<?php echo $rscover['newsImg_path'],$rscover['newsImg_name'];?>' />
 						</div>
 						<div class='col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3'></div>
 					</div>
 				</div>
-				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-2">
+				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3">
 					<div class='row'>
 						<div class='col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1'></div>
-						<div class='col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10'>
+						<div class='col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10' style="color:#616161;">
 							<?php echo $rs['newsDetails_name'];?>
 						</div>
 						<div class='col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1'></div>

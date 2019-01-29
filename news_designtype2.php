@@ -8,12 +8,12 @@
 		<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3'>
 			<h3> <?php echo $rs['news_head'];?></h3>
 		</div>
-		<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3' style="color:#007bff;">
+		<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-1' style="color:#BDBDBD;">
 			<?php
 				echo 'เพิ่มข่าวสารโดยคุณ ',$rs['user_name'],' ',$rs['user_last'],' ',$rs['news_dateupdate'];
 			?>
 		</div>
-		<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-2">
+		<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-4 pb-3" style="color:#616161;">
 			<?php echo $rs['newsDetails_name'];?>
 		</div>
 		<!--<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3 mb-3'>

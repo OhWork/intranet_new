@@ -8,37 +8,32 @@
 		<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3'>
 			<h3> <?php echo $rs['news_head'];?> </h3>
 		</div>
+		<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-1' style="color:#BDBDBD;">
+			<?php
+				echo 'เพิ่มข่าวสารโดยคุณ ',$rs['user_name'],' ',$rs['user_last'],' ',$rs['news_dateupdate'];
+			?>
+		</div>
 		<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3'>
 			<div class='row'>
 				<div class='col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2'></div>
 				<div class='col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8'>
 					<div class='row'>
-						<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3' style="color:#007bff;">
-							<?php
-							 echo 'เพิ่มข่าวสารโดยคุณ ',$rs['user_name'],' ',$rs['user_last'],' ',$rs['news_dateupdate'];
-							?>
-						</div>
 						<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12'>
 							<div class='row'>
-								<div class='col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2'></div>
-								<div class='col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8'>
 									<?php
 										$rsvdo = $db->findByPK12('newsVideo','newsVideo_position',1,'newsVideo_connect',$id)->executeAssoc();
 // 										echo $rsvdo['newsVideo_link'];
 									?>
 									<div id="ytplayer"></div>
-								</div>
-								<div class='col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2'></div>
 							</div>
-						</div>
-						<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-2">
+						</div>				
+						<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3 pb-3" style="color:#616161;">
 							<?php echo $rs['newsDetails_name'];?>
 						</div>
 					</div>
 				</div>
 				<div class='col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2'></div>
 			</div>
-		</div>
 		</div>
 	</div>
 </div>
