@@ -53,19 +53,49 @@
 					$rsimg5 = $db->findByPK12('newsImg','newsImg_position',6,'newsImg_connect',$id)->executeAssoc();
 				?>
 				<div class='col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2'>
+					<?php
+						if($rsimg != ''){
+					?>
 					<img height="100" width="100%" class="pop" src='<?php echo $rsimg['newsImg_path'],$rsimg['newsImg_name'] ; ?>' />
+					<?php
+						}else{}
+					?>
 				</div>
 				<div class='col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2'>
+					<?php
+						if($rsimg2 != ''){
+					?>
 					<img height="100" width="100%" class="pop" src='<?php echo $rsimg2['newsImg_path'],$rsimg2['newsImg_name'] ; ?>' />
+					<?php
+						}else{}
+					?>
 				</div>
 				<div class='col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2'>
+					<?php
+						if($rsimg3 != ''){
+					?>
 					<img height="100" width="100%" class="pop" src='<?php echo $rsimg3['newsImg_path'],$rsimg3['newsImg_name'] ; ?>' />
+					<?php
+						}else{}
+					?>
 				</div>
 				<div class='col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2'>
+					<?php
+						if($rsimg4 != ''){
+					?>
 					<img height="100" width="100%" class="pop" src='<?php echo $rsimg4['newsImg_path'],$rsimg4['newsImg_name'] ; ?>' />
+					<?php
+						}else{}
+					?>
 				</div>
 				<div class='col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2'>
+					<?php
+						if($rsimg5 != ''){
+					?>
 					<img height="100" width="100%" class="pop" src='<?php echo $rsimg5['newsImg_path'],$rsimg5['newsImg_name'] ; ?>' />
+					<?php
+						}else{}
+					?>
 				</div>
 		</div>
 	</div>
