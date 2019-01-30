@@ -2,6 +2,7 @@
 <?php
 	error_reporting(E_ERROR | E_WARNING | E_PARSE);
 	ob_start();
+	session_start();
     include 'database/db_tools.php';
 	include 'connect.php';
 	$rs = $db-> findByPK12('newsImg','newsImg_position',1,'newsImg_connect',$_POST['new_id'])->executeAssoc();

@@ -1,6 +1,7 @@
 <?php
-	error_reporting(E_ERROR | E_WARNING | E_PARSE);
 	ob_start();
+	session_start();
+	error_reporting(E_ERROR | E_WARNING | E_PARSE);
     include 'database/db_tools.php';
 	include 'connect.php';
 	$id = $_POST['new_id'];
