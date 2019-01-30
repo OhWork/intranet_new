@@ -1119,3 +1119,9 @@ a:hover {
 	border: 1px solid black;
 	box-shadow: 0px 2px 6px black;
 }
+.newborder {
+	border: 1px solid #828282;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	border-top:none;
+}

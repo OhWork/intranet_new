@@ -26,7 +26,7 @@
 			$last_detail_id->value = $r['newsDetails_id'];
 		}
 	}
-	echo $form->open("form_detail","form","col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","news_insert_medie.php","");
+echo $form->open("form_detail","form","col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","news_insert_medie.php","");
 ?>
 
 <div class='col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1'></div>
