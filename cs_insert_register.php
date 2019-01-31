@@ -35,7 +35,7 @@
 	'log_action_by' => $_POST['log_user'],
 	'log_ip' => $ipshow
 	));
-	}else{
+//	}else{
 	@$rs = $db->insert('reguser',array(
 	'reguser_name_th' => $_POST['reguser_name_th'],
 	'reguser_name_en' => $_POST['reguser_name_en'],
@@ -61,7 +61,7 @@
 	'subzoo_zoo_zoo_id' => $_POST['subzoo_zoo_zoo_id']
 	));
 
-	}
+	//}
 
 	if(@$rs || $rsfix){
     	if(@$rs){
