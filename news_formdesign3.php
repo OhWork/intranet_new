@@ -89,6 +89,8 @@ echo $form->open("form_detail","form","col-xl-12 col-lg-12 col-md-12 col-sm-12 c
 			<div class='row'>
 			<div class='col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10'></div>
 			<div class='col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2'>
+
+					<input id="button" type="button" value="กลับหน้าแรก">
 				<input  type="hidden" id="new_id" name="new_id" value="<?php echo $id;?>" />
 				<input  type="hidden" id="datetime" name="date_time" value="<?php echo $datetime;?>" />
 				<input  type="hidden" id="datetime" name="form_design" value="3" />
@@ -181,4 +183,7 @@ echo $form->open("form_detail","form","col-xl-12 col-lg-12 col-md-12 col-sm-12 c
 				}
 			});
 		});
+		$("#button").on('click',function(e){
+	window.location.href="admin_index.php"
+	});
 </script>
