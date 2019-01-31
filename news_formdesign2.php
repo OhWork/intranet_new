@@ -52,6 +52,7 @@
 			<div class='row'>
 			<div class='col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10'></div>
 			<div class='col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2'>
+				<input id="button" type="button" value="กลับหน้าแรก">
 				<input  type="hidden" id="id" name="new_id" value="<?php echo $id;?>" />
 				<input  type="hidden" id="datetime" name="date_time" value="<?php echo $datetime;?>" />
 				<input  type="hidden" id="datetime" name="form_design" value="2" />
@@ -123,4 +124,7 @@
 						}
 					});
                 });
+                $("#button").on('click',function(e){
+	window.location.href="admin_index.php"
+	});
 </script>
