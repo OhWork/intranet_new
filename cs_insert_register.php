@@ -9,7 +9,8 @@
 <?php
     include 'database/db_tools.php';
 	include 'connect.php';
-
+	echo "<pre>";
+	print_r($_POST);
 //เนื่องจากรับข้อมูลทางเดียว
 //	if(!empty($_POST['iptools_id'])){
 //		$data['iptools_address'] = $_POST['iptools_address'];
@@ -36,6 +37,7 @@
 	'log_ip' => $ipshow
 	));
 //	}else{
+/*
 	@$rs = $db->insert('reguser',array(
 	'reguser_name_th' => $_POST['reguser_name_th'],
 	'reguser_name_en' => $_POST['reguser_name_en'],
@@ -60,16 +62,14 @@
 	'subzoo_subzoo_id' => $_POST['subzoo_subzoo_id'],
 	'subzoo_zoo_zoo_id' => $_POST['subzoo_zoo_zoo_id']
 	));
+*/
 
 	//}
 
 	if(@$rs || $rsfix){
     	if(@$rs){
     	    echo "<div class='statusok'>เพิ่มสำเร็จ</div>";
-    	}else if($rsfix){
-            echo "<div class='statusok'>แก้ไขสำเร็จ</div>";
-        }
-
+    	}
             $link = "url=admin_index.php";
             header( "Refresh: 2; $link" );
 }
