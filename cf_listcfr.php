@@ -25,7 +25,7 @@
 				</div>
 				<div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3 listcfbox">
 					<div class="row">
-						<a class="btn btn-info col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 cfok" href="index.php?url=cf_calendar.php&id=1">
+						<a class="btn btn-info col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 cfok" href="index.php?url=cf_calendar.php&id=1&zoo=3">
 						คลิกเพื่อจองห้องประชุม
 						</a>
 					</div>
@@ -94,7 +94,7 @@
 						</div>
 						<div class='col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3 listcfbox'>
 							<div class='row'>
-								<a class="btn btn-info col-md-12 cfok" href="index.php?url=cf_calendar.php&id=15">
+								<a class="btn btn-info col-md-12 cfok" href="index.php?url=cf_calendar.php&id=15&zoo=12">
 								คลิกเพื่อจองห้องประชุม
 								</a>
 							</div>
@@ -126,7 +126,7 @@
 						</div>
 						<div class='col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3 listcfbox'>
 							<div class='row'>
-								<a class="btn btn-info col-md-12 cfok" href="index.php?url=cf_calendar.php&id=11">
+								<a class="btn btn-info col-md-12 cfok" href="index.php?url=cf_calendar.php&id=11&zoo=13">
 								คลิกเพื่อจองห้องประชุม
 								</a>
 							</div>
@@ -159,7 +159,7 @@
 						</div>
 						<div class='col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3 listcfbox'>
 							<div class='row'>
-								<a class="btn btn-info col-md-12 cfok" href="index.php?url=cf_calendar.php&id=8">
+								<a class="btn btn-info col-md-12 cfok" href="index.php?url=cf_calendar.php&id=8&zoo=14">
 									คลิกเพื่อจองห้องประชุม
 								</a>
 							</div>
@@ -191,7 +191,7 @@
 						</div>
 						<div class='col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3 listcfbox'>
 							<div class='row'>
-								<a class="btn btn-info col-md-12 cfok" href="index.php?url=cf_calendar.php&id=13">
+								<a class="btn btn-info col-md-12 cfok" href="index.php?url=cf_calendar.php&id=13&zoo=15">
 								คลิกเพื่อจองห้องประชุม
 								</a>
 							</div>
@@ -225,7 +225,7 @@
 						</div>
 						<div class='col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3 listcfbox'>
 							<div class='row'>
-								<a class="btn btn-info col-md-12 cfok" href="index.php?url=cf_calendar.php&id=12">
+								<a class="btn btn-info col-md-12 cfok" href="index.php?url=cf_calendar.php&id=12&zoo=16">
 									คลิกเพื่อจองห้องประชุม
 								</a>
 							</div>
@@ -257,7 +257,7 @@
 						</div>
 						<div class='col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3 listcfbox'>
 							<div class='row'>
-								<a class="btn btn-info col-md-12 cfok" href="index.php?url=cf_calendar.php&id=10">
+								<a class="btn btn-info col-md-12 cfok" href="index.php?url=cf_calendar.php&id=10&zoo=17">
 									คลิกเพื่อจองห้องประชุม
 								</a>
 							</div>
@@ -287,7 +287,7 @@
 						</div>
 						<div class='col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3 listcfbox'>
 							<div class='row'>
-								<a class="btn btn-info col-md-12 cfok" href="index.php?url=cf_calendar.php&id=17">
+								<a class="btn btn-info col-md-12 cfok" href="index.php?url=cf_calendar.php&id=17&zoo=18">
 								คลิกเพื่อจองห้องประชุม
 								</a>
 							</div>
