@@ -16,16 +16,34 @@
 
 		$rsfix = $db->update('confer',$data,'confer_id',$_POST['confer_id']);
 		if($rsfix){
-			for($i=1; $i<=$countfiles; $i++){
+			$select = $db->findByPK('conferimg','confer_confer_id',$_POST['confer_id'])->executeAssoc();
+			print_r($select);
+			if($select != ''){
+				for($i=1; $i<=$countfiles; $i++){
+						$target_dir = 'temp/';
+						$target_file = $target_dir.basename($_FILES['confer_pic'.$i]['name']);
+						$path = 'images/confer/';
+						$target_dir_save = $path.basename($_FILES['confer_pic'.$i]['name']);
+						move_uploaded_file($_FILES['confer_pic'.$i]['tmp_name'], $target_dir_save);
+						$data['conferimg_name'] = basename($_FILES['confer_pic'.$i]['name']);
+						$data['conferimg_position'] = $i;
+						$rseditpic = $db->update('conferimg',$data,'confer_id',$_POST['confer_id']);
+
+				}
+			}
+			else{
+				for($i=1; $i<=$countfiles; $i++){
 					$target_dir = 'temp/';
 					$target_file = $target_dir.basename($_FILES['confer_pic'.$i]['name']);
 					$path = 'images/confer/';
 					$target_dir_save = $path.basename($_FILES['confer_pic'.$i]['name']);
 					move_uploaded_file($_FILES['confer_pic'.$i]['tmp_name'], $target_dir_save);
-					$data['conferimg_name'] = basename($_FILES['confer_pic']['name']);
-					$data['conferimg_position'] = $i;
-					$rseditpic = $db->update('conferimg',$data,'confer_id',$_POST['confer_id']);
-
+					$rspic = $db->insert('conferimg',array(
+						'conferimg_name' => basename($_FILES['confer_pic'.$i]['name']),
+						'conferimg_position' => $i,
+						'confer_confer_id' => $_POST['confer_id']
+					));
+				}
 			}
 		}
 
@@ -46,7 +64,7 @@
 					$rspic = $db->insert('conferimg',array(
 						'conferimg_name' => basename($_FILES['confer_pic'.$i]['name']),
 						'conferimg_position' => $i,
-						'confer_id' => $select['confer_id']
+						'confer_confer_id' => $select['confer_id']
 					));
 				}
 			}
