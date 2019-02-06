@@ -5,7 +5,7 @@ header("Cache-Control: post-check=0, pre-check=0", false);
     include "../database/db_tools.php";
 	include "../connect.php";
 if(isset($_GET['gData']) && $_GET['gData']|=""){
-	$result = $db->findByPK43('eventconfer','conferroom','zoo','headncf','confer_confer_id','confer_id','zoo_zoo_id','zoo_id','headncf_headncf_id','headncf_id','zoo_type','1')->execute();
+	$result = $db->findByPK43('eventconfer','confer','zoo','headncf','confer_confer_id','confer_id','zoo_zoo_id','zoo_id','headncf_headncf_id','headncf_id','zoo_type','1')->execute();
  while($rs=$result->fetch_object()){
         $bgColor=null;
         $status = null;

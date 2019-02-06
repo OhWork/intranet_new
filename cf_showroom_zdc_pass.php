@@ -16,14 +16,14 @@
 </script>
 <?php
     $id = $_GET['id'];
-    $cfrs = $db->findByPK('conferroom','confer_id',$id)->executeAssoc();
+    $cfrs = $db->findByPK('confer','confer_id',$id)->executeAssoc();
     $confer_name = $cfrs['confer_name'];
     if (!empty($_SESSION['user_name'])):
     $columns = array('eventconfer_uname','eventconfer_story','eventconfer_psname','eventconfer_start','eventconfer_end','zoo_name');
     $row = "<div class='row'>";
     $rowend = "</div>";
     $form = new form();
-    $rs = $db->findByPK34('eventconfer','conferroom','zoo','confer_confer_id','confer_id','confer_id',$id,'zoo_zoo_id','zoo_id','eventconfer_status',"'Y'")->execute();   
+    $rs = $db->findByPK34('eventconfer','confer','zoo','confer_confer_id','confer_id','confer_id',$id,'zoo_zoo_id','zoo_id','eventconfer_status',"'Y'")->execute();
             echo "<div class='col-md-12'>"."<h2>".$confer_name."</h2>".$rowend;
 
 			$grid = new gridView();

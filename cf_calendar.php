@@ -1,8 +1,8 @@
 <?php
 	$id = $_GET['id'];
 
-	$r = $db->findByPK('conferroom','confer_id',$id)->executeRow();
-	$conferroom = $r['confer_name'];
+	$r = $db->findByPK('confer','confer_id',$id)->executeRow();
+	$confer = $r['confer_name'];
 ?>
 <!DOCTYPE html>
 <input type='hidden' id='id' name="id" value="<?php echo $id;?>">
@@ -489,7 +489,7 @@
 							</div>
 					</div>
 					<div class="col-xl-10 col-lg-10 col-md-12 col-sm-12 col-12">
-						<h1><center><?php echo $conferroom;?></center></h1>
+						<h1><center><?php echo $confer;?></center></h1>
 						<div id="calendar" class='mt-5'></div>
 					</div>
 					<input type="hidden" id="confer_id" value="<?php echo $id;?>">

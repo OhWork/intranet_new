@@ -8,18 +8,48 @@
 <?php
     include 'database/db_tools.php';
 	include 'connect.php';
-
-	if(!empty($_POST['admin_id'])){
+	$countfiles = count($_FILES);
+		if(!empty($_POST['confer_id'])){
 
 		$data['confer_name'] = $_POST['confer_name'];
+		$data['confer_people'] = $_POST['confer_num'];
 
-		$rsfix = $db->update('headncf',$data,'headncf_id',$_POST['headncf_id']);
+		$rsfix = $db->update('confer',$data,'confer_id',$_POST['confer_id']);
+		if($rsfix){
+			for($i=1; $i<=$countfiles; $i++){
+					$target_dir = 'temp/';
+					$target_file = $target_dir.basename($_FILES['confer_pic'.$i]['name']);
+					$path = 'images/confer/';
+					$target_dir_save = $path.basename($_FILES['confer_pic'.$i]['name']);
+					move_uploaded_file($_FILES['confer_pic'.$i]['tmp_name'], $target_dir_save);
+					$data['conferimg_name'] = basename($_FILES['confer_pic']['name']);
+					$data['conferimg_position'] = $i;
+					$rseditpic = $db->update('conferimg',$data,'confer_id',$_POST['confer_id']);
+
+			}
+		}
 
 	}else{
-	$rs = $db->insert('conferroom',array(
-	'confer_name' => $_POST['confer_name'],
-	'zoo_zoo_id'=>$_POST['zoo_zoo_id'],
-	));
+		$rs = $db->insert('confer',array(
+		'confer_name' => $_POST['confer_name'],
+		'confer_people' => $_POST['confer_num'],
+		'zoo_zoo_id'=>$_POST['subzoo_zoo_zoo_id'],
+		));
+		if($rs){
+				$select = $db->findAllDESC('confer','confer_id')->executeAssoc();
+				for($i=1; $i<=$countfiles; $i++){
+					$target_dir = 'temp/';
+					$target_file = $target_dir.basename($_FILES['confer_pic'.$i]['name']);
+					$path = 'images/confer/';
+					$target_dir_save = $path.basename($_FILES['confer_pic'.$i]['name']);
+					move_uploaded_file($_FILES['confer_pic'.$i]['tmp_name'], $target_dir_save);
+					$rspic = $db->insert('conferimg',array(
+						'conferimg_name' => basename($_FILES['confer_pic'.$i]['name']),
+						'conferimg_position' => $i,
+						'confer_id' => $select['confer_id']
+					));
+				}
+			}
 
                 //Log
 		if(getenv(HTTP_X_FORWARDED_FOR)){
@@ -37,15 +67,15 @@
         	));
 	}
 
-	if($rs || $rsfix){
-    	if($rs){
+	if(@$rs || @$rsfix){
+    	if($rs && $rspic){
     	    echo "<div class='statusok'>เพิ่มสำเร็จ</div>";
-    	}else if($rsfix){
+    	}else if(@$rsfix && $rspic){
             echo "<div class='statusok'>แก้ไขสำเร็จ</div>";
         }
-            $link = "admin_index.php?url=cf_addconfer.php";
+            $link = "admin_index.php?url=cf_showconfer.php";
             header( "Refresh: 2; $link" );
-}
+	}
 ?>
 </html>
 <?php

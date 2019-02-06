@@ -77,7 +77,7 @@ echo $form->open('','','col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12','','');
 <?php
        echo $form->close();
       if (isset($_POST['submit'])) {
-	   $conferrenname = $_POST['conferroom'];
+	   $conferrenname = $_POST['confer'];
 @$zrs = $db->findByPK('zoo','zoo_id',$zoo)->executeAssoc();
 @$zoo_name = $zrs['zoo_name'];
 @$yearthai  = $_POST['year'];    // แปลง ปีพ.ศ. เป็น ปีค.ศ.

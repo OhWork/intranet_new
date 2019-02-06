@@ -48,8 +48,8 @@
 <!-- end wrapper-->
 <div class='box2'>
 		<?php
-			$rs2 = "user,zoo,conferroom,event_confer  where admin.zoo_zoo_id = zoo.zoo_id && zoo.zoo_id = conferroom.zoo_zoo_id && conferroom.confer_id = event_confer.confer_confer_id && admin.zoo_zoo_id = $id";
-			$rs = $db->findByPK4DESC('user','zoo','conferroom','event_confer','admin.zoo_zoo_id','zoo.zoo_id','zoo.zoo_id','conferroom.zoo_zoo_id','conferroom.confer_id','event_confer.confer_confer_id','admin.zoo_zoo_id',$id,$page,$limit)->execute();
+			$rs2 = "user,zoo,confer,event_confer  where admin.zoo_zoo_id = zoo.zoo_id && zoo.zoo_id = confer.zoo_zoo_id && confer.confer_id = event_confer.confer_confer_id && admin.zoo_zoo_id = $id";
+			$rs = $db->findByPK4DESC('user','zoo','confer','event_confer','admin.zoo_zoo_id','zoo.zoo_id','zoo.zoo_id','confer.zoo_zoo_id','confer.confer_id','event_confer.confer_confer_id','admin.zoo_zoo_id',$id,$page,$limit)->execute();
 
 
 			$grid = new gridView();

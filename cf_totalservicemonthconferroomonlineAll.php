@@ -79,7 +79,7 @@
 <?php
        echo $form->close();
       if (isset($_POST['submit'])) {
-	   $conferrenname = $_POST['conferroom'];
+	   $conferrenname = $_POST['confer'];
 @$zrs = $db->findByPK('zoo','zoo_id',$zoo)->executeAssoc();
 @$zoo_name = $zrs['zoo_name'];
 @$yearthai  = $_POST['year'];    // แปลง ปีพ.ศ. เป็น ปีค.ศ.
@@ -131,15 +131,15 @@
         case 11: $confertxt = "ห้องประชุมนกเงือก"; break;
         case 12: $confertxt = "ห้องประชุมอาคารสำนักงาน"; break;
     }
-    $rs = $db->findByPK45LimitBETWEENASC('eventconfer','headncf','conferroom','zoo',
-    'eventconfer.confer_confer_id','conferroom.confer_id',
+    $rs = $db->findByPK45LimitBETWEENASC('eventconfer','headncf','confer','zoo',
+    'eventconfer.confer_confer_id','confer.confer_id',
     'eventconfer.subzoo_zoo_zoo_id','zoo.zoo_id',
     'eventconfer.headncf_headncf_id','headncf.headncf_id',
     'eventconfer_status_online',"'Y'",
     'eventconfer_start',$qua,
     'eventconfer_start')->execute();
-    $counttotal = $db->countTableBETWEEN45('eventconfer','headncf','conferroom','zoo',
-    'eventconfer.confer_confer_id','conferroom.confer_id',
+    $counttotal = $db->countTableBETWEEN45('eventconfer','headncf','confer','zoo',
+    'eventconfer.confer_confer_id','confer.confer_id',
     'eventconfer.subzoo_zoo_zoo_id','zoo.zoo_id',
     'eventconfer.headncf_headncf_id','headncf.headncf_id',
     'eventconfer_status_online',"'Y'",
