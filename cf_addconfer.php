@@ -67,7 +67,7 @@
 								<div class='col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3 ml-5'>
 									<div class='row'>
 										<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" align="center">
-											<?php $rsshowimg1 = $db->findByPK12('conferimg','conferimg_position',1,'confer_id',$_GET['id'])->executeAssoc();
+											<?php $rsshowimg1 = $db->findByPK12('conferimg','conferimg_position',1,'confer_confer_id',$_GET['id'])->executeAssoc();
 											if(!empty($rsshowimg1['conferimg_id'])){
 											?>
 												<img id="preimg" class="preimg" src="images/confer/<?php echo $rsshowimg1['conferimg_name'];?>" width="100px" height="100px">
@@ -86,7 +86,7 @@
 								<div class='col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3 ml-5'>
 									<div class='row'>
 										<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" align="center">
-											<?php $rsshowimg1 = $db->findByPK12('conferimg','conferimg_position',2,'confer_id',$_GET['id'])->executeAssoc(); ?>
+											<?php $rsshowimg1 = $db->findByPK12('conferimg','conferimg_position',2,'confer_confer_id',$_GET['id'])->executeAssoc(); ?>
 											<input  type="hidden" id="pic_id2" name="pic_id2" value="<?php echo $rsshowimg1['newsImg_id'];?>" />
 											<?php
 											if(!empty($rsshowimg1['conferimg_id'])){
@@ -107,7 +107,7 @@
 								<div class='col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3 ml-5'>
 									<div class='row'>
 										<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" align="center">
-											<?php $rsshowimg1 = $db->findByPK12('conferimg','conferimg_position',3,'confer_id',$_GET['id'])->executeAssoc(); ?>
+											<?php $rsshowimg1 = $db->findByPK12('conferimg','conferimg_position',3,'confer_confer_id',$_GET['id'])->executeAssoc(); ?>
 											<input  type="hidden" id="pic_id2" name="pic_id3" value="<?php echo $rsshowimg1['newsImg_id'];?>" />
 											<?php
 											if(!empty($rsshowimg1['conferimg_id'])){
