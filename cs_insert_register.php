@@ -59,7 +59,7 @@
 	}else{
 		$reguser_other = $_POST['reguser_other'] ;
 	}
-
+	$datenow = date("Y-m-d");
     //Log
 /*
 		if(getenv('HTTP_X_FORWARDED_FOR')){
@@ -82,7 +82,7 @@
 	'reguser_name_en' => $_POST['reguser_name_en'],
 	'reguser_position' => $_POST['reguser_position'],
 	'reguser_work' => $_POST['reguser_work'],
-//     'reguser_date' => $_POST['reguser_date'],
+    'reguser_date' => $datenow,
     'reguser_idcard' => $_POST['reguser_idcard'],
     'reguser_tel' => $_POST['reguser_tel'],
     'reguser_internet_use' => $reg_internet_use,
@@ -97,7 +97,7 @@
     'reguser_other' => $reguser_other,
     'reguser_other_detail' => $_POST['reguser_other_detail'],
     'reguser_sent_email' => $_POST['reguser_sent_email'],
-//     'reguser_reson_detail' => $_POST['reguser_reson_detail'],
+    'reguser_reason_detail' => $_POST['reguser_reason_detail'],
 /*
 	'subzoo_subzoo_id' => $_POST['subzoo_subzoo_id'],
 	'subzoo_zoo_zoo_id' => $_POST['subzoo_zoo_zoo_id']

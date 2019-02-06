@@ -8,6 +8,8 @@
     $lbwork = new label('งาน');
     $lbidcard = new label('รหัสบัตรประชาชน');
     $lbtel = new label('เบอร์ติดต่อ');
+    $lbreason = new label('เหตุผลที่ขอ');
+    $txtreason = new textfield('reguser_reason_detail','','form-control css-require','','');
     $txtnameth = new textfield('reguser_name_th','','form-control css-require','','');
     $txtnameen = new textfield('reguser_name_en','','form-control css-require','','');
     $txtwork = new textfield('reguser_work','','form-control css-require','','');
@@ -232,6 +234,12 @@
 					<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1">
 					</div>
 				</div>
+			</div>
+			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+				<?php echo $lbreason; ?>
+			</div>
+			<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 form-group has-feedback'>
+                <?php echo $txtreason; ?>
 			</div>
 			<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 form-group has-feedback test' style="float: left;">
 				<?php echo $button;?>
