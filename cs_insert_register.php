@@ -9,20 +9,59 @@
 <?php
     include 'database/db_tools.php';
 	include 'connect.php';
-	echo "<pre>";
-	print_r($_POST);
-//เนื่องจากรับข้อมูลทางเดียว
-//	if(!empty($_POST['iptools_id'])){
-//		$data['iptools_address'] = $_POST['iptools_address'];
-//		$data['iptools_name'] = $_POST['iptools_name'];
-//		$data['iptools_detail'] = $_POST['iptools_detail'];
-//		$data['iptools_NAT'] = $_POST['iptools_NAT'];
-//		$data['subzoo_subzoo_id'] = $_POST['subzoo_subzoo_id'];
-//		$data['subzoo_zoo_zoo_id'] = $_POST['subzoo_zoo_zoo_id'];
-//		$data['typetoolsforip_typetoolsforip_id'] = $_POST['typetoolsforip_typetoolsforip_id'];
-//        $rsfix = $db->update('iptools',$data,'iptools_id',$_POST['iptools_id']);
+	if(@$_POST['reguser_internet_use'] == ''){
+		$reg_internet_use = 0 ;
+	}else{
+		$reg_internet_use = $_POST['reguser_internet_use'] ;
+	}
+	if(@$_POST['reguser_minternet_use'] == ''){
+		$reguser_minternet_use = 0 ;
+	}else{
+		$reguser_minternet_use = $_POST['reguser_minternet_use'] ;
+	}
+	if(@$_POST['reguser_intranet_use'] == ''){
+		$reguser_intranet_use = 0 ;
+	}else{
+		$reguser_intranet_use = $_POST['reguser_intranet_use'] ;
+	}
+	if(@$_POST['reguser_eproject_use'] == ''){
+		$reguser_eproject_use = 0 ;
+	}else{
+		$reguser_eproject_use = $_POST['reguser_eproject_use'] ;
+	}
+	if(@$_POST['reguser_animal_use'] == ''){
+		$reguser_animal_use = 0 ;
+	}else{
+		$reguser_animal_use = $_POST['reguser_animal_use'] ;
+	}
+	if(@$_POST['reguser_hrsys_use'] == ''){
+		$reguser_hrsys_use = 0 ;
+	}else{
+		$reguser_hrsys_use = $_POST['reguser_hrsys_use'] ;
+	}
+	if(@$_POST['reguser_website_use'] == ''){
+		$reguser_website_use = 0 ;
+	}else{
+		$reguser_website_use = $_POST['reguser_website_use'] ;
+	}
+	if(@$_POST['reguser_esarabun_use'] == ''){
+		$reguser_esarabun_use = 0 ;
+	}else{
+		$reguser_esarabun_use = $_POST['reguser_esarabun_use'] ;
+	}
+	if(@$_POST['reguser_userpasslost'] == ''){
+		$reguser_userpasslost = 0 ;
+	}else{
+		$reguser_userpasslost = $_POST['reguser_userpasslost'] ;
+	}
+	if(@$_POST['reguser_other'] == ''){
+		$reguser_other = 0 ;
+	}else{
+		$reguser_other = $_POST['reguser_other'] ;
+	}
 
     //Log
+/*
 		if(getenv('HTTP_X_FORWARDED_FOR')){
             $ip = $_SERVER['HTTP_X_FORWARDED_FOR']; // IP proxy
         }else{
@@ -36,41 +75,42 @@
 	'log_action_by' => $_POST['log_user'],
 	'log_ip' => $ipshow
 	));
+*/
 //	}else{
-/*
 	@$rs = $db->insert('reguser',array(
 	'reguser_name_th' => $_POST['reguser_name_th'],
 	'reguser_name_en' => $_POST['reguser_name_en'],
 	'reguser_position' => $_POST['reguser_position'],
 	'reguser_work' => $_POST['reguser_work'],
-                'reguser_date' => $_POST['reguser_date'],
-                'reguser_idcard' => $_POST['reguser_idcard'],
-                'reguser_tel' => $_POST['reguser_tel'],
-                'reguser_internet_use' => $_POST['reguser_internet_use'],
-                'reguser_minternet_use' => $_POST['reguser_minternet_use'],
-                'reguser_intranet_use' => $_POST['reguser_intranet_use'],
-                'reguser_eproject_use' => $_POST['reguser_eproject_use'],
-                'reguser_animal_use' => $_POST['reguser_animal_use'],
-                'reguser_hrsys_use' => $_POST['reguser_hrsys_use'],
-                'reguser_website_use' => $_POST['reguser_website_use'],
-                'reguser_esarabun_use' => $_POST['reguser_esarabun_use'],
-                'reguser_userpasslost' => $_POST['reguser_userpasslost'],
-                'reguser_other' => $_POST['reguser_other'],
-                'reguser_other_detail' => $_POST['reguser_other_detail'],
-                'reguser_sent_email' => $_POST['reguser_sent_email'],
-                'reguser_reson_detail' => $_POST['reguser_reson_detail'],
+//     'reguser_date' => $_POST['reguser_date'],
+    'reguser_idcard' => $_POST['reguser_idcard'],
+    'reguser_tel' => $_POST['reguser_tel'],
+    'reguser_internet_use' => $reg_internet_use,
+    'reguser_minternet_use' => $reguser_minternet_use,
+    'reguser_intranet_use' => $reguser_intranet_use,
+    'reguser_eproject_use' => $reguser_eproject_use,
+    'reguser_animal_use' => $reguser_animal_use,
+    'reguser_hrsys_use' => $reguser_hrsys_use,
+    'reguser_website_use' => $reguser_website_use,
+    'reguser_esarabun_use' => $reguser_esarabun_use,
+    'reguser_userpasslost' => $reguser_userpasslost,
+    'reguser_other' => $reguser_other,
+    'reguser_other_detail' => $_POST['reguser_other_detail'],
+    'reguser_sent_email' => $_POST['reguser_sent_email'],
+//     'reguser_reson_detail' => $_POST['reguser_reson_detail'],
+/*
 	'subzoo_subzoo_id' => $_POST['subzoo_subzoo_id'],
 	'subzoo_zoo_zoo_id' => $_POST['subzoo_zoo_zoo_id']
-	));
 */
+	));
 
 	//}
 
-	if(@$rs || $rsfix){
+	if(@$rs){
     	if(@$rs){
     	    echo "<div class='statusok'>เพิ่มสำเร็จ</div>";
     	}
-            $link = "url=admin_index.php";
+            $link = "url=index.php";
             header( "Refresh: 2; $link" );
 }
 ?>
