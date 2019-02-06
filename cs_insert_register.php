@@ -98,10 +98,8 @@
     'reguser_other_detail' => $_POST['reguser_other_detail'],
     'reguser_sent_email' => $_POST['reguser_sent_email'],
     'reguser_reason_detail' => $_POST['reguser_reason_detail'],
-/*
 	'subzoo_subzoo_id' => $_POST['subzoo_subzoo_id'],
 	'subzoo_zoo_zoo_id' => $_POST['subzoo_zoo_zoo_id']
-*/
 	));
 
 	//}
