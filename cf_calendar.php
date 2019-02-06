@@ -160,8 +160,6 @@
             var conferid = $('#confer_id').val();
             var disbledid = document.getElementById(<?php echo $r['confer_id'];?>);
             var checkdisbled = <?php echo $_GET['id']?>;
-            console.log(disbledid);
-            console.log(checkdisbled);
 			if(conferid == checkdisbled){
 				disbledid.classList.remove('btn-primary');
  				disbledid.classList.add('disabled');
