@@ -80,7 +80,7 @@
 						<div class='col-md-12 azhead'>
                     		<h4>สวนสัตว์</h4>
                     	</div>
-                        <div class='col-md-12' style="padding-left:15px;padding-right:15px;padding-top:8px;"">
+                        <div class='col-md-12' style="padding-left:15px;padding-right:15px;padding-top:8px;">
                         	<label>
                             	<input type="checkbox" name="check_list[]" id='check_list' value="11">
                                 	สวนสัตว์ดุสิต
@@ -379,12 +379,14 @@
 			                      '<b><center>'.number_format($trsfinal['car']).'</b></center>',
                                   '<b><center>'.number_format($trsfinal['mtc']).'</b></center>');
 			$grid->renderFromDB($columns,$trs);
-}?>
+}
+?>
 			</div>
 		</div>
     </div>
 </div>
 <script>
+/*
    $.fn.datepicker.dates['th'] = {
                                 days: ["อาทิตย์", "จันทร์", "อังคาร", "พุธ", "พฤหัส", "ศุกร์", "เสาร์", "อาทิตย์"],
                                 daysShort: ["อา", "จ", "อ", "พ", "พฤ", "ศ", "ส", "อา"],
@@ -393,6 +395,7 @@
                                 monthsShort: ["ม.ค.", "ก.พ.", "มี.ค.", "เม.ย.", "พ.ค.", "มิ.ย.", "ก.ค.", "ส.ค.", "ก.ย.", "ต.ค.", "พ.ย.", "ธ.ค."],
                                 today: "วันนี้"
 };
+*/
   $( function() {
    	$('.datetimepicker').datetimepicker({
 		 format: 'YYYY-MM-DD',
