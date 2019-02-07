@@ -132,19 +132,19 @@
                                 <div class='col-md-1' style="float: left;"></div>
                                 <div class='btn-group col-md-10' data-toggle='buttons' style="float: left;">
                                     <label class="btn btn-success active" style="width:20%">
-                                        <input type="radio" name="search" value="1" onChange="swapConfig(this)" id="searchday" autocomplete="off" checked>วัน
+                                        <input class="dpn" type="radio" name="search" value="1" onChange="swapConfig(this)" id="searchday" autocomplete="off" checked>วัน
                                     </label>
                                     <label class="btn btn-success" style="width:20%">
-                                        <input type="radio" name="search" value="2" onChange="swapConfig(this)" id="searchdaytwo" autocomplete="off">ระหว่างวันที่
+                                        <input class="dpn" type="radio" name="search" value="2" onChange="swapConfig(this)" id="searchdaytwo" autocomplete="off">ระหว่างวันที่
                                     </label>
                                     <label class="btn btn-success" style="width:20%">
-                                        <input type="radio" name="search" value="3" onChange="swapConfig(this)" id="searchmonth" autocomplete="off">เดือน
+                                        <input class="dpn" type="radio" name="search" value="3" onChange="swapConfig(this)" id="searchmonth" autocomplete="off">เดือน
                                     </label>
                                     <label class="btn btn-success" style="width:20%">
-                                        <input type="radio" name="search" value="4" onChange="swapConfig(this)" id="searchquarter" autocomplete="off">ไตรมาส
+                                        <input class="dpn" type="radio" name="search" value="4" onChange="swapConfig(this)" id="searchquarter" autocomplete="off">ไตรมาส
                                     </label>
                                     <label class="btn btn-success" style="width:20%">
-                                        <input type="radio" name="search" value="5" onChange="swapConfig(this)" id="searchyear" autocomplete="off">ปี
+                                        <input class="dpn" type="radio" name="search" value="5" onChange="swapConfig(this)" id="searchyear" autocomplete="off">ปี
                                     </label>
                                 </div>
                                 <div class='col-md-1 printdisplaynone' style="float: left;"></div>

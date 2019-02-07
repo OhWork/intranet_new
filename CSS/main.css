@@ -1,6 +1,9 @@
 body {
 	background-color:#F5F5F5;
 }
+.dpn {
+	display:none;
+}
 a:hover {
 	text-decoration:none;
 }

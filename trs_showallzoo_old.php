@@ -127,19 +127,19 @@
                                     	<div class='col-md-1' style="float: left;"></div>
                                     	<div class='btn-group col-md-10' data-toggle='buttons' style="float: left;">
 											<label class="btn btn-success active" style="width:20%">
-												<input type="radio" name="search" value="1" onChange="swapConfig(this)" id="searchday" autocomplete="off" checked>วัน
+												<input class="dpn" type="radio" name="search" value="1" onChange="swapConfig(this)" id="searchday" autocomplete="off" checked>วัน
 											</label>
 											<label class="btn btn-success" style="width:20%">
-												<input type="radio" name="search" value="2" onChange="swapConfig(this)" id="searchdaytwo" autocomplete="off">ระหว่างวัน
+												<input class="dpn" type="radio" name="search" value="2" onChange="swapConfig(this)" id="searchdaytwo" autocomplete="off">ระหว่างวัน
 											</label>
 											<label class="btn btn-success" style="width:20%">
-												<input type="radio" name="search" value="3" onChange="swapConfig(this)" id="searchmonth" autocomplete="off">เดือน
+												<input class="dpn" type="radio" name="search" value="3" onChange="swapConfig(this)" id="searchmonth" autocomplete="off">เดือน
 											</label>
 											<label class="btn btn-success" style="width:20%">
-												<input type="radio" name="search" value="4" onChange="swapConfig(this)" id="searchquarter" autocomplete="off">ไตรมาส
+												<input class="dpn" type="radio" name="search" value="4" onChange="swapConfig(this)" id="searchquarter" autocomplete="off">ไตรมาส
 											</label>
 											<label class="btn btn-success" style="width:20%">
-												<input type="radio" name="search" value="5" onChange="swapConfig(this)" id="searchyear" autocomplete="off">ปี
+												<input class="dpn" type="radio" name="search" value="5" onChange="swapConfig(this)" id="searchyear" autocomplete="off">ปี
 											</label>
                                     	</div>
                                     	<div class='col-md-1 printdisplaynone' style="float: left;"></div>
@@ -148,8 +148,8 @@
 								<div class='col-md-12' style="margin-top: 30px;">
 <!-- ชุดวัน -->
 									<div id="searchdaySettings">
-										<div class='col-md-3' style="float: left;"></div>
-										<div class="date-form dayinbox col-md-6" style="float: left;">
+										<div class='col-md-3'></div>
+										<div class="date-form dayinbox col-md-6">
 											<div class="form-horizontal">
 												<div class="control-group">
 													<div class="controls">
@@ -160,7 +160,7 @@
 												</div>
 										   </div>
 										</div>
-										<div class='col-md-3'style="float: left;"></div>
+										<div class='col-md-3'></div>
 									</div>
 
  <!--  ชุดระหว่างวัน		 -->
