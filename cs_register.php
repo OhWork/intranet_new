@@ -8,6 +8,8 @@
     $lbwork = new label('งาน');
     $lbidcard = new label('รหัสบัตรประชาชน');
     $lbtel = new label('เบอร์ติดต่อ');
+    $lbreason = new label('เหตุผลที่ขอ');
+    $txtreason = new textfield('reguser_reason_detail','','form-control css-require','','');
     $txtnameth = new textfield('reguser_name_th','','form-control css-require','','');
     $txtnameen = new textfield('reguser_name_en','','form-control css-require','','');
     $txtwork = new textfield('reguser_work','','form-control css-require','','');
@@ -187,30 +189,30 @@
 								<input type="checkbox" name="reguser_internet_use" id="parent1" value="1"> ระบบอินเทอร์เน็ตองค์การสวนสัตว์
 							</div>
 							<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-								<input type="checkbox" name="reguser_minternet_use"  id="parent2" value="2"> ระบบอินเทอร์เน็ตโมบาย
+								<input type="checkbox" name="reguser_minternet_use"  id="parent2" value="1"> ระบบอินเทอร์เน็ตโมบาย
 							</div>
 							<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-								<input type="checkbox" name="reguser_intranet_use"  id="parent3" value="3"> ระบบ ZPO data center
+								<input type="checkbox" name="reguser_intranet_use"  id="parent3" value="1"> ระบบ ZPO data center
 							</div>
 							<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-								<input type="checkbox" name="reguser_eproject_use" id="parent4" value="4"> ระบบ E-Project
+								<input type="checkbox" name="reguser_eproject_use" id="parent4" value="1"> ระบบ E-Project
 							</div>
 							<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-								<input type="checkbox" name="reguser_animal_use" id="parent5" value="5"> ระบบทะเบียนสัตว์
+								<input type="checkbox" name="reguser_animal_use" id="parent5" value="1"> ระบบทะเบียนสัตว์
 							</div>
 							<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-								<input type="checkbox" name="reguser_hrsys_use" id="parent5" value="5"> ระบบบริหารงานบุคคล
+								<input type="checkbox" name="reguser_hrsys_use" id="parent5" value="1"> ระบบบริหารงานบุคคล
 							</div>
 							<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-								<input type="checkbox" name="reguser_website_use" id="parent5" value="5"> www.zoothailand.org
+								<input type="checkbox" name="reguser_website_use" id="parent5" value="1"> www.zoothailand.org
 							</div>
 							<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-								<input type="checkbox" name="reguser_esarabun_use" id="parent5" value="5"> ระบบสารบรรณอิเล็กทรอนิกส์ สรอ.
+								<input type="checkbox" name="reguser_esarabun_use" id="parent5" value="1"> ระบบสารบรรณอิเล็กทรอนิกส์ สรอ.
 							</div>
 							<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 								<div class="row">
 									<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-										<input type="checkbox" name="reguser_userpasslost" id="forgetusercheck" value="5"> Username และ Password ในกรณีทำหายของระบบ
+										<input type="checkbox" name="reguser_userpasslost" id="forgetusercheck" value="1"> Username และ Password ในกรณีทำหายของระบบ
 									</div>
 									<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 										<input type="text" name="reguser_sent_email" id="forgetuser" class="form-control">
@@ -220,7 +222,7 @@
 							<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 								<div class="row">
 									<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-										<input type="checkbox" name="reguser_other" id="ohter" value="5"> อื่นๆ
+										<input type="checkbox" name="reguser_other" id="ohter" value="1"> อื่นๆ
 									</div>
 									<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 										<input type="text" name="reguser_other_detail" id="textohter" class="form-control">
@@ -232,6 +234,12 @@
 					<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1">
 					</div>
 				</div>
+			</div>
+			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+				<?php echo $lbreason; ?>
+			</div>
+			<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 form-group has-feedback'>
+                <?php echo $txtreason; ?>
 			</div>
 			<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 form-group has-feedback test' style="float: left;">
 				<?php echo $button;?>
