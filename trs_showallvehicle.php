@@ -153,77 +153,89 @@
 						<div class='col-md-12' style="margin-top: 30px;">
 <!-- ชุดวัน -->
 							<div id="searchdaySettings">
-								<div class='col-md-3' style="float: left;"></div>
-								<div class="date-form dayinbox col-md-6" style="float: left;">
-									<div class="form-horizontal">
-										<div class="control-group">
-											<div class="controls">
-												<div class="input-group">
-													<?php echo $textday;?>
+								<div class="row">
+									<div class='col-md-3'></div>
+									<div class="date-form dayinbox col-md-6"
+										<div class="form-horizontal">
+											<div class="control-group">
+												<div class="controls">
+													<div class="input-group">
+														<?php echo $textday;?>
+													</div>
 												</div>
 											</div>
-										</div>
-								   </div>
+									   </div>
+									</div>
+									<div class='col-md-3'></div>
 								</div>
-								<div class='col-md-3'style="float: left;"></div>
 							</div>
  <!--  ชุดระหว่างวัน		 -->
 							<div id="searchdaytwoSettings" style="display:none">
-								<div class='col-md-1' style="float: left;"></div>
-								<div class='date-form dayinbox col-md-4' style="float: left;">
-									<div class="form-horizontal">
-										<div class="control-group">
-											<div class="controls">
-												<div class="input-group">
-													<?php echo $texttwoday;?>
+								<div class="row">
+									<div class='col-md-1'></div>
+									<div class='date-form dayinbox col-md-4'>
+										<div class="form-horizontal">
+											<div class="control-group">
+												<div class="controls">
+													<div class="input-group">
+														<?php echo $texttwoday;?>
+													</div>
 												</div>
 											</div>
 										</div>
 									</div>
-								</div>
-								<div class='col-md-2' style="float: left;padding-top: 8px;"><center><b><- ระหว่าง -></b></center></div>
-								<div class="date-form dayinbox col-md-4" style="float: left;">
-									<div class="form-horizontal">
-										<div class="control-group">
-											<div class="controls">
-												<div class="input-group">
-													<?php echo $texttwoday2;?>
+									<div class='col-md-2' style="padding-top: 8px;"><center><b><- ระหว่าง -></b></center></div>
+									<div class="date-form dayinbox col-md-4">
+										<div class="form-horizontal">
+											<div class="control-group">
+												<div class="controls">
+													<div class="input-group">
+														<?php echo $texttwoday2;?>
+													</div>
 												</div>
 											</div>
 										</div>
 									</div>
+									<div class='col-md-1'></div>
 								</div>
-								<div class='col-md-1' style="float: left;"></div>
 							</div>
  <!-- ชุดเดือน -->
 							<div id="searchmonthSettings"  style="display:none">
-								<div class='col-md-2' style="float: left;"></div>
-								<div class='col-md-2' style="float: left;padding-top: 8px;"><center><?php echo $lbmonth;?></center></div>
-								<div class='col-md-2' style="float: left;"><?php echo $selectmonth;?></div>
-								<div class='col-md-2' style="float: left;padding-top: 8px;"><center><?php echo $lbyear;?></center></div>
-								<div class='col-md-2' style="float: left;"><?php echo $txtyearmonth;?></div>
-								<div class='col-md-2' style="float: left;"></div>
+								<div class="row">
+									<div class='col-md-2'></div>
+									<div class='col-md-2' style="padding-top: 8px;"><center><?php echo $lbmonth;?></center></div>
+									<div class='col-md-2'><?php echo $selectmonth;?></div>
+									<div class='col-md-2' style="padding-top: 8px;"><center><?php echo $lbyear;?></center></div>
+									<div class='col-md-2'><?php echo $txtyearmonth;?></div>
+									<div class='col-md-2'></div>
+								</div>
 							</div>
 <!--   ไตรมาส -->
 							<div id="searchquarterSettings" style="display:none">
-								<div class='col-md-2' style="float: left;"></div>
-								<div class='col-md-4' style="float: left;"><?php echo $selectquarter;?></div>
-								<div class='col-md-2' style="float: left;padding-top: 8px;"><center><?php echo $lbyear;?></center></div>
-								<div class='col-md-2' style="float: left;"><?php echo $txtyearqua;?></div>
-								<div class='col-md-2' style="float: left;"></div>
+								<div class="row">
+									<div class='col-md-2'></div>
+									<div class='col-md-4'><?php echo $selectquarter;?></div>
+									<div class='col-md-2' style="padding-top: 8px;"><center><?php echo $lbyear;?></center></div>
+									<div class='col-md-2'><?php echo $txtyearqua;?></div>
+									<div class='col-md-2'></div>
+								</div>
 							</div>
 <!--   ชุดปี -->
 							<div id="searchyearSettings" style="display:none">
-								<div class='col-md-4' style="float: left;"></div>
-								<div class='col-md-2' style="float: left;padding-top: 8px;"><center><?php echo $lbyear;?></center></div>
-								<div class='col-md-2' style="float: left;"><?php echo $txtyearonly;?></div>
-								<div class='col-md-4' style="float: left;"></div>
+								<div class="row">
+									<div class='col-md-4'></div>
+									<div class='col-md-2' style="padding-top: 8px;"><center><?php echo $lbyear;?></center></div>
+									<div class='col-md-2'><?php echo $txtyearonly;?></div>
+									<div class='col-md-4'></div>
+								</div>
 							</div>
 						</div>
 						<div class='col-md-12' style="margin-top: 30px;">
-							<div class='col-md-5' style="float: left;"></div>
-							<div class='col-md-2' style="float: left;"><center><?php echo $button; ?></center></div>
-							<div class='col-md-5' style="float: left;"></div>
+							<div class="row">
+								<div class='col-md-5'></div>
+								<div class='col-md-2'><center><?php echo $button; ?></center></div>
+								<div class='col-md-5'></div>
+							</div>
 						</div>
 					</div>
 				</div>

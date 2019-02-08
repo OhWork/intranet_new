@@ -226,9 +226,11 @@
 									</div>
 								</div>
 								<div class='col-md-12' style="margin-top: 30px;">
-									<div class='col-md-5' style="float: left;"></div>
-									<div class='col-md-2' style="float: left;"><center><?php echo $button; ?></center></div>
-									<div class='col-md-5' style="float: left;"></div>
+									<div class="row">
+										<div class='col-md-5'></div>
+										<div class='col-md-2'><center><?php echo $button; ?></center></div>
+										<div class='col-md-5'></div>
+									</div>
 								</div>
 							</div>
 						</div>
