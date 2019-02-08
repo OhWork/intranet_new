@@ -338,6 +338,12 @@ a:hover {
 	margin-top:90px;
 }
 }
+.calen {
+	background-color:#e9ecef;
+	border: 1px solid #ced4da;
+	border-top-left-radius: none;
+	border-bottom-left-radius: none;
+}
 /*autocomplete CSS*/
 .autocomplete_list * {
 	font-size: 16px;
