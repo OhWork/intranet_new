@@ -60,22 +60,7 @@
 		$reguser_other = $_POST['reguser_other'] ;
 	}
 	$datenow = date("Y-m-d");
-    //Log
-/*
-		if(getenv('HTTP_X_FORWARDED_FOR')){
-            $ip = $_SERVER['HTTP_X_FORWARDED_FOR']; // IP proxy
-        }else{
-            $ip = $_SERVER['REMOTE_ADDR'];
-        }
-    $ipshow = gethostbyaddr($ip);
-    $log = $db->insert('log',array(
-	'log_system' => 'IP-tools',
-	'log_action' => 'Edit',
-	'log_action_date' => date("Y-m-d H:i"),
-	'log_action_by' => $_POST['log_user'],
-	'log_ip' => $ipshow
-	));
-*/
+         $status = "N";
 //	}else{
 	@$rs = $db->insert('reguser',array(
 	'reguser_name_th' => $_POST['reguser_name_th'],
@@ -98,6 +83,7 @@
     'reguser_other_detail' => $_POST['reguser_other_detail'],
     'reguser_sent_email' => $_POST['reguser_sent_email'],
     'reguser_reason_detail' => $_POST['reguser_reason_detail'],
+    'reguser_other' => $status,
 	'subzoo_subzoo_id' => $_POST['subzoo_subzoo_id'],
 	'subzoo_zoo_zoo_id' => $_POST['subzoo_zoo_zoo_id']
 	));
