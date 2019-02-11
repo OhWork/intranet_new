@@ -297,6 +297,10 @@
 			$this->sql = "SELECT * FROM $table1,$table2,$table3 WHERE $column1 = $value1 && $column2 = $value2 && $column3 = $value3 && $column4 = $value4";
 			return $this;
 		}
+                function findByPK34DESC($table1,$table2,$table3,$column1,$value1,$column2,$value2,$column3,$value3,$column4,$value4,$order){
+			$this->sql = "SELECT * FROM $table1,$table2,$table3 WHERE $column1 = $value1 && $column2 = $value2 && $column3 = $value3 && $column4 = $value4 ORDER BY $order DESC";
+			return $this;
+		}
 		function findByPK35($table1,$table2,$table3,$column1,$value1,$column2,$value2,$column3,$value3,$column4,$value4,$column5,$value5){
 			$this->sql = "SELECT * FROM $table1,$table2,$table3 WHERE $column1 = $value1 && $column2 = $value2 && $column3 = $value3 && $column4 = $value4 && $column5 = $value5";
 			return $this;

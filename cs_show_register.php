@@ -33,7 +33,7 @@
 		<div role="tabpanel" class="tab-pane fade show active inf1" role="tabpanel" id="zpo" style="padding-left:16;padding-right:16px;">
 		   <?php
 				$columns = array('reguser_name_th','reguser_date','subzoo_name');
-				$rs = $db->findByPK34DESC('reguser','subzoo','zoo','reguser.subzoo_subzoo_id','subzoo.subzoo_id','subzoo.zoo_zoo_id','zoo.zoo_id','zoo.zoo_type','1','reguser_status,'"N"')->execute();
+				$rs = $db->findByPK34DESC('reguser','subzoo','zoo','reguser.subzoo_subzoo_id','subzoo.subzoo_id','subzoo.zoo_zoo_id','zoo.zoo_id','zoo.zoo_type','1','reguser_status',"'N'",'reguser_date')->execute();
 				$grid = new gridView();
 				$grid->pr = 'reguser_id';
 				$grid->sts = 'reguser_status';
