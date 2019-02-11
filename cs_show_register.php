@@ -39,9 +39,7 @@
 				$grid->sts = 'reguser_status';
 				$grid->header = array('<b><center>ชื่อ-สกุล</center></b>','<b><center>วันและเวลา</center></b>','<b><center>สถานที่</center></b>','<b><center>ปัญหา</center></b>','<b><center>ชนิด</center></b>','<b><center>#</center></b>','<b><center>สถานะ</center></b>');
 				$grid->width = array('15%','10%','15%','20%','15%','10%','15%');
-				$grid->view = '#';
 				$grid->name = 'table';
-				$grid->viewtxt =' รายละเอียด';
 				$grid->change = '#';
 				$grid->renderFromDB($columns,$rs);
 	?>
