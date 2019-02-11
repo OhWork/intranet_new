@@ -216,8 +216,12 @@ if (isset($_GET['action']))
 				$path_foldercutpath = explode('/',$path_folder);
 				for($i= 0; $i<count($path_foldercutpath); $i++){
 			}
+			$rsselect = @$db->findByPK('folder','folder_name',"'$name'")->executeAssoc();
 			$countpath=$i-2;
-			if(count($path_foldercutpath) == 2){
+			if($rsselect['folder_name'] != ''){
+				echo "ชื่อโฟล์เดอร์ซ้ำ";
+			}
+			else if(count($path_foldercutpath) == 2){
 			$selectid = $db->findByPK('folder','folder_name',"'$path_foldercutpath[$countpath]'")->executeAssoc();
 
 				if(!empty($selectid)){

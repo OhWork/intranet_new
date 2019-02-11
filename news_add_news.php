@@ -81,10 +81,10 @@
 		<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12'><img src=""
 			<?php echo $lbheadnews; ?>
 		</div>
-		<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12'>
+		<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 test'>
 			<?php echo $txtheadnews; ?>
 		</div>
-		<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3'>
+		<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3 test'>
 			<?php echo $selecttypenews->selectFromTB('typeNews','typeNews_id','typeNews_name',$r['typeNews_typeNews_id']); ?>
 		</div>
 		<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3">
@@ -93,7 +93,7 @@
 					<?php echo $lbdatestart; ?>
 				</div>
 				<div class='date-form dayinbox col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8 form-horizontal control-group controls input-group'>
-					<div class='input-group date' id ="datetimepicker1">
+					<div class='input-group date test' id ="datetimepicker1">
 						<?php echo $txtdatestart; ?>
 					</div>
 				</div>
@@ -105,7 +105,7 @@
 					<?php echo $lbdateend; ?>
 				</div>
 				<div class='date-form dayinbox col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8 form-horizontal control-group controls input-group'>
-					<div class='input-group date' id ="datetimepicker2">
+					<div class='input-group date test' id ="datetimepicker2">
 						<?php echo $txtdateend; ?>
 					</div>
 				</div>
@@ -125,7 +125,7 @@
 		<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3">
 			<?php echo $lbtypeDesign; ?>
 		</div>
-		<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-2">
+		<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-2 test">
 			<?php echo $radiotypedesign; ?>
 		</div>
 		<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-1">
@@ -243,4 +243,25 @@
 	$('input[name=typeDesignnews_id]').slice(0).prop("disabled", true);
 	}
 */
+$("#form_reg").validate({
+		rules: {
+			newsdatestart: "required",
+			newsdateend: "required",
+			typeNews_typeNews_id: "required",
+			news_head: "required",
+
+		},
+		messages: {
+			newsdatestart:'*กรุณาเลือกวันที่เริ่ม*',
+			newsdateend:'*กรุณาเลือกวันที่สิ้นสุด*',
+			typeNews_typeNews_id:'*กรุณาเลือกประเภทของข่าวสาร*',
+			news_head:'กรุณากรอกหัวข้อข่าว*',
+
+		},
+				highlight: function ( element, errorClass, validClass ) {
+					$( element ).parents( ".test" ).addClass( "text-danger" ).removeClass( "text-success" );
+				},
+				unhighlight: function (element, errorClass, validClass) {
+					$( element ).parents( ".test" ).addClass( "text-success" ).removeClass( " text-danger" );
+				}	});
 </script>
