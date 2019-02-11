@@ -201,7 +201,7 @@
 			}
   		});
     }
-    navAnimate(1,6);
+    navAnimate(1,7);
 	navAnimate(2,4);
 	navAnimate(3,9);
 	navAnimate(4,9);

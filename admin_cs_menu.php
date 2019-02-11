@@ -160,5 +160,6 @@ if ($user_zoo == 10 || $user_zoo == 18) {
         <a class="nav-link edittext mucl" id="nav-14-animate-2" href="admin_index.php?url=cs_add_problemlist.php">จัดการรายการปัญหา (แจ้งซ่อม)</a>
         <a class="nav-link edittext mucl" id="nav-14-animate-3" href="admin_index.php?url=cs_add_typeworkupweb.php">จัดการระบบ (ร้องขอขึ้นเว็บ)</a>
     </ul>
+    <a class="nav-link collapsed py-1 edittext mucl" id="nav-1-animate-7" href="admin_index.php?url=cs_showregister.php">รายการขอคำร้องขอใช้ระบบ</a>
 </ul>
 <!-- end sub menu -->
