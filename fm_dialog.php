@@ -1386,6 +1386,26 @@ else{
 		if(isAndroid) {
 			$('li').draggable({ disabled: false });
 		}
+	function getDataFromDb(){
+				$.ajax({
+				url: "fm_execute.php?action=check_folder",
+				type: "POST",
+				data:  {folder_name: $('#folder_name').val()},
+				success: function(data) {
+					if(data != ''){
+						if($('#textshow').text() != ''){
+						}else{
+							$('#textshowalert').append( "<p id='textshow'>มีโฟลเดอร์นี้อยู่แล้วในระบบ</p>" ).addClass('text-danger');
+						}
+					$('.btn-primary').addClass('disabled');
+					}else{
+					$('#textshow').hide();
+					$('.btn-primary').removeClass('disabled');
+					}
+				}
+			});
+		}
+		setInterval(getDataFromDb, 10000);
 	</script>
 </body>
 </html>

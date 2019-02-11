@@ -1,6 +1,7 @@
 <?php
 	include 'database/db_tools.php';
 	include 'connect.php';
+	error_reporting(0);
 $config = include 'fm_config/fm_config.php';
 
 $date = date("Y-m-d");
@@ -15,11 +16,11 @@ if ($_SESSION['RF']["verify"] != "RESPONSIVEfilemanager")
 	exit;
 }
 
-if (strpos($_POST['path'],'/')===0
-	|| strpos($_POST['path'],'../')!==FALSE
-	|| strpos($_POST['path'],'./')===0
-	|| strpos($_POST['path'],'..\\')!==FALSE
-	|| strpos($_POST['path'],'.\\')===0)
+if (strpos(@$_POST['path'],'/')===0
+	|| strpos(@$_POST['path'],'../')!==FALSE
+	|| strpos(@$_POST['path'],'./')===0
+	|| strpos(@$_POST['path'],'..\\')!==FALSE
+	|| strpos(@$_POST['path'],'.\\')===0)
 {
 	response(trans('wrong path'.AddErrorLocation()))->send();
 	exit;
@@ -216,12 +217,8 @@ if (isset($_GET['action']))
 				$path_foldercutpath = explode('/',$path_folder);
 				for($i= 0; $i<count($path_foldercutpath); $i++){
 			}
-			$rsselect = @$db->findByPK('folder','folder_name',"'$name'")->executeAssoc();
 			$countpath=$i-2;
-			if($rsselect['folder_name'] != ''){
-				echo "ชื่อโฟล์เดอร์ซ้ำ";
-			}
-			else if(count($path_foldercutpath) == 2){
+			if(count($path_foldercutpath) == 2){
 			$selectid = $db->findByPK('folder','folder_name',"'$path_foldercutpath[$countpath]'")->executeAssoc();
 
 				if(!empty($selectid)){
@@ -636,6 +633,13 @@ if (isset($_GET['action']))
 		default:
 			response(trans('wrong action').AddErrorLocation())->send();
 			exit;
+			case 'check_folder' :
+			$namefolder = $_POST['folder_name'];
+			$rsselect = @$db->findByPK('folder','folder_name',"'$namefolder'")->executeAssoc();
+			if($rsselect['folder_name'] != ''){
+				echo "ชื่อโฟล์เดอร์ซ้ำ";
+			}
+			break;
 	}
 }
 ?>

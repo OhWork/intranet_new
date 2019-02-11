@@ -4398,7 +4398,7 @@ var bootbox = window.bootbox || (function(document, $) {
 
         // let's keep a reference to the form object for later
         var form = $("<form method='post'></form>");
-        form.append("<input class='input-block-level' name='folder_name' autocomplete=off type=text value='" + defaultVal + "' />");
+        form.append("<input class='input-block-level' id ='folder_name' name='folder_name' autocomplete=off type=text value='" + defaultVal + "' />");
 
         var cancelCallback = function() {
             if (typeof cb === 'function') {
@@ -4560,7 +4560,7 @@ var bootbox = window.bootbox || (function(document, $) {
         parts.push("<div class='modal-body'></div>");
 
         if (buttons) {
-            parts.push("<div class='modal-footer'>"+buttons+"</div>");
+            parts.push("<div class='modal-footer'><div id='textshowalert' style='float:left'></div>"+buttons+"</div>");
         }
 
         parts.push("</div>");
