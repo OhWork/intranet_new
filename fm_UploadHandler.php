@@ -1358,7 +1358,7 @@ class UploadHandler
 					$path_foldercutpath = explode('/',$cut_dir);
  					for($i= 0; $i<count($path_foldercutpath); $i++){
 					}
-// 					$countpath=$i-2;
+					$countpath=$i-2;
 					include 'connect.php';
 					print_r($countpath);
 // 					$selectid = $db->findByPK('folder','folder_name',"'$path_foldercutpath[$countpath]'")->executeAssoc();
