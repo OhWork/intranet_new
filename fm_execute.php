@@ -182,12 +182,12 @@ if (isset($_GET['action']))
 								for($i= 0; $i<count($path_foldercutpath); $i++){}
 								$countpath=$i-1;
 								$countpath2=$i-2;
-		/*						$selectid = $db->findByPK('folder','folder_name',"'$path_foldercutpath[$countpath2]'")->executeAssoc();
+								$selectid = $db->findByPK('folder','folder_name',"'$path_foldercutpath[$countpath2]'")->executeAssoc();
 								$rsdelete = $db->deletefolder('folder','folder_name',"'$path_foldercutpath[$countpath]'",'folder_position',$selectid['folder_id']);
 								if($rsdelete){
 									deleteDir($path);
 								}
-		*/
+
 						}
 						}
 						if ($fixed_image_creation)
@@ -217,10 +217,9 @@ if (isset($_GET['action']))
 				$path_foldercutpath = explode('/',$path_folder);
 				for($i= 0; $i<count($path_foldercutpath); $i++){
 			}
-			$countpath=$i-2;
-			print_r($path_foldercutpath);
+			$show_path = array_values((array_slice($path_foldercutpath, -2)));
 			if(count($path_foldercutpath) > 2){
-			$selectid = $db->findByPK('folder','folder_name',"'$path_foldercutpath[$countpath]'")->executeAssoc();
+			$selectid = $db->findByPK('folder','folder_name',"'$show_path[0]'")->executeAssoc();
 
 				if(!empty($selectid)){
 					$rs = $db->insert('folder',array(
