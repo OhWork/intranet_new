@@ -1380,6 +1380,7 @@ else{
 	</div>
 	<!-- player div end -->
 	<img id='aviary_img' src='' class="hide"/>
+	<input id="cur_dir" type="hidden" name="curdir" value="<?php echo $cur_dir; ?>">
 	<script>
 		var ua = navigator.userAgent.toLowerCase();
 		var isAndroid = ua.indexOf("android") > -1; //&& ua.indexOf("mobile");
@@ -1390,7 +1391,7 @@ else{
 				$.ajax({
 				url: "fm_execute.php?action=check_folder",
 				type: "POST",
-				data:  {folder_name: $('#folder_name').val()},
+				data:  {folder_name: $('#folder_name').val(),path : $('#cur_dir').val()},
 				success: function(data) {
 					if(data != ''){
 						if($('#textshow').text() != ''){

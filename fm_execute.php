@@ -636,7 +636,11 @@ if (isset($_GET['action']))
 			exit;
 			case 'check_folder' :
 			$namefolder = $_POST['folder_name'];
-			$rsselect = @$db->findByPK('folder','folder_name',"'$namefolder'")->executeAssoc();
+			$path_folder = substr($_POST['path'], 7);
+			$path_foldercutpath = explode('/',$path_folder);
+ 			$selectid = $db->findByPK('folder','folder_name',"'$path_foldercutpath[0]'")->executeAssoc();
+ 			$showid = $selectid['folder_id']
+			$rsselect = @$db->findByPK12('folder','folder_name',"'$namefolder'",'folder_position',$showid)->executeAssoc();
 			if($rsselect['folder_name'] != ''){
 				echo "ชื่อโฟล์เดอร์ซ้ำ";
 			}
