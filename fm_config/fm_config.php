@@ -427,7 +427,7 @@ $config = array(
 	'remember_text_filter'                    => false,
 
 );
-if(@$_SESSION ==''){
+if(@$_SESSION['subzoo_zoo_zoo_id'] ==''){
 	 $config['delete_files'] = false;
 	 $config['create_folders'] = false;
 	 $config['delete_folders'] = false;
