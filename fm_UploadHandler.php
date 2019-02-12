@@ -1361,7 +1361,7 @@ class UploadHandler
 					$countpath=$i-1;
 					include 'connect.php';
 					print_r($countpath);
-// 					$selectid = $db->findByPK('folder','folder_name',"'$path_foldercutpath[$countpath]'")->executeAssoc();
+					$selectid = $db->findByPK('folder','folder_name',"'$path_foldercutpath[$countpath]'")->executeAssoc();
  					$date = date("Y-m-d");
 					$rs = $db->insert('files',array(
 					'files_name' => $upload['name'][$index],
