@@ -218,8 +218,7 @@ if (isset($_GET['action']))
 				for($i= 0; $i<count($path_foldercutpath); $i++){
 			}
 			$show_path = array_values((array_slice($path_foldercutpath, -2)));
-			print_r($show_path);
-			if(count($path_foldercutpath) > 2){
+			if(count($path_foldercutpath) >= 2){
 			$selectid = $db->findByPK('folder','folder_name',"'$show_path[0]'")->executeAssoc();
 
 				if(!empty($selectid)){
