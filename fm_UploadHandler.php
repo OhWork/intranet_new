@@ -1356,12 +1356,9 @@ class UploadHandler
 					);
 					$cut_dir = substr($this->get_upload_path(),58);
 					$path_foldercutpath = explode('/',$cut_dir);
- 					for($i= 0; $i<count($path_foldercutpath); $i++){
-					}
-					$countpath=$i-1;
+					$show_path = array_values((array_slice($path_foldercutpath, -2)));
 					include 'connect.php';
-					print_r($countpath);
-					$selectid = $db->findByPK('folder','folder_name',"'$path_foldercutpath[$countpath]'")->executeAssoc();
+					$selectid = $db->findByPK('folder','folder_name',"'$show_path[0]'")->executeAssoc();
  					$date = date("Y-m-d");
 					$rs = $db->insert('files',array(
 					'files_name' => $upload['name'][$index],
