@@ -1387,6 +1387,7 @@ else{
 		if(isAndroid) {
 			$('li').draggable({ disabled: false });
 		}
+		$('#textshow').hide();
 	function getDataFromDb(){
 				$.ajax({
 				url: "fm_execute.php?action=check_folder",
@@ -1394,10 +1395,13 @@ else{
 				data:  {folder_name: $('#folder_name').val(),path : $('#cur_dir').val()},
 				success: function(data) {
 					if(data != ''){
+						$('#textshow').show();
+/*
 						if($('#textshow').text() != ''){
 						}else{
-							$('#textshowalert').append( "<p id='textshow'>มีโฟลเดอร์นี้อยู่แล้วในระบบ</p>" ).addClass('text-danger');
+// 							$('#textshowalert').append( "<p id='textshow'>มีโฟลเดอร์นี้อยู่แล้วในระบบ</p>" ).addClass('text-danger');
 						}
+*/
 					$('.btn-primary').addClass('disabled');
 					}else{
 					$('#textshow').hide();

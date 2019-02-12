@@ -635,10 +635,11 @@ if (isset($_GET['action']))
 			response(trans('wrong action').AddErrorLocation())->send();
 			exit;
 			case 'check_folder' :
-			$namefolder = $_POST['folder_name'];
+			$namefolder = @$_POST['folder_name'];
 			$path_folder = substr($_POST['path'], 7);
 			$path_foldercutpath = explode('/',$path_folder);
- 			$selectid = $db->findByPK('folder','folder_name',"'$path_foldercutpath[0]'")->executeAssoc();
+			$show_path = array_values((array_slice($path_foldercutpath, -2)));
+ 			$selectid = $db->findByPK('folder','folder_name',"'$show_path[0]'")->executeAssoc();
  			$showid = $selectid['folder_id'];
 			$rsselect = @$db->findByPK12('folder','folder_name',"'$namefolder'",'folder_position',$showid)->executeAssoc();
 			if($rsselect['folder_name'] != ''){

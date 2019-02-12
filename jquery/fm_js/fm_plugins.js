@@ -4560,7 +4560,7 @@ var bootbox = window.bootbox || (function(document, $) {
         parts.push("<div class='modal-body'></div>");
 
         if (buttons) {
-            parts.push("<div class='modal-footer'><div id='textshowalert' style='float:left'></div>"+buttons+"</div>");
+            parts.push("<div class='modal-footer'><div id='textshowalert' class='text-danger' style='float:left;'><p id='textshow'>มีโฟลเดอร์นี้อยู่แล้วในระบบ</p></div>"+buttons+"</div>");
         }
 
         parts.push("</div>");
