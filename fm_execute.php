@@ -1,7 +1,7 @@
 <?php
 	include 'database/db_tools.php';
 	include 'connect.php';
-	error_reporting(0);
+// 	error_reporting(0);
 $config = include 'fm_config/fm_config.php';
 
 $date = date("Y-m-d");
@@ -45,7 +45,7 @@ else
 $ftp = ftp_con($config);
 
 $base = $current_path;
-$path = $base.$_POST['path'];
+@$path = $base.$_POST['path'];
 $cycle = TRUE;
 $max_cycles = 50;
 $i = 0;
@@ -62,8 +62,8 @@ while($cycle && $i<$max_cycles)
 	$path = fix_dirname($path)."/";
 }
 
-$path = $current_path.$_POST['path'];
-$path_thumb = $thumbs_base_path.$_POST['path'];
+@$path = $current_path.$_POST['path'];
+@$path_thumb = $thumbs_base_path.$_POST['path'];
 
 if($ftp){
 	$path = $ftp_base_folder.$upload_dir.$_POST['path'];
@@ -218,7 +218,8 @@ if (isset($_GET['action']))
 				for($i= 0; $i<count($path_foldercutpath); $i++){
 			}
 			$countpath=$i-2;
-			if(count($path_foldercutpath) == 2){
+			print_r($path_foldercutpath);
+			if(count($path_foldercutpath) > 2){
 			$selectid = $db->findByPK('folder','folder_name',"'$path_foldercutpath[$countpath]'")->executeAssoc();
 
 				if(!empty($selectid)){
