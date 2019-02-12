@@ -1405,7 +1405,7 @@ else{
 				}
 			});
 		}
-		setInterval(getDataFromDb, 10000);
+		setInterval(getDataFromDb, 1000);
 	</script>
 </body>
 </html>
