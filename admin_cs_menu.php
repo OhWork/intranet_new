@@ -111,42 +111,42 @@ if ($user_zoo == 10 || $user_zoo == 16) {
         <a class="nav-link collapsed py-1 nav-link-13 edittext mucl" id="nav-11-animate-3" href="#csreportip" data-toggle="collapse" data-target="#csreportip">รายงานสรุปไอพีที่ใช้<span data-feather="chevron-right"></span></a>
         <ul class="sub-menu collapse mmpd2" id="csreportip">
             <?php if ($user_zoo == 10) { ?>
-                <a class="dropdown-item edittext mucl" id="nav-13-animate-1" href="admin_index.php?url=cs_totalservicemonthzpo.php">องค์การสวนสัตว์</a>
+                <a class="dropdown-item edittext mucl" id="nav-13-animate-1" href="admin_index.php?url=cs_report_ip.php&id=1">องค์การสวนสัตว์</a>
             <?php
             }
             if ($user_zoo == 10 || $user_zoo == 11) {
                 ?>
-                <a class="dropdown-item edittext mucl" id="nav-13-animate-2" href="admin_index.php?url=cs_totalservicemonthzoo.php&zoo=11">สวนสัตว์ดุสิต</a>
+                <a class="dropdown-item edittext mucl" id="nav-13-animate-2" href="admin_index.php?url=cs_report_ip.php&id=11">สวนสัตว์ดุสิต</a>
             <?php
             }
             if ($user_zoo == 10 || $user_zoo == 12) {
                 ?>
-                <a class="dropdown-item edittext mucl" id="nav-13-animate-3" href="admin_index.php?url=cs_totalservicemonthzoo.php&zoo=12">สวนสัตว์เปิดเขาเขียว</a>
+                <a class="dropdown-item edittext mucl" id="nav-13-animate-3" href="admin_index.php?url=cs_report_ip.php&id=12">สวนสัตว์เปิดเขาเขียว</a>
             <?php
             }
             if ($user_zoo == 10 || $user_zoo == 13) {
                 ?>
-                <a class="dropdown-item edittext mucl" id="nav-13-animate-4" href="admin_index.php?url=cs_totalservicemonthzoo.php&zoo=13">สวนสัตว์เชียงใหม่</a>
+                <a class="dropdown-item edittext mucl" id="nav-13-animate-4" href="admin_index.php?url=cs_report_ip.php&id=13">สวนสัตว์เชียงใหม่</a>
             <?php
             }
             if ($user_zoo == 10 || $user_zoo == 14) {
                 ?>
-                <a class="dropdown-item edittext mucl" id="nav-13-animate-5" href="admin_index.php?url=cs_totalservicemonthzoo.php&zoo=14">สวนสัตว์นครราชสีมา</a>
+                <a class="dropdown-item edittext mucl" id="nav-13-animate-5" href="admin_index.php?url=cs_report_ip.php&id=14">สวนสัตว์นครราชสีมา</a>
 <?php
 }
 if ($user_zoo == 10 || $user_zoo == 15) {
     ?>
-                <a class="dropdown-item edittext mucl" id="nav-13-animate-6" href="admin_index.php?url=cs_totalservicemonthzoo.php&zoo=15">สวนสัตว์สงขลา</a>
+                <a class="dropdown-item edittext mucl" id="nav-13-animate-6" href="admin_index.php?url=cs_report_ip.php&id=15">สวนสัตว์สงขลา</a>
 <?php
 }
 if ($user_zoo == 10 || $user_zoo == 16) {
     ?>
-                <a class="dropdown-item edittext mucl" id="nav-13-animate-7" href="admin_index.php?url=cs_totalservicemonthzoo.php&zoo=16">สวนสัตว์อุบลราชธานี</a>
+                <a class="dropdown-item edittext mucl" id="nav-13-animate-7" href="admin_index.php?url=cs_report_ip.php&id=16">สวนสัตว์อุบลราชธานี</a>
 <?php
 }
 if ($user_zoo == 10 || $user_zoo == 17) {
     ?>
-                <a class="dropdown-item edittext mucl" id="nav-13-animate-8" href="admin_index.php?url=cs_totalservicemonthzoo.php&zoo=17">สวนสัตว์ขอนแก่น</a>
+                <a class="dropdown-item edittext mucl" id="nav-13-animate-8" href="admin_index.php?url=cs_report_ip.php&id=17">สวนสัตว์ขอนแก่น</a>
 <?php
 }
 if ($user_zoo == 10 || $user_zoo == 18) {
