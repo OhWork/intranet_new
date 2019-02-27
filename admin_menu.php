@@ -191,8 +191,8 @@
 				myLoop();
 			}else if(nav_status == 1){
 				for(var i = 1;i <= menusum;i++){
-					document.getElementById("nav-"+menuid+"-animate-"+i).style.visibility = "hidden";
 					document.getElementById("nav-"+menuid+"-animate-"+i).classList.remove("animat-test");
+					document.getElementById("nav-"+menuid+"-animate-"+i).style.visibility = "hidden";
 				}
 				nav_status = 0;
 			}
