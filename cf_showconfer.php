@@ -3,7 +3,7 @@
     if (!empty($_SESSION['user_name'])):
    	$form = new form();
    	$lbdevision = new label('สวน : ');
-	$buttonok = new buttonok("บันทึก","","btn btn-success btn-lg btn-block","");
+	$buttonok = new buttonok("ค้นหา","","btn btn-success btn-lg btn-block","");
 ?>
 <script>
 $(document).ready(function() {
@@ -20,11 +20,14 @@ $(document).ready(function() {
     } );
 } );
 </script>
+
 <?php echo $form->open("","frmMain","col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10","",""); ?>
 <div class='col-md-12' style="margin-top:8px;">
 					<div class="row">
-						<div class='col-md-3 statustext'><?php echo $lbdevision ?></div>
-						<div class='col-md-7'>
+						<div class="col-md-2" style="float: left;"><a href="admin_index.php?url=cf_addconfer.php" class="btn btn-success">เพิ่มห้องประชุม</a>
+                </div>
+						<div class='col-md-2 statustext'><?php echo $lbdevision ?></div>
+						<div class='col-md-6'>
 								<select class='form-control' id="ddlZoo" name="subzoo_zoo_zoo_id" onchange = "ListSubzoo(this.value)">
 									<option selected value="">โปรดระบุ</option>
 										<?php $rs = $db->findAllASC('zoo','zoo_no')->execute();
