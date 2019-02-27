@@ -1,4 +1,4 @@
-<a class="nav-link collapsed nav-link-1 edittext mucl" href="#cs" data-toggle="collapse" data-target="#cs"><span data-feather="cpu"></span>ระบบแจ้งซ่อมคอมพิวเตอร์</a>
+<a class="nav-link collapsed nav-link-1 edittext mucl" id="nav-26-animate-7" href="#cs" data-toggle="collapse" data-target="#cs"><span data-feather="cpu"></span>ระบบแจ้งซ่อมคอมพิวเตอร์</a>
 <!-- sub menu -->
 <ul class="sub-menu collapse on-sub mmpd" id="cs">
     <a class="nav-link collapsedv nav-link-15 edittext mucl" id="nav-1-animate-1" href="#cscase" data-toggle="collapse" data-target="#cscase">รายการดำเนินการ<span data-feather="chevron-right"></span></a>

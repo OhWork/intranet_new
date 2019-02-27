@@ -222,5 +222,13 @@
 	navAnimate(22,7);
 	navAnimate(23,2);
 	navAnimate(24,2);
+	navAnimate(25,4);
+	navAnimate(26,7);
+	navAnimate(27,2);
+	navAnimate(28,2);
+	navAnimate(29,2);
+	navAnimate(30,1);
+	navAnimate(31,2);
+	navAnimate(32,7);
   	</script>
 

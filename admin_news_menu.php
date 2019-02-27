@@ -1,4 +1,4 @@
-                <a class="nav-link collapsed nav-link-23 edittext mucl" href="#new" data-toggle="collapse" data-target="#new">
+                <a class="nav-link collapsed nav-link-23 edittext mucl" id="nav-29-animate-2" href="#new" data-toggle="collapse" data-target="#new">
                   <span data-feather="file-text"></span>
                   ระบบข่าวสาร
                 </a>
