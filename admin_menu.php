@@ -126,19 +126,18 @@
     var nav_status;
     $('.nav-link').on('click',function(e){
 		var checkde = e.currentTarget;
-		var idmenushow = e.target.dataset.target;
-		var cutidmenu = idmenushow.substring(1);
-		var idmenu = document.getElementById(cutidmenu);
 		if (checkde.getAttribute('aria-expanded') != 'true') {
-			console.log('if 1');
+			var idmenushow = checkde.dataset.target;
+			var cutidmenu = idmenushow.substring(1);
+			console.log(cutidmenu);
+			var idmenu = document.getElementById(cutidmenu);
 			$('.nav-link').attr( 'aria-expanded','false');
 			if($('.sub-menu').hasClass("show")){
-				console.log('if 2');
 			 $('.sub-menu').addClass("animat-out");
 				if($('.sub-menu').hasClass("animat-out")){
-					console.log('if3');
 						setTimeout(function(){
 							if(!idmenu.classList.contains('show')){
+								console.log('if show');
 								$( ".sub-menu" ).not(idmenu).removeClass('show');
 								idmenu.parentNode.classList.add("show");
 						        idmenu.parentNode.classList.remove("animat-out");
@@ -157,7 +156,6 @@
 				}
 		    }
 		    else{
-			    console.log('else di wa');
 			    idmenu.classList.remove('animat-out');
 		    }
 		    nav_status = 0 ;
@@ -169,7 +167,8 @@
 		var menusum  = sub;
 		var menuid = id;
 		$('.nav-link-'+menuid).on('click',function(event){
-			var targetmenu = event.target.dataset.target;
+			var checktarget = event.currentTarget;
+			var targetmenu = checktarget.dataset.target;
 			var cuttarrgetmenu = targetmenu.substring(1);
 			var submenu = document.getElementById(cuttarrgetmenu);
 			if(nav_status == 0){

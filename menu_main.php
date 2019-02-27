@@ -62,7 +62,7 @@
 	var nav_status;
     $('.nav-link').on('click',function(e){
 		var checkde = e.currentTarget;
-		var idmenushow = e.target.dataset.target;
+		var idmenushow = checkde.dataset.target;
 		var cutidmenu = idmenushow.substring(1);
 		var idmenu = document.getElementById(cutidmenu);
 		if (checkde.getAttribute('aria-expanded') != 'true') {
@@ -98,7 +98,8 @@
 		var menuid = id;
 
 		$('.nav-link-'+menuid).on('click',function(event){
-			var targetmenu = event.target.dataset.target;
+			var checktarget = event.currentTarget;
+			var targetmenu = checktarget.dataset.target;
 			var cuttarrgetmenu = targetmenu.substring(1);
 			var submenu = document.getElementById(cuttarrgetmenu);
 
