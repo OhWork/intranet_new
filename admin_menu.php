@@ -129,7 +129,6 @@
 		if (checkde.getAttribute('aria-expanded') != 'true') {
 			var idmenushow = checkde.dataset.target;
 			var cutidmenu = idmenushow.substring(1);
-			console.log(cutidmenu);
 			var idmenu = document.getElementById(cutidmenu);
 			$('.nav-link').attr( 'aria-expanded','false');
 			if($('.sub-menu').hasClass("show")){
@@ -137,7 +136,6 @@
 				if($('.sub-menu').hasClass("animat-out")){
 						setTimeout(function(){
 							if(!idmenu.classList.contains('show')){
-								console.log('if show');
 								$( ".sub-menu" ).not(idmenu).removeClass('show');
 								idmenu.parentNode.classList.add("show");
 						        idmenu.parentNode.classList.remove("animat-out");
