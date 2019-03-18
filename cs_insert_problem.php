@@ -58,7 +58,7 @@
     	}else if($rsfix){
             echo "<div class='statusok'>แก้ไขสำเร็จ</div>";
         }
-            $link = "cs_index.php?url=cs_add_problem.php";
+            $link = "index.php?url=cs_add_problem.php";
             header( "Refresh: 2; $link" );
 }
 ?>

@@ -13,7 +13,7 @@
     	$radiotypeNewsenable->add('ไม่สามารถใช้งานได้',0,'checked');
     	}
   $submit = new buttonok("ยืนยัน","","btn btn-success col-md-12","");
-  
+
   if(!empty($_GET['id'])){
 	$r = $db->findByPK('typeNews','typeNews_id',$id)->executeRow();
 	$txttypeNews->value = $r['typeNews_name'];
@@ -26,7 +26,7 @@
         $radiotypeNewsenable->add('ไม่สามารถใช้งานได้',0,'checked');
     	}
     }
-echo $form->open("form_reg","form","col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","news_insert_typeNews.php",""); ?>
+echo $form->open("form_reg","form","col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","news_insert_typenews.php",""); ?>
 <div class="row">
 	<div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3"></div>
 	<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6 usubd">

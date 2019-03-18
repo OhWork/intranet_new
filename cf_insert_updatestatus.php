@@ -37,7 +37,7 @@
     	}else if($rsfix){
             echo "<div class='statusok'>แก้ไขสำเร็จ</div>";
         }
-            $link = "admin_index.php?url=cf_summary.php";
+            $link = "admin_index.php";
             header( "Refresh: 2; $link" );
 }
 ?>
