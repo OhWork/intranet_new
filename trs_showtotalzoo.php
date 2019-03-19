@@ -27,7 +27,7 @@
     $lbmonth = new label('เดือน');
     $lbday = new label('วันที่');
     $lbday = new label('ปี');
-    $txtday = new textfieldcalendarreadonly('date','date-picker-1','','date-picker form-control datetimepicker','input-group-addon','date-picker-1');
+    $txtday = new textfieldcalendarreadonly('date','date-picker-1','','date-picker form-control datetimepicker','input-group-addon btn calen','date-picker-1');
     $selectmonth = new selectMenu();
     $selectmonth->name = "month";
     $selectmonth->addItem('เลือก','');

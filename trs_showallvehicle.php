@@ -155,7 +155,7 @@
 							<div id="searchdaySettings">
 								<div class="row">
 									<div class='col-md-3'></div>
-									<div class="date-form dayinbox col-md-6"
+									<div class="date-form dayinbox col-md-6">
 										<div class="form-horizontal">
 											<div class="control-group">
 												<div class="controls">
