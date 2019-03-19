@@ -132,7 +132,7 @@
 								<div class="col-3"></div>
 								<div class="col-6">
 									<div class="row">
-										<div class="btn-group col-12" data-toggle="buttons">
+										<div class="btn-group btn-group-toggle col-12" data-toggle="buttons">
 											<label class="btn btn-success active col-6">
 												<input type="radio" name="problem_status" value="Y" onchange="swapConfig(this)" id="complete" autocomplete="off" checked> ดำเนินเสร็จสิ้นแล้ว
 											</label>

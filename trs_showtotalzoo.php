@@ -45,19 +45,25 @@
     $selectmonth->addItem('ธันวาคม','12');
     $txtyear = new textfield('year','','form-control css-require','','');
 	$button = new buttonok('ค้นหา','','btn btn-primary stzbutton','submit');
-	echo $form->open('','','','','');
+	echo $form->open('','','col-12','','');
 ?>
 <div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 printdisplaynone' style="margin-top:16px;">
     <div class='row'>
 		<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12' style="margin-top: 10px;">
-			<h4>รายงานจำนวนผู้เข้าชม <?php echo @$zoo_name ?></h4>
+			<div class='row'>
+				<div class='col-xl-2 col-lg-2'></div>
+				<div class='col-xl-8 col-lg-8 col-md-12 col-sm-12 col-12'>
+					<h4>รายงานจำนวนผู้เข้าชม <?php echo @$zoo_name ?></h4>
+				</div>
+				<div class='col-xl-2 col-lg-2'></div>
+			</div>
 		</div>
         <div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12'>
             <div class='row'>
                 <div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12'>
 					<div class='row'>
 						<div class='col-md-3'></div>
-						<div class='btn-group col-md-6' data-toggle='buttons' style="margin-top: 20px;">
+						<div class='btn-group btn-group-toggle col-md-6' data-toggle='buttons' style="margin-top: 20px;">
 							<label class="btn btn-success active" style="width:50%">
 								<input type="radio" name="search" value="1" onChange="swapConfig(this)" id="searchday" autocomplete="off" checked>วัน
 							</label>
@@ -70,34 +76,39 @@
 				</div>
                 <div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12' style="margin-top: 20px;">
                     <div id="searchdaySettings">
-                        <div class='col-md-4' style="float:left;"></div>
-             			<div class="date-form dayinbox col-md-4 form-horizontal control-group controls" style="float:left;">
-                            <div class="input-group"><?php echo $txtday;?></div>
-                        </div>
-                        <div class='col-md-4' style="float:left;"></div>
+						<div class='row'>
+							<div class='col-md-4' style="float:left;"></div>
+							<div class="date-form dayinbox col-md-4 form-horizontal control-group controls" style="float:left;">
+								<div class="input-group"><?php echo $txtday;?></div>
+							</div>
+							<div class='col-md-4' style="float:left;"></div>
+						</div>
 					</div>
                     <div id="searchmonthSettings" style="display:none;">
-                        <div class='col-md-2' style="float:left;"></div>
-                        <div class='col-md-8' style="float:left;">
-                            <div class='row'>
-                                <div class='col-md-2'></div>
-                                <div class='col-md-1' style="padding-top:8px;">
-                                    <?php echo $lbmonth;?>
-                                </div>
-                                <div class='col-md-3'>
-                                    <?php echo $selectmonth;?>
-                                </div>
-                                <div class='col-md-2' style="padding-top:8px;">
-                                    <?php echo $lbyear;?>
-                                </div>
-                                <div class='col-md-2'>
-                                    <?php echo $txtyear;?>
-                                </div>
-                                <div class='col-md-2'></div>
-                            </div>
-                        </div>
-                        <div class='col-md-2' style="float:left;"></div>
+						<div class='row'>
+							<div class='col-md-2' style="float:left;"></div>
+							<div class='col-md-8' style="float:left;">
+								<div class='row'>
+									<div class='col-md-2'></div>
+									<div class='col-md-1' style="padding-top:8px;">
+										<?php echo $lbmonth;?>
+									</div>
+									<div class='col-md-3'>
+										<?php echo $selectmonth;?>
+									</div>
+									<div class='col-md-2' style="padding-top:8px;">
+										<?php echo $lbyear;?>
+									</div>
+									<div class='col-md-2'>
+										<?php echo $txtyear;?>
+									</div>
+									<div class='col-md-2'></div>
+								</div>
+							</div>
+							<div class='col-md-2' style="float:left;"></div>
+						</div>
                     </div>
+					</div>
                 </div>
             </div>
 		</div>
