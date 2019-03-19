@@ -18,10 +18,10 @@
 		$data['typeNews_no'] = $_POST['typeNews_no'];
 		$data['typeNews_enable'] = $_POST['typeNews_enable'];
 
-		$rsfix = $db->update('typeNews',$data,'typeNews_id',$_POST['typeNews_id']);
+		$rsfix = $db->update('typenews',$data,'typeNews_id',$_POST['typeNews_id']);
 
 	}else{
-	$rs = $db->insert('typeNews',array(
+	$rs = $db->insert('typenews',array(
 	'typeNews_name' => $_POST['typeNews_name'],
 	'typeNews_no' => $_POST['typeNews_no'],
 	'typeNews_enable' => $_POST['typeNews_enable']

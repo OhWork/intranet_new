@@ -38,7 +38,7 @@
 			<?php echo $txtheadnews; ?>
 		</div>
 		<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3'>
-			<?php echo $selecttypenews->selectFromTB('typeNews','typeNews_id','typeNews_name',$r['typeNews_typeNews_id']); ?>
+			<?php echo $selecttypenews->selectFromTB('typenews','typeNews_id','typeNews_name',$r['typeNews_typeNews_id']); ?>
 		</div>
 		<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3">
 			<div class="row">

@@ -35,7 +35,7 @@ echo $form->open('form_reg','myform','col-xl-12 col-lg-12 col-md-12 col-sm-12 co
 				</div>
             </div>
             <div class="col-12 mt-3">
-				<?php $rs = $db->findAll('typeNews')->execute();
+				<?php $rs = $db->findAll('typenews')->execute();
 					$grid = new gridView();
 					$grid->pr = 'typeNews_id';
 					$grid->header = array('<b><center>ชนิดข่าวสาร</center></b>','<b><center>ลำดับ</center></b>','<b><center>#</center></b>');
@@ -49,5 +49,5 @@ echo $form->open('form_reg','myform','col-xl-12 col-lg-12 col-md-12 col-sm-12 co
 		</div>
 		<div class='col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1'></div>
 	</div>
-<?php echo $form->close(); 
+<?php echo $form->close();
 	endif; ?>

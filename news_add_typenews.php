@@ -15,7 +15,7 @@
   $submit = new buttonok("ยืนยัน","","btn btn-success col-md-12","");
 
   if(!empty($_GET['id'])){
-	$r = $db->findByPK('typeNews','typeNews_id',$id)->executeRow();
+	$r = $db->findByPK('typenews','typeNews_id',$id)->executeRow();
 	$txttypeNews->value = $r['typeNews_name'];
 	$txttypeNewsno->value = $r['typeNews_no'];
   if($r["typeNews_enable"] == 1){
