@@ -26,12 +26,17 @@
     }
     if (!empty($_SESSION['user_name'])):
     $columns = array('ipzpo_address','ipzpo_user','subzoo_name','zoo_name');
-    $row = "<div class='row'>";
-    $rowend = "</div>";
     $form = new form();
     $rs = $db->findByPK34ASC('ipzpo','subzoo','zoo','ipzpo.subzoo_subzoo_id','subzoo.subzoo_id','subzoo.zoo_zoo_id','zoo.zoo_id','status_status_id',1,$type,$id,'ipzpo_id')->execute();   
-            echo "<div class='col-md-12'>"."<h2>IP-address ของ ".$zoo_name."</h2>".$rowend;
-
+    ?>
+	<div class='col-md-1'></div>
+	<div class='col-md-10'>
+		<div class='row'>
+			<div class='col-md-12 mt-3'>
+				<h2>IP-address ของ  <?php echo $zoo_name; ?></h2>
+			</div>
+			<div class='col-md-12'>
+			<?php	
 			$grid = new gridView();
 			$grid->pr = 'ipzpo_id';
 			$grid->header = array('<b><center>IP-Address</center></b>','<b><center>Name/System</center></b>','<b><center>ฝ่าย</center></b>','<b><center>สังกัด</center></b>');
@@ -41,4 +46,8 @@
 // 			$grid->edittxt ='แก้ไข';
 			$grid->renderFromDB($columns,$rs);
 			endif;
-		?>
+			?>
+			</div>
+		</div>
+	</div>
+	<div class='col-md-1'></div>

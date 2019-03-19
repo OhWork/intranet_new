@@ -4,7 +4,7 @@
         $lbname = new label("เพิ่ม :");
         $txtname = new textfield('typetools_name','','form-control','');
         $button = new buttonok('บันทึก','','btn btn-success col-md-12','');
-        echo $form->open('','','typetoolbox','cs_insert_typetools.php',''); ?>
+        echo $form->open('','','typetoolbox col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3','cs_insert_typetools.php',''); ?>
 <div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12'>
 	<div class='row'>
 		<div class='col-xl-3 col-lg-3 col-md-2 col-sm-3 col-2'></div>

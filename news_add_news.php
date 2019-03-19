@@ -11,8 +11,8 @@
     $selecttypenews->name = 'typeNews_typeNews_id';
     $selecttypenews->lists = 'โปรดระบุ ชนิดของข่าวสาร';
     $filepic = new inputFile('news_cover','','cover_new');
-    $txtdatestart = new textfieldcalendarreadonly('newsdatestart','datetimepicker1','','form-control','input-group-addon','datetimepicker1');
-    $txtdateend = new textfieldcalendarreadonly('newsdateend','datetimepicker2','','form-control','input-group-addon','datetimepicker2');
+    $txtdatestart = new textfieldcalendarreadonly('newsdatestart','datetimepicker1','','form-control','input-group-addon btn calen','datetimepicker1');
+    $txtdateend = new textfieldcalendarreadonly('newsdateend','datetimepicker2','','form-control','input-group-addon btn calen','datetimepicker2');
     $txtheadnews = new textfield('news_head','','form-control','','');
     $txtdetailnews = new textfield('news_detail','','form-control','','');
     $radiotypedesign = new radioGroup();
@@ -78,8 +78,8 @@
 <div class='col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3'></div>
 <div class='col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6' style="padding-top:16px;background-color:#ffffff;border:solid 1px #E0E0E0;border-radius:7px;">
 	<div class='row'>
-		<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12'><img src=""
-			<?php echo $lbheadnews; ?>
+		<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12'>
+			<h4><?php echo $lbheadnews; ?></h4>
 		</div>
 		<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 test'>
 			<?php echo $txtheadnews; ?>

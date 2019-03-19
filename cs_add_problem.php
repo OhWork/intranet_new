@@ -255,7 +255,7 @@
 							<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 form-group input-group date test'>
 								<div class='input-group date' id='datetimepicker1'>
 									<input type='text' class="form-control" name="problem_date"  id='date1' readonly/>
-									<span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+									<span class="input-group-addon btn calen"><span class="glyphicon glyphicon-calendar"></span></span>
 								</div>
 							</div>
 							<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
