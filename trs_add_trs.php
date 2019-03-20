@@ -31,6 +31,8 @@
     $lbcar = new label('รถยนต์');
     $lbmtc = new label('จักรยานยนต์');
     $txtday = new textfieldcalendarreadonly('touristreport_date','datepicker','','date-picker form-control','input-group-addon','datepicker');
+    $txtday = new datetimepicker('touristreport_date','datepicker','','form-control datetimepicker-input','date-form dayinbox col-md-12 form-horizontal control-group controls input-group','input-group date','datepicker','#datepicker','');
+
     $year = date("Y");
     $md = date("m-d");
 //     $txtday->value = date("Y-m-d");
@@ -106,7 +108,7 @@
     $txtsafarichild1 = new textfield('touristreport_safari_child_ch','','form-control css-require','','');
     $txtsafarichild1->value = 0;
     $txtsafarichild1->functions ="onkeypress='CheckNum()' onClick='this.setSelectionRange(0, this.value.length)'";
-    
+
     $txtbus = new textfield('touristreport_vehicle_bus','','form-control css-require','','');
     $txtbus->value = 0;
     $txtbus->functions ="onkeypress='CheckNum()' onClick='this.setSelectionRange(0, this.value.length)'";
@@ -184,7 +186,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>	
+                        </div>
                     </div>
 					</div>
 			<div id="msg" class="col-md-12 form-group" style="text-align:center;padding-top:10px;"></div>
@@ -333,7 +335,7 @@
 	$(document).ready(function() {
     var datefix = $('#trs_date').val();
     if(datefix){
-	
+
     }else{
         $("#msg").html();
     $("#btnSubmit").attr("disabled", true);

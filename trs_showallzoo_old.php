@@ -35,9 +35,9 @@
     $txtyearonly = new textfield('yearonly','','form-control css-require','','');
     $txtyearqua = new textfield('yearqua','','form-control css-require','','');
     $txtyearmonth = new textfield('yearmonth','','form-control css-require','','');
-    $textday = new textfieldcalendarreadonly('date','date-picker-1','','date-picker form-control trsdaybox datetimepicker','input-group-addon btn calen','date-picker-1');
-    $texttwoday = new textfieldcalendarreadonly('date2_1','date-picker-2','','date-picker form-control datetimepicker','input-group-addon btn calen','date-picker-2');
-    $texttwoday2 = new textfieldcalendarreadonly('date2_2','date-picker-3','','date-picker form-control datetimepicker','input-group-addon btn calen','date-picker-3');
+     $textday = new datetimepicker('date','date','','form-control datetimepicker-input','date-form dayinbox col-md-12 form-horizontal control-group controls input-group','input-group date','datetimepicker1','#datetimepicker1','');
+    $texttwoday = new datetimepicker('date2_1','date2_1','','form-control datetimepicker-input','date-form dayinbox col-md-12 form-horizontal control-group controls input-group','input-group date','datepicker2','#datepicker2','');
+    $texttwoday2 = new datetimepicker('date2_2','date2_2','','form-control datetimepicker-input','date-form dayinbox col-md-12 form-horizontal control-group controls input-group','input-group date','datepicker3','#datepicker3','');
     $txtyear = new textfield('year','','form-control css-require','','');
     $selectmonth = new selectMenu();
     $selectmonth->name = "month";
@@ -535,7 +535,7 @@
 };
 */
 $( function() {
-   	$('.datetimepicker').datetimepicker({
+   	$('.date').datetimepicker({
 		 format: 'YYYY-MM-DD',
 		 minDate: '2016-10-01',
  		 maxDate: '2017-9-30',

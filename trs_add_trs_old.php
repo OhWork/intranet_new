@@ -24,6 +24,8 @@
 	$lbspecialpj = new label('โครงการพิเศษ');
     $lbtime = new label('วันที่และเวลาแจ้ง');
     $txtday = new textfieldcalendarreadonly('touristreport_date','datepicker','','date-picker form-control','input-group-addon btn calen','datepicker');
+    $txtdatestart = new datetimepicker('touristreport_date','datepicker','','form-control datetimepicker-input','date-form dayinbox col-md-12 form-horizontal control-group controls input-group','input-group date','datetimepicker1','#datetimepicker1','');
+
     $year = date("Y");
     $md = date("m-d");
     $txtday->value = date("Y-m-d");
@@ -97,7 +99,7 @@
 	$txtsafariadult1->value = $r['touristreport_safari_adult_ch'];
 	$txtsafariadult0->value = $r['touristreport_safari_adult_free'];
 	$txtsafarichild1->value = $r['touristreport_safari_child_ch'];
-	$txtsafarichild0->value = $r['touristreport_safari_child_free'];	
+	$txtsafarichild0->value = $r['touristreport_safari_child_free'];
 	$txtsafariforeignerchild->value = $r['touristreport_safari_foreigner_child'];
 	$txtsafariforeigneradult->value = $r['touristreport_safari_foreigner_adult'];
 	}
@@ -128,7 +130,7 @@
                                 </div>
                             </div>
                        </div>
- 			      </div><div class'row' style='margin:10 0 0 0;'><span class='message'></span>".$rowend;   
+ 			      </div><div class'row' style='margin:10 0 0 0;'><span class='message'></span>".$rowend;
     echo $row."<fieldset class='fieldset1'><legend>".$lbmainadult."</legend><div class='col-sm-2 col-md-offset-2 trspad'>".$lbcharge.$rowend."<div class='col-sm-8 form-group has-feedback trsinput'>".$txtadult1."<span class='glyphicon form-control-feedback addipok' aria-hidden='true'></span>".$rowend."<div class='col-sm-2 col-md-offset-2 trspad trsmar'>".$lbfree.$rowend."<div class='col-sm-8 form-group has-feedback trsinput trsmar'>".$txtadult0."<span class='glyphicon form-control-feedback addipok' aria-hidden='true'></span>".$rowend."</fieldset>".$rowend;
     echo $row."<fieldset class='fieldset2'><legend>".$lbmainchild."</legend><div class='col-sm-2 col-md-offset-2 trspad'>".$lbcharge.$rowend."<div class='col-sm-8 form-group has-feedback trsinput'>".$txtchild1."<span class='glyphicon form-control-feedback addipok' aria-hidden='true'></span>".$rowend."<div class='col-sm-2 col-md-offset-2 trspad trsmar'>".$lbfree.$rowend."<div class='col-sm-8 form-group has-feedback trsinput trsmar'>".$txtchild0."<span class='glyphicon form-control-feedback addipok' aria-hidden='true'></span>".$rowend."<div class='col-sm-2 col-md-offset-2 trspad trsmar'>".$lbprojectfree.$rowend."<div class='col-sm-8 form-group has-feedback trsinput trsmar'>".$txtchild2."<span class='glyphicon form-control-feedback addipok' aria-hidden='true'></span>".$rowend.$rowend;
     echo $row."<fieldset class='fieldset3'><legend>".$lbmainspecial."</legend><div class='col-sm-2 col-md-offset-2 trspad'>".$lbcharge.$rowend."<div class='col-sm-8 form-group has-feedback trsinput'>".$txtspecial1."<span class='glyphicon form-control-feedback addipok' aria-hidden='true'></span>".$rowend."<div class='col-sm-2 col-md-offset-2 trspad trsmar'>".$lbfree.$rowend."<div class='col-sm-8 form-group has-feedback trsinput trsmar'>".$txtspecial0."<span class='glyphicon form-control-feedback addipok' aria-hidden='true'></span>".$rowend.$rowend;
@@ -154,7 +156,7 @@
 	<div class='col-sm-8 form-group has-feedback trsinput trsmar'>".$txtsafariforeignerchild."<span class='glyphicon form-control-feedback addipok' aria-hidden='true'></span>".$rowend.$rowend;
     }
     echo "<input type='hidden' id='zoo_id'name='touristreport_zoo_zoo_id' value=".$user_zoo.">";
-    echo "<input type='hidden' name='log_user' value='$log_user'/>";  
+    echo "<input type='hidden' name='log_user' value='$log_user'/>";
     echo "<input type='hidden' name='touristreport_id' value='$_GET[id]'/>";
     echo $row."<div class='col-sm-8 col-lg-offset-4 trsinput trsbotton'>".$button.$rowend.$rowend;
 	echo $rowend;
@@ -175,44 +177,44 @@
             alert(date)
         },
    });
-    //ตรวจค่าตัวเลข       
+    //ตรวจค่าตัวเลข
     function CheckNum(){
 		if (event.keyCode < 48 || event.keyCode > 57){
 		      event.returnValue = false;
 	    	}
 	}
 	//ตรวจเช็ควันซํ้า
-    	$(document).ready(function(){  
-            $('#form_reg').on("submit",function(){    
-                var check = check_day();    
-                check.success(function(data){    
-                    if (data != 1){    
-                        $('#form_reg')[0].submit();    
+    	$(document).ready(function(){
+            $('#form_reg').on("submit",function(){
+                var check = check_day();
+                check.success(function(data){
+                    if (data != 1){
+                        $('#form_reg')[0].submit();
                     }else{
-                        $('.message').html('วันที่เลือกได้มีการบันทึกข้อมูลแล้ว');    
-                        }         
-        });    
-        return false;      
-    });    
-            $('#datepicker').focusout(function(){    
-                var check = check_day();    
-                check.success(function(data){    
-                    if(data == 1){    
-                        $('.message').html('');    
-                        }  
-                    });    
-                });  
-            });  
+                        $('.message').html('วันที่เลือกได้มีการบันทึกข้อมูลแล้ว');
+                        }
+        });
+        return false;
+    });
+            $('#datepicker').focusout(function(){
+                var check = check_day();
+                check.success(function(data){
+                    if(data == 1){
+                        $('.message').html('');
+                        }
+                    });
+                });
+            });
 
-            function check_day(){  
-                return $.ajax({  
-                    type: 'POST',  
-                    data: {datepicker : $('#datepicker').val(), zoo : $('#zoo_id').val()},  
-                    url: 'trs_checkday.php'  
-                });  
+            function check_day(){
+                return $.ajax({
+                    type: 'POST',
+                    data: {datepicker : $('#datepicker').val(), zoo : $('#zoo_id').val()},
+                    url: 'trs_checkday.php'
+                });
             }
-	
-	
+
+
 </script>
 	<?php
     echo $form->close();

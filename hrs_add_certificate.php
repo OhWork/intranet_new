@@ -12,8 +12,8 @@
     $lbdateend = new label('ถึงวันที่');
     $lbhospital = new label('รับการรักษาจากสถานพยาบาล');
     $txtname = new textfield('hrctf_name','problem_work','form-control','','');
-    $txtdatestartwork = new textfieldcalendarreadonly('hrctf_datestartwork','datetimepicker1','','form-control','input-group-addon btn calen','datetimepicker1');
-    $txtdatestarthos = new textfieldcalendarreadonly('hrctf_datestarthos','datetimepicker2','','form-control','input-group-addon','datetimepicker2');
+    $txtdatestartwork = new datetimepicker('hrctf_datestartwork','hrctf_datestartwork','','form-control datetimepicker-input','date-form dayinbox col-md-12 form-horizontal control-group controls input-group','input-group date','datetimepicker1','#datetimepicker1','');
+    $txtdatestarthos = new datetimepicker('hrctf_datestarthos','hrctf_datestarthos','','form-control datetimepicker-input','date-form dayinbox col-md-12 form-horizontal control-group controls input-group','input-group date','datetimepicker2','#datetimepicker2','');
     $txtposition = new textfield('hrctf_position','problem_position','form-control','','');
     $selectdevision = new SelectFromDB();
     $selectdevision->name = 'zoo_zoo_id';

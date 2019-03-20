@@ -11,8 +11,9 @@
     $selecttypenews->name = 'typeNews_typeNews_id';
     $selecttypenews->lists = 'โปรดระบุ ชนิดของข่าวสาร';
     $filepic = new inputFile('news_cover','','cover_new');
-    $txtdatestart = new textfieldcalendarreadonly('newsdatestart','datetimepicker1','','form-control','input-group-addon btn calen','datetimepicker1');
-    $txtdateend = new textfieldcalendarreadonly('newsdateend','datetimepicker2','','form-control','input-group-addon btn calen','datetimepicker2');
+    $txtdatestart = new datetimepicker('newsdatestart','datetimepicker1','','form-control datetimepicker-input','date-form dayinbox col-md-12 form-horizontal control-group controls input-group','input-group date','datetimepicker1','#datetimepicker1','');
+    $txtdateend = new datetimepicker('newsdateend','datetimepicker2','','form-control datetimepicker-input','date-form dayinbox col-md-12 form-horizontal control-group controls input-group','input-group date','datetimepicker2','#datetimepicker2','');
+
     $txtheadnews = new textfield('news_head','','form-control','','');
     $txtdetailnews = new textfield('news_detail','','form-control','','');
     $radiotypedesign = new radioGroup();

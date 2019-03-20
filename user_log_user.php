@@ -27,8 +27,8 @@
     $lbday = new label('ปี');
     $lbdayfrist = new label('วันที่เริ่มต้น');
     $lbdaylast = new label('วันที่สิ้นสุด');
-    $txtday = new textfieldcalendarreadonly('date','date-picker-1','','date-picker form-control datetimepicker','input-group-addon btn calen','date-picker-1');
-    $txtday2 = new textfieldcalendarreadonly('date2','date-picker-2','','date-picker form-control datetimepicker','input-group-addon btn calen','date-picker-2');
+    $txtday = new datetimepicker('date','datetimepicker1','','form-control datetimepicker-input','date-form dayinbox col-md-12 form-horizontal control-group controls input-group','input-group date','datetimepicker1','#datetimepicker1','');
+    $txtday2 = new datetimepicker('date2','datetimepicker2','','form-control datetimepicker-input','date-form dayinbox col-md-12 form-horizontal control-group controls input-group','input-group date','datetimepicker2','#datetimepicker2','');
     $selectmonth = new selectMenu();
     $selectmonth->name = "month";
     $selectmonth->addItem('เลือก','');
@@ -142,7 +142,7 @@ echo $form->open('','','col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12','',''); 
 <?php endif; ?>
 <script>
  $( function() {
-   	$('.datetimepicker').datetimepicker({
+   	$('.date').datetimepicker({
 		 format: 'YYYY-MM-DD',
  		 minDate: '2017-10-1',
 	     useCurrent: false,

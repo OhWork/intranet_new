@@ -10,7 +10,7 @@
     $lbtime = new label('วันที่และเวลาแจ้ง');
     $lbtypetools = new label('ชนิดของอุปกรณ์');
     $txtwork = new textfield('problem_work','problem_work','form-control','','');
-    $txttime = new textfieldcalendarreadonly('problem_date','datetimepicker1','','form-control','input-group-addon btn calen','datetimepicker1');
+    $txtdatestart = new datetimepicker('problem_date','datetimepicker1','','form-control datetimepicker-input','date-form dayinbox col-md-12 form-horizontal control-group controls input-group','input-group date','datetimepicker1','#datetimepicker1','');
     $year = date("Y")+543;
     $md = date("m-d");
     $time = date("H:i");

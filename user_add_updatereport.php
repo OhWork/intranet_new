@@ -6,7 +6,7 @@
   $txtupdateversion = new textfield('updatereport_version','','form-control css-require','');
   $txtupdatedetail = new textarea('updatereport_detail','ckeditor col-md-12','','','','','');
     $txtupdatedetail->rows = 5;
-  $txtday = new textfieldcalendarreadonly('updatereport_date','date-picker-1','','date-picker form-control datetimepicker','input-group-addon','date-picker-1');
+  $txtday = new datetimepicker('updatereport_date','datetimepicker1','','form-control datetimepicker-input','date-form dayinbox col-md-12 form-horizontal control-group controls input-group','input-group date','datetimepicker1','#datetimepicker1','');
   $txtday->value = date("Y-m-d");
   $submit = new buttonok("ยืนยัน","","btn btn-success col-md-12","");
   echo $form->open("form_reg","form","","user_insert_updatereport.php","");
@@ -66,7 +66,7 @@
                                 today: "วันนี้"
 };
   $( function() {
-   	$('.datetimepicker').datetimepicker({
+   	$('.date').datetimepicker({
 		 format: 'YYYY-MM-DD',
  		 minDate: '2017-10-1',
 	     useCurrent: false,
