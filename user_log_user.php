@@ -27,8 +27,8 @@
     $lbday = new label('ปี');
     $lbdayfrist = new label('วันที่เริ่มต้น');
     $lbdaylast = new label('วันที่สิ้นสุด');
-    $txtday = new textfieldcalendarreadonly('date','date-picker-1','','date-picker form-control datetimepicker','input-group-addon','date-picker-1');
-    $txtday2 = new textfieldcalendarreadonly('date2','date-picker-2','','date-picker form-control datetimepicker','input-group-addon','date-picker-2');
+    $txtday = new textfieldcalendarreadonly('date','date-picker-1','','date-picker form-control datetimepicker','input-group-addon btn calen','date-picker-1');
+    $txtday2 = new textfieldcalendarreadonly('date2','date-picker-2','','date-picker form-control datetimepicker','input-group-addon btn calen','date-picker-2');
     $selectmonth = new selectMenu();
     $selectmonth->name = "month";
     $selectmonth->addItem('เลือก','');

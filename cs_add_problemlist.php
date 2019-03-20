@@ -7,7 +7,7 @@ if (!empty($_SESSION['user_name'])):
   $selectzoo = new SelectFromDB();
   $selectzoo->name = 'typetools_typetools_id';
   $selectzoo->lists = 'โปรดระบุ';
-  echo $form->open("form_reg","form","typetoolbox","cs_insert_problemlist.php","");
+  echo $form->open("form_reg","form","typetoolbox col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3","cs_insert_problemlist.php","");
  ?>
   	<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12'>
   		 <div class='row'>

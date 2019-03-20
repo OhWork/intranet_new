@@ -58,7 +58,7 @@
         <div class='col-md-12' style="margin-top: 40px;">
             <div class='row'>
                 <div class='col-md-1'></div>
-                <div class='btn-group col-md-10' data-toggle='buttons'>
+                <div class='btn-group btn-group-toggle col-md-10' data-toggle='buttons'>
 					<label class="btn btn-success active" style="width:33%">
                         <input type="radio" name="search" value="1" onChange="swapConfig(this)" id="searchmonth" autocomplete="off" checked>เดือน
                     </label>

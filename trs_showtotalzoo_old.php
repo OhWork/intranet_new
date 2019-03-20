@@ -57,7 +57,7 @@
 					<div class='col-md-12' style="margin-bottom: 10px;">
 						<div class='row'>
 							<div class='col-md-3'></div>
-							<div class='btn-group col-md-6' data-toggle='buttons' style="margin-top: 20px;">
+							<div class='btn-group btn-group-toggle col-md-6' data-toggle='buttons' style="margin-top: 20px;">
 								<label class="btn btn-success active" style="width:50%">
 									<input type="radio" name="search" value="1" onChange="swapConfig(this)" id="searchday" autocomplete="off" checked>วัน
 								</label>
@@ -70,38 +70,38 @@
 					</div>
 					<div class='col-md-12'>
 						<div id="searchdaySettings">
-							<div class='col-md-4' style="float: left;">
+							<div class='row'>
+								<div class='col-md-4' style="float: left;"></div>
+								<div class="date-form dayinbox col-md-4 form-horizontal control-group controls" style="float: left;">
+									<div class="input-group"><?php echo $txtday;?></div>
+								</div>
+								<div class='col-md-4'style="float: left;"></div>
 							</div>
-							<div class="date-form dayinbox col-md-4 form-horizontal control-group controls" style="float: left;">
-								<div class="input-group"><?php echo $txtday;?></div>
-							</div>
-							 <div class='col-md-4'style="float: left;">
-							 </div>
 						</div>
 						<div id="searchmonthSettings"  style="display:none;">
-							<div class='col-md-2' style="float: left;">
-							</div>
-							<div class='col-md-8' style="float: left;">
-								<div class='row'>
-									<div class='col-md-2' style="float: left;">
-									</div>
-									<div class='col-md-1' style="padding:  8 0 0 25;">
-										<?php echo $lbmonth;?>
-									</div>
-									<div class='col-md-3'>
-										<?php echo $selectmonth;?>
-									</div>
-									 <div class='col-md-1' style="padding:  8 0 0 15;">
-										<?php echo $lbyear;?>
-									</div>
-									<div class='col-md-3'>
-										<?php echo $txtyear;?>
-									</div>
-									<div class='col-md-2' style="float: left;">
+							<div class='row'>
+								<div class='col-md-2' style="float: left;"></div>
+								<div class='col-md-8' style="float: left;">
+									<div class='row'>
+										<div class='col-md-2' style="float: left;">
+										</div>
+										<div class='col-md-1 pt-2'>
+											<?php echo $lbmonth;?>
+										</div>
+										<div class='col-md-3'>
+											<?php echo $selectmonth;?>
+										</div>
+										 <div class='col-md-1 pt-2'>
+											<?php echo $lbyear;?>
+										</div>
+										<div class='col-md-3'>
+											<?php echo $txtyear;?>
+										</div>
+										<div class='col-md-2' style="float: left;">
+										</div>
 									</div>
 								</div>
-							</div>
-							<div class='col-md-2' style="float: left;">
+								<div class='col-md-2' style="float: left;"></div>
 							</div>
 						</div>
 					</div>

@@ -9,8 +9,8 @@
     $lbtqtnenable = new label("สถานะการใช้งาน :");
     $txtname = new textfield('qtn_name','','form-control','','');
     $txtlink = new textfield('qtn_link','','form-control','','');
-    $txtdatestart = new textfieldcalendarreadonly('qtn_datestart','datetimepicker1','','form-control','input-group-addon','datetimepicker1');
-    $txtdateend = new textfieldcalendarreadonly('qtn_dateend','datetimepicker2','','form-control','input-group-addon','datetimepicker2');
+    $txtdatestart = new textfieldcalendarreadonly('qtn_datestart','datetimepicker1','','form-control','input-group-addon btn calen','datetimepicker1');
+    $txtdateend = new textfieldcalendarreadonly('qtn_dateend','datetimepicker2','','form-control','input-group-addon btn calen','datetimepicker2');
     $datetime = date("Y-m-d H:i");
     $radioqtnenable = new radioGroup();
     $radioqtnenable->name = 'qtn_enable';

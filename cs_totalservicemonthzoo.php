@@ -157,7 +157,7 @@
                                             <div class='row'>
                                                 <div class='col-md-1'>
 												</div>
-                                                <div class='btn-group col-md-10' data-toggle='buttons'>
+                                                <div class='btn-group btn-group-toggle col-md-10' data-toggle='buttons'>
                                                     <label class="btn btn-success active" style="width:33%">
                                                         <input type="radio" name="search" value="1" onChange="swapConfig(this)" id="searchmonth" autocomplete="off" checked>เดือน
                                                     </label>
@@ -173,38 +173,40 @@
 										</div>
                                      <!-- ชุดเดือน -->
 									<div class="col-md-12 printdisplaynone" style="margin-top: 40px;" id="searchmonthSettings">
-										<div class='col-md-3' style="float:left;">
-										</div>
-											<div class='col-md-2' style="float:left;"><?php echo $selectmonth;?></div>
-											<div class='col-md-3' style="padding-top: 7px;float:left;"><center><?php echo $lbyear;?></center></div>
-											<div class='col-md-2' style="float:left;"><?php echo $txtyearmonth;?></div>
-										<div class='col-md-2'>
+										<div class="row">
+											<div class='col-md-3' style="float:left;"></div>
+												<div class='col-md-2' style="float:left;"><?php echo $selectmonth;?></div>
+												<div class='col-md-3' style="padding-top: 7px;float:left;"><center><?php echo $lbyear;?></center></div>
+												<div class='col-md-2' style="float:left;"><?php echo $txtyearmonth;?></div>
+											<div class='col-md-2'></div>
 										</div>
 									</div>
 <!--   ไตรมาส -->
 									<div class="col-md-12 printgisplaynone" style="margin-top: 40px;display:none;" id="searchquarterSettings">
-										<div class='col-md-3' style="float:left;">
-										</div>
-											<div class='col-md-2'  style="float:left;"><?php echo $selectquarter;?></div>
-											<div class='col-md-3' style="padding-top: 7px;float:left;"><center><?php echo $lbyear;?></center></div>
-											<div class='col-md-2'  style="float:left;"><?php echo $txtyearqua;?></div>
-										<div class='col-md-2'>
+										<div class="row">
+											<div class='col-md-3' style="float:left;"></div>
+												<div class='col-md-2'  style="float:left;"><?php echo $selectquarter;?></div>
+												<div class='col-md-3' style="padding-top: 7px;float:left;"><center><?php echo $lbyear;?></center></div>
+												<div class='col-md-2'  style="float:left;"><?php echo $txtyearqua;?></div>
+											<div class='col-md-2'></div>
 										</div>
 									</div>
 <!--   ปี -->
 									<div class="col-md-12 printdisplaynone" style="margin-top: 40px;display:none;" id="searchyearSettings">
-										<div class='col-md-3' style="float:left;">
-										</div>
+										<div class="row">
+											<div class='col-md-3' style="float:left;"></div>
 											<div class='col-md-3' style="padding-top: 7px;float:left;"><center><?php echo $lbyear;?></center></div>
-											<div class='col-md-2' style="float:left;"><?php echo $txtyearonly;?></div>
-										<div class='col-md-4' style="float:left;">
+											<div class='col-md-3' style="float:left;"><?php echo $txtyearonly;?></div>
+											<div class='col-md-3' style="float:left;"></div>
 										</div>
 									</div>
 
 									<div class='col-md-12 printdisplaynone'style="margin-top: 40px;">
-										<div class='col-md-5' style="float:left;"></div>
-										<div class='col-md-2 printdisplaynone' style="float:left;"><center><?php echo $button; ?></center></div>
-										<div class='col-md-5' style="float:left;"></div>
+										<div class="row">
+											<div class='col-md-5' style="float:left;"></div>
+											<div class='col-md-2 printdisplaynone' style="float:left;"><center><?php echo $button; ?></center></div>
+											<div class='col-md-5' style="float:left;"></div>
+										</div>
 									</div>
 				  </div>
 				  </div>
