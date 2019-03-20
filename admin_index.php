@@ -30,10 +30,13 @@
          <!-- Bootstrap core CSS -->
         <link rel="stylesheet" href="CSS/bootstrap.css">
         <!-- Custom styles for this template -->
+		<link rel="stylesheet" href="CSS/datetime-boostrap4.css">
         <link rel="stylesheet" href="CSS/dashboard.css">
 		<link rel="stylesheet" href="CSS/jquery.dataTables.css">
+<!--
         <link rel="stylesheet" href="CSS/bootstrap-datetimepicker-standalone.css">
         <link rel="stylesheet" href="CSS/bootstrap-datetimepicker.css">
+-->
         <link rel="stylesheet" href="CSS/jquery.mapify.css">
         <link rel="stylesheet" href="CSS/jquery.datetimepicker.css">
         <link rel="stylesheet" href="CSS/animate.css">

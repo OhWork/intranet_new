@@ -328,22 +328,22 @@
 									<?php echo $lbdate; ?>
 								</div>
 								<div class='date-form dayinbox col-md-12 form-horizontal control-group controls input-group'>
-									<div class='input-group date' id ="datetimepicker1">
-										<input type='text' class="form-control datetimepicker " name="eventconfer_start" id='date1' readonly/>
-											<span class="input-group-addon">
-												<span class="glyphicon glyphicon-calendar"></span>
-											</span>
+									<div class='input-group date' id ="datetimepicker1" data-target-input="nearest">
+										<input type='text' class="form-control datetimepicker-input" name="eventconfer_start" id='date1' readonly/>
+										<div class="input-group-append" data-target="#datetimepicker1" data-toggle="datetimepicker">
+					                        <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+					                    </div>
 									</div>
 								</div>
 								<div class='col-md-12 mt-3'>
 									<?php echo $lbdate2 ?>
 								</div>
 								<div class='date-form dayinbox col-md-12 form-horizontal control-group controls input-group'>
-									<div class='input-group date' id ="datetimepicker2">
-										<input type='text' class="form-control datetimepicker" name="eventconfer_end" id='date2' readonly/>
-											<span class="input-group-addon datetimepicker-addon">
-												<span class="glyphicon glyphicon-calendar"></span>
-											</span>
+									<div class='input-group date' id ="datetimepicker2" data-target-input="nearest">
+										<input type='text' class="form-control datetimepicker-input" name="eventconfer_end" id='date2' readonly/>
+											<div class="input-group-append" data-target="#datetimepicker2" data-toggle="datetimepicker">
+						                        <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+						                    </div>
 									</div>
 								</div>
 								<div class='col-md-12'>

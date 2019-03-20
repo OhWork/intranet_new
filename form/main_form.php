@@ -101,6 +101,33 @@ class textfieldcalendarreadonly{
 					</label>";
 		}
 	}
+class datetimepicker{
+		public $nameinput,$id = null,$hold = null,$classinput=null,$classdivoutermost=null,$classdivsub=null,$iddivsub=null,$datatarget = null;
+		public $value=null,$functions=null;
+
+		function __construct($nameinput,$id,$hold,$classinput,$classdivoutermost,$classdivsub,$iddivsub,$datatarget,$labelfor){
+			$this->nameinput = $nameinput;
+			$this->id = $id;
+			$this->hold = $hold;
+			$this->classinput = $classinput;
+			$this->classdivoutermost = $classdivoutermost;
+			$this->classdivsub = $classdivsub;
+			$this->iddivsub = $iddivsub;
+			$this->datatarget = $datatarget;
+
+
+		}
+		function __toString(){
+			return "<div class='{$this->classdivoutermost}'>
+						<div class='{$this->classdivsub}' id ='{$this->iddivsub}' data-target-input='nearest'>
+							<input type='text' class='{$this->classinput}' name='{$this->nameinput}' id='{$this->id}' placeholder='{$this->hold}' readonly/>
+							<div class='input-group-append' data-target='{$this->datatarget}' data-toggle='datetimepicker'>
+					            <div class='input-group-text'><i class='fa fa-calendar'></i></div>
+					        </div>
+						</div>
+					</div>";
+		}
+	}
 	class textfielddisabled{
 		public $name,$id = null,$cass = null,$hold = null;
 		public $value=null,$functions=null,$disbled;
