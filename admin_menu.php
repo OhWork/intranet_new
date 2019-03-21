@@ -208,7 +208,7 @@
 	navAnimate(8,2);
 	navAnimate(9,9);
 	navAnimate(10,1);
-	navAnimate(11,3);
+	navAnimate(11,2);
 	navAnimate(12,9);
 	navAnimate(13,9);
 	navAnimate(14,3);

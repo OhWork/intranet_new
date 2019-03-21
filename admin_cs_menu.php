@@ -107,8 +107,7 @@ if ($user_zoo == 10 || $user_zoo == 16) {
                 <a class="dropdown-item edittext mucl" id="nav-12-animate-9" href="#">โครงการคชอาณาจักร</a>
             <?php } ?>
         </ul>
-        <a class="nav-link collapsed py-1 edittext mucl" id="nav-11-animate-2" href="admin_index.php?url=cs_totalserviceadmin.php">รายงานการบริการ</a>
-        <a class="nav-link collapsed py-1 nav-link-13 edittext mucl" id="nav-11-animate-3" href="#csreportip" data-toggle="collapse" data-target="#csreportip">รายงานสรุปไอพีที่ใช้<span data-feather="chevron-right"></span></a>
+        <a class="nav-link collapsed py-1 nav-link-13 edittext mucl" id="nav-11-animate-2" href="#csreportip" data-toggle="collapse" data-target="#csreportip">รายงานสรุปไอพีที่ใช้<span data-feather="chevron-right"></span></a>
         <ul class="sub-menu collapse mmpd2" id="csreportip">
             <?php if ($user_zoo == 10) { ?>
                 <a class="dropdown-item edittext mucl" id="nav-13-animate-1" href="admin_index.php?url=cs_report_ip.php&id=1">องค์การสวนสัตว์</a>

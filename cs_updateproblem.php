@@ -66,7 +66,7 @@
 						<div class="col-12 mt-2">
 							<div class="row">
 								<div class='col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4 font-weight-bold text-center'><?php echo $lbzoo; ?></div>
-								<div class='col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8'><?php $r['zoo_name']; ?></div>
+								<div class='col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8'><?php echo $r['zoo_name']; ?></div>
 							</div>
 						</div>
 						<div class="col-12 mt-2">

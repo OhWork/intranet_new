@@ -662,7 +662,7 @@
                 if(data > '0') {
                     $("#btnSubmit").attr("disabled", true);
                      $("#msg").html('<span class="text-danger">วันที่นี้ถูกจองแล้ว</span>');
-					console.log('1234');
+// 					console.log('1234');
 
                 } else {
 	                $("#msg").html('<span class="text-success">วันที่นี้สามารถจองได้</span>');
@@ -682,26 +682,7 @@
             data: {datestart : $('#date1').val() ,
 	               dateend : $('#date2').val(),
 	               conferid : $('#confer_id').val()
-/*
-	               iszpo : $('#iszpo:checked').val(),
-	               cazpo: $('#cazpo:checked').val(),
-	               fpzpo: $('#fpzpo:checked').val(),
-	               spzpo: $('#spzpo:checked').val(),
-	               lzpo: $('#lzpo:checked').val(),
-	               crzpo: $('#crzpo:checked').val(),
-	               bdzpo: $('#bdzpo:checked').val(),
-	               itzpo: $('#itzpo:checked').val(),
-	               hrzpo: $('#hrzpo:checked').val(),
-	               zmizpo: $('#zmizpo:checked').val(),
-	               dusit: $('#dusit:checked').val(),
-	               khaokeaw: $('#khaokeaw:checked').val(),
-	               changmai: $('#changmai:checked').val(),
-	               korach: $('#korach:checked').val(),
-	               songkhla: $('#songkhla:checked').val(),
-	               ubon: $('#ubon:checked').val(),
-	               khonkean: $('#khonkean:checked').val(),
-	               sr: $('#sr:checked').val()
-*/},
+	               },
             type: "POST",
             success: function(data) {
                 if(data > '0') {
