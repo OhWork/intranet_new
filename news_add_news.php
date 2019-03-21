@@ -198,21 +198,22 @@
             locale:moment.locale('th'),
             stepping: 30
         });
-        $("#datetimepicker1").on("dp.change", function (e) {
-            $('#datetimepicker2').data("DateTimePicker").minDate(e.date);
-            var widget = $(this).find(".bootstrap-datetimepicker-widget");
+        $("#datetimepicker1").on("change.datetimepicker", function (e) {
+            $('#datetimepicker2').datetimepicker('minDate', e.date);
+             var widget = $(this).find(".bootstrap-datetimepicker-widget");
                 if (widget.length > 0) {
-                    widget.toggle("dp.hide");
+                    widget.toggle("hide.datetimepicker");
                     $(this).find(".form-control").blur();
                 }
+
         });
-        $("#datetimepicker2").on("dp.change", function (e) {
-            $('#datetimepicker1').data("DateTimePicker").maxDate(e.date);
+        $("#datetimepicker2").on("change.datetimepicker", function (e) {
+            $('#datetimepicker1').datetimepicker('maxDate', e.date);
             var widget = $(this).find(".bootstrap-datetimepicker-widget");
                 if (widget.length > 0) {
-                    widget.toggle("dp.hide");
+                    widget.toggle("hide.datetimepicker");
                     $(this).find(".form-control").blur();
-                }
+            }
         });
     });
     function readURL(input) {

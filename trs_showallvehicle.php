@@ -418,5 +418,13 @@
 	     locale:moment.locale('th'),
 //       pickTime: false
         });
+        $(".datetimepicker").on("change.datetimepicker", function (e) {
+             var widget = $(this).find(".bootstrap-datetimepicker-widget");
+                if (widget.length > 0) {
+                    widget.toggle("hide.datetimepicker");
+                    $(this).find(".form-control").blur();
+                }
+
+        });
       } );
 </script>

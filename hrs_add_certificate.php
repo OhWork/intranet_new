@@ -357,6 +357,22 @@
 	        ignoreReadonly: true,
 	        locale:moment.locale('th')
         })
+        $("#datetimepicker1").on("change.datetimepicker", function (e) {
+             var widget = $(this).find(".bootstrap-datetimepicker-widget");
+                if (widget.length > 0) {
+                    widget.toggle("hide.datetimepicker");
+                    $(this).find(".form-control").blur();
+                }
+
+        });
+        $("#datetimepicker2").on("change.datetimepicker", function (e) {
+            var widget = $(this).find(".bootstrap-datetimepicker-widget");
+                if (widget.length > 0) {
+                    widget.toggle("hide.datetimepicker");
+                    $(this).find(".form-control").blur();
+            }
+        });
+
    });
    $("#form_reg").validate({
 		rules: {
