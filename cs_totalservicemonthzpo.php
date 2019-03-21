@@ -312,6 +312,16 @@ $CN1 = $db->countTableBETWEEN46('problem','subtypetools','subzoo','zoo',
                                 'problem_status',"'N'",
                                 'problem_date',$qua)->executeRowcount();
 $counttotal1 =  $CS1+$CY1+$CN1;
+$rsp1 = $db->specifytable("user.user_name AS name, user.user_last AS lastname,
+SUM(IF(problem_status = 'Y',1,0)) AS adminfix",
+'problem,subtypetools,subzoo,zoo,user',
+"problem.subtypetools_subtypetools_id = subtypetools.subtypetools_id AND
+ problem.subzoo_subzoo_id = subzoo.subzoo_id AND
+ problem.problem_adminfix = user.user_id AND
+ zoo.zoo_name = 'สำนักตรวจสอบ' AND
+ problem.subzoo_zoo_zoo_id = zoo.zoo_id AND problem_date ".$qua."
+ GROUP BY problem_adminfix")->execute();
+
 
  //  สำนักบริหารกลาง
     $rs2 = $db->specifytable("subtypetools.subtypetools_name AS STT,
@@ -677,10 +687,29 @@ $counttotal10 =  $CS10+$CY10+$CN10;
 					$grid->name = 'table1';
 					$grid->width = array('25%','25%','25%','25%');
 					$grid->renderFromDB($columns,$rs1);
-					}
+					
 					?>
 				</div>
 			</div>
+                        <div class='row'>
+                            <div class='col-md-12'>
+                                <p><b><u>โดย</u></b>
+                            </div>
+                            <div class='col-md-12 page' style="float:left;">
+					<?php
+					$columns = array('name','lastname','adminfix');
+					$grid = new gridView();
+					$grid->pr = 'problem_id';
+					$grid->header = array('<b><center>ชื่อ</center></b>',
+                                                              '<b><center>นามสกุล</center></b>',
+                                                              '<b><center>จำนวน</center></b>');
+					$grid->name = 'table1';
+					$grid->width = array('20%','20%','60%');
+					$grid->renderFromDB($columns,$rsp1);
+					}
+					?>
+				</div>
+                        </div>
         </div>
  <!-- สำนักบริหารกลาง -->
  <?php if(!empty($rs2)){?>
