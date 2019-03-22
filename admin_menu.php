@@ -171,7 +171,7 @@
 			var submenu = document.getElementById(cuttarrgetmenu);
 			if(nav_status == 0){
 				for(var i = 1;i <= menusum;i++){
-					document.getElementById("nav-"+menuid+"-animate-"+i).style.visibility = "hidden";
+						document.getElementById("nav-"+menuid+"-animate-"+i).style.visibility = "hidden";
 				}
 
 				var i = 1;
@@ -192,7 +192,9 @@
 			}else if(nav_status == 1){
 				for(var i = 1;i <= menusum;i++){
 					document.getElementById("nav-"+menuid+"-animate-"+i).classList.remove("animat-test");
-					document.getElementById("nav-"+menuid+"-animate-"+i).style.visibility = "hidden";
+					if(i == menusum){
+						document.getElementById("nav-"+menuid+"-animate-"+i).style.visibility = "hidden";
+					}
 				}
 				nav_status = 0;
 			}
