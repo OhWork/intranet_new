@@ -9,7 +9,7 @@
 <?php
     include 'database/db_tools.php';
 	include 'connect.php';
-	if(!empty($_POST['problem_id'])){
+	if(!empty($_POST['problem_id']) && !empty($_POST['problem_adminfix'])){
 
 		$data['problem_status'] = $_POST['problem_status'];
 		$data['problem_dateend'] = $_POST['problem_dateend'];
@@ -36,7 +36,8 @@
         	'log_ip' => $ipshow
         	));
 	}else{
-    	echo("ไม่มี");
+    	$link = "login.php";
+        header( "Refresh: 2; $link" );
 	}
 		if($rs || $rsfix){
     	if($rs){
