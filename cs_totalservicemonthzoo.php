@@ -12,7 +12,29 @@
                     "infoEmpty": ""
                 }
     } );
+    $('#table1_1').DataTable( {
+                "ordering": false,
+                "searching": false,
+                "paging":   false,
+                "language": {
+                    "lengthMenu": "แสดง _MENU_ แถวต่อหน้า",
+                    "zeroRecords": "ไม่พบข้อมูล",
+                    "info": "",
+                    "infoEmpty": ""
+                }
+    } );
     $('#table2').DataTable( {
+                "ordering": false,
+                "searching": false,
+                "paging":   false,
+                "language": {
+                    "lengthMenu": "แสดง _MENU_ แถวต่อหน้า",
+                    "zeroRecords": "ไม่พบข้อมูล",
+                    "info": "",
+                    "infoEmpty": ""
+                }
+    } );
+    $('#table2_1').DataTable( {
                 "ordering": false,
                 "searching": false,
                 "paging":   false,
@@ -34,7 +56,29 @@
                     "infoEmpty": ""
                 }
     } );
+    $('#table3_1').DataTable( {
+                "ordering": false,
+                "searching": false,
+                "paging":   false,
+                "language": {
+                    "lengthMenu": "แสดง _MENU_ แถวต่อหน้า",
+                    "zeroRecords": "ไม่พบข้อมูล",
+                    "info": "",
+                    "infoEmpty": ""
+                }
+    } );
     $('#table4').DataTable( {
+                "ordering": false,
+                "searching": false,
+                "paging":   false,
+                "language": {
+                    "lengthMenu": "แสดง _MENU_ แถวต่อหน้า",
+                    "zeroRecords": "ไม่พบข้อมูล",
+                    "info": "",
+                    "infoEmpty": ""
+                }
+    } );
+    $('#table4_1').DataTable( {
                 "ordering": false,
                 "searching": false,
                 "paging":   false,
@@ -56,6 +100,17 @@
                     "infoEmpty": ""
                 }
     } );
+    $('#table5_1').DataTable( {
+                "ordering": false,
+                "searching": false,
+                "paging":   false,
+                "language": {
+                    "lengthMenu": "แสดง _MENU_ แถวต่อหน้า",
+                    "zeroRecords": "ไม่พบข้อมูล",
+                    "info": "",
+                    "infoEmpty": ""
+                }
+    } );
     $('#table6').DataTable( {
                 "ordering": false,
                 "searching": false,
@@ -67,40 +122,7 @@
                     "infoEmpty": ""
                 }
     } );
-    $('#table7').DataTable( {
-                "ordering": false,
-                "searching": false,
-                "paging":   false,
-                "language": {
-                    "lengthMenu": "แสดง _MENU_ แถวต่อหน้า",
-                    "zeroRecords": "ไม่พบข้อมูล",
-                    "info": "",
-                    "infoEmpty": ""
-                }
-    } );
-    $('#table8').DataTable( {
-                "ordering": false,
-                "searching": false,
-                "paging":   false,
-                "language": {
-                    "lengthMenu": "แสดง _MENU_ แถวต่อหน้า",
-                    "zeroRecords": "ไม่พบข้อมูล",
-                    "info": "",
-                    "infoEmpty": ""
-                }
-    } );
-    $('#table9').DataTable( {
-                "ordering": false,
-                "searching": false,
-                "paging":   false,
-                "language": {
-                    "lengthMenu": "แสดง _MENU_ แถวต่อหน้า",
-                    "zeroRecords": "ไม่พบข้อมูล",
-                    "info": "",
-                    "infoEmpty": ""
-                }
-    } );
-    $('#table10').DataTable( {
+    $('#table6_1').DataTable( {
                 "ordering": false,
                 "searching": false,
                 "paging":   false,
@@ -330,7 +352,16 @@ $CN1 = $db->countTableBETWEEN47('problem','subtypetools','subzoo','zoo',
                                 'problem_status',"'N'",
                                 'problem_date',$qua)->executeRowcount();
 $counttotal1 =  $CS1+$CY1+$CN1;
-
+$rsp1 = $db->specifytable("user.user_name AS name, user.user_last AS lastname,
+SUM(IF(problem_status = 'Y',1,0)) AS adminfix",
+'problem,subtypetools,subzoo,zoo,user',
+"problem.subtypetools_subtypetools_id = subtypetools.subtypetools_id AND
+ problem.subzoo_subzoo_id = subzoo.subzoo_id AND
+  zoo.zoo_id = $zoo AND
+ problem.problem_adminfix = user.user_id AND
+ subzoo.subzoo_name = 'บริหารงานทั่วไป' AND
+ problem.subzoo_zoo_zoo_id = zoo.zoo_id AND problem_date ".$qua."
+ GROUP BY problem_adminfix")->execute();
  //  พัฒนาธุรกิจและประชาสัมพันธ์
     $rs2 = $db->specifytable("subtypetools.subtypetools_name AS STT,
 COUNT(problem.subtypetools_subtypetools_id) AS C_A,
@@ -369,7 +400,16 @@ $CN2 = $db->countTableBETWEEN47('problem','subtypetools','subzoo','zoo',
                                 'problem_status',"'N'",
                                 'problem_date',$qua)->executeRowcount();
 $counttotal2 =  $CS2+$CY2+$CN2;
-
+$rsp2 = $db->specifytable("user.user_name AS name, user.user_last AS lastname,
+SUM(IF(problem_status = 'Y',1,0)) AS adminfix",
+'problem,subtypetools,subzoo,zoo,user',
+"problem.subtypetools_subtypetools_id = subtypetools.subtypetools_id AND
+ problem.subzoo_subzoo_id = subzoo.subzoo_id AND
+ zoo.zoo_id = $zoo AND
+ problem.problem_adminfix = user.user_id AND
+ subzoo.subzoo_name = 'พัฒนาธุรกิจและประชาสัมพันธ์' AND
+ problem.subzoo_zoo_zoo_id = zoo.zoo_id AND problem_date ".$qua."
+ GROUP BY problem_adminfix")->execute();
  //  การศึกษา
     $rs3 = $db->specifytable("subtypetools.subtypetools_name AS STT,
 COUNT(problem.subtypetools_subtypetools_id) AS C_A,
@@ -408,6 +448,16 @@ $CN3 = $db->countTableBETWEEN47('problem','subtypetools','subzoo','zoo',
                                 'problem_status',"'N'",
                                 'problem_date',$qua)->executeRowcount();
 $counttotal3 =  $CS3+$CY3+$CN3;
+$rsp3 = $db->specifytable("user.user_name AS name, user.user_last AS lastname,
+SUM(IF(problem_status = 'Y',1,0)) AS adminfix",
+'problem,subtypetools,subzoo,zoo,user',
+"problem.subtypetools_subtypetools_id = subtypetools.subtypetools_id AND
+ problem.subzoo_subzoo_id = subzoo.subzoo_id AND
+  zoo.zoo_id = $zoo AND
+ problem.problem_adminfix = user.user_id AND
+ subzoo.subzoo_name = 'การศึกษา' AND
+ problem.subzoo_zoo_zoo_id = zoo.zoo_id AND problem_date ".$qua."
+ GROUP BY problem_adminfix")->execute();
  //บำรุงสัตว์
      $rs4 = $db->specifytable("subtypetools.subtypetools_name AS STT,
 COUNT(problem.subtypetools_subtypetools_id) AS C_A,
@@ -446,6 +496,16 @@ $CN4 = $db->countTableBETWEEN47('problem','subtypetools','subzoo','zoo',
                                 'problem_status',"'N'",
                                 'problem_date',$qua)->executeRowcount();
 $counttotal4 =  $CS4+$CY4+$CN4;
+$rsp4 = $db->specifytable("user.user_name AS name, user.user_last AS lastname,
+SUM(IF(problem_status = 'Y',1,0)) AS adminfix",
+'problem,subtypetools,subzoo,zoo,user',
+"problem.subtypetools_subtypetools_id = subtypetools.subtypetools_id AND
+ problem.subzoo_subzoo_id = subzoo.subzoo_id AND
+  zoo.zoo_id = $zoo AND
+ problem.problem_adminfix = user.user_id AND
+ subzoo.subzoo_name = 'บำรุงสัตว์' AND
+ problem.subzoo_zoo_zoo_id = zoo.zoo_id AND problem_date ".$qua."
+ GROUP BY problem_adminfix")->execute();
  //พัฒนาสวนสัตว์
      $rs5 = $db->specifytable("subtypetools.subtypetools_name AS STT,
 COUNT(problem.subtypetools_subtypetools_id) AS C_A,
@@ -484,6 +544,16 @@ $CN5 = $db->countTableBETWEEN47('problem','subtypetools','subzoo','zoo',
                                 'problem_status',"'N'",
                                 'problem_date',$qua)->executeRowcount();
 $counttotal5 =  $CS5+$CY5+$CN5;
+$rsp5 = $db->specifytable("user.user_name AS name, user.user_last AS lastname,
+SUM(IF(problem_status = 'Y',1,0)) AS adminfix",
+'problem,subtypetools,subzoo,zoo,user',
+"problem.subtypetools_subtypetools_id = subtypetools.subtypetools_id AND
+ problem.subzoo_subzoo_id = subzoo.subzoo_id AND
+  zoo.zoo_id = $zoo AND
+ problem.problem_adminfix = user.user_id AND
+ subzoo.subzoo_name = 'พัฒนาสวนสัตว์' AND
+ problem.subzoo_zoo_zoo_id = zoo.zoo_id AND problem_date ".$qua."
+ GROUP BY problem_adminfix")->execute();
  //อนุรักษ์ วิจัย และสุขภาพสัตว์
      $rs6 = $db->specifytable("subtypetools.subtypetools_name AS STT,
 COUNT(problem.subtypetools_subtypetools_id) AS C_A,
@@ -522,7 +592,16 @@ $CN6 = $db->countTableBETWEEN47('problem','subtypetools','subzoo','zoo',
                                 'problem_status',"'N'",
                                 'problem_date',$qua)->executeRowcount();
 $counttotal6 =  $CS6+$CY6+$CN6;
-
+$rsp6 = $db->specifytable("user.user_name AS name, user.user_last AS lastname,
+SUM(IF(problem_status = 'Y',1,0)) AS adminfix",
+'problem,subtypetools,subzoo,zoo,user',
+"problem.subtypetools_subtypetools_id = subtypetools.subtypetools_id AND
+ problem.subzoo_subzoo_id = subzoo.subzoo_id AND
+  zoo.zoo_id = $zoo AND
+ problem.problem_adminfix = user.user_id AND
+ subzoo.subzoo_name = 'อนุรักษ์ วิจัย และสุขภาพสัตว์' AND
+ problem.subzoo_zoo_zoo_id = zoo.zoo_id AND problem_date ".$qua."
+ GROUP BY problem_adminfix")->execute();
  ?>
 
                     <div class='col-xs-12'>
@@ -560,9 +639,27 @@ $counttotal6 =  $CS6+$CY6+$CN6;
 			$grid->name = 'table1';
 			$grid->width = array('5%','5%','5%','5%');
 			$grid->renderFromDB($columns,$rs1);
-			}
+			
 ?>	        </div>
-
+ <div class='row'>
+                            <div class='col-md-12'>
+                                <p><b><u>เจ้าหน้าที่ผู้ดำเนินการ</u></b>
+                            </div>
+                            <div class='col-md-12 page' style="float:left;">
+					<?php
+					$columns = array('name','lastname','adminfix');
+					$grid = new gridView();
+					$grid->pr = 'problem_id';
+					$grid->header = array('<b><center>ชื่อ</center></b>',
+                                                              '<b><center>นามสกุล</center></b>',
+                                                              '<b><center>จำนวน</center></b>');
+					$grid->name = 'table1_1';
+					$grid->width = array('20%','20%','60%');
+					$grid->renderFromDB($columns,$rsp1);
+					}
+					?>
+				</div>
+                        </div>
         </div>
  <!-- พัฒนาธุรกิจและประชาสัมพันธ์ -->
  <?php if(!empty($rs2)){?>
@@ -588,9 +685,27 @@ $counttotal6 =  $CS6+$CY6+$CN6;
 			$grid->name = 'table2';
 			$grid->width = array('5%','5%','5%','5%');
 			$grid->renderFromDB($columns,$rs2);
-			}
+			
 ?>          </div>
-
+ <div class='row'>
+                            <div class='col-md-12'>
+                                <p><b><u>เจ้าหน้าที่ผู้ดำเนินการ</u></b>
+                            </div>
+                            <div class='col-md-12 page' style="float:left;">
+					<?php
+					$columns = array('name','lastname','adminfix');
+					$grid = new gridView();
+					$grid->pr = 'problem_id';
+					$grid->header = array('<b><center>ชื่อ</center></b>',
+                                                              '<b><center>นามสกุล</center></b>',
+                                                              '<b><center>จำนวน</center></b>');
+					$grid->name = 'table2_1';
+					$grid->width = array('20%','20%','60%');
+					$grid->renderFromDB($columns,$rsp2);
+					}
+					?>
+				</div>
+                        </div>
         </div>
  <!-- การศึกษา -->
   <?php if(!empty($rs3)){?>
@@ -616,10 +731,28 @@ $counttotal6 =  $CS6+$CY6+$CN6;
 			$grid->name = 'table3';
 			$grid->width = array('5%','5%','5%','5%');
 			$grid->renderFromDB($columns,$rs3);
-			}
+			
 ?>	        </div>
-
         </div>
+  <div class='row'>
+                            <div class='col-md-12'>
+                                <p><b><u>เจ้าหน้าที่ผู้ดำเนินการ</u></b>
+                            </div>
+                            <div class='col-md-12 page' style="float:left;">
+					<?php
+					$columns = array('name','lastname','adminfix');
+					$grid = new gridView();
+					$grid->pr = 'problem_id';
+					$grid->header = array('<b><center>ชื่อ</center></b>',
+                                                              '<b><center>นามสกุล</center></b>',
+                                                              '<b><center>จำนวน</center></b>');
+					$grid->name = 'table3_1';
+					$grid->width = array('20%','20%','60%');
+					$grid->renderFromDB($columns,$rsp3);
+					}
+					?>
+				</div>
+                        </div>
  <!-- บำรุงสัตว์-->
   <?php if(!empty($rs4)){?>
         <div class='col-md-12'>
@@ -644,9 +777,27 @@ $counttotal6 =  $CS6+$CY6+$CN6;
 			$grid->name = 'table4';
 			$grid->width = array('5%','5%','5%','5%');
 			$grid->renderFromDB($columns,$rs4);
-			}
+			
 ?>          </div>
-
+ <div class='row'>
+                            <div class='col-md-12'>
+                                <p><b><u>เจ้าหน้าที่ผู้ดำเนินการ</u></b>
+                            </div>
+                            <div class='col-md-12 page' style="float:left;">
+					<?php
+					$columns = array('name','lastname','adminfix');
+					$grid = new gridView();
+					$grid->pr = 'problem_id';
+					$grid->header = array('<b><center>ชื่อ</center></b>',
+                                                              '<b><center>นามสกุล</center></b>',
+                                                              '<b><center>จำนวน</center></b>');
+					$grid->name = 'table4_1';
+					$grid->width = array('20%','20%','60%');
+					$grid->renderFromDB($columns,$rsp4);
+					}
+					?>
+				</div>
+                        </div>
         </div>
  <!-- พัฒนาสวนสัตว์ -->
   <?php if(!empty($rs5)){?>
@@ -672,9 +823,27 @@ $counttotal6 =  $CS6+$CY6+$CN6;
 			$grid->name = 'table5';
 			$grid->width = array('5%','5%','5%','5%');
 			$grid->renderFromDB($columns,$rs5);
-			}
+			
 ?>	        </div>
-
+ <div class='row'>
+                            <div class='col-md-12'>
+                                <p><b><u>เจ้าหน้าที่ผู้ดำเนินการ</u></b>
+                            </div>
+                            <div class='col-md-12 page' style="float:left;">
+					<?php
+					$columns = array('name','lastname','adminfix');
+					$grid = new gridView();
+					$grid->pr = 'problem_id';
+					$grid->header = array('<b><center>ชื่อ</center></b>',
+                                                              '<b><center>นามสกุล</center></b>',
+                                                              '<b><center>จำนวน</center></b>');
+					$grid->name = 'table5_1';
+					$grid->width = array('20%','20%','60%');
+					$grid->renderFromDB($columns,$rsp5);
+					}
+					?>
+				</div>
+                        </div>
         </div>
  <!-- อนุรักษ์ วิจัย และสุขภาพสัตว์ -->
   <?php if(!empty($rs6)){?>
@@ -700,9 +869,27 @@ $counttotal6 =  $CS6+$CY6+$CN6;
 			$grid->name = 'table6';
 			$grid->width = array('5%','5%','5%','5%');
 			$grid->renderFromDB($columns,$rs6);
-			}
+			
 ?>	   	    </div>
-
+ <div class='row'>
+                            <div class='col-md-12'>
+                                <p><b><u>เจ้าหน้าที่ผู้ดำเนินการ</u></b>
+                            </div>
+                            <div class='col-md-12 page' style="float:left;">
+					<?php
+					$columns = array('name','lastname','adminfix');
+					$grid = new gridView();
+					$grid->pr = 'problem_id';
+					$grid->header = array('<b><center>ชื่อ</center></b>',
+                                                              '<b><center>นามสกุล</center></b>',
+                                                              '<b><center>จำนวน</center></b>');
+					$grid->name = 'table6_1';
+					$grid->width = array('20%','20%','60%');
+					$grid->renderFromDB($columns,$rsp6);
+					}
+					?>
+				</div>
+                        </div>
         </div>
 				<div class='col-md-12'>
 					<p><u>หมายเหตุ</u> </p>
