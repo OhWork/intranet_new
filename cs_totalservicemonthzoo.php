@@ -170,68 +170,66 @@
 	$button = new buttonok('ค้นหา','','btn btn-success col-md-12 printdisplaynone','submit');
 	   echo $form->open('','','','','');
 	   ?>
-                            <div class='col-md-12 printcenter printdisplaynone' style="padding-bottom:40px;border:solid #ddd 1px;border-radius: 7px;">
-                                    <div class='row' style="margin-top:0;">
-                                        <div class='col-md-12 printdisplaynone' style="border-bottom:solid 1px #666666;padding-top:14px;">
-                    					    <h4>เลือกสิ่งที่ต้องการค้นหา</h4>
-                    				    </div>
-                                        <div class='col-md-12 printdisplaynone' style="margin-top: 40px;">
-                                            <div class='row'>
-                                                <div class='col-md-1'>
-												</div>
-                                                <div class='btn-group btn-group-toggle col-md-10' data-toggle='buttons'>
-                                                    <label class="btn btn-success active" style="width:33%">
-                                                        <input type="radio" name="search" value="1" onChange="swapConfig(this)" id="searchmonth" autocomplete="off" checked>เดือน
-                                                    </label>
-                                                    <label class="btn btn-success" style="width:33%">
-                                                        <input type="radio" name="search" value="2" onChange="swapConfig(this)" id="searchquarter" autocomplete="off">ไตรมาส
-                                                    </label>
-                                                    <label class="btn btn-success" style="width:33%">
-                                                        <input type="radio" name="search" value="3" onChange="swapConfig(this)" id="searchyear" autocomplete="off">ปี
-                                                    </label>
-                                    	        </div>
-											</div>
-                                              <div class='col-md-1'></div>
-										</div>
-                                     <!-- ชุดเดือน -->
-									<div class="col-md-12 printdisplaynone" style="margin-top: 40px;" id="searchmonthSettings">
-										<div class="row">
-											<div class='col-md-3' style="float:left;"></div>
-												<div class='col-md-2' style="float:left;"><?php echo $selectmonth;?></div>
-												<div class='col-md-3' style="padding-top: 7px;float:left;"><center><?php echo $lbyear;?></center></div>
-												<div class='col-md-2' style="float:left;"><?php echo $txtyearmonth;?></div>
-											<div class='col-md-2'></div>
-										</div>
-									</div>
+<div class='col-md-12 printcenter printdisplaynone' style="padding-bottom:40px;border:solid #ddd 1px;border-radius: 7px;">
+    <div class='row' style="margin-top:0;">
+        <div class='col-md-12 printdisplaynone' style="border-bottom:solid 1px #666666;padding-top:14px;">
+            <h4>เลือกสิ่งที่ต้องการค้นหา</h4>
+        </div>
+        <div class='col-md-12 printdisplaynone' style="margin-top: 40px;">
+            <div class='row'>
+				<div class='col-md-1'></div>
+                <div class='btn-group btn-group-toggle col-md-10' data-toggle='buttons'>
+                    <label class="btn btn-success active" style="width:33%">
+                        <input type="radio" name="search" value="1" onChange="swapConfig(this)" id="searchmonth" autocomplete="off" checked>เดือน
+                    </label>
+                    <label class="btn btn-success" style="width:33%">
+                        <input type="radio" name="search" value="2" onChange="swapConfig(this)" id="searchquarter" autocomplete="off">ไตรมาส
+                    </label>
+                    <label class="btn btn-success" style="width:33%">
+                        <input type="radio" name="search" value="3" onChange="swapConfig(this)" id="searchyear" autocomplete="off">ปี
+                    </label>
+                </div>
+                <div class='col-md-1'></div>
+			</div>
+		</div>
+<!-- ชุดเดือน -->
+		<div class="col-md-12 printdisplaynone" style="margin-top: 40px;" id="searchmonthSettings">
+			<div class="row">
+				<div class='col-md-3' style="float:left;"></div>
+				<div class='col-md-2' style="float:left;"><?php echo $selectmonth;?></div>
+				<div class='col-md-3' style="padding-top: 7px;float:left;"><center><?php echo $lbyear;?></center></div>
+				<div class='col-md-2' style="float:left;"><?php echo $txtyearmonth;?></div>
+				<div class='col-md-2'></div>
+			</div>
+		</div>
 <!--   ไตรมาส -->
-									<div class="col-md-12 printgisplaynone" style="margin-top: 40px;display:none;" id="searchquarterSettings">
-										<div class="row">
-											<div class='col-md-3' style="float:left;"></div>
-												<div class='col-md-2'  style="float:left;"><?php echo $selectquarter;?></div>
-												<div class='col-md-3' style="padding-top: 7px;float:left;"><center><?php echo $lbyear;?></center></div>
-												<div class='col-md-2'  style="float:left;"><?php echo $txtyearqua;?></div>
-											<div class='col-md-2'></div>
-										</div>
-									</div>
+		<div class="col-md-12 printgisplaynone" style="margin-top: 40px;display:none;" id="searchquarterSettings">
+			<div class="row">
+				<div class='col-md-3' style="float:left;"></div>
+				<div class='col-md-2'  style="float:left;"><?php echo $selectquarter;?></div>
+				<div class='col-md-3' style="padding-top: 7px;float:left;"><center><?php echo $lbyear;?></center></div>
+				<div class='col-md-2'  style="float:left;"><?php echo $txtyearqua;?></div>
+				<div class='col-md-2'></div>
+			</div>
+		</div>
 <!--   ปี -->
-									<div class="col-md-12 printdisplaynone" style="margin-top: 40px;display:none;" id="searchyearSettings">
-										<div class="row">
-											<div class='col-md-3' style="float:left;"></div>
-											<div class='col-md-3' style="padding-top: 7px;float:left;"><center><?php echo $lbyear;?></center></div>
-											<div class='col-md-3' style="float:left;"><?php echo $txtyearonly;?></div>
-											<div class='col-md-3' style="float:left;"></div>
-										</div>
-									</div>
-
-									<div class='col-md-12 printdisplaynone'style="margin-top: 40px;">
-										<div class="row">
-											<div class='col-md-5' style="float:left;"></div>
-											<div class='col-md-2 printdisplaynone' style="float:left;"><center><?php echo $button; ?></center></div>
-											<div class='col-md-5' style="float:left;"></div>
-										</div>
-									</div>
-				  </div>
-				  </div>
+		<div class="col-md-12 printdisplaynone" style="margin-top: 40px;display:none;" id="searchyearSettings">
+			<div class="row">
+				<div class='col-md-3' style="float:left;"></div>
+				<div class='col-md-3' style="padding-top: 7px;float:left;"><center><?php echo $lbyear;?></center></div>
+				<div class='col-md-3' style="float:left;"><?php echo $txtyearonly;?></div>
+				<div class='col-md-3' style="float:left;"></div>
+			</div>
+		</div>
+		<div class='col-md-12 printdisplaynone'style="margin-top: 40px;">
+			<div class="row">
+				<div class='col-md-5' style="float:left;"></div>
+				<div class='col-md-2 printdisplaynone' style="float:left;"><center><?php echo $button; ?></center></div>
+				<div class='col-md-5' style="float:left;"></div>
+			</div>
+		</div>
+	</div>
+</div>
 
 <?php
        echo $form->close();
@@ -604,50 +602,50 @@ SUM(IF(problem_status = 'Y',1,0)) AS adminfix",
  GROUP BY problem_adminfix")->execute();
  ?>
 
-                    <div class='col-xs-12'>
-					<div class='col-md-12'>
-						<Center><img src='images/logo/ZPO.png'></center>
-					</div>
-					<div class='col-md-12'>
-						<p><Center>รายงานการซ่อม/บริการคอมพิวเตอร์ของ<?php echo $zoo_name; ?></p>
-						<?php echo $txtreport; ?></center>
-					</div>
-					<div class='col-md-12'>
-                        <center><p>ยอดรวม จำนวนการขอรับบริการทั้งหมด <?php echo $counttotal;?> ครั้ง</p></center>
-                    </div>
+<div class='col-xs-12'>
+	<div class='row'>
+		<div class='col-md-12'>
+			<Center><img src='images/logo/ZPO.png'></center>
+		</div>
+		<div class='col-md-12'>
+			<p><Center>รายงานการซ่อม/บริการคอมพิวเตอร์ของ<?php echo $zoo_name; ?></p>
+			<?php echo $txtreport; ?></center>
+		</div>
+		<div class='col-md-12'>
+			<center><p>ยอดรวม จำนวนการขอรับบริการทั้งหมด <?php echo $counttotal;?> ครั้ง</p></center>
+		</div>
  <!-- บริหารงานทั่วไป -->
   <?php if(!empty($rs1)){?>
-        <div class='col-md-12'>
-            <div class='col-md-12'>
-                <h4><p>ฝ่ายบริหารงานทั่วไป</p></h4>
-            </div>
-            <div class='col-md-12'>
-                <p><b><u>สรุป</u></b> จำนวนการขอรับบริการทั้งหมด <?php echo $counttotal1;?> ครั้ง</p>
-            </div>
-            <div class='col-md-12'>
-                <p>จำนวนการให้บริการแล้วเสร็จทั้งหมด <?php echo $CY1; ?> ครั้ง</p>
-            </div>
-            <div class='col-md-12'>
-<?php
-            $columns = array('STT','C_N','C_S','C_Y');
-			$grid = new gridView();
-			$grid->pr = 'problem_id';
-			$grid->header = array('<b><center>ปัญหา</center></b>',
-			                      '<b><center>รอดำเนินการ</center></b>',
-			                      '<b><center>ระหว่างดำเนินการ</center></b>',
-			                      '<b><center>ดำเนินการเสร็จสิ้น</center></b>');
-			$grid->name = 'table1';
-			$grid->width = array('5%','5%','5%','5%');
-			$grid->renderFromDB($columns,$rs1);
+		<div class='col-md-12'>
+			<div class='row'>
+				<div class='col-md-12'>
+					<h4><p>ฝ่ายบริหารงานทั่วไป</p></h4>
+				</div>
+				<div class='col-md-12'>
+					<p><b><u>สรุป</u></b> จำนวนการขอรับบริการทั้งหมด <?php echo $counttotal1;?> ครั้ง</p>
+				</div>
+				<div class='col-md-12'>
+					<p>จำนวนการให้บริการแล้วเสร็จทั้งหมด <?php echo $CY1; ?> ครั้ง</p>
+				</div>
+				<div class='col-md-12'>
+			<?php	$columns = array('STT','C_N','C_S','C_Y');
+					$grid = new gridView();
+					$grid->pr = 'problem_id';
+					$grid->header = array('<b><center>ปัญหา</center></b>',
+										  '<b><center>รอดำเนินการ</center></b>',
+										  '<b><center>ระหว่างดำเนินการ</center></b>',
+										  '<b><center>ดำเนินการเสร็จสิ้น</center></b>');
+					$grid->name = 'table1';
+					$grid->width = array('5%','5%','5%','5%');
+					$grid->renderFromDB($columns,$rs1);
 			
-?>	        </div>
- <div class='row'>
-                            <div class='col-md-12'>
-                                <p><b><u>เจ้าหน้าที่ผู้ดำเนินการ</u></b>
-                            </div>
-                            <div class='col-md-12 page' style="float:left;">
-					<?php
-					$columns = array('name','lastname','adminfix');
+			?>	    	
+				</div>
+				<div class='col-md-12'>
+					<p><b><u>เจ้าหน้าที่ผู้ดำเนินการ</u></b>
+				</div>
+				<div class='col-md-12 page'>
+			<?php	$columns = array('name','lastname','adminfix');
 					$grid = new gridView();
 					$grid->pr = 'problem_id';
 					$grid->header = array('<b><center>ชื่อ</center></b>',
@@ -657,43 +655,41 @@ SUM(IF(problem_status = 'Y',1,0)) AS adminfix",
 					$grid->width = array('20%','20%','60%');
 					$grid->renderFromDB($columns,$rsp1);
 					}
-					?>
+			?>
 				</div>
-                        </div>
+			</div>
         </div>
  <!-- พัฒนาธุรกิจและประชาสัมพันธ์ -->
  <?php if(!empty($rs2)){?>
         <div class='col-md-12'>
-            <div class='col-md-12'>
-                <h4><p>ฝ่ายพัฒนาธุรกิจและประชาสัมพันธ์</p></h4>
-            </div>
-            <div class='col-md-12'>
-                <p><b><u>สรุป</u></b> จำนวนการขอรับบริการทั้งหมด <?php echo $counttotal2;?> ครั้ง</p>
-            </div>
-            <div class='col-md-12'>
-                <p>จำนวนการให้บริการแล้วเสร็จทั้งหมด <?php echo $CY2; ?> ครั้ง</p>
-            </div>
-            <div class='col-md-12'>
-<?php
-            $columns = array('STT','C_N','C_S','C_Y');
-			$grid = new gridView();
-			$grid->pr = 'problem_id';
-			$grid->header = array('<b><center>ปัญหา</center></b>',
-			                      '<b><center>รอดำเนินการ</center></b>',
-			                      '<b><center>ระหว่างดำเนินการ</center></b>',
-			                      '<b><center>ดำเนินการเสร็จสิ้น</center></b>');
-			$grid->name = 'table2';
-			$grid->width = array('5%','5%','5%','5%');
-			$grid->renderFromDB($columns,$rs2);
-			
-?>          </div>
- <div class='row'>
-                            <div class='col-md-12'>
-                                <p><b><u>เจ้าหน้าที่ผู้ดำเนินการ</u></b>
-                            </div>
-                            <div class='col-md-12 page' style="float:left;">
-					<?php
-					$columns = array('name','lastname','adminfix');
+			<div class='row'>
+				<div class='col-md-12'>
+					<h4><p>ฝ่ายพัฒนาธุรกิจและประชาสัมพันธ์</p></h4>
+				</div>
+				<div class='col-md-12'>
+					<p><b><u>สรุป</u></b> จำนวนการขอรับบริการทั้งหมด <?php echo $counttotal2;?> ครั้ง</p>
+				</div>
+				<div class='col-md-12'>
+					<p>จำนวนการให้บริการแล้วเสร็จทั้งหมด <?php echo $CY2; ?> ครั้ง</p>
+				</div>
+				<div class='col-md-12'>
+			<?php	$columns = array('STT','C_N','C_S','C_Y');
+					$grid = new gridView();
+					$grid->pr = 'problem_id';
+					$grid->header = array('<b><center>ปัญหา</center></b>',
+										  '<b><center>รอดำเนินการ</center></b>',
+										  '<b><center>ระหว่างดำเนินการ</center></b>',
+										  '<b><center>ดำเนินการเสร็จสิ้น</center></b>');
+					$grid->name = 'table2';
+					$grid->width = array('5%','5%','5%','5%');
+					$grid->renderFromDB($columns,$rs2);
+			?>          
+				</div>
+                <div class='col-md-12'>
+                    <p><b><u>เจ้าหน้าที่ผู้ดำเนินการ</u></b>
+                </div>
+                <div class='col-md-12 page'>
+			<?php	$columns = array('name','lastname','adminfix');
 					$grid = new gridView();
 					$grid->pr = 'problem_id';
 					$grid->header = array('<b><center>ชื่อ</center></b>',
@@ -703,44 +699,42 @@ SUM(IF(problem_status = 'Y',1,0)) AS adminfix",
 					$grid->width = array('20%','20%','60%');
 					$grid->renderFromDB($columns,$rsp2);
 					}
-					?>
+			?>
 				</div>
-                        </div>
+            </div>
         </div>
  <!-- การศึกษา -->
   <?php if(!empty($rs3)){?>
         <div class='col-md-12'>
-            <div class='col-md-12'>
-                <h4><p>ฝ่ายการศึกษา</p></h4>
-            </div>
-             <div class='col-md-12'>
-                <p><b><u>สรุป</u></b> จำนวนการขอรับบริการทั้งหมด <?php echo $counttotal3; ?> ครั้ง</p>
-            </div>
-            <div class='col-md-12'>
-                <p>จำนวนการให้บริการแล้วเสร็จทั้งหมด <?php echo $CY3; ?> ครั้ง</p>
-            </div>
-            <div class='col-md-12'>
-<?php
-            $columns = array('STT','C_N','C_S','C_Y');
-			$grid = new gridView();
-			$grid->pr = 'problem_id';
-			$grid->header = array('<b><center>ปัญหา</center></b>',
-			                      '<b><center>รอดำเนินการ</center></b>',
-			                      '<b><center>ระหว่างดำเนินการ</center></b>',
-			                      '<b><center>ดำเนินการเสร็จสิ้น</center></b>');
-			$grid->name = 'table3';
-			$grid->width = array('5%','5%','5%','5%');
-			$grid->renderFromDB($columns,$rs3);
+			<div class='row'>
+				<div class='col-md-12'>
+					<h4><p>ฝ่ายการศึกษา</p></h4>
+				</div>
+				 <div class='col-md-12'>
+					<p><b><u>สรุป</u></b> จำนวนการขอรับบริการทั้งหมด <?php echo $counttotal3; ?> ครั้ง</p>
+				</div>
+				<div class='col-md-12'>
+					<p>จำนวนการให้บริการแล้วเสร็จทั้งหมด <?php echo $CY3; ?> ครั้ง</p>
+				</div>
+				<div class='col-md-12'>
+			<?php	$columns = array('STT','C_N','C_S','C_Y');
+					$grid = new gridView();
+					$grid->pr = 'problem_id';
+					$grid->header = array('<b><center>ปัญหา</center></b>',
+										  '<b><center>รอดำเนินการ</center></b>',
+										  '<b><center>ระหว่างดำเนินการ</center></b>',
+										  '<b><center>ดำเนินการเสร็จสิ้น</center></b>');
+					$grid->name = 'table3';
+					$grid->width = array('5%','5%','5%','5%');
+					$grid->renderFromDB($columns,$rs3);
 			
-?>	        </div>
-        </div>
-  <div class='row'>
-                            <div class='col-md-12'>
-                                <p><b><u>เจ้าหน้าที่ผู้ดำเนินการ</u></b>
-                            </div>
-                            <div class='col-md-12 page' style="float:left;">
-					<?php
-					$columns = array('name','lastname','adminfix');
+			?>	        
+				</div>
+                <div class='col-md-12'>
+                    <p><b><u>เจ้าหน้าที่ผู้ดำเนินการ</u></b>
+                </div>
+                <div class='col-md-12 page'>
+			<?php	$columns = array('name','lastname','adminfix');
 					$grid = new gridView();
 					$grid->pr = 'problem_id';
 					$grid->header = array('<b><center>ชื่อ</center></b>',
@@ -750,42 +744,41 @@ SUM(IF(problem_status = 'Y',1,0)) AS adminfix",
 					$grid->width = array('20%','20%','60%');
 					$grid->renderFromDB($columns,$rsp3);
 					}
-					?>
+			?>
 				</div>
-                        </div>
+            </div>
+		</div>
  <!-- บำรุงสัตว์-->
   <?php if(!empty($rs4)){?>
         <div class='col-md-12'>
-            <div class='col-md-12'>
-                <h4><p>ฝ่ายบำรุงสัตว์</p></h4>
-            </div>
-            <div class='col-md-12'>
-                <p><b><u>สรุป</u></b> จำนวนการขอรับบริการทั้งหมด <?php echo $counttotal4;?> ครั้ง</p>
-            </div>
-            <div class='col-md-12'>
-                <p>จำนวนการให้บริการแล้วเสร็จทั้งหมด <?php echo $CY4; ?> ครั้ง</p>
-            </div>
-            <div class='col-md-12'>
-<?php
-            $columns = array('STT','C_N','C_S','C_Y');
-			$grid = new gridView();
-			$grid->pr = 'problem_id';
-			$grid->header = array('<b><center>ปัญหา</center></b>',
-			                      '<b><center>รอดำเนินการ</center></b>',
-			                      '<b><center>ระหว่างดำเนินการ</center></b>',
-			                      '<b><center>ดำเนินการเสร็จสิ้น</center></b>');
-			$grid->name = 'table4';
-			$grid->width = array('5%','5%','5%','5%');
-			$grid->renderFromDB($columns,$rs4);
-			
-?>          </div>
- <div class='row'>
-                            <div class='col-md-12'>
-                                <p><b><u>เจ้าหน้าที่ผู้ดำเนินการ</u></b>
-                            </div>
-                            <div class='col-md-12 page' style="float:left;">
-					<?php
-					$columns = array('name','lastname','adminfix');
+			<div class="row">
+				<div class='col-md-12'>
+					<h4><p>ฝ่ายบำรุงสัตว์</p></h4>
+				</div>
+				<div class='col-md-12'>
+					<p><b><u>สรุป</u></b> จำนวนการขอรับบริการทั้งหมด <?php echo $counttotal4;?> ครั้ง</p>
+				</div>
+				<div class='col-md-12'>
+					<p>จำนวนการให้บริการแล้วเสร็จทั้งหมด <?php echo $CY4; ?> ครั้ง</p>
+				</div>
+				<div class='col-md-12'>
+			<?php	$columns = array('STT','C_N','C_S','C_Y');
+					$grid = new gridView();
+					$grid->pr = 'problem_id';
+					$grid->header = array('<b><center>ปัญหา</center></b>',
+										  '<b><center>รอดำเนินการ</center></b>',
+										  '<b><center>ระหว่างดำเนินการ</center></b>',
+										  '<b><center>ดำเนินการเสร็จสิ้น</center></b>');
+					$grid->name = 'table4';
+					$grid->width = array('5%','5%','5%','5%');
+					$grid->renderFromDB($columns,$rs4);
+			?>          
+				</div>
+                <div class='col-md-12'>
+                    <p><b><u>เจ้าหน้าที่ผู้ดำเนินการ</u></b>
+                </div>
+                <div class='col-md-12 page'>
+			<?php	$columns = array('name','lastname','adminfix');
 					$grid = new gridView();
 					$grid->pr = 'problem_id';
 					$grid->header = array('<b><center>ชื่อ</center></b>',
@@ -795,43 +788,41 @@ SUM(IF(problem_status = 'Y',1,0)) AS adminfix",
 					$grid->width = array('20%','20%','60%');
 					$grid->renderFromDB($columns,$rsp4);
 					}
-					?>
+			?>
 				</div>
-                        </div>
+            </div>
         </div>
  <!-- พัฒนาสวนสัตว์ -->
   <?php if(!empty($rs5)){?>
         <div class='col-md-12'>
-            <div class='col-md-12'>
-                <h4><p>ฝ่ายพัฒนาสวนสัตว์</p></h4>
-            </div>
-            <div class='col-md-12'>
-                <p><b><u>สรุป</u></b> จำนวนการขอรับบริการทั้งหมด <?php echo $counttotal5;?> ครั้ง</p>
-            </div>
-            <div class='col-md-12'>
-                <p>จำนวนการให้บริการแล้วเสร็จทั้งหมด <?php echo $CY5; ?> ครั้ง</p>
-            </div>
-            <div class='col-md-12'>
-<?php
-            $columns = array('STT','C_N','C_S','C_Y');
-			$grid = new gridView();
-			$grid->pr = 'problem_id';
-			$grid->header = array('<b><center>ปัญหา</center></b>',
-			                      '<b><center>รอดำเนินการ</center></b>',
-			                      '<b><center>ระหว่างดำเนินการ</center></b>',
-			                      '<b><center>ดำเนินการเสร็จสิ้น</center></b>');
-			$grid->name = 'table5';
-			$grid->width = array('5%','5%','5%','5%');
-			$grid->renderFromDB($columns,$rs5);
-			
-?>	        </div>
- <div class='row'>
-                            <div class='col-md-12'>
-                                <p><b><u>เจ้าหน้าที่ผู้ดำเนินการ</u></b>
-                            </div>
-                            <div class='col-md-12 page' style="float:left;">
-					<?php
-					$columns = array('name','lastname','adminfix');
+			<div class="row">
+				<div class='col-md-12'>
+					<h4><p>ฝ่ายพัฒนาสวนสัตว์</p></h4>
+				</div>
+				<div class='col-md-12'>
+					<p><b><u>สรุป</u></b> จำนวนการขอรับบริการทั้งหมด <?php echo $counttotal5;?> ครั้ง</p>
+				</div>
+				<div class='col-md-12'>
+					<p>จำนวนการให้บริการแล้วเสร็จทั้งหมด <?php echo $CY5; ?> ครั้ง</p>
+				</div>
+				<div class='col-md-12'>
+			<?php	$columns = array('STT','C_N','C_S','C_Y');
+					$grid = new gridView();
+					$grid->pr = 'problem_id';
+					$grid->header = array('<b><center>ปัญหา</center></b>',
+										  '<b><center>รอดำเนินการ</center></b>',
+										  '<b><center>ระหว่างดำเนินการ</center></b>',
+										  '<b><center>ดำเนินการเสร็จสิ้น</center></b>');
+					$grid->name = 'table5';
+					$grid->width = array('5%','5%','5%','5%');
+					$grid->renderFromDB($columns,$rs5);
+			?>	        
+				</div>
+                <div class='col-md-12'>
+                    <p><b><u>เจ้าหน้าที่ผู้ดำเนินการ</u></b>
+                </div>
+                <div class='col-md-12 page'>
+			<?php	$columns = array('name','lastname','adminfix');
 					$grid = new gridView();
 					$grid->pr = 'problem_id';
 					$grid->header = array('<b><center>ชื่อ</center></b>',
@@ -841,43 +832,41 @@ SUM(IF(problem_status = 'Y',1,0)) AS adminfix",
 					$grid->width = array('20%','20%','60%');
 					$grid->renderFromDB($columns,$rsp5);
 					}
-					?>
+			?>
 				</div>
-                        </div>
+            </div>
         </div>
  <!-- อนุรักษ์ วิจัย และสุขภาพสัตว์ -->
   <?php if(!empty($rs6)){?>
         <div class='col-md-12'>
-            <div class='col-md-12'>
-                <h4><p>ฝ่ายอนุรักษ์ วิจัย และสุขภาพสัตว์</p></h4>
-            </div>
-            <div class='col-md-12'>
-                <p><b><u>สรุป</u></b> จำนวนการขอรับบริการทั้งหมด <?php echo $counttotal6;?> ครั้ง</p>
-            </div>
-            <div class='col-md-12'>
-                <p>จำนวนการให้บริการแล้วเสร็จทั้งหมด <?php echo $CY6; ?> ครั้ง</p>
-            </div>
-            <div class='col-md-12'>
-<?php
-            $columns = array('STT','C_N','C_S','C_Y');
-			$grid = new gridView();
-			$grid->pr = 'problem_id';
-			$grid->header = array('<b><center>ปัญหา</center></b>',
-			                      '<b><center>รอดำเนินการ</center></b>',
-			                      '<b><center>ระหว่างดำเนินการ</center></b>',
-			                      '<b><center>ดำเนินการเสร็จสิ้น</center></b>');
-			$grid->name = 'table6';
-			$grid->width = array('5%','5%','5%','5%');
-			$grid->renderFromDB($columns,$rs6);
-			
-?>	   	    </div>
- <div class='row'>
-                            <div class='col-md-12'>
-                                <p><b><u>เจ้าหน้าที่ผู้ดำเนินการ</u></b>
-                            </div>
-                            <div class='col-md-12 page' style="float:left;">
-					<?php
-					$columns = array('name','lastname','adminfix');
+			<div class="row">
+				<div class='col-md-12'>
+					<h4><p>ฝ่ายอนุรักษ์ วิจัย และสุขภาพสัตว์</p></h4>
+				</div>
+				<div class='col-md-12'>
+					<p><b><u>สรุป</u></b> จำนวนการขอรับบริการทั้งหมด <?php echo $counttotal6;?> ครั้ง</p>
+				</div>
+				<div class='col-md-12'>
+					<p>จำนวนการให้บริการแล้วเสร็จทั้งหมด <?php echo $CY6; ?> ครั้ง</p>
+				</div>
+				<div class='col-md-12'>
+			<?php	$columns = array('STT','C_N','C_S','C_Y');
+					$grid = new gridView();
+					$grid->pr = 'problem_id';
+					$grid->header = array('<b><center>ปัญหา</center></b>',
+										  '<b><center>รอดำเนินการ</center></b>',
+										  '<b><center>ระหว่างดำเนินการ</center></b>',
+										  '<b><center>ดำเนินการเสร็จสิ้น</center></b>');
+					$grid->name = 'table6';
+					$grid->width = array('5%','5%','5%','5%');
+					$grid->renderFromDB($columns,$rs6);
+			?>	   	    
+				</div>
+                <div class='col-md-12'>
+                    <p><b><u>เจ้าหน้าที่ผู้ดำเนินการ</u></b>
+                </div>
+                <div class='col-md-12 page'>
+			<?php	$columns = array('name','lastname','adminfix');
 					$grid = new gridView();
 					$grid->pr = 'problem_id';
 					$grid->header = array('<b><center>ชื่อ</center></b>',
@@ -887,15 +876,17 @@ SUM(IF(problem_status = 'Y',1,0)) AS adminfix",
 					$grid->width = array('20%','20%','60%');
 					$grid->renderFromDB($columns,$rsp6);
 					}
-					?>
+			?>
 				</div>
-                        </div>
+            </div>
         </div>
-				<div class='col-md-12'>
-					<p><u>หมายเหตุ</u> </p>
-				</div>
+		<div class='col-md-12'>
+			<p><u>หมายเหตุ</u> </p>
+		</div>
 				<?php
 
 					}
 				?>
 <?php endif;?>
+	</div>
+</div>
