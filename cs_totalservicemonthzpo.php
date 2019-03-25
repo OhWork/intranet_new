@@ -363,7 +363,15 @@ $CN2 = $db->countTableBETWEENOR48('problem','subtypetools','subzoo','zoo',
                                 'problem.subzoo_zoo_zoo_id','zoo.zoo_id',
                                 'problem_date',$qua)->executeRowcount();
 $counttotal2 =  $CS2+$CY2+$CN2;
-
+$rsp2 = $db->specifytable("user.user_name AS name, user.user_last AS lastname,
+SUM(IF(problem_status = 'Y',1,0)) AS adminfix",
+'problem,subtypetools,subzoo,zoo,user',
+"problem.subtypetools_subtypetools_id = subtypetools.subtypetools_id AND
+ problem.subzoo_subzoo_id = subzoo.subzoo_id AND
+ problem.problem_adminfix = user.user_id AND
+ (zoo.zoo_name = 'สำนักบริหารกลาง' OR zoo.zoo_name = 'ผู้อำนวยการองค์การสวนสัตว์' OR zoo.zoo_name = 'รองผู้อำนวยการองค์การสวนสัตว์') AND
+ problem.subzoo_zoo_zoo_id = zoo.zoo_id AND problem_date ".$qua."
+ GROUP BY problem_adminfix")->execute();
  //  สำนักพัฒนาธุรกิจ
     $rs3 = $db->specifytable("subtypetools.subtypetools_name AS STT,
 COUNT(problem.subtypetools_subtypetools_id) AS C_A,
@@ -398,6 +406,15 @@ $CN3 = $db->countTableBETWEEN46('problem','subtypetools','subzoo','zoo',
                                 'problem_status',"'N'",
                                 'problem_date',$qua)->executeRowcount();
 $counttotal3 =  $CS3+$CY3+$CN3;
+$rsp3 = $db->specifytable("user.user_name AS name, user.user_last AS lastname,
+SUM(IF(problem_status = 'Y',1,0)) AS adminfix",
+'problem,subtypetools,subzoo,zoo,user',
+"problem.subtypetools_subtypetools_id = subtypetools.subtypetools_id AND
+ problem.subzoo_subzoo_id = subzoo.subzoo_id AND
+ problem.problem_adminfix = user.user_id AND
+ zoo.zoo_name = 'สำนักพัฒนาธุรกิจ' AND
+ problem.subzoo_zoo_zoo_id = zoo.zoo_id AND problem_date ".$qua."
+ GROUP BY problem_adminfix")->execute();
  //สำนักกฎหมาย
      $rs4 = $db->specifytable("subtypetools.subtypetools_name AS STT,
 COUNT(problem.subtypetools_subtypetools_id) AS C_A,
@@ -432,6 +449,15 @@ $CN4 = $db->countTableBETWEEN46('problem','subtypetools','subzoo','zoo',
                                 'problem_status',"'N'",
                                 'problem_date',$qua)->executeRowcount();
 $counttotal4 =  $CS4+$CY4+$CN4;
+$rsp4 = $db->specifytable("user.user_name AS name, user.user_last AS lastname,
+SUM(IF(problem_status = 'Y',1,0)) AS adminfix",
+'problem,subtypetools,subzoo,zoo,user',
+"problem.subtypetools_subtypetools_id = subtypetools.subtypetools_id AND
+ problem.subzoo_subzoo_id = subzoo.subzoo_id AND
+ problem.problem_adminfix = user.user_id AND
+ zoo.zoo_name = 'สำนักกฎหมาย' AND
+ problem.subzoo_zoo_zoo_id = zoo.zoo_id AND problem_date ".$qua."
+ GROUP BY problem_adminfix")->execute();
  //สำนักการเงินและทรัพย์สิน
      $rs5 = $db->specifytable("subtypetools.subtypetools_name AS STT,
 COUNT(problem.subtypetools_subtypetools_id) AS C_A,
@@ -466,6 +492,15 @@ $CN5 = $db->countTableBETWEEN46('problem','subtypetools','subzoo','zoo',
                                 'problem_status',"'N'",
                                 'problem_date',$qua)->executeRowcount();
 $counttotal5 =  $CS5+$CY5+$CN5;
+$rsp5 = $db->specifytable("user.user_name AS name, user.user_last AS lastname,
+SUM(IF(problem_status = 'Y',1,0)) AS adminfix",
+'problem,subtypetools,subzoo,zoo,user',
+"problem.subtypetools_subtypetools_id = subtypetools.subtypetools_id AND
+ problem.subzoo_subzoo_id = subzoo.subzoo_id AND
+ problem.problem_adminfix = user.user_id AND
+ zoo.zoo_name = 'สำนักการเงินและทรัพย์สิน' AND
+ problem.subzoo_zoo_zoo_id = zoo.zoo_id AND problem_date ".$qua."
+ GROUP BY problem_adminfix")->execute();
  //สำนักยุทธศาสตร์และแผน
      $rs6 = $db->specifytable("subtypetools.subtypetools_name AS STT,
 COUNT(problem.subtypetools_subtypetools_id) AS C_A,
@@ -500,6 +535,15 @@ $CN6 = $db->countTableBETWEEN46('problem','subtypetools','subzoo','zoo',
                                 'problem_status',"'N'",
                                 'problem_date',$qua)->executeRowcount();
 $counttotal6 =  $CS6+$CY6+$CN6;
+$rsp6 = $db->specifytable("user.user_name AS name, user.user_last AS lastname,
+SUM(IF(problem_status = 'Y',1,0)) AS adminfix",
+'problem,subtypetools,subzoo,zoo,user',
+"problem.subtypetools_subtypetools_id = subtypetools.subtypetools_id AND
+ problem.subzoo_subzoo_id = subzoo.subzoo_id AND
+ problem.problem_adminfix = user.user_id AND
+ zoo.zoo_name = 'สำนักยุทธศาสตร์และแผน' AND
+ problem.subzoo_zoo_zoo_id = zoo.zoo_id AND problem_date ".$qua."
+ GROUP BY problem_adminfix")->execute();
  //สำนักอนุรักษ์และวิจัย
  $rs7 = $db->specifytable("subtypetools.subtypetools_name AS STT,
 COUNT(problem.subtypetools_subtypetools_id) AS C_A,
@@ -534,6 +578,15 @@ $CN7 = $db->countTableBETWEEN46('problem','subtypetools','subzoo','zoo',
                                 'problem_status',"'N'",
                                 'problem_date',$qua)->executeRowcount();
 $counttotal7 =  $CS7+$CY7+$CN7;
+$rsp7 = $db->specifytable("user.user_name AS name, user.user_last AS lastname,
+SUM(IF(problem_status = 'Y',1,0)) AS adminfix",
+'problem,subtypetools,subzoo,zoo,user',
+"problem.subtypetools_subtypetools_id = subtypetools.subtypetools_id AND
+ problem.subzoo_subzoo_id = subzoo.subzoo_id AND
+ problem.problem_adminfix = user.user_id AND
+ zoo.zoo_name = 'สำนักอนุรักษ์และวิจัย' AND
+ problem.subzoo_zoo_zoo_id = zoo.zoo_id AND problem_date ".$qua."
+ GROUP BY problem_adminfix")->execute();
  //สำนักบริหารทรัพยากรบุคคล
  $rs8 = $db->specifytable("subtypetools.subtypetools_name AS STT,
 COUNT(problem.subtypetools_subtypetools_id) AS C_A,
@@ -568,6 +621,15 @@ $CN8 = $db->countTableBETWEEN46('problem','subtypetools','subzoo','zoo',
                                 'problem_status',"'N'",
                                 'problem_date',$qua)->executeRowcount();
 $counttotal8 =  $CS8+$CY8+$CN8;
+$rsp8 = $db->specifytable("user.user_name AS name, user.user_last AS lastname,
+SUM(IF(problem_status = 'Y',1,0)) AS adminfix",
+'problem,subtypetools,subzoo,zoo,user',
+"problem.subtypetools_subtypetools_id = subtypetools.subtypetools_id AND
+ problem.subzoo_subzoo_id = subzoo.subzoo_id AND
+ problem.problem_adminfix = user.user_id AND
+ zoo.zoo_name = 'สำนักบริหารทรัพยากรบุคคล' AND
+ problem.subzoo_zoo_zoo_id = zoo.zoo_id AND problem_date ".$qua."
+ GROUP BY problem_adminfix")->execute();
  //สำนักเทคโนโลยีสารสนเทศ
  $rs9 = $db->specifytable("subtypetools.subtypetools_name AS STT,
 COUNT(problem.subtypetools_subtypetools_id) AS C_A,
@@ -602,6 +664,15 @@ $CN9 = $db->countTableBETWEEN46('problem','subtypetools','subzoo','zoo',
                                 'problem_status',"'N'",
                                 'problem_date',$qua)->executeRowcount();
 $counttotal9 =  $CS9+$CY9+$CN9;
+$rsp9 = $db->specifytable("user.user_name AS name, user.user_last AS lastname,
+SUM(IF(problem_status = 'Y',1,0)) AS adminfix",
+'problem,subtypetools,subzoo,zoo,user',
+"problem.subtypetools_subtypetools_id = subtypetools.subtypetools_id AND
+ problem.subzoo_subzoo_id = subzoo.subzoo_id AND
+ problem.problem_adminfix = user.user_id AND
+ zoo.zoo_name = 'สำนักเทคโนโลยีสารสนเทศ' AND
+ problem.subzoo_zoo_zoo_id = zoo.zoo_id AND problem_date ".$qua."
+ GROUP BY problem_adminfix")->execute();
  //สถาบันบริหารจัดการสวนสัตว์
  $rs10 = $db->specifytable("subtypetools.subtypetools_name AS STT,
 COUNT(problem.subtypetools_subtypetools_id) AS C_A,
@@ -636,7 +707,15 @@ $CN10 = $db->countTableBETWEEN46('problem','subtypetools','subzoo','zoo',
                                 'problem_status',"'N'",
                                 'problem_date',$qua)->executeRowcount();
 $counttotal10 =  $CS10+$CY10+$CN10;
-
+$rsp10 = $db->specifytable("user.user_name AS name, user.user_last AS lastname,
+SUM(IF(problem_status = 'Y',1,0)) AS adminfix",
+'problem,subtypetools,subzoo,zoo,user',
+"problem.subtypetools_subtypetools_id = subtypetools.subtypetools_id AND
+ problem.subzoo_subzoo_id = subzoo.subzoo_id AND
+ problem.problem_adminfix = user.user_id AND
+ zoo.zoo_name = 'สถาบันบริหารจัดการสวนสัตว์' AND
+ problem.subzoo_zoo_zoo_id = zoo.zoo_id AND problem_date ".$qua."
+ GROUP BY problem_adminfix")->execute();
  ?>
 <div class='col-md-12'>
 	<div class='row'>
@@ -693,7 +772,7 @@ $counttotal10 =  $CS10+$CY10+$CN10;
 			</div>
                         <div class='row'>
                             <div class='col-md-12'>
-                                <p><b><u>โดย</u></b>
+                                <p><b><u>เจ้าหน้าที่ผู้ดำเนินการ</u></b>
                             </div>
                             <div class='col-md-12 page' style="float:left;">
 					<?php
@@ -736,9 +815,28 @@ $counttotal10 =  $CS10+$CY10+$CN10;
 				$grid->name = 'table2';
 				$grid->width = array('25%','25%','25%','25%');
 				$grid->renderFromDB($columns,$rs2);
-				}
+				
 	?>          </div>
 			</div>
+                                    <div class='row'>
+                            <div class='col-md-12'>
+                                <p><b><u>เจ้าหน้าที่ผู้ดำเนินการ</u></b>
+                            </div>
+                            <div class='col-md-12 page' style="float:left;">
+					<?php
+					$columns = array('name','lastname','adminfix');
+					$grid = new gridView();
+					$grid->pr = 'problem_id';
+					$grid->header = array('<b><center>ชื่อ</center></b>',
+                                                              '<b><center>นามสกุล</center></b>',
+                                                              '<b><center>จำนวน</center></b>');
+					$grid->name = 'table2';
+					$grid->width = array('20%','20%','60%');
+					$grid->renderFromDB($columns,$rsp2);
+					}
+					?>
+				</div>
+                        </div>
         </div>
  <!-- สำนักพัฒนาธุรกิจ -->
   <?php if(!empty($rs3)){?>
@@ -765,10 +863,29 @@ $counttotal10 =  $CS10+$CY10+$CN10;
 					$grid->name = 'table3';
 					$grid->width = array('25%','25%','25%','25%');
 					$grid->renderFromDB($columns,$rs3);
-					}
+					
 					?>
 				</div>
             </div>
+                                    <div class='row'>
+                            <div class='col-md-12'>
+                                <p><b><u>เจ้าหน้าที่ผู้ดำเนินการ</u></b>
+                            </div>
+                            <div class='col-md-12 page' style="float:left;">
+					<?php
+					$columns = array('name','lastname','adminfix');
+					$grid = new gridView();
+					$grid->pr = 'problem_id';
+					$grid->header = array('<b><center>ชื่อ</center></b>',
+                                                              '<b><center>นามสกุล</center></b>',
+                                                              '<b><center>จำนวน</center></b>');
+					$grid->name = 'table3';
+					$grid->width = array('20%','20%','60%');
+					$grid->renderFromDB($columns,$rsp3);
+					}
+					?>
+				</div>
+                        </div>
         </div>
  <!-- สำนักกฎหมาย-->
   <?php if(!empty($rs4)){?>
@@ -795,10 +912,29 @@ $counttotal10 =  $CS10+$CY10+$CN10;
 					$grid->name = 'table4';
 					$grid->width = array('25%','25%','25%','25%');
 					$grid->renderFromDB($columns,$rs4);
-					}
+					
 					?>
 				</div>
             </div>
+                                    <div class='row'>
+                            <div class='col-md-12'>
+                                <p><b><u>เจ้าหน้าที่ผู้ดำเนินการ</u></b>
+                            </div>
+                            <div class='col-md-12 page' style="float:left;">
+					<?php
+					$columns = array('name','lastname','adminfix');
+					$grid = new gridView();
+					$grid->pr = 'problem_id';
+					$grid->header = array('<b><center>ชื่อ</center></b>',
+                                                              '<b><center>นามสกุล</center></b>',
+                                                              '<b><center>จำนวน</center></b>');
+					$grid->name = 'table4';
+					$grid->width = array('20%','20%','60%');
+					$grid->renderFromDB($columns,$rsp4);
+					}
+					?>
+				</div>
+                        </div>
         </div>
  <!-- สำนักการเงินและทรัพย์สิน -->
   <?php if(!empty($rs5)){?>
@@ -825,10 +961,29 @@ $counttotal10 =  $CS10+$CY10+$CN10;
 					$grid->name = 'table5';
 					$grid->width = array('25%','25%','25%','25%');
 					$grid->renderFromDB($columns,$rs5);
-					}
+					
 					?>
 				</div>
 			</div>
+                                    <div class='row'>
+                            <div class='col-md-12'>
+                                <p><b><u>เจ้าหน้าที่ผู้ดำเนินการ</u></b>
+                            </div>
+                            <div class='col-md-12 page' style="float:left;">
+					<?php
+					$columns = array('name','lastname','adminfix');
+					$grid = new gridView();
+					$grid->pr = 'problem_id';
+					$grid->header = array('<b><center>ชื่อ</center></b>',
+                                                              '<b><center>นามสกุล</center></b>',
+                                                              '<b><center>จำนวน</center></b>');
+					$grid->name = 'table5';
+					$grid->width = array('20%','20%','60%');
+					$grid->renderFromDB($columns,$rsp5);
+					}
+					?>
+				</div>
+                        </div>
         </div>
  <!-- สำนักยุทธศาสตร์และแผน -->
   <?php if(!empty($rs6)){?>
@@ -855,10 +1010,29 @@ $counttotal10 =  $CS10+$CY10+$CN10;
 					$grid->name = 'table6';
 					$grid->width = array('25%','25%','25%','25%');
 					$grid->renderFromDB($columns,$rs6);
-					}
+					
 					?>
 				</div>
             </div>
+                                    <div class='row'>
+                            <div class='col-md-12'>
+                                <p><b><u>เจ้าหน้าที่ผู้ดำเนินการ</u></b>
+                            </div>
+                            <div class='col-md-12 page' style="float:left;">
+					<?php
+					$columns = array('name','lastname','adminfix');
+					$grid = new gridView();
+					$grid->pr = 'problem_id';
+					$grid->header = array('<b><center>ชื่อ</center></b>',
+                                                              '<b><center>นามสกุล</center></b>',
+                                                              '<b><center>จำนวน</center></b>');
+					$grid->name = 'table6';
+					$grid->width = array('20%','20%','60%');
+					$grid->renderFromDB($columns,$rsp6);
+					}
+					?>
+				</div>
+                        </div>
         </div>
  <!-- สำนักอนุรักษ์และวิจัย -->
    <?php if(!empty($rs7)){?>
@@ -885,10 +1059,29 @@ $counttotal10 =  $CS10+$CY10+$CN10;
 					$grid->name = 'table7';
 					$grid->width = array('25%','25%','25%','25%');
 					$grid->renderFromDB($columns,$rs7);
-					}
+					
 					?>
 				</div>
             </div>
+                                    <div class='row'>
+                            <div class='col-md-12'>
+                                <p><b><u>เจ้าหน้าที่ผู้ดำเนินการ</u></b>
+                            </div>
+                            <div class='col-md-12 page' style="float:left;">
+					<?php
+					$columns = array('name','lastname','adminfix');
+					$grid = new gridView();
+					$grid->pr = 'problem_id';
+					$grid->header = array('<b><center>ชื่อ</center></b>',
+                                                              '<b><center>นามสกุล</center></b>',
+                                                              '<b><center>จำนวน</center></b>');
+					$grid->name = 'table7';
+					$grid->width = array('20%','20%','60%');
+					$grid->renderFromDB($columns,$rsp7);
+					}
+					?>
+				</div>
+                        </div>
         </div>
  <!-- สำนักบริหารทรัพยากรบุคคล -->
    <?php if(!empty($rs8)){?>
@@ -915,10 +1108,29 @@ $counttotal10 =  $CS10+$CY10+$CN10;
 					$grid->name = 'table8';
 					$grid->width = array('25%','25%','25%','25%');
 					$grid->renderFromDB($columns,$rs8);
-					}
+					
 					?>
 				</div>
             </div>
+                                    <div class='row'>
+                            <div class='col-md-12'>
+                                <p><b><u>เจ้าหน้าที่ผู้ดำเนินการ</u></b>
+                            </div>
+                            <div class='col-md-12 page' style="float:left;">
+					<?php
+					$columns = array('name','lastname','adminfix');
+					$grid = new gridView();
+					$grid->pr = 'problem_id';
+					$grid->header = array('<b><center>ชื่อ</center></b>',
+                                                              '<b><center>นามสกุล</center></b>',
+                                                              '<b><center>จำนวน</center></b>');
+					$grid->name = 'table8';
+					$grid->width = array('20%','20%','60%');
+					$grid->renderFromDB($columns,$rsp8);
+					}
+					?>
+				</div>
+                        </div>
         </div>
  <!-- สำนักเทคโนโลยีสารสนเทศ -->
    <?php if(!empty($rs9)){?>
@@ -945,10 +1157,29 @@ $counttotal10 =  $CS10+$CY10+$CN10;
 						$grid->name = 'table9';
 						$grid->width = array('25%','25%','25%','25%');
 						$grid->renderFromDB($columns,$rs9);
-					}
+					
 					?>
 				</div>
             </div>
+                                    <div class='row'>
+                            <div class='col-md-12'>
+                                <p><b><u>เจ้าหน้าที่ผู้ดำเนินการ</u></b>
+                            </div>
+                            <div class='col-md-12 page' style="float:left;">
+					<?php
+					$columns = array('name','lastname','adminfix');
+					$grid = new gridView();
+					$grid->pr = 'problem_id';
+					$grid->header = array('<b><center>ชื่อ</center></b>',
+                                                              '<b><center>นามสกุล</center></b>',
+                                                              '<b><center>จำนวน</center></b>');
+					$grid->name = 'table9';
+					$grid->width = array('20%','20%','60%');
+					$grid->renderFromDB($columns,$rsp9);
+					}
+					?>
+				</div>
+                        </div>
         </div>
 <!-- สถาบันบริหารจัดการสวนสัตว์  -->
   <?php if(!empty($rs10)){?>
@@ -975,10 +1206,29 @@ $counttotal10 =  $CS10+$CY10+$CN10;
 					$grid->name = 'table10';
 					$grid->width = array('25%','25%','25%','25%');
 					$grid->renderFromDB($columns,$rs10);
-					}
+					
 					?>
 				</div>
 			</div>
+                                    <div class='row'>
+                            <div class='col-md-12'>
+                                <p><b><u>เจ้าหน้าที่ผู้ดำเนินการ</u></b>
+                            </div>
+                            <div class='col-md-12 page' style="float:left;">
+					<?php
+					$columns = array('name','lastname','adminfix');
+					$grid = new gridView();
+					$grid->pr = 'problem_id';
+					$grid->header = array('<b><center>ชื่อ</center></b>',
+                                                              '<b><center>นามสกุล</center></b>',
+                                                              '<b><center>จำนวน</center></b>');
+					$grid->name = 'table10';
+					$grid->width = array('20%','20%','60%');
+					$grid->renderFromDB($columns,$rsp10);
+					}
+					?>
+				</div>
+                        </div>
         </div>
 		<div class='col-md-12 test'>
 			<p><u>หมายเหตุ </u></p>
