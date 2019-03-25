@@ -142,7 +142,7 @@
 						        idmenu.parentNode.parentNode.classList.remove("animat-out");
 								idmenu.parentNode.parentNode.classList.add("show");
 							}
-				        }, 500)
+				        }, 470)
 				        idmenu.classList.remove("animat-out");
 				        if(idmenu.getAttribute('aria-expanded') != 'true'){
 							idmenu.classList.remove('animat-out');
@@ -171,7 +171,7 @@
 			var submenu = document.getElementById(cuttarrgetmenu);
 			if(nav_status == 0){
 				for(var i = 1;i <= menusum;i++){
-						document.getElementById("nav-"+menuid+"-animate-"+i).style.visibility = "hidden";
+					document.getElementById("nav-"+menuid+"-animate-"+i).style.visibility = "hidden";
 				}
 
 				var i = 1;
@@ -190,10 +190,9 @@
 				}
 				myLoop();
 			}else if(nav_status == 1){
-				console.log(1234);
 				for(var i = 1;i <= menusum;i++){
 					document.getElementById("nav-"+menuid+"-animate-"+i).classList.remove("animat-test");
-						document.getElementById("nav-"+menuid+"-animate-"+i).style.visibility = "hidden";
+					document.getElementById("nav-"+menuid+"-animate-"+i).style.visibility = "hidden";
 				}
 				nav_status = 0;
 			}

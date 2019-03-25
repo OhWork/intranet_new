@@ -701,7 +701,7 @@
 // End Check Vdoconferren
 
 	$("#btnSubmit").attr("disabled", true);
-	$("#datetimepicker2").on('dp.change',function(){
+	$("#datetimepicker2").on('change.datetimepicker',function(){
 		checkdate();
 	});
 	$(document).ready(function() {
