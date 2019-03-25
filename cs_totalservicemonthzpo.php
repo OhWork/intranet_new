@@ -12,7 +12,29 @@
                     "infoEmpty": ""
                 }
     } );
+        $('#table1_1').DataTable( {
+                "ordering": false,
+                "searching": false,
+                "paging":   false,
+                "language": {
+                    "lengthMenu": "แสดง _MENU_ แถวต่อหน้า",
+                    "zeroRecords": "ไม่พบข้อมูล",
+                    "info": "",
+                    "infoEmpty": ""
+                }
+    } );
     $('#table2').DataTable( {
+                "ordering": false,
+                "searching": false,
+                "paging":   false,
+                "language": {
+                    "lengthMenu": "แสดง _MENU_ แถวต่อหน้า",
+                    "zeroRecords": "ไม่พบข้อมูล",
+                    "info": "",
+                    "infoEmpty": ""
+                }
+    } );
+        $('#table2_1').DataTable( {
                 "ordering": false,
                 "searching": false,
                 "paging":   false,
@@ -34,7 +56,29 @@
                     "infoEmpty": ""
                 }
     } );
+        $('#table3_1').DataTable( {
+                "ordering": false,
+                "searching": false,
+                "paging":   false,
+                "language": {
+                    "lengthMenu": "แสดง _MENU_ แถวต่อหน้า",
+                    "zeroRecords": "ไม่พบข้อมูล",
+                    "info": "",
+                    "infoEmpty": ""
+                }
+    } );
     $('#table4').DataTable( {
+                "ordering": false,
+                "searching": false,
+                "paging":   false,
+                "language": {
+                    "lengthMenu": "แสดง _MENU_ แถวต่อหน้า",
+                    "zeroRecords": "ไม่พบข้อมูล",
+                    "info": "",
+                    "infoEmpty": ""
+                }
+    } );
+        $('#table4_1').DataTable( {
                 "ordering": false,
                 "searching": false,
                 "paging":   false,
@@ -56,7 +100,29 @@
                     "infoEmpty": ""
                 }
     } );
+        $('#table5_1').DataTable( {
+                "ordering": false,
+                "searching": false,
+                "paging":   false,
+                "language": {
+                    "lengthMenu": "แสดง _MENU_ แถวต่อหน้า",
+                    "zeroRecords": "ไม่พบข้อมูล",
+                    "info": "",
+                    "infoEmpty": ""
+                }
+    } );
     $('#table6').DataTable( {
+                "ordering": false,
+                "searching": false,
+                "paging":   false,
+                "language": {
+                    "lengthMenu": "แสดง _MENU_ แถวต่อหน้า",
+                    "zeroRecords": "ไม่พบข้อมูล",
+                    "info": "",
+                    "infoEmpty": ""
+                }
+    } );
+        $('#table6_1').DataTable( {
                 "ordering": false,
                 "searching": false,
                 "paging":   false,
@@ -78,7 +144,29 @@
                     "infoEmpty": ""
                 }
     } );
+        $('#table7_1').DataTable( {
+                "ordering": false,
+                "searching": false,
+                "paging":   false,
+                "language": {
+                    "lengthMenu": "แสดง _MENU_ แถวต่อหน้า",
+                    "zeroRecords": "ไม่พบข้อมูล",
+                    "info": "",
+                    "infoEmpty": ""
+                }
+    } );
     $('#table8').DataTable( {
+                "ordering": false,
+                "searching": false,
+                "paging":   false,
+                "language": {
+                    "lengthMenu": "แสดง _MENU_ แถวต่อหน้า",
+                    "zeroRecords": "ไม่พบข้อมูล",
+                    "info": "",
+                    "infoEmpty": ""
+                }
+    } );
+        $('#table8_1').DataTable( {
                 "ordering": false,
                 "searching": false,
                 "paging":   false,
@@ -100,7 +188,29 @@
                     "infoEmpty": ""
                 }
     } );
+        $('#table9_1').DataTable( {
+                "ordering": false,
+                "searching": false,
+                "paging":   false,
+                "language": {
+                    "lengthMenu": "แสดง _MENU_ แถวต่อหน้า",
+                    "zeroRecords": "ไม่พบข้อมูล",
+                    "info": "",
+                    "infoEmpty": ""
+                }
+    } );
     $('#table10').DataTable( {
+                "ordering": false,
+                "searching": false,
+                "paging":   false,
+                "language": {
+                    "lengthMenu": "แสดง _MENU_ แถวต่อหน้า",
+                    "zeroRecords": "ไม่พบข้อมูล",
+                    "info": "",
+                    "infoEmpty": ""
+                }
+    } );
+        $('#table10_1').DataTable( {
                 "ordering": false,
                 "searching": false,
                 "paging":   false,
@@ -782,7 +892,7 @@ SUM(IF(problem_status = 'Y',1,0)) AS adminfix",
 					$grid->header = array('<b><center>ชื่อ</center></b>',
                                                               '<b><center>นามสกุล</center></b>',
                                                               '<b><center>จำนวน</center></b>');
-					$grid->name = 'table1';
+					$grid->name = 'table1_1';
 					$grid->width = array('20%','20%','60%');
 					$grid->renderFromDB($columns,$rsp1);
 					}
@@ -830,7 +940,7 @@ SUM(IF(problem_status = 'Y',1,0)) AS adminfix",
 					$grid->header = array('<b><center>ชื่อ</center></b>',
                                                               '<b><center>นามสกุล</center></b>',
                                                               '<b><center>จำนวน</center></b>');
-					$grid->name = 'table2';
+					$grid->name = 'table2_1';
 					$grid->width = array('20%','20%','60%');
 					$grid->renderFromDB($columns,$rsp2);
 					}
@@ -879,7 +989,7 @@ SUM(IF(problem_status = 'Y',1,0)) AS adminfix",
 					$grid->header = array('<b><center>ชื่อ</center></b>',
                                                               '<b><center>นามสกุล</center></b>',
                                                               '<b><center>จำนวน</center></b>');
-					$grid->name = 'table3';
+					$grid->name = 'table3_1';
 					$grid->width = array('20%','20%','60%');
 					$grid->renderFromDB($columns,$rsp3);
 					}
@@ -928,7 +1038,7 @@ SUM(IF(problem_status = 'Y',1,0)) AS adminfix",
 					$grid->header = array('<b><center>ชื่อ</center></b>',
                                                               '<b><center>นามสกุล</center></b>',
                                                               '<b><center>จำนวน</center></b>');
-					$grid->name = 'table4';
+					$grid->name = 'table4_1';
 					$grid->width = array('20%','20%','60%');
 					$grid->renderFromDB($columns,$rsp4);
 					}
@@ -977,7 +1087,7 @@ SUM(IF(problem_status = 'Y',1,0)) AS adminfix",
 					$grid->header = array('<b><center>ชื่อ</center></b>',
                                                               '<b><center>นามสกุล</center></b>',
                                                               '<b><center>จำนวน</center></b>');
-					$grid->name = 'table5';
+					$grid->name = 'table5_1';
 					$grid->width = array('20%','20%','60%');
 					$grid->renderFromDB($columns,$rsp5);
 					}
@@ -1026,7 +1136,7 @@ SUM(IF(problem_status = 'Y',1,0)) AS adminfix",
 					$grid->header = array('<b><center>ชื่อ</center></b>',
                                                               '<b><center>นามสกุล</center></b>',
                                                               '<b><center>จำนวน</center></b>');
-					$grid->name = 'table6';
+					$grid->name = 'table6_1';
 					$grid->width = array('20%','20%','60%');
 					$grid->renderFromDB($columns,$rsp6);
 					}
@@ -1075,7 +1185,7 @@ SUM(IF(problem_status = 'Y',1,0)) AS adminfix",
 					$grid->header = array('<b><center>ชื่อ</center></b>',
                                                               '<b><center>นามสกุล</center></b>',
                                                               '<b><center>จำนวน</center></b>');
-					$grid->name = 'table7';
+					$grid->name = 'table7_1';
 					$grid->width = array('20%','20%','60%');
 					$grid->renderFromDB($columns,$rsp7);
 					}
@@ -1124,7 +1234,7 @@ SUM(IF(problem_status = 'Y',1,0)) AS adminfix",
 					$grid->header = array('<b><center>ชื่อ</center></b>',
                                                               '<b><center>นามสกุล</center></b>',
                                                               '<b><center>จำนวน</center></b>');
-					$grid->name = 'table8';
+					$grid->name = 'table8_1';
 					$grid->width = array('20%','20%','60%');
 					$grid->renderFromDB($columns,$rsp8);
 					}
@@ -1173,7 +1283,7 @@ SUM(IF(problem_status = 'Y',1,0)) AS adminfix",
 					$grid->header = array('<b><center>ชื่อ</center></b>',
                                                               '<b><center>นามสกุล</center></b>',
                                                               '<b><center>จำนวน</center></b>');
-					$grid->name = 'table9';
+					$grid->name = 'table9_1';
 					$grid->width = array('20%','20%','60%');
 					$grid->renderFromDB($columns,$rsp9);
 					}
@@ -1222,7 +1332,7 @@ SUM(IF(problem_status = 'Y',1,0)) AS adminfix",
 					$grid->header = array('<b><center>ชื่อ</center></b>',
                                                               '<b><center>นามสกุล</center></b>',
                                                               '<b><center>จำนวน</center></b>');
-					$grid->name = 'table10';
+					$grid->name = 'table10_1';
 					$grid->width = array('20%','20%','60%');
 					$grid->renderFromDB($columns,$rsp10);
 					}
