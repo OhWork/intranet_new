@@ -142,7 +142,7 @@
 						        idmenu.parentNode.parentNode.classList.remove("animat-out");
 								idmenu.parentNode.parentNode.classList.add("show");
 							}
-				        }, 470)
+				        }, 400)
 				        idmenu.classList.remove("animat-out");
 				        if(idmenu.getAttribute('aria-expanded') != 'true'){
 							idmenu.classList.remove('animat-out');
@@ -186,7 +186,7 @@
 	  						myLoop();
 	  						i++;
       					}
-      				}, 200)
+      				}, 300)
 				}
 				myLoop();
 			}else if(nav_status == 1){
