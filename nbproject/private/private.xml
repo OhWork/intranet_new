@@ -4,7 +4,9 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/xampp/htdocs/intranet_new/index.php</file>
-            <file>file:/C:/xampp/htdocs/intranet_new/cs_add_ip.php</file>
+            <file>file:/C:/xampp/htdocs/intranet_new/cs_totalservicemonthzoo.php</file>
+            <file>file:/C:/xampp/htdocs/intranet_new/cs_totalservicemonthzpo.php</file>
+            <file>file:/C:/xampp/htdocs/intranet_new/database/db_tools.php</file>
         </group>
     </open-files>
 </project-private>

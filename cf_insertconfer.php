@@ -48,7 +48,7 @@
 		}
 
 	}else{
-		$rs = $db->insert('confer',array(
+		$rs = $db->insert('conferroom',array(
 		'confer_name' => $_POST['confer_name'],
 		'confer_people' => $_POST['confer_num'],
 		'zoo_zoo_id'=>$_POST['subzoo_zoo_zoo_id'],

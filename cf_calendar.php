@@ -1,7 +1,7 @@
 <?php
 	$id = $_GET['id'];
 
-	$r = $db->findByPK('confer','confer_id',$id)->executeRow();
+	$r = $db->findByPK('conferroom','confer_id',$id)->executeRow();
 	$confer = $r['confer_name'];
 ?>
 <!DOCTYPE html>
@@ -173,7 +173,7 @@
 							<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mrgcfmenu">
 								<div class="row">
 							<?php
-								$rs =$db->findByPK('confer','zoo_zoo_id',$_GET['zoo'])->execute();
+								$rs =$db->findByPK('conferroom','zoo_zoo_id',$_GET['zoo'])->execute();
 								foreach($rs as $showrs){
 									?>
 									<a id="<?php echo $showrs['confer_id'];?>" class="btn btn-primary col-12 pcfmenu mt-3" href="index.php?url=cf_calendar.php&id=<?php echo $showrs['confer_id'];?>&zoo=<?php echo $_GET['zoo'];?>"><?php echo $showrs['confer_name']; ?></a>

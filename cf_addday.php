@@ -117,7 +117,7 @@
 	$button = new buttonok('บันทึก','btnSubmit','btn btn-success col-md-12','');
 	if(!empty($_GET['id'])){
 	$id = $_GET['id'];
-	$r = $db->findByPK('confer','confer_id',$id)->executeRow();
+	$r = $db->findByPK('conferroom','confer_id',$id)->executeRow();
 	$confer = $r['confer_name'];
 	}
 	?>
