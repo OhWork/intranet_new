@@ -184,6 +184,7 @@ function autoTab2(obj,typeCheck){
 			<div class="form-group has-feedback col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 showrequired">
 				<?php echo $txtuser; ?>
 			</div>
+			<div id="msg"></div>
 		<?php }else{ ?>
 			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 				<?php echo $lbuser; ?>
@@ -226,7 +227,6 @@ function autoTab2(obj,typeCheck){
 							<div class="form-group has-feedback col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 showrequired">
 								<?php echo $txtname; ?>
 							</div>
-							<div id="msg"></div>
 						</div>
 					</div>
 					<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6">

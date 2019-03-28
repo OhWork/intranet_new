@@ -219,7 +219,7 @@
 	navAnimate(19,2);
 	navAnimate(20,4);
 	navAnimate(21,1);
-	navAnimate(22,7);
+	navAnimate(22,5);
 	navAnimate(23,2);
 	navAnimate(24,2);
 	navAnimate(25,4);
@@ -229,6 +229,6 @@
 	navAnimate(29,2);
 	navAnimate(30,1);
 	navAnimate(31,2);
-	navAnimate(32,7);
+	navAnimate(32,5);
   	</script>
 

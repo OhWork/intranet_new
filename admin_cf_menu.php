@@ -248,7 +248,7 @@
         				       while ($showroomzpo = mysqli_fetch_array($rsroomzpo2,MYSQLI_ASSOC)){
     			        ?>
 
-    		                <a class="nav-link bnmenusub2" href="admin_index.php?url=cf_showroom_online.php&id=<?php echo $showroomzpo['confer_id'];?>">
+    		                <a class="nav-link bnmenusub2 edittext mucl" href="admin_index.php?url=cf_showroom_online.php&id=<?php echo $showroomzpo['confer_id'];?>">
         		                <?php echo $showroomzpo['confer_name'];?>
         		            </a>
 
