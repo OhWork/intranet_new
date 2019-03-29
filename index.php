@@ -58,11 +58,11 @@ session_start();
           </li> -->
 					</ul>
 					<div class="form-inline">
-						<a class="btn lgn" style="padding-top:10px;padding-bottom:10px;padding-right:0;border-right:1px solid #1DE9B6;border-radius:0px;" href="http://www.zoothailand.org/ewt_news.php?nid=246">
+						<a class="btn lgn" style="border:none;padding-top:10px;padding-bottom:10px;padding-right:0;border-right:1px solid #1DE9B6;border-radius:0px;" href="http://www.zoothailand.org/ewt_news.php?nid=246">
 						<div style="padding-right:15px;">เกี่ยวกับเรา</div></a>
 					</div>
 					<div class="form-inline">
-						<a class="btn lgn" href="login.php" title="เข้าสู่ระบบ">
+						<a class="btn lgn" href="login.php" title="เข้าสู่ระบบ" style="border:none;">
 							<div class="ml-1" style="float:left;">เข้าสู่ระบบ</div>
 						</a>
 					</div>
