@@ -55,9 +55,11 @@
 				<li class="nav-item">
 				<a class="nav-link collapsed edittext mucl" href="index.php?url=qtn_show_qtnmain.php"><span class="edittext" data-feather="check-square"></span>แบบสอบถาม</a>
 				</li>
+<!--
 				<li class="nav-item">
 				<a class="nav-link collapsed edittext mucl" href="#"><span class="edittext" data-feather="check-square"></span>KM</a>
 				</li>
+-->
             </ul>
         </div>
     </nav>
