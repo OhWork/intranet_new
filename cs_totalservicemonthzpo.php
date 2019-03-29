@@ -256,17 +256,19 @@
     $selectquarter->addItem('ไตรมาสที่ 3 (1 เม.ย. - 30 มิ.ย.)','3');
     $selectquarter->addItem('ไตรมาสที่ 4 (1 ก.ค. - 30 ก.ย.)','4');
 	$button = new buttonok('ค้นหา','submit','btn btn-success col-md-12 printdisplaynone','submit');
-	   echo $form->open('','','','','');
+	   echo $form->open('','','col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12','','');
 	   ?>
-<div class='col-md-12 printcenter printdisplaynone' style="padding-bottom:40px;border:solid #ddd 1px;border-radius: 7px;">
+<div class='row'>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1"></div>
+<div class='col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10 printcenter printdisplaynone' style="padding-bottom:40px;border:solid #ddd 1px;border-radius: 7px;">
     <div class='row' style="margin-top:0;">
         <div class='col-md-12 printdisplaynone' style="border-bottom:solid 1px #666666;padding-top:14px;">
             <h4>เลือกสิ่งที่ต้องการค้นหา</h4>
         </div>
         <div class='col-md-12 printdisplaynone' style="margin-top: 40px;">
             <div class='row'>
-                <div class='col-md-1'></div>
-                <div class='btn-group btn-group-toggle col-md-10' data-toggle='buttons'>
+                <div class='col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1'></div>
+                <div class='btn-group btn-group-toggle col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10' data-toggle='buttons'>
                     <label class="btn btn-success active" style="width:33%">
                         <input type="radio" name="search" value="1" onChange="swapConfig(this)" id="searchmonth" autocomplete="off" checked>เดือน
                     </label>
@@ -277,47 +279,49 @@
                         <input type="radio" name="search" value="3" onChange="swapConfig(this)" id="searchyear" autocomplete="off">ปี
                     </label>
                 </div>
-                <div class='col-md-1'></div>
+                <div class='col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1'></div>
 			</div>
 		</div>
 <!-- ชุดเดือน -->
 		<div class="col-md-12 printdisplaynone" style="margin-top: 40px;" id="searchmonthSettings">
 			<div class="row">
-				<div class='col-md-3' style="float:left;"></div>
-				<div class='col-md-2' style="float:left;"><?php echo $selectmonth;?></div>
-				<div class='col-md-3' style="padding-top: 7px;float:left;"><center><?php echo $lbyear;?></center></div>
-				<div class='col-md-2' style="float:left;"><?php echo $txtyearmonth;?></div>
-				<div class='col-md-2' style="float:left;"></div>
+				<div class='col-xl-2 col-lg-1 col-md-1 col-sm-2 col-2' style="float:left;"></div>
+				<div class='col-xl-3 col-lg-4 col-md-4 col-sm-3 col-3' style="float:left;"><?php echo $selectmonth;?></div>
+				<div class='col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3' style="padding-top: 7px;float:left;"><center><?php echo $lbyear;?></center></div>
+				<div class='col-xl-2 col-lg-2 col-md-3 col-sm-2 col-2' style="float:left;"><?php echo $txtyearmonth;?></div>
+				<div class='col-xl-2 col-lg-2 col-md-1 col-sm-2 col-2' style="float:left;"></div>
 			</div>
 		</div>
 <!--   ไตรมาส -->
 		<div class="col-md-12 printdisplaynone" style="margin-top: 40px;display:none;" id="searchquarterSettings">
 			<div class="row">
-				<div class='col-md-3' style="float:left;"></div>
-				<div class='col-md-2' style="float:left;"><?php echo $selectquarter;?></div>
-				<div class='col-md-3' style="padding-top: 7px;float:left;"><center><?php echo $lbyear;?></center></div>
-				<div class='col-md-2' style="float:left;"><?php echo $txtyearqua;?></div>
-				<div class='col-md-2' style="float:left;"></div>
+				<div class='col-xl-3 col-lg-1 col-md-1 col-sm-3 col-3' style="float:left;"></div>
+				<div class='col-xl-2 col-lg-4 col-md-4 col-sm-2 col-2' style="float:left;"><?php echo $selectquarter;?></div>
+				<div class='col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3' style="padding-top: 7px;float:left;"><center><?php echo $lbyear;?></center></div>
+				<div class='col-xl-2 col-lg-2 col-md-3 col-sm-2 col-2' style="float:left;"><?php echo $txtyearqua;?></div>
+				<div class='col-xl-2 col-lg-2 col-md-3 col-sm-2 col-2' style="float:left;"></div>
 			</div>
 		</div>
 <!--   ปี -->
 		<div class="col-md-12 printdisplaynone" style="margin-top: 40px;display:none;" id="searchyearSettings">
 			<div class="row">
-				<div class='col-md-3' style="float:left;"></div>
-				<div class='col-md-3' style="padding-top: 7px;float:left;"><center><?php echo $lbyear;?></center></div>
-				<div class='col-md-3' style="float:left;"><?php echo $txtyearonly;?></div>
-				<div class='col-md-3' style="float:left;"></div>
+				<div class='col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3' style="float:left;"></div>
+				<div class='col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3' style="padding-top: 7px;float:left;"><center><?php echo $lbyear;?></center></div>
+				<div class='col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3' style="float:left;"><?php echo $txtyearonly;?></div>
+				<div class='col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3' style="float:left;"></div>
 			</div>
 		</div>
 <!-- ปุ่มตกลง -->
 		<div class="col-md-12 printdisplaynone" style="margin-top: 40px;">
 			<div class="row">
-				<div class='col-md-5' style="float:left;"></div>
-				<div class='col-md-2 printdisplaynone' style="float:left;"><center><?php echo $button; ?></center></div>
-				<div class='col-md-5' style="float:left;"></div>
+				<div class='col-xl-4 col-lg-4 col-md-4 col-sm-5 col-5' style="float:left;"></div>
+				<div class='col-xl-4 col-lg-4 col-md-4 col-sm-2 col-2 printdisplaynone' style="float:left;"><center><?php echo $button; ?></center></div>
+				<div class='col-xl-4 col-lg-4 col-md-4 col-sm-5 col-5' style="float:left;"></div>
 			</div>
 		</div>
 	</div>
+</div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1"></div>
 </div>
 <?php
        echo $form->close();

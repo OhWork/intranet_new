@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-md navbar-dark bg-dark col-md-12">
-    <a class="navbar-brand brandedit" href="#" style="margin-right:80%;">
+    <a class="navbar-brand brandedit mr-auto" href="#">
 		<h4 style="font-weight: bold;">Intranet</h4>
 	</a>
 	<div class="dropdown" style="color:#ffffff;">
