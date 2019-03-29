@@ -3,21 +3,24 @@ ob_start();
 session_start();
 ?>
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
-		<title>องค์การสวนสัตว์</title>
+		
+			<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+<title>องค์การสวนสัตว์</title>
 	        <?php include 'inc_js.php';
               include 'form/main_form.php';
               include 'form/gridview.php';
               include 'database/db_tools.php';
               include 'connect.php';
 			?>
-			<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-
 		<link rel="stylesheet" href="CSS/bootstrap.css">
         <link rel="stylesheet" href="CSS/dashboard.css" >
         <link rel="stylesheet" href="CSS/jquery-ui.css">
-        		<link rel="stylesheet" href="CSS/datetime-boostrap4.css">
+        <link rel="stylesheet" href="CSS/datetime-boostrap4.css">
         <link rel="stylesheet" href="CSS/sticky-footer.css">
 <!--         <link rel="stylesheet" href="CSS/dataTables.bootstrap4.css"> -->
 		<link rel="stylesheet" href="CSS/fullcalendar.min.css">
@@ -37,7 +40,7 @@ session_start();
     <![endif]-->
 	</head>
 <body>
-			<nav class="navbar navbar-expand-md navbar-dark bg-dark col-md-12 printdisplaynone">
+			<nav class="navbar navbar-expand-lg navbar-dark bg-dark printdisplaynone">
 				<a class="navbar-brand brandedit" href="#"><h4>องค์การสวนสัตว์ ในพระบรมราชูปถัมภ์</h4></a>
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
@@ -79,8 +82,8 @@ session_start();
 					</div>
 				</div>
 			</div>
-			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-5 printdisplaynone" style="margin-left:15%;">
-				<div class="row">
+			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-5 printdisplaynone">
+				<div class="row d-flex justify-content-center">
 					<div class="indexft"><a href="http://www.zoothailand.org" target="_blank"><img src="images/Logo/ZPO.png"/></a></div>
 					<div class="indexft"><a href="http://www.dusit.zoothailand.org" target="_blank"><img src="images/Logo/Dusitzoo.png"></a></div>
 					<div class="indexft"><a href="http://www.khaokheow.zoothailand.org"><img src="images/Logo/KKOzoo.png"></a></div>

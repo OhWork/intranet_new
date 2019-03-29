@@ -20,15 +20,8 @@
         ?>
     </head>
     <body onload="setDefault()">
-<!--     <body> -->
-        <div class="wrapper">
-            <div class="container">
-				<div class="row">
-                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12"><?php include_once 'cs_menu.php';?></div>
-                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12"><?php include_once 'cs_content.php';?></div>
-				</div>
-     	   </div>
-     	</div>
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12"><?php include_once 'cs_menu.php';?></div>
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12"><?php include_once 'cs_content.php';?></div>
     </body>
     <script type="text/javascript">
 function make_autocom(autoObj,showObj){
