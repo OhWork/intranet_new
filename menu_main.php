@@ -39,21 +39,27 @@
 						<a class="nav-link edittext mucl mucls" id="nav-2-animate-3" href="index.php?url=trs_showallvehicle.php">รายงานจำนวนยานพาหนะ</a>
 	                </ul>
 				</li>
+<!--
 				<li class="nav-item">
 				<a class="nav-link collapsed nav-link-3 edittext mucl" href="#hrs" data-toggle="collapse" data-target="#hrs"><span class="edittext" data-feather="file"></span>ระบบขอหนังสือรับรอง</a>
+-->
                 <!-- sub menu -->
+<!--
 	                <ul class="sub-menu collapse mmpd" id="hrs">
 						<a class="nav-link edittext mucls" id="nav-3-animate-1" href="index.php?url=hrs_add_certificate.php">ขอทำหนังสือรับรอง</a>
 						<a class="nav-link edittext mucl mucls" id="nav-3-animate-2" href="index.php?url=hrs_show_certificate.php">รายการหนังสือรับรอง</a>
 	                </ul>
 				</li>
+-->
 				<!-- end sub menu -->
 				<li class="nav-item">
 				<a class="nav-link collapsed edittext mucl" href="index.php?url=qtn_show_qtnmain.php"><span class="edittext" data-feather="check-square"></span>แบบสอบถาม</a>
 				</li>
+<!--
 				<li class="nav-item">
 				<a class="nav-link collapsed edittext mucl" href="#"><span class="edittext" data-feather="check-square"></span>KM</a>
 				</li>
+-->
             </ul>
         </div>
     </nav>
