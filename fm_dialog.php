@@ -727,7 +727,7 @@ $files=$sorted;
 
 ?>
 <!-- header div start -->
-<div class="navbar1 maa">
+<div class="navbar1">
 	<div class="navbar1-inner" >
 		<div class="container-fluid">
 		<button type="button" class="btn btn-navbar1" data-toggle="collapse" data-target=".nav-collapse">
@@ -744,7 +744,7 @@ $files=$sorted;
 					<input style="margin-top:0px;" type="radio" name="type" id="search_file" class="type" value="1" checked><label style="margin-top:16px;" for="search_file">ค้นหาไฟล์</label>
 					<input style="margin-top:0px;" type="radio" name="type" id="search_folder" class="type" value="2"><label style="margin-top:16px;" for="search_folder">ค้นหาโฟลเดอร์</label>
 					<input type="text" id="searchall" name="searchall" class="form-control" placeholder="ค้นหาไฟล์ที่ต้องการใช้ !" autocomplete="off" style="margin-top:8px; width: 300px; height:30px;">
-					<input class="btn btn-secondary"type="submit" value="ค้นหา" style="margin-top:0px;font-size:14px;padding:5px 8px;">
+					<input class="btn btn-secondary"type="submit" value="ค้นหา" style="margin-top:0px;font-size:14px;padding:5px 8px;color:#fff;">
 					</form>
 				</div>
 			</div>
