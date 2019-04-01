@@ -45,7 +45,7 @@
         <link rel="stylesheet" href="CSS/font-awesome.css">
         </head>
 
-<body>
+<body onload="setDefault()">
     <?php include 'admin_menutop.php';?>
 	<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 		<div class="row">
