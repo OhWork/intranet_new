@@ -20,7 +20,6 @@
     $txtname->value = 'IP-[ว่าง]';
     $txtcomgroup = new textfield('ipzpo_comgroup','','form-control','','');
     $txtcomgroup->value = 'WorkGroup';
-//     $txtdetail = new textfield('ipzpo_detail','','form-control','','');
     $txtdetail = new textarea('ipzpo_detail','form-control','','','','','');
     $selectstatus = new SelectFromDB();
     $selectstatus->name = 'status_status_id';
@@ -44,7 +43,7 @@
 	$selecttools->value = $r['typetools_typetools_id'];
 	$selectstatus->value = $r['status_status_id'];
 	$zoo = $r['subzoo_zoo_zoo_id'];
-    $subzoo = $r['subzoo_subzoo_id'];
+                $subzoo = $r['subzoo_subzoo_id'];
 	}
 ?>
 
@@ -54,13 +53,11 @@
 		function ListSubzoo(SelectValue)
 		{
 			frmMain.ddlSubzoo.length = 0
-// 			frmMain.ddlAmphur.length = 0  (ไม่ใช้)
-
-			//*** Insert null Default Value ***//
+                        
 			var myOption = new Option('โปรดระบุ','')
 			frmMain.ddlSubzoo.options[frmMain.ddlSubzoo.length]= myOption
 
-			<?
+			<?php
 			$intRows = 0;
 			$rs = $db->orderASC('subzoo','subzoo_id')->execute();
 			$intRows = 0;
@@ -81,19 +78,19 @@
 					var myOption = new Option(mySubList[x,0], mySubList[x,2])
 					frmMain.ddlSubzoo.options[frmMain.ddlSubzoo.length]= myOption
 				}
-			<?
+			<?php
 			}
 			?>
 		}
 		function setDefault()
 		{
-			<?
+			<?php
 				/*** ค่า Default ที่ได้จากการจัดเก็บ ***/
 				$strZoo = $zoo;
 				$strSubzoo = $subzoo;
 			?>
 
-				<?
+				<?php
 				/*** Default Zoo  ***/
 				if($strZoo != "")
 				{
@@ -109,11 +106,9 @@
 					}
 
 					ListSubzoo(<?=$strZoo;?>)
-				<?
+				<?php
 				}
-				?>
 
-				<?
 				/*** Default Subzoo  ***/
 				if($strSubzoo != "")
 				{
@@ -127,7 +122,7 @@
 							break;
 						}
 					}
-				<?
+				<?php
 				}
 				?>
 
