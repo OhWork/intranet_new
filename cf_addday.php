@@ -357,7 +357,7 @@
 										<div class='col-md-6 showrequired'>
 											<?php echo $join; ?>
 										</div>
-										<div class='col-md-6 text-danger'>
+										<div class='col-md-6 pt-2 text-danger'>
 											<b><u><?php echo 'สูงสุด '.$r['confer_people'].' คน'; ?></u></b>
 										</div>
 									</div>
