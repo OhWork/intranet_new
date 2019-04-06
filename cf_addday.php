@@ -357,12 +357,12 @@
 										<div class='col-md-6 showrequired'>
 											<?php echo $join; ?>
 										</div>
-										<div class='col-md-6 text-danger'>
+										<div class='col-md-6 pt-2 text-danger'>
 											<b><u><?php echo 'สูงสุด '.$r['confer_people'].' คน'; ?></u></b>
 										</div>
 									</div>
 								</div>
-								<div class="form-check col-md-12 mt-3">
+								<div class="form-check col-md-12 mt-3 pl-3">
 									<div class="cc-selector" style="float:left;">
 										<?php echo $nolcd;?>
 										<?php echo $lbnolcd; ?>
@@ -373,31 +373,7 @@
 										<?php echo $lblcd;?>
 									</div>
 								</div>
-		<!--
-											<div class='col-md-12' style="margin-bottom: 5px;">
-												<div class="row">
-													<div class="cc-selector">
-														<?php echo $nonotebook;?>
-														<?php echo $lbnonotebook; ?>
-														<?php echo $oknotebook; ?>
-														<?php echo $lboknotebook; ?>
-													</div>
-													<?php echo $lbnotebook;?>
-													</div>
-											</div>
-											<div class='col-md-12' style="margin-bottom: 5px;">
-												<div class="row">
-													<div class="cc-selector">
-														<?php echo $nopointer;?>
-														<?php echo $lbnopointer; ?>
-														<?php echo $okpointer; ?>
-														<?php echo $lbokpointer; ?>
-													</div>
-													<?php echo $lbpointer;?>
-												</div>
-											</div>
-		-->
-								<div class='col-md-12' style="margin-bottom: 5px;">
+								<div class='col-md-12 pl-3' style="margin-bottom: 5px;">
 									<div class="cc-selector" style="float:left;">
 										<?php echo $nocooldrink;?>
 										<?php echo $lbnocooldrink; ?>
@@ -408,7 +384,7 @@
 										<?php echo $lbdrinkcold;?>
 									</div>
 								</div>
-								<div class='col-md-12' style="margin-bottom: 5px;">
+								<div class='col-md-12 pl-3' style="margin-bottom: 5px;">
 									<div class="cc-selector" style="float:left;">
 										<?php echo $nohotdrink;?>
 										<?php echo $lbnohotdrink; ?>
@@ -419,7 +395,7 @@
 										<?php echo $lbdrinkhot;?>
 									</div>
 								</div>
-								<div class='col-md-12' style="margin-bottom: 5px;">
+								<div class='col-md-12 pl-3' style="margin-bottom: 5px;">
 									<div class="cc-selector" style="float:left">
 										<?php echo $nocoffeegroup;?>
 										<?php echo $lbnocoffeegroup; ?>
@@ -431,14 +407,14 @@
 									</div>
 								</div>
 								<div class='col-md-12' style="margin-bottom: 5px;">
-									<div class="col-md-6" style="float:left">
+									<div class="col-xl-3 col-lg-4 col-md-6" style="float:left">
 										<?php echo $newmisc;?>
 									</div>
-									<div class="col-md-6" style="padding-left:0px;float:left;">
+									<div class="col-xl-9 col-lg-8 col-md-6 pt-2" style="padding-left:0px;float:left;">
 										<?php echo $lbnum;?>
 									</div>
 								</div>
-								<div class='col-md-12' style="margin-bottom: 5px;">
+								<div class='col-md-12 pl-3' style="margin-bottom: 5px;">
 									<div class="cc-selector" style="float:left">
 										<?php echo $nodishgroup;?>
 										<?php echo $lbnodishgroup; ?>
@@ -450,14 +426,14 @@
 									</div>
 								</div>
 								<div class='col-md-12' style="margin-bottom: 5px;">
-									<div class="col-md-6" style="float:left">
+									<div class="col-xl-3 col-lg-4 col-md-6" style="float:left">
 										<?php echo $newmisc2;?>
 									</div>
-									<div class="col-md-6" style="padding-left:0px;float:left;">
+									<div class="col-xl-9 col-lg-8 col-md-6 pt-2" style="padding-left:0px;float:left;">
 										<?php echo $lbnum;?>
 									</div>
 								</div>
-								<div class='col-md-12' style="margin-bottom: 5px;">
+								<div class='col-md-12 pl-3' style="margin-bottom: 5px;">
 									<div class="cc-selector" style="float:left">
 										<?php echo $notri;?>
 										<?php echo $lbnotri; ?>
@@ -469,10 +445,10 @@
 									</div>
 								</div>
 								<div class='col-md-12' style="margin-bottom: 5px;">
-									<div class="col-md-6" style="float:left;">
+									<div class="col-xl-3 col-lg-4 col-md-6" style="float:left;">
 										<?php echo $newmisc3;?>
 									</div>
-									<div class="col-md1" style="padding-left:0px;float:left;">
+									<div class="col-xl-9 col-lg-8 col-md-6 pt-2" style="padding-left:0px;float:left;">
 										<?php echo $lbnum;?>
 									</div>
 								</div>
@@ -830,3 +806,27 @@ $('#headncf_id').on("change",function(e) {
 
 // ohyea
 </script>
+<!--
+											<div class='col-md-12' style="margin-bottom: 5px;">
+												<div class="row">
+													<div class="cc-selector">
+														<?php echo $nonotebook;?>
+														<?php echo $lbnonotebook; ?>
+														<?php echo $oknotebook; ?>
+														<?php echo $lboknotebook; ?>
+													</div>
+													<?php echo $lbnotebook;?>
+													</div>
+											</div>
+											<div class='col-md-12' style="margin-bottom: 5px;">
+												<div class="row">
+													<div class="cc-selector">
+														<?php echo $nopointer;?>
+														<?php echo $lbnopointer; ?>
+														<?php echo $okpointer; ?>
+														<?php echo $lbokpointer; ?>
+													</div>
+													<?php echo $lbpointer;?>
+												</div>
+											</div>
+		-->

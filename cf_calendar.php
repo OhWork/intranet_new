@@ -239,7 +239,7 @@
 						<h1><center><?php echo $confer;?></center></h1>
 						<div id="calendar" class='mt-5'></div>
 					</div>
-					<input type="text" id="confer_id" value="<?php echo $id;?>">
+					<input type="text" id="confer_id" value="<?php echo $id;?>" style=" visibility: hidden;"/>
 				</div>
 			</div>
 <?php include("cf_viewdetail.php")?>
