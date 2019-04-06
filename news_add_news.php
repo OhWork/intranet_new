@@ -93,9 +93,12 @@
 				<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4" style="padding-right:0px;padding-top:5px;">
 					<?php echo $lbdatestart; ?>
 				</div>
-				<div class='date-form dayinbox col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8 form-horizontal control-group controls input-group'>
-					<div class='input-group date test' id ="datetimepicker1">
-						<?php echo $txtdatestart; ?>
+				<div class='date-form dayinbox col-md-12 form-horizontal control-group controls input-group'>
+					<div class='input-group date' id ="datetimepicker1" data-target-input="nearest">
+						<input type='text' class="form-control datetimepicker-input" name="eventconfer_start" id='date1' readonly/>
+						<div class="input-group-append" data-target="#datetimepicker1" data-toggle="datetimepicker">
+					        <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+					    </div>
 					</div>
 				</div>
 			</div>
@@ -105,9 +108,12 @@
 				<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4" style="padding-right:0px;padding-top:5px;">
 					<?php echo $lbdateend; ?>
 				</div>
-				<div class='date-form dayinbox col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8 form-horizontal control-group controls input-group'>
-					<div class='input-group date test' id ="datetimepicker2">
-						<?php echo $txtdateend; ?>
+				<div class='date-form dayinbox col-md-12 form-horizontal control-group controls input-group'>
+					<div class='input-group date' id ="datetimepicker2" data-target-input="nearest">
+						<input type='text' class="form-control datetimepicker-input" name="eventconfer_end" id='date2' readonly/>
+						<div class="input-group-append" data-target="#datetimepicker2" data-toggle="datetimepicker">
+						     <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+						</div>
 					</div>
 				</div>
 			</div>
