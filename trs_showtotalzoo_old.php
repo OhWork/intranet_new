@@ -72,8 +72,13 @@
 						<div id="searchdaySettings">
 							<div class='row'>
 								<div class='col-md-4' style="float: left;"></div>
-								<div class="date-form dayinbox col-md-4 form-horizontal control-group controls" style="float: left;">
-									<div class="input-group"><?php echo $txtday;?></div>
+								<div class='date-form dayinbox col-md-4 form-horizontal control-group controls input-group'>
+									<div class='input-group date' id ="datetimepicker1" data-target-input="nearest">
+										<input type='text' class="form-control datetimepicker-input" name="eventconfer_start" id='date1' readonly/>
+										<div class="input-group-append" data-target="#datetimepicker1" data-toggle="datetimepicker">
+					                        <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+					                    </div>
+									</div>
 								</div>
 								<div class='col-md-4'style="float: left;"></div>
 							</div>
@@ -225,26 +230,23 @@ if($date){
 			</div>
 		</div>
     <script>
-   $.fn.datepicker.dates['th'] = {
-                                days: ["อาทิตย์", "จันทร์", "อังคาร", "พุธ", "พฤหัส", "ศุกร์", "เสาร์", "อาทิตย์"],
-                                daysShort: ["อา", "จ", "อ", "พ", "พฤ", "ศ", "ส", "อา"],
-                                daysMin: ["อา", "จ", "อ", "พ", "พฤ", "ศ", "ส", "อา"],
-                                months: ["มกราคม", "กุมภาพันธ์", "มีนาคม", "เมษายน", "พฤษภาคม", "มิถุนายน", "กรกฎาคม", "สิงหาคม", "กันยายน", "ตุลาคม", "พฤศจิกายน", "ธันวาคม"],
-                                monthsShort: ["ม.ค.", "ก.พ.", "มี.ค.", "เม.ย.", "พ.ค.", "มิ.ย.", "ก.ค.", "ส.ค.", "ก.ย.", "ต.ค.", "พ.ย.", "ธ.ค."],
-                                today: "วันนี้"
-};
-$( function() {
-   	$('.datetimepicker').datetimepicker({
+	$('#datetimepicker1').datetimepicker({
 		 format: 'YYYY-MM-DD',
-		 minDate: '2016-10-01',
- 		 maxDate: '2017-9-30',
+ 		 minDate: '2017-10-1',
 	     useCurrent: false,
 	     ignoreReadonly: true,
          allowInputToggle: true,
 	     locale:moment.locale('th'),
 //       pickTime: false
         });
-      } );
+        $("#datetimepicker1").on("change.datetimepicker", function (e) {
+             var widget = $(this).find(".bootstrap-datetimepicker-widget");
+                if (widget.length > 0) {
+                    widget.toggle("hide.datetimepicker");
+                    $(this).find(".form-control").blur();
+                }
+
+        });
 </script>
 
 <?php endif;?>
