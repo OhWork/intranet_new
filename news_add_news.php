@@ -11,8 +11,8 @@
     $selecttypenews->name = 'typeNews_typeNews_id';
     $selecttypenews->lists = 'โปรดระบุ ชนิดของข่าวสาร';
     $filepic = new inputFile('news_cover','','cover_new');
-    $txtdatestart = new datetimepicker('newsdatestart','datetimepicker1','','form-control datetimepicker-input','date-form dayinbox col-md-12 form-horizontal control-group controls input-group','input-group date','datetimepicker1','#datetimepicker1','');
-    $txtdateend = new datetimepicker('newsdateend','datetimepicker2','','form-control datetimepicker-input','date-form dayinbox col-md-12 form-horizontal control-group controls input-group','input-group date','datetimepicker2','#datetimepicker2','');
+    $txtdatestart = new datetimepicker('newsdatestart','datetimepicker1','','form-control datetimepicker-input','date-form dayinbox col-md-12 form-horizontal control-group controls input-group','input-group date','datetimepicker1','#datetimepicker1','','');
+    $txtdateend = new datetimepicker('newsdateend','datetimepicker2','','form-control datetimepicker-input','date-form dayinbox col-md-12 form-horizontal control-group controls input-group','input-group date','datetimepicker2','#datetimepicker2','','');
 
     $txtheadnews = new textfield('news_head','','form-control','','');
     $txtdetailnews = new textfield('news_detail','','form-control','','');
@@ -39,37 +39,37 @@
 	    $user_id = $r['user_user_id'];
 		if($r['typeDesignnews_id'] == 1){
 			$radiotypedesign->add(' รูปแบบที่ 1',1,'checked','');
-	    	$radiotypedesign->add(' รูปแบบที่ 2',2,'');
-	    	$radiotypedesign->add(' รูปแบบที่ 3',3,'');
-	    	$radiotypedesign->add(' รูปแบบที่ 4',4,'');
-	    	$radiotypedesign->add(' รูปแบบที่ 5',5,'');
+	    	$radiotypedesign->add(' รูปแบบที่ 2',2,'disabled');
+	    	$radiotypedesign->add(' รูปแบบที่ 3',3,'disabled');
+	    	$radiotypedesign->add(' รูปแบบที่ 4',4,'disabled');
+	    	$radiotypedesign->add(' รูปแบบที่ 5',5,'disabled');
 		}
 		if($r['typeDesignnews_id'] == 2){
-			$radiotypedesign->add(' รูปแบบที่ 1',1,'');
+			$radiotypedesign->add(' รูปแบบที่ 1',1,'disabled');
 	    	$radiotypedesign->add(' รูปแบบที่ 2',2,'checked');
-	    	$radiotypedesign->add(' รูปแบบที่ 3',3,'');
-	    	$radiotypedesign->add(' รูปแบบที่ 4',4,'');
-	    	$radiotypedesign->add(' รูปแบบที่ 5',5,'');
+	    	$radiotypedesign->add(' รูปแบบที่ 3',3,'disabled');
+	    	$radiotypedesign->add(' รูปแบบที่ 4',4,'disabled');
+	    	$radiotypedesign->add(' รูปแบบที่ 5',5,'disabled');
 		}
 		if($r['typeDesignnews_id'] == 3){
-			$radiotypedesign->add(' รูปแบบที่ 1',1,'');
-	    	$radiotypedesign->add(' รูปแบบที่ 2',2,'');
+			$radiotypedesign->add(' รูปแบบที่ 1',1,'disabled');
+	    	$radiotypedesign->add(' รูปแบบที่ 2',2,'disabled');
 	    	$radiotypedesign->add(' รูปแบบที่ 3',3,'checked');
-	    	$radiotypedesign->add(' รูปแบบที่ 4',4,'');
-	    	$radiotypedesign->add(' รูปแบบที่ 5',5,'');
+	    	$radiotypedesign->add(' รูปแบบที่ 4',4,'disabled');
+	    	$radiotypedesign->add(' รูปแบบที่ 5',5,'disabled');
 		}
 		if($r['typeDesignnews_id'] == 4){
-			$radiotypedesign->add(' รูปแบบที่ 1',1,'');
-	    	$radiotypedesign->add(' รูปแบบที่ 2',2,'');
-	    	$radiotypedesign->add(' รูปแบบที่ 3',3,'');
+			$radiotypedesign->add(' รูปแบบที่ 1',1,'disabled');
+	    	$radiotypedesign->add(' รูปแบบที่ 2',2,'disabled');
+	    	$radiotypedesign->add(' รูปแบบที่ 3',3,'disabled');
 	    	$radiotypedesign->add(' รูปแบบที่ 4',4,'checked');
-	    	$radiotypedesign->add(' รูปแบบที่ 5',5,'');
+	    	$radiotypedesign->add(' รูปแบบที่ 5',5,'disabled');
 	    }
 		if($r['typeDesignnews_id'] == 5){
-			$radiotypedesign->add(' รูปแบบที่ 1',1,'');
-	    	$radiotypedesign->add(' รูปแบบที่ 2',2,'');
-	    	$radiotypedesign->add(' รูปแบบที่ 3',3,'');
-	    	$radiotypedesign->add(' รูปแบบที่ 4',4,'');
+			$radiotypedesign->add(' รูปแบบที่ 1',1,'disabled');
+	    	$radiotypedesign->add(' รูปแบบที่ 2',2,'disabled');
+	    	$radiotypedesign->add(' รูปแบบที่ 3',3,'disabled');
+	    	$radiotypedesign->add(' รูปแบบที่ 4',4,'disabled');
 	    	$radiotypedesign->add(' รูปแบบที่ 5',5,'checked');
 		}
     }
@@ -93,14 +93,7 @@
 				<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4" style="padding-right:0px;padding-top:5px;">
 					<?php echo $lbdatestart; ?>
 				</div>
-				<div class='date-form dayinbox col-md-12 form-horizontal control-group controls input-group'>
-					<div class='input-group date' id ="datetimepicker1" data-target-input="nearest">
-						<input type='text' class="form-control datetimepicker-input" name="eventconfer_start" id='date1' readonly/>
-						<div class="input-group-append" data-target="#datetimepicker1" data-toggle="datetimepicker">
-					        <div class="input-group-text"><i class="fa fa-calendar"></i></div>
-					    </div>
-					</div>
-				</div>
+				<?php echo $txtdatestart; ?>
 			</div>
 		</div>
 		<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3">
@@ -108,14 +101,7 @@
 				<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4" style="padding-right:0px;padding-top:5px;">
 					<?php echo $lbdateend; ?>
 				</div>
-				<div class='date-form dayinbox col-md-12 form-horizontal control-group controls input-group'>
-					<div class='input-group date' id ="datetimepicker2" data-target-input="nearest">
-						<input type='text' class="form-control datetimepicker-input" name="eventconfer_end" id='date2' readonly/>
-						<div class="input-group-append" data-target="#datetimepicker2" data-toggle="datetimepicker">
-						     <div class="input-group-text"><i class="fa fa-calendar"></i></div>
-						</div>
-					</div>
-				</div>
+				<?php echo $txtdateend; ?>
 			</div>
 		</div>
 		<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3">

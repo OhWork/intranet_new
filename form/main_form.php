@@ -105,7 +105,7 @@ class datetimepicker{
 		public $nameinput,$id = null,$hold = null,$classinput=null,$classdivoutermost=null,$classdivsub=null,$iddivsub=null,$datatarget = null;
 		public $value=null,$functions=null;
 
-		function __construct($nameinput,$id,$hold,$classinput,$classdivoutermost,$classdivsub,$iddivsub,$datatarget,$labelfor){
+		function __construct($nameinput,$id,$hold,$classinput,$classdivoutermost,$classdivsub,$iddivsub,$datatarget,$labelfor,$value){
 			$this->nameinput = $nameinput;
 			$this->id = $id;
 			$this->hold = $hold;
@@ -114,13 +114,14 @@ class datetimepicker{
 			$this->classdivsub = $classdivsub;
 			$this->iddivsub = $iddivsub;
 			$this->datatarget = $datatarget;
+			$this->value = $value;
 
 
 		}
 		function __toString(){
 			return "<div class='{$this->classdivoutermost}'>
 						<div class='{$this->classdivsub}' id ='{$this->iddivsub}' data-target-input='nearest'>
-							<input type='text' class='{$this->classinput}' name='{$this->nameinput}' id='{$this->id}' placeholder='{$this->hold}' readonly/>
+							<input type='text' class='{$this->classinput}' name='{$this->nameinput}' id='{$this->id}' placeholder='{$this->hold}' value='{$this->value}' readonly/>
 							<div class='input-group-append' data-target='{$this->datatarget}' data-toggle='datetimepicker'>
 					            <div class='input-group-text'><i class='fa fa-calendar'></i></div>
 					        </div>
@@ -280,7 +281,7 @@ class datetimepicker{
 			$this->items[count($this->items)] = array(
 			'label'=>$label,
 			'value'=>$value,
-			'checked'=>$checked
+			'checked'=>$checked,
 			);
 		}
 		function edit($key,$label,$value,$checked){
@@ -288,7 +289,7 @@ class datetimepicker{
 			$this->items[$key] = array(
 				'label'=>$label,
 				'value'=>$value,
-				'checked'=>$checked
+				'checked'=>$checked,
 			);
 		}
 }
