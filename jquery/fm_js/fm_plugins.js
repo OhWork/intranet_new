@@ -4510,7 +4510,7 @@ var bootbox = window.bootbox || (function(document, $) {
                 _class = handlers[i]['class'];
             } else if (i == handlers.length -1 && handlers.length <= 2) {
                 // always add a primary to the main option in a two-button dialog
-                _class = 'btn-primary';
+                _class = 'btn-primary disabled';
             }
 
             if (handlers[i]['link'] !== true) {
@@ -4534,7 +4534,7 @@ var bootbox = window.bootbox || (function(document, $) {
                 href = _defaultHref;
             }
 
-            buttons = "<a data-handler='"+i+"' class='"+_class+"' href='" + href + "'>"+icon+""+label+"</a>" + buttons;
+            buttons = "<a data-handler='"+i+"' class='"+_class+"' id='1' href='" + href + "'>"+icon+""+label+"</a>" + buttons;
 
             callbacks[i] = callback;
         }
@@ -4560,7 +4560,7 @@ var bootbox = window.bootbox || (function(document, $) {
         parts.push("<div class='modal-body'></div>");
 
         if (buttons) {
-            parts.push("<div class='modal-footer'><div id='textshowalert' class='text-danger' style='float:left;'><p id='textshow'>มีโฟลเดอร์นี้อยู่แล้วในระบบ</p></div>"+buttons+"</div>");
+            parts.push("<div class='modal-footer'><button id='checkname' class='btn btn-warning' onclick='getDataFromDb()'>ตรวจสอบ</button><div id='textshowalert' class='text-danger' style='float:left;'><p id='textshow'>กรุณาคลิกปุ่มตรวจสอบก่อน</p></div>"+buttons+"</div>");
         }
 
         parts.push("</div>");

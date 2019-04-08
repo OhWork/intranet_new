@@ -1387,7 +1387,7 @@ else{
 		if(isAndroid) {
 			$('li').draggable({ disabled: false });
 		}
-		$('#textshow').hide();
+	$("#1").attr("disabled", true);
 	function getDataFromDb(){
 				$.ajax({
 				url: "fm_execute.php?action=check_folder",
@@ -1395,22 +1395,16 @@ else{
 				data:  {folder_name: $('#folder_name').val(),path : $('#cur_dir').val()},
 				success: function(data) {
 					if(data != ''){
-						$('#textshow').show();
-/*
-						if($('#textshow').text() != ''){
-						}else{
-// 							$('#textshowalert').append( "<p id='textshow'>มีโฟลเดอร์นี้อยู่แล้วในระบบ</p>" ).addClass('text-danger');
-						}
-*/
-					$('.btn-primary').addClass('disabled');
+						$('#textshow').text('ชื่อโฟลเดอร์นี้มีอยู่ในระบบแล้ว');
+						$('.btn-primary').addClass('disabled');
 					}else{
-					$('#textshow').hide();
-					$('.btn-primary').removeClass('disabled');
+						$('#textshow').text('');
+						$('.btn-primary').removeClass('disabled');
 					}
 				}
 			});
 		}
-		setInterval(getDataFromDb, 1000);
+//
 	</script>
 </body>
 </html>
