@@ -46,10 +46,10 @@
 
 			$grid = new gridView();
 				$grid->pr = 'news_id';
+				$grid->newdesign = 'typeDesignnews_id';
 				$grid->header = array('<b><center>หัวข้อข่าว</center></b>','<b><center>วันที่เริ่ม</center></b>','<b><center>วันที่สิ้นสุด</center></b>','<b><center>ผู้ลงข่าว</center></b>','<b><center>#</center></b>');
 				$grid->width = array('15%','14%','14%','14%','5%');
 				$grid->editdrop = 'admin_index.php?url=news_add_news.php';
-				$grid->editdrop2 = 'admin_index.php?url='.$design.'.php';
 				$grid->name = 'table';
 				$grid->edittxt ='แก้ไข';
 				$grid->editextsup ='แก้ไขหัวข้อข่าว';

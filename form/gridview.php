@@ -2,7 +2,7 @@
 include_once 'change2thaidate.php';
 error_reporting(E_ERROR | E_WARNING | E_PARSE);
 class gridView{
-	public $name,$data,$delete,$edit,$view,$deletetxt,$edittxt,$printtxt,$viewtxt,$header,$width,$pr,$change,$changestatus,$sts,$sts_hrs,$span,$link,$special,$system,$editdrop,$editdrop2,$editextsup,$editextsup2;
+	public $name,$data,$delete,$edit,$view,$deletetxt,$edittxt,$printtxt,$viewtxt,$header,$width,$pr,$change,$changestatus,$sts,$sts_hrs,$span,$link,$special,$system,$editdrop,$editdrop2,$editextsup,$editextsup2,$newdesign;
 
 
 	function __construct(){
@@ -139,14 +139,17 @@ class gridView{
                 @$status = $r[$this->sts];
                 @$status_hrs = $r[$this->sts_hrs];
                 @$status_plan = $r[$this->sts_plan];
-			/* ส่วนตรวจสอบค่า */
+                @$newdesign = $r[$this->newdesign];
+			/* ส่วนตรวจสอบค่าสถานะของแจ้งซ่อมออนไลน์*/
             @$con = mysqli_connect("localhost","root","","intranet");
 			@$sql = "SELECT * FROM problem WHERE problem_id = $id"; //ไว้แก้ เปลี่ยนสเตตัส
 			@$sqlhrs = "SELECT * FROM hrctf WHERE hrctf_id = $id"; //ไว้แก้ เปลี่ยนสเตตัส
 			@$sqlplan = "SELECT * FROM plan WHERE plan_id = $id"; //ไว้แก้ เปลี่ยนสเตตัส
+			@$sqlnew = "SELECT * FROM news WHERE news_id = $id"; //ไว้แก้ เปลี่ยนสเตตัส
 			@$query= mysqli_query($con,$sql);
 			@$queryhrs= mysqli_query($con,$sqlhrs);
 			@$queryplan= mysqli_query($con,$sqlplan);
+			@$querynew= mysqli_query($con,$sqlnew);
 			if(!empty($query)){
 			@$rs_c = mysqli_fetch_array($query,MYSQLI_ASSOC);
 			}
@@ -155,6 +158,9 @@ class gridView{
 			}
 			if(!empty($queryhrs)){
 			@$rs_hrs = mysqli_fetch_array($queryhrs,MYSQLI_ASSOC);
+			}
+			if(!empty($querynew)){
+			@$rs_new = mysqli_fetch_array($querynew,MYSQLI_ASSOC);
 			}
 			if(@$status){
 				 if(@$rs_c["problem_status"]=='Y')
@@ -216,7 +222,27 @@ class gridView{
 					$this->changetxt = '&nbsp;ไม่ใช้งาน';
 				}
 			}
-
+			if(@$newdesign){
+				 if(@$rs_new["typeDesignnews_id"]== 1)
+				{
+					$this->editdrop2 ='admin_index.php?url=news_formdesign1.php';
+				}
+				else if(@$rs_new["typeDesignnews_id"]== 2)
+				{
+					$this->editdrop2 ='admin_index.php?url=news_formdesign2.php';
+				}
+				else if(@$rs_new["typeDesignnews_id"]== 3)
+				{
+					$this->editdrop2 ='admin_index.php?url=news_formdesign3.php';
+				}else if(@$rs_new["typeDesignnews_id"]== 4)
+				{
+					$this->editdrop2 ='admin_index.php?url=news_formdesign4.php';
+				}
+				else if(@$rs_new["typeDesignnews_id"]== 5)
+				{
+					$this->editdrop2 ='admin_index.php?url=news_formdesign5.php';
+				}
+			}
 
 			if($this->view !=""){
 				$body .="
@@ -247,7 +273,7 @@ class gridView{
 			}
 
 			if($this->editdrop !=""){
-
+				
 				$body .="
 				<td>
 					<div class='dropdown'>
