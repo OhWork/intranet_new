@@ -11,19 +11,40 @@ if (!empty($_SESSION['user_name'])):
   $txtpass_confirm = new pass('user_pass_confirm','form-control','','user_pass_confirm');
   echo $form->open("form_reg","frmMain","col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","user_change_password.php","");
   ?>
-                    <div class="row">
-			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-2" style="border-bottom:solid 1px #E0E0E0;">
+<div class="row">
+	<div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3"></div>
+	<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6 mt-3 pt-2 csborder">
+		<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-2" style="border-bottom:solid 1px #E0E0E0;">
+			<div class="row">
 				<h4>เปลี่ยนรหัสผ่าน</h4>
 			</div>
-                    </div>
-
-<?php
-    echo $lboldpass;
-    echo $txtoldpass;
-    echo $lbpass;
-    echo $txtpass;
-    echo $lbpasscon;
-    echo $txtpass_confirm;
-    echo $submit;
-    echo $form->close();
+		</div>
+		<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3">
+			<?php echo $lboldpass;?>
+		</div>
+		<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+			<?php echo $txtoldpass;?>
+		</div>
+		<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3">
+			<?php echo $lbpass;?>
+		</div>
+		<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+			<?php echo $txtpass;?>
+		</div>
+		<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3">
+			<?php echo $lbpasscon;?>
+		</div>
+		<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+			<?php echo $txtpass_confirm;?>
+		</div>
+		<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3 pb-3">
+			<div class="row">
+				<div class='col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4'></div>
+				<div class='col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4'>
+					<?php echo $submit;?>
+				</div>
+				<div class='col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4'></div>
+			</div>
+		</div>
+<?php    echo $form->close();
     endif; ?>

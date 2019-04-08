@@ -219,5 +219,5 @@
 			<div class='getdetialfooter'>
 				<a href="cs_report.php?id=<?php echo $id;?>"><button type="button" class="btn btn-primary formgetfixdetial"><img src="images/icons/print.png" style="width:16px; height:16px;"></a>
 			</div>
-			<button type="button" class="close btclose" data-dismiss="modal" aria-label="Close"><span class="btn btn-danger" aria-hidden="true" style="padding: 2.5px 14px 5.5px 14px">&times;</span></button>
+			<button type="button" class="close btclose" data-dismiss="modal" aria-label="Close"><span class="btn btn-danger" aria-hidden="true">&times;</span></button>
 		</div>
