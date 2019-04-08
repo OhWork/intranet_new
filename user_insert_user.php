@@ -8,10 +8,8 @@
         <link rel="stylesheet" href="CSS/main.css">
 	</head>
 <?php
-    include 'database/db_tools.php';
+        include 'database/db_tools.php';
 	include 'connect.php';
-
-	print_r($_POST);
 	if(!empty($_POST['user_id'])){
 
 		$data['user_name'] = $_POST['user_name'];
