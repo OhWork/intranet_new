@@ -13,7 +13,6 @@
 	                </a>
 	                 <ul class="sub-menu collapse" id="newsetting1">
 				          <a class="nav-link edittext mucl" id="nav-24-animate-1" href="admin_index.php?url=news_show_typenews.php"><span data-feather="chevron-right"></span>จัดการชนิดช่าวสาร</a>
-				          <a class="nav-link edittext mucl" id="nav-24-animate-2" href="admin_index.php?url=news_show_typeDesign.php"><span data-feather="chevron-right"></span>จัดการชนิดรูปแบบ</a>
 		             </ul>
               </ul>
               <!-- end sub menu -->
