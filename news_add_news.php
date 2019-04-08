@@ -72,6 +72,7 @@
 	    	$radiotypedesign->add(' รูปแบบที่ 4',4,'disabled');
 	    	$radiotypedesign->add(' รูปแบบที่ 5',5,'checked');
 		}
+    $button = new buttonok("บันทึก","","btn btn-success btn-lg btn-block bt3success col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","");
     }
     echo $form->open("form_reg","form","col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","news_insert_news.php","");
 ?>

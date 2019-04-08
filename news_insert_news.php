@@ -75,19 +75,8 @@
             $link = "admin_index.php?url=news_formdesign5.php&id=$idnew";
     	    }
     	}else if(@$rsfix){
-            echo "<div class='statusok'>แก้ไขแล้ว กำลังไปหน้าถัดไป </div>";
-            if($_POST['typeDesignnews_id'] == 1 ){
-    	    $link = "admin_index.php?url=news_formdesign1.php&id=$id";
-    	    }else if($_POST['typeDesignnews_id'] == 2 ){
-            $link = "admin_index.php?url=news_formdesign2.php&id=$id";
-    	    }else if($_POST['typeDesignnews_id'] == 3 ){
-            $link = "admin_index.php?url=news_formdesign3.php&id=$id";
-    	    }else if($_POST['typeDesignnews_id'] == 4 ){
-            $link = "admin_index.php?url=news_formdesign4.php&id=$id";
-    	    }else if($_POST['typeDesignnews_id'] == 5 ){
-            $link = "admin_index.php?url=news_formdesign5.php&id=$id";
+            $link = "admin_index.php?url=news_show_news.php";
     	    }
-        }
 //             $link = "url=admin_index.php?url=admin_news_index.php&user_id=".$_POST['user_user_id'];
             header( "Refresh: 1; $link" );
 }

@@ -6,7 +6,7 @@ if (!empty($_SESSION['user_name'])):
   $lbpass = new label("รหัสผ่าน");
   $lbpasscon = new label("ยืนยันรหัสผ่าน");
   $submit = new buttonok("ยืนยัน","btnSubmit","btn btn-success col-md-12","");
-  $txtoldpass = new pass('user_pass','form-control','','user_pass');
+  $txtoldpass = new pass('user_pass','form-control','','user_passold');
   $txtpass = new pass('user_pass','form-control','','user_pass');
   $txtpass_confirm = new pass('user_pass_confirm','form-control','','user_pass_confirm');
   echo $form->open("form_reg","frmMain","col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","user_change_password.php","");
@@ -25,6 +25,7 @@ if (!empty($_SESSION['user_name'])):
 		<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 			<?php echo $txtoldpass;?>
 		</div>
+		<div id="msg" class="col-md-12 form-group" style="text-align:center;padding-top:10px;"></div>
 		<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3">
 			<?php echo $lbpass;?>
 		</div>
@@ -37,6 +38,7 @@ if (!empty($_SESSION['user_name'])):
 		<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 			<?php echo $txtpass_confirm;?>
 		</div>
+		<div id="msg2" class="col-md-12 form-group" style="text-align:center;padding-top:10px;"></div>
 		<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3 pb-3">
 			<div class="row">
 				<div class='col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4'></div>
@@ -48,3 +50,31 @@ if (!empty($_SESSION['user_name'])):
 		</div>
 <?php    echo $form->close();
     endif; ?>
+    <script>
+    	$("#user_passold").blur(function(){
+	    $.ajax({
+            url: "user_checkpass.php",
+            data: {passold : $('#user_passold').val() , userid :<?php echo $_SESSION['user_id'];?>},
+            type: "POST",
+            success: function(data) {
+                if(data == "รหัสผ่านเดิมไม่ตรงกับที่ท่านเคยสมัครไว้"){
+				$("#msg").html('<span class="text-danger">รหัสผ่านเดิมไม่ตรงกับที่ท่านเคยสมัครไว้</span>');
+                }else{
+	                $("#msg").html('<span class="text-success">รหัสผ่านเดิมตรงกับที่ท่านเคยสมัครไว้</span>');
+                }
+            }
+        });
+	});
+	$('#user_pass_confirm').focusout(function(){
+	    var passcon =  $('#user_pass_confirm').val();
+	    var pass = $('#user_pass').val();
+	    if(pass == passcon){
+		   $("#msg2").html('<span class="text-success">รหัสผ่านตรงกัน</span>');
+ 		   $("#btnSubmit").attr("disabled", false);
+	    }
+	    else{
+		   $("#msg2").html('<span class="text-danger">รหัสผ่านไม่ตรงกัน</span>');
+ 		   $("#btnSubmit").attr("disabled", true);
+	    }
+    });
+    </script>
