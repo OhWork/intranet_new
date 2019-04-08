@@ -198,7 +198,7 @@
 				</div>
 				<input type='hidden' name='log_user' value='<?php echo $log_user; ?>'/>
 				<input type='hidden' name='ipzpo_id' value="<?php echo $_GET['id']; ?>"/>
-				<div class='col-md-12' style="padding-bottom: 16px;">
+				<div class='col-md-12 mt-3 pb-3'>
 					<div class="row">
 						<div class='col-md-4'></div>
 						<div class='col-md-4'><?php echo $button ?></div>
