@@ -16,7 +16,7 @@
 		</div>
 		<div class="dropdown-menu" aria-labelledby="dropownMenuButton" style="left:2px;background-color:#455A64;">
 			<a class="dropdown-item" href="#" style="color:#B0BEC5;">ประวัติ</a>
-			<a class="dropdown-item" href="#" style="color:#B0BEC5;">เปลี่ยนรหัสผ่าน</a>
+			<a class="dropdown-item" href="admin_index.php?url=user_change_password.php" style="color:#B0BEC5;">เปลี่ยนรหัสผ่าน</a>
 			<a class="dropdown-item" href="#" style="border-bottom:1px solid #ffffff;color:#B0BEC5;">แก้ไขบัญชีส่วนตัว</a>
 			<a class="dropdown-item" href="logout.php" style="color:#17a2b8;"><span data-feather="list"></span> ช่วยเหลือ</a>
 			<a class="dropdown-item" href="logout.php" style="color:#dc3545;"><span data-feather="log-out"></span> ออกจากระบบ</a>
