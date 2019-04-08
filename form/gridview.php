@@ -2,7 +2,7 @@
 include_once 'change2thaidate.php';
 error_reporting(E_ERROR | E_WARNING | E_PARSE);
 class gridView{
-	public $name,$data,$delete,$edit,$view,$deletetxt,$edittxt,$printtxt,$viewtxt,$header,$width,$pr,$change,$changestatus,$sts,$sts_hrs,$span,$link,$special,$system;
+	public $name,$data,$delete,$edit,$view,$deletetxt,$edittxt,$printtxt,$viewtxt,$header,$width,$pr,$change,$changestatus,$sts,$sts_hrs,$span,$link,$special,$system,$editdrop,$editdrop2,$editextsup,$editextsup2;
 
 
 	function __construct(){
@@ -246,7 +246,19 @@ class gridView{
 				</td>";
 			}
 
+			if($this->editdrop !=""){
 
+				$body .="
+				<td>
+					<div class='dropdown'>
+						<button class='btn btn-warning dropdown-toggle' type='button' id='dropdownMenuButton' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>{$this->edittxt}</button>
+							<div class='dropdown-menu' aria-labelledby='dropdownMenuButton'>
+								<a class='dropdown-item' href='{$this->editdrop}&id={$id}'>{$this->editextsup}</a>
+								<a class='dropdown-item' href='{$this->editdrop2}&id={$id}'>{$this->editextsup2}</a>
+							</div>
+					</div>
+				</td>";
+			}
 
 				$body.="</td>";
 			}

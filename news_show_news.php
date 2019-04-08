@@ -27,17 +27,35 @@
 		</div>
 		<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-1">
 			<?php
-			$rs = $db->findByPK21DESC('news','user','user_user_id','user_id','news_id')->execute();
-            $columns = array('news_head','news_date','user_name');  
+		    $rs2 = $db->findByPK21DESC('news','user','user_user_id','user_id','news_id')->execute();
+			foreach($rs2 as $shownewsearch){
+				if($shownewsearch['typeDesignnews_id'] == 1){
+					$design = "news_formdesign1";
+				}else if($shownewsearch['typeDesignnews_id'] == 2){
+					$design = "news_formdesign2";
+				}else if($shownewsearch['typeDesignnews_id'] == 3){
+					$design = "news_formdesign3";
+				}else if($shownewsearch['typeDesignnews_id'] == 4){
+					$design = "news_formdesign4";
+				}else if($shownewsearch['typeDesignnews_id'] == 5){
+					$design = "news_formdesign5";
+				}
+			}
+		    $rs = $db->findByPK21DESC('news','user','user_user_id','user_id','news_id')->execute();
+             $columns = array('news_head','news_datestart','news_dateend','typeDesignnews_id','user_name');
 
 			$grid = new gridView();
 				$grid->pr = 'news_id';
-				$grid->header = array('<b><center>หัวข้อข่าว</center></b>','<b><center>วันที่</center></b>','<b><center>ผู้ลงข่าว</center></b>','<b><center>#</center></b>');
-				$grid->width = array('15%','14%','14%','5%');
-				$grid->edit = 'admin_index.php?url=news_add_news.php';
+				$grid->header = array('<b><center>หัวข้อข่าว</center></b>','<b><center>วันที่เริ่ม</center></b>','<b><center>วันที่สิ้นสุด</center></b>','<b><center>ผู้ลงข่าว</center></b>','<b><center>#</center></b>');
+				$grid->width = array('15%','14%','14%','14%','5%');
+				$grid->editdrop = 'admin_index.php?url=news_add_news.php';
+				$grid->editdrop2 = 'admin_index.php?url='.$design.'.php';
 				$grid->name = 'table';
 				$grid->edittxt ='แก้ไข';
-				$grid->renderFromDB($columns,$rs);		?>
+				$grid->editextsup ='แก้ไขหัวข้อข่าว';
+				$grid->editextsup2 ='แก้ไขแก้ไขรายละเอียดข่าว';
+				$grid->renderFromDB($columns,$rs);
+				?>
 		</div>
 	</div>
 </div>

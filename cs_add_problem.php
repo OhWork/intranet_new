@@ -10,12 +10,13 @@
     $lbtime = new label('วันที่และเวลาแจ้ง');
     $lbtypetools = new label('ชนิดของอุปกรณ์');
     $txtwork = new textfield('problem_work','problem_work','form-control','','');
-    $txtdatestart = new datetimepicker('problem_date','datetimepicker1','','form-control datetimepicker-input','date-form dayinbox col-md-12 form-horizontal control-group controls input-group','input-group date','datetimepicker1','#datetimepicker1','');
+     $txtdatestart = new datetimepicker('problem_date','datetimepicker1','','form-control datetimepicker-input','date-form dayinbox col-md-12 form-horizontal control-group controls input-group','input-group date','datetimepicker1','#datetimepicker1','','');
+
     $year = date("Y")+543;
     $md = date("m-d");
     $time = date("H:i");
     @$id = $_GET['id'];
-    $txttime->value = $year."-".$md." ".$time;
+//     $txttime->value = $year."-".$md." ".$time;
     $txtcall = new textfield('problem_tel','','form-control','','');
     $txtposition = new textfield('problem_position','problem_position','form-control','','');
     $txtdetail = new textarea('problem_detail','aprob','','','','','');
@@ -253,10 +254,7 @@
 								<label><?php echo $lbtime; ?></label>
 							</div>
 							<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 form-group input-group date test'>
-								<div class='input-group date' id='datetimepicker1'>
-									<input type='text' class="form-control" name="problem_date"  id='date1' readonly/>
-									<span class="input-group-addon btn calen"><span class="glyphicon glyphicon-calendar"></span></span>
-								</div>
+								<?php echo $txtdatestart;?>
 							</div>
 							<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 								<label><?php echo $lbcall; ?></label>
@@ -327,12 +325,11 @@ $( document ).ready( function () {
 		$('#datetimepicker1').datetimepicker({
 	        format:'YYYY-MM-DD H:mm',
 	        useCurrent: false,
-	        sideBySide: true,
-            allowInputToggle: true,
-	        defaultDate: moment().add(543, 'year'),
 	        ignoreReadonly: true,
-	        showClose:true,
-	        locale:moment.locale('th')
+            sideBySide: true,
+            allowInputToggle: true,
+	        locale:moment.locale('th'),
+	        stepping: 30
         });
 		 $("#datetimepicker1").on("change.datetimepicker", function (e) {
             $('#datetimepicker2').datetimepicker('minDate', e.date);

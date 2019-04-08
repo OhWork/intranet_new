@@ -35,9 +35,9 @@
     $txtyearonly = new textfield('yearonly','','form-control css-require','','');
     $txtyearqua = new textfield('yearqua','','form-control css-require','','');
     $txtyearmonth = new textfield('yearmonth','','form-control css-require','','');
-    $textday = new datetimepicker('date','date','','form-control datetimepicker-input','date-form dayinbox col-md-12 form-horizontal control-group controls input-group','input-group date','datetimepicker1','#datetimepicker1','');
-    $texttwoday = new datetimepicker('date2_1','date2_1','','form-control datetimepicker-input','date-form dayinbox col-md-12 form-horizontal control-group controls input-group','input-group date','datepicker2','#datepicker2','');
-    $texttwoday2 = new datetimepicker('date2_2','date2_2','','form-control datetimepicker-input','date-form dayinbox col-md-12 form-horizontal control-group controls input-group','input-group date','datepicker3','#datepicker3','');
+    $textday = new datetimepicker('date','date','','form-control datetimepicker-input','date-form dayinbox col-md-12 form-horizontal control-group controls input-group','input-group date','datetimepicker1','#datetimepicker1','','');
+    $texttwoday = new datetimepicker('date2_1','date2_1','','form-control datetimepicker-input','date-form dayinbox col-md-12 form-horizontal control-group controls input-group','input-group date','datepicker2','#datepicker2','','');
+    $texttwoday2 = new datetimepicker('date2_2','date2_2','','form-control datetimepicker-input','date-form dayinbox col-md-12 form-horizontal control-group controls input-group','input-group date','datepicker3','#datepicker3','','');
     $txtyear = new textfield('year','','form-control css-require','','');
     $selectmonth = new selectMenu();
     $selectmonth->name = "month";
