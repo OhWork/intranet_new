@@ -41,18 +41,7 @@
         	));
 
 	}else{
-//     $rsa = $db->insert('systemallow',array(
-// 	'systemallow_service' => $_POST['systemallow_service'],
-// 	'systemallow_news' => $_POST['systemallow_news'],
-// 	'systemallow_confer' => $_POST['systemallow_confer'],
-// 	'systemallow_admin' => $_POST['systemallow_admin'],
-// 	'systemallow_touristreport' => $_POST['systemallow_touristreport'],
-// 	'systemallow_hrs' => $_POST['systemallow_hrs'],
-// 	'systemallow_drive' => $_POST['systemallow_drive']
-// 	));
-//
-// 	$last_id = $db->specifytable2('systemallow_id','systemallow','ORDER BY systemallow_id DESC LIMIT 0 , 1')->executeAssoc();
-// 	if($last_id){
+
     $rs = $db->insert('user',array(
     'user_name' => $_POST['user_name'],
     'user_last' => $_POST['user_last'],
