@@ -641,7 +641,6 @@ if (isset($_GET['action']))
  			$selectid = $db->findByPK('folder','folder_name',"'$show_path[0]'")->executeAssoc();
  			$showid = $selectid['folder_id'];
 			$rsselect = @$db->findByPK12('folder','folder_name',"'$namefolder'",'folder_position',$showid)->executeAssoc();
-			print_r($rsselect);
 			if($rsselect['folder_name'] != ''){
 				echo "ชื่อโฟล์เดอร์ซ้ำ";
 			}
