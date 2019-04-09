@@ -28,7 +28,7 @@
 		<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-1">
 			<?php
 		    $rs = $db->findByPK21DESC('news','user','user_user_id','user_id','news_id')->execute();
-             $columns = array('news_head','news_datestart','news_dateend','user_name');
+                                    $columns = array('news_head','news_datestart','news_dateend','user_name');
 
 			$grid = new gridView();
 				$grid->pr = 'news_id';

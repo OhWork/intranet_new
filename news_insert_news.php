@@ -44,8 +44,8 @@
 		$selectidvideo = $db->findAllDESC('newsVideo','newsVideo_id')->executeAssoc();
 		$rs = $db->insert('news',array(
 		'news_head' => $_POST['news_head'],
-		'news_datestart' => $_POST['newsdatestart'],
-		'news_dateend' => $_POST['newsdateend'],
+		'news_datestart' => $_POST['news_datestart'],
+		'news_dateend' => $_POST['news_dateend'],
 		'news_cover' => basename($_FILES['news_cover']['name']),
 		'news_dateupdate' => $_POST['news_date'],
 		'typeNews_typeNews_id' => $_POST['typeNews_typeNews_id'],
