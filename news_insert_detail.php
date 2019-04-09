@@ -1,10 +1,9 @@
 <?php
 	ob_start();
 	session_start();
-// 	error_reporting(E_ERROR | E_WARNING | E_PARSE);
+	error_reporting(E_ERROR | E_WARNING | E_PARSE);
     include 'database/db_tools.php';
 	include 'connect.php';
-	print_r($_POST);
 	@$id = $_POST['new_id'];
 	@$text = $_POST['text'];
 	@$form_design = $_POST['form_design'];
