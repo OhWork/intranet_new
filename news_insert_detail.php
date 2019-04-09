@@ -5,10 +5,10 @@
     include 'database/db_tools.php';
 	include 'connect.php';
 	print_r($_POST);
-	$id = $_POST['new_id'];
-	$text = $_POST['text'];
-	$form_design = $_POST['form_design'];
-	$lastiddetail =$_POST['last_detail_id'];
+	@$id = $_POST['new_id'];
+	@$text = $_POST['text'];
+	@$form_design = $_POST['form_design'];
+	@$lastiddetail =$_POST['last_detail_id'];
 	if($text == ''){
 		if(!empty($_POST['last_detail_id'])){
 
@@ -62,7 +62,7 @@
 		}
 	}
 	else{
-		$rsshowdetail = $db->findByPK('newsDetails','newsDetails_id',$_POST['last_detail_id'])->executeAssoc();
+		$rsshowdetail = $db->findByPK('newsdetails','newsDetails_id',$_POST['last_detail_id'])->executeAssoc();
 		if(!empty($_POST['last_detail_id'])){
 			if($form_design == 4){
 				$rsshowdetail2 = $db->findByPK('newsDetails','newsDetails_connect',$_POST['new_id'])->execute();
