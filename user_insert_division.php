@@ -35,7 +35,7 @@
     	}else if($rsfix){
             echo "<div class='statusok'>แก้ไขสำเร็จ</div>";
         }
-            $link = "url=admin_index.php?url=user_add_division.php";
+            $link = "url=admin_index.php?url=user_show_division.php";
             header( "Refresh: 2; $link" );
 }else{
             echo "ข้อมูลไม่เข้าฐานข้อมูล";
