@@ -60,6 +60,9 @@
 				<a class="nav-link collapsed edittext mucl" href="#"><span class="edittext" data-feather="check-square"></span>KM</a>
 				</li>
 -->
+<li class="nav-item">
+				<a class="nav-link collapsed edittext mucl" href="index.php?url=qrcode/index.php"><span class="edittext" data-feather="check-square"></span>QR</a>
+				</li>
             </ul>
         </div>
     </nav>
