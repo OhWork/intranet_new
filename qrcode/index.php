@@ -22,8 +22,8 @@
  * Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA
  */
 ?>
-<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1"></div>
-<div class="col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10">
+<div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2"></div>
+<div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8 mt-3">
 	<div class="row">
 		<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 			<h4>PHP QR Code</h4>
@@ -74,26 +74,48 @@
 			}
 			//config form
 		?>
-		<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 		<?php
-			echo '<form action="index.php?url=qrcode/index.php" method="post">
-				กรุณาใส่(www.xxxxxx.com):&nbsp;<input name="data" value="'.(isset($_REQUEST['data'])?htmlspecialchars($_REQUEST['data']):'PHP QR Code :)').'" />&nbsp;
-				เลือกคุณภาพ:&nbsp;<select name="level">
-					<option value="L"'.(($errorCorrectionLevel=='L')?' selected':'').'>L - smallest</option>
-					<option value="M"'.(($errorCorrectionLevel=='M')?' selected':'').'>M</option>
-					<option value="Q"'.(($errorCorrectionLevel=='Q')?' selected':'').'>Q</option>
-					<option value="H"'.(($errorCorrectionLevel=='H')?' selected':'').'>H - best</option>
-				</select>&nbsp;
-				ขนาดระดับ:&nbsp;<select name="size">';
+			echo '<form class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" action="index.php?url=qrcode/index.php" method="post">
+				<div class="row">
+				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+					กรุณาใส่(www.xxxxxx.com)
+				</div>
+				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3">
+					<input class="form-control" name="data" value="'.(isset($_REQUEST['data'])?htmlspecialchars($_REQUEST['data']):'PHP QR Code :)').'" />
+				</div>
+				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3">
+					<div class="row">
+						<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6">
+								<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 pl-0">
+									เลือกคุณภาพ
+								</div>				
+								<select class="form-control col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3" name="level">
+									<option value="L"'.(($errorCorrectionLevel=='L')?' selected':'').'>L - smallest</option>
+									<option value="M"'.(($errorCorrectionLevel=='M')?' selected':'').'>M - middle</option>
+									<option value="Q"'.(($errorCorrectionLevel=='Q')?' selected':'').'>Q - quality</option>
+									<option value="H"'.(($errorCorrectionLevel=='H')?' selected':'').'>H - hight quality</option>
+								</select>
+						</div>
+						<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6">
+									<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 pl-0">
+										ขนาดระดับ
+									</div>
+						<select class="form-control col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3" name="size">';
 
 			for($i=1;$i<=10;$i++)
 				echo '<option value="'.$i.'"'.(($matrixPointSize==$i)?' selected':'').'>'.$i.'</option>';
 
-			echo '</select>&nbsp;
-				<input type="submit" value="GENERATE"></form><hr/>';
+					echo '</select>
+						</div>
+					</div>
+				</div>
+				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3" align="center">
+					<input class="btn btn-secondary" type="submit" value="GENERATE">
+				</div>
+			</div>
+			</form><hr/>';
 		?>
-		</div>
-		<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" align="center">
+		<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3" align="center">
 		<?php
 			//display generated file
 			echo '<img src="qrcode/'.$PNG_WEB_DIR.basename($filename).'" />';
@@ -104,4 +126,4 @@
 		</div>
 	</div>
 </div>
-<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1"></div>
+<div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2"></div>
