@@ -271,25 +271,27 @@ class datetimepicker{
 			$html.="<div style='float:left;padding-right: 20px;'><input type='radio'
 					name='$this->name'
 					$item[checked]
-					value='$item[value]' $item[readonly]";
+					value='$item[value]' id='$item[id]' $item[readonly]";
 			$html.=	"/>$item[label]</div>";
 		}
 		return $html;
 	}
-		function add($label,$value,$checked){
+		function add($label,$value,$checked,$id){
 
 			$this->items[count($this->items)] = array(
 			'label'=>$label,
 			'value'=>$value,
 			'checked'=>$checked,
+			'id'=>$id,
 			);
 		}
-		function edit($key,$label,$value,$checked){
+		function edit($key,$label,$value,$checked,$id){
 
 			$this->items[$key] = array(
 				'label'=>$label,
 				'value'=>$value,
 				'checked'=>$checked,
+				'id'=>$id,
 			);
 		}
 }

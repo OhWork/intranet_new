@@ -19,11 +19,11 @@
     $radiotypedesign = new radioGroup();
     $radiotypedesign->name = 'typeDesignnews_id';
     if(empty($_GET['id'])){
-    	$radiotypedesign->add(' รูปแบบที่ 1',1,'checked');
-    	$radiotypedesign->add(' รูปแบบที่ 2',2,'');
-    	$radiotypedesign->add(' รูปแบบที่ 3',3,'');
-    	$radiotypedesign->add(' รูปแบบที่ 4',4,'');
-    	$radiotypedesign->add(' รูปแบบที่ 5',5,'');
+    	$radiotypedesign->add(' รูปแบบที่ 1',1,'checked','1');
+    	$radiotypedesign->add(' รูปแบบที่ 2',2,'','2');
+    	$radiotypedesign->add(' รูปแบบที่ 3',3,'','3');
+    	$radiotypedesign->add(' รูปแบบที่ 4',4,'','4');
+    	$radiotypedesign->add(' รูปแบบที่ 5',5,'','5');
     	}
     $button = new buttonok("ต่อไป","","btn btn-success btn-lg btn-block bt3success col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","");
 	$user_id = $_SESSION['user_id'];
@@ -38,39 +38,39 @@
 		$txtdateend->value = $r['news_dateend'];
 	    $user_id = $r['user_user_id'];
 		if($r['typeDesignnews_id'] == 1){
-			$radiotypedesign->add(' รูปแบบที่ 1',1,'checked','');
-	    	$radiotypedesign->add(' รูปแบบที่ 2',2,'disabled');
-	    	$radiotypedesign->add(' รูปแบบที่ 3',3,'disabled');
-	    	$radiotypedesign->add(' รูปแบบที่ 4',4,'disabled');
-	    	$radiotypedesign->add(' รูปแบบที่ 5',5,'disabled');
+		$radiotypedesign->add(' รูปแบบที่ 1',1,'checked','1');
+	    	$radiotypedesign->add(' รูปแบบที่ 2',2,'disabled','2');
+	    	$radiotypedesign->add(' รูปแบบที่ 3',3,'disabled','3');
+	    	$radiotypedesign->add(' รูปแบบที่ 4',4,'disabled','4');
+	    	$radiotypedesign->add(' รูปแบบที่ 5',5,'disabled','5');
 		}
 		if($r['typeDesignnews_id'] == 2){
-			$radiotypedesign->add(' รูปแบบที่ 1',1,'disabled');
-	    	$radiotypedesign->add(' รูปแบบที่ 2',2,'checked');
-	    	$radiotypedesign->add(' รูปแบบที่ 3',3,'disabled');
-	    	$radiotypedesign->add(' รูปแบบที่ 4',4,'disabled');
-	    	$radiotypedesign->add(' รูปแบบที่ 5',5,'disabled');
+			$radiotypedesign->add(' รูปแบบที่ 1',1,'disabled','1');
+	    	$radiotypedesign->add(' รูปแบบที่ 2',2,'checked','2');
+	    	$radiotypedesign->add(' รูปแบบที่ 3',3,'disabled','3');
+	    	$radiotypedesign->add(' รูปแบบที่ 4',4,'disabled','4');
+	    	$radiotypedesign->add(' รูปแบบที่ 5',5,'disabled','5');
 		}
 		if($r['typeDesignnews_id'] == 3){
-			$radiotypedesign->add(' รูปแบบที่ 1',1,'disabled');
-	    	$radiotypedesign->add(' รูปแบบที่ 2',2,'disabled');
-	    	$radiotypedesign->add(' รูปแบบที่ 3',3,'checked');
-	    	$radiotypedesign->add(' รูปแบบที่ 4',4,'disabled');
-	    	$radiotypedesign->add(' รูปแบบที่ 5',5,'disabled');
+			$radiotypedesign->add(' รูปแบบที่ 1',1,'disabled','1');
+	    	$radiotypedesign->add(' รูปแบบที่ 2',2,'disabled','2');
+	    	$radiotypedesign->add(' รูปแบบที่ 3',3,'checked','3');
+	    	$radiotypedesign->add(' รูปแบบที่ 4',4,'disabled','4');
+	    	$radiotypedesign->add(' รูปแบบที่ 5',5,'disabled','5');
 		}
 		if($r['typeDesignnews_id'] == 4){
-			$radiotypedesign->add(' รูปแบบที่ 1',1,'disabled');
-	    	$radiotypedesign->add(' รูปแบบที่ 2',2,'disabled');
-	    	$radiotypedesign->add(' รูปแบบที่ 3',3,'disabled');
-	    	$radiotypedesign->add(' รูปแบบที่ 4',4,'checked');
-	    	$radiotypedesign->add(' รูปแบบที่ 5',5,'disabled');
+			$radiotypedesign->add(' รูปแบบที่ 1',1,'disabled','1');
+	    	$radiotypedesign->add(' รูปแบบที่ 2',2,'disabled','2');
+	    	$radiotypedesign->add(' รูปแบบที่ 3',3,'disabled','3');
+	    	$radiotypedesign->add(' รูปแบบที่ 4',4,'checked','4');
+	    	$radiotypedesign->add(' รูปแบบที่ 5',5,'disabled','5');
 	    }
 		if($r['typeDesignnews_id'] == 5){
-			$radiotypedesign->add(' รูปแบบที่ 1',1,'disabled');
-	    	$radiotypedesign->add(' รูปแบบที่ 2',2,'disabled');
-	    	$radiotypedesign->add(' รูปแบบที่ 3',3,'disabled');
-	    	$radiotypedesign->add(' รูปแบบที่ 4',4,'disabled');
-	    	$radiotypedesign->add(' รูปแบบที่ 5',5,'checked');
+			$radiotypedesign->add(' รูปแบบที่ 1',1,'disabled','1');
+	    	$radiotypedesign->add(' รูปแบบที่ 2',2,'disabled','2');
+	    	$radiotypedesign->add(' รูปแบบที่ 3',3,'disabled','3');
+	    	$radiotypedesign->add(' รูปแบบที่ 4',4,'disabled','4');
+	    	$radiotypedesign->add(' รูปแบบที่ 5',5,'checked','5');
 		}
     $button = new buttonok("บันทึก","","btn btn-success btn-lg btn-block bt3success col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","");
     }
@@ -125,19 +125,19 @@
 		<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-1">
 			<div class="row">
 				<div class="" style="margin-left:32px;">
-					<img style="width:50px;height:50px;" src="images/news/typeDesign/new2.png">
+					<label for='1'><img style="width:50px;height:50px;" src="images/news/typeDesign/new2.png"></label>
 				</div>
 				<div class="" style="margin-left:48px;">
-					<img style="width:50px;height:50px;" src="images/news/typeDesign/new1.png">
+					<label for='2'><img style="width:50px;height:50px;" src="images/news/typeDesign/new1.png"></label>
 				</div>
 				<div class="" style="margin-left:48px;">
-					<img style="width:50px;height:50px;" src="images/news/typeDesign/new3.png">
+					<label for='3'><img style="width:50px;height:50px;" src="images/news/typeDesign/new3.png"></label>
 				</div>
 				<div class="" style="margin-left:50px;">
-					<img style="width:50px;height:50px;" src="images/news/typeDesign/new4.png">
+					<label for='4'><img style="width:50px;height:50px;" src="images/news/typeDesign/new4.png"></label>
 				</div>
 				<div class="" style="margin-left:50px;">
-					<img style="width:50px;height:50px;" src="images/news/typeDesign/new5.png">
+					<label for='5'><img style="width:50px;height:50px;" src="images/news/typeDesign/new5.png"></label>
 				</div>
 			</div>
 		</div>
