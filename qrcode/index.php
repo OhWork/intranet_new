@@ -21,73 +21,87 @@
  * License along with this library; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA
  */
+?>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1"></div>
+<div class="col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10">
+	<div class="row">
+		<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+			<h4>PHP QR Code</h4>
+		</div>
+		<?php
+			//set it to writable location, a place for temp generated PNG files
+			$PNG_TEMP_DIR = dirname(__FILE__).DIRECTORY_SEPARATOR.'temp'.DIRECTORY_SEPARATOR;
 
-    echo "<h1>PHP QR Code</h1><hr/>";
+			//html PNG location prefix
+			$PNG_WEB_DIR = 'temp/';
 
-    //set it to writable location, a place for temp generated PNG files
-    $PNG_TEMP_DIR = dirname(__FILE__).DIRECTORY_SEPARATOR.'temp'.DIRECTORY_SEPARATOR;
+			include "qrlib.php";
 
-    //html PNG location prefix
-    $PNG_WEB_DIR = 'temp/';
-
-    include "qrlib.php";
-
-    //ofcourse we need rights to create temp dir
-    if (!file_exists($PNG_TEMP_DIR))
-        mkdir($PNG_TEMP_DIR);
-
-
-    $filename = $PNG_TEMP_DIR.'test.png';
-
-    //processing form input
-    //remember to sanitize user input in real-life solution !!!
-    $errorCorrectionLevel = 'L';
-    if (isset($_REQUEST['level']) && in_array($_REQUEST['level'], array('L','M','Q','H')))
-        $errorCorrectionLevel = $_REQUEST['level'];
-
-    $matrixPointSize = 4;
-    if (isset($_REQUEST['size']))
-        $matrixPointSize = min(max((int)$_REQUEST['size'], 1), 10);
+			//ofcourse we need rights to create temp dir
+			if (!file_exists($PNG_TEMP_DIR))
+				mkdir($PNG_TEMP_DIR);
 
 
-    if (isset($_REQUEST['data'])) {
+			$filename = $PNG_TEMP_DIR.'test.png';
 
-        //it's very important!
-        if (trim($_REQUEST['data']) == '')
-            die('data cannot be empty! <a href="?">back</a>');
+			//processing form input
+			//remember to sanitize user input in real-life solution !!!
+			$errorCorrectionLevel = 'L';
+			if (isset($_REQUEST['level']) && in_array($_REQUEST['level'], array('L','M','Q','H')))
+				$errorCorrectionLevel = $_REQUEST['level'];
 
-        // user data
-        $filename = $PNG_TEMP_DIR.'test'.md5($_REQUEST['data'].'|'.$errorCorrectionLevel.'|'.$matrixPointSize).'.png';
-        QRcode::png($_REQUEST['data'], $filename, $errorCorrectionLevel, $matrixPointSize, 2);
+			$matrixPointSize = 4;
+			if (isset($_REQUEST['size']))
+				$matrixPointSize = min(max((int)$_REQUEST['size'], 1), 10);
 
-    } else {
 
-        //default data
-        echo 'You can provide data in GET parameter: <a href="?data=like_that">like that</a><hr/>';
-        QRcode::png('PHP QR Code :)', $filename, $errorCorrectionLevel, $matrixPointSize, 2);
+			if (isset($_REQUEST['data'])) {
 
-    }
+				//it's very important!
+				if (trim($_REQUEST['data']) == '')
+					die('data cannot be empty! <a href="?">back</a>');
 
-    //display generated file
-    echo '<img src="qrcode/'.$PNG_WEB_DIR.basename($filename).'" /><hr/>';
+				// user data
+				$filename = $PNG_TEMP_DIR.'test'.md5($_REQUEST['data'].'|'.$errorCorrectionLevel.'|'.$matrixPointSize).'.png';
+				QRcode::png($_REQUEST['data'], $filename, $errorCorrectionLevel, $matrixPointSize, 2);
 
-    //config form
-    echo '<form action="index.php?url=qrcode/index.php" method="post">
-        กรุณาใส่(www.xxxxxx.com):&nbsp;<input name="data" value="'.(isset($_REQUEST['data'])?htmlspecialchars($_REQUEST['data']):'PHP QR Code :)').'" />&nbsp;
-        เลือกคุณภาพ:&nbsp;<select name="level">
-            <option value="L"'.(($errorCorrectionLevel=='L')?' selected':'').'>L - smallest</option>
-            <option value="M"'.(($errorCorrectionLevel=='M')?' selected':'').'>M</option>
-            <option value="Q"'.(($errorCorrectionLevel=='Q')?' selected':'').'>Q</option>
-            <option value="H"'.(($errorCorrectionLevel=='H')?' selected':'').'>H - best</option>
-        </select>&nbsp;
-        ขนาดระดับ:&nbsp;<select name="size">';
+			} else {
 
-    for($i=1;$i<=10;$i++)
-        echo '<option value="'.$i.'"'.(($matrixPointSize==$i)?' selected':'').'>'.$i.'</option>';
+				//default data
+				//echo 'You can provide data in GET parameter: <a href="?data=like_that">like that</a><hr/>';
+				QRcode::png('PHP QR Code :)', $filename, $errorCorrectionLevel, $matrixPointSize, 2);
 
-    echo '</select>&nbsp;
-        <input type="submit" value="GENERATE"></form><hr/>';
+			}
+			//config form
+		?>
+		<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+		<?php
+			echo '<form action="index.php?url=qrcode/index.php" method="post">
+				กรุณาใส่(www.xxxxxx.com):&nbsp;<input name="data" value="'.(isset($_REQUEST['data'])?htmlspecialchars($_REQUEST['data']):'PHP QR Code :)').'" />&nbsp;
+				เลือกคุณภาพ:&nbsp;<select name="level">
+					<option value="L"'.(($errorCorrectionLevel=='L')?' selected':'').'>L - smallest</option>
+					<option value="M"'.(($errorCorrectionLevel=='M')?' selected':'').'>M</option>
+					<option value="Q"'.(($errorCorrectionLevel=='Q')?' selected':'').'>Q</option>
+					<option value="H"'.(($errorCorrectionLevel=='H')?' selected':'').'>H - best</option>
+				</select>&nbsp;
+				ขนาดระดับ:&nbsp;<select name="size">';
 
-    // benchmark
-    //QRtools::timeBenchmark();
+			for($i=1;$i<=10;$i++)
+				echo '<option value="'.$i.'"'.(($matrixPointSize==$i)?' selected':'').'>'.$i.'</option>';
 
+			echo '</select>&nbsp;
+				<input type="submit" value="GENERATE"></form><hr/>';
+		?>
+		</div>
+		<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" align="center">
+		<?php
+			//display generated file
+			echo '<img src="qrcode/'.$PNG_WEB_DIR.basename($filename).'" />';
+
+			// benchmark
+			//QRtools::timeBenchmark();
+		?>
+		</div>
+	</div>
+</div>
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1"></div>
