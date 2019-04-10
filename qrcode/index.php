@@ -26,7 +26,7 @@
 <div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8 mt-3">
 	<div class="row">
 		<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-			<h4>PHP QR Code</h4>
+			<h4>ระบบจัดการQRCode</h4>
 		</div>
 		<?php
 			//set it to writable location, a place for temp generated PNG files
@@ -81,7 +81,7 @@
 					กรุณาใส่(www.xxxxxx.com)
 				</div>
 				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3">
-					<input class="form-control" name="data" value="'.(isset($_REQUEST['data'])?htmlspecialchars($_REQUEST['data']):'PHP QR Code :)').'" />
+					<input class="form-control" name="data" value="'.(isset($_REQUEST['data'])?htmlspecialchars($_REQUEST['data']):'#').'" />
 				</div>
 				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3">
 					<div class="row">
