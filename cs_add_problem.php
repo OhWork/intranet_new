@@ -10,13 +10,13 @@
     $lbtime = new label('วันที่และเวลาแจ้ง');
     $lbtypetools = new label('ชนิดของอุปกรณ์');
     $txtwork = new textfield('problem_work','problem_work','form-control','','');
-     $txtdatestart = new datetimepicker('problem_date','datetimepicker1','','form-control datetimepicker-input','date-form dayinbox form-horizontal control-group controls input-group','input-group date','datetimepicker1','#datetimepicker1','','');
-
     $year = date("Y")+543;
     $md = date("m-d");
     $time = date("H:i");
+    $txtdatestart = new datetimepicker('problem_date','datetimepicker1','','form-control datetimepicker-input','date-form dayinbox form-horizontal control-group controls input-group','input-group date','datetimepicker1','#datetimepicker1','','');
+    $txtdatestart->value = $year."-".$md." ".$time;
     @$id = $_GET['id'];
-//     $txttime->value = $year."-".$md." ".$time;
+     
     $txtcall = new textfield('problem_tel','','form-control','','');
     $txtposition = new textfield('problem_position','problem_position','form-control','','');
     $txtdetail = new textarea('problem_detail','aprob','','','','','');
