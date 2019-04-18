@@ -36,56 +36,56 @@ if (!empty($_SESSION['user_name'])):
   $radiouserenable = new radioGroup();
   $radiouserenable->name = 'user_enable';
   if(empty($id)){
-    	$radiouserenable->add('ใช้งานได้',1,'');
-    	$radiouserenable->add('ไม่สามารถใช้งานได้',0,'checked');
+    	$radiouserenable->add('ใช้งานได้',1,'','');
+    	$radiouserenable->add('ไม่สามารถใช้งานได้',0,'checked','');
     	}
   $radioadmin = new radioGroup();
   $radioadmin->name = 'systemallow_admin';
   if(empty($id)){
-    	$radioadmin->add('อนุญาต',1,'');
-    	$radioadmin->add('ไม่อนุญาต',0,'checked');
+    	$radioadmin->add('อนุญาต',1,'','');
+    	$radioadmin->add('ไม่อนุญาต',0,'checked','');
     	}
   $radiodrive = new radioGroup();
   $radiodrive->name = 'systemallow_drive';
   if(empty($id)){
-         $radiodrive->add('อนุญาต',1,'');
-         $radiodrive->add('ไม่อนุญาต',0,'checked');
+         $radiodrive->add('อนุญาต',1,'','');
+         $radiodrive->add('ไม่อนุญาต',0,'checked','');
   }
   $radionews = new radioGroup();
   $radionews->name = 'systemallow_news';
   if(empty($id)){
-         $radionews->add('อนุญาต',1,'');
-         $radionews->add('ไม่อนุญาต',0,'checked');
+         $radionews->add('อนุญาต',1,'','');
+         $radionews->add('ไม่อนุญาต',0,'checked','');
   }
   $radioservice = new radioGroup();
   $radioservice->name = 'systemallow_service';
   if(empty($id)){
-       $radioservice->add('อนุญาต',1,'');
-       $radioservice->add('ไม่อนุญาต',0,'checked');
+       $radioservice->add('อนุญาต',1,'','');
+       $radioservice->add('ไม่อนุญาต',0,'checked','');
   }
   $radioconfer = new radioGroup();
   $radioconfer->name = 'systemallow_confer';
   if(empty($id)){
-        $radioconfer->add('อนุญาต',1,'');
-        $radioconfer->add('ไม่อนุญาต',0,'checked');
+        $radioconfer->add('อนุญาต',1,'','');
+        $radioconfer->add('ไม่อนุญาต',0,'checked','');
   }
   $radiotouristreport = new radioGroup();
   $radiotouristreport->name = 'systemallow_touristreport';
   if(empty($id)){
-        $radiotouristreport->add('อนุญาต',1,'');
-        $radiotouristreport->add('ไม่อนุญาต',0,'checked');
+        $radiotouristreport->add('อนุญาต',1,'','');
+        $radiotouristreport->add('ไม่อนุญาต',0,'checked','');
   }
   $radiohrs = new radioGroup();
   $radiohrs->name = 'systemallow_hrs';
   if(empty($id)){
-        $radiohrs->add('อนุญาต',1,'');
-        $radiohrs->add('ไม่อนุญาต',0,'checked');
+        $radiohrs->add('อนุญาต',1,'','');
+        $radiohrs->add('ไม่อนุญาต',0,'checked','');
   }
   $radioqtn = new radioGroup();
   $radioqtn->name = 'systemallow_qtn';
   if(empty($id)){
-        $radioqtn->add('อนุญาต',1,'');
-        $radioqtn->add('ไม่อนุญาต',0,'checked');
+        $radioqtn->add('อนุญาต',1,'','');
+        $radioqtn->add('ไม่อนุญาต',0,'checked','');
   }
    $submit = new buttonok("ยืนยัน","btnSubmit","btn btn-success col-md-12","");
     if(!empty($_GET['id'])){
@@ -101,67 +101,67 @@ if (!empty($_SESSION['user_name'])):
     $subzoo = $r['subzoo_subzoo_id'];
 
     if($r["user_enable"] == 1){
-    	$radiouserenable->add('ใช้งานได้',1,'checked');
-    	$radiouserenable->add('ไม่สามารถใช้งานได้',0,'');
+    	$radiouserenable->add('ใช้งานได้',1,'checked','');
+    	$radiouserenable->add('ไม่สามารถใช้งานได้',0,'','');
     	}else if($sa['systemallow_admin'] == 0){
-        $radiouserenable->add('ใช้งานได้',1,'');
-        $radiouserenable->add('ไม่สามารถใช้งานได้',0,'checked');
+        $radiouserenable->add('ใช้งานได้',1,'','');
+        $radiouserenable->add('ไม่สามารถใช้งานได้',0,'checked','');
     	}
 	if($sa["systemallow_admin"] == 1){
-    	$radioadmin->add('อนุญาต',1,'checked');
-    	$radioadmin->add('ไม่อนุญาต',0,'');
+    	$radioadmin->add('อนุญาต',1,'checked','');
+    	$radioadmin->add('ไม่อนุญาต',0,'','');
     	}else if($sa['systemallow_admin'] == 0){
-        $radioadmin->add('อนุญาต',1,'');
-        $radioadmin->add('ไม่อนุญาต',0,'checked');
+        $radioadmin->add('อนุญาต',1,'','');
+        $radioadmin->add('ไม่อนุญาต',0,'checked','');
     	}
 	if($sa["systemallow_service"] == 1){
-    	$radioservice->add('อนุญาต',1,'checked');
-    	$radioservice->add('ไม่อนุญาต',0,'');
+    	$radioservice->add('อนุญาต',1,'checked','');
+    	$radioservice->add('ไม่อนุญาต',0,'','');
     	}else if($sa['systemallow_service'] == 0){
-        $radioservice->add('อนุญาต',1,'');
-        $radioservice->add('ไม่อนุญาต',0,'checked');
+        $radioservice->add('อนุญาต',1,'','');
+        $radioservice->add('ไม่อนุญาต',0,'checked','');
         }
     if($sa["systemallow_drive"] == 1){
-    	$radiodrive->add('อนุญาต',1,'checked');
-    	$radiodrive->add('ไม่อนุญาต',0,'');
+    	$radiodrive->add('อนุญาต',1,'checked','');
+    	$radiodrive->add('ไม่อนุญาต',0,'','');
     	}else if($sa['systemallow_drive'] == 0){
-        $radiodrive->add('อนุญาต',1,'');
-        $radiodrive->add('ไม่อนุญาต',0,'checked');
+        $radiodrive->add('อนุญาต',1,'','');
+        $radiodrive->add('ไม่อนุญาต',0,'checked','');
         }
     if($sa["systemallow_news"] == 1){
-    	$radionews->add('อนุญาต',1,'checked');
-    	$radionews->add('ไม่อนุญาต',0,'');
+    	$radionews->add('อนุญาต',1,'checked','');
+    	$radionews->add('ไม่อนุญาต',0,'','');
     	}else if($sa['systemallow_news'] == 0){
-        $radionews->add('อนุญาต',1,'');
-        $radionews->add('ไม่อนุญาต',0,'checked');
+        $radionews->add('อนุญาต',1,'','');
+        $radionews->add('ไม่อนุญาต',0,'checked','');
         }
     if($sa["systemallow_confer"] == 1){
-    	$radioconfer->add('อนุญาต',1,'checked');
-    	$radioconfer->add('ไม่อนุญาต',0,'');
+    	$radioconfer->add('อนุญาต',1,'checked','');
+    	$radioconfer->add('ไม่อนุญาต',0,'','');
     	}else if($sa['systemallow_confer'] == 0){
-        $radioconfer->add('อนุญาต',1,'');
-        $radioconfer->add('ไม่อนุญาต',0,'checked');
+        $radioconfer->add('อนุญาต',1,'','');
+        $radioconfer->add('ไม่อนุญาต',0,'checked','');
         }
     if($sa["systemallow_hrs"] == 1){
-    	$radiohrs->add('อนุญาต',1,'checked');
-    	$radiohrs->add('ไม่อนุญาต',0,'');
+    	$radiohrs->add('อนุญาต',1,'checked','');
+    	$radiohrs->add('ไม่อนุญาต',0,'','');
     	}else if($sa['systemallow_hrs'] == 0){
-        $radiohrs->add('อนุญาต',1,'');
-        $radiohrs->add('ไม่อนุญาต',0,'checked');
+        $radiohrs->add('อนุญาต',1,'','');
+        $radiohrs->add('ไม่อนุญาต',0,'checked','');
         }
     if($sa["systemallow_qtn"] == 1){
-    	$radioqtn->add('อนุญาต',1,'checked');
-    	$radioqtn->add('ไม่อนุญาต',0,'');
+    	$radioqtn->add('อนุญาต',1,'checked','');
+    	$radioqtn->add('ไม่อนุญาต',0,'','');
     	}else if($sa['systemallow_qtn'] == 0){
-        $radioqtn->add('อนุญาต',1,'');
-        $radioqtn->add('ไม่อนุญาต',0,'checked');
+        $radioqtn->add('อนุญาต',1,'','');
+        $radioqtn->add('ไม่อนุญาต',0,'checked','');
         }
 if($sa["systemallow_touristreport"] == 1){
-    	$radiotouristreport->add('อนุญาต',1,'checked');
-    	$radiotouristreport->add('ไม่อนุญาต',0,'');
+    	$radiotouristreport->add('อนุญาต',1,'checked','');
+    	$radiotouristreport->add('ไม่อนุญาต',0,'','');
     	}else if($sa['systemallow_touristreport'] == 0){
-        $radiotouristreport->add('อนุญาต',1,'');
-        $radiotouristreport->add('ไม่อนุญาต',0,'checked');
+        $radiotouristreport->add('อนุญาต',1,'','');
+        $radiotouristreport->add('ไม่อนุญาต',0,'checked','');
         }
 }
 

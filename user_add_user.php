@@ -34,8 +34,8 @@ if (!empty($_SESSION['user_name'])):
   $radiouserenable = new radioGroup();
   $radiouserenable->name = 'user_enable';
   if(empty($id)){
-    	$radiouserenable->add('ใช้งานได้',1,'');
-    	$radiouserenable->add('ไม่สามารถใช้งานได้',0,'checked');
+    	$radiouserenable->add('ใช้งานได้',1,'','');
+    	$radiouserenable->add('ไม่สามารถใช้งานได้',0,'checked','');
     	}
    $submit = new buttonok("ยืนยัน","btnSubmit","btn btn-success col-md-12","");
     if(!empty($_GET['id'])){
@@ -49,11 +49,11 @@ if (!empty($_SESSION['user_name'])):
 	$zoo = $r['subzoo_zoo_zoo_id'];
     $subzoo = $r['subzoo_subzoo_id'];
     if($r["user_enable"] == 1){
-    	$radiouserenable->add(' ใช้งานได้',1,'checked');
-    	$radiouserenable->add(' ไม่สามารถใช้งานได้',0,'');
+    	$radiouserenable->add(' ใช้งานได้',1,'checked','');
+    	$radiouserenable->add(' ไม่สามารถใช้งานได้',0,'','');
     	}else if($sa['systemallow_admin'] == 0){
-        $radiouserenable->add('ใช้งานได้',1,'');
-        $radiouserenable->add('ไม่สามารถใช้งานได้',0,'checked');
+        $radiouserenable->add('ใช้งานได้',1,'','');
+        $radiouserenable->add('ไม่สามารถใช้งานได้',0,'checked','');
     	}
     }
 
