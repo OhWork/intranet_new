@@ -1,7 +1,7 @@
 <?php if (!empty($_SESSION['user_name'])):
         $user_zoo = $_SESSION['subzoo_zoo_zoo_id'];
 ?>
-<div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2" style="height: 100%;">
+<div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2 printdisplaynone" style="height: 100%;">
 	<div class="row">
 		<div class="list-group" style="height: 100%;">
 			<nav class="d-none d-md-block bg-dark sidebar mnpb" style="height: 100%;padding-bottom:100%;">
@@ -221,7 +221,7 @@
 	navAnimate(21,1);
 	navAnimate(22,5);
 	navAnimate(23,2);
-	navAnimate(24,2);
+	navAnimate(24,1);
 	navAnimate(25,4);
 	navAnimate(26,7);
 	navAnimate(27,2);

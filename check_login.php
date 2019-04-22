@@ -17,13 +17,19 @@
 <?php
 	include_once 'database/db_tools.php';
 	include_once 'connect.php';
-	$db->findByAttributes('user',array(
+	//$db->findByAttributes('user',array(
+	//	'user_user =' => $_POST['user_user'],
+	//	'user_pass =' => md5(md5(md5($_POST['user_pass'])))
+	//	));
+        $db->findByAttributes('user',array(
 		'user_user =' => $_POST['user_user'],
 		'user_pass =' => $_POST['user_pass']
 		));
 	$rs = $db->executeRow();
 	$system_id = $rs['systemallow_systemallow_id'];
-    $rsallow = $db->findByPK('systemallow','systemallow_id',$system_id)->executeAssoc();
+	$subzoo_id = $rs['subzoo_subzoo_id'];
+         $rsallow = $db->findByPK('systemallow','systemallow_id',$system_id)->executeAssoc();
+        $rssubzoo = $db->findByPK('subzoo','subzoo_id',$subzoo_id)->executeAssoc();
 	if($rs){
     	$_SESSION['user_id'] = $rs['user_id'];
 		$_SESSION['user_name'] = $rs['user_name'];
@@ -37,13 +43,16 @@
 		$_SESSION['systemallow_km'] = $rsallow['systemallow_km'];
 		$_SESSION['systemallow_hrs'] = $rsallow['systemallow_hrs'];
 		$_SESSION['systemallow_qtn'] = $rsallow['systemallow_qtn'];
+		$_SESSION['subzoo_sc'] = $rssubzoo['subzoo_sc'];
+		$_SESSION['subzoo_enable'] = $rssubzoo['subzoo_enable'];
 		$_SESSION['subzoo_subzoo_id'] = $rs['subzoo_subzoo_id'];
 		$_SESSION['subzoo_zoo_zoo_id'] = $rs['subzoo_zoo_zoo_id'];
+		print_r($_SESSION);
 		?>
 		<div class="modal" id="myModal">
 		  <div class="modal-dialog">
 		    <div class="modal-content">
-		
+
 		      <!-- Modal body -->
 		      <div class="modal-body">
 		        ยินดีต้อนรับเข้าสู่ระบบ
@@ -57,6 +66,7 @@
 		</div>
 		<script>
 
+
 			$("#myModal").modal({backdrop: 'static', keyboard: false});
 
 			setTimeout(function(){
@@ -65,7 +75,7 @@
 			var timeLeft = 4;
 			var elem = document.getElementById('showcountdown');
 			var timerId = setInterval(countdown, 1000);
-			
+
 			function countdown() {
 			    if (timeLeft == -1) {
 			        clearTimeout(timerId);
@@ -74,6 +84,7 @@
 			        timeLeft--;
 			    }
 			}
+
 
 		</script>
 		<?php
