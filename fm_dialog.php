@@ -624,8 +624,8 @@ $n_files= count($files);
 
 //php sorting
 $sorted=array();
-//$current_folder=array();
-//$prev_folder=array();
+$current_folder=array();
+$prev_folder=array();
 $current_files_number = 0;
 $current_folders_number = 0;
 

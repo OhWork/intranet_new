@@ -463,14 +463,12 @@ if(@$_SESSION['subzoo_zoo_zoo_id'] ==''){
 	 $config['upload_dir'] = 'source/';
 	 $config['current_path'] = 'source/';
 }else{
-	$rs = @$db->findByPK('folder','subzoo_zoo_zoo_id',$_SESSION['subzoo_zoo_zoo_id'])->executeAssoc();
-	$rssubfolall = @$db->findByPK('folder','folder_sc',$_SESSION['subzoo_sc'])->execute();
-	foreach($rssubfolall as $show){
-		if($_SESSION['subzoo_sc'] == $show['subzoo_sc'] && $_SESSION['subzoo_enable'] == 1){
-			$config['upload_dir'] = 'source/'.$rs["folder_name"].'/'.$show["folder_name"].'/';
-			$config['current_path'] = 'source/'.$rs["folder_name"].'/'.$show["folder_name"].'/';
+	$rs = @$db->findByPK('folder','folder_sc',$_SESSION['subzoo_sc'])->executeAssoc();
+	$rssubfolall = @$db->findByPK('folder','folder_id',$rs['folder_position'])->executeAssoc();
+		if($_SESSION['subzoo_sc'] == $rs['folder_sc'] && $_SESSION['subzoo_enable'] == 1){
+			$config['upload_dir'] = 'source/'.$rssubfolall["folder_name"].'/'.$rs['folder_name'].'/';
+			$config['current_path'] = 'source/'.$rssubfolall["folder_name"].'/'.$rs['folder_name'].'/';
 		}
-	}
 }
 return array_merge(
 	$config,
