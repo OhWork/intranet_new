@@ -43,7 +43,6 @@
 		$_SESSION['subzoo_enable'] = $rssubzoo['subzoo_enable'];
 		$_SESSION['subzoo_subzoo_id'] = $rs['subzoo_subzoo_id'];
 		$_SESSION['subzoo_zoo_zoo_id'] = $rs['subzoo_zoo_zoo_id'];
-		print_r($_SESSION);
 		?>
 		<div class="modal" id="myModal">
 		  <div class="modal-dialog">

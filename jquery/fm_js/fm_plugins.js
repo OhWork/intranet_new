@@ -4286,7 +4286,9 @@ var bootbox = window.bootbox || (function(document, $) {
         var str         = "",
             labelCancel = _translate('CANCEL'),
             labelOk     = _translate('CONFIRM'),
-            cb          = null;
+            hidebtbutton = _hidebt(jQuery("#checkname")),
+            hidebttext     = _hidebt(jQuery("#textshow")),
+			cb          = null;
 
         switch (arguments.length) {
             case 1:
@@ -4315,6 +4317,15 @@ var bootbox = window.bootbox || (function(document, $) {
                 labelOk     = arguments[2];
                 cb          = arguments[3];
                 break;
+            case 6:
+                str         = arguments[0];
+                labelCancel = arguments[1];
+                labelOk     = arguments[2];
+                hidebtbutton     = arguments[3];
+                hidebttext          = arguments[4];
+                cb          = arguments[5];
+                break;
+
             default:
                 throw new Error("Incorrect number of arguments: expected 1-4");
         }
@@ -4510,7 +4521,11 @@ var bootbox = window.bootbox || (function(document, $) {
                 _class = handlers[i]['class'];
             } else if (i == handlers.length -1 && handlers.length <= 2) {
                 // always add a primary to the main option in a two-button dialog
-                _class = 'btn-primary disabled';
+                if (options.header == 'Insert folder name:') {
+                	_class = 'btn-primary disabled';
+                }else{
+	            	_class = 'btn-primary';
+                }
             }
 
             if (handlers[i]['link'] !== true) {
@@ -4560,9 +4575,13 @@ var bootbox = window.bootbox || (function(document, $) {
         parts.push("<div class='modal-body'></div>");
 
         if (buttons) {
-            parts.push("<div class='modal-footer'><button id='checkname' class='btn btn-warning' onclick='getDataFromDb()'>ตรวจสอบ</button><div id='textshowalert' class='text-danger' style='float:left;'><p id='textshow'>กรุณาคลิกปุ่มตรวจสอบก่อน</p></div>"+buttons+"</div>");
+			if (options.header == 'Insert folder name:') {
+				console.log($('.btn-primary'));
+			    parts.push("<div class='modal-footer' id='test'><button id='checkname' class='btn btn-warning' onclick='getDataFromDb()'>ตรวจสอบ</button><div id='textshowalert' class='text-danger' style='float:left;'><p id='textshow' value='textshow'>กรุณาคลิกปุ่มตรวจสอบก่อน</p></div>"+buttons+"</div>");
+	        } else {
+		    		parts.push("<div class='modal-footer'>"+buttons+"</div>");
+	        }
         }
-
         parts.push("</div>");
 
         var div = $(parts.join("\n"));
@@ -4837,7 +4856,10 @@ var bootbox = window.bootbox || (function(document, $) {
         // if we can't do anything then bail out with whatever string was passed in - last resort
         return str;
     }
-
+     function _hidebt() {
+       $("#checkname").hide();
+       $("#textshow").hide();
+    }
     return that;
 
 }(document, window.jQuery));

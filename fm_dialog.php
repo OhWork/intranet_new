@@ -405,6 +405,10 @@ $get_params = http_build_query($get_params);
 	<input type="hidden" id="ok" value="<?php echo trans('OK');?>" />
 	<input type="hidden" id="cancel" value="<?php echo trans('Cancel');?>" />
 	<input type="hidden" id="rename" value="<?php echo trans('Rename');?>" />
+<!--
+	<input type="hidden" id="checkname" value="<?php echo trans('checkname');?>" />
+	<input type="hidden" id="textshow" value="<?php echo trans('textshow');?>" />
+-->
 	<input type="hidden" id="lang_duplicate" value="<?php echo trans('Duplicate');?>" />
 	<input type="hidden" id="duplicate" value="<?php if($duplicate_files) echo 1; else echo 0;?>" />
 	<input type="hidden" id="base_url" value="<?php echo $base_url?>"/>
@@ -757,7 +761,7 @@ $files=$sorted;
 				<button class="tip btn create-file-btn" title="<?php echo  trans('New_File');?>"><i class="icon-plus"></i><i class="icon-file"></i></button>
 				<?php } ?>
 				<?php if($create_folders){ ?>
-				<button class="tip btn new-folder" title="<?php echo  trans('New_Folder')?>"><i class="icon-plus"></i><i class="icon-folder-open"></i></button>
+				<button class="tip btn new-folder" id="newfolder" title="<?php echo  trans('New_Folder')?>"><i class="icon-plus"></i><i class="icon-folder-open"></i></button>
 				<?php } ?>
 				<?php if($copy_cut_files || $copy_cut_dirs){ ?>
 				<button class="tip btn paste-here-btn" title="<?php echo trans('Paste_Here');?>"><i class="rficon-clipboard-apply"></i></button>
@@ -1387,7 +1391,7 @@ else{
 		if(isAndroid) {
 			$('li').draggable({ disabled: false });
 		}
-	$("#1").attr("disabled", true);
+// 	$("#1").attr("disabled", true);
 	function getDataFromDb(){
 				$.ajax({
 				url: "fm_execute.php?action=check_folder",
@@ -1404,7 +1408,6 @@ else{
 				}
 			});
 		}
-//
 	</script>
 </body>
 </html>
