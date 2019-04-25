@@ -1365,6 +1365,19 @@ class UploadHandler
 					'files_date' => $date,
 					'folder_folder_id' => $selectid['folder_id'],
 					));
+                                        if(getenv(HTTP_X_FORWARDED_FOR)){
+                                            $ip = $_SERVER['HTTP_X_FORWARDED_FOR']; // IP proxy
+                                            }else{
+                                            $ip = $_SERVER['REMOTE_ADDR'];
+                                                }
+                                            $ipshow = gethostbyaddr($ip);
+                                            $log = $db->insert('log',array(
+                                                'log_system' => 'FileManagement-System',
+                                                'log_action' => 'Create_Files',
+                                                'log_action_date' => date("Y-m-d H:i"),
+                                                'log_action_by' => $_POST['log_user'],
+                                                'log_ip' => $ipshow
+                                                ));
 				}
 
 			}

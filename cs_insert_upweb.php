@@ -11,23 +11,6 @@
 	include 'connect.php';
 	if(!empty($_POST['upweb_id'])){
 
-		$data['upweb_status'] = $_POST['upweb_status'];
-		$rsfix = $db->update('upweb',$data,'upweb_id',$_POST['upweb_id']);
-
-	    //Log
-		if(getenv(HTTP_X_FORWARDED_FOR)){
-            $ip = $_SERVER['HTTP_X_FORWARDED_FOR']; // IP proxy
-        }else{
-            $ip = $_SERVER['REMOTE_ADDR'];
-        }
-        $ipshow = gethostbyaddr($ip);
-        $log = $db->insert('log',array(
-    	'log_system' => 'IP-address',
-    	'log_action' => 'Edit',
-    	'log_action_date' => date("Y-m-d H:i"),
-    	'log_action_by' => $_POST['log_user'],
-    	'log_ip' => $ipshow
-    	));
 
 	}
 	else{

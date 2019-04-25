@@ -23,14 +23,14 @@
 		$rsfix = $db->update('qtn',$data,'qtn_id',$_POST['qtn_id']);
 		
 		
-		if(getenv(HTTP_X_FORWARDED_FOR)){
+	if(getenv(HTTP_X_FORWARDED_FOR)){
             $ip = $_SERVER['HTTP_X_FORWARDED_FOR']; // IP proxy
         }else{
             $ip = $_SERVER['REMOTE_ADDR'];
         }
             $ipshow = gethostbyaddr($ip);
             $log = $db->insert('log',array(
-        	'log_system' => 'questionare',
+        	'log_system' => 'questionare-System',
         	'log_action' => 'Edit',
         	'log_action_date' => date("Y-m-d H:i"),
         	'log_action_by' => $_POST['log_user'],
@@ -59,7 +59,7 @@
         }
         $ipshow = gethostbyaddr($ip);
         $log = $db->insert('log',array(
-    	'log_system' => 'questionare',
+    	'log_system' => 'questionare-System',
     	'log_action' => 'Add',
     	'log_action_date' => date("Y-m-d H:i"),
     	'log_action_by' => $_POST['log_user'],
