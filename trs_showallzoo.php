@@ -245,7 +245,6 @@
 <?php echo $form->close();
 
 	if (isset($_POST['submit'])) {
-
         isset($_POST['search'])?$search  = $_POST['search']:$search='';
         isset($_POST['date'])?$date  = $_POST['date']:$date='';
         isset($_POST['date2_1'])?$date2_1  = $_POST['date2_1']:$date2_1='';

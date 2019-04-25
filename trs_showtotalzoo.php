@@ -80,7 +80,7 @@
 							<div class='col-md-4' style="float:left;"></div>
 							<div class='date-form dayinbox col-md-4 form-horizontal control-group controls input-group'>
 									<div class='input-group date' id ="datetimepicker1" data-target-input="nearest">
-										<input type='text' class="form-control datetimepicker-input" name="eventconfer_start" id='date1' readonly/>
+										<input type='text' class="form-control datetimepicker-input" name="date" id='date1' readonly/>
 										<div class="input-group-append" data-target="#datetimepicker1" data-toggle="datetimepicker">
 					                        <div class="input-group-text"><i class="fa fa-calendar"></i></div>
 					                    </div>
