@@ -617,7 +617,8 @@ if($ftp){
 		die();
 	}
 }else{
-		$files	= scandir($current_path.$rfm_subfolder.$subdir);
+	$files	= scandir($current_path.$rfm_subfolder.$subdir);
+
 }
 
 $n_files= count($files);

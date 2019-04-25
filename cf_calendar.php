@@ -1,7 +1,7 @@
 <?php
 	$id = $_GET['id'];
 
-	$r = $db->findByPK('conferroom','conferroom_id',$id)->executeRow();
+	$r = $db->findByPK('conferroom','confer_id',$id)->executeRow();
 	$confer = $r['conferroom_name'];
 ?>
 <!DOCTYPE html>
@@ -158,7 +158,7 @@
 
             });
             var conferid = $('#confer_id').val();
-            var disbledid = document.getElementById(<?php echo $r['conferroom_id'];?>);
+            var disbledid = document.getElementById(<?php echo $r['confer_id'];?>);
             var checkdisbled = <?php echo $_GET['id']?>;
 			if(conferid == checkdisbled){
 				disbledid.classList.remove('btn-primary');
