@@ -27,8 +27,10 @@
     $lbday = new label('ปี');
     $lbdayfrist = new label('วันที่เริ่มต้น');
     $lbdaylast = new label('วันที่สิ้นสุด');
-    $txtday = new datetimepicker('date','datetimepicker1','','form-control datetimepicker-input','date-form dayinbox col-md-12 form-horizontal control-group controls input-group','input-group date','datetimepicker1','#datetimepicker1','');
-    $txtday2 = new datetimepicker('date2','datetimepicker2','','form-control datetimepicker-input','date-form dayinbox col-md-12 form-horizontal control-group controls input-group','input-group date','datetimepicker2','#datetimepicker2','');
+    $txtday = new datetimepicker('date','datetimepicker1','','form-control datetimepicker-input','date-form dayinbox form-horizontal control-group controls input-group','input-group date','datetimepicker1','#datetimepicker1','','');
+    //$txtday = new datetimepicker('date','datetimepicker1','','form-control datetimepicker-input','date-form dayinbox col-md-12 form-horizontal control-group controls input-group','input-group date','datetimepicker1','#datetimepicker1','');
+    $txtday2 = new datetimepicker('date2','datetimepicker2','','form-control datetimepicker-input','date-form dayinbox form-horizontal control-group controls input-group','input-group date','datetimepicker2','#datetimepicker2','','');
+    //$txtday2 = new datetimepicker('date2','datetimepicker2','','form-control datetimepicker-input','date-form dayinbox col-md-12 form-horizontal control-group controls input-group','input-group date','datetimepicker2','#datetimepicker2','');
     $selectmonth = new selectMenu();
     $selectmonth->name = "month";
     $selectmonth->addItem('เลือก','');

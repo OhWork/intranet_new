@@ -77,8 +77,8 @@
         }
             $ipshow = gethostbyaddr($ip);
             $log = $db->insert('log',array(
-        	'log_system' => 'UpdateStatus-ConferenceRoom',
-        	'log_action' => 'Edit',
+        	'log_system' => 'Insert-ConferenceRoom',
+        	'log_action' => 'Add',
         	'log_action_date' => date("Y-m-d H:i"),
         	'log_action_by' => $_POST['log_user'],
         	'log_ip' => $ipshow
