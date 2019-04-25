@@ -176,7 +176,7 @@
 								$rs =$db->findByPK('conferroom','zoo_zoo_id',$_GET['zoo'])->execute();
 								foreach($rs as $showrs){
 									?>
-									<a id="<?php echo $showrs['conferroom_id'];?>" class="btn btn-info col-12 pcfmenu mt-3" href="index.php?url=cf_calendar.php&id=<?php echo $showrs['conferroom_id'];?>&zoo=<?php echo $_GET['zoo'];?>"><?php echo $showrs['conferroom_name']; ?></a>
+									<a id="<?php echo $showrs['confer_id'];?>" class="btn btn-info col-12 pcfmenu mt-3" href="index.php?url=cf_calendar.php&id=<?php echo $showrs['confer_id'];?>&zoo=<?php echo $_GET['zoo'];?>"><?php echo $showrs['confer_name']; ?></a>
 									<?php
 								}
 							?>
