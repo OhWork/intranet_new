@@ -836,13 +836,15 @@ $files=$sorted;
 	?> <li class="active"><?php echo $b?></li><?php
 		}elseif($b!=""){ ?>
 		<li><a href="<?php echo $link.$tmp_path?>"><?php echo $b?></a></li><li><span class="divider"><?php echo "/";?></span></li>
+	<?php }else if ($_SESSION['user_id'] != 1){ ?>
+
 	<?php }
 	}
 	}else{
-		$rsshownamefol = $db->findByPK('folder','subzoo_subzoo_id',$_SESSION['subzoo_subzoo_id'])->executeAssoc();
-		$rsshowsubfol = $db->findByPK('folder','folder_position',$rsshownamefol['folder_id'])->executeAssoc();
+		$rsshownamefol = $db->findByPK('folder','folder_sc',$_SESSION['subzoo_sc'])->executeAssoc();
+		$rsshowsubfol = $db->findByPK('folder','folder_id',$rs['folder_position'])->executeAssoc();
 		?>
-		<li class="active"><?php echo $rsshownamefol['folder_name'].'/'.$rsshowsubfol['folder_name'] ?></li>
+		<li class="active"><?php echo $rsshowsubfol['folder_name'].'/'.$rsshownamefol['folder_name'] ?></li>
 	<?php
 	}
 	?>
