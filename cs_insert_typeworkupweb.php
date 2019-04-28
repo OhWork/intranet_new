@@ -16,12 +16,36 @@
 		$data['typeWorkupweb_name'] = $_POST['typeWorkupweb_name'];
 
 		$rsfix = $db->update('typeWorkupweb',$data,'typeWorkupweb_id',$_POST['typeWorkupweb_id']);
-
+            if(getenv(HTTP_X_FORWARDED_FOR)){
+            $ip = $_SERVER['HTTP_X_FORWARDED_FOR']; // IP proxy
+            }else{
+            $ip = $_SERVER['REMOTE_ADDR'];
+                }
+            $ipshow = gethostbyaddr($ip);
+            $log = $db->insert('log',array(
+        	'log_system' => 'insert-Typeworkupweb',
+        	'log_action' => 'Edit',
+        	'log_action_date' => date("Y-m-d H:i"),
+        	'log_action_by' => $_POST['log_user'],
+        	'log_ip' => $ipshow
+        	));
 	}else{
 	$rs = $db->insert('typeWorkupweb',array(
 	'typeWorkupweb_name' => $_POST['typeWorkupweb_name']
 	));
-
+          if(getenv(HTTP_X_FORWARDED_FOR)){
+            $ip = $_SERVER['HTTP_X_FORWARDED_FOR']; // IP proxy
+            }else{
+            $ip = $_SERVER['REMOTE_ADDR'];
+                }
+            $ipshow = gethostbyaddr($ip);
+            $log = $db->insert('log',array(
+        	'log_system' => 'insert-Typeworkupweb',
+        	'log_action' => 'Add',
+        	'log_action_date' => date("Y-m-d H:i"),
+        	'log_action_by' => $_POST['log_user'],
+        	'log_ip' => $ipshow
+        	));
 	}
 
 	if($rs || $rsfix){

@@ -113,6 +113,19 @@ if (isset($_GET['action']))
 					$selectidfiles = $db->findByPK('files','files_name',"'$path_foldercutpath[$countpath]'")->executeAssoc();
 					$rsdeletecdl = $db->delete('cdl','files_files_id',$selectidfiles['files_id']);
 					$rsdeletefile = $db->deletefolder('files','files_name',"'$path_foldercutpath[$countpath]'",'folder_folder_id',$selectid['folder_id']);
+                                        	 if(getenv(HTTP_X_FORWARDED_FOR)){
+                                                    $ip = $_SERVER['HTTP_X_FORWARDED_FOR']; // IP proxy
+                                                    }else{
+                                                    $ip = $_SERVER['REMOTE_ADDR'];
+                                                        }
+                                                    $ipshow = gethostbyaddr($ip);
+                                                    $log = $db->insert('log',array(
+                                                        'log_system' => 'FileManagement-System',
+                                                        'log_action' => 'Delete-Files',
+                                                        'log_action_date' => date("Y-m-d H:i"),
+                                                        'log_action_by' => $_POST['log_user'],
+                                                        'log_ip' => $ipshow
+                                                        ));
 					if($rsdeletefile){
 	  				unlink($path);
   					}
@@ -187,6 +200,19 @@ if (isset($_GET['action']))
 								if($rsdelete){
 									deleteDir($path);
 								}
+                                                                if(getenv(HTTP_X_FORWARDED_FOR)){
+                                                                    $ip = $_SERVER['HTTP_X_FORWARDED_FOR']; // IP proxy
+                                                                    }else{
+                                                                    $ip = $_SERVER['REMOTE_ADDR'];
+                                                                        }
+                                                                    $ipshow = gethostbyaddr($ip);
+                                                                    $log = $db->insert('log',array(
+                                                                        'log_system' => 'FileManagement-System',
+                                                                        'log_action' => 'Delete-Folder',
+                                                                        'log_action_date' => date("Y-m-d H:i"),
+                                                                        'log_action_by' => $_POST['log_user'],
+                                                                        'log_ip' => $ipshow
+                                                                        ));
 
 						}
 						}
@@ -244,6 +270,19 @@ if (isset($_GET['action']))
 				));
 				}
 			}
+                        if(getenv(HTTP_X_FORWARDED_FOR)){
+                            $ip = $_SERVER['HTTP_X_FORWARDED_FOR']; // IP proxy
+                            }else{
+                            $ip = $_SERVER['REMOTE_ADDR'];
+                                }
+                            $ipshow = gethostbyaddr($ip);
+                            $log = $db->insert('log',array(
+                                'log_system' => 'FileManagement-System',
+                                'log_action' => 'Create_folder',
+                                'log_action_date' => date("Y-m-d H:i"),
+                                'log_action_by' => $_POST['log_user'],
+                                'log_ip' => $ipshow
+                                ));
 		}
 			break;
 
@@ -279,7 +318,19 @@ if (isset($_GET['action']))
 	 			$selectid = $db->findByPK('folder','folder_name',"'$path_foldercutpath[$countpath]'")->executeAssoc();
 	 		$rsrename = $db->updatefolder('folder','folder_name',"'$baowiw'",'folder_name',"'$path_foldercutpath[$countpath]'",'folder_position',0);
  			}
-
+                        if(getenv(HTTP_X_FORWARDED_FOR)){
+                            $ip = $_SERVER['HTTP_X_FORWARDED_FOR']; // IP proxy
+                            }else{
+                            $ip = $_SERVER['REMOTE_ADDR'];
+                                }
+                            $ipshow = gethostbyaddr($ip);
+                            $log = $db->insert('log',array(
+                                'log_system' => 'FileManagement-System',
+                                'log_action' => 'Rename-Folder',
+                                'log_action_date' => date("Y-m-d H:i"),
+                                'log_action_by' => $_POST['log_user'],
+                                'log_ip' => $ipshow
+                                ));
  				if($rsrename){
  						rename_folder($path_thumb,$name,$ftp,$config);
 				}
@@ -385,6 +436,19 @@ if (isset($_GET['action']))
   					if($rsrenamefile){
 						rename_file($path_thumb,$name,$ftp,$config);
 					}
+                                        if(getenv(HTTP_X_FORWARDED_FOR)){
+                                            $ip = $_SERVER['HTTP_X_FORWARDED_FOR']; // IP proxy
+                                            }else{
+                                            $ip = $_SERVER['REMOTE_ADDR'];
+                                                }
+                                            $ipshow = gethostbyaddr($ip);
+                                            $log = $db->insert('log',array(
+                                                'log_system' => 'FileManagement-System',
+                                                'log_action' => 'Rename-Files',
+                                                'log_action_date' => date("Y-m-d H:i"),
+                                                'log_action_by' => $_POST['log_user'],
+                                                'log_ip' => $ipshow
+                                                ));
 					if ($fixed_image_creation)
 					{
 						$info=pathinfo($path);
