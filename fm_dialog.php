@@ -922,7 +922,7 @@ $files=$sorted;
         @$searchall = $_POST['searchall'];
 
 
-            $query = $db->specifytable('*','files JOIN folder ON files.folder_folder_id = folder.folder_id JOIN cdl ON files.files_id = cdl.files_files_id',"files_name LIKE '%{$searchall}%'")->execute();
+            $query = $db->specifytable('*','files JOIN folder ON files.folder_folder_id = folder.folder_id',"files_name LIKE '%{$searchall}%'")->execute();
 
 if(!empty($_POST['searchall'])){
 		if($_POST['type'] == 1){

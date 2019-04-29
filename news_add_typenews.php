@@ -9,8 +9,8 @@
   $radiotypeNewsenable = new radioGroup();
   $radiotypeNewsenable->name = 'typeNews_enable';
   if(empty($id)){
-    	$radiotypeNewsenable->add('ใช้งานได้',1,'');
-    	$radiotypeNewsenable->add('ไม่สามารถใช้งานได้',0,'checked');
+    	$radiotypeNewsenable->add('ใช้งานได้',1,'','');
+    	$radiotypeNewsenable->add('ไม่สามารถใช้งานได้',0,'checked','');
     	}
   $submit = new buttonok("ยืนยัน","","btn btn-success col-md-12","");
 
@@ -19,11 +19,11 @@
 	$txttypeNews->value = $r['typeNews_name'];
 	$txttypeNewsno->value = $r['typeNews_no'];
   if($r["typeNews_enable"] == 1){
-    	$radiotypeNewsenable->add('ใช้งานได้',1,'checked');
-    	$radiotypeNewsenable->add('ไม่สามารถใช้งานได้',0,'');
+    	$radiotypeNewsenable->add('ใช้งานได้',1,'checked','');
+    	$radiotypeNewsenable->add('ไม่สามารถใช้งานได้',0,'','');
     	}else if($r['typeNews_enable'] == 0){
-        $radiotypeNewsenable->add('ใช้งานได้',1,'');
-        $radiotypeNewsenable->add('ไม่สามารถใช้งานได้',0,'checked');
+        $radiotypeNewsenable->add('ใช้งานได้',1,'','');
+        $radiotypeNewsenable->add('ไม่สามารถใช้งานได้',0,'checked','');
     	}
     }
 echo $form->open("form_reg","form","col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","news_insert_typenews.php",""); ?>
