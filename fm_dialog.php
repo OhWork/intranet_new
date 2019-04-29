@@ -835,9 +835,7 @@ $files=$sorted;
 		if($k==count($bc)-2){
 	?> <li class="active"><?php echo $b?></li><?php
 		}elseif($b!=""){ ?>
-		<li><a href="<?php echo $link.$tmp_path?>"><?php echo $b?></a></li><li><span class="divider"><?php echo "/";?></span></li>
-	<?php }else if ($_SESSION['user_id'] != 1){ ?>
-
+		<li><a href="admin_index.php?url=fm_dialog.php&?editor=0&type=0&lang=en_EN&popup=0&crossdomain=0&field_id=&relative_url=0&akey=key&fldr=<?php echo $tmp_path?>"><?php echo $b?></a></li><li><span class="divider"><?php echo "/";?></span></li>
 	<?php }
 	}
 	}else{
