@@ -1,4 +1,5 @@
 <?php
+	error_reporting(0);
 $version = "9.12.1";
 if (session_id() == '') session_start();
 
