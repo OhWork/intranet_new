@@ -14,7 +14,7 @@
 		$data['confer_name'] = $_POST['confer_name'];
 		$data['confer_people'] = $_POST['confer_num'];
 
-		$rsfix = $db->update('confer',$data,'confer_id',$_POST['confer_id']);
+		$rsfix = $db->update('conferroom',$data,'confer_id',$_POST['confer_id']);
 		if($rsfix){
 			$select = $db->findByPK('conferimg','confer_confer_id',$_POST['confer_id'])->executeAssoc();
 			print_r($select);
@@ -54,7 +54,7 @@
 		'zoo_zoo_id'=>$_POST['subzoo_zoo_zoo_id'],
 		));
 		if($rs){
-				$select = $db->findAllDESC('confer','confer_id')->executeAssoc();
+				$select = $db->findAllDESC('conferroom','confer_id')->executeAssoc();
 				for($i=1; $i<=$countfiles; $i++){
 					$target_dir = 'temp/';
 					$target_file = $target_dir.basename($_FILES['confer_pic'.$i]['name']);
@@ -86,7 +86,7 @@
 	}
 
 	if(@$rs || @$rsfix){
-    	if($rs && $rspic){
+    	if(@$rs && $rspic){
     	    echo "<div class='statusok'>เพิ่มสำเร็จ</div>";
     	}else if(@$rsfix && $rspic){
             echo "<div class='statusok'>แก้ไขสำเร็จ</div>";
