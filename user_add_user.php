@@ -354,17 +354,13 @@ $(document).ready(function() {
 				required: true,
 				rangelength: [8, 16]
 			},
-			user_pass: "required",
 			user_name: "required",
-			user_pass_confirm: "required",
 			user_last: "required",
 
 		},
 		messages: {
 			user_user:'*กรุณากรอกชื่อผู้ใช้ระหว่าง 8-16 ตัวอักษร*',
-			user_pass:'*กรุณากรอกรหัสผ่าน*',
 			user_name:'*กรุณากรอกชื่อ*',
-			user_pass_confirm:'*กรุณายืนยันรหัสผ่าน*',
 			user_last:'*กรุณากรอกนามสกุล*',
 		},
 				highlight: function ( element, errorClass, validClass ) {
@@ -418,17 +414,4 @@ $(document).ready(function() {
             }
     });
 */
-    $('#user_pass_confirm').focusout(function(){
-	    var passcon =  $('#user_pass_confirm').val();
-	    var pass = $('#user_pass').val();
-	    if(pass == passcon){
-		   $("#msg2").html('<span class="text-success">รหัสผ่านตรงกัน</span>');
- 		   $("#btnSubmit").attr("disabled", false);
-	    }
-	    else{
-		   $("#msg2").html('<span class="text-danger">รหัสผ่านไม่ตรงกัน</span>');
- 		   $("#btnSubmit").attr("disabled", true);
-	    }
-    });
-
 </script>

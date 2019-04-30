@@ -16,7 +16,6 @@
 		$data['user_last'] = $_POST['user_last'];
 		$data['user_nameeng'] = $_POST['user_nameeng'];
 		$data['user_lasteng'] = $_POST['user_lasteng'];
-		$data['user_pass'] = $_POST['user_pass'];
 		$data['user_tel'] = $_POST['user_tel'];
 		$data['user_idcard'] = $_POST['user_idcard'];
 		$data['user_enable'] = $_POST['user_enable'];
