@@ -2,7 +2,6 @@
        error_reporting(0);
         include 'database/db_tools.php';
 	include 'connect.php';
-        echo $_POST['user_id'];
         if(!empty($_POST['user_id'])){
 
 		$data['user_pass'] = md5(md5(md5($_POST['user_pass'])));
