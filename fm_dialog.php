@@ -755,6 +755,7 @@ $files=$sorted;
 			</div>
 			<div class="row">
 			<div class="col-md-4 half">
+				<?php if($config['upload_dir'] != 'source/' || $_SESSION['user_id'] == 1){?>
 				<?php if($upload_files){ ?>
 				<button class="tip btn upload-btn" title="<?php echo  trans('Upload_file');?>"><i class="rficon-upload"></i></button>
 				<?php } ?>
@@ -767,7 +768,8 @@ $files=$sorted;
 				<?php if($copy_cut_files || $copy_cut_dirs){ ?>
 				<button class="tip btn paste-here-btn" title="<?php echo trans('Paste_Here');?>"><i class="rficon-clipboard-apply"></i></button>
 				<button class="tip btn clear-clipboard-btn" title="<?php echo trans('Clear_Clipboard');?>"><i class="rficon-clipboard-clear"></i></button>
-				<?php } ?>
+				<?php }
+					}?>
 			</div>
 			<div class="col-md-4 half view-controller">
 				<center>
