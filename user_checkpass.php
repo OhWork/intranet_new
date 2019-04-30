@@ -1,7 +1,7 @@
 <?php
 	ob_start();
 	session_start();
-	error_reporting(E_ERROR | E_WARNING | E_PARSE);
+	error_reporting(0);
     include 'database/db_tools.php';
 	include 'connect.php';
 	$iduser = $_POST['userid'];
