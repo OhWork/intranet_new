@@ -86,8 +86,10 @@ if (!empty($_SESSION['user_name'])):
 	});
 	$('#user_pass_confirm').focusout(function(){
 	    var passcon =  $('#user_pass_confirm').val();
+	    var passconmd5 = $.md5($.md5($.md5(passcon)));
 	    var pass = $('#user_pass').val();
-	    if(pass == passcon){
+	    var passmd5 =$.md5($.md5($.md5(pass)));
+	    if(passmd5 == passconmd5){
 		   $("#msg2").html('<span class="text-success">รหัสผ่านตรงกัน</span>');
  		   $("#btnSubmit").attr("disabled", false);
 	    }
