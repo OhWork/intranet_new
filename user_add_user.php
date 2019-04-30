@@ -292,6 +292,7 @@ function autoTab2(obj,typeCheck){
 			</div>
 			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 				<div class="row">
+				<?php if($id ==''){?>
 					<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6">
 						<div class="row">
 							<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
@@ -315,6 +316,7 @@ function autoTab2(obj,typeCheck){
 						</div>
 					</div>
 					<div id="msg2"></div>
+					<?php } ?>
 				</div>
 			</div>
 			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" style="padding-bottom: 15px;">

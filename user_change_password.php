@@ -22,20 +22,20 @@ if (!empty($_SESSION['user_name'])):
 		<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3">
 			<?php echo $lboldpass;?>
 		</div>
-		<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+		<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 showrequired">
 			<?php echo $txtoldpass;?>
 		</div>
 		<div id="msg" class="col-md-12 form-group" style="text-align:center;padding-top:10px;"></div>
 		<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3">
 			<?php echo $lbpass;?>
 		</div>
-		<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+		<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 showrequired">
 			<?php echo $txtpass;?>
 		</div>
 		<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3">
 			<?php echo $lbpasscon;?>
 		</div>
-		<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+		<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 showrequired">
 			<?php echo $txtpass_confirm;?>
 		</div>
 		<div id="msg2" class="col-md-12 form-group" style="text-align:center;padding-top:10px;"></div>
@@ -52,6 +52,24 @@ if (!empty($_SESSION['user_name'])):
 <?php    echo $form->close();
     endif; ?>
     <script>
+	    $("#form_reg").validate({
+		rules: {
+			user_pass_old: "required",
+			user_pass: "required",
+			user_pass_confirm: "required",
+
+		},
+		messages: {
+			user_pass_old:'*กรุณากรอกรหัสผ่านเดิม*',
+			user_pass:'*กรุณากรอกรหัสผ่านใหม่ที่ต้องการเปลี่ยน*',
+			user_pass_confirm:'*กรุณายืนยันรหัสผ่านเดิม*',
+		},
+				highlight: function ( element, errorClass, validClass ) {
+					$( element ).parents( ".showrequired" ).addClass( "text-danger" ).removeClass( "text-success" );
+				},
+				unhighlight: function (element, errorClass, validClass) {
+					$( element ).parents( ".showrequired" ).addClass( "text-success" ).removeClass( " text-danger" );
+				}	});
     	$("#user_passold").blur(function(){
 	    $.ajax({
             url: "user_checkpass.php",
