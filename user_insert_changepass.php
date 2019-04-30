@@ -2,6 +2,14 @@
        error_reporting(0);
         include 'database/db_tools.php';
 	include 'connect.php';
+	?>
+	<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html" charset="utf-8">
+        <link rel="stylesheet" href="CSS/bootstrap.css">
+        <link rel="stylesheet" href="CSS/main.css">
+	</head>
+	<?php
         if(!empty($_POST['user_id'])){
 
 		$data['user_pass'] = md5(md5(md5($_POST['user_pass'])));
