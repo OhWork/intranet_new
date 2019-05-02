@@ -25,13 +25,13 @@
     $lbforeignerfree = new label('ไม่เสียค่าบัตร');
     $lbmainnsf = new label('ไนท์ซาฟารี');
     $lbmainvehicle = new label('ยานพาหนะ');
-	$lbspecialpj = new label('โครงการทัวร์สวนสัตว์');
+    $lbspecialpj = new label('โครงการทัวร์สวนสัตว์');
     $lbtime = new label('วันที่และเวลาแจ้ง');
     $lbbus = new label('รถบัส');
     $lbcar = new label('รถยนต์');
     $lbmtc = new label('จักรยานยนต์');
-    $txtday = new textfieldcalendarreadonly('touristreport_date','datepicker','','date-picker form-control','input-group-addon','datepicker');
-    $txtday = new datetimepicker('touristreport_date','datepicker','','form-control datetimepicker-input','date-form dayinbox col-md-12 form-horizontal control-group controls input-group','input-group date','datepicker','#datepicker','');
+    //$txtday = new textfieldcalendarreadonly('touristreport_date','datepicker','','date-picker form-control','input-group-addon','datepicker');
+    $txtday = new datetimepicker('touristreport_date','datepicker','','form-control datetimepicker-input','date-form dayinbox col-md-12 form-horizontal control-group controls input-group','input-group date','datepicker','#datepicker','','');
 
     $year = date("Y");
     $md = date("m-d");
@@ -319,13 +319,23 @@
                                 monthsShort: ["ม.ค.", "ก.พ.", "มี.ค.", "เม.ย.", "พ.ค.", "มิ.ย.", "ก.ค.", "ส.ค.", "ก.ย.", "ต.ค.", "พ.ย.", "ธ.ค."],
                                 today: "วันนี้"
 };
-   $(".date-picker").datepicker({
-    format:'yyyy-mm-dd',
-    autoclose:true,
-    onselect: function(date) {
-            alert(date)
-        },
-   });
+//   $(".date-picker").datepicker({
+//    format:'yyyy-mm-dd',
+//    autoclose:true,
+//    onselect: function(date) {
+//            alert(date)
+//        },
+//   });
+   $(function () {
+        $('.date-picker').datetimepicker({
+	        format:'YYYY-MM-DD H:mm',
+	        useCurrent: false,
+	        ignoreReadonly: true,
+            sideBySide: true,
+            allowInputToggle: true,
+	        locale:moment.locale('th'),
+	        stepping: 30
+        });
     //ตรวจค่าตัวเลข
     function CheckNum(){
 		if (event.keyCode < 48 || event.keyCode > 57){

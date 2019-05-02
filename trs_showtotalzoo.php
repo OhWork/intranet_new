@@ -56,6 +56,19 @@
 					<h4>รายงานจำนวนผู้เข้าชม <?php echo @$zoo_name ?></h4>
 				</div>
 				<div class='col-xl-2 col-lg-2'></div>
+                                                <?php     if(($user_zoo) >= 11 && ($user_zoo <= 18)){ ?>
+                                                                <a href="admin_index.php?url=trs_add_trs.php" class="btn btn-success col-12">เพิ่มจำนวนผู้เข้าชม <span data-feather="plus"></span></a>
+                                                                <?php  }else{  ?>
+                                                                    <div class='row'>
+                                                                        <div class="col-md-4" style="float: left;">
+                                                                        </div>
+                                                                        <div class="col-md-4 loginwrong" style="float: right;">
+                                                                            <p>สามารถเพิ่มข้อมูลได้เฉพาะสวนสัตว์เท่านั้น</p>
+                                                                        </div>
+                                                                        <div class="col-md-4" style="float: right;">
+                                                                        </div>
+                                                                    </div>
+                                                             <?php } ?>
 			</div>
 		</div>
         <div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12'>
