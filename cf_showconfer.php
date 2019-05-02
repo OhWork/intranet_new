@@ -50,10 +50,10 @@ $(document).ready(function() {
 	if($_POST){
 ?>
 <?php
-				$columns = array('confer_name','confer_people');
+				$columns = array('conferroom_name','confer_people');
 				$rs = $db->findByPK('conferroom','zoo_zoo_id',$_POST['subzoo_zoo_zoo_id'])->execute();
 				$grid = new gridView();
-				$grid->pr = 'confer_id';
+				$grid->pr = 'conferroom_id';
 				$grid->header = array('<b><center>ชื่อห้องประชุม</center></b>','<b><center>จำนวนที่สามารถเข้าร่วมประชุมได้</center></b>','<b><center>#</center></b>');
 				$grid->width = array('60%','30%','10%');
 				$grid->edit = 'admin_index.php?url=cf_addconfer.php';

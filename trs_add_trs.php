@@ -311,23 +311,8 @@
 </div>
         <div class="col-md-2" style="float:left;"></div>
 <script >
-   $.fn.datepicker.dates['th'] = {
-                                days: ["อาทิตย์", "จันทร์", "อังคาร", "พุธ", "พฤหัส", "ศุกร์", "เสาร์", "อาทิตย์"],
-                                daysShort: ["อา", "จ", "อ", "พ", "พฤ", "ศ", "ส", "อา"],
-                                daysMin: ["อา", "จ", "อ", "พ", "พฤ", "ศ", "ส", "อา"],
-                                months: ["มกราคม", "กุมภาพันธ์", "มีนาคม", "เมษายน", "พฤษภาคม", "มิถุนายน", "กรกฎาคม", "สิงหาคม", "กันยายน", "ตุลาคม", "พฤศจิกายน", "ธันวาคม"],
-                                monthsShort: ["ม.ค.", "ก.พ.", "มี.ค.", "เม.ย.", "พ.ค.", "มิ.ย.", "ก.ค.", "ส.ค.", "ก.ย.", "ต.ค.", "พ.ย.", "ธ.ค."],
-                                today: "วันนี้"
-};
-//   $(".date-picker").datepicker({
-//    format:'yyyy-mm-dd',
-//    autoclose:true,
-//    onselect: function(date) {
-//            alert(date)
-//        },
-//   });
    $(function () {
-        $('.date-picker').datetimepicker({
+        $('#datepicker').datetimepicker({
 	        format:'YYYY-MM-DD H:mm',
 	        useCurrent: false,
 	        ignoreReadonly: true,
@@ -335,6 +320,7 @@
             allowInputToggle: true,
 	        locale:moment.locale('th'),
 	        stepping: 30
+        });
         });
     //ตรวจค่าตัวเลข
     function CheckNum(){

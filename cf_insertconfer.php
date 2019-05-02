@@ -11,7 +11,7 @@
 	$countfiles = count($_FILES);
 		if(!empty($_POST['conferroom_id'])){
 
-		$data['conferroom_name'] = $_POST['confer_name'];
+		$data['conferroom_name'] = $_POST['conferroom_name'];
 		$data['conferroom_people'] = $_POST['confer_num'];
 
 		$rsfix = $db->update('conferroom',$data,'conferroom_id',$_POST['confer_id']);
@@ -49,7 +49,7 @@
 
 	}else{
 		$rs = $db->insert('conferroom',array(
-		'conferroom_name' => $_POST['confer_name'],
+		'conferroom_name' => $_POST['conferroom_name'],
 		'conferroom_people' => $_POST['confer_num'],
 		'zoo_zoo_id'=>$_POST['subzoo_zoo_zoo_id'],
 		));
