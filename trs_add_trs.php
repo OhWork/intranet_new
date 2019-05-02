@@ -35,7 +35,7 @@
 
     $year = date("Y");
     $md = date("m-d");
-//     $txtday->value = date("Y-m-d");
+     $txtday->value = date("Y-m-d");
 
     $txtadult1 = new textfield('touristreport_adult_ch','','form-control css-require','','');
     $txtadult1->value = 0;
