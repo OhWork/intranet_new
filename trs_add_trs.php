@@ -332,9 +332,8 @@
         $("#msg").html();
     $("#btnSubmit").attr("disabled", true);
     }
-	$("#datepicker").on("change",function(e) {
-
-    console.log($("#datepicker").val());
+    console.log($('#datepicker').val());
+	$(".date").on("change.datetimepicker",function(e) {
     var datepick = $(this).val();
         $("#msg").html("checking...");
         $.ajax({
