@@ -31,7 +31,7 @@
     $lbcar = new label('รถยนต์');
     $lbmtc = new label('จักรยานยนต์');
     //$txtday = new textfieldcalendarreadonly('touristreport_date','datepicker','','date-picker form-control','input-group-addon','datepicker');
-    $txtday = new datetimepicker('touristreport_date','datepicker','','form-control datetimepicker-input','date-form dayinbox col-md-12 form-horizontal control-group controls input-group','input-group date','datepicker','#datepicker','','');
+    $txtday = new datetimepicker('touristreport_date','datepicker','','form-control datetimepicker-input','date-form dayinbox col-md-12 form-horizontal control-group controls input-group','input-group date','','#datepicker','','');
 
     $year = date("Y");
     $md = date("m-d");
@@ -174,13 +174,9 @@
                                     <div class='control-group'>
                                         <div class='controls'>
                                             <div class='input-group'>
-                                                <?php if(empty($_GET['id'])){
+                                                <?php
                                                     echo $txtday;
-                                                }else{
-                                                    $date_fix = strtotime($r['touristreport_date']);
-                                                    $th_date = thai_date($date_fix);
-                                                    echo $th_date;
-                                                }?>
+                                                ?>
                                             </div>
                                         </div>
                                     </div>
@@ -329,7 +325,7 @@
 	    	}
 	}
 	$(document).ready(function() {
-    var datefix = $('#trs_date').val();
+    var datefix = $('#datepicker').val();
     if(datefix){
 
     }else{
@@ -337,6 +333,8 @@
     $("#btnSubmit").attr("disabled", true);
     }
 	$("#datepicker").on("change",function(e) {
+
+    console.log($("#datepicker").val());
     var datepick = $(this).val();
         $("#msg").html("checking...");
         $.ajax({

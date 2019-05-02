@@ -47,7 +47,7 @@
     $selectquarter->addItem('ไตรมาสที่ 3 (1 เม.ย. - 30 มิ.ย.)','3');
     $selectquarter->addItem('ไตรมาสที่ 4 (1 ก.ค. - 30 ก.ย.)','4');
     $selectroom = new SelectFromDB();
-    $selectroom->name = 'confer_conferroom_id';
+    $selectroom->name = 'confer_confer_id';
     $selectroom->idtf = 'conferroom_idtf';
 	$button = new buttonok('ค้นหา','submit','btn btn-success col-md-12 printdisplaynone','submit');
 	   echo $form->open('','','','','');
@@ -185,7 +185,7 @@
                                            eventconfer.subzoo_zoo_zoo_id = zoo.zoo_id AND
                                            eventconfer.headncf_headncf_id = headncf.headncf_id AND
                                            eventconfer_status = 'Y' AND
-                                           eventconfer.confer_conferroom_id = $conferrenname AND
+                                           eventconfer.confer_confer_id = $conferrenname AND
                                            eventconfer_start $qua")->executeAssoc();
  ?>
 <div class='col-md-12'>
