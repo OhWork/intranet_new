@@ -42,7 +42,7 @@
     $button = new buttonok('เปลี่ยนสถานะ','','btn btn-success','');
     if(!empty($_GET['id'])){
 		$id = $_GET['id'];
-		$r = $db->findByPK44('eventconfer','confer','zoo','headncf','confer_conferroom_id','conferroom_id','zoo_zoo_id','zoo_id','headncf_headncf_id','headncf_id','eventconferroom_id',$id)->executeRow();
+		$r = $db->findByPK44('eventconfer','confer','zoo','headncf','confer_conferroom_id','conferroom_id','zoo_zoo_id','zoo_id','headncf_headncf_id','headncf_id','eventconfer_id',$id)->executeRow();
 		 $year = date("Y")+543;
           $md = date("m-d");
           $time = date("H:i");
@@ -206,7 +206,7 @@
 					</div>
 				</div>
 <?php
-    echo "<input type='hidden' name='eventconferroom_id' value='$_GET[id]'/>";
+    echo "<input type='hidden' name='eventconfer_id' value='$_GET[id]'/>";
 ?>
 				<div class='col-md-12 mt-2'>
 					<div class='row'>

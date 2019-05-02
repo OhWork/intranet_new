@@ -38,7 +38,7 @@ if(isset($_GET['gData']) && $_GET['gData']|=""){
             }
         }
         $json_data[]=array(
-            "id"=>$rs->eventconferroom_id,
+            "id"=>$rs->eventconfer_id,
             "title"=>$rs->eventconfer_story,
             "start"=>$rs->eventconfer_start,
             "end"=>$rs->eventconfer_end,
@@ -79,8 +79,8 @@ if(isset($_GET['gData']) && $_GET['gData']|=""){
 									<div class='col-md-8' style='text-align: center;'><p'>".$rs->eventconferroom_namers."</p></center></div>
 								</div>
 							</div>",
-             "url"=> "cf_report.php?id=".$rs->eventconferroom_id,
-             "url2"=> "cf_report_conference.php?id=".$rs->eventconferroom_id,
+             "url"=> "cf_report.php?id=".$rs->eventconfer_id,
+             "url2"=> "cf_report_conference.php?id=".$rs->eventconfer_id,
              "color"=> $bgColor,
              "stat" => $status
         );

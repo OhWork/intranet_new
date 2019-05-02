@@ -7,7 +7,7 @@
 
 	$id = $_GET['id'];
 
-	$rs = $db->findByPK55('eventconfer','confer','subzoo','zoo','headncf','confer_conferroom_id','conferroom_id','subzoo_subzoo_id','subzoo_id','subzoo_zoo_zoo_id','zoo_id','headncf_headncf_id','headncf_id','eventconferroom_id',$id)->executeAssoc();
+	$rs = $db->findByPK55('eventconfer','confer','subzoo','zoo','headncf','confer_conferroom_id','conferroom_id','subzoo_subzoo_id','subzoo_id','subzoo_zoo_zoo_id','zoo_id','headncf_headncf_id','headncf_id','eventconfer_id',$id)->executeAssoc();
 	$datestart = $rs['eventconfer_start'];
 	$datestartshow = substr($datestart, 0,10);
 	$timestart = $rs['eventconfer_start'];

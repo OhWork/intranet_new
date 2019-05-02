@@ -222,7 +222,7 @@
 					<?php
 					$columns = array('eventconfer_start','eventconfer_end','headncf_name','eventconfer_story','eventconfer_join','zoo_name');
 					$grid = new gridView();
-					$grid->pr = 'eventconferroom_id';
+					$grid->pr = 'eventconfer_id';
 					$grid->header = array('<b><center>วันเริ่มประชุม</center></b>',
 					                      '<b><center>วันเลิกประชุม</center></b>',
 					                      '<b><center>ประเภทเรื่อง</center></b>',

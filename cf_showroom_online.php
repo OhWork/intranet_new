@@ -70,7 +70,7 @@
 					$rs = $db->findByPK47('eventconfer','confer','zoo','headncf','confer_conferroom_id','conferroom_id','conferroom_id',$id,'subzoo_zoo_zoo_id','zoo_id','headncf_headncf_id','headncf_id','eventconfer_status',"'Y'",'eventconfer_status_online',"'W'",'eventconfer_status_conferonline','1')->execute();
 
 							$grid = new gridView();
-							$grid->pr = 'eventconferroom_id';
+							$grid->pr = 'eventconfer_id';
 							$grid->header = array('<b><center>เวลาการจองห้องประชุม</center></b>','<b><center>ผู้ขอใช้ห้องประชุม</center></b>', '<b><center>ประเภทเรื่อง</center></b>','<b><center>เรื่อง</center></b>','<b><center>ประธานในที่ประชุม</center></b>','<b><center>เวลาเริ่มประชุม</center></b>','<b><center>เวลาสิ้นสุดการประชุม</center></b>','<b><center>สังกัด</center></b>','<b><center>#</center></b>');
 							$grid->width = array('10%','10%','20%','10%','10%','10%','14%','5%');
 							$grid->edit = 'admin_index.php?url=cf_status_online.php';
@@ -86,7 +86,7 @@
 
 
 								$grid = new gridView();
-								$grid->pr = 'eventconferroom_id';
+								$grid->pr = 'eventconfer_id';
 								$grid->header = array('<b><center>เวลาการจองห้องประชุม</center></b>','<b><center>ผู้ขอใช้ห้องประชุม</center></b>', '<b><center>ประเภทเรื่อง</center></b>','<b><center>เรื่อง</center></b>','<b><center>ประธานในที่ประชุม</center></b>','<b><center>เวลาเริ่มประชุม</center></b>','<b><center>เวลาสิ้นสุดการประชุม</center></b>','<b><center>สังกัด</center></b>','<b><center>#</center></b>');
 								$grid->width = array('10%','10%','20%','10%','10%','10%','14%','5%');
 								$grid->edit = 'admin_index.php?url=cf_status_online.php';
@@ -102,7 +102,7 @@
 
 
 								$grid = new gridView();
-								$grid->pr = 'eventconferroom_id';
+								$grid->pr = 'eventconfer_id';
 								$grid->header = array('<b><center>เวลาการจองห้องประชุม</center></b>','<b><center>ผู้ขอใช้ห้องประชุม</center></b>', '<b><center>ประเภทเรื่อง</center></b>','<b><center>เรื่อง</center></b>','<b><center>ประธานในที่ประชุม</center></b>','<b><center>เวลาเริ่มประชุม</center></b>','<b><center>เวลาสิ้นสุดการประชุม</center></b>','<b><center>สังกัด</center></b>','<b><center>#</center></b>');
 								$grid->width = array('10%','10%','20%','10%','10%','10%','14%','5%');
 								$grid->edit = 'admin_index.php?url=cf_status_online.php';
@@ -118,7 +118,7 @@
 
 
 								$grid = new gridView();
-								$grid->pr = 'eventconferroom_id';
+								$grid->pr = 'eventconfer_id';
 								$grid->header = array('<b><center>เวลาการจองห้องประชุม</center></b>','<b><center>ผู้ขอใช้ห้องประชุม</center></b>', '<b><center>ประเภทเรื่อง</center></b>','<b><center>เรื่อง</center></b>','<b><center>ประธานในที่ประชุม</center></b>','<b><center>เวลาเริ่มประชุม</center></b>','<b><center>เวลาสิ้นสุดการประชุม</center></b>','<b><center>สังกัด</center></b>','<b><center>#</center></b>');
 								$grid->width = array('10%','10%','20%','10%','10%','10%','14%','5%');
 								$grid->edit = 'admin_index.php?url=cf_status.php';
