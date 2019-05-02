@@ -48,7 +48,7 @@
 </script>
 <?php
     $id = $_GET['id'];
-    $cfrs = $db->findByPK('confer','conferroom_id',$id)->executeAssoc();
+    $cfrs = $db->findByPK('conferroom','conferroom_id',$id)->executeAssoc();
     $conferroom_name = $cfrs['conferroom_name'];?>
 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3">
 	<div class="row">
@@ -67,7 +67,7 @@
 				<div role="tabpanel" class="tab-pane active inf1" id="wait" style="padding-left:16px;padding-right:16px;">
 				<?php
 					$columns = array('eventconfer_date','eventconfer_uname','headncf_name','eventconfer_story','eventconfer_psname','eventconfer_start','eventconfer_end','zoo_name');
-					$rs = $db->findByPK47('eventconfer','confer','zoo','headncf','confer_confer_id','conferroom_id','conferroom_id',$id,'subzoo_zoo_zoo_id','zoo_id','headncf_headncf_id','headncf_id','eventconfer_status',"'Y'",'eventconfer_status_online',"'W'",'eventconfer_status_conferonline','1')->execute();
+					$rs = $db->findByPK47('eventconfer','conferroom','zoo','headncf','confer_confer_id','conferroom_id','conferroom_id',$id,'subzoo_zoo_zoo_id','zoo_id','headncf_headncf_id','headncf_id','eventconfer_status',"'Y'",'eventconfer_status_online',"'W'",'eventconfer_status_conferonline','1')->execute();
 
 							$grid = new gridView();
 							$grid->pr = 'eventconfer_id';
@@ -82,7 +82,7 @@
 				<div role="tabpanel" class="tab-pane inf1" id="pass" style="padding-left:16px;padding-right:16px;">
 					<?php
 						$columns2 = array('eventconfer_date','eventconfer_uname','headncf_name','eventconfer_story','eventconfer_psname','eventconfer_start','eventconfer_end','zoo_name');
-						$rs2 = $db->findByPK46('eventconfer','confer','zoo','headncf','confer_confer_id','conferroom_id','conferroom_id',$id,'subzoo_zoo_zoo_id','zoo_id','headncf_headncf_id','headncf_id','eventconfer_status',"'Y'",'eventconfer_status_online',"'Y'",'eventconfer_status_conferonline','1')->execute();
+						$rs2 = $db->findByPK46('eventconfer','conferroom','zoo','headncf','confer_confer_id','conferroom_id','conferroom_id',$id,'subzoo_zoo_zoo_id','zoo_id','headncf_headncf_id','headncf_id','eventconfer_status',"'Y'",'eventconfer_status_online',"'Y'",'eventconfer_status_conferonline','1')->execute();
 
 
 								$grid = new gridView();
@@ -98,7 +98,7 @@
 				<div role="tabpanel" class="tab-pane inf1" id="nopass" style="padding-left:16px;padding-right:16px;">
 					<?php
 						$columns3 = array('eventconfer_date','eventconfer_uname','headncf_name','eventconfer_story','eventconfer_psname','eventconfer_start','eventconfer_end','zoo_name');
-						$rs3 = $db->findByPK46('eventconfer','confer','zoo','headncf','confer_confer_id','conferroom_id','conferroom_id',$id,'subzoo_zoo_zoo_id','zoo_id','headncf_headncf_id','headncf_id','eventconfer_status',"'Y'",'eventconfer_status_online',"'N'",'eventconfer_status_conferonline','1')->execute();
+						$rs3 = $db->findByPK46('eventconfer','conferroom','zoo','headncf','confer_confer_id','conferroom_id','conferroom_id',$id,'subzoo_zoo_zoo_id','zoo_id','headncf_headncf_id','headncf_id','eventconfer_status',"'Y'",'eventconfer_status_online',"'N'",'eventconfer_status_conferonline','1')->execute();
 
 
 								$grid = new gridView();
@@ -114,7 +114,7 @@
 				<div role="tabpanel" class="tab-pane inf1" id="cancelpass" style="padding-left:16px;padding-right:16px;">
 					<?php
 						$columns = array('eventconfer_date','eventconfer_uname','headncf_name','eventconfer_story','eventconfer_psname','eventconfer_start','eventconfer_end','zoo_name');
-						$rs = $db->findByPK46('eventconfer','confer','zoo','headncf','confer_confer_id','conferroom_id','conferroom_id',$id,'subzoo_zoo_zoo_id','zoo_id','headncf_headncf_id','headncf_id','eventconfer_status',"'Y'",'eventconfer_status_online',"'C'",'eventconfer_status_conferonline','1')->execute();
+						$rs = $db->findByPK46('eventconfer','conferroom','zoo','headncf','confer_confer_id','conferroom_id','conferroom_id',$id,'subzoo_zoo_zoo_id','zoo_id','headncf_headncf_id','headncf_id','eventconfer_status',"'Y'",'eventconfer_status_online',"'C'",'eventconfer_status_conferonline','1')->execute();
 
 
 								$grid = new gridView();
