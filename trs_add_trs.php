@@ -25,7 +25,7 @@
     $lbforeignerfree = new label('ไม่เสียค่าบัตร');
     $lbmainnsf = new label('ไนท์ซาฟารี');
     $lbmainvehicle = new label('ยานพาหนะ');
-	$lbspecialpj = new label('โครงการทัวร์สวนสัตว์');
+    $lbspecialpj = new label('โครงการทัวร์สวนสัตว์');
     $lbtime = new label('วันที่และเวลาแจ้ง');
     $lbbus = new label('รถบัส');
     $lbcar = new label('รถยนต์');
@@ -326,7 +326,7 @@
 //            alert(date)
 //        },
 //   });
-   	$(function () {
+   $(function () {
         $('.date-picker').datetimepicker({
 	        format:'YYYY-MM-DD H:mm',
 	        useCurrent: false,
