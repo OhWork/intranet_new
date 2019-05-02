@@ -47,8 +47,8 @@
     $selectquarter->addItem('ไตรมาสที่ 3 (1 เม.ย. - 30 มิ.ย.)','3');
     $selectquarter->addItem('ไตรมาสที่ 4 (1 ก.ค. - 30 ก.ย.)','4');
     $selectroom = new SelectFromDB();
-    $selectroom->name = 'confer_confer_id';
-    $selectroom->idtf = 'confer_idtf';
+    $selectroom->name = 'confer_conferroom_id';
+    $selectroom->idtf = 'conferroom_idtf';
 	$button = new buttonok('ค้นหา','submit','btn btn-success col-md-12 printdisplaynone','submit');
 	   echo $form->open('','','','','');
 	   ?>
@@ -63,14 +63,14 @@
 				<div class="col-md-4">
 					<?php
 					if($user_zoo == 10){ ?>
-					<select class='form-control css-require' id="confer_id" name="confer">
+					<select class='form-control css-require' id="conferroom_id" name="confer">
 	                    <option selected value="">-----โปรดระบุห้องประชุม-----</option>
                 			<?php
-                				$rs = $db->orderASC('confer','confer_id')->execute();
+                				$rs = $db->orderASC('confer','conferroom_id')->execute();
                 				while($objResult = mysqli_fetch_array($rs,MYSQLI_ASSOC))
                 				{
                 				?>
-                				<option value="<?=$objResult["confer_id"];?>"><?=$objResult["confer_name"];?></option>
+                				<option value="<?=$objResult["conferroom_id"];?>"><?=$objResult["conferroom_name"];?></option>
                 				<?php
 								}
                 				?>
@@ -78,14 +78,14 @@
         			<?php }
 	        		//องการณ์สวนสัตว์
 					elseif($user_zoo == 3 || $user_zoo == 11 || $user_zoo == 12 || $user_zoo == 13 || $user_zoo == 14 || $user_zoo == 15 ||$user_zoo == 16|| $user_zoo == 17 ||$user_zoo == 18 ){ ?>
-					<select class='form-control css-require' id="confer_id" name="confer">
+					<select class='form-control css-require' id="conferroom_id" name="confer">
 	                    <option selected value="">-----โปรดระบุห้องประชุม-----</option>
                 			<?php
                 				$rs2 = $db->findByPK('confer','zoo_zoo_id',$user_zoo)->execute();
                 				while($objResult2 = mysqli_fetch_array($rs2,MYSQLI_ASSOC))
                 				{
                 				?>
-                				<option value="<?=$objResult2["confer_id"];?>"><?=$objResult2["confer_name"];?></option>
+                				<option value="<?=$objResult2["conferroom_id"];?>"><?=$objResult2["conferroom_name"];?></option>
                 				<?php
 								}
                 				?>
@@ -164,28 +164,28 @@
         case 12: $confertxt = "ห้องประชุมอาคารสำนักงาน"; break;
     }
     $rs = $db->findByPK46LimitBETWEENASC('eventconfer','headncf','confer','zoo',
-    'eventconfer.confer_confer_id','confer.confer_id',
+    'eventconfer.confer_conferroom_id','confer.conferroom_id',
     'eventconfer.subzoo_zoo_zoo_id','zoo.zoo_id',
     'eventconfer.headncf_headncf_id','headncf.headncf_id',
     'eventconfer_status',"'Y'",
-    'eventconfer.confer_confer_id',$conferrenname,
+    'eventconfer.confer_conferroom_id',$conferrenname,
     'eventconfer_start',$qua,
     'eventconfer_start')->execute();
      $counttotal = $db->countTableBETWEEN46('eventconfer','headncf','confer','zoo',
-    'eventconfer.confer_confer_id','confer.confer_id',
+    'eventconfer.confer_conferroom_id','confer.conferroom_id',
     'eventconfer.subzoo_zoo_zoo_id','zoo.zoo_id',
     'eventconfer.headncf_headncf_id','headncf.headncf_id',
     'eventconfer_status',"'Y'",
-    'eventconfer.confer_confer_id',$conferrenname,
+    'eventconfer.confer_conferroom_id',$conferrenname,
     'eventconfer_start',$qua)->executeRowcount();
     $countjoin = $db->specifytable('*,
     SUM(eventconfer_join) AS joinconfer',
     'eventconfer,zoo,headncf,confer',
-    "eventconfer.confer_confer_id = confer.confer_id AND
+    "eventconfer.confer_conferroom_id = confer.conferroom_id AND
                                            eventconfer.subzoo_zoo_zoo_id = zoo.zoo_id AND
                                            eventconfer.headncf_headncf_id = headncf.headncf_id AND
                                            eventconfer_status = 'Y' AND
-                                           eventconfer.confer_confer_id = $conferrenname AND
+                                           eventconfer.confer_conferroom_id = $conferrenname AND
                                            eventconfer_start $qua")->executeAssoc();
  ?>
 <div class='col-md-12'>
@@ -222,7 +222,7 @@
 					<?php
 					$columns = array('eventconfer_start','eventconfer_end','headncf_name','eventconfer_story','eventconfer_join','zoo_name');
 					$grid = new gridView();
-					$grid->pr = 'eventconfer_id';
+					$grid->pr = 'eventconferroom_id';
 					$grid->header = array('<b><center>วันเริ่มประชุม</center></b>',
 					                      '<b><center>วันเลิกประชุม</center></b>',
 					                      '<b><center>ประเภทเรื่อง</center></b>',

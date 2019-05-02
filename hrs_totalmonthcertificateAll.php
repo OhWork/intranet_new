@@ -47,8 +47,8 @@
     $selectquarter->addItem('ไตรมาสที่ 3 (1 เม.ย. - 30 มิ.ย.)','3');
     $selectquarter->addItem('ไตรมาสที่ 4 (1 ก.ค. - 30 ก.ย.)','4');
     $selectroom = new SelectFromDB();
-    $selectroom->name = 'confer_confer_id';
-    $selectroom->idtf = 'confer_idtf';
+    $selectroom->name = 'confer_conferroom_id';
+    $selectroom->idtf = 'conferroom_idtf';
 	$button = new buttonok('ค้นหา','submit','btn btn-success col-md-12 printdisplaynone','submit');
 echo $form->open('','','col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12','','');
 	   ?>

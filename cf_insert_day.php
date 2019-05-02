@@ -24,7 +24,7 @@
         	'eventconfer_end' => $_POST['eventconfer_end'],
             'eventconfer_uname' => $_POST['eventconfer_uname'],
         	'eventconfer_uclass' => $_POST['eventconfer_uclass'],
-        	'eventconfer_namers' => $_POST['eventconfer_namers'],
+        	'eventconferroom_namers' => $_POST['eventconferroom_namers'],
         	'eventconfer_psname' => $_POST['eventconfer_psname'],
         	'eventconfer_psclass' => $_POST['eventconfer_psclass'],
         	'eventconfer_join' => $_POST['eventconfer_join'],
@@ -61,7 +61,7 @@
             'eventconfer_tel' => $_POST['eventconfer_tel'],
             'subzoo_subzoo_id' => $_POST['subzoo_subzoo_id'],
         	'subzoo_zoo_zoo_id' => $_POST['subzoo_zoo_zoo_id'],
-        	'confer_confer_id' => $_POST['confer_confer_id'],
+        	'confer_conferroom_id' => $_POST['confer_conferroom_id'],
         	'eventconfer_status' => $_POST['eventconfer_status'],
         	'headncf_headncf_id' => $_POST['headncf_headncf_id']
             ));

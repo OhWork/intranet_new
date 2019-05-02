@@ -67,11 +67,11 @@
 					<select class='form-control css-require' id="confer_id" name="confer">
 	                    <option selected value="">-----โปรดระบุห้องประชุม-----</option>
                 			<?php
-                				$rs = $db->orderASC('confer','confer_id')->execute();
+                				$rs = $db->orderASC('conferroom','conferroom_id')->execute();
                 				while($objResult = mysqli_fetch_array($rs,MYSQLI_ASSOC))
                 				{
                 				?>
-                				<option value="<?=$objResult["confer_id"];?>"><?=$objResult["confer_name"];?></option>
+                				<option value="<?=$objResult["conferroom_id"];?>"><?=$objResult["conferroom_name"];?></option>
                 				<?php
 								}
                 				?>
@@ -82,11 +82,11 @@
 					<select class='form-control css-require' id="confer_id" name="confer">
 	                    <option selected value="">-----โปรดระบุห้องประชุม-----</option>
                 			<?php
-                				$rs2 = $db->findByPK('confer','zoo_zoo_id',$user_zoo)->execute();
+                				$rs2 = $db->findByPK('conferroom','zoo_zoo_id',$user_zoo)->execute();
                 				while($objResult2 = mysqli_fetch_array($rs2,MYSQLI_ASSOC))
                 				{
                 				?>
-                				<option value="<?=$objResult2["confer_id"];?>"><?=$objResult2["confer_name"];?></option>
+                				<option value="<?=$objResult2["conferroom_id"];?>"><?=$objResult2["conferroom_name"];?></option>
                 				<?php
 								}
                 				?>
@@ -164,20 +164,20 @@
         case 11: $confertxt = "ห้องประชุมนกเงือก"; break;
         case 12: $confertxt = "ห้องประชุมอาคารสำนักงาน"; break;
     }
-    $rs = $db->findByPK46LimitBETWEENASC('eventconfer','headncf','confer','zoo',
-    'eventconfer.confer_confer_id','confer.confer_id',
+    $rs = $db->findByPK46LimitBETWEENASC('eventconfer','headncf','conferroom','zoo',
+    'eventconfer.confer_confer_id','conferroom.conferroom_id',
     'eventconfer.subzoo_zoo_zoo_id','zoo.zoo_id',
     'eventconfer.headncf_headncf_id','headncf.headncf_id',
     'eventconfer_status_online',"'Y'",
-    'eventconfer.confer_confer_id',$conferrenname,
+    'eventconfer.conferroom_conferroom_id',$conferrenname,
     'eventconfer_start',$qua,
     'eventconfer_start')->execute();
-    $counttotal = $db->countTableBETWEEN46('eventconfer','headncf','confer','zoo',
-    'eventconfer.confer_confer_id','confer.confer_id',
+    $counttotal = $db->countTableBETWEEN46('eventconfer','headncf','conferroom','zoo',
+    'eventconfer.confer_confer_id','conferroom.conferroom_id',
     'eventconfer.subzoo_zoo_zoo_id','zoo.zoo_id',
     'eventconfer.headncf_headncf_id','headncf.headncf_id',
     'eventconfer_status_online',"'Y'",
-    'eventconfer.confer_confer_id',$conferrenname,
+    'eventconfer.conferroom_conferroom_id',$conferrenname,
     'eventconfer_start',$qua)->executeRowcount();
  ?>
 <div class='col-md-12'>

@@ -1,7 +1,7 @@
 <?php
 	$form = new form();
 	$story = new textfield('eventconfer_story','story','form-control','','');
-	$name = new textfield('eventconfer_namers','','form-control','','');
+	$name = new textfield('eventconferroom_namers','','form-control','','');
 	$tel = new textfield('eventconfer_tel','tel','form-control','','');
     $tel->functions ="onkeypress='CheckNum()' onClick='this.setSelectionRange(0, this.value.length)'";
 	$uname = new textfield('eventconfer_uname','','form-control','','');
@@ -90,8 +90,8 @@
     $lbname = new label('ชื่อผู้จอง ');
     $lbtel = new label('เบอร์โทรศัพท์ ');
 	$selectconfer = new selectFromDB();
-	$selectconfer->name = 'confer_confer_id';
-	$selectconfer->idtf = 'confer_idtf';
+	$selectconfer->name = 'confer_conferroom_id';
+	$selectconfer->idtf = 'conferroom_idtf';
 	$selectconfer->lists = 'โปรดระบุห้องประชุม';
     $selectheadncf = new selectFromDB();
     $selectheadncf->name = 'headncf_headncf_id';
@@ -117,8 +117,8 @@
 	$button = new buttonok('บันทึก','btnSubmit','btn btn-success col-md-12','');
 	if(!empty($_GET['id'])){
 	$id = $_GET['id'];
-	$r = $db->findByPK('conferroom','confer_id',$id)->executeRow();
-	$confer = $r['confer_name'];
+	$r = $db->findByPK('conferroom','conferroom_id',$id)->executeRow();
+	$confer = $r['conferroom_name'];
 	}
 	?>
 	<script language = "JavaScript">
@@ -227,15 +227,15 @@
 										</ol>
 										<div class='carousel-inner slidewarpper' role='listbox'>
 											<div class='carousel-item active'>
-												<?php $rs = $db->findByPK12('conferimg','conferimg_position',1,'confer_confer_id',$_GET['id'])->executeAssoc(); ?>
+												<?php $rs = $db->findByPK12('conferimg','conferimg_position',1,'confer_conferroom_id',$_GET['id'])->executeAssoc(); ?>
 												<img class="d-block w-100" src='images/confer/<?php echo $rs['conferimg_name'];?>' alt="First slide">
 											</div>
 											<div class='carousel-item'>
-												<?php $rs2 = $db->findByPK12('conferimg','conferimg_position',2,'confer_confer_id',$_GET['id'])->executeAssoc(); ?>
+												<?php $rs2 = $db->findByPK12('conferimg','conferimg_position',2,'confer_conferroom_id',$_GET['id'])->executeAssoc(); ?>
 												<img class="d-block w-100" src='images/confer/<?php echo $rs2['conferimg_name'];?>' alt="Second slide">
 											</div>
 											<div class='carousel-item'>
-												<?php $rs3 = $db->findByPK12('conferimg','conferimg_position',3,'confer_confer_id',$_GET['id'])->executeAssoc(); ?>
+												<?php $rs3 = $db->findByPK12('conferimg','conferimg_position',3,'confer_conferroom_id',$_GET['id'])->executeAssoc(); ?>
 												<img class="d-block w-100" src='images/confer/<?php echo $rs3['conferimg_name'];?>' alt="Third slide">
 											</div>
 										</div>
@@ -565,7 +565,7 @@
 								?>
 								<input type='hidden' name='adddatenow' value='<?php echo $adddatenow; ?>'/>
 								<input type='hidden' id='status_event' name='eventconfer_status' value='W'/>
-								<input type='hidden' id='confer_id' name='confer_confer_id' value="<?php echo $id;?>">
+								<input type='hidden' id='conferroom_id' name='confer_conferroom_id' value="<?php echo $id;?>">
 								<input type='hidden' id='status_online' name='eventconfer_status_online' value="W">
 								<div class='col-md-12 mt-3' style="margin-bottom:16px;">
 									<div class='row'>
@@ -631,7 +631,7 @@
 		 $('#msg').hide();
 		$.ajax({
             url: "cf_checkday.php",
-            data: {datestart : $('#date1').val() , dateend : $('#date2').val(), conferid : $('#confer_id').val()},
+            data: {datestart : $('#date1').val() , dateend : $('#date2').val(), conferid : $('#conferroom_id').val()},
             type: "POST",
             success: function(data) {
 	           	$('#msg').show();
@@ -657,7 +657,7 @@
             url: "cf_checkconfer.php",
             data: {datestart : $('#date1').val() ,
 	               dateend : $('#date2').val(),
-	               conferid : $('#confer_id').val()
+	               conferid : $('#conferroom_id').val()
 	               },
             type: "POST",
             success: function(data) {

@@ -47,8 +47,8 @@
     $selectquarter->addItem('ไตรมาสที่ 3 (1 เม.ย. - 30 มิ.ย.)','3');
     $selectquarter->addItem('ไตรมาสที่ 4 (1 ก.ค. - 30 ก.ย.)','4');
     $selectroom = new SelectFromDB();
-    $selectroom->name = 'confer_confer_id';
-    $selectroom->idtf = 'confer_idtf';
+    $selectroom->name = 'confer_conferroom_id';
+    $selectroom->idtf = 'conferroom_idtf';
 	$button = new buttonok('ค้นหา','submit','btn btn-success col-md-12 printdisplaynone','submit');
 	   echo $form->open('','','','','');
 	   ?>
@@ -132,14 +132,14 @@
         case 12: $confertxt = "ห้องประชุมอาคารสำนักงาน"; break;
     }
     $rs = $db->findByPK45LimitBETWEENASC('eventconfer','headncf','confer','zoo',
-    'eventconfer.confer_confer_id','confer.confer_id',
+    'eventconfer.confer_conferroom_id','confer.conferroom_id',
     'eventconfer.subzoo_zoo_zoo_id','zoo.zoo_id',
     'eventconfer.headncf_headncf_id','headncf.headncf_id',
     'eventconfer_status_online',"'Y'",
     'eventconfer_start',$qua,
     'eventconfer_start')->execute();
     $counttotal = $db->countTableBETWEEN45('eventconfer','headncf','confer','zoo',
-    'eventconfer.confer_confer_id','confer.confer_id',
+    'eventconfer.confer_conferroom_id','confer.conferroom_id',
     'eventconfer.subzoo_zoo_zoo_id','zoo.zoo_id',
     'eventconfer.headncf_headncf_id','headncf.headncf_id',
     'eventconfer_status_online',"'Y'",
@@ -175,9 +175,9 @@
 				</div>
 				<div class='col-md-12 page' style="float:left;">
 					<?php
-					$columns = array('eventconfer_start','eventconfer_end','headncf_name','eventconfer_story','zoo_name','confer_name');
+					$columns = array('eventconfer_start','eventconfer_end','headncf_name','eventconfer_story','zoo_name','conferroom_name');
 					$grid = new gridView();
-					$grid->pr = 'eventconfer_id';
+					$grid->pr = 'eventconferroom_id';
 					$grid->header = array('<b><center>วันเริ่มประชุม</center></b>',
 					                      '<b><center>วันเลิกประชุม</center></b>',
 					                      '<b><center>ประเภทเรื่อง</center></b>',

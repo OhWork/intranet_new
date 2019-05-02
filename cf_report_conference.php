@@ -7,7 +7,7 @@
 
 	$id = $_GET['id'];
 
-	$rs = $db->findByPK55('eventconfer','confer','subzoo','zoo','headncf','confer_confer_id','confer_id','subzoo_subzoo_id','subzoo_id','subzoo_zoo_zoo_id','zoo_id','headncf_headncf_id','headncf_id','eventconfer_id',$id)->executeAssoc();
+	$rs = $db->findByPK55('eventconfer','confer','subzoo','zoo','headncf','confer_conferroom_id','conferroom_id','subzoo_subzoo_id','subzoo_id','subzoo_zoo_zoo_id','zoo_id','headncf_headncf_id','headncf_id','eventconferroom_id',$id)->executeAssoc();
 	$datestart = $rs['eventconfer_start'];
 	$datestartshow = substr($datestart, 0,10);
 	$timestart = $rs['eventconfer_start'];
@@ -95,7 +95,7 @@
 					<td><b>ตำแหน่ง</b></td>
 					<td style="border-bottom: 1.5px;border-bottom-style: dotted;border-bottom-color: #000000;width:155px;padding-left:8px;"><?php echo $rs['eventconfer_psclass'];?></td>
 					<td><b>ห้องประชุม</b></td>
-					<td style="border-bottom: 1.5px;border-bottom-style: dotted;border-bottom-color: #000000;width:160px;padding-left:8px;"><?php echo $rs['confer_name'];?></td>
+					<td style="border-bottom: 1.5px;border-bottom-style: dotted;border-bottom-color: #000000;width:160px;padding-left:8px;"><?php echo $rs['conferroom_name'];?></td>
 				</tr>
 		</table>
 		<table>
@@ -328,7 +328,7 @@
 			<!--บรรทัดที่ 9-->
 				<tr>
 					<td><b>ผู้ประสานงาน</b></td>
-					<td style="border-bottom: 1.5px;border-bottom-style: dotted;border-bottom-color: #000000;width:270px;padding-left:8px;"><?php echo $rs['eventconfer_namers'];?></td>
+					<td style="border-bottom: 1.5px;border-bottom-style: dotted;border-bottom-color: #000000;width:270px;padding-left:8px;"><?php echo $rs['eventconferroom_namers'];?></td>
 					<td>เบอร์โทร</td>
 					<td style="border-bottom: 1.5px;border-bottom-style: dotted;border-bottom-color: #000000;width:270px;"><center><?php echo $rs['eventconfer_tel'];?></center></td>
 				</tr>

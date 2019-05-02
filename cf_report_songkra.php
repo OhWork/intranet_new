@@ -244,7 +244,7 @@
 			<!--บรรทัดที่ 9-->
 				<tr>
 					<td style="height:25px;width:150px;">7. <u>ผู้ประสานงานการประชุม</u></td>
-					<td style="border-bottom: 1.5px;border-bottom-style: dotted;border-bottom-color: #000000;width:300px;padding-left:8px;"><?php echo $rs['eventconfer_namers'];?></td>
+					<td style="border-bottom: 1.5px;border-bottom-style: dotted;border-bottom-color: #000000;width:300px;padding-left:8px;"><?php echo $rs['eventconferroom_namers'];?></td>
 					<td style="height:25px;width:65px;">โทร/แฟกซ์</td>
 					<td style="border-bottom: 1.5px;border-bottom-style: dotted;border-bottom-color: #000000;width:150px;"><center><?php echo $rs['eventconfer_tel'];?></center></td>
 				</tr>

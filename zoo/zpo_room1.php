@@ -6,7 +6,7 @@ header("Cache-Control: post-check=0, pre-check=0", false);
 	include "../connect.php";
 if(isset($_GET['gData']) && $_GET['gData']|=""){
 	$id = $_GET['gData'];
-	$result = $db->findByPK44('eventconfer','headncf','zoo','conferroom','headncf_headncf_id','headncf_id','subzoo_zoo_zoo_id','zoo_id','confer_confer_id','confer_id','confer_confer_id',$id)->execute();
+	$result = $db->findByPK44('eventconfer','headncf','zoo','conferroom','headncf_headncf_id','headncf_id','subzoo_zoo_zoo_id','zoo_id','confer_conferroom_id','conferroom_id','confer_conferroom_id',$id)->execute();
  while($rs=$result->fetch_object()){
         $bgColor= "#BDE4F4";
         $textColor= "#00204A";
@@ -63,7 +63,7 @@ if(isset($_GET['gData']) && $_GET['gData']|=""){
 	        $rs->eventconfer_story = '-';
         }
         $json_data[]=array(
-            "id"=>$rs->eventconfer_id,
+            "id"=>$rs->eventconferroom_id,
             "title"=>$rs->headncf_name,
             "end"=>$rs->eventconfer_end,
             "start"=>$rs->eventconfer_start,
@@ -108,14 +108,14 @@ if(isset($_GET['gData']) && $_GET['gData']|=""){
 							<div class='col-md-12'>
 								<div class='row'>
 									<div class='col-md-4'><p>ชื่อผู้จอง</p></div>
-									<div class='col-md-8' style='text-align: center;'><p>".$rs->eventconfer_namers."</p></center></div>
+									<div class='col-md-8' style='text-align: center;'><p>".$rs->eventconferroom_namers."</p></center></div>
 								</div>
 							</div>
-							<input type='hidden' id ='event_id' value=".$rs->eventconfer_id.">"
+							<input type='hidden' id ='event_id' value=".$rs->eventconferroom_id.">"
 							,
 /*
-             "url"=> "cf_report.php?id=".$rs->eventconfer_id,
-             "url2"=> "cf_report_conference.php?id=".$rs->eventconfer_id,
+             "url"=> "cf_report.php?id=".$rs->eventconferroom_id,
+             "url2"=> "cf_report_conference.php?id=".$rs->eventconferroom_id,
              "stat" => $status,
 */
 			 "statusfootermodal"=> "<div class='col-md-12'>
@@ -131,10 +131,10 @@ if(isset($_GET['gData']) && $_GET['gData']|=""){
 													<div class='col-md-7' style='padding-left:0;padding-right:0;'>
 														<p id='comment' class='col-md-12' style='text-align:left;padding-left:0;padding-right:0;padding-top:4px;'>เนื่องจาก : ".$rs->eventconfer_comment."</p>
 														<div class='col-md-12 reportconferzpo' style='text-align: center;'>
-															<a class='btn btn-info' id='zpo' style='padding-left:5px;padding-top:5px;padding-right:5px;padding-bottom:5px;float:right;' href='cf_report.php?id=".$rs->eventconfer_id."'>พิมพ์ใบจองห้องประชุม</a>
+															<a class='btn btn-info' id='zpo' style='padding-left:5px;padding-top:5px;padding-right:5px;padding-bottom:5px;float:right;' href='cf_report.php?id=".$rs->eventconferroom_id."'>พิมพ์ใบจองห้องประชุม</a>
 														</div>
 														<div class='col-md-12 reportconfersongkla' style='text-align: center;'>
-															<a class='btn btn-info' id='songkla'style='padding-left:5px;padding-top:5px;padding-right:5px;padding-bottom:5px;float:right;' href='cf_report_songkra.php?id=".$rs->eventconfer_id."'>พิมพ์ใบจองห้องประชุม</a>
+															<a class='btn btn-info' id='songkla'style='padding-left:5px;padding-top:5px;padding-right:5px;padding-bottom:5px;float:right;' href='cf_report_songkra.php?id=".$rs->eventconferroom_id."'>พิมพ์ใบจองห้องประชุม</a>
 														</div>
 													</div>
 												</div>
@@ -148,7 +148,7 @@ if(isset($_GET['gData']) && $_GET['gData']|=""){
 														</div>
 													</div>
 													<div class='col-md-6 reportconferonline'>
-														<a class='btn btn-info' style='padding-left:5px;padding-top:5px;padding-right:5px;padding-bottom:5px;float:right;'href='cf_report_conference.php?id=".$rs->eventconfer_id."'>พิมพ์ใบจองห้องประชุม</a>
+														<a class='btn btn-info' style='padding-left:5px;padding-top:5px;padding-right:5px;padding-bottom:5px;float:right;'href='cf_report_conference.php?id=".$rs->eventconferroom_id."'>พิมพ์ใบจองห้องประชุม</a>
 													</div>
 												</div>
 											</div>

@@ -1,7 +1,7 @@
 <?php
 	$id = $_GET['id'];
 
-	$r = $db->findByPK('conferroom','confer_id',$id)->executeRow();
+	$r = $db->findByPK('conferroom','conferroom_id',$id)->executeRow();
 	$confer = $r['conferroom_name'];
 ?>
 <!DOCTYPE html>
@@ -157,8 +157,8 @@
                   locale: 'th',
 
             });
-            var conferid = $('#confer_id').val();
-            var disbledid = document.getElementById(<?php echo $r['confer_id'];?>);
+            var conferid = $('#conferroom_id').val();
+            var disbledid = document.getElementById(<?php echo $r['conferroom_id'];?>);
             var checkdisbled = <?php echo $_GET['id']?>;
 			if(conferid == checkdisbled){
 				disbledid.classList.remove('btn-primary');
@@ -176,7 +176,7 @@
 								$rs =$db->findByPK('conferroom','zoo_zoo_id',$_GET['zoo'])->execute();
 								foreach($rs as $showrs){
 									?>
-									<a id="<?php echo $showrs['confer_id'];?>" class="btn btn-info col-12 pcfmenu mt-3" href="index.php?url=cf_calendar.php&id=<?php echo $showrs['confer_id'];?>&zoo=<?php echo $_GET['zoo'];?>"><?php echo $showrs['confer_name']; ?></a>
+									<a id="<?php echo $showrs['conferroom_id'];?>" class="btn btn-info col-12 pcfmenu mt-3" href="index.php?url=cf_calendar.php&id=<?php echo $showrs['conferroom_id'];?>&zoo=<?php echo $_GET['zoo'];?>"><?php echo $showrs['conferroom_name']; ?></a>
 									<?php
 								}
 							?>
@@ -239,7 +239,7 @@
 						<h1><center><?php echo $confer;?></center></h1>
 						<div id="calendar" class='mt-5'></div>
 					</div>
-					<input type="text" id="confer_id" value="<?php echo $id;?>" style=" visibility: hidden;"/>
+					<input type="text" id="conferroom_id" value="<?php echo $id;?>" style=" visibility: hidden;"/>
 				</div>
 			</div>
 <?php include("cf_viewdetail.php")?>

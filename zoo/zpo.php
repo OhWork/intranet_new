@@ -5,40 +5,40 @@ header("Cache-Control: post-check=0, pre-check=0", false);
     include "../database/db_tools.php";
 	include "../connect.php";
 if(isset($_GET['gData']) && $_GET['gData']|=""){
-	$result = $db->findByPK43('eventconfer','confer','zoo','headncf','confer_confer_id','confer_id','zoo_zoo_id','zoo_id','headncf_headncf_id','headncf_id','zoo_type','1')->execute();
+	$result = $db->findByPK43('eventconfer','confer','zoo','headncf','confer_conferroom_id','conferroom_id','zoo_zoo_id','zoo_id','headncf_headncf_id','headncf_id','zoo_type','1')->execute();
  while($rs=$result->fetch_object()){
         $bgColor=null;
         $status = null;
         if($rs->eventconfer_status=='Y'){
 	        $status = "อนุมัติ";
-            if($rs->confer_confer_id=='1'){
+            if($rs->confer_conferroom_id=='1'){
                 $bgColor="#0FC9E7";
-            }else if($rs->confer_confer_id=='2'){
+            }else if($rs->confer_conferroom_id=='2'){
                 $bgColor="#3186B2";
-            }else if($rs->confer_confer_id=='3'){
+            }else if($rs->confer_conferroom_id=='3'){
                 $bgColor="#4756CA";
             }
         }else if($rs->eventconfer_status=='N'){
 	        $status = "ไม่อนุมัติ";
-            if($rs->confer_confer_id=='1'){
+            if($rs->confer_conferroom_id=='1'){
                 $bgColor="#0FC9E7";
-            }else if($rs->confer_confer_id=='2'){
+            }else if($rs->confer_conferroom_id=='2'){
                 $bgColor="#3186B2";
-            }else if($rs->confer_confer_id=='3'){
+            }else if($rs->confer_conferroom_id=='3'){
                 $bgColor="#4756CA";
             }
         }elseif($rs->eventconfer_status=='W'){
 	      	 $status = "รอการอนุมัติ";
-            if($rs->confer_confer_id=='1'){
+            if($rs->confer_conferroom_id=='1'){
                 $bgColor="#0FC9E7 ";
-            }else if($rs->confer_confer_id=='2'){
+            }else if($rs->confer_conferroom_id=='2'){
                 $bgColor="#3186B2";
-            }else if($rs->confer_confer_id=='3'){
+            }else if($rs->confer_conferroom_id=='3'){
                 $bgColor="#4756CA";
             }
         }
         $json_data[]=array(
-            "id"=>$rs->eventconfer_id,
+            "id"=>$rs->eventconferroom_id,
             "title"=>$rs->eventconfer_story,
             "start"=>$rs->eventconfer_start,
             "end"=>$rs->eventconfer_end,
@@ -76,11 +76,11 @@ if(isset($_GET['gData']) && $_GET['gData']|=""){
 							<div class='col-md-12'>
 								<div class='row'>
 									<div class='col-md-4'><p>ชื่อผู้จอง</p></div>
-									<div class='col-md-8' style='text-align: center;'><p'>".$rs->eventconfer_namers."</p></center></div>
+									<div class='col-md-8' style='text-align: center;'><p'>".$rs->eventconferroom_namers."</p></center></div>
 								</div>
 							</div>",
-             "url"=> "cf_report.php?id=".$rs->eventconfer_id,
-             "url2"=> "cf_report_conference.php?id=".$rs->eventconfer_id,
+             "url"=> "cf_report.php?id=".$rs->eventconferroom_id,
+             "url2"=> "cf_report_conference.php?id=".$rs->eventconferroom_id,
              "color"=> $bgColor,
              "stat" => $status
         );

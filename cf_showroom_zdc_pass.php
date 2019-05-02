@@ -16,18 +16,18 @@
 </script>
 <?php
     $id = $_GET['id'];
-    $cfrs = $db->findByPK('confer','confer_id',$id)->executeAssoc();
-    $confer_name = $cfrs['confer_name'];
+    $cfrs = $db->findByPK('confer','conferroom_id',$id)->executeAssoc();
+    $conferroom_name = $cfrs['conferroom_name'];
     if (!empty($_SESSION['user_name'])):
     $columns = array('eventconfer_uname','eventconfer_story','eventconfer_psname','eventconfer_start','eventconfer_end','zoo_name');
     $row = "<div class='row'>";
     $rowend = "</div>";
     $form = new form();
-    $rs = $db->findByPK34('eventconfer','confer','zoo','confer_confer_id','confer_id','confer_id',$id,'zoo_zoo_id','zoo_id','eventconfer_status',"'Y'")->execute();
-            echo "<div class='col-md-12'>"."<h2>".$confer_name."</h2>".$rowend;
+    $rs = $db->findByPK34('eventconfer','confer','zoo','confer_conferroom_id','conferroom_id','conferroom_id',$id,'zoo_zoo_id','zoo_id','eventconfer_status',"'Y'")->execute();
+            echo "<div class='col-md-12'>"."<h2>".$conferroom_name."</h2>".$rowend;
 
 			$grid = new gridView();
-			$grid->pr = 'eventconfer_id';
+			$grid->pr = 'eventconferroom_id';
 			$grid->header = array('<b><center>ผู้ขอใช้ห้องประชุม</center></b>','<b><center>เรื่อง</center></b>','<b><center>ประธานในที่ประชุม</center></b>','<b><center>เวลาเริ่มประชุม</center></b>','<b><center>เวลาสิ้นสุดการประชุม</center></b>','<b><center>สังกัด</center></b>','<b><center>#</center></b>');
 			$grid->width = array('10%','20%','10%','10%','10%','14%','5%');
 			$grid->edit = 'admin_index.php?url=cf_status.php';

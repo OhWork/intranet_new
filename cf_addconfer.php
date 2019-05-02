@@ -3,7 +3,7 @@
     $lbdevision = new label('สวน');
     $lbconfername = new label('ชื่อห้องประชุม');
     $lbpp = new label('รองรับได้สูงสุด');
-	$txtconfername = new textfield('confer_name','','form-control css-require','');
+	$txtconfername = new textfield('conferroom_name','','form-control css-require','');
 	$txtnum = new textfield('confer_num','','form-control css-require','');
 	$filepic = new inputFile('confer_pic1','file','file_id');
 	$filepic2 = new inputFile('confer_pic2','file','file_id2');
@@ -11,8 +11,8 @@
 	$button = new buttonok("บันทึก","submit","btn btn-success btn-block bt3success col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","");
 	if(!empty($_GET['id'])){
 	$id = $_GET['id'];
-	$r = $db->findByPK('confer','confer_id',$id)->executeRow();
-	$txtconfername->value = $r['confer_name'];
+	$r = $db->findByPK('confer','conferroom_id',$id)->executeRow();
+	$txtconfername->value = $r['conferroom_name'];
 	$txtnum->value = $r['confer_people'];
 	}
 	echo $form->open("form_reg","frmMain","col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","cf_insertconfer.php","");
@@ -57,7 +57,7 @@
 						<div class='col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4'>
 							<div class='row'>
 								<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" align="center">
-											<?php $rsshowimg1 = $db->findByPK12('conferimg','conferimg_position',1,'confer_confer_id',$_GET['id'])->executeAssoc();
+											<?php $rsshowimg1 = $db->findByPK12('conferimg','conferimg_position',1,'confer_conferroom_id',$_GET['id'])->executeAssoc();
 											if(!empty($rsshowimg1['conferimg_id'])){
 											?>
 												<img id="preimg" class="preimg" src="images/confer/<?php echo $rsshowimg1['conferimg_name'];?>" width="100px" height="100px">
@@ -76,7 +76,7 @@
 						<div class='col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4'>
 							<div class='row'>
 										<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" align="center">
-											<?php $rsshowimg1 = $db->findByPK12('conferimg','conferimg_position',2,'confer_confer_id',$_GET['id'])->executeAssoc(); ?>
+											<?php $rsshowimg1 = $db->findByPK12('conferimg','conferimg_position',2,'confer_conferroom_id',$_GET['id'])->executeAssoc(); ?>
 											<input  type="hidden" id="pic_id2" name="pic_id2" value="<?php echo $rsshowimg1['newsImg_id'];?>" />
 											<?php
 											if(!empty($rsshowimg1['conferimg_id'])){
@@ -97,7 +97,7 @@
 						<div class='col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4'>
 							<div class='row'>
 										<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" align="center">
-											<?php $rsshowimg1 = $db->findByPK12('conferimg','conferimg_position',3,'confer_confer_id',$_GET['id'])->executeAssoc(); ?>
+											<?php $rsshowimg1 = $db->findByPK12('conferimg','conferimg_position',3,'confer_conferroom_id',$_GET['id'])->executeAssoc(); ?>
 											<input  type="hidden" id="pic_id2" name="pic_id3" value="<?php echo $rsshowimg1['newsImg_id'];?>" />
 											<?php
 											if(!empty($rsshowimg1['conferimg_id'])){
@@ -132,7 +132,7 @@
 	</div>
 </div>
 <?php
-	echo "<input type='hidden' name='confer_id' value='$_GET[id]'/>";
+	echo "<input type='hidden' name='conferroom_id' value='$_GET[id]'/>";
 	echo $form->close();
 ?>
 <script>

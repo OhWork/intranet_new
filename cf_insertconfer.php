@@ -9,12 +9,12 @@
     include 'database/db_tools.php';
 	include 'connect.php';
 	$countfiles = count($_FILES);
-		if(!empty($_POST['confer_id'])){
+		if(!empty($_POST['conferroom_id'])){
 
-		$data['confer_name'] = $_POST['confer_name'];
-		$data['confer_people'] = $_POST['confer_num'];
+		$data['conferroom_name'] = $_POST['confer_name'];
+		$data['conferroom_people'] = $_POST['confer_num'];
 
-		$rsfix = $db->update('conferroom',$data,'confer_id',$_POST['confer_id']);
+		$rsfix = $db->update('conferroom',$data,'conferroom_id',$_POST['confer_id']);
 		if($rsfix){
 			$select = $db->findByPK('conferimg','confer_confer_id',$_POST['confer_id'])->executeAssoc();
 			print_r($select);
@@ -49,12 +49,12 @@
 
 	}else{
 		$rs = $db->insert('conferroom',array(
-		'confer_name' => $_POST['confer_name'],
-		'confer_people' => $_POST['confer_num'],
+		'conferroom_name' => $_POST['confer_name'],
+		'conferroom_people' => $_POST['confer_num'],
 		'zoo_zoo_id'=>$_POST['subzoo_zoo_zoo_id'],
 		));
 		if($rs){
-				$select = $db->findAllDESC('conferroom','confer_id')->executeAssoc();
+				$select = $db->findAllDESC('conferroom','conferroom_id')->executeAssoc();
 				for($i=1; $i<=$countfiles; $i++){
 					$target_dir = 'temp/';
 					$target_file = $target_dir.basename($_FILES['confer_pic'.$i]['name']);

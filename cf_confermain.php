@@ -18,7 +18,7 @@
 		<link rel="stylesheet" href="CSS/main.css"/>
 <?php include'inc_js.php';
       include 'script_checkday.php';
-	  $columns = array('confer_name','event_story','event_start','event_end','event_namers','event_tel');
+	  $columns = array('conferroom_name','event_story','event_start','event_end','event_namers','event_tel');
 ?>
     </head>
 <body>
@@ -48,8 +48,8 @@
 <!-- end wrapper-->
 <div class='box2'>
 		<?php
-			$rs2 = "user,zoo,confer,event_confer  where admin.zoo_zoo_id = zoo.zoo_id && zoo.zoo_id = confer.zoo_zoo_id && confer.confer_id = event_confer.confer_confer_id && admin.zoo_zoo_id = $id";
-			$rs = $db->findByPK4DESC('user','zoo','confer','event_confer','admin.zoo_zoo_id','zoo.zoo_id','zoo.zoo_id','confer.zoo_zoo_id','confer.confer_id','event_confer.confer_confer_id','admin.zoo_zoo_id',$id,$page,$limit)->execute();
+			$rs2 = "user,zoo,confer,event_confer  where admin.zoo_zoo_id = zoo.zoo_id && zoo.zoo_id = confer.zoo_zoo_id && confer.conferroom_id = event_confer.confer_conferroom_id && admin.zoo_zoo_id = $id";
+			$rs = $db->findByPK4DESC('user','zoo','confer','event_confer','admin.zoo_zoo_id','zoo.zoo_id','zoo.zoo_id','confer.zoo_zoo_id','confer.conferroom_id','event_confer.confer_conferroom_id','admin.zoo_zoo_id',$id,$page,$limit)->execute();
 
 
 			$grid = new gridView();
