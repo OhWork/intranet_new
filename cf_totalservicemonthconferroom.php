@@ -164,19 +164,19 @@
         case 12: $confertxt = "ห้องประชุมอาคารสำนักงาน"; break;
     }
     $rs = $db->findByPK46LimitBETWEENASC('eventconfer','headncf','confer','zoo',
-    'eventconfer.confer_conferroom_id','confer.conferroom_id',
+    'eventconfer.confer_confer_id','confer.conferroom_id',
     'eventconfer.subzoo_zoo_zoo_id','zoo.zoo_id',
     'eventconfer.headncf_headncf_id','headncf.headncf_id',
     'eventconfer_status',"'Y'",
-    'eventconfer.confer_conferroom_id',$conferrenname,
+    'eventconfer.confer_confer_id',$conferrenname,
     'eventconfer_start',$qua,
     'eventconfer_start')->execute();
      $counttotal = $db->countTableBETWEEN46('eventconfer','headncf','confer','zoo',
-    'eventconfer.confer_conferroom_id','confer.conferroom_id',
+    'eventconfer.confer_confer_id','confer.conferroom_id',
     'eventconfer.subzoo_zoo_zoo_id','zoo.zoo_id',
     'eventconfer.headncf_headncf_id','headncf.headncf_id',
     'eventconfer_status',"'Y'",
-    'eventconfer.confer_conferroom_id',$conferrenname,
+    'eventconfer.confer_confer_id',$conferrenname,
     'eventconfer_start',$qua)->executeRowcount();
     $countjoin = $db->specifytable('*,
     SUM(eventconfer_join) AS joinconfer',

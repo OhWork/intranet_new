@@ -9,10 +9,10 @@
 <?php
     include 'database/db_tools.php';
 	include 'connect.php';
-	if(!empty($_POST['eventconferroom_id'])){
+	if(!empty($_POST['eventconfer_id'])){
 		$data['eventconfer_status'] = $_POST['eventconfer_status'];
 		$data['eventconfer_comment'] = $_POST['eventconfer_comment'];
-		$rsfix = $db->update('eventconfer',$data,'eventconferroom_id',$_POST['eventconferroom_id']);
+		$rsfix = $db->update('eventconfer',$data,'eventconfer_id',$_POST['eventconfer_id']);
 
             //Log
 		if(@getenv(HTTP_X_FORWARDED_FOR)){

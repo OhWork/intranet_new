@@ -5,7 +5,7 @@ if(!empty($_GET['id'])){
 	
 	$id = $_GET['id'];
 	//$r = $db->findByPK('event_confer','event_id',$id)->executeRow();
-	$r = $db->findByPK2('event_confer','confer','event_id',$id,'confer_conferroom_id','conferroom_id')->executeRow();
+	$r = $db->findByPK2('event_confer','confer','event_id',$id,'confer_confer_id','conferroom_id')->executeRow();
 	}
 ?>
 <div class="row">

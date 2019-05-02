@@ -5,35 +5,35 @@ header("Cache-Control: post-check=0, pre-check=0", false);
     include "../database/db_tools.php";
 	include "../connect.php";
 if(isset($_GET['gData']) && $_GET['gData']|=""){
-	$result = $db->findByPK43('eventconfer','confer','zoo','headncf','confer_conferroom_id','conferroom_id','zoo_zoo_id','zoo_id','headncf_headncf_id','headncf_id','zoo_type','1')->execute();
+	$result = $db->findByPK43('eventconfer','confer','zoo','headncf','confer_confer_id','conferroom_id','zoo_zoo_id','zoo_id','headncf_headncf_id','headncf_id','zoo_type','1')->execute();
  while($rs=$result->fetch_object()){
         $bgColor=null;
         $status = null;
         if($rs->eventconfer_status=='Y'){
 	        $status = "อนุมัติ";
-            if($rs->confer_conferroom_id=='1'){
+            if($rs->confer_confer_id=='1'){
                 $bgColor="#0FC9E7";
-            }else if($rs->confer_conferroom_id=='2'){
+            }else if($rs->confer_confer_id=='2'){
                 $bgColor="#3186B2";
-            }else if($rs->confer_conferroom_id=='3'){
+            }else if($rs->confer_confer_id=='3'){
                 $bgColor="#4756CA";
             }
         }else if($rs->eventconfer_status=='N'){
 	        $status = "ไม่อนุมัติ";
-            if($rs->confer_conferroom_id=='1'){
+            if($rs->confer_confer_id=='1'){
                 $bgColor="#0FC9E7";
-            }else if($rs->confer_conferroom_id=='2'){
+            }else if($rs->confer_confer_id=='2'){
                 $bgColor="#3186B2";
-            }else if($rs->confer_conferroom_id=='3'){
+            }else if($rs->confer_confer_id=='3'){
                 $bgColor="#4756CA";
             }
         }elseif($rs->eventconfer_status=='W'){
 	      	 $status = "รอการอนุมัติ";
-            if($rs->confer_conferroom_id=='1'){
+            if($rs->confer_confer_id=='1'){
                 $bgColor="#0FC9E7 ";
-            }else if($rs->confer_conferroom_id=='2'){
+            }else if($rs->confer_confer_id=='2'){
                 $bgColor="#3186B2";
-            }else if($rs->confer_conferroom_id=='3'){
+            }else if($rs->confer_confer_id=='3'){
                 $bgColor="#4756CA";
             }
         }

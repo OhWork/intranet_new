@@ -90,7 +90,7 @@
     $lbname = new label('ชื่อผู้จอง ');
     $lbtel = new label('เบอร์โทรศัพท์ ');
 	$selectconfer = new selectFromDB();
-	$selectconfer->name = 'confer_conferroom_id';
+	$selectconfer->name = 'confer_confer_id';
 	$selectconfer->idtf = 'conferroom_idtf';
 	$selectconfer->lists = 'โปรดระบุห้องประชุม';
     $selectheadncf = new selectFromDB();
@@ -227,15 +227,15 @@
 										</ol>
 										<div class='carousel-inner slidewarpper' role='listbox'>
 											<div class='carousel-item active'>
-												<?php $rs = $db->findByPK12('conferimg','conferimg_position',1,'confer_conferroom_id',$_GET['id'])->executeAssoc(); ?>
+												<?php $rs = $db->findByPK12('conferimg','conferimg_position',1,'confer_confer_id',$_GET['id'])->executeAssoc(); ?>
 												<img class="d-block w-100" src='images/confer/<?php echo $rs['conferimg_name'];?>' alt="First slide">
 											</div>
 											<div class='carousel-item'>
-												<?php $rs2 = $db->findByPK12('conferimg','conferimg_position',2,'confer_conferroom_id',$_GET['id'])->executeAssoc(); ?>
+												<?php $rs2 = $db->findByPK12('conferimg','conferimg_position',2,'confer_confer_id',$_GET['id'])->executeAssoc(); ?>
 												<img class="d-block w-100" src='images/confer/<?php echo $rs2['conferimg_name'];?>' alt="Second slide">
 											</div>
 											<div class='carousel-item'>
-												<?php $rs3 = $db->findByPK12('conferimg','conferimg_position',3,'confer_conferroom_id',$_GET['id'])->executeAssoc(); ?>
+												<?php $rs3 = $db->findByPK12('conferimg','conferimg_position',3,'confer_confer_id',$_GET['id'])->executeAssoc(); ?>
 												<img class="d-block w-100" src='images/confer/<?php echo $rs3['conferimg_name'];?>' alt="Third slide">
 											</div>
 										</div>
@@ -565,7 +565,7 @@
 								?>
 								<input type='hidden' name='adddatenow' value='<?php echo $adddatenow; ?>'/>
 								<input type='hidden' id='status_event' name='eventconfer_status' value='W'/>
-								<input type='hidden' id='conferroom_id' name='confer_conferroom_id' value="<?php echo $id;?>">
+								<input type='hidden' id='conferroom_id' name='confer_confer_id' value="<?php echo $id;?>">
 								<input type='hidden' id='status_online' name='eventconfer_status_online' value="W">
 								<div class='col-md-12 mt-3' style="margin-bottom:16px;">
 									<div class='row'>

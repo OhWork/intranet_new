@@ -47,7 +47,7 @@
     $selectquarter->addItem('ไตรมาสที่ 3 (1 เม.ย. - 30 มิ.ย.)','3');
     $selectquarter->addItem('ไตรมาสที่ 4 (1 ก.ค. - 30 ก.ย.)','4');
     $selectroom = new SelectFromDB();
-    $selectroom->name = 'confer_conferroom_id';
+    $selectroom->name = 'confer_confer_id';
     $selectroom->idtf = 'conferroom_idtf';
 	$button = new buttonok('ค้นหา','submit','btn btn-success col-md-12 printdisplaynone','submit');
 	   echo $form->open('','','','','');
@@ -132,7 +132,7 @@
         case 12: $confertxt = "ห้องประชุมอาคารสำนักงาน"; break;
     }
     $rs = $db->findByPK45LimitBETWEENASC('eventconfer','headncf','confer','zoo',
-    'eventconfer.confer_conferroom_id','confer.conferroom_id',
+    'eventconfer.confer_confer_id','confer.conferroom_id',
     'eventconfer.subzoo_zoo_zoo_id','zoo.zoo_id',
     'eventconfer.headncf_headncf_id','headncf.headncf_id',
     'eventconfer_status',"'Y'",
@@ -140,7 +140,7 @@
     'eventconfer_start')->execute();
 
     $total = $db->countTableBETWEEN45('eventconfer','headncf','confer','zoo',
-    'eventconfer.confer_conferroom_id','confer.conferroom_id',
+    'eventconfer.confer_confer_id','confer.conferroom_id',
     'eventconfer.subzoo_zoo_zoo_id','zoo.zoo_id',
     'eventconfer.headncf_headncf_id','headncf.headncf_id',
     'eventconfer_status',"'Y'",
@@ -148,7 +148,7 @@
 
     $countjoin = $db->specifytable('*,
     SUM(eventconfer_join) AS joinconfer'
-    ,'eventconfer,zoo,headncf,confer',"eventconfer.confer_conferroom_id = confer.conferroom_id AND
+    ,'eventconfer,zoo,headncf,confer',"eventconfer.confer_confer_id = confer.conferroom_id AND
                                            eventconfer.subzoo_zoo_zoo_id = zoo.zoo_id AND
                                            eventconfer.headncf_headncf_id = headncf.headncf_id AND
                                            eventconfer_status = 'Y' AND

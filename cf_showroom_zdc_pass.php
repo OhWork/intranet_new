@@ -23,7 +23,7 @@
     $row = "<div class='row'>";
     $rowend = "</div>";
     $form = new form();
-    $rs = $db->findByPK34('eventconfer','confer','zoo','confer_conferroom_id','conferroom_id','conferroom_id',$id,'zoo_zoo_id','zoo_id','eventconfer_status',"'Y'")->execute();
+    $rs = $db->findByPK34('eventconfer','confer','zoo','confer_confer_id','conferroom_id','conferroom_id',$id,'zoo_zoo_id','zoo_id','eventconfer_status',"'Y'")->execute();
             echo "<div class='col-md-12'>"."<h2>".$conferroom_name."</h2>".$rowend;
 
 			$grid = new gridView();

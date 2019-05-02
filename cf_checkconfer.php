@@ -25,7 +25,7 @@
   	$sr = $_POST['sr'];
 // check iszpo
 //   	if($iszpo == 1){
-	$sql = "SELECT * FROM eventconfer WHERE ((eventconfer_start BETWEEN '$datestart' AND '$dateend') OR (eventconfer_end BETWEEN '$datestart' AND '$dateend'))	 AND confer_conferroom_id = '$conferroom_id' AND eventconfer_status_online = '1' AND eventconfer_status  = 'Y'";
+	$sql = "SELECT * FROM eventconfer WHERE ((eventconfer_start BETWEEN '$datestart' AND '$dateend') OR (eventconfer_end BETWEEN '$datestart' AND '$dateend'))	 AND confer_confer_id = '$conferroom_id' AND eventconfer_status_online = '1' AND eventconfer_status  = 'Y'";
 	$rs = mysqli_query($link, $sql);
 
 	echo mysqli_num_rows($rs);
@@ -34,14 +34,14 @@
 	}
 // check cazpo
 	elseif($cazpo == 1){
-		$sql = "SELECT * FROM eventconfer WHERE ((eventconfer_start BETWEEN '$datestart' AND '$dateend') OR (eventconfer_end BETWEEN '$datestart' AND '$dateend'))	 AND confer_conferroom_id = '$conferroom_id' AND eventconfer_status_online = '1' AND eventconfer_status  = 'Y'";
+		$sql = "SELECT * FROM eventconfer WHERE ((eventconfer_start BETWEEN '$datestart' AND '$dateend') OR (eventconfer_end BETWEEN '$datestart' AND '$dateend'))	 AND confer_confer_id = '$conferroom_id' AND eventconfer_status_online = '1' AND eventconfer_status  = 'Y'";
 	$rs = mysqli_query($link, $sql);
 
 	echo mysqli_num_rows($rs);
 	}
 // check fpzpo
 	elseif($fpzpo == 1){
-		$sql = "SELECT * FROM eventconfer WHERE ((eventconfer_start BETWEEN '$datestart' AND '$dateend') OR (eventconfer_end BETWEEN '$datestart' AND '$dateend'))	 AND confer_conferroom_id = '$conferroom_id' AND eventconfer_status_online = '1' AND eventconfer_status  = 'Y'";
+		$sql = "SELECT * FROM eventconfer WHERE ((eventconfer_start BETWEEN '$datestart' AND '$dateend') OR (eventconfer_end BETWEEN '$datestart' AND '$dateend'))	 AND confer_confer_id = '$conferroom_id' AND eventconfer_status_online = '1' AND eventconfer_status  = 'Y'";
 	$rs = mysqli_query($link, $sql);
 
 	echo mysqli_num_rows($rs);

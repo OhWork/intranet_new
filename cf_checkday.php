@@ -6,7 +6,7 @@
 	$datestart = isset($_POST['datestart']) ? trim($_POST['datestart']) : "";
   	$dateend = isset($_POST['dateend']) ? trim($_POST['dateend']) : "";
   	$conferroom_id = $_POST['conferid'];
-	$rs = $db->specifytable('*','eventconfer',"((eventconfer_start BETWEEN '$datestart' AND '$dateend') OR (eventconfer_end BETWEEN '$datestart' AND '$dateend'))	 AND confer_conferroom_id = '$conferroom_id' AND eventconfer_status  = 'Y'")->execute();
+	$rs = $db->specifytable('*','eventconfer',"((eventconfer_start BETWEEN '$datestart' AND '$dateend') OR (eventconfer_end BETWEEN '$datestart' AND '$dateend'))	 AND confer_confer_id = '$conferroom_id' AND eventconfer_status  = 'Y'")->execute();
 
 	foreach($rs as $b){
 		if($b['eventconfer_end'] == $datestart){

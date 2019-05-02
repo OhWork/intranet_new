@@ -61,7 +61,7 @@
             'eventconfer_tel' => $_POST['eventconfer_tel'],
             'subzoo_subzoo_id' => $_POST['subzoo_subzoo_id'],
         	'subzoo_zoo_zoo_id' => $_POST['subzoo_zoo_zoo_id'],
-        	'confer_conferroom_id' => $_POST['confer_conferroom_id'],
+        	'confer_confer_id' => $_POST['confer_confer_id'],
         	'eventconfer_status' => $_POST['eventconfer_status'],
         	'headncf_headncf_id' => $_POST['headncf_headncf_id']
             ));
