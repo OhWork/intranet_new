@@ -13,7 +13,7 @@
     $lbpromotion = new label('บัตรส่วนลดโปรโมชั่น');
     $lbfree = new label('ยกเว้น / หมู่คณะ ไม่เสียค่าบัตร');
     $lbproject = new label('ในโครงการไม่เสียค่าบัตร');
-    $lbtour = new label('โครงการทัวร์สวนสัตา์');
+    $lbtour = new label('โครงการทัวร์สวนสัตว์');
     $lbjoinproject = new label('เข้าร่วมโครงการทัวร์');
     $lbadultcharge = new label('ผู้ใหญ่(เสียค่าบัตร)');
     $lbchildcharge = new label('เด็ก(เสียค่าบัตร)');
@@ -313,7 +313,7 @@
 <script >
    $(function () {
         $('#datepicker').datetimepicker({
-	        format:'YYYY-MM-DD H:mm',
+	        format:'YYYY-MM-DD',
 	        useCurrent: false,
 	        ignoreReadonly: true,
             sideBySide: true,
