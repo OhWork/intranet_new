@@ -15,8 +15,8 @@
     $radioqtnenable = new radioGroup();
     $radioqtnenable->name = 'qtn_enable';
       if(empty($id)){
-        	$radioqtnenable->add('ใช้งานได้',1,'');
-        	$radioqtnenable->add('ไม่สามารถใช้งานได้',0,'checked');
+        	$radioqtnenable->add('ใช้งานได้',1,'','');
+        	$radioqtnenable->add('ไม่สามารถใช้งานได้',0,'checked','');
         	}
     $button = new buttonok("ส่งแบบสอบถาม","","btn btn-success btn-lg btn-block bt3success col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","");
 
@@ -33,11 +33,11 @@
 //     $txtname= $r2['user_name'];
 // 	$txtlast= $r2['user_last'];
 	if($r["qtn_enable"] == 1){
-    	$radioqtnenable->add('ใช้งานได้',1,'checked');
-    	$radioqtnenable->add('ไม่สามารถใช้งานได้',0,'');
+    	$radioqtnenable->add('ใช้งานได้',1,'checked','');
+    	$radioqtnenable->add('ไม่สามารถใช้งานได้',0,'','');
     	}else if($r['qtn_enable'] == 0){
-        $radioqtnenable->add('ใช้งานได้',1,'');
-        $radioqtnenable->add('ไม่สามารถใช้งานได้',0,'checked');
+        $radioqtnenable->add('ใช้งานได้',1,'','');
+        $radioqtnenable->add('ไม่สามารถใช้งานได้',0,'checked','');
     	}
     }
 echo $form->open("form_reg","form","col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","qtn_insert_question.php","");
