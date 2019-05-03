@@ -9,8 +9,8 @@
     $lbtqtnenable = new label("สถานะการใช้งาน :");
     $txtname = new textfield('qtn_name','','form-control','','');
     $txtlink = new textfield('qtn_link','','form-control','','');
-    $txtdatestartwork = new datetimepicker('qtn_datestart','datetimepicker1','','form-control datetimepicker-input','date-form dayinbox col-md-12 form-horizontal control-group controls input-group','input-group date','datetimepicker1','#datetimepicker1','');
-    $txtdatestarthos = new datetimepicker('qtn_dateend','datetimepicker2','','form-control datetimepicker-input','date-form dayinbox col-md-12 form-horizontal control-group controls input-group','input-group date','datetimepicker2','#datetimepicker2','');
+    $txtdatestartwork = new datetimepicker('qtn_datestart','datetimepicker1','','form-control datetimepicker-input','date-form dayinbox col-md-12 form-horizontal control-group controls input-group','input-group date','datetimepicker1','#datetimepicker1','','');
+    $txtdatestarthos = new datetimepicker('qtn_dateend','datetimepicker2','','form-control datetimepicker-input','date-form dayinbox col-md-12 form-horizontal control-group controls input-group','input-group date','datetimepicker2','#datetimepicker2','','');
     $datetime = date("Y-m-d H:i");
     $radioqtnenable = new radioGroup();
     $radioqtnenable->name = 'qtn_enable';
@@ -62,7 +62,7 @@ echo $form->open("form_reg","form","col-xl-12 col-lg-12 col-md-12 col-sm-12 col-
 					</div>
 					<div class='date-form dayinbox col-md-12 form-horizontal control-group controls input-group'>
 									<div class='input-group date' id ="datetimepicker1" data-target-input="nearest">
-										<input type='text' class="form-control datetimepicker-input" name="eventconfer_start" id='date1' readonly/>
+										<input type='text' class="form-control datetimepicker-input" name="qtn_datestart" id='date1' readonly/>
 										<div class="input-group-append" data-target="#datetimepicker1" data-toggle="datetimepicker">
 					                        <div class="input-group-text"><i class="fa fa-calendar"></i></div>
 					                    </div>
@@ -77,7 +77,7 @@ echo $form->open("form_reg","form","col-xl-12 col-lg-12 col-md-12 col-sm-12 col-
 					</div>
 					<div class='date-form dayinbox col-md-12 form-horizontal control-group controls input-group'>
 									<div class='input-group date' id ="datetimepicker2" data-target-input="nearest">
-										<input type='text' class="form-control datetimepicker-input" name="eventconfer_end" id='date2' readonly/>
+										<input type='text' class="form-control datetimepicker-input" name="qtn_dateend" id='date2' readonly/>
 											<div class="input-group-append" data-target="#datetimepicker2" data-toggle="datetimepicker">
 						                        <div class="input-group-text"><i class="fa fa-calendar"></i></div>
 						                    </div>
@@ -112,7 +112,7 @@ echo $form->open("form_reg","form","col-xl-12 col-lg-12 col-md-12 col-sm-12 col-
 					</div>
 				</div>
 			</div>
-			<input type='hidden' name='user_user_id' value='<?php echo $_SESSION['user_id']?>'/>
+			<input type='hidden' name='user_user_id' value='<?php echo $_SESSION["user_id"]?>'/>
 			<input type='hidden' name='qtn_datereg' value='<?php echo $datetime; ?>'/>
 			<input type='hidden' name='qtn_id' value='<?php echo $id; ?>'/>
 			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-1" style="padding-bottom:16px;">
