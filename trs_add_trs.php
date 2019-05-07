@@ -296,11 +296,10 @@
         <input type='hidden' id='trs_date' value="<?php echo $r['touristreport_date']; ?>"/>
         <input type='hidden' name='touristreport_id' value="<?php echo $_GET['id']; ?>"/>
         <div class='col-md-12' style="margin-top: 10px;">
-            <div class='col-md-4' style="float:left;">
-            </div>
-            <div class='col-md-4' style="float:left;"><?php echo $button; ?>
-            </div>
-            <div class='col-md-4' style="float:left;">
+			<div class='row'>
+				<div class='col-md-4'></div>
+				<div class='col-md-4'><?php echo $button; ?></div>
+				<div class='col-md-4'></div>
             </div>
         </div>
     </div>

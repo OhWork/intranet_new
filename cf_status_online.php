@@ -171,19 +171,19 @@
 				</div>
 				<div class='col-md-12'>
 					<div class='row'>
-						<div class='col-md-4'></div>
-						<div class="btn-group col-md-4" data-toggle="buttons">
-							<label class="btn btn-success col-md-6 active">
+						<div class='col-md-2'></div>
+						<div class="btn-group btn-group-toggle col-md-8" data-toggle="buttons">
+							<label class="btn btn-success col-md-4 active">
 							  <input type="radio" name="eventconfer_status_online" class="statusconfirm" value="Y" id="complete" autocomplete="off"  checked> อนุมัติ
 							</label>
-							<label class="btn btn-danger col-md-6">
+							<label class="btn btn-danger col-md-4">
 							  <input type="radio" name="eventconfer_status_online" class="statusconfirm" value="N" id="nocomplete" autocomplete="off"> ไม่อนุมัติ
 							</label>
-							<label class="btn btn-warning col-md-6">
+							<label class="btn btn-warning col-md-4">
 							  <input type="radio" name="eventconfer_status_online" class="statusconfirm" value="C" id="cancelcomplete" autocomplete="off"> ยกเลิก
 							</label>
 						</div>
-						<div class='col-md-4'></div>
+						<div class='col-md-2'></div>
 					</div>
 				</div>
 				<div class='col-md-12 mt-3 editcomment'>
