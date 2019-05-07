@@ -200,8 +200,8 @@
     }
     navAnimate(1,7);
 	navAnimate(2,4);
-	navAnimate(3,9);
-	navAnimate(4,9);
+	navAnimate(3,1);
+	navAnimate(4,1);
 	navAnimate(5,2);
 	navAnimate(6,2);
 	navAnimate(7,2);
