@@ -11,7 +11,6 @@
 <?php
     include 'database/db_tools.php';
 	include 'connect.php';
-
 	$datenow = date("Y-m-d");
 	$timenow = date("H:i");
 	$adddatenow = $datenow."&nbsp;".$timenow;
@@ -24,7 +23,7 @@
         	'eventconfer_end' => $_POST['eventconfer_end'],
             'eventconfer_uname' => $_POST['eventconfer_uname'],
         	'eventconfer_uclass' => $_POST['eventconfer_uclass'],
-        	'eventconferroom_namers' => $_POST['eventconferroom_namers'],
+        	'eventconfer_namers' => $_POST['eventconferroom_namers'],
         	'eventconfer_psname' => $_POST['eventconfer_psname'],
         	'eventconfer_psclass' => $_POST['eventconfer_psclass'],
         	'eventconfer_join' => $_POST['eventconfer_join'],
