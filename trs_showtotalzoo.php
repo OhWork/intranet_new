@@ -44,7 +44,7 @@
     $selectmonth->addItem('พฤศจิกายน','11');
     $selectmonth->addItem('ธันวาคม','12');
     $txtyear = new textfield('year','','form-control css-require','','');
-	$button = new buttonok('ค้นหา','','btn btn-primary stzbutton','submit');
+	$button = new buttonok('ค้นหา','','btn btn-primary col-12','submit');
 	echo $form->open('','','col-12','','');
 ?>
 <div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 printdisplaynone' style="margin-top:16px;">
@@ -53,20 +53,20 @@
 			<div class='row'>
 				<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12'>
 					<div class='row'>
-						<div class='col-xl-2 col-lg-2'></div>
-						<div class='col-xl-8 col-lg-8 col-md-12 col-sm-12 col-12'>
+						<div class='col-xl-2 col-lg-2 col-md-1'></div>
+						<div class='col-xl-6 col-lg-4 col-md-5 col-sm-12 col-12'>
 							<h4>รายงานจำนวนผู้เข้าชม <?php echo @$zoo_name ?></h4>
 						</div>
-						<div class='col-xl-2 col-lg-2'></div>
+						<div class='col-xl-3 col-lg-4 col-md-5'>
+							<?php	if(($user_zoo) >= 11 && ($user_zoo <= 18)){ ?>
+								<a href="admin_index.php?url=trs_add_trs.php" class="btn btn-success col-md-12">เพิ่มจำนวนผู้เข้าชม <span data-feather="plus"></span></a>
+						</div>
+						<div class='col-xl-1 col-lg-2 col-md-1'></div>
 					</div>
 				</div>
+				<?php  }else{  ?>
 				<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12'>
 					<div class='row'>
-						<?php	if(($user_zoo) >= 11 && ($user_zoo <= 18)){ ?>
-							<div class="col-md-4"></div>
-							<a href="admin_index.php?url=trs_add_trs.php" class="btn btn-success col-4">เพิ่มจำนวนผู้เข้าชม <span data-feather="plus"></span></a>
-							<div class="col-md-4"></div>
-						<?php  }else{  ?>
 							<div class="col-md-3"></div>
 							<div class="col-md-6 loginwrong">
                                 <p>สามารถเพิ่มข้อมูลได้เฉพาะสวนสัตว์เท่านั้น</p>
@@ -132,13 +132,19 @@
 							<div class='col-md-2' style="float:left;"></div>
 						</div>
                     </div>
-					</div>
-                </div>
+				</div>
             </div>
+        </div>
+		<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12'style="margin-top: 20px;">
+			<div class='row'>
+				<div class='col-xl-5 col-lg-5 col-md-4 col-sm-4 col-4'></div>
+				<div class='col-xl-2 col-lg-2 col-md-4 col-sm-4 col-4'>
+					<?php echo $button ?>
+				</div>
+				<div class='col-xl-5 col-lg-5 col-md-4 col-sm-4 col-4'></div>
+			</div>
 		</div>
-        <div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12'style="margin-top: 20px;">
-			<center><?php echo $button ?></center>
-		</div>
+	</div>
 </div>
 <?php
 	echo $form->close();
