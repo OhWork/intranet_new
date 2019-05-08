@@ -620,14 +620,6 @@ a:hover {
 .azchoice {
     padding-bottom: 15px;
 }
-.loginwrong {
-    font-size: 5px;
-    padding: 16 0 0 2;
-    color: #f63737;
-    border: solid 3px #f63737;
-    border-radius: 20px;
-    margin-top: 30px;
-}
 /*user add user*/
 .boxred{
 /* 	border-style: solid; */
@@ -752,15 +744,8 @@ a:hover {
 	padding: 25 0 0 0;
 }
 .loginwrong {
-	font-family: "Times New Roman", Times, serif;
-	font-style: normal;
-	font-size: 20px;
 	color:#FB373D;
 	text-align:center;
-	border: solid #FB373D 2px;
-	border-radius: 7px;
-	margin: auto;
-	padding: 20 0 0 0;
 }
 /*cf_listcfr*/
 .cfbordertop {

@@ -60,21 +60,14 @@
 						<?php	if(($user_zoo) >= 11 && ($user_zoo <= 18)){ ?>
 						<div class='col-xl-3 col-lg-4 col-md-5'>
 							<a href="admin_index.php?url=trs_add_trs.php" class="btn btn-success col-md-12">เพิ่มจำนวนผู้เข้าชม <span data-feather="plus"></span></a>
+						<?php  }else{  ?>
+						<div class='col-xl-3 col-lg-4 col-md-5 pt-1'>
+							<p class="col-md-12 loginwrong">สามารถเพิ่มข้อมูลได้เฉพาะสวนสัตว์เท่านั้น</p>
+						<?php } ?>
 						</div>
 						<div class='col-xl-1 col-lg-2 col-md-1'></div>
 					</div>
 				</div>
-					<?php  }else{  ?>
-						<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12'>
-							<div class='row'>
-								<div class="col-md-4"></div>
-								<div class="col-md-4 mt-3 loginwrong">
-									<p class="pt-3">สามารถเพิ่มข้อมูลได้เฉพาะสวนสัตว์เท่านั้น</p>
-								</div>
-								<div class="col-md-4"></div>
-							</div>
-						</div>
-					<?php } ?>
 			</div>
 		</div>
         <div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12'>
