@@ -89,12 +89,12 @@ if ($user_zoo == 10 || $user_zoo == 18) {
             }
             if ($user_zoo == 10 || $user_zoo == 15) {
                 ?>
-                <a class="dropdown-item edittext mucl" id="nav-12-animate-6" href="admin_index.php?urlcs_totalservicemonthzoo.php&zoo=15">สวนสัตว์สงขลา</a>
+                <a class="dropdown-item edittext mucl" id="nav-12-animate-6" href="admin_index.php?url=cs_totalservicemonthzoo.php&zoo=15">สวนสัตว์สงขลา</a>
 <?php
 }
 if ($user_zoo == 10 || $user_zoo == 16) {
     ?>
-                <a class="dropdown-item edittext mucl" id="nav-12-animate-7" href="admin_index.php?urlcs_totalservicemonthzoo.php&zoo=16">สวนสัตว์อุบลราชธานี</a>
+                <a class="dropdown-item edittext mucl" id="nav-12-animate-7" href="admin_index.php?url=cs_totalservicemonthzoo.php&zoo=16">สวนสัตว์อุบลราชธานี</a>
             <?php
             }
             if ($user_zoo == 10 || $user_zoo == 17) {
