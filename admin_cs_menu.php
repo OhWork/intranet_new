@@ -150,7 +150,7 @@ if ($user_zoo == 10 || $user_zoo == 17) {
 }
 if ($user_zoo == 10 || $user_zoo == 18) {
     ?>
-                <a class="dropdown-item edittext mucl" id="nav-13-animate-9" href="#">โครงการคชอาณาจักร</a>
+                <a class="dropdown-item edittext mucl" id="nav-13-animate-9" href="admin_index.php?url=cs_report_ip.php&id=18">โครงการคชอาณาจักร</a>
 <?php } ?>
         </ul>
     </ul>
