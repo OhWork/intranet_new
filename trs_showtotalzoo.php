@@ -61,8 +61,8 @@
 						<div class='col-xl-3 col-lg-4 col-md-5'>
 							<a href="admin_index.php?url=trs_add_trs.php" class="btn btn-success col-md-12">เพิ่มจำนวนผู้เข้าชม <span data-feather="plus"></span></a>
 						<?php  }else{  ?>
-						<div class='col-xl-3 col-lg-4 col-md-5 pt-1'>
-							<p class="col-md-12 loginwrong">สามารถเพิ่มข้อมูลได้เฉพาะสวนสัตว์เท่านั้น</p>
+						<div class='col-xl-3 col-lg-4 col-md-5 pt-1 pl-0'>
+							<p class="col-md-12 loginwrong"><b>สามารถเพิ่มข้อมูลได้เฉพาะสวนสัตว์เท่านั้น</b></p>
 						<?php } ?>
 						</div>
 						<div class='col-xl-1 col-lg-2 col-md-1'></div>
