@@ -754,14 +754,12 @@ a:hover {
 .loginwrong {
 	font-family: "Times New Roman", Times, serif;
 	font-style: normal;
-	font-size: 50px;
+	font-size: 20px;
 	color:#FB373D;
 	text-align:center;
-	border: solid #FB373D 10px;
-	border-radius: 30px;
-	width: 500px;
+	border: solid #FB373D 2px;
+	border-radius: 7px;
 	margin: auto;
-	margin-top: 50px;
 	padding: 20 0 0 0;
 }
 /*cf_listcfr*/
