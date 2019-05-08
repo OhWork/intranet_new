@@ -23,7 +23,7 @@
         	'eventconfer_end' => $_POST['eventconfer_end'],
             'eventconfer_uname' => $_POST['eventconfer_uname'],
         	'eventconfer_uclass' => $_POST['eventconfer_uclass'],
-        	'eventconfer_namers' => $_POST['eventconferroom_namers'],
+        	'eventconfer_namers' => $_POST['eventconfer_namers'],
         	'eventconfer_psname' => $_POST['eventconfer_psname'],
         	'eventconfer_psclass' => $_POST['eventconfer_psclass'],
         	'eventconfer_join' => $_POST['eventconfer_join'],

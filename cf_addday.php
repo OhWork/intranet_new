@@ -1,7 +1,7 @@
 <?php
 	$form = new form();
 	$story = new textfield('eventconfer_story','story','form-control','','');
-	$name = new textfield('eventconferroom_namers','','form-control','','');
+	$name = new textfield('eventconfer_namers','','form-control','','');
 	$tel = new textfield('eventconfer_tel','tel','form-control','','');
     $tel->functions ="onkeypress='CheckNum()' onClick='this.setSelectionRange(0, this.value.length)'";
 	$uname = new textfield('eventconfer_uname','','form-control','','');
