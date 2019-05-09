@@ -437,8 +437,18 @@ if (isset($_GET['action']))
 						$j--;
 					}
 					$countpath=$i-1;
-						$selectid = $db->findByPK('folder','folder_name',"'$path_foldercutpath[$j]'")->executeAssoc();
-	  					$rsrenamefile = $db->updatefolder('files','files_name',"'$baowiw'",'files_name',"'$path_foldercutpath[$countpath]'",'folder_folder_id',$selectid['folder_id']);
+					$selectidfiles = $db->findByPK('files','files_name',"'$path_foldercutpath[$countpath]'")->executeAssoc();
+					$cutfilename = $selectidfiles['files_name'];
+					$cuttypefile = explode('.',$cutfilename);
+					$count = count($cuttypefile);
+					$cutfilenamere = explode('.',$path_foldercutpath[$countpath]);
+					$selectid = $db->findByPK('folder','folder_name',"'$path_foldercutpath[$j]'")->executeAssoc();
+
+					if($count == 1){
+						$rsrenamefile = $db->updatefolder('files','files_name',"'$baowiw'",'files_name',"'$cutfilenamere[0]'",'folder_folder_id',$selectid['folder_id']);
+					}else{
+						$rsrenamefile = $db->updatefolder('files','files_name',"'$baowiw'",'files_name',"'$path_foldercutpath[$countpath]'",'folder_folder_id',$selectid['folder_id']);
+	  					}
   					if($rsrenamefile){
 						rename_file($path_thumb,$name,$ftp,$config);
 					}
