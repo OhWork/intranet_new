@@ -39,12 +39,10 @@
 						include_once 'admin_qtn_menu.php';
  				       }
  				   ?>
- 				   <li class="nav-item">
-					<a class="nav-link edittext mucl" href="#">
-						<span data-feather="airplay"></span>
-						ระบบbanner
-					</a>
-				  </li>
+					<a class="nav-link collapsed nav-link-19 edittext mucl" href="#banner" data-toggle="collapse" data-target="#banner"><span data-feather="calendar"></span>ระบบbanner</a>
+					 <ul class="sub-menu collapse on-sub mmpd" id="banner">
+					 	<a class="nav-link edittext mucl" id="nav-34-animate-1" href="admin_index.php?url=hrs_show_editcertificate.php">จัดการbanner</a>
+					 </ul>
  				   <?php
 					if($_SESSION['systemallow_km'] == 1){
 // 						include_once 'admin_km_menu.php';
@@ -231,5 +229,6 @@
 	navAnimate(31,2);
 	navAnimate(32,5);
 	navAnimate(33,3);
+	navAnimate(34,1);
   	</script>
 
