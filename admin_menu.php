@@ -38,12 +38,14 @@
  				   if($_SESSION['systemallow_admin'] == 1){
 						include_once 'admin_qtn_menu.php';
  				       }
+ 				       if($_SESSION['user_id'] == 1){
  				   ?>
 					<a class="nav-link collapsed nav-link-19 edittext mucl" href="#banner" data-toggle="collapse" data-target="#banner"><span data-feather="calendar"></span>ระบบbanner</a>
 					 <ul class="sub-menu collapse on-sub mmpd" id="banner">
 					 	<a class="nav-link edittext mucl" id="nav-34-animate-1" href="admin_index.php?url=hrs_show_editcertificate.php">จัดการbanner</a>
 					 </ul>
  				   <?php
+	 				   }
 					if($_SESSION['systemallow_km'] == 1){
 // 						include_once 'admin_km_menu.php';
 				        }
