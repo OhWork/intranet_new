@@ -1,7 +1,7 @@
 <?php
 	include 'database/db_tools.php';
 	include 'connect.php';
-// 	error_reporting(0);
+	error_reporting(0);
 $config = include 'fm_config/fm_config.php';
 
 $date = date("Y-m-d");
@@ -312,7 +312,7 @@ if (isset($_GET['action']))
 						response(trans('Rename_existing_folder').AddErrorLocation())->send();
 						exit;
 					}
- 					$baowiw = $_POST['name'];
+ 					$namefolder = $_POST['name'];
  					$path_folder = substr($path, 7);
  					$path_foldercutpath = explode('/',$path_folder);
  					for($i= 0; $i<count($path_foldercutpath); $i++){
@@ -324,7 +324,7 @@ if (isset($_GET['action']))
 			//$countpath เอาไว้เช็คชื่อ folder ที่ต้องการแก้ไข
 			//$countpath2 เช็คpath ก่อนหน้า​โฟลเดอร์ที่อยู่ปัจจุบัน
  			$selectid = $db->findByPK('folder','folder_name',"'$path_foldercutpath[$j]'")->executeAssoc();
- 			$rsrename = $db->updatefolder('folder','folder_name',"'$baowiw'",'folder_name',"'$path_foldercutpath[$countpath]'",'folder_position',$selectid['folder_id']);
+ 			$rsrename = $db->updatefolder('folder','folder_name',"'$namefolder'",'folder_name',"'$path_foldercutpath[$countpath]'",'folder_position',$selectid['folder_id']);
                         if(getenv(HTTP_X_FORWARDED_FOR)){
                             $ip = $_SERVER['HTTP_X_FORWARDED_FOR']; // IP proxy
                             }else{
@@ -429,7 +429,7 @@ if (isset($_GET['action']))
 						response(trans('Rename_existing_file').AddErrorLocation())->send();
 						exit;
 					}
-					$baowiw = $_POST['name'];
+					$namefile = $_POST['name'];
 					$path_folder = substr($path, 7);
  					$path_foldercutpath = explode('/',$path_folder);
 					for($i= 0; $i<count($path_foldercutpath); $i++){
@@ -445,9 +445,9 @@ if (isset($_GET['action']))
 					$selectid = $db->findByPK('folder','folder_name',"'$path_foldercutpath[$j]'")->executeAssoc();
 
 					if($count == 1){
-						$rsrenamefile = $db->updatefolder('files','files_name',"'$baowiw'",'files_name',"'$cutfilenamere[0]'",'folder_folder_id',$selectid['folder_id']);
+						$rsrenamefile = $db->updatefolder('files','files_name',"'$namefile'",'files_name',"'$cutfilenamere[0]'",'folder_folder_id',$selectid['folder_id']);
 					}else{
-						$rsrenamefile = $db->updatefolder('files','files_name',"'$baowiw'",'files_name',"'$path_foldercutpath[$countpath]'",'folder_folder_id',$selectid['folder_id']);
+						$rsrenamefile = $db->updatefolder('files','files_name',"'$namefile'",'files_name',"'$path_foldercutpath[$countpath]'",'folder_folder_id',$selectid['folder_id']);
 	  					}
   					if($rsrenamefile){
 						rename_file($path_thumb,$name,$ftp,$config);
