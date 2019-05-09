@@ -2,7 +2,7 @@
 include_once 'change2thaidate.php';
 error_reporting(E_ERROR | E_WARNING | E_PARSE);
 class gridView{
-	public $name,$data,$delete,$edit,$view,$deletetxt,$edittxt,$printtxt,$viewtxt,$header,$width,$pr,$change,$changestatus,$sts,$sts_hrs,$span,$link,$special,$system,$editdrop,$editdrop2,$editextsup,$editextsup2,$newdesign;
+	public $name,$data,$delete,$edit,$view,$deletetxt,$edittxt,$printtxt,$viewtxt,$header,$width,$pr,$change,$changestatus,$sts,$sts_hrs,$sts_reg,$span,$link,$special,$system,$editdrop,$editdrop2,$editextsup,$editextsup2,$newdesign;
 
 
 	function __construct(){
@@ -138,16 +138,19 @@ class gridView{
                 @$id = $r[$this->pr];
                 @$status = $r[$this->sts];
                 @$status_hrs = $r[$this->sts_hrs];
+                @$status_reg = $r[$this->sts_reg];
                 @$status_plan = $r[$this->sts_plan];
                 @$newdesign = $r[$this->newdesign];
 			/* ส่วนตรวจสอบค่าสถานะของแจ้งซ่อมออนไลน์*/
             @$con = mysqli_connect("localhost","root","","intranet");
 			@$sql = "SELECT * FROM problem WHERE problem_id = $id"; //ไว้แก้ เปลี่ยนสเตตัส
 			@$sqlhrs = "SELECT * FROM hrctf WHERE hrctf_id = $id"; //ไว้แก้ เปลี่ยนสเตตัส
+                        @$sqlreg = "SELECT * FROM reguser WHERE reguser_id = $id"; //ไว้แก้ เปลี่ยนสเตตัส
 			@$sqlplan = "SELECT * FROM plan WHERE plan_id = $id"; //ไว้แก้ เปลี่ยนสเตตัส
 			@$sqlnew = "SELECT * FROM news WHERE news_id = $id"; //ไว้แก้ เปลี่ยนสเตตัส
 			@$query= mysqli_query($con,$sql);
 			@$queryhrs= mysqli_query($con,$sqlhrs);
+                        @$queryreg= mysqli_query($con,$sqlreg);
 			@$queryplan= mysqli_query($con,$sqlplan);
 			@$querynew= mysqli_query($con,$sqlnew);
 			if(!empty($query)){
@@ -159,10 +162,13 @@ class gridView{
 			if(!empty($queryhrs)){
 			@$rs_hrs = mysqli_fetch_array($queryhrs,MYSQLI_ASSOC);
 			}
+                        if(!empty($queryreg)){
+			@$rs_reg = mysqli_fetch_array($queryreg,MYSQLI_ASSOC);
+			}
 			if(!empty($querynew)){
 			@$rs_new = mysqli_fetch_array($querynew,MYSQLI_ASSOC);
 			}
-			if(@$status){
+                         if(@$status){
 				 if(@$rs_c["problem_status"]=='Y')
 				{
 					$this->changestatus ='btn btn-success editok';
@@ -182,6 +188,27 @@ class gridView{
 					$this->changetxt = '&nbsp;กำลังดำเนินการแก้ไข';
 				}
 			}
+			if(@$status_reg){
+				 if(@$rs_reg["reguser_status"]=='Y')
+				{
+					$this->changestatus ='btn btn-success editok';
+					$this->span ='glyphicon glyphicon-ok-sign';
+					$this->changetxt = '&nbsp;ดำเนินการแล้ว';
+				}
+				else if(@$rs_reg["reguser_status"]=='N')
+				{
+					$this->changestatus ='btn btn-primary editwait';
+					$this->span ='glyphicon glyphicon-info-sign';
+					$this->changetxt = '&nbsp;รอการดำเนินการ';
+				}
+				else if(@$rs_reg["reguser_status"]=='S')
+				{
+					$this->changestatus ='btn btn-warning editok';
+					$this->span ='glyphicon glyphicon-question-sign';
+					$this->changetxt = '&nbsp;ไม่สามารถดำเนินการได้';
+				}
+			}
+                       
 			if(@$status_hrs){
 				 if(@$rs_hrs["hrctf_status"]=='Y')
 				{
