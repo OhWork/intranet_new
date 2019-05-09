@@ -106,13 +106,24 @@ if (isset($_GET['action']))
 					$path_folder = substr($path, 7);
 					$path_foldercutpath = explode('/',$path_folder);
 					for($i= 0; $i<count($path_foldercutpath); $i++){
+						$j=$i;
+						$j--;
 					}
 					$countpath=$i-1;
 					$countpath2=$i-2;
-					$selectid = $db->findByPK('folder','folder_name',"'$path_foldercutpath[$countpath2]'")->executeAssoc();
+					$selectid = $db->findByPK('folder','folder_name',"'$path_foldercutpath[$j]'")->executeAssoc();
 					$selectidfiles = $db->findByPK('files','files_name',"'$path_foldercutpath[$countpath]'")->executeAssoc();
 					$rsdeletecdl = $db->delete('cdl','files_files_id',$selectidfiles['files_id']);
-					$rsdeletefile = $db->deletefolder('files','files_name',"'$path_foldercutpath[$countpath]'",'folder_folder_id',$selectid['folder_id']);
+					$cutfilename = $selectidfiles['files_name'];
+					$cuttypefile = explode('.',$cutfilename);
+					$count = count($cuttypefile);
+					$cutfilenamede = explode('.',$path_foldercutpath[$countpath]);
+					if($count == 1){
+						$rsdeletefile = $db->deletefolder('files','files_name',"'$cutfilenamede[0]'",'folder_folder_id',$selectid['folder_id']);
+					}else{
+						$rsdeletefile = $db->deletefolder('files','files_name',"'$path_foldercutpath[$countpath]'",'folder_folder_id',$selectid['folder_id']);
+					}
+
                                         	 if(getenv(HTTP_X_FORWARDED_FOR)){
                                                     $ip = $_SERVER['HTTP_X_FORWARDED_FOR']; // IP proxy
                                                     }else{
@@ -305,19 +316,15 @@ if (isset($_GET['action']))
  					$path_folder = substr($path, 7);
  					$path_foldercutpath = explode('/',$path_folder);
  					for($i= 0; $i<count($path_foldercutpath); $i++){
-			}
+						$j=$i;
+						$j--;
+					}
 			$countpath=$i-1;
 			$countpath2=$i-2;
 			//$countpath เอาไว้เช็คชื่อ folder ที่ต้องการแก้ไข
 			//$countpath2 เช็คpath ก่อนหน้า​โฟลเดอร์ที่อยู่ปัจจุบัน
-			if(count($path_foldercutpath) == 2){
- 			$selectid = $db->findByPK('folder','folder_name',"'$path_foldercutpath[$countpath2]'")->executeAssoc();
+ 			$selectid = $db->findByPK('folder','folder_name',"'$path_foldercutpath[$j]'")->executeAssoc();
  			$rsrename = $db->updatefolder('folder','folder_name',"'$baowiw'",'folder_name',"'$path_foldercutpath[$countpath]'",'folder_position',$selectid['folder_id']);
- 			}
- 			else{
-	 			$selectid = $db->findByPK('folder','folder_name',"'$path_foldercutpath[$countpath]'")->executeAssoc();
-	 		$rsrename = $db->updatefolder('folder','folder_name',"'$baowiw'",'folder_name',"'$path_foldercutpath[$countpath]'",'folder_position',0);
- 			}
                         if(getenv(HTTP_X_FORWARDED_FOR)){
                             $ip = $_SERVER['HTTP_X_FORWARDED_FOR']; // IP proxy
                             }else{
@@ -423,21 +430,15 @@ if (isset($_GET['action']))
 						exit;
 					}
 					$baowiw = $_POST['name'];
-					$path_folder = substr($path, 10);
+					$path_folder = substr($path, 7);
  					$path_foldercutpath = explode('/',$path_folder);
 					for($i= 0; $i<count($path_foldercutpath); $i++){
+						$j=$i;
+						$j--;
 					}
 					$countpath=$i-1;
-					$countpath2=$i-2;
-					if(count($path_foldercutpath) == 2){
-						$selectid = $db->findByPK('folder','folder_name',"'$path_foldercutpath[$countpath2]'")->executeAssoc();
+						$selectid = $db->findByPK('folder','folder_name',"'$path_foldercutpath[$j]'")->executeAssoc();
 	  					$rsrenamefile = $db->updatefolder('files','files_name',"'$baowiw'",'files_name',"'$path_foldercutpath[$countpath]'",'folder_folder_id',$selectid['folder_id']);
-  					}else{
-	  					$selectid = $db->findByPK('folder','folder_name',"'$path_foldercutpath[$countpath]'")->executeAssoc();
-						print_r($selectid);
-	  					$rsrenamefile = $db->updatefolder('files','files_name',"'$baowiw'",'files_name',"'$path_foldercutpath[$countpath]'",'folder_folder_id',$selectid['folder_id']);
-
-  					}
   					if($rsrenamefile){
 						rename_file($path_thumb,$name,$ftp,$config);
 					}
