@@ -261,6 +261,8 @@ if (isset($_GET['action']))
 				$rs = @$db->findByPK('folder','subzoo_zoo_zoo_id',$_SESSION['subzoo_zoo_zoo_id'])->executeAssoc();
 				$rssubfolall = @$db->findByPK('folder','folder_position',$rs['folder_id'])->execute();
 				foreach($rssubfolall as $show){
+
+				print_r($show);
 				$rs = $db->insert('folder',array(
 					'folder_name' => $name,
 					'folder_date' => $date,

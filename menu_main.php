@@ -24,10 +24,11 @@
 					<a class="nav-link collapsed nav-link-1 edittext mucl" href="#cs" data-toggle="collapse" data-target="#cs"><span class="edittext" data-feather="cpu"></span>ระบบแจ้งซ่อมคอมพิวเตอร์</a>
 					<ul class="sub-menu collapse on-sub mmpd" id="cs">
 	                <!-- sub menu -->
-						<a class="nav-link edittext mucls" id="nav-1-animate-1" href="index.php?url=cs_add_problem.php">แบบฟอร์มแจ้งซ่อม</a>
-						<a class="nav-link edittext mucls" id="nav-1-animate-2" href="index.php?url=cs_register.php">แบบฟอร์มขอใช้ Internet</a>
-						<a class="nav-link edittext mucls" id="nav-1-animate-3" href="index.php?url=cs_add_upweb.php">แบบฟอร์มขอให้อัพไฟล์ (กรณีไม่สามารถทำไดั)</a>
-						<a class="nav-link edittext mucl mucls" id="nav-1-animate-4" href="index.php?url=cs_show_problem.php&subpage=1">รายการแจ้งซ่อม</a>
+						<a class="nav-link edittext mucls" id="nav-1-animate-1" href="index.php?url=cs_add_problem.php">แบบฟอร์มแจ้งซ่อมคอมพิวเตอร์</a>
+						<a class="nav-link edittext mucls" id="nav-1-animate-2" href="index.php?url=cs_showregister.php">รายการขอใช้ระบบ</a>
+						<a class="nav-link edittext mucls" id="nav-1-animate-3" href="index.php?url=cs_register.php">แบบฟอร์มขอใช้ Internet</a>
+						<a class="nav-link edittext mucls" id="nav-1-animate-4" href="index.php?url=cs_add_upweb.php">แบบฟอร์มขอให้อัพไฟล์ (กรณีไม่สามารถทำไดั)</a>
+						<a class="nav-link edittext mucl mucls" id="nav-1-animate-5" href="index.php?url=cs_show_problem.php&subpage=1">รายการแจ้งซ่อมคอมพิวเตอร์</a>
 					</ul>
 				</li>
 				<li class="nav-item">
@@ -142,7 +143,7 @@
 			}
   		});
     }
-    navAnimate(1,4);
+    navAnimate(1,5);
 	navAnimate(2,3);
 	navAnimate(3,2);
 
