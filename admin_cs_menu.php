@@ -4,8 +4,8 @@
     <a class="nav-link collapsedv nav-link-15 edittext mucl" id="nav-1-animate-1" href="#cscase" data-toggle="collapse" data-target="#cscase">รายการดำเนินการ<span data-feather="chevron-right"></span></a>
     <ul class="sub-menu collapse mmpd2" id="cscase">
         <a class="nav-link edittext mucl" id="nav-15-animate-1" href="admin_index.php?url=cs_show_fixproblem.php">รายการแจ้งดำเนินการใหม่</a>
-        <a class="nav-link edittext mucl" id="nav-15-animate-2" href="admin_index.php?url=cs_show_waitfixproblem.php">รายงานระหว่างการดำเนินการ</a>
-        <a class="nav-link edittext mucl" id="nav-15-animate-3" href="admin_index.php?url=cs_show_completefixproblem.php">รานงานการดำเนินการเสร็จ</a>
+        <a class="nav-link edittext mucl" id="nav-15-animate-2" href="admin_index.php?url=cs_show_waitfixproblem.php">รายการระหว่างการดำเนินการ</a>
+        <a class="nav-link edittext mucl" id="nav-15-animate-3" href="admin_index.php?url=cs_show_completefixproblem.php">รายการการดำเนินการเสร็จ</a>
     </ul>
     <a class="nav-link collapsed py-1 nav-link-9 edittext mucl" id="nav-1-animate-2" href="#csip" data-toggle="collapse" data-target="#csip">IP-Address<span data-feather="chevron-right"></span></a>
     <ul class="sub-menu collapse mmpd2" id="csip">
@@ -57,7 +57,7 @@ if ($user_zoo == 10 || $user_zoo == 18) {
     <ul class="sub-menu collapse mmpd2" id="csipacc">
         <a class="nav-link edittext mucl" id="nav-10-animate-1" href="admin_index.php?url=cs_show_iptools.php&id=1">Server</a>
     </ul>
-       <a class="nav-link collapsed py-1 edittext mucl" id="nav-1-animate-4" href="admin_index.php?url=cs_show_register.php">รายการขอคำร้องขอใช้ระบบ</a>
+       <a class="nav-link collapsed py-1 edittext mucl" id="nav-1-animate-4" href="admin_index.php?url=cs_show_register.php">รายการขอใช้ระบบ</a>
     <a class="nav-link collapsed py-1 edittext mucl" id="nav-1-animate-5" href="admin_index.php?url=cs_showupweb.php">รายการขอคำร้องขึ้นเว็บไซต์</a>
     <a class="nav-link collapsed py-1 nav-link-11 edittext mucl" id="nav-1-animate-6" href="#csreport" data-toggle="collapse" data-target="#csreport">รายงาน<span data-feather="chevron-right"></a>
     <ul class="sub-menu collapse mmpd2" id="csreport">

@@ -429,10 +429,15 @@ if (isset($_GET['action']))
 					}
 					$countpath=$i-1;
 					$countpath2=$i-2;
+					if(count($path_foldercutpath) == 2){
+						$selectid = $db->findByPK('folder','folder_name',"'$path_foldercutpath[$countpath2]'")->executeAssoc();
+	  					$rsrenamefile = $db->updatefolder('files','files_name',"'$baowiw'",'files_name',"'$path_foldercutpath[$countpath]'",'folder_folder_id',$selectid['folder_id']);
+  					}else{
+	  					$selectid = $db->findByPK('folder','folder_name',"'$path_foldercutpath[$countpath]'")->executeAssoc();
+						print_r($selectid);
+	  					$rsrenamefile = $db->updatefolder('files','files_name',"'$baowiw'",'files_name',"'$path_foldercutpath[$countpath]'",'folder_folder_id',$selectid['folder_id']);
 
-					$selectid = $db->findByPK('folder','folder_name',"'$path_foldercutpath[$countpath2]'")->executeAssoc();
-
-  					$rsrenamefile = $db->updatefolder('files','files_name',"'$baowiw'",'files_name',"'$path_foldercutpath[$countpath]'",'folder_folder_id',$selectid['folder_id']);
+  					}
   					if($rsrenamefile){
 						rename_file($path_thumb,$name,$ftp,$config);
 					}
