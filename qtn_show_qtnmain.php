@@ -15,16 +15,17 @@
 					<?php
     					$date = date('Y-m-d');
                         $rs = $db->specifytable('*','qtn',"qtn_enable = 1 AND '$date' BETWEEN qtn_datestart AND qtn_dateend")->execute();
-						foreach($rs as $rsshow){?>
+						foreach($rs as $rsshow){
+						?>
 						<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4" style="padding:16px;float:left;">
 							<a class="btn btn-light col-12 qtnblock shadow" style="background-color:<?php echo $rsshow['qtn_color'];?>;" href="<?php echo $rsshow['qtn_link'];?>" role="button"><?php echo $rsshow['qtn_name'];?></a>
 						</div>
 					<?php }
-    					if(!empty($rs)){ ?>
+    					if(empty($rsshow['qtn_id'])){ ?>
         					<div class="col-12 pt-5 pb-5" style="text-align:center;color:#f44336;"><h4>ไม่มีแบบสอบถามในขณะนี้</h4></div>
     				<?php	}
     					 ?>
-					
+
 				</div>
 			</div>
 		</div>

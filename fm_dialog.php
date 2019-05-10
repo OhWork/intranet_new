@@ -468,7 +468,7 @@ $get_params = http_build_query($get_params);
 			<ul class="nav nav-tabs">
 				<li class="active"><a href="#baseUpload" data-toggle="tab"><?php echo trans('Upload_base');?></a></li>
 				<?php if($url_upload){ ?>
-				<li><a href="#urlUpload" data-toggle="tab"><?php echo trans('Upload_url');?></a></li>
+<!-- 				<li><a href="#urlUpload" data-toggle="tab"><?php echo trans('Upload_url');?></a></li> -->
 				<?php } ?>
 			</ul>
 			<div class="tab-content">
@@ -789,6 +789,7 @@ $files=$sorted;
 					<input id="select-type-2" name="radio-sort" type="radio" data-item="ff-item-type-2" class="hide"  />
 					<label id="ff-item-type-2" title="<?php echo trans('Images');?>" for="select-type-2" class="tip btn ff-label-type-2"><i class="icon-picture"></i></label>
 						<?php } ?>
+<!--
 						<?php if(count($ext_misc)>0 or false){ ?>
 					<input id="select-type-3" name="radio-sort" type="radio" data-item="ff-item-type-3" class="hide"  />
 					<label id="ff-item-type-3" title="<?php echo trans('Archives');?>" for="select-type-3" class="tip btn ff-label-type-3"><i class="icon-inbox"></i></label>
@@ -801,6 +802,7 @@ $files=$sorted;
 					<input id="select-type-5" name="radio-sort" type="radio" data-item="ff-item-type-5" class="hide"  />
 					<label id="ff-item-type-5" title="<?php echo trans('Music');?>" for="select-type-5" class="tip btn ff-label-type-5"><i class="icon-music"></i></label>
 						<?php } ?>
+-->
 					<?php } ?>
 					<input accesskey="f" type="text" class="filter-input <?php echo (($_GET['type']!=1 && $_GET['type']!=3) ? '' : 'filter-input-notype');?>" id="filter-input" name="filter" placeholder="<?php echo fix_strtolower(trans('Text_filter'));?>..." value="<?php echo $filter;?>"/><?php if($n_files>$file_number_limit_js){ ?><label id="filter" class="btn"><i class="icon-play"></i></label><?php } ?>
 

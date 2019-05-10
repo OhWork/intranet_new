@@ -574,7 +574,7 @@ if(isset($_GET['action']))
 			$choosen_lang = (!empty($_POST['choosen_lang']))? $_POST['choosen_lang']:"en_EN";
 
 			if(array_key_exists($choosen_lang,$languages)){
-				if ( ! file_exists('lang/' . $choosen_lang . '.php'))
+				if ( ! file_exists('fm_lang/' . $choosen_lang . '.php'))
 				{
 					response(trans('Lang_Not_Found').AddErrorLocation())->send();
 					exit;
