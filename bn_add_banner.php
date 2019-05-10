@@ -1,7 +1,7 @@
 <?php
     $id = $_GET['id'];
     $form = new form();
-    $lbname = new label('ชื่อแบบแบนเนอร์ ');
+    $lbname = new label('ชื่อแบนเนอร์ ');
     $lblink = new label('แนบลิ้งที่ต้องการ');
     $lbtbnenable = new label("สถานะการใช้งาน :");
     $txtname = new textfield('bn_name','','form-control','','');
@@ -13,7 +13,7 @@
         	$radiobnenable->add('ใช้งานได้',1,'','');
         	$radiobnenable->add('ไม่สามารถใช้งานได้',0,'checked','');
         	}
-    $button = new buttonok("ส่งแบบสอบถาม","","btn btn-success btn-lg btn-block bt3success col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","");
+    $button = new buttonok("ยืนยัน","","btn btn-success btn-block bt3success col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","");
 
     if(!empty($_GET['id'])){
     $id = $_GET['id'];
