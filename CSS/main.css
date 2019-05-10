@@ -1117,3 +1117,18 @@ a:hover {
 	border-bottom-right-radius: 5px;
 	border-top:none;
 }
+.view-bn {
+	text-align:right;
+}
+.view-all {
+	font-size: 16px;
+    padding: 3px;
+    border: 1px solid #1DE9B6;
+	border-radius: 5px;
+    color: #000;
+}
+.view-all:hover {
+    color: #ffffff;
+	background-color: #1DE9B6;
+	border-color:#1DE9B6;
+}
