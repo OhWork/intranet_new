@@ -12,18 +12,18 @@
 	$filepic4 = new inputFile('news_picdetail4','file','file_id4');
 	$filepic5 = new inputFile('news_picdetail5','file','file_id5');
 	$filepic6 = new inputFile('news_picdetail6','file','file_id6');
-	$txtlinkvdo = new textfield('news_vdo','news_vdo_id','form-control','กรุณาก็อบ link จาก YouTubeมาใส่','');
+	$txtlinkvdo = new textfield('news_vdo','news_vdo_id','form-control','กรุณาcopy link จาก YouTubeมาใส่','');
 	$detailnews = new textAreareadonly('detail_news','form-control','text_editer','','5','5','');
 	$detailnews2 = new textAreareadonly('detail_news2','form-control','text_editer2','','5','5','');
 	$last_detail_id = new hiddenfield('last_detail_id','last_detail_id','form-control','','');
 	$last_detail_id2 = new hiddenfield('last_detail_id2','last_detail_id2','form-control','','');
-	$buttonvdo = new buttonok("บันทึก","submitvdo","btn btn-success btn-lg btn-block bt3success col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","");
-	$button = new buttonok("บันทึก","submit","btn btn-success btn-lg btn-block bt3success col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","1234");
-	$button1 = new buttonok("บันทึก","submit1","btn btn-success btn-lg btn-block bt3success col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","");
-	$button2 = new buttonok("บันทึก","submit2","btn btn-success btn-lg btn-block bt3success col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","");
-	$button3 = new buttonok("บันทึก","submit3","btn btn-success btn-lg btn-block bt3success col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","");
-	$button4 = new buttonok("บันทึก","submit4","btn btn-success btn-lg btn-block bt3success col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","");
-	$button5 = new buttonok("บันทึก","submit5","btn btn-success btn-lg btn-block bt3success col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","");
+	$buttonvdo = new buttonok("บันทึก","submitvdo","btn btn-success btn-block bt3success col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","");
+	$button = new buttonok("บันทึก","submit","btn btn-success btn-block bt3success col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","1234");
+	$button1 = new buttonok("บันทึก","submit1","btn btn-success btn-block bt3success col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","");
+	$button2 = new buttonok("บันทึก","submit2","btn btn-success btn-block bt3success col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","");
+	$button3 = new buttonok("บันทึก","submit3","btn btn-success btn-block bt3success col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","");
+	$button4 = new buttonok("บันทึก","submit4","btn btn-success btn-block bt3success col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","");
+	$button5 = new buttonok("บันทึก","submit5","btn btn-success btn-block bt3success col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","");
 	if(!empty($_GET['id'])){
 		$id=$_GET['id'];
 		$r2 = $db->findByPK('news','news_id',$id)->executeRow();
@@ -48,199 +48,274 @@
 	}
 	echo $form->open("form_detail","form","col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","","");
 ?>
+<div class='row'>
 <div class='col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1'></div>
 <div class='col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10 pb-3' style="background-color:#ffffff;">
 	<div class='row'>
 		<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3'>
-			<?php
-				echo $lbheadnews;
-				echo $r2['news_head'];
+			<h5><?php echo $lbheadnews,$r2['news_head'];?></h5>
+		</div>
+		<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12' style="color:#007bff;">
+			<?php $rs = $db->findByPK22('news','user','user_user_id','user_id','news_id',$_GET['id'])->executeAssoc();
+				echo 'เพิ่มข่าวสารโดยคุณ ',$rs['user_name'],' ',$rs['user_last'],' ',$rs['news_dateupdate'];
+			?>
+		</div>
+		<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3'>
+			<?php echo $lbvdo;?>
+		</div>
+		<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3'>
+			<?php echo $txtlinkvdo;?>
+		</div>
+		<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3'>
+			<div class='row'>
+				<div class='col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4'></div>
+				<div class='col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4'>
+					<?php echo $buttonvdo;?>
+				</div>
+				<div class='col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4'></div>
+			</div>
+		</div>
+		<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-2 text_detail">
+			<?php echo $lbdetailnews;
+				  echo $detailnews;
 			?>
 		</div>
 		<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3'>
 			<div class='row'>
-				<div class='col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2'></div>
-				<div class='col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8'>
+				<div class='col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4'></div>
+				<div class='col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4'>
 					<div class='row'>
-						<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12' style="color:#007bff;">
-							<?php $rs = $db->findByPK22('news','user','user_user_id','user_id','news_id',$_GET['id'])->executeAssoc();
-								echo 'เพิ่มข่าวสารโดยคุณ ',$rs['user_name'],' ',$rs['user_last'],' ',$rs['news_dateupdate'];
-							?>
-						</div>
-						<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3'>
-							<div class='row'>
-								<div class='col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2'></div>
-								<div class='col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8'>
-									<?php
-										echo $lbvdo;
-										echo $txtlinkvdo;
-										echo $buttonvdo;
-									?>
-								</div>
-								<div class='col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2'></div>
-							</div>
-						</div>
-						<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-2 text_detail">
+						<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" align="center">
 							<?php
-								echo $lbdetailnews;
-								echo $detailnews;
+								$rsshowimg = $db->findByPK12('newsImg','newsImg_position',1,'newsImg_connect',$_GET['id'])->executeAssoc();
 							?>
-						</div>
-						<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3'>
-							<div class='row'>
-								<div class='col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2'></div>
-								<div class='col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8'>
-									<?php
-										$rsshowimg = $db->findByPK12('newsImg','newsImg_position',1,'newsImg_connect',$_GET['id'])->executeAssoc();
-									?>
-										<input  type="hidden" id="pic_id" name="pic_id" value="<?php echo $rsshowimg['newsImg_id'];?>" />
-										<?php
-										if(!empty($rsshowimg['newsImg_id'])){
-										?>
-											<img id="preimg" class="preimg" src="<?php echo $rsshowimg['newsImg_path'],$rsshowimg['newsImg_name'];?>" width="100px" height="100px">
-										<?php
-										}else{
-										?>
-											<img id="preimg" class="preimg" src="images/no_pic.png" width="100px" height="100px">
-										<?php
-										}
-										echo $filepic;
-										echo $button;
-										echo '<input type="button" id="cancel_pic" value="ยกเลิก">';
-									?>
-								</div>
-								<div class='col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2'></div>
-							</div>
-						</div>
-						<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-2 text_detail">
+								<input  type="hidden" id="pic_id" name="pic_id" value="<?php echo $rsshowimg['newsImg_id'];?>" />
 							<?php
-								echo $lbdetailnews;
-								echo $detailnews2;
+								if(!empty($rsshowimg['newsImg_id'])){
 							?>
-							<input type="submit" id="button_adddetail" value="บันทึก">
-							<input type="button" id="button_canceletail" value="ยกเลิก">
+								<img id="preimg" class="preimg" src="<?php echo $rsshowimg['newsImg_path'],$rsshowimg['newsImg_name'];?>" width="100px" height="100px">
+							<?php
+								}else{
+							?>
+								<img id="preimg" class="preimg" src="images/no_pic.png" width="100px" height="100px">
+							<?php
+								}?>
 						</div>
-						<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12'>
+						<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-1">
+							<?php echo $filepic;?>
+						</div>
+						<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-1'>
 							<div class='row'>
-								<div class='col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3'></div>
-								<div class='col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3'>
-										<span id="mySpan">
-										</span>
+								<div class='col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6 pr-0'>
+									<?php echo $button; ?>
+								</div>
+								<div class='col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6 pl-0'>
+									<button class="btn btn-danger col-12" type="button" id="cancel_pic" value="ยกเลิก">ยกเลิก</button>
 								</div>
 							</div>
 						</div>
-						<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-2">
-							<div class='row'>
-								<div class='col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2'></div>
-								<div class='col-xl-9 col-lg-9 col-md-9 col-sm-9 col-9'>
-								<?php
-								echo $lbpic;
-								$rsshowimg1 = $db->findByPK12('newsImg','newsImg_position',2,'newsImg_connect',$_GET['id'])->executeAssoc();
-								?>
-								<input type="hidden" id="pic_id2" name="pic_id2" value="<?php echo $rsshowimg1['newsImg_id'];?>" />
-								<?php
-								if(!empty($rsshowimg1['newsImg_id'])){
-								?>
-								<img id="preimg2" class="preimg" src="<?php echo $rsshowimg1['newsImg_path'],$rsshowimg1['newsImg_name'];?>" width="100px" height="100px">
-								<?php
-								}else{
-								?>
-								<img id="preimg2" class="preimg" src="images/no_pic.png" width="100px" height="100px">
-								<?php
-								}
-								echo $filepic2;
-								echo $button1;
-								echo '<input type="button" id="cancel_pic2" value="ยกเลิก">';
-								echo "<br/>";
-								echo $lbpic;
-								$rsshowimg2 = $db->findByPK12('newsImg','newsImg_position',3,'newsImg_connect',$_GET['id'])->executeAssoc();
-								?>
-								<input type="hidden" id="pic_id3" name="pic_id" value="<?php echo $rsshowimg2['newsImg_id'];?>" />
-								<?php
-								if(!empty($rsshowimg2['newsImg_id'])){
-								?>
-								<img id="preimg3" class="preimg" src="<?php echo $rsshowimg2['newsImg_path'],$rsshowimg2['newsImg_name'];?>" width="100px" height="100px">
-								<?php
-								}else{
-								?>
-								<img id="preimg3" class="preimg" src="images/no_pic.png" width="100px" height="100px">
-								<?php
-								}
-								echo $filepic3;
-								echo $button2;
-								echo '<input type="button" id="cancel_pic3" value="ยกเลิก">';
-								echo "<br/>";
-								echo $lbpic;
-								$rsshowimg3 = $db->findByPK12('newsImg','newsImg_position',4,'newsImg_connect',$_GET['id'])->executeAssoc();
-								?>
-								<input  type="hidden" id="pic_id4" name="pic_id" value="<?php echo $rsshowimg3['newsImg_id'];?>" />
-								<?php
-								if(!empty($rsshowimg3['newsImg_id'])){
-								?>
-								<img id="preimg4" class="preimg" src="<?php echo $rsshowimg3['newsImg_path'],$rsshowimg3['newsImg_name'];?>" width="100px" height="100px">
-								<?php
-								}else{
-								?>
-								<img id="preimg4" class="preimg" src="images/no_pic.png" width="100px" height="100px">
-								<?php
-								}
-								echo $filepic4;
-								echo $button3;
-								echo '<input type="button" id="cancel_pic4" value="ยกเลิก">';
-								echo "<br/>";
-								echo $lbpic;
-								$rsshowimg4 = $db->findByPK12('newsImg','newsImg_position',5,'newsImg_connect',$_GET['id'])->executeAssoc();
-								?>
-								<input  type="hidden" id="pic_id5" name="pic_id" value="<?php echo $rsshowimg4['newsImg_id'];?>" />
-								<?php
-								if(!empty($rsshowimg4['newsImg_id'])){
-								?>
-								<img id="preimg5" class="preimg" src="<?php echo $rsshowimg4['newsImg_path'],$rsshowimg4['newsImg_name'];?>" width="100px" height="100px">
-								<?php
-								}else{
-								?>
-								<img id="preimg5" class="preimg" src="images/no_pic.png" width="100px" height="100px">
-								<?php
-								}
-								echo $filepic5;
-								echo $button4;
-								echo '<input type="button" id="cancel_pic5" value="ยกเลิก">';
-								echo "<br/>";
-								echo $lbpic;
-								$rsshowimg5 = $db->findByPK12('newsImg','newsImg_position',6,'newsImg_connect',$_GET['id'])->executeAssoc();
-								?>
-								<input  type="hidden" id="pic_id6" name="pic_id" value="<?php echo $rsshowimg5['newsImg_id'];?>" />
-								<?php
-								if(!empty($rsshowimg5['newsImg_id'])){
-								?>
-								<img id="preimg6" class="preimg" src="<?php echo $rsshowimg5['newsImg_path'],$rsshowimg5['newsImg_name'];?>" width="100px" height="100px">
-								<?php
-								}else{
-								?>
-								<img id="preimg6" class="preimg" src="images/no_pic.png" width="100px" height="100px">
-								<?php
-								}
-								echo $filepic6;
-								echo $button5;
-								echo '<input type="button" id="cancel_pic6" value="ยกเลิก">';
-							?>
-							</div>
-						<div class='col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1'>
-						</div>
-							</div>
-						</div>
-			</div>
-
+					</div>
 				</div>
-				<div class='col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2'></div>
+				<div class='col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4'></div>
 			</div>
 		</div>
+		<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-2 text_detail">
+			<?php
+				echo $lbdetailnews;
+				echo $detailnews2;
+			?>
+			<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-2'>
+				<div class='row'>
+					<div class='col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8'></div>
+					<div class='col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4'>
+						<div class='row'>
+							<button class="btn btn-success col-6" type="submit" id="button_adddetail" value="บันทึก">บันทึก</button>
+							<button class="btn btn-danger col-6" type="button" id="button_canceletail" value="ยกเลิก">ยกเลิก</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12'>
+			<div class='row'>
+			<div class='col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3'></div>
+			<div class='col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3'>
+				<span id="mySpan"></span>
+			</div>
+			</div>
+		</div>
+		<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-2">
+					<div class='row'>
+						<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12'>
+							<div class='row'>
+								<div class='col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3'>
+									<div class='row'>
+										<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" align="center">
+											<?php $rsshowimg1 = $db->findByPK12('newsImg','newsImg_position',2,'newsImg_connect',$_GET['id'])->executeAssoc(); ?>
+											<input  type="hidden" id="pic_id2" name="pic_id2" value="<?php echo $rsshowimg1['newsImg_id'];?>" />
+											<?php
+											if(!empty($rsshowimg1['newsImg_id'])){
+											?>
+											<img id="preimg2" class="preimg" src="<?php echo $rsshowimg1['newsImg_path'],$rsshowimg1['newsImg_name'];?>" width="100px" height="100px">
+											<?php
+											}else{
+											?>
+											<img id="preimg2" class="preimg" src="images/no_pic.png" width="100px" height="100px">
+											<?php
+											} ?>
+										</div>
+										<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-1">
+											<?php echo $filepic2; ?>
+										</div>
+										<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-1'>
+											<div class='row'>
+												<div class='col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6 pr-0'>
+													<?php echo $button1; ?>
+												</div>
+												<div class='col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6 pl-0'>
+													<button class="btn btn-danger col-12" type="button" id="cancel_pic2" value="ยกเลิก">ยกเลิก</button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class='col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3'>
+									<div class='row'>
+										<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" align="center">
+											<?php $rsshowimg2 = $db->findByPK12('newsImg','newsImg_position',3,'newsImg_connect',$_GET['id'])->executeAssoc();
+											?>
+											<input type="hidden" id="pic_id3" name="pic_id" value="<?php echo $rsshowimg2['newsImg_id'];?>" />
+											<?php
+											if(!empty($rsshowimg2['newsImg_id'])){
+											?>
+											<img id="preimg3" class="preimg" src="<?php echo $rsshowimg2['newsImg_path'],$rsshowimg2['newsImg_name'];?>" width="100px" height="100px">
+											<?php
+											}else{
+											?>
+											<img id="preimg3" class="preimg" src="images/no_pic.png" width="100px" height="100px">
+											<?php
+											} ?>
+										</div>
+										<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-1">
+											<?php echo $filepic3; ?>
+										</div>
+										<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-1'>
+											<div class='row'>
+												<div class='col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6 pr-0'>
+													<?php echo $button2; ?>
+												</div>
+												<div class='col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6 pl-0'>
+													<button class="btn btn-danger col-12" type="button" id="cancel_pic3" value="ยกเลิก">ยกเลิก</button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class='col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3'>
+									<div class='row'>
+										<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" align="center">
+											<?php $rsshowimg3 = $db->findByPK12('newsImg','newsImg_position',4,'newsImg_connect',$_GET['id'])->executeAssoc();
+											?>
+											<input  type="hidden" id="pic_id4" name="pic_id" value="<?php echo $rsshowimg3['newsImg_id'];?>" />
+											<?php
+											if(!empty($rsshowimg3['newsImg_id'])){
+											?>
+											<img id="preimg4" class="preimg" src="<?php echo $rsshowimg3['newsImg_path'],$rsshowimg3['newsImg_name'];?>" width="100px" height="100px">
+											<?php
+											}else{
+											?>
+											<img id="preimg4" class="preimg" src="images/no_pic.png" width="100px" height="100px">
+											<?php
+											} ?>
+										</div>
+										<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-1">
+											<?php echo $filepic4; ?>
+										</div>
+										<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-1'>
+											<div class='row'>
+												<div class='col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6 pr-0'>
+													<?php echo $button3; ?>
+												</div>
+												<div class='col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6 pl-0'>
+													<button class="btn btn-danger col-12" type="button" id="cancel_pic4" value="ยกเลิก">ยกเลิก</button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class='col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3'>
+									<div class='row'>
+										<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" align="center">
+											<?php $rsshowimg4 = $db->findByPK12('newsImg','newsImg_position',5,'newsImg_connect',$_GET['id'])->executeAssoc();
+											?>
+											<input  type="hidden" id="pic_id5" name="pic_id" value="<?php echo $rsshowimg4['newsImg_id'];?>" />
+											<?php
+											if(!empty($rsshowimg4['newsImg_id'])){
+											?>
+											<img id="preimg5" class="preimg" src="<?php echo $rsshowimg4['newsImg_path'],$rsshowimg4['newsImg_name'];?>" width="100px" height="100px">
+											<?php
+											}else{
+											?>
+											<img id="preimg5" class="preimg" src="images/no_pic.png" width="100px" height="100px">
+											<?php
+											} ?>
+										</div>
+										<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-1">
+											<?php echo $filepic5; ?>
+										</div>
+										<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-1'>
+											<div class='row'>
+												<div class='col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6 pr-0'>
+													<?php echo $button4; ?>
+												</div>
+												<div class='col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6 pl-0'>
+													<button class="btn btn-danger col-12" type="button" id="cancel_pic5" value="ยกเลิก">ยกเลิก</button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class='col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3 mt-2'>
+									<div class='row'>
+										<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" align="center">
+											<?php $rsshowimg5 = $db->findByPK12('newsImg','newsImg_position',6,'newsImg_connect',$_GET['id'])->executeAssoc();
+											?>
+											<input  type="hidden" id="pic_id6" name="pic_id" value="<?php echo $rsshowimg5['newsImg_id'];?>" />
+											<?php
+											if(!empty($rsshowimg5['newsImg_id'])){
+											?>
+											<img id="preimg6" class="preimg" src="<?php echo $rsshowimg5['newsImg_path'],$rsshowimg5['newsImg_name'];?>" width="100px" height="100px">
+											<?php
+											}else{
+											?>
+											<img id="preimg6" class="preimg" src="images/no_pic.png" width="100px" height="100px">
+											<?php
+											} ?>
+										</div>
+										<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-1">
+											<?php echo $filepic6; ?>
+										</div>
+										<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-1'>
+											<div class='row'>
+												<div class='col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6 pr-0'>
+													<?php echo $button5; ?>
+												</div>
+												<div class='col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6 pl-0'>
+													<button class="btn btn-danger col-12" type="button" id="cancel_pic6" value="ยกเลิก">ยกเลิก</button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
 		<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3">
 			<div class='row'>
 				<div class='col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10'></div>
 				<div class='col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2'>
-
-					<input id="button" type="button" value="กลับหน้าแรก">
+					<input class="btn btn-secondary col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" id="button" type="button" value="กลับหน้าแรก">
 					<input  type="hidden" id="new_id" name ="new_id" value="<?php echo $id;?>" />
 					<input  type="hidden" id="datetime" name="date_time" value="<?php echo $datetime;?>" />
 					<input  type="hidden" id="form_design" name="form_design" value="4" />
@@ -253,6 +328,7 @@
 	</div>
 </div>
 <div class='col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1'></div>
+</div>
 <?php
     echo $form->close();
 ?>

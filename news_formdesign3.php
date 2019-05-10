@@ -9,7 +9,7 @@
 	$txtlinkvdo = new textfield('news_vdo','news_vdo_id','form-control','กรุณาก็อบ link จาก YouTubeมาใส่','');
 	$detailnews = new textAreareadonly('detail_news','form-control','text_editer','','5','5','');
 	$last_detail_id = new hiddenfield('last_detail_id','last_detail_id','form-control','','');
-	$button = new buttonok("บันทึก","submitvdo","btn btn-success btn-lg btn-block bt3success col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","");
+	$button = new buttonok("บันทึก","submitvdo","btn btn-success btn-block bt3success col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","");
 	if(!empty($_GET['id'])){
 		$id=$_GET['id'];
 		$r2 = $db->findByPK('news','news_id',$id)->executeRow();
@@ -28,69 +28,51 @@
 	}
 echo $form->open("form_detail","form","col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","news_insert_medie.php","");
 ?>
-
+<div class='row'>
 <div class='col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1'></div>
 <div class='col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10 pb-3' style="background-color:#ffffff;">
 	<div class='row'>
 		<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3'>
-			<?php
-				echo $lbheadnews;
-				echo $r2['news_head'];
+			<h5><?php echo $lbheadnews, $r2['news_head'];?></h5>
+		</div>
+		<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12' style="color:#007bff;">
+			<?php $rs = $db->findByPK22('news','user','user_user_id','user_id','news_id',$_GET['id'])->executeAssoc();
+				echo 'เพิ่มข่าวสารโดยคุณ ',$rs['user_name'],' ',$rs['user_last'],' ',$rs['news_dateupdate'];
 			?>
 		</div>
 		<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3'>
+			<?php echo $lbvdo; echo $txtlinkvdo;?>
+		</div>
+		<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-2" id="text_detail">
+			<?php
+				echo $lbdetailnews;
+				echo $detailnews;?>
+			<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-2'>
+				<div class='row'>
+					<div class='col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8'></div>
+					<div class='col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4'>
+						<div class='row'>
+							<button class="btn btn-success col-6" type="submit" id="button_adddetail" value="บันทึก">บันทึก</button>
+							<button class="btn btn-danger col-6" type="button" id="button_canceletail" value="ยกเลิก">ยกเลิก</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-2">
 			<div class='row'>
-				<div class='col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2'></div>
-				<div class='col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8'>
-					<div class='row'>
-						<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12' style="color:#007bff;">
-							<?php $rs = $db->findByPK22('news','user','user_user_id','user_id','news_id',$_GET['id'])->executeAssoc();
-								echo 'เพิ่มข่าวสารโดยคุณ ',$rs['user_name'],' ',$rs['user_last'],' ',$rs['news_dateupdate'];
-							?>
-						</div>
-						<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3'>
-							<div class='row'>
-								<div class='col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2'></div>
-								<div class='col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8'>
-									<?php
-										echo $lbvdo;
-										echo $txtlinkvdo;
-									?>
-								</div>
-								<div class='col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2'></div>
-							</div>
-						</div>
-				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-2">
-					<div class='row'>
-						<div class='col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1'></div>
-						<div class='col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10' id="text_detail">
-							<?php
-								echo $lbdetailnews;
-								echo $detailnews;?>
-								<input type="submit" id="button_adddetail" value="บันทึก">
-								<input type="button" id="button_canceletail" value="ยกเลิก">
-						</div>
-					</div>
+				<div class='col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4'></div>
+				<div class='col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4' id="text_detail">
+					<?php echo $button;?>
 				</div>
-				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-2">
-					<div class='row'>
-						<div class='col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1'></div>
-						<div class='col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10' id="text_detail">
-							<?php echo $button;?>
-						</div>
-						<div class='col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1'>
-
-						</div>
-					</div>
-				</div>
+				<div class='col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4'></div>
 			</div>
 		</div>
 		<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3">
 			<div class='row'>
 			<div class='col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10'></div>
 			<div class='col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2'>
-
-					<input id="button" type="button" value="กลับหน้าแรก">
+				<input class="btn btn-secondary col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" id="button" type="button" value="กลับหน้าแรก">
 				<input  type="hidden" id="new_id" name="new_id" value="<?php echo $id;?>" />
 				<input  type="hidden" id="datetime" name="date_time" value="<?php echo $datetime;?>" />
 				<input  type="hidden" id="datetime" name="form_design" value="3" />
@@ -101,6 +83,7 @@ echo $form->open("form_detail","form","col-xl-12 col-lg-12 col-md-12 col-sm-12 c
 	</div>
 </div>
 <div class='col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1'></div>
+</div>
 <?php
     echo $form->close();
 ?>
