@@ -1,6 +1,6 @@
 <?php
 	$form = new form();
-    $lbdevision = new label('สวน');
+    $lbdevision = new label('สำนัก/สวนสัตว์');
     $lbconfername = new label('ชื่อห้องประชุม');
     $lbpp = new label('รองรับได้สูงสุด');
 	$txtconfername = new textfield('conferroom_name','','form-control css-require','');
@@ -23,11 +23,31 @@
 		<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6 mt-3 pt-2 csborder">
 			<div class="row">
 				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-					<h4>เพิ่มรายชื่อห้องประชุม</h4><hr>
+                                                                 <?php if($_GET['id']){ ?>
+					<h4>แก้ไขห้องประชุม</h4><hr>
+                                                                 <?php }else{ ?>
+                                                                                <h4>เพิ่มห้องประชุม</h4><hr>
+                                                                 <?php } ?>
 				</div>
 				<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12'>
-					<?php echo $lbdevision ?>
+                                                                <?php if($_GET['id']){ ?>
+					
+                                                                 <?php }else{ ?>
+                                                                        <b><?php echo $lbdevision ?></b>
+                                                                 <?php } ?>
+					
 				</div>
+                                                                <?php if($_GET['id']){ ?>
+                                                                <div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12'>
+                                                                        <?php
+                                                                        
+					$zoo = $db->findByPK('zoo','zoo_id',$r['zoo_zoo_id'])->executeRow();
+                                                                                echo $zoo['zoo_name'];
+                                                                ?>
+				</div>
+                                                                    <?php
+                                                                }else{
+                                                          ?>
 				<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12'>
 					<select class='form-control' id="ddlZoo" name="subzoo_zoo_zoo_id" onchange = "ListSubzoo(this.value)">
 					<option selected value="">โปรดระบุ</option>
@@ -41,6 +61,7 @@
 						?>
 					</select>
 				</div>
+                                                                <?php  } ?>
 				<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3'>
 					<?php echo $lbconfername ?>
 				</div>
