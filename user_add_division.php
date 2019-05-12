@@ -28,11 +28,11 @@ $id = $_GET['id'];
 	$txtsubzooyear->value = $r['subzoo_year'];
 	$txtsubzoodetail->value = $r['subzoo_detail'];
 	if($r["subzoo_enable"] == 1){ 
-    	$radiosubzoo->add('ใช้งาน',1,'checked');
-    	$radiosubzoo->add('ไม่ใช้งาน',0,'');
+    	$radiosubzoo->add('ใช้งาน',1,'checked','');
+    	$radiosubzoo->add('ไม่ใช้งาน',0,'','');
     	}else if($r['subzoo_enable'] == 0){
-        $radiosubzoo->add('ใช้งาน',1,'');
-        $radiosubzoo->add('ไม่ใช้งาน',0,'checked');
+        $radiosubzoo->add('ใช้งาน',1,'','');
+        $radiosubzoo->add('ไม่ใช้งาน',0,'checked','');
     	}
 	}
 	

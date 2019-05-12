@@ -15,6 +15,7 @@
 	$txtconfername->value = $r['conferroom_name'];
 	$txtnum->value = $r['conferroom_people'];
 	}
+                
 	echo $form->open("form_reg","frmMain","col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","cf_insertconfer.php","");
 ?>
 <div class="row">

@@ -9,8 +9,8 @@
   $radiozooenable = new radioGroup();
   $radiozooenable->name = 'zoo_enable';
   if(empty($id)){
-    	$radiozooenable->add('ใช้งานได้',1,'');
-    	$radiozooenable->add('ไม่สามารถใช้งานได้',0,'checked');
+    	$radiozooenable->add('ใช้งานได้',1,'','');
+    	$radiozooenable->add('ไม่สามารถใช้งานได้',0,'checked','');
     	}
   $submit = new buttonok("ยืนยัน","","btn btn-success col-md-12","");
   
@@ -19,11 +19,11 @@
 	$txtzoo->value = $r['zoo_name'];
 	$txtzoono->value = $r['zoo_no'];
   if($r["zoo_enable"] == 1){
-    	$radiozooenable->add('ใช้งานได้',1,'checked');
-    	$radiozooenable->add('ไม่สามารถใช้งานได้',0,'');
+    	$radiozooenable->add('ใช้งานได้',1,'checked','');
+    	$radiozooenable->add('ไม่สามารถใช้งานได้',0,'','');
     	}else if($r['zoo_enable'] == 0){
-        $radiozooenable->add('ใช้งานได้',1,'');
-        $radiozooenable->add('ไม่สามารถใช้งานได้',0,'checked');
+        $radiozooenable->add('ใช้งานได้',1,'','');
+        $radiozooenable->add('ไม่สามารถใช้งานได้',0,'checked','');
     	}
     }
 echo $form->open("form_reg","form","col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","user_insert_zoo.php",""); ?>
