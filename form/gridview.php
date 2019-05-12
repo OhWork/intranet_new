@@ -208,7 +208,7 @@ class gridView{
 					$this->changetxt = '&nbsp;ไม่สามารถดำเนินการได้';
 				}
 			}
-                       
+
 			if(@$status_hrs){
 				 if(@$rs_hrs["hrctf_status"]=='Y')
 				{
@@ -300,7 +300,7 @@ class gridView{
 			}
 
 			if($this->editdrop !=""){
-				
+
 				$body .="
 				<td>
 					<div class='dropdown'>
@@ -428,4 +428,5 @@ class gridView{
 				echo $html;
 	}
 }
+//
 ?>
