@@ -4,7 +4,6 @@
 	$lbdetailnews = new label('รายละเอียด');
 	$lbheadnews = new label('หัวข้อ : ');
 	$txtheadnews = new textfield('news_head','','form-control','','');
-	$lbpic = new label('ภาพหน้าปกปัจจุบัน');
 	$lbpic2 = new label('ภาพข่าว');
 	$filepic = new inputFile('news_picdetail','file','file_id');
 	$filepic2 = new inputFile('news_picdetail2','file','file_id2');
@@ -56,7 +55,7 @@
 						<div class='col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4' style="border-right: 2px solid #F5F5F5;">
 							<div class='row'>
 								<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 pt-2'>
-									<?php echo $lbpic; ?>
+									
 								</div>
 							</div>
 						</div>

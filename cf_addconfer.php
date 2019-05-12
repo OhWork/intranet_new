@@ -11,9 +11,9 @@
 	$button = new buttonok("บันทึก","submit","btn btn-success btn-block bt3success col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","");
 	if(!empty($_GET['id'])){
 	$id = $_GET['id'];
-	$r = $db->findByPK('confer','conferroom_id',$id)->executeRow();
+	$r = $db->findByPK('conferroom','conferroom_id',$id)->executeRow();
 	$txtconfername->value = $r['conferroom_name'];
-	$txtnum->value = $r['confer_people'];
+	$txtnum->value = $r['conferroom_people'];
 	}
 	echo $form->open("form_reg","frmMain","col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","cf_insertconfer.php","");
 ?>
