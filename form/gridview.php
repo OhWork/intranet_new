@@ -142,15 +142,15 @@ class gridView{
                 @$status_plan = $r[$this->sts_plan];
                 @$newdesign = $r[$this->newdesign];
 			/* ส่วนตรวจสอบค่าสถานะของแจ้งซ่อมออนไลน์*/
-            @$con = mysqli_connect("localhost","root","","intranet");
+            @$con = mysqli_connect("localhost","root","","intranet_intranet");
 			@$sql = "SELECT * FROM problem WHERE problem_id = $id"; //ไว้แก้ เปลี่ยนสเตตัส
 			@$sqlhrs = "SELECT * FROM hrctf WHERE hrctf_id = $id"; //ไว้แก้ เปลี่ยนสเตตัส
-                        @$sqlreg = "SELECT * FROM reguser WHERE reguser_id = $id"; //ไว้แก้ เปลี่ยนสเตตัส
+                                                @$sqlreg = "SELECT * FROM reguser WHERE reguser_id = $id"; //ไว้แก้ เปลี่ยนสเตตัส
 			@$sqlplan = "SELECT * FROM plan WHERE plan_id = $id"; //ไว้แก้ เปลี่ยนสเตตัส
 			@$sqlnew = "SELECT * FROM news WHERE news_id = $id"; //ไว้แก้ เปลี่ยนสเตตัส
 			@$query= mysqli_query($con,$sql);
 			@$queryhrs= mysqli_query($con,$sqlhrs);
-                        @$queryreg= mysqli_query($con,$sqlreg);
+                                                @$queryreg= mysqli_query($con,$sqlreg);
 			@$queryplan= mysqli_query($con,$sqlplan);
 			@$querynew= mysqli_query($con,$sqlnew);
 			if(!empty($query)){
@@ -162,7 +162,7 @@ class gridView{
 			if(!empty($queryhrs)){
 			@$rs_hrs = mysqli_fetch_array($queryhrs,MYSQLI_ASSOC);
 			}
-                        if(!empty($queryreg)){
+                                                if(!empty($queryreg)){
 			@$rs_reg = mysqli_fetch_array($queryreg,MYSQLI_ASSOC);
 			}
 			if(!empty($querynew)){
@@ -268,7 +268,9 @@ class gridView{
 				else if(@$rs_new["typeDesignnews_id"]== 5)
 				{
 					$this->editdrop2 ='admin_index.php?url=news_formdesign5.php';
-				}
+				}else{
+                                                            $this->editdrop2 ='error';
+                                }
 			}
 
 			if($this->view !=""){
