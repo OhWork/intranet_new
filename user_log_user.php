@@ -49,7 +49,7 @@
     $txtyear = new textfield('year','','form-control css-require','','');
 	$button = new buttonok('ค้นหา','','btn btn-primary col-12','submit');
 echo $form->open('','','col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12','',''); ?>
-	<div class='row'>
+	<div class='row' id="maincontent">
 		<div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2"></div>
 		<div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8" style="background-color:#ffffff;border:solid 1px #E0E0E0;border-radius:7px;">
 			<div class="row">
@@ -153,13 +153,9 @@ echo $form->open('','','col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12','',''); 
 	     locale:moment.locale('th'),
 //       pickTime: false
         });
-        $(".date").on("change.datetimepicker", function (e) {
-             var widget = $(this).find(".bootstrap-datetimepicker-widget");
-                if (widget.length > 0) {
-                    widget.toggle("hide.datetimepicker");
-                    $(this).find(".form-control").blur();
-                }
-
-        });
+        $("#maincontent").on("click", function (e) {
+		 		var widget = $(this).find(".bootstrap-datetimepicker-widget");
+                    widget.hide();
+		});
       } );
 </script>

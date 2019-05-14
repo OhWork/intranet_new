@@ -11,7 +11,7 @@
   $submit = new buttonok("ยืนยัน","","btn btn-success col-md-12","");
   echo $form->open("form_reg","form","","user_insert_updatereport.php","");
 ?>
-<div class='col-md-12' style='margin-top: 16px;'>
+<div class='col-md-12' style='margin-top: 16px;' id="maincontent">
 	<div class='row'>
 		<div class='col-md-3'></div>
 		<div class='col-md-6'>
@@ -75,13 +75,9 @@
 	     locale:moment.locale('th'),
 //       pickTime: false
         });
-        $(".date").on("change.datetimepicker", function (e) {
-             var widget = $(this).find(".bootstrap-datetimepicker-widget");
-                if (widget.length > 0) {
-                    widget.toggle("hide.datetimepicker");
-                    $(this).find(".form-control").blur();
-                }
-
-        });
+        $("#maincontent").on("click", function (e) {
+		 		var widget = $(this).find(".bootstrap-datetimepicker-widget");
+                    widget.hide();
+		});
       } );
 </script>

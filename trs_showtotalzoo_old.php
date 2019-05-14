@@ -46,7 +46,7 @@
     $txtyear = new textfield('year','','form-control css-require','','');
 	$button = new buttonok('ค้นหา','','btn btn-primary stzbutton','');
      ?>
-        <div class='row'>
+        <div class='row' id="maincontent">
             <div class='col-md-12 printdisplaynone'>
 				<div class='col-md-12' style="margin-top: 10px;">
 				    <h1>รายงานจำนวนผู้เข้าชม <?php echo @$zoo_name ?></h1>
@@ -239,14 +239,10 @@ if($date){
 	     locale:moment.locale('th'),
 //       pickTime: false
         });
-        $("#datetimepicker1").on("change.datetimepicker", function (e) {
-             var widget = $(this).find(".bootstrap-datetimepicker-widget");
-                if (widget.length > 0) {
-                    widget.toggle("hide.datetimepicker");
-                    $(this).find(".form-control").blur();
-                }
-
-        });
+       $("#maincontent").on("click", function (e) {
+		 		var widget = $(this).find(".bootstrap-datetimepicker-widget");
+                    widget.hide();
+		});        });
 </script>
 
 <?php endif;?>

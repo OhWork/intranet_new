@@ -76,7 +76,7 @@
     }
     echo $form->open("form_reg","form","col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","news_insert_news.php","");
 ?>
-<div class="row">
+<div class="row" id="maincontent">
 <div class='col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3'></div>
 <div class='col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6' style="padding-top:16px;background-color:#ffffff;border:solid 1px #E0E0E0;border-radius:7px;">
 	<div class='row'>
@@ -191,23 +191,18 @@
             locale:moment.locale('th'),
             stepping: 30
         });
-        $("#datetimepicker1").on("change.datetimepicker", function (e) {
+       $("#datetimepicker1").on("change.datetimepicker", function (e) {
             $('#datetimepicker2').datetimepicker('minDate', e.date);
              var widget = $(this).find(".bootstrap-datetimepicker-widget");
-                if (widget.length > 0) {
-                    widget.toggle("hide.datetimepicker");
-                    $(this).find(".form-control").blur();
-                }
-
         });
         $("#datetimepicker2").on("change.datetimepicker", function (e) {
             $('#datetimepicker1').datetimepicker('maxDate', e.date);
             var widget = $(this).find(".bootstrap-datetimepicker-widget");
-                if (widget.length > 0) {
-                    widget.toggle("hide.datetimepicker");
-                    $(this).find(".form-control").blur();
-            }
         });
+		$("#maincontent").on("click", function (e) {
+		 		var widget = $(this).find(".bootstrap-datetimepicker-widget");
+                    widget.hide();
+		});
     });
     function readURL(input) {
         if (input.files && input.files[0]) {

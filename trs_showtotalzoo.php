@@ -47,7 +47,7 @@
 	$button = new buttonok('ค้นหา','','btn btn-primary col-12','submit');
 	echo $form->open('','','col-12','','');
 ?>
-<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 printdisplaynone' style="margin-top:16px;">
+<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 printdisplaynone' style="margin-top:16px;" id="maincontent">
     <div class='row'>
 		<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12' style="margin-top: 10px;">
 			<div class='row'>
@@ -281,14 +281,10 @@ if($date){
 	     locale:moment.locale('th'),
 //       pickTime: false
         });
-        $("#datetimepicker1").on("change.datetimepicker", function (e) {
-             var widget = $(this).find(".bootstrap-datetimepicker-widget");
-                if (widget.length > 0) {
-                    widget.toggle("hide.datetimepicker");
-                    $(this).find(".form-control").blur();
-                }
-
-        });
+       $("#maincontent").on("click", function (e) {
+		 		var widget = $(this).find(".bootstrap-datetimepicker-widget");
+                    widget.hide();
+		});
       } );
 </script>
 

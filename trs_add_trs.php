@@ -149,7 +149,7 @@
 	$txtmtc->value = $r['touristreport_vehicle_mtc'];
 	}
 	?>
-	<div class='row'>
+	<div class='row' id="maincontent">
         <div class='col-md-12' style="margin-top: 10px;">
             <div class="row">
                 <div class="col-md-2" style="float:left;"></div>
@@ -354,6 +354,10 @@
             }
         });
     });
+    $("#maincontent").on("click", function (e) {
+		 		var widget = $(this).find(".bootstrap-datetimepicker-widget");
+                    widget.hide();
+	});
 });
 
 

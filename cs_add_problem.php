@@ -16,7 +16,7 @@
     $txtdatestart = new datetimepicker('problem_date','datetimepicker1','','form-control datetimepicker-input','date-form dayinbox form-horizontal control-group controls input-group','input-group date','datetimepicker1','#datetimepicker1','','');
     $txtdatestart->value = $year."-".$md." ".$time;
     @$id = $_GET['id'];
-     
+
     $txtcall = new textfield('problem_tel','','form-control','','');
     $txtposition = new textfield('problem_position','problem_position','form-control','','');
     $txtdetail = new textarea('problem_detail','aprob','','','','','');
@@ -193,7 +193,7 @@
 		}
 	</script>
 <?php echo $form->open("form_reg","frmMain","col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3","cs_insert_problem.php","");?>
-	<div class="row">
+	<div class="row" id="maincontent">
 	<div class="col-xl-2 col-lg-2 col-md-2"></div>
 	<div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-12" style="padding-top:16px;background-color:#ffffff;border:solid 1px #E0E0E0;border-radius:7px;">
 		<div class="row">
@@ -331,15 +331,10 @@ $( document ).ready( function () {
 	        locale:moment.locale('th'),
 	        stepping: 30
         });
-		 $("#datetimepicker1").on("change.datetimepicker", function (e) {
-            $('#datetimepicker2').datetimepicker('minDate', e.date);
-             var widget = $(this).find(".bootstrap-datetimepicker-widget");
-                if (widget.length > 0) {
-                    widget.toggle("hide.datetimepicker");
-                    $(this).find(".form-control").blur();
-                }
-
-        });
+        $("#maincontent").on("click", function (e) {
+		 		var widget = $(this).find(".bootstrap-datetimepicker-widget");
+                    widget.hide();
+		});
 
 });
 	$("#form_reg").validate({

@@ -615,10 +615,10 @@
             $('#datetimepicker1').datetimepicker('maxDate', e.date);
             var widget = $(this).find(".bootstrap-datetimepicker-widget");
         });
-	$("#maincontent").on("click", function (e) {
+		$("#maincontent").on("click", function (e) {
 		 		var widget = $(this).find(".bootstrap-datetimepicker-widget");
                     widget.hide();
-	});
+		});
     });
 
    	function checkdate(){

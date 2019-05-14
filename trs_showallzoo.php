@@ -66,7 +66,7 @@
 	$buttonprintpdf = new buttonok('ค้นหา','','btn btn-default trspdf','submit');
 
      ?>
-<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3" style="background-color:#ffffff;">
+<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3" style="background-color:#ffffff;" id="maincontent">
 	<div class='row'>
 		<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 alltxh printdisplaynone'>
 			<h4>รายงานจำนวนผู้เข้าชมของสวนสัตว์</h4>
@@ -554,13 +554,9 @@
 	     locale:moment.locale('th'),
 //       pickTime: false
         });
-        $(".date").on("change.datetimepicker", function (e) {
-             var widget = $(this).find(".bootstrap-datetimepicker-widget");
-                if (widget.length > 0) {
-                    widget.toggle("hide.datetimepicker");
-                    $(this).find(".form-control").blur();
-                }
-
-        });
+        $("#maincontent").on("click", function (e) {
+		 		var widget = $(this).find(".bootstrap-datetimepicker-widget");
+                    widget.hide();
+		});
       } );
 </script>
