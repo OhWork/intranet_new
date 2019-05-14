@@ -206,7 +206,7 @@
 				?>
 }
 </script>
-<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12'>
+<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12' id="maincontent">
 	<div class="row">
 		<div class='col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1'></div>
 		<div class='col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10' style="padding-top:16px;background-color:#ffffff;border:solid 1px #E0E0E0;border-radius:7px;">
@@ -610,20 +610,15 @@
          $("#datetimepicker1").on("change.datetimepicker", function (e) {
             $('#datetimepicker2').datetimepicker('minDate', e.date);
              var widget = $(this).find(".bootstrap-datetimepicker-widget");
-                if (widget.length > 0) {
-                    widget.toggle("hide.datetimepicker");
-                    $(this).find(".form-control").blur();
-                }
-
         });
         $("#datetimepicker2").on("change.datetimepicker", function (e) {
             $('#datetimepicker1').datetimepicker('maxDate', e.date);
             var widget = $(this).find(".bootstrap-datetimepicker-widget");
-                if (widget.length > 0) {
-                    widget.toggle("hide.datetimepicker");
-                    $(this).find(".form-control").blur();
-            }
         });
+	$("#maincontent").on("click", function (e) {
+		 		var widget = $(this).find(".bootstrap-datetimepicker-widget");
+                    widget.hide();
+	});
     });
 
    	function checkdate(){
