@@ -590,7 +590,7 @@
 <script>
 	 $(function () {
         $('#datetimepicker1').datetimepicker({
-	        format:'YYYY-MM-DD H:mm',
+	        format:'YYYY-MM-DD HH:mm',
 	        useCurrent: false,
 	        ignoreReadonly: true,
             sideBySide: true,
@@ -599,7 +599,7 @@
 	        stepping: 30
         });
         $('#datetimepicker2').datetimepicker({
-	        format:'YYYY-MM-DD H:mm',
+	        format:'YYYY-MM-DD HH:mm',
             useCurrent: false,
             ignoreReadonly: true,
             sideBySide: true,

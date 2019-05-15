@@ -151,7 +151,7 @@
 			        }
 			    },
                   timeFormat: 'H:mm',
-                  nextDayThreshold:'00:00',
+//                   nextDayThreshold:'00:00',
                   displayEventTime: true,
                   displayEventEnd: true,
                   locale: 'th',
