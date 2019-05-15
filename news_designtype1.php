@@ -43,17 +43,9 @@
 			<div class='row'>
 				<?php
 					$rsimg = $db->findByPK12('newsImg','newsImg_position',2,'newsImg_connect',$id)->executeAssoc();
-				?>
-				<?php
 					$rsimg2 = $db->findByPK12('newsImg','newsImg_position',3,'newsImg_connect',$id)->executeAssoc();
-				?>
-				<?php
 					$rsimg3 = $db->findByPK12('newsImg','newsImg_position',4,'newsImg_connect',$id)->executeAssoc();
-				?>
-				<?php
 					$rsimg4 = $db->findByPK12('newsImg','newsImg_position',5,'newsImg_connect',$id)->executeAssoc();
-				?>
-				<?php
 					$rsimg5 = $db->findByPK12('newsImg','newsImg_position',6,'newsImg_connect',$id)->executeAssoc();
 				?>
 				<div class='col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2'>

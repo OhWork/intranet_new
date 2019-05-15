@@ -22,7 +22,6 @@
 							<div class='row'>
 									<?php
 										$rsvdo = $db->findByPK12('newsVideo','newsVideo_position',1,'newsVideo_connect',$id)->executeAssoc();
-// 										echo $rsvdo['newsVideo_link'];
 									?>
 									<div id="ytplayer"></div>
 							</div>
