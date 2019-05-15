@@ -108,7 +108,7 @@ if(isset($_GET['gData']) && $_GET['gData']|=""){
 							<div class='col-md-12'>
 								<div class='row'>
 									<div class='col-md-4'><p>ชื่อผู้จอง</p></div>
-									<div class='col-md-8' style='text-align: center;'><p>".$rs->eventconferroom_namers."</p></center></div>
+									<div class='col-md-8' style='text-align: center;'><p>".$rs->eventconfer_namers."</p></center></div>
 								</div>
 							</div>
 							<input type='hidden' id ='event_id' value=".$rs->eventconfer_id.">"
