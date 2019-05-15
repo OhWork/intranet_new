@@ -134,7 +134,7 @@ echo $form->open("form_reg","form","col-xl-12 col-lg-12 col-md-12 col-sm-12 col-
 <script>
 	$(function () {
         $('#datetimepicker1').datetimepicker({
-	        format:'YYYY-MM-DD H:mm',
+	        format:'YYYY-MM-DD HH:mm',
 	        useCurrent: false,
 	        ignoreReadonly: true,
             sideBySide: true,
@@ -143,7 +143,7 @@ echo $form->open("form_reg","form","col-xl-12 col-lg-12 col-md-12 col-sm-12 col-
 	        stepping: 30
         });
         $('#datetimepicker2').datetimepicker({
-	        format:'YYYY-MM-DD H:mm',
+	        format:'YYYY-MM-DD HH:mm',
             useCurrent: false,
             ignoreReadonly: true,
             sideBySide: true,

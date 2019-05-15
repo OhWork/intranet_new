@@ -68,7 +68,7 @@
 <script>
     jQuery(function(){
  jQuery('#date_timepicker_start').datetimepicker({
-  format:'Y-m-d H:i',
+  format:'Y-m-d HH:mm',
   lang:'th',
   onShow:function( ct ){
    this.setOptions({
@@ -78,7 +78,7 @@
   timepicker:true
  });
  jQuery('#date_timepicker_end').datetimepicker({
-  format:'Y-m-d H:i',
+  format:'Y-m-d HH:mm',
   lang:'th',
    onShow:function( ct ){
    this.setOptions({

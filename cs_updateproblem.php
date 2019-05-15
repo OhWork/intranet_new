@@ -269,7 +269,7 @@ $(function(){
 
     $("#datetimepicker").datetimepicker({
         timepicker:true,
-        format:'Y-m-d H:i',  // กำหนดรูปแบบวันที่ ที่ใช้ เป็น 00-00-0000
+        format:'Y-m-d HH:mm',  // กำหนดรูปแบบวันที่ ที่ใช้ เป็น 00-00-0000
         lang:'th',  // แสดงภาษาไทย
         onChangeMonth:thaiYear,
         onShow:thaiYear,
@@ -278,7 +278,7 @@ $(function(){
     });
     $("#datetimepicker2").datetimepicker({
         timepicker:true,
-        format:'Y-m-d H:i',  // กำหนดรูปแบบวันที่ ที่ใช้ เป็น 00-00-0000
+        format:'Y-m-d HH:mm',  // กำหนดรูปแบบวันที่ ที่ใช้ เป็น 00-00-0000
         lang:'th',  // แสดงภาษาไทย
         onChangeMonth:thaiYear,
         onShow:thaiYear,
