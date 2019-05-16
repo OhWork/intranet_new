@@ -4,7 +4,6 @@
 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 	<div class='row'>
 		<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" style="background-color:#ffffff;">
-			<div class='row'>
 				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3 alltxh">
 					<h4>ข่าวสารภายในองค์การสวนสัตว์</h4>
 				</div>
@@ -26,52 +25,50 @@
 								<div class='row'>
 									<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 shadow" style="background-color:#ffffff;">
 										<div class='row'>
-											<div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2" style="margin-right:10px;">
-												<div class='row'>
+											<div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3 pt-2 pb-2" align="center">
 													<?php
 														if(!empty($show['news_cover'])){
 													?>
-													<img height="100" src='images/news/<?php echo $show['news_cover']; ?>' />
+													<img height="90px" width="90px" src='images/news/<?php echo $show['news_cover']; ?>' />
 														<?php
 															}else{
 														if($show['subzoo_zoo_zoo_id'] == 11){
 														?>
-                                                        	<img height="100" src='images/logo/Dusitzoo.png' />
+                                                        	<img height="90px" width="90px" src='images/logo/Dusitzoo.png' />
                                                         <?php
 	                                                    }else if($show['subzoo_zoo_zoo_id'] == 12){
 		                                                ?>
-		                                                   	<img height="100" src='images/logo/KKOzoo.png' />
+		                                                   	<img height="90px" width="90px" src='images/logo/KKOzoo.png' />
 		                                                <?php
 	                                                     }else if($show['subzoo_zoo_zoo_id'] == 13){
 		                                                ?>
-		                                                   	<img height="100" src='images/logo/chiangmai.png' />
+		                                                   	<img height="90px" width="90px" src='images/logo/chiangmai.png' />
 		                                                <?php
 	                                                     }else if($show['subzoo_zoo_zoo_id'] == 14){
 		                                                ?>
-		                                                   	<img height="100" src='images/logo/Nakhonrachsimazoo.png' />
+		                                                   	<img height="90px" width="90px" src='images/logo/Nakhonrachsimazoo.png' />
 		                                                <?php
 	                                                     }else if($show['subzoo_zoo_zoo_id'] == 15){
 		                                                ?>
-		                                                   	<img height="100" src='images/logo/Songkhlazoo.png' />
+		                                                   	<img height="90px" width="90px" src='images/logo/Songkhlazoo.png' />
 		                                                <?php
 	                                                     }else if($show['subzoo_zoo_zoo_id'] == 16){
 		                                                ?>
-		                                                   	<img height="100" src='images/logo/Ubonzoo.png' />
+		                                                   	<img height="90px" width="90px" src='images/logo/Ubonzoo.png' />
 		                                                <?php
 	                                                     }else if($show['subzoo_zoo_zoo_id'] == 17){
 		                                                ?>
-		                                                   	<img height="100" src='images/logo/KKzoo.png' />
+		                                                   	<img height="90px" width="90px" src='images/logo/KKzoo.png' />
 		                                                <?php
 	                                                     }else{
                                                         ?>
-                                                        	<img height="100" src='images/logo/ZPO.png' />
+                                                        	<img height="90px" width="90px" src='images/logo/ZPO.png' />
                                                         <?php
 	                                                    }
 	                                                    }
                                                         ?>
-												</div>
 											</div>
-											<div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8">
+											<div class="col-xl-9 col-lg-9 col-md-9 col-sm-9 col-9">
 												<div class='row'>
 													<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3">
 														<a href="index.php?url=<?php echo $design;?>.php&id=<?php echo $show['news_id']?>" style="color:#000000;"><?php echo $show['news_head']; ?></a>
@@ -96,7 +93,6 @@
 						<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4"></div>
 					</div>
 				</div>
-			</div>
 		</div>
 	</div>
 </div>
