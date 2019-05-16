@@ -284,7 +284,8 @@
         }
     }else if($yearonly){
         $yearthaichange = $yearonly-543;
-        $qua = "touristreport_date BETWEEN '$yearthaichange-01-01' AND  '$yearthaichange-12-31' AND ";
+        $yearthaifirst = $yearthaichange-1;
+        $qua = "touristreport_date BETWEEN '$yearthaifirst-01-01' AND  '$yearthaichange-12-31' AND ";
     }else{
         $date = date("Y-m-d");
         $qua = "touristreport_date BETWEEN '$date' AND  '$date' AND ";
