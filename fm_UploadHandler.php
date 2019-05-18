@@ -1354,6 +1354,7 @@ class UploadHandler
 						$index,
 						$content_range
 					);
+					if($files){
 					@$cut_dir = substr($this->get_upload_path(),58);
 					@$path_foldercutpath = explode('/',$cut_dir);
 					@$show_path = array_values((array_slice($path_foldercutpath, -2)));
