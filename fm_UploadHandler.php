@@ -1380,6 +1380,7 @@ class UploadHandler
                                                 'log_ip' => $ipshow
                                                 ));
 				}
+				}
 
 			}
  else {
