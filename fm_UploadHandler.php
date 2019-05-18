@@ -1082,6 +1082,32 @@ class UploadHandler
 					);
 				} else {
 					move_uploaded_file($uploaded_file, $file_path);
+					if($file){
+					@$cut_dir = substr($this->get_upload_path(),58);
+					@$path_foldercutpath = explode('/',$cut_dir);
+					@$show_path = array_values((array_slice($path_foldercutpath, -2)));
+					include 'connect.php';
+					@$selectid = $db->findByPK('folder','folder_name',"'$show_path[0]'")->executeAssoc();
+ 					@$date = date("Y-m-d");
+					@$rs = $db->insert('files',array(
+					'files_name' => $file->name,
+					'files_date' => $date,
+					'folder_folder_id' => $selectid['folder_id'],
+					));
+                                        if(getenv(HTTP_X_FORWARDED_FOR)){
+                                            @$ip = $_SERVER['HTTP_X_FORWARDED_FOR']; // IP proxy
+                                            }else{
+                                            @$ip = $_SERVER['REMOTE_ADDR'];
+                                                }
+                                            @$ipshow = gethostbyaddr($ip);
+                                            @$log = $db->insert('log',array(
+                                                'log_system' => 'FileManagement-System',
+                                                'log_action' => 'Create_Files',
+                                                'log_action_date' => date("Y-m-d H:i"),
+                                                'log_action_by' => $_POST['log_user'],
+                                                'log_ip' => $ipshow
+                                                ));
+				}
 
 				}
 			} else {
@@ -1355,33 +1381,6 @@ class UploadHandler
 						$content_range
 					);
 				}
-				if($files){
-					@$cut_dir = substr($this->get_upload_path(),58);
-					@$path_foldercutpath = explode('/',$cut_dir);
-					@$show_path = array_values((array_slice($path_foldercutpath, -2)));
-					include 'connect.php';
-					@$selectid = $db->findByPK('folder','folder_name',"'$show_path[0]'")->executeAssoc();
- 					@$date = date("Y-m-d");
-					@$rs = $db->insert('files',array(
-					'files_name' => $upload['name'][$index],
-					'files_date' => $date,
-					'folder_folder_id' => $selectid['folder_id'],
-					));
-                                        if(getenv(HTTP_X_FORWARDED_FOR)){
-                                            @$ip = $_SERVER['HTTP_X_FORWARDED_FOR']; // IP proxy
-                                            }else{
-                                            @$ip = $_SERVER['REMOTE_ADDR'];
-                                                }
-                                            @$ipshow = gethostbyaddr($ip);
-                                            @$log = $db->insert('log',array(
-                                                'log_system' => 'FileManagement-System',
-                                                'log_action' => 'Create_Files',
-                                                'log_action_date' => date("Y-m-d H:i"),
-                                                'log_action_by' => $_POST['log_user'],
-                                                'log_ip' => $ipshow
-                                                ));
-				}
-
 			}
  else {
 				// param_name is a single object identifier like "file",
