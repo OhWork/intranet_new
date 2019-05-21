@@ -4,7 +4,7 @@
 		var $host = 'localhost';
 		var $user = 'root';
 		var $pass = '';//เปลี่ยน
-		var $db_name = 'intranet';
+		var $db_name = 'intranet_intranet';
 		var $sql;
 		//คำสั่งเพื่อเชื่อมต่อฐานข้อมูลโดยเลือกเทเบิ้ล
 		function connect(){
@@ -315,6 +315,10 @@
 		}
 		function findByPK45($table1,$table2,$table3,$table4,$column1,$value1,$column2,$value2,$column3,$value3,$column4,$value4,$column5,$value5){
 			$this->sql = "SELECT * FROM $table1,$table2,$table3,$table4 WHERE $column1 = $value1 && $column2 = $value2 && $column3 = $value3 && $column4 = $value4 && $column5 = $value5";
+			return $this;
+		}
+                function findByPK45DESC($table1,$table2,$table3,$table4,$column1,$value1,$column2,$value2,$column3,$value3,$column4,$value4,$column5,$value5,$order){
+			$this->sql = "SELECT * FROM $table1,$table2,$table3,$table4 WHERE $column1 = $value1 && $column2 = $value2 && $column3 = $value3 && $column4 = $value4 && $column5 = $value5 ORDER BY $order DESC";
 			return $this;
 		}
 		function findByPK46($table1,$table2,$table3,$table4,$column1,$value1,$column2,$value2,$column3,$value3,$column4,$value4,$column5,$value5,$column6,$value6){
