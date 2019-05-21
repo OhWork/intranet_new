@@ -199,13 +199,23 @@ function rename_file($old_path, $name, $ftp = null, $config = null)
 		if (file_exists($old_path))
 		{
 			$new_path = $info['dirname'] . "/" . $name . "." . $info['extension'];
+/*
 			if (file_exists($new_path) && $old_path == $new_path)
 			{
 				return false;
 			}
 
 			return rename($old_path, $new_path);
+*/
+
+ 		 copy($old_path, 'temp/'.$info['name'].".".$info['extension']);
+ 		 unlink($old_path);
+ 		 rename('temp/'.$info['name'].".".$info['extension'], 'temp/'.$name.".".$info['extension']);
+ 		 copy('temp/'.$name.".".$info['extension'], $new_path);
+ 		 return unlink('temp/'.$name.".".$info['extension']);
+
 		}
+
 	}
 }
 
