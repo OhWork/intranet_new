@@ -67,7 +67,7 @@
 			<div role="tabpanel" class="tab-pane active inf1" id="wait" style="padding-left:16;padding-right:16px;">
 	<?php
 		$columns = array('eventconfer_date','eventconfer_uname','headncf_name','eventconfer_story','eventconfer_psname','eventconfer_start','eventconfer_end','zoo_name');
-		$rs = $db->findByPK45('eventconfer','conferroom','zoo','headncf','confer_confer_id','conferroom_id','conferroom_id',$id,'subzoo_zoo_zoo_id','zoo_id','headncf_headncf_id','headncf_id','eventconfer_status',"'W'")->execute();
+		$rs = $db->findByPK45DESC('eventconfer','conferroom','zoo','headncf','confer_confer_id','conferroom_id','conferroom_id',$id,'subzoo_zoo_zoo_id','zoo_id','headncf_headncf_id','headncf_id','eventconfer_status',"'W'",'eventconfer_id')->execute();
 				$grid = new gridView();
 				$grid->pr = 'eventconfer_id';
 				$grid->header = array('<b><center>เวลาการจองห้องประชุม</center></b>','<b><center>ผู้ขอใช้ห้องประชุม</center></b>', '<b><center>ประเภทเรื่อง</center></b>','<b><center>เรื่อง</center></b>','<b><center>ประธานในที่ประชุม</center></b>','<b><center>เวลาเริ่มประชุม</center></b>','<b><center>เวลาสิ้นสุดการประชุม</center></b>','<b><center>สังกัด</center></b>','<b><center>#</center></b>');
@@ -80,7 +80,7 @@
 			<div role="tabpanel" class="tab-pane inf1" id="pass" style="padding-left:16;padding-right:16px;">
 	<?php
 		$columns = array('eventconfer_date','eventconfer_uname','headncf_name','eventconfer_story','eventconfer_psname','eventconfer_start','eventconfer_end','zoo_name');
-		$rs = $db->findByPK45('eventconfer','conferroom','zoo','headncf','confer_confer_id','conferroom_id','conferroom_id',$id,'subzoo_zoo_zoo_id','zoo_id','headncf_headncf_id','headncf_id','eventconfer_status',"'Y'")->execute();
+		$rs = $db->findByPK45DESC('eventconfer','conferroom','zoo','headncf','confer_confer_id','conferroom_id','conferroom_id',$id,'subzoo_zoo_zoo_id','zoo_id','headncf_headncf_id','headncf_id','eventconfer_status',"'Y'",'eventconfer_id')->execute();
 
 
 				$grid = new gridView();
@@ -95,7 +95,7 @@
 			<div role="tabpanel" class="tab-pane inf1" id="nopass" style="padding-left:16;padding-right:16px;">
 	<?php
 		$columns = array('eventconfer_date','eventconfer_uname','headncf_name','eventconfer_story','eventconfer_psname','eventconfer_start','eventconfer_end','zoo_name');
-		$rs = $db->findByPK45('eventconfer','conferroom','zoo','headncf','confer_confer_id','conferroom_id','conferroom_id',$id,'subzoo_zoo_zoo_id','zoo_id','headncf_headncf_id','headncf_id','eventconfer_status',"'N'")->execute();
+		$rs = $db->findByPK45DESC('eventconfer','conferroom','zoo','headncf','confer_confer_id','conferroom_id','conferroom_id',$id,'subzoo_zoo_zoo_id','zoo_id','headncf_headncf_id','headncf_id','eventconfer_status',"'N'",'eventconfer_id')->execute();
 				$grid = new gridView();
 				$grid->pr = 'eventconfer_id';
 				$grid->header = array('<b><center>เวลาการจองห้องประชุม</center></b>','<b><center>ผู้ขอใช้ห้องประชุม</center></b>', '<b><center>ประเภทเรื่อง</center></b>','<b><center>เรื่อง</center></b>','<b><center>ประธานในที่ประชุม</center></b>','<b><center>เวลาเริ่มประชุม</center></b>','<b><center>เวลาสิ้นสุดการประชุม</center></b>','<b><center>สังกัด</center></b>','<b><center>#</center></b>');
@@ -108,7 +108,7 @@
 			<div role="tabpanel" class="tab-pane inf1" id="cancelpass" style="padding-left:16;padding-right:16px;">
 	<?php
 		$columns = array('eventconfer_date','eventconfer_uname','headncf_name','eventconfer_story','eventconfer_psname','eventconfer_start','eventconfer_end','zoo_name');
-		$rs = $db->findByPK45('eventconfer','conferroom','zoo','headncf','confer_confer_id','conferroom_id','conferroom_id',$id,'subzoo_zoo_zoo_id','zoo_id','headncf_headncf_id','headncf_id','eventconfer_status',"'C'")->execute();
+		$rs = $db->findByPK45DESC('eventconfer','conferroom','zoo','headncf','confer_confer_id','conferroom_id','conferroom_id',$id,'subzoo_zoo_zoo_id','zoo_id','headncf_headncf_id','headncf_id','eventconfer_status',"'C'",'eventconfer_id')->execute();
 				$grid = new gridView();
 				$grid->pr = 'eventconfer_id';
 				$grid->header = array('<b><center>เวลาการจองห้องประชุม</center></b>','<b><center>ผู้ขอใช้ห้องประชุม</center></b>', '<b><center>ประเภทเรื่อง</center></b>','<b><center>เรื่อง</center></b>','<b><center>ประธานในที่ประชุม</center></b>','<b><center>เวลาเริ่มประชุม</center></b>','<b><center>เวลาสิ้นสุดการประชุม</center></b>','<b><center>สังกัด</center></b>','<b><center>#</center></b>');
