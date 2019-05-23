@@ -1,7 +1,8 @@
 <!-- JavaScript Includes -->
+
+<script src="jquery/jquery-3.3.1.min.js"></script>
 <script src="jquery/moment.min.js"></script>
 <script src="jquery/moment-with-locales.js"></script>
-<script src="jquery/jquery-3.3.1.min.js"></script>
 <script src="jquery/datetimepicker-boostrap4.js"></script>
 <script src="jquery/popper.js"></script>
 <script src="jquery/bootstrap.js"></script>
@@ -26,6 +27,7 @@
 <!-- ชุดFullcalendar(moment.min.js ต้องอยู่บน jqueryห้ามเปลี่ยน -->
 
 <script src="jquery/fullcalendar.min.js"></script>
+
 <!-- จบ Fullcalendar -->
 <!-- ชุดCKeditor -->
 <script src="jquery/ckeditor/ckeditor.js"></script>
