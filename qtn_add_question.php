@@ -60,14 +60,7 @@ echo $form->open("form_reg","form","col-xl-12 col-lg-12 col-md-12 col-sm-12 col-
 					<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4" style="padding-right:0px;padding-top:5px;">
 						<?php echo $lbdatestart; ?>
 					</div>
-					<div class='date-form dayinbox col-md-12 form-horizontal control-group controls input-group'>
-									<div class='input-group date' id ="datetimepicker1" data-target-input="nearest">
-										<input type='text' class="form-control datetimepicker-input" name="qtn_datestart" id='date1' readonly/>
-										<div class="input-group-append" data-target="#datetimepicker1" data-toggle="datetimepicker">
-					                        <div class="input-group-text"><i class="fa fa-calendar"></i></div>
-					                    </div>
-									</div>
-					</div>
+					<?php echo $txtdatestart; ?>
 				</div>
 			</div>
 			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3">
@@ -75,14 +68,7 @@ echo $form->open("form_reg","form","col-xl-12 col-lg-12 col-md-12 col-sm-12 col-
 					<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4" style="padding-right:0px;padding-top:5px;">
 						<?php echo $lbdateend; ?>
 					</div>
-					<div class='date-form dayinbox col-md-12 form-horizontal control-group controls input-group'>
-									<div class='input-group date' id ="datetimepicker2" data-target-input="nearest">
-										<input type='text' class="form-control datetimepicker-input" name="qtn_dateend" id='date2' readonly/>
-											<div class="input-group-append" data-target="#datetimepicker2" data-toggle="datetimepicker">
-						                        <div class="input-group-text"><i class="fa fa-calendar"></i></div>
-						                    </div>
-									</div>
-								</div>
+					<?php echo $txtdateend; ?>
 				</div>
 			</div>
 			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3">
