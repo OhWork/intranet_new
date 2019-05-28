@@ -22,11 +22,11 @@
 							<?php
 								$rscover = $db->findByPK12('newsImg','newsImg_position',1,'newsImg_connect',$id)->executeAssoc();
 								<?php
-								if(!empty($rscover['newsImg_name'])){
+// 								if(!empty($rscover['newsImg_name'])){
 							?>
 							<img height="250" class="pop w-100" src='<?php echo $rscover['newsImg_path'],$rscover['newsImg_name'];?>' />
 							<?php
-								}
+// 								}
 /*
 								else{
 									if($rs['subzoo_zoo_zoo_id'] == 11){
