@@ -21,8 +21,47 @@
 						<div class='col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6'>
 							<?php
 								$rscover = $db->findByPK12('newsImg','newsImg_position',1,'newsImg_connect',$id)->executeAssoc();
+								<?php
+								if(!empty($rscover['newsImg_name'])){
 							?>
 							<img height="250" class="pop w-100" src='<?php echo $rscover['newsImg_path'],$rscover['newsImg_name'];?>' />
+							<?php
+								}else{
+									if($show['subzoo_zoo_zoo_id'] == 11){
+									?>
+                                       <img height="250" class="pop w-100" src='images/logo/Dusitzoo.png' />
+                                    <?php
+	                                }else if($show['subzoo_zoo_zoo_id'] == 12){
+		                            ?>
+		                               <img height="250" class="pop w-100" src='images/logo/KKOzoo.png' />
+		                            <?php
+	                                }else if($show['subzoo_zoo_zoo_id'] == 13){
+		                            ?>
+		                               <img height="250" class="pop w-100" src='images/logo/chiangmai.png' />
+		                            <?php
+	                                }else if($show['subzoo_zoo_zoo_id'] == 14){
+		                            ?>
+		                               <img height="250" class="pop w-100" src='images/logo/Nakhonrachsimazoo.png' />
+		                            <?php
+	                                }else if($show['subzoo_zoo_zoo_id'] == 15){
+		                            ?>
+		                               <img height="250" class="pop w-100" src='images/logo/Songkhlazoo.png' />
+		                            <?php
+	                                }else if($show['subzoo_zoo_zoo_id'] == 16){
+		                            ?>
+		                               <img height="250" class="pop w-100" src='images/logo/Ubonzoo.png' />
+		                            <?php
+	                                }else if($show['subzoo_zoo_zoo_id'] == 17){
+		                            ?>
+		                               <img height="250" class="pop w-100" src='images/logo/KKzoo.png' />
+		                            <?php
+	                                }else{
+                                    ?>
+                                       <img height="250" class="pop w-100" src='images/logo/ZPO.png' />
+                                    <?php
+	                                }
+	                            }
+	                        ?>
 						</div>
 						<div class='col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3'></div>
 					</div>
