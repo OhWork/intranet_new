@@ -26,7 +26,9 @@
 							?>
 							<img height="250" class="pop w-100" src='<?php echo $rscover['newsImg_path'],$rscover['newsImg_name'];?>' />
 							<?php
-								}else{
+								}
+/*
+								else{
 									if($rs['subzoo_zoo_zoo_id'] == 11){
 									?>
                                        <img height="250" class="pop w-100" src='images/logo/Dusitzoo.png' />
@@ -61,6 +63,7 @@
                                     <?php
 	                                }
 	                            }
+*/
 	                        ?>
 						</div>
 						<div class='col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3'></div>
