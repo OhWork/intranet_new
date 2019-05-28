@@ -27,31 +27,31 @@
 							<img height="250" class="pop w-100" src='<?php echo $rscover['newsImg_path'],$rscover['newsImg_name'];?>' />
 							<?php
 								}else{
-									if($show['subzoo_zoo_zoo_id'] == 11){
+									if($rs['subzoo_zoo_zoo_id'] == 11){
 									?>
                                        <img height="250" class="pop w-100" src='images/logo/Dusitzoo.png' />
                                     <?php
-	                                }else if($show['subzoo_zoo_zoo_id'] == 12){
+	                                }else if($rs['subzoo_zoo_zoo_id'] == 12){
 		                            ?>
 		                               <img height="250" class="pop w-100" src='images/logo/KKOzoo.png' />
 		                            <?php
-	                                }else if($show['subzoo_zoo_zoo_id'] == 13){
+	                                }else if($rs['subzoo_zoo_zoo_id'] == 13){
 		                            ?>
 		                               <img height="250" class="pop w-100" src='images/logo/chiangmai.png' />
 		                            <?php
-	                                }else if($show['subzoo_zoo_zoo_id'] == 14){
+	                                }else if($rs['subzoo_zoo_zoo_id'] == 14){
 		                            ?>
 		                               <img height="250" class="pop w-100" src='images/logo/Nakhonrachsimazoo.png' />
 		                            <?php
-	                                }else if($show['subzoo_zoo_zoo_id'] == 15){
+	                                }else if($rs['subzoo_zoo_zoo_id'] == 15){
 		                            ?>
 		                               <img height="250" class="pop w-100" src='images/logo/Songkhlazoo.png' />
 		                            <?php
-	                                }else if($show['subzoo_zoo_zoo_id'] == 16){
+	                                }else if($rs['subzoo_zoo_zoo_id'] == 16){
 		                            ?>
 		                               <img height="250" class="pop w-100" src='images/logo/Ubonzoo.png' />
 		                            <?php
-	                                }else if($show['subzoo_zoo_zoo_id'] == 17){
+	                                }else if($rs['subzoo_zoo_zoo_id'] == 17){
 		                            ?>
 		                               <img height="250" class="pop w-100" src='images/logo/KKzoo.png' />
 		                            <?php
