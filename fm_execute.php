@@ -1,7 +1,7 @@
 <?php
 	include 'database/db_tools.php';
 	include 'connect.php';
-	error_reporting(0);
+// 	error_reporting(0);
 $config = include 'fm_config/fm_config.php';
 
 $date = date("Y-m-d");
@@ -194,8 +194,10 @@ if (isset($_GET['action']))
 						$path_foldercutpath = explode('/',$path_folder);
 						$rscheckid= $db->findByPK('folder','folder_name',"'$path_foldercutpath[2]'")->executeAssoc();
 						$rschecksubfol = $db->findByPK('folder','folder_position',$rscheckid['folder_id'])->executeAssoc();
+
+							print_r($rschecksubfol);
 						if($rschecksubfol != ''){
-							echo "ไม่สามารถลบได้เนื่องจากภายในโฟล์เดอร์ยังมีโฟลเดอร์ย่อยอยู่";
+// 							echo "ไม่สามารถลบได้เนื่องจากภายในโฟล์เดอร์ยังมีโฟลเดอร์ย่อยอยู่";
 						}
 						else{
 							$rscheckfile = $db->findByPK('files','folder_folder_id',$rscheckid['folder_id'])->executeAssoc();
@@ -487,6 +489,7 @@ if (isset($_GET['action']))
 				}
 			}
 			break;
+/*
 		case 'duplicate_file':
 			if ($duplicate_files)
 			{
@@ -526,6 +529,7 @@ if (isset($_GET['action']))
 				}
 			}
 			break;
+*/
 
 		case 'paste_clipboard':
 			if ( ! isset($_SESSION['RF']['clipboard_action'], $_SESSION['RF']['clipboard']['path'])
