@@ -9,8 +9,8 @@
     $lbtqtnenable = new label("สถานะการใช้งาน :");
     $txtname = new textfield('qtn_name','','form-control','','');
     $txtlink = new textfield('qtn_link','','form-control','','');
-    $txtdatestartwork = new datetimepicker('qtn_datestart','datetimepicker1','','form-control datetimepicker-input','date-form dayinbox col-md-12 form-horizontal control-group controls input-group','input-group date','datetimepicker1','#datetimepicker1','','');
-    $txtdatestarthos = new datetimepicker('qtn_dateend','datetimepicker2','','form-control datetimepicker-input','date-form dayinbox col-md-12 form-horizontal control-group controls input-group','input-group date','datetimepicker2','#datetimepicker2','','');
+    $txtdatestart = new datetimepicker('qtn_datestart','datetimepicker1','','form-control datetimepicker-input','date-form dayinbox col-md-12 form-horizontal control-group controls input-group','input-group date','datetimepicker1','#datetimepicker1','','');
+    $txtdateend = new datetimepicker('qtn_dateend','datetimepicker2','','form-control datetimepicker-input','date-form dayinbox col-md-12 form-horizontal control-group controls input-group','input-group date','datetimepicker2','#datetimepicker2','','');
     $datetime = date("Y-m-d H:i");
     $radioqtnenable = new radioGroup();
     $radioqtnenable->name = 'qtn_enable';
