@@ -13,7 +13,7 @@
 				</div>
 				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 					<?php
-    					$date = date('Y-m-d');
+    					$date = date('Y-m-d H:i');
                         $rs = $db->specifytable('*','qtn',"qtn_enable = 1 AND '$date' BETWEEN qtn_datestart AND qtn_dateend")->execute();
 						foreach($rs as $rsshow){
 						?>
