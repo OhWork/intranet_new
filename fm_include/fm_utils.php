@@ -1,5 +1,4 @@
 <?php
-
 if ($_SESSION['RF']["verify"] != "RESPONSIVEfilemanager")
 {
 	die('forbiden');
@@ -186,8 +185,33 @@ function duplicate_file( $old_path, $name, $ftp = null, $config = null )
 */
 function rename_file($old_path, $name, $ftp = null, $config = null)
 {
+  	$link = mysqli_connect('localhost', 'root', '', 'intranet_intranet');
+
+    mysqli_set_charset($link, 'utf8');
+
+	if (mysqli_connect_errno())
+	{
+		echo "Failed to connect to MySQL: " . mysqli_connect_error();
+  	}
+
 	$name = fix_filename($name, $config);
 	$info = pathinfo($old_path);
+	$path_folder = substr($info['dirname'], 7);
+			$path_foldercutpath = explode('/',$path_folder);
+			for($i= 0; $i<count($path_foldercutpath); $i++){
+				$j=$i;
+				$j--;
+			}
+			$countpath=$i-1;
+			$dirname = $path_foldercutpath[$countpath];
+
+	$sql = "SELECT * FROM folder WHERE folder_name = '$dirname'";
+	$rs = mysqli_query($link, $sql);
+	$showrs = mysqli_fetch_assoc($rs);
+	$folder_id = $showrs['folder_id'];
+	$sql2 = "SELECT * FROM files WHERE files_name = '$name' AND folder_folder_id = $folder_id";
+	$rs2 = mysqli_query($link, $sql2);
+	$showrs2 = mysqli_fetch_assoc($rs2);
 	$new_path = $info['dirname'] . "/" . $name . "." . $info['extension'];
 	if($ftp){
 		try{
@@ -198,21 +222,15 @@ function rename_file($old_path, $name, $ftp = null, $config = null)
 	}else{
 		if (file_exists($old_path))
 		{
-			$new_path = $info['dirname'] . "/" . $name . "." . $info['extension'];
-/*
-			if (file_exists($new_path) && $old_path == $new_path)
-			{
-				return false;
-			}
+		$new_path = $info['dirname'] . "/" . $name . "." . $info['extension'];
+ 		 if($showrs2['files_name'] == $name){
+	 		 for($k = 0; $k ==count($showrs2['files_name']); $k++){}
+	 		  return rename($old_path, $info['dirname'] . "/" .$name."'$k'".".".$info['extension']);
+ 		 }
+ 		 else{
+	 		  return rename($old_path, $new_path);
 
-			return rename($old_path, $new_path);
-*/
-
- 		 copy($old_path, 'temp/'.$info['name'].".".$info['extension']);
- 		 unlink($old_path);
- 		 rename('temp/'.$info['name'].".".$info['extension'], 'temp/'.$name.".".$info['extension']);
- 		 copy('temp/'.$name.".".$info['extension'], $new_path);
- 		 return unlink('temp/'.$name.".".$info['extension']);
+ 		 }
 
 		}
 

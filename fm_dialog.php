@@ -1145,7 +1145,7 @@ else{
 			<?php
 			}
 
-			$files_prevent_duplicate = array();
+// 			$files_prevent_duplicate = array();
 			foreach ($files as $nu=>$file_array) {
 				$file=$file_array['file'];
 
