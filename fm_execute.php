@@ -3,7 +3,7 @@
 	include 'connect.php';
 // 	error_reporting(0);
 $config = include 'fm_config/fm_config.php';
-
+$log_user = $_SESSION['user_name']." ".$_SESSION['user_last'];
 $date = date("Y-m-d");
 //TODO switch to array
 extract($config, EXTR_OVERWRITE);
@@ -134,7 +134,7 @@ if (isset($_GET['action']))
                                                         'log_system' => 'FileManagement-System',
                                                         'log_action' => 'Delete-Files',
                                                         'log_action_date' => date("Y-m-d H:i"),
-                                                        'log_action_by' => $_POST['log_user'],
+                                                        'log_action_by' => $log_user,
                                                         'log_ip' => $ipshow
                                                         ));
 					if($rsdeletefile){
@@ -229,7 +229,7 @@ if (isset($_GET['action']))
                                                                         'log_system' => 'FileManagement-System',
                                                                         'log_action' => 'Delete-Folder',
                                                                         'log_action_date' => date("Y-m-d H:i"),
-                                                                        'log_action_by' => $_POST['log_user'],
+                                                                        'log_action_by' => $log_user,
                                                                         'log_ip' => $ipshow
                                                                         ));
 
@@ -299,7 +299,7 @@ if (isset($_GET['action']))
                                 'log_system' => 'FileManagement-System',
                                 'log_action' => 'Create_folder',
                                 'log_action_date' => date("Y-m-d H:i"),
-                                'log_action_by' => $_POST['log_user'],
+                                'log_action_by' => $log_user,
                                 'log_ip' => $ipshow
                                 ));
 		}
@@ -343,7 +343,7 @@ if (isset($_GET['action']))
                                 'log_system' => 'FileManagement-System',
                                 'log_action' => 'Rename-Folder',
                                 'log_action_date' => date("Y-m-d H:i"),
-                                'log_action_by' => $_POST['log_user'],
+                                'log_action_by' => $log_user,
                                 'log_ip' => $ipshow
                                 ));
  				if($rsrename){
@@ -481,7 +481,7 @@ if (isset($_GET['action']))
                                                 'log_system' => 'FileManagement-System',
                                                 'log_action' => 'Rename-Files',
                                                 'log_action_date' => date("Y-m-d H:i"),
-                                                'log_action_by' => $_POST['log_user'],
+                                                'log_action_by' => $log_user,
                                                 'log_ip' => $ipshow
                                                 ));
 					if ($fixed_image_creation)
