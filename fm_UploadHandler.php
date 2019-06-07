@@ -1100,11 +1100,12 @@ class UploadHandler
                                             @$ip = $_SERVER['REMOTE_ADDR'];
                                                 }
                                             @$ipshow = gethostbyaddr($ip);
+                                            @$log_user = $_SESSION['user_name']." ".$_SESSION['user_last'];
                                             @$log = $db->insert('log',array(
                                                 'log_system' => 'FileManagement-System',
                                                 'log_action' => 'Create_Files',
                                                 'log_action_date' => date("Y-m-d H:i"),
-                                                'log_action_by' => $_POST['log_user'],
+                                                'log_action_by' => $log_user,
                                                 'log_ip' => $ipshow
                                                 ));
 				}
