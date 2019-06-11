@@ -225,7 +225,7 @@ function rename_file($old_path, $name, $ftp = null, $config = null)
 		$new_path = $info['dirname'] . "/" . $name . "." . $info['extension'];
  		 if($showrs2['files_name'] == $name){
 	 		 for($k = 0; $k ==count($showrs2['files_name']); $k++){}
-	 		  return rename($old_path, $info['dirname'] . "/" .$name."'2'".".".$info['extension']);
+	 		  return rename($old_path, $info['dirname'] . "/" .$name."'$k'".".".$info['extension']);
  		 }
  		 else{
 	 		 echo 1234;
@@ -265,8 +265,32 @@ function tempdir() {
 */
 function rename_folder($old_path, $name, $ftp = null, $config = null)
 {
-	$name = fix_filename($name, $config, true);
+		$link = mysqli_connect('localhost', 'root', '', 'intranet_intranet');
+
+    mysqli_set_charset($link, 'utf8');
+
+	if (mysqli_connect_errno())
+	{
+		echo "Failed to connect to MySQL: " . mysqli_connect_error();
+  	}
+	$name = fix_filename($name, $config);
 	$new_path = fix_dirname($old_path) . "/" . $name;
+	$info = pathinfo($old_path);
+// 		$path_folder = substr($old_path, 7);
+			$path_foldercutpath = explode('/',$old_path);
+			for($i= 0; $i<count($path_foldercutpath); $i++){
+				$j=$i;
+				$j--;
+			}
+	$countpath=$i-1;
+	$dirname = $path_foldercutpath[$j];
+	$sql = "SELECT * FROM folder WHERE folder_name = '$dirname'";
+	$rs = mysqli_query($link, $sql);
+	$showrs = mysqli_fetch_assoc($rs);
+	$folder_id = $showrs['folder_id'];
+	$sql2 = "SELECT * FROM folder WHERE folder_name = '$name' AND folder_folder_id = $folder_id";
+	$rs2 = mysqli_query($link, $sql2);
+	$showrs2 = mysqli_fetch_assoc($rs2);
 	if($ftp){
 		if($ftp->chdir("/".$old_path)){
 			if(@$ftp->chdir($new_path)){
@@ -279,7 +303,11 @@ function rename_folder($old_path, $name, $ftp = null, $config = null)
 		{
 			if (file_exists($new_path) && $old_path == $new_path)
 			{
-				return false;
+				if($showrs2['folder_name'] == $name){
+		 		 for($k = 0; $k ==count($showrs2['folder_name']); $k++){}
+		 		 $new_path = fix_dirname($old_path) . "/" .$name."'$k'";
+		 		  return rename($old_path, $new_path);
+ 		 		}
 			}
 
 			return rename($old_path, $new_path);

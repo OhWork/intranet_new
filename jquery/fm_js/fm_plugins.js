@@ -4395,6 +4395,13 @@ var bootbox = window.bootbox || (function(document, $) {
                 labelOk     = arguments[2];
                 cb          = arguments[3];
                 break;
+            case 5:
+                str         = arguments[0];
+                labelCancel = arguments[1];
+                labelOk     = arguments[2];
+                cb          = arguments[3];
+                defaultVal  = arguments[4];
+                break;
             case 6:
                 str         = arguments[0];
                 labelCancel = arguments[1];

@@ -1060,7 +1060,7 @@ else{
 				}
 
 			?>
-				<li data-name="<?php echo $file ?>" class="<?php if($file=='..') echo 'back'; else echo 'dir';?>" <?php if(($filter!='' && stripos($file,$filter)===false)) echo ' style="display:none;"';?>><?php
+				<li  data-name="<?php echo $file ?>" class="<?php if($file=='..') echo 'back'; else echo 'dir';?>" <?php if(($filter!='' && stripos($file,$filter)===false)) echo ' style="display:none;"';?>><?php
 				$file_prevent_rename = false;
 				$file_prevent_delete = false;
 				if (isset($filePermissions[$file])) {
@@ -1068,6 +1068,7 @@ else{
 				$file_prevent_delete = isset($filePermissions[$file]['prevent_delete']) && $filePermissions[$file]['prevent_delete'];
 				}
 				?><figure data-name="<?php echo $file ?>" class="<?php if($file=="..") echo "back-";?>directory" data-type="<?php if($file!=".."){ echo "dir"; } ?>">
+				<input type="text" class="folder_name" value="<?php echo $file;?>"/>
 				<?php if($file==".."){ ?>
 					<input type="hidden" class="path" value="<?php echo str_replace('.','',dirname($rfm_subfolder.$subdir));?>"/>
 					<input type="hidden" class="path_thumb" value="<?php echo dirname($thumbs_path.$subdir)."/";?>"/>
