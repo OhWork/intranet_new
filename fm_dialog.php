@@ -939,6 +939,7 @@ if(!empty($_POST['searchall'])){
 					</div>
 						<div class="box">
 							<h4><?php echo $result['files_name']; ?></h4>
+							<p style="font-size: 12px; color:gray;"><?php echo $result['folder_name']; ?></p>
 							<figcaption>
 							<h4><?php echo $result['cdl_count']; ?></h4>
 							</figcaption>
@@ -1001,11 +1002,17 @@ if(!empty($_POST['searchall'])){
 					</div>
 					<div class="box">
 						<h4><?php echo $result['folder_name']; ?></h4>
+						<?php if($result['folder_position'] == ''){ ?>
+						<p style="font-size: 12px; color:gray;"><?php echo "โฟลเดอร์หลัก"; ?></p>
+						<?php }else{
+							$query2 = $db->findByPK("folder","folder_id",$result['folder_position'])->executeAssoc();
+							?>
+							<p style="font-size: 12px; color:gray;"><?php echo $query2['folder_name']; ?></p>
+						<?php } ?>
 					</div>
 				</a>
 			</figure>
-			<?php
-			}
+			<?php			}
 			else{
 				?>
 			<figure class="<?php if($file=="..") echo "back-";?>directory" data-name="<?php echo $result['folder_name'];?>"  data-type="<?php if($file!=".."){ echo "dir"; } ?>">
@@ -1068,7 +1075,7 @@ else{
 				$file_prevent_delete = isset($filePermissions[$file]['prevent_delete']) && $filePermissions[$file]['prevent_delete'];
 				}
 				?><figure data-name="<?php echo $file ?>" class="<?php if($file=="..") echo "back-";?>directory" data-type="<?php if($file!=".."){ echo "dir"; } ?>">
-				<input type="text" class="folder_name" value="<?php echo $file;?>"/>
+				<input type="hidden" class="folder_name" value="<?php echo $file;?>"/>
 				<?php if($file==".."){ ?>
 					<input type="hidden" class="path" value="<?php echo str_replace('.','',dirname($rfm_subfolder.$subdir));?>"/>
 					<input type="hidden" class="path_thumb" value="<?php echo dirname($thumbs_path.$subdir)."/";?>"/>

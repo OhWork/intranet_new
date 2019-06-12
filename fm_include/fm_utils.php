@@ -225,7 +225,7 @@ function rename_file($old_path, $name, $ftp = null, $config = null)
 		$new_path = $info['dirname'] . "/" . $name . "." . $info['extension'];
  		 if($showrs2['files_name'] == $name){
 	 		 for($k = 0; $k ==count($showrs2['files_name']); $k++){}
-	 		  return rename($old_path, $info['dirname'] . "/" .$name."'$k'".".".$info['extension']);
+	 		  return rename($old_path, $info['dirname'] . "/" .$name.'_'."'$k'".".".$info['extension']);
  		 }
  		 else{
 	 		 echo 1234;
@@ -305,7 +305,7 @@ function rename_folder($old_path, $name, $ftp = null, $config = null)
 			{
 				if($showrs2['folder_name'] == $name){
 		 		 for($k = 0; $k ==count($showrs2['folder_name']); $k++){}
-		 		 $new_path = fix_dirname($old_path) . "/" .$name."'$k'";
+		 		 $new_path = fix_dirname($old_path) . "/" .$name.'_'."'$k'";
 		 		  return rename($old_path, $new_path);
  		 		}
 			}
