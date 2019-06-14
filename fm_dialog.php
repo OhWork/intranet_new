@@ -939,23 +939,17 @@ if(!empty($_POST['searchall'])){
 					</div>
 						<div class="box">
 							<h4><?php echo $result['files_name']; ?></h4>
-							<p style="font-size: 12px; color:gray;"><?php echo $result['folder_name']; ?></p>
+								<a href="admin_index.php?url=fm_dialog.php&?editor=0&type=0&lang=en_EN&popup=0&crossdomain=0&field_id=&relative_url=0&akey=key&fldr=
+									<?php for($i = count($folder_path_name[0]); $i>=0; $i--){
+								$path_search  = $folder_path_name[0][$i]['folder_name'].'/';
+								echo $path_search ;}?>">
+								<p style="font-size: 12px; color:gray;"><?php echo $result['folder_name']; ?></p></a>
 							<figcaption>
 							<h4><?php echo $result['cdl_count']; ?></h4>
 							</figcaption>
 							<figcaption>
 							<?php if($result['folder_position'] != 0){
 									 $getposition = $result['folder_position'];
-	/*
-								do {
-									 $select =$db->findByPK('folder','folder_id',$baowiw,'folder_position')->executeAssoc();
-									 $baowiw = $select['folder_position'];
-									  echo "<pre>";
-									  $kuy[] = $select;
-									  print_r($kuy);
-									 echo "</pre>";
-								   } while ($select['folder_position'] !=0);
-	*/
 									while ($getposition !=0){
 										$select =$db->findByPK('folder','folder_id',$getposition,'folder_position')->executeAssoc();
 										$getposition = $select['folder_position'];
