@@ -940,9 +940,23 @@ if(!empty($_POST['searchall'])){
 						<div class="box">
 							<h4><?php echo $result['files_name']; ?></h4>
 								<a href="admin_index.php?url=fm_dialog.php&?editor=0&type=0&lang=en_EN&popup=0&crossdomain=0&field_id=&relative_url=0&akey=key&fldr=
-									<?php for($i = count($folder_path_name[0]); $i>=0; $i--){
-								$path_search  = $folder_path_name[0][$i]['folder_name'].'/';
-								echo $path_search ;}?>">
+									<?php if($result['folder_position'] != 0){
+									 		$getposition = $result['folder_position'];
+										 	while ($getposition !=0){
+												$select =$db->findByPK('folder','folder_id',$getposition,'folder_position')->executeAssoc();
+												$getposition = $select['folder_position'];
+												$folder_name = $select;
+											}
+										  }
+										  for($i = count($folder_name); $i>0; $i--){
+											$path_search  = $folder_name[$i]['folder_name'].'/';
+											if($folder_name['folder_position'] ==''){
+												echo $path_search;
+											}else{
+												echo $path_search.'/'.$result['folder_name'];
+											}
+										  }
+										  ?>">
 								<p style="font-size: 12px; color:gray;"><?php echo $result['folder_name']; ?></p></a>
 							<figcaption>
 							<h4><?php echo $result['cdl_count']; ?></h4>
@@ -961,12 +975,12 @@ if(!empty($_POST['searchall'])){
 							<a href="source<?php for($i = count($folder_path_name[0]); $i>=0; $i--){
 								$path_search  = $folder_path_name[0][$i]['folder_name'].'/';
 								echo ($path_search);}
-								echo $path_file.'/'.$result['files_name'];
+								echo $result['files_name'];
 								?>"><i class=" icon-eye-open"></i></a>
 							<a href="source<?php for($i = count($folder_path_name[0]); $i>=0; $i--){
 								$path_search  = $folder_path_name[0][$i]['folder_name'].'/';
 								echo ($path_search);}
-								echo $path_file.'/'.$result['files_name'];?>" download="<?php echo $result['files_name'];?>"><i class="icon-download"></i></a>
+								echo $result['files_name'];?>" download="<?php echo $result['files_name'];?>"><i class="icon-download"></i></a>
 							<?php }
 								else{ ?>
 							<a href="source/<?php echo $result['folder_name']."/".$result['files_name'];?>"><i class=" icon-eye-open"></i></a>
@@ -1147,7 +1161,7 @@ else{
 			<?php
 			}
 
-// 			$files_prevent_duplicate = array();
+			$files_prevent_duplicate = array();
 			foreach ($files as $nu=>$file_array) {
 				$file=$file_array['file'];
 
@@ -1267,7 +1281,7 @@ else{
 			?>		<figure class ="files_name" data-name="<?php echo $file ?>" data-type="<?php if($is_img){ echo "img"; }else{ echo "file"; } ?>">
 					<?php
 
-						$filescutname = explode('.', $file_array['file']); ?>
+// 						$filescutname = explode('.', $file_array['file']); ?>
 <!-- 					<input type="hidden" class="files_name" value="<?php echo $filescutname[0] ?>"> -->
 				<a href="javascript:void('')" class="link" data-file="<?php echo $file;?>" data-function="<?php echo $apply;?>">
 				<div class="img-precontainer">
