@@ -14,7 +14,7 @@
 <!-- <script src="jquery/carousel.js"></script> -->
 <script src="jquery/checksubmit.js"></script>
 <script src="jquery/getpassword.js"></script>
-<script src="jquery/autocomplete.js"></script>
+<!-- <script src="jquery/autocomplete.js"></script> -->
 <!-- ปิดไว้ก่อนกุงง -->
 <!-- <script src="jquery/modal.js"></script> -->
 <script src="jquery/tooltip.js"></script>
@@ -42,4 +42,3 @@
 <script src="jquery/feather-icon/feather.min.js"></script>
 <script src="jquery/util.js"></script>
 <script src="jquery/jquery.md5.js"></script>
-<!-- <script src="jquery/jquery.cookie.js"></script> -->
