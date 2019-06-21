@@ -376,22 +376,22 @@ $('#ddlsubtypetools').on("change",function(e) {
 	}
 	});
 
-	function make_autocom(autoObj,showObj){
-    var mkAutoObj=autoObj;
-    var mkSerValObj=showObj;
-    new Autocomplete(mkAutoObj, function() {
-        this.setValue = function(id) {
-            document.getElementById(mkSerValObj).value = id;
-        }
-        if ( this.isModified )
-            this.setValue("");
-        if ( this.value.length < 1 && this.isNotClick )
-            return ;
-        return "outsource/autocompletedata.php?q=" +encodeURIComponent(this.value);
-    });
-}
+//function make_autocom(autoObj,showObj){
+//    var mkAutoObj=autoObj;
+//    var mkSerValObj=showObj;
+//    new Autocomplete(mkAutoObj, function() {
+//        this.setValue = function(id) {
+//            document.getElementById(mkSerValObj).value = id;
+//        }
+//        if ( this.isModified )
+//            this.setValue("");
+//        if ( this.value.length < 1 && this.isNotClick )
+//            return ;
+//        return "outsource/autocompletedata.php?q=" +encodeURIComponent(this.value);
+//    });
+//}
 
 // การใช้งาน
 // make_autocom(" id ของ input ตัวที่ต้องการกำหนด "," id ของ input ตัวที่ต้องการรับค่า");
-make_autocom("ipzpo_user","ipzpo_address");
+//make_autocom("ipzpo_user","ipzpo_address");
  </script>
