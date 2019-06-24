@@ -952,6 +952,8 @@ if(!empty($_POST['searchall'])){
 								$path_search  = $folder_path_name[0][$i]['folder_name'].'/';
 								echo ($path_search);}
 								echo $result['files_name'];
+								}else{
+									echo '/'.$result['folder_name']."/".$result['files_name'];
 								} ?>"><h4><?php echo $result['files_name']; ?></h4></a>
 								<a href="admin_index.php?url=fm_dialog.php&?editor=0&type=0&lang=en_EN&popup=0&crossdomain=0&field_id=&relative_url=0&akey=key&fldr=
 									<?php if($result['folder_position'] != 0){
