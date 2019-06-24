@@ -46,16 +46,12 @@
         </head>
 
 <body onload="setDefault()">
-    <?php include 'admin_menutop.php';?>
-	<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-		<div class="row">
-        <?php include 'admin_menu.php'; ?>
-		<div class="col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10">
-			<div class="row">
-			<?php include 'admin_content.php';?>
+	<div class="wrapper">
+			<?php include 'admin_menu.php'; ?>
+			<div class="content">
+				<?php include 'admin_menutop.php';?>
+				<?php include 'admin_content.php';?>
 			</div>
-		</div>
-      </div>
     </div>
     <script>
     feather.replace()

@@ -1,7 +1,8 @@
-<nav class="navbar navbar-expand-md navbar-dark bg-dark col-md-12">
-    <a class="navbar-brand brandedit mr-auto" href="#">
-		<h4 style="font-weight: bold;">Intranet</h4>
-	</a>
+
+<nav class="navbar navbar-dark bg-dark pt-3 pb-3">
+	<button type="button" id="sidebarCollapse" class="btn btn-info">
+		<span>Slide naja</span>
+	</button>
 	<div class="dropdown" style="color:#ffffff;">
 		<div style="height:34px;" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 			<div class="rounded-circle" style="height:31px;padding-left:8px;padding-right:8px;padding-top:3px;float:left;background-color:#455A64;margin-right:3px;">
@@ -22,3 +23,11 @@
 		</div>
 	</div>
 </nav>
+<script>
+$(document).ready(function () {
+
+    $('#sidebarCollapse').on('click', function () {
+        $('#sidebar').toggleClass('active');
+    });
+	});
+</script>
