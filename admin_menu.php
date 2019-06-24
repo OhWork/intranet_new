@@ -151,6 +151,7 @@
 
 	        }
 		});
+/*
     function navAnimate(id,sub){
 		var menusum  = sub;
 		var menuid = id;
@@ -222,5 +223,6 @@
 	navAnimate(32,5);
 	navAnimate(33,3);
 	navAnimate(34,1);
+*/
   	</script>
 
