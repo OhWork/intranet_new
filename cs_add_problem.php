@@ -191,20 +191,6 @@
 				?>
 
 		}
-                $( function() {
-    function log( message ) {
-      $( "<div>" ).text( message ).prependTo( "#log" );
-      $( "#log" ).scrollTop( 0 );
-    }
- 
-    $( "#ipzpo_address" ).autocomplete({
-      source: "search.php",
-      minLength: 2,
-      select: function( event, ui ) {
-        log( "Selected: " + ui.item.value + " aka " + ui.item.id );
-      }
-    });
-  } );
 	</script>
 <?php echo $form->open("form_reg","frmMain","col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3","cs_insert_problem.php","");?>
 	<div class="row" id="maincontent">
@@ -333,6 +319,14 @@
 	<div class="col-xl-2 col-lg-2 col-md-2"></div>
 	</div>
 <?php echo $form->close();?>
+        <form id="form001" name="form001" method="post" action="">
+   <div>Tags: 
+    <input name="input_q" id="input_q" size="50" />
+    <button type="button" class="showAll_btn">V</button>
+<!--    ส่วนสำหรับกำหนดค่า id ของรายการที่เลือก เพื่อไปใช้งาน-->
+    <input name="h_input_q" type="hidden" id="h_input_q" value="" />
+    </div>
+</form>
 <script language = "JavaScript">
 
 $( document ).ready( function () {
@@ -390,22 +384,46 @@ $('#ddlsubtypetools').on("change",function(e) {
 	}
 	});
 
-//function make_autocom(autoObj,showObj){
-//    var mkAutoObj=autoObj;
-//    var mkSerValObj=showObj;
-//    new Autocomplete(mkAutoObj, function() {
-//        this.setValue = function(id) {
-//            document.getElementById(mkSerValObj).value = id;
-//        }
-//        if ( this.isModified )
-//            this.setValue("");
-//        if ( this.value.length < 1 && this.isNotClick )
-//            return ;
-//        return "outsource/autocompletedata.php?q=" +encodeURIComponent(this.value);
-//    });
-//}
-
-// การใช้งาน
-// make_autocom(" id ของ input ตัวที่ต้องการกำหนด "," id ของ input ตัวที่ต้องการรับค่า");
-//make_autocom("ipzpo_user","ipzpo_address");
+ $(function() {
+         
+        $( "#input_q" ).autocomplete({ // ใช้งาน autocomplete กับ input text id=tags
+            minLength: 0, // กำหนดค่าสำหรับค้นหาอย่างน้อยเป็น 0 สำหรับใช้กับปุ่ใแสดงทั้งหมด
+            source: "cs_get_user.php", // กำหนดให้ใช้ค่าจากการค้นหาในฐานข้อมูล
+            open:function(){ // เมื่อมีการแสดงรายการ autocomplete
+                var valInput=$(this).val(); // ดึงค่าจาก text box id=tags มาเก็บที่ตัวแปร
+                if(valInput!=""){ // ถ้าไม่ใช่ค่าว่าง
+                    $(".ui-menu-item a").each(function(){ // วนลูปเรียกดูค่าทั้งหมดใน รายการ autocomplete
+                        var matcher = new RegExp("("+valInput+")", "ig" ); // ตรวจสอบค่าที่ตรงกันในแต่ละรายการ กับคำค้นหา
+                        var s=$(this).text();
+                        var newText=s.replace(matcher, "<b>$1</b>");    //      แทนค่าที่ตรงกันเป็นตัวหนา
+                        $(this).html(newText); // แสดงรายการ autocomplete หลังจากปรับรูปแบบแล้ว
+                    }); 
+                }
+            },
+            select: function( event, ui ) {
+                // สำหรับทดสอบแสดงค่า เมื่อเลือกรายการ
+//              console.log( ui.item ?
+//                  "Selected: " + ui.item.label :
+//                  "Nothing selected, input was " + this.value);
+                $("#h_input_q").val(ui.item.id); // เก็บ id ไว้ใน hiden element ไว้นำค่าไปใช้งาน
+//                setTimeout(function(){
+//                  $("#h_input_q").parents("form").submit(); // เมื่อเลือกรายการแล้วให้ส่งค่าฟอร์ม ทันที
+//                },500);
+            }
+        });
+ 
+        $(".showAll_btn").click(function(){
+            // ตรวจสอบถ้ามีการแสดงรายการทั้งหมดอยู่แล้ว  
+            if ($( "#input_q" ).autocomplete( "widget" ).is( ":visible" ) ) {  
+                $( "#input_q" ).autocomplete( "close" ); // ปิดการแสดงรายการทั้งหมด  
+                return;  
+            }  
+            // ส่งค่าว่างปล่าวไปทำการค้นหา จะได้ผลลัพธ์เป็นรายการทั้งหมด  
+            $( "#input_q" ).autocomplete( "search", "" );  
+ 
+            $( "#input_q" ).focus(); //ให้ cursor ไปอยู่ที่ input text id=tags              
+        });
+ 
+         
+    });
  </script>
