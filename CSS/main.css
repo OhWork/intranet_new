@@ -1132,3 +1132,27 @@ a:hover {
 	background-color: #1DE9B6;
 	border-color:#1DE9B6;
 }
+
+#sidebar {
+    min-width: 250px;
+    max-width: 250px;
+}
+
+#sidebar.active {
+    margin-left: -250px;
+}
+.content {
+	width: 100%;
+    min-height: 100vh;
+    transition: all 0.3s;
+}
+.wrapper {display: flex;
+    width: 100%;
+    align-items: stretch;}
+.sidebarhead {
+	height : 69.27px;
+	color:#fff;
+}
+.sidebarhead:hover {
+	color:#fff;
+}

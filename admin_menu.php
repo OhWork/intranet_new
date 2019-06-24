@@ -1,11 +1,10 @@
 <?php if (!empty($_SESSION['user_name'])):
         $user_zoo = $_SESSION['subzoo_zoo_zoo_id'];
 ?>
-<div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2 printdisplaynone" style="height: 100%;">
-	<div class="row">
-		<div class="list-group" style="height: 100%;">
-			<nav class="d-none d-md-block bg-dark sidebar mnpb" style="height: 100%;padding-bottom:100%;">
-			  <div class="sidebar-sticky">
+<nav class="bg-dark printdisplaynone" id="sidebar">
+				<a class="navbar-brand brandedit sidebarhead w-100" href="#">
+					<h3 style="font-weight: bold;" align="center">INTRANET</h3>
+				</a>
 				<ul class="nav flex-column">
 				  <li class="nav-item">
 					<a class="nav-link edittext mucl" href="admin_index.php">
@@ -49,11 +48,7 @@
 				        }
 				   ?>
 				</ul>
-			  </div>
-			</nav>
-		</div>
-	</div>
-</div>
+</nav>
 <?php endif; ?>
  <script>
     $(function() {
