@@ -11,6 +11,7 @@
     $lbdetail = new label('อธิบาย : ');
     $lbcomname = new label('คอมพิวเตอร์ : ');
     $lbcomgroup = new label('กรุ๊ป : ');
+    $lblocation = new label('สถานที่ : ');
     $lbstatus = new label('สถานะ : ');
     $lbtypetools = new label('ชนิดของอุปกรณ์ : ');
     $txtaddress = new textfieldreadonly('ipzpo_address','ip_address','','');
@@ -18,6 +19,7 @@
     $txtnickname = new textfield('ipzpo_nickname','','form-control','','');
     $txtcomname = new textfield('ipzpo_comname','','form-control','','');
     $txtname->value = 'IP-[ว่าง]';
+    $txtlocation = new textfield('ipzpo_location','','form-control','','');
     $txtcomgroup = new textfield('ipzpo_comgroup','','form-control','','');
     $txtcomgroup->value = 'WorkGroup';
     $txtdetail = new textarea('ipzpo_detail','form-control','','','','','');
@@ -39,6 +41,7 @@
 	$txtnickname->value = $r['ipzpo_nickname'];
 	$txtcomname->value = $r['ipzpo_comname'];
 	$txtcomgroup->value = $r['ipzpo_comgroup'];
+                $txtlocation->value = $r['ipzpo_location'];
 	$txtdetail->value = $r['ipzpo_detail'];
 	$selecttools->value = $r['typetools_typetools_id'];
 	$selectstatus->value = $r['status_status_id'];
@@ -190,10 +193,16 @@
 				</div>
 				<div class='col-md-12'>
 					<div class="row">
-						<div class='col-md-2' style="padding-top: 8px;"><?php echo $lbdetail ?></div>
-						<div class='col-md-4'><?php echo $txtdetail ?></div>
+						<div class='col-md-2' style="padding-top: 8px;"><?php echo $lblocation ?></div>
+						<div class='col-md-4'><?php echo $txtlocation ?></div>
 						<div class='col-md-2' style="padding-top: 8px;"><?php echo $lbstatus ?></div>
 						<div class='col-md-4  form-group has-feedback'><?php echo $selectstatus->selectFromTB('status','status_id','status_name',$r['status_status_id']) ?></div>
+					</div>
+				</div>
+				<div class='col-md-12'>
+					<div class="row">
+						<div class='col-md-2' style="padding-top: 8px;"><?php echo $lbdetail ?></div>
+						<div class='col-md-10'><?php echo $txtdetail ?></div>
 					</div>
 				</div>
 				<input type='hidden' name='log_user' value='<?php echo $log_user; ?>'/>

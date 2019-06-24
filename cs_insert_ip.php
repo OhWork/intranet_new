@@ -19,6 +19,7 @@
 		$data['ipzpo_nickname'] = $_POST['ipzpo_nickname'];
 		$data['ipzpo_comname'] = $_POST['ipzpo_comname'];
 		$data['ipzpo_comgroup'] = $_POST['ipzpo_comgroup'];
+                                $data['ipzpo_location'] = $_POST['ipzpo_location'];
 		$data['ipzpo_detail'] = $_POST['ipzpo_detail'];
 		$data['subzoo_subzoo_id'] = $_POST['subzoo_subzoo_id'];
 		$data['subzoo_zoo_zoo_id'] = $_POST['subzoo_zoo_zoo_id'];
@@ -49,6 +50,7 @@
 	'ipzpo_comname' => $_POST['ipzpo_comname'],
 	'ipzpo_comgroup' => $_POST['ipzpo_comgroup'],
 	'ipzpo_detail' => $_POST['ipzpo_detail'],
+                'ipzpo_location' => $_POST['ipzpo_location'],
 	'subzoo_subzoo_id' => $_POST['subzoo_subzoo_id'],
 	'subzoo_zoo_zoo_id' => $_POST['subzoo_zoo_zoo_id'],
 	'status_status_id' => $_POST['status_status_id'],
