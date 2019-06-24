@@ -26,8 +26,19 @@
 	                <!-- sub menu -->
 						<a class="nav-link edittext mucls" id="nav-1-animate-1" href="index.php?url=cs_add_problem.php">แบบฟอร์มแจ้งซ่อมคอมพิวเตอร์</a>
 						<a class="nav-link edittext mucls" id="nav-1-animate-2" href="index.php?url=cs_register.php">แบบฟอร์มขอใช้ระบบ</a>
-						<a class="nav-link edittext mucls" id="nav-1-animate-3" href="index.php?url=cs_add_upweb.php">แบบฟอร์มขอให้อัพไฟล์ (กรณีไม่สามารถทำไดั)</a>
-						<a class="nav-link edittext mucl mucls" id="nav-1-animate-4" href="index.php?url=cs_show_problem.php&subpage=1">รายการแจ้งซ่อมคอมพิวเตอร์</a>
+						<a class="nav-link edittext mucls" id="nav-1-animate-3"  href="index.php?url=cs_add_upweb.php">แบบฟอร์มขอให้อัพไฟล์ (กรณีไม่สามารถทำไดั)</a>
+						<a class="nav-link collapsed nav-link-4 edittext mucl mucls" id="nav-1-animate-4" href="#csshowprom" data-toggle="collapse" data-target="#csshowprom">รายการแจ้งซ่อมคอมพิวเตอร์</a>
+						<ul class="sub-menu collapse mmpd2" id="csshowprom">
+	            <a class="nav-link edittext mucl" id="nav-4-animate-1" href="index.php?url=cs_show_problem.php&id=1">องค์การสวนสัตว์</a>
+	            <a class="nav-link edittext mucl" id="nav-4-animate-2" href="index.php?url=cs_show_problem.php&id=11">สวนสัตว์ดุสิต</a>
+	            <a class="nav-link edittext mucl" id="nav-4-animate-3" href="index.php?url=cs_show_problem.php&id=12">สวนสัตว์เปิดเขาเขียว</a>
+	            <a class="nav-link edittext mucl" id="nav-4-animate-4" href="index.php?url=cs_show_problem.php&id=13">สวนสัตว์เชียงใหม่</a>
+	            <a class="nav-link edittext mucl" id="nav-4-animate-5" href="index.php?url=cs_show_problem.php&id=14">สวนสัตว์นครราชสีมา</a>
+	            <a class="nav-link edittext mucl" id="nav-4-animate-6" href="index.php?url=cs_show_problem.php&id=15">สวนสัตว์สงขลา</a>
+	            <a class="nav-link edittext mucl" id="nav-4-animate-7" href="index.php?url=cs_show_problem.php&id=16">สวนสัตว์อุบลราชธานี</a>
+	            <a class="nav-link edittext mucl" id="nav-4-animate-8" href="index.php?url=cs_show_problem.php&id=17">สวนสัตว์ขอนแก่น</a>
+	            <a class="nav-link edittext mucl" id="nav-4-animate-9" href="index.php?url=cs_show_problem.php&id=18">โครงการคชอาณาจักร</a>
+	    </ul>
 						<a class="nav-link edittext mucls" id="nav-1-animate-5" href="index.php?url=cs_show_register.php">รายการขอใช้ระบบ</a>
 
 					</ul>
@@ -147,5 +158,6 @@
     navAnimate(1,5);
 	navAnimate(2,3);
 	navAnimate(3,2);
+	navAnimate(4,9);
 
 </script>
