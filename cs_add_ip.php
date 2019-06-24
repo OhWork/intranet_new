@@ -59,7 +59,7 @@
 
 			<?php
 			$intRows = 0;
-			$rs = $db->orderASC('subzoo','subzoo_id')->execute();
+			$rs = $db->findPK1ASC('subzoo','subzoo_enable',1,'subzoo_no')->execute();
 			$intRows = 0;
 			while($objResult = mysqli_fetch_array($rs,MYSQLI_ASSOC))
 			{
