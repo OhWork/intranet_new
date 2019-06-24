@@ -191,6 +191,20 @@
 				?>
 
 		}
+                $( function() {
+    function log( message ) {
+      $( "<div>" ).text( message ).prependTo( "#log" );
+      $( "#log" ).scrollTop( 0 );
+    }
+ 
+    $( "#ipzpo_address" ).autocomplete({
+      source: "search.php",
+      minLength: 2,
+      select: function( event, ui ) {
+        log( "Selected: " + ui.item.value + " aka " + ui.item.id );
+      }
+    });
+  } );
 	</script>
 <?php echo $form->open("form_reg","frmMain","col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3","cs_insert_problem.php","");?>
 	<div class="row" id="maincontent">
@@ -376,22 +390,22 @@ $('#ddlsubtypetools').on("change",function(e) {
 	}
 	});
 
-	function make_autocom(autoObj,showObj){
-    var mkAutoObj=autoObj;
-    var mkSerValObj=showObj;
-    new Autocomplete(mkAutoObj, function() {
-        this.setValue = function(id) {
-            document.getElementById(mkSerValObj).value = id;
-        }
-        if ( this.isModified )
-            this.setValue("");
-        if ( this.value.length < 1 && this.isNotClick )
-            return ;
-        return "outsource/autocompletedata.php?q=" +encodeURIComponent(this.value);
-    });
-}
+//function make_autocom(autoObj,showObj){
+//    var mkAutoObj=autoObj;
+//    var mkSerValObj=showObj;
+//    new Autocomplete(mkAutoObj, function() {
+//        this.setValue = function(id) {
+//            document.getElementById(mkSerValObj).value = id;
+//        }
+//        if ( this.isModified )
+//            this.setValue("");
+//        if ( this.value.length < 1 && this.isNotClick )
+//            return ;
+//        return "outsource/autocompletedata.php?q=" +encodeURIComponent(this.value);
+//    });
+//}
 
 // การใช้งาน
 // make_autocom(" id ของ input ตัวที่ต้องการกำหนด "," id ของ input ตัวที่ต้องการรับค่า");
-make_autocom("ipzpo_user","ipzpo_address");
+//make_autocom("ipzpo_user","ipzpo_address");
  </script>

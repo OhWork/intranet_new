@@ -228,9 +228,7 @@ function rename_file($old_path, $name, $ftp = null, $config = null)
 	 		  return rename($old_path, $info['dirname'] . "/" .$name.'_'."'$k'".".".$info['extension']);
  		 }
  		 else{
-	 		 echo 1234;
-	 		 print_r($old_path);
-// 	 		  return rename($old_path, $new_path);
+	 		  return rename($old_path, $new_path);
 
  		 }
 
