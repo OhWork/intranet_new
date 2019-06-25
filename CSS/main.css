@@ -1156,3 +1156,13 @@ a:hover {
 .sidebarhead:hover {
 	color:#fff;
 }
+.slidemenu {
+	color:#ffffff;
+	margin-bottom:6px;
+	border:1px solid #fff;
+	border-radius:5px;
+}
+.slidemenu:hover {
+	color:#1DE9B6;
+	border-color:#1DE9B6;
+}
