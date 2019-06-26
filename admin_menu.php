@@ -122,7 +122,7 @@
 			var idmenu = document.getElementById(cutidmenu);
 			$('.nav-link').attr( 'aria-expanded','false');
 			if($('.sub-menu').hasClass("show")){
-			 $('.sub-menu').attr( 'aria-expanded','false');
+			 $('.sub-menu').addClass("animat-out");
 						setTimeout(function(){
 							if(!idmenu.classList.contains('show')){
 								$( ".sub-menu" ).not(idmenu).removeClass('show');

@@ -1073,7 +1073,7 @@ a:hover {
    }
 }
 .animat-out{
-  animation: fadeOutRight .7s ease-in 6 forwards;
+  animation: fadeOutUp .7s ease-in 6 forwards;
   animation-fill-mode:both;
 }
 
