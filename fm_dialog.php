@@ -746,9 +746,7 @@ $files=$sorted;
 			<div class="row-fluid">
 				<div class="span12 entire types">
 					<form method="post">
-					<input style="margin-top:0px;" type="radio" name="type" id="search_file" class="type" value="1" checked><label style="margin-top:16px;" for="search_file">ค้นหาไฟล์</label>
-					<input style="margin-top:0px;" type="radio" name="type" id="search_folder" class="type" value="2"><label style="margin-top:16px;" for="search_folder">ค้นหาโฟลเดอร์</label>
-					<input type="text" id="searchall" name="searchall" class="form-control" placeholder="ค้นหาไฟล์ที่ต้องการใช้ !" autocomplete="off" style="margin-top:8px; width: 300px; height:30px;">
+					<input type="text" id="searchall" name="searchall" class="form-control" placeholder="ค้นหาไฟล์และโฟลเดอร์ที่ต้องการใช้ !" autocomplete="off" style="margin-top:8px; width: 300px; height:30px;">
 					<input class="btn btn-secondary"type="submit" value="ค้นหา" style="margin-top:0px;font-size:14px;padding:5px 8px;color:#fff;">
 					</form>
 				</div>
@@ -926,15 +924,30 @@ $files=$sorted;
 
             $query = $db->specifytable('*','files JOIN folder ON files.folder_folder_id = folder.folder_id',"files_name LIKE '%{$searchall}%'")->execute();
 
-if(!empty($_POST['searchall'])){
-		if($_POST['type'] == 1){
+if(!empty($_POST['searchall'])){ ?>
+	<div class="row-fluid">
+	<ul class="breadcrumb">
+		<span>ไฟล์ที่ต้องการค้นหา</span>
+	</ul>
+	<!-- breadcrumb div end -->
+
+			<?php
 			while ($result = mysqli_fetch_assoc($query)) {
 			?>
 			<li>
 				<figure data-name="<?php $result['files_name'];?>" data-type="<?php if($is_img){ echo "img"; }else{ echo "file"; } ?>">
-					<div class="img-precontainer">
+					<div class="img-precontainer-mini <?php if($is_img) echo 'original-thumb' ?>">
+						<div class="filetype <?php echo $file_array['extension'] ?> <?php if(in_array($file_array['extension'], $editable_text_file_exts)) echo 'edit-text-file-allowed' ?> <?php if(!$is_icon_thumb){ echo "hide"; }?>"><?php echo $file_array['extension'] ?></div>
 						<div class="img-container-mini">
-							<img data-src="source/<?php echo $result['folder_name']."/".$result['files_name'];?>">
+						<?php if($mini_src!=""){ ?>
+						<img class="<?php echo $show_original_mini ? "original" : "" ?><?php echo $is_icon_thumb_mini ? " icon" : "" ?>" data-src="<?php echo $mini_src;?>">
+						<?php } ?>
+						</div>
+					</div>
+					<div class="img-precontainer-mini directory">
+						<div class="img-container-mini">
+							<span></span>
+							<img class="directory-img" data-src="fm_img/<?php echo $icon_theme;?>/folder<?php if($file==".."){ echo "_back"; }?>.png" />
 						</div>
 					</div>
 						<div class="box">
@@ -1026,8 +1039,15 @@ if(!empty($_POST['searchall'])){
 			</li>
 		<?php
 					}
-		}
-		elseif($_POST['type'] == 2){
+					?>
+	</div>
+	<div class="row-fluid">
+		<ul class="breadcrumb">
+			<span>โฟลเดอร์ที่ต้องการค้นหา</span>
+		</ul>
+<?php
+// End While Files
+// Start While Folder
 
 			$query = $db->specifytable("*","folder","folder_name LIKE '%{$searchall}%'")->execute();
 			 while ($result = mysqli_fetch_assoc($query)) {
@@ -1076,7 +1096,9 @@ if(!empty($_POST['searchall'])){
 		</li>
 		<?php
 		}
-		}
+		?>
+		</div>
+<?php
 }
 else{
 		foreach ($files as $file_array) {
