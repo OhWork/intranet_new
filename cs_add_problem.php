@@ -318,23 +318,8 @@
 	</div>
 	<div class="col-xl-2 col-lg-2 col-md-2"></div>
 	</div>
-<?php echo $form->close();?>
-        <form id="form001" name="form001" method="post" action="">
-   <div>Tags: 
-    <input name="input_q" id="input_q" size="50" />
-    <button type="button" class="showAll_btn">V</button>
-<!--    ส่วนสำหรับกำหนดค่า id ของรายการที่เลือก เพื่อไปใช้งาน-->
-    <input name="h_input_q" type="hidden" id="h_input_q" value="" />
-    </div>
-</form>
-        <pre>
-<?php
-// ส่วนทดสอบแสดงค่า เมื่อกดปุ่มส่งข้อมูล 
-if(count($_POST)>0){
-    print_r($_POST);    
-}
-?>
-</pre>
+<?php echo $form->close(); ?>
+
 <script language = "JavaScript">
 
 $( document ).ready( function () {
