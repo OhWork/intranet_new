@@ -284,10 +284,10 @@
 							<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 form-group has-feedback test'>
 								<select class='form-control' id="ddlsubtypetools" name="subtypetools_subtypetools_id"></select>
 							</div>
-							<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 ohter">
+							<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 other">
 								<label><?php echo $lbdetail;?></label>
 							</div>
-							<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 form-group test ohter'>
+							<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 form-group test other'>
 								<?php echo $txtdetail;?>
 							</div>
 								<input type='hidden' name='problem_status' value='N'>
@@ -365,20 +365,20 @@ $( document ).ready( function () {
 				unhighlight: function (element, errorClass, validClass) {
 					$( element ).parents( ".test" ).addClass( "text-success" ).removeClass( " text-danger" );
 				}	});
-				        $('.ohter').hide();
+				        $('.other').hide();
 $('#ddlsubtypetools').on("change",function(e) {
 	var check =  $("#ddlsubtypetools>option:selected").html();
 	console.log(check.match("ปัญหาอื่นๆ"));
 	if(check.match("ปัญหาอื่นๆ")){
-		$('.ohter').show("slow");
+		$('.other').show("slow");
 		}
 	else {
-		$('.ohter').hide("slow");
+		$('.other').hide("slow");
 	}
 	});
 
  $(function() {
-         
+
         $( "#ipzpo_user" ).autocomplete({ // ใช้งาน autocomplete กับ input text id=tags
             minLength: 0, // กำหนดค่าสำหรับค้นหาอย่างน้อยเป็น 0 สำหรับใช้กับปุ่ใแสดงทั้งหมด
             source: "cs_get_user.php", // กำหนดให้ใช้ค่าจากการค้นหาในฐานข้อมูล
@@ -390,7 +390,7 @@ $('#ddlsubtypetools').on("change",function(e) {
                         var s=$(this).text();
                         var newText=s.replace(matcher, "<b>$1</b>");    //      แทนค่าที่ตรงกันเป็นตัวหนา
                         $(this).html(newText); // แสดงรายการ autocomplete หลังจากปรับรูปแบบแล้ว
-                    }); 
+                    });
                 }
             },
             select: function( event, ui ) {
@@ -404,20 +404,20 @@ $('#ddlsubtypetools').on("change",function(e) {
            //},500);
             }
         });
- 
+
         $(".showAll_btn").click(function(){
-            // ตรวจสอบถ้ามีการแสดงรายการทั้งหมดอยู่แล้ว  
-            if ($( "#ipzpo_user" ).autocomplete( "widget" ).is( ":visible" ) ) {  
-                $( "#ipzpo_user" ).autocomplete( "close" ); // ปิดการแสดงรายการทั้งหมด  
-                return;  
-            }  
-            // ส่งค่าว่างปล่าวไปทำการค้นหา จะได้ผลลัพธ์เป็นรายการทั้งหมด  
-            $( "#ipzpo_user" ).autocomplete( "search", "" );  
- 
-            $( "#ipzpo_user" ).focus(); //ให้ cursor ไปอยู่ที่ input text id=tags              
+            // ตรวจสอบถ้ามีการแสดงรายการทั้งหมดอยู่แล้ว
+            if ($( "#ipzpo_user" ).autocomplete( "widget" ).is( ":visible" ) ) {
+                $( "#ipzpo_user" ).autocomplete( "close" ); // ปิดการแสดงรายการทั้งหมด
+                return;
+            }
+            // ส่งค่าว่างปล่าวไปทำการค้นหา จะได้ผลลัพธ์เป็นรายการทั้งหมด
+            $( "#ipzpo_user" ).autocomplete( "search", "" );
+
+            $( "#ipzpo_user" ).focus(); //ให้ cursor ไปอยู่ที่ input text id=tags
         });
- 
-         
+
+
     });
  </script>
- 
+
