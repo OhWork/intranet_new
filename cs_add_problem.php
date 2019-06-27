@@ -327,6 +327,14 @@
     <input name="h_input_q" type="hidden" id="h_input_q" value="" />
     </div>
 </form>
+        <pre>
+<?php
+// ส่วนทดสอบแสดงค่า เมื่อกดปุ่มส่งข้อมูล 
+if(count($_POST)>0){
+    print_r($_POST);    
+}
+?>
+</pre>
 <script language = "JavaScript">
 
 $( document ).ready( function () {
@@ -386,7 +394,7 @@ $('#ddlsubtypetools').on("change",function(e) {
 
  $(function() {
          
-        $( "#input_q" ).autocomplete({ // ใช้งาน autocomplete กับ input text id=tags
+        $( "#ipzpo_user" ).autocomplete({ // ใช้งาน autocomplete กับ input text id=tags
             minLength: 0, // กำหนดค่าสำหรับค้นหาอย่างน้อยเป็น 0 สำหรับใช้กับปุ่ใแสดงทั้งหมด
             source: "cs_get_user.php", // กำหนดให้ใช้ค่าจากการค้นหาในฐานข้อมูล
             open:function(){ // เมื่อมีการแสดงรายการ autocomplete
@@ -402,28 +410,29 @@ $('#ddlsubtypetools').on("change",function(e) {
             },
             select: function( event, ui ) {
                 // สำหรับทดสอบแสดงค่า เมื่อเลือกรายการ
-//              console.log( ui.item ?
-//                  "Selected: " + ui.item.label :
-//                  "Nothing selected, input was " + this.value);
-                $("#h_input_q").val(ui.item.id); // เก็บ id ไว้ใน hiden element ไว้นำค่าไปใช้งาน
-//                setTimeout(function(){
-//                  $("#h_input_q").parents("form").submit(); // เมื่อเลือกรายการแล้วให้ส่งค่าฟอร์ม ทันที
-//                },500);
+              //console.log( ui.item ?
+               //   "Selected: " + ui.item.label :
+                //  "Nothing selected, input was " + this.value);
+                $("#ipzpo_address").val(ui.item.id); // เก็บ id ไว้ใน hiden element ไว้นำค่าไปใช้งาน
+                //setTimeout(function(){
+                 // $("#h_input_q").parents("form").submit(); // เมื่อเลือกรายการแล้วให้ส่งค่าฟอร์ม ทันที
+           //},500);
             }
         });
  
         $(".showAll_btn").click(function(){
             // ตรวจสอบถ้ามีการแสดงรายการทั้งหมดอยู่แล้ว  
-            if ($( "#input_q" ).autocomplete( "widget" ).is( ":visible" ) ) {  
-                $( "#input_q" ).autocomplete( "close" ); // ปิดการแสดงรายการทั้งหมด  
+            if ($( "#ipzpo_user" ).autocomplete( "widget" ).is( ":visible" ) ) {  
+                $( "#ipzpo_user" ).autocomplete( "close" ); // ปิดการแสดงรายการทั้งหมด  
                 return;  
             }  
             // ส่งค่าว่างปล่าวไปทำการค้นหา จะได้ผลลัพธ์เป็นรายการทั้งหมด  
-            $( "#input_q" ).autocomplete( "search", "" );  
+            $( "#ipzpo_user" ).autocomplete( "search", "" );  
  
-            $( "#input_q" ).focus(); //ให้ cursor ไปอยู่ที่ input text id=tags              
+            $( "#ipzpo_user" ).focus(); //ให้ cursor ไปอยู่ที่ input text id=tags              
         });
  
          
     });
  </script>
+ 
