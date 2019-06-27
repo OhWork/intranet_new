@@ -936,15 +936,18 @@ if(!empty($_POST['searchall'])){ ?>
 			?>
 			<li>
 				<figure data-name="<?php $result['files_name'];?>" data-type="<?php if($is_img){ echo "img"; }else{ echo "file"; } ?>">
+					<?php   $namefiles = $result['files_name'];
+							$checktype = explode('.',$namefiles);
+
+					?>
 					<div class="img-precontainer-mini <?php if($is_img) echo 'original-thumb' ?>">
-						<div class="filetype <?php echo $file_array['extension'] ?> <?php if(in_array($file_array['extension'], $editable_text_file_exts)) echo 'edit-text-file-allowed' ?> <?php if(!$is_icon_thumb){ echo "hide"; }?>"><?php echo $file_array['extension'] ?></div>
+						<div class="filetype <?php echo $checktype[1] ?> <?php if(in_array($checktype[1], $editable_text_file_exts)) echo 'edit-text-file-allowed' ?> <?php if(!$is_icon_thumb){ echo "hide"; }?>"><?php echo $checktype[1] ?></div>
 						<div class="img-container-mini">
-						<?php if($mini_src!=""){ ?>
-						<img class="<?php echo $show_original_mini ? "original" : "" ?><?php echo $is_icon_thumb_mini ? " icon" : "" ?>" data-src="<?php echo $mini_src;?>">
-						<?php } ?>
+						<img class="<?php echo $show_original_mini ? "original" : "" ?><?php echo $is_icon_thumb_mini ? " icon" : "" ?>"
+						data-src="<?php echo 'fm_img/ico/'.$checktype[1].'.jpg';?>">
 						</div>
 					</div>
-					<div class="img-precontainer-mini directory">
+					<div class="img-precontainer-mini directory" style="margin-top :30px;">
 						<div class="img-container-mini">
 							<span></span>
 							<img class="directory-img" data-src="fm_img/<?php echo $icon_theme;?>/folder<?php if($file==".."){ echo "_back"; }?>.png" />
