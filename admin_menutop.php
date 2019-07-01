@@ -1,7 +1,7 @@
 
 <nav class="navbar navbar-dark bg-dark pt-3 pb-3">
-	<button type="button" id="sidebarCollapse" class="btn pt-0 slidemenu" style="">
-		<span data-feather="align-left"></span>
+	<button type="button" id="sidebarCollapse" class="btn slidemenu" style="">
+		<img src="images/menus_while.png" height="24px" width="24px"/>
 	</button>
 	<div class="dropdown" style="color:#ffffff;">
 		<div style="height:34px;" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
