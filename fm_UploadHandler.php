@@ -1461,7 +1461,7 @@ class UploadHandler
 			if ( $thumbResult!==true)
 			{
 				if($thumbResult === false){
-					$res['files'][0]->error = trans("Not enough Memory");
+// 					$res['files'][0]->error = trans("Not enough Memory");
 				}else{
 					$res['files'][0]->error = $thumbResult;
 				}

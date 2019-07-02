@@ -1341,11 +1341,11 @@ else{
 			$file_prevent_rename = isset($filePermissions[$file]['prevent_rename']) && $filePermissions[$file]['prevent_rename'];
 			$file_prevent_delete = isset($filePermissions[$file]['prevent_delete']) && $filePermissions[$file]['prevent_delete'];
 			}
-			?>		<figure class ="files_name" data-name="<?php echo $file ?>" data-type="<?php if($is_img){ echo "img"; }else{ echo "file"; } ?>">
+			?>		<figure data-name="<?php echo $file ?>" data-type="<?php if($is_img){ echo "img"; }else{ echo "file"; } ?>">
 					<?php
 
-// 						$filescutname = explode('.', $file_array['file']); ?>
-<!-- 					<input type="hidden" class="files_name" value="<?php echo $filescutname[0] ?>"> -->
+						$filescutname = explode('.', $file_array['file']); ?>
+					<input type="hidden" class="files_name" value="<?php echo $filescutname[0] ?>">
 				<a href="javascript:void('')" class="link" data-file="<?php echo $file;?>" data-function="<?php echo $apply;?>">
 				<div class="img-precontainer">
 					<?php if($is_icon_thumb){ ?><div class="filetype"><?php echo $file_array['extension'] ?></div><?php } ?>
