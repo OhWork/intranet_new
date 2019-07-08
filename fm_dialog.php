@@ -1109,6 +1109,8 @@ if(!empty($_POST['searchall'])){ ?>
 <?php
 }
 else{
+
+		$i = 0;
 		foreach ($files as $file_array) {
 			$file=$file_array['file'];
 			if($file == '.' || ( substr($file, 0, 1) == '.' && isset( $file_array[ 'extension' ] ) && $file_array[ 'extension' ] == strtolower(trans( 'Type_dir' ) )) || (isset($file_array['extension']) && $file_array['extension']!=strtolower(trans('Type_dir'))) || ($file == '..' && $subdir == '') || in_array($file, $hidden_folders) || ($filter!='' && $n_files>$file_number_limit_js && $file!=".." && stripos($file,$filter)===false)){
@@ -1147,7 +1149,7 @@ else{
 				$file_prevent_delete = isset($filePermissions[$file]['prevent_delete']) && $filePermissions[$file]['prevent_delete'];
 				}
 				?><figure data-name="<?php echo $file ?>" class="<?php if($file=="..") echo "back-";?>directory" data-type="<?php if($file!=".."){ echo "dir"; } ?>">
-				<input type="hidden" class="folder_name" value="<?php echo $file;?>"/>
+				<input type="hidden" class="folder_name<?php echo $i;?>" value="<?php echo $file;?>"/>
 				<?php if($file==".."){ ?>
 					<input type="hidden" class="path" value="<?php echo str_replace('.','',dirname($rfm_subfolder.$subdir));?>"/>
 					<input type="hidden" class="path_thumb" value="<?php echo dirname($thumbs_path.$subdir)."/";?>"/>
@@ -1212,14 +1214,16 @@ else{
 
 					?>
 					<figcaption>
-						<a href="javascript:void('')" class="tip-left edit-button rename-file-paths <?php if($rename_folders && !$file_prevent_rename) echo "rename-folder";?>" title="<?php echo trans('Rename')?>" data-folder="1" data-permissions="<?php echo $file_array['permissions']; ?>" data-path="<?php echo $rfm_subfolder.$subdir.$file;?>" value ="<?php echo $file_array['folder_id'];?>">
+						<a href="javascript:void('')" class="tip-left edit-button rename-file-paths <?php if($rename_folders && !$file_prevent_rename) echo "rename-folder";?>" title="<?php echo trans('Rename')?>" data-folder="1" data-permissions="<?php echo $file_array['permissions']; ?>" data-path="<?php echo $rfm_subfolder.$subdir.$file;?>" value ="<?php echo $i;?>">
 						<i class="icon-pencil <?php if(!$rename_folders || $file_prevent_rename) echo 'icon-white';?>"></i></a>
 						<a href="javascript:void('')" class="tip-left erase-button <?php if($delete_folders && !$file_prevent_delete) echo "delete-folder";?>" title="<?php echo trans('Erase')?>" data-confirm="<?php echo trans('Confirm_Folder_del');?>" data-path="<?php echo $rfm_subfolder.$subdir.$file;?>" >
 						<i class="icon-trash <?php if(!$delete_folders || $file_prevent_delete) echo 'icon-white';?>"></i>
 						</a>
 					</figcaption>
 			<?php }
-				} ?>
+				}
+				$i++;
+			?>
 				</figure>
 			</li>
 			<?php
@@ -1346,7 +1350,6 @@ else{
 					<?php
 
 						$filescutname = explode('.', $file_array['file']); ?>
-					<input type="hidden" class="test" value="<?php echo $i;?>">
 					<input type="hidden" class="files_name<?php echo $i;?>" value="<?php echo $filescutname[0] ?>">
 				<a href="javascript:void('')" class="link" data-file="<?php echo $file;?>" data-function="<?php echo $apply;?>">
 				<div class="img-precontainer">
