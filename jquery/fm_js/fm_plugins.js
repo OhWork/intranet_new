@@ -4409,8 +4409,6 @@ var bootbox = window.bootbox || (function(document, $) {
                 cb          = arguments[3];
                 defaultVal  = arguments[4];
                 setVal  = arguments[5];
-
-	        console.log(setVal);
                 break;
             default:
                 throw new Error("Incorrect number of arguments: expected 1-5");
@@ -4588,7 +4586,6 @@ var bootbox = window.bootbox || (function(document, $) {
 
         // push an empty body into which we'll inject the proper content later
         parts.push("<div class='modal-body'></div>");
-		console.log(options.header);
         if (buttons) {
 			if (options.header == 'Insert folder name:') {
 			    parts.push("<div class='modal-footer' id='test'><button id='checkname' class='btn btn-warning' onclick='getDataFromDb()'>ตรวจสอบ</button><div id='textshowalert' class='text-danger' style='float:left;'><p id='textshow' value='textshow'>กรุณาคลิกปุ่มตรวจสอบก่อน</p></div>"+buttons+"</div>");

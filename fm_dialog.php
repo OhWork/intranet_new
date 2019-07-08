@@ -1224,7 +1224,7 @@ else{
 			</li>
 			<?php
 			}
-
+			$i = 0;
 			$files_prevent_duplicate = array();
 			foreach ($files as $nu=>$file_array) {
 				$file=$file_array['file'];
@@ -1346,7 +1346,8 @@ else{
 					<?php
 
 						$filescutname = explode('.', $file_array['file']); ?>
-					<input type="hidden" class="files_name" value="<?php echo $filescutname[0] ?>">
+					<input type="hidden" class="test" value="<?php echo $i;?>">
+					<input type="hidden" class="files_name<?php echo $i;?>" value="<?php echo $filescutname[0] ?>">
 				<a href="javascript:void('')" class="link" data-file="<?php echo $file;?>" data-function="<?php echo $apply;?>">
 				<div class="img-precontainer">
 					<?php if($is_icon_thumb){ ?><div class="filetype"><?php echo $file_array['extension'] ?></div><?php } ?>
@@ -1414,7 +1415,7 @@ else{
 					<?php }
 						if(!empty($_SESSION['user_name'])){
 						 ?>
-					<a href="javascript:void('')" class="tip-left edit-button rename-file-paths <?php if($rename_files && !$file_prevent_rename) echo "rename-file";?>" title="<?php echo trans('Rename')?>" data-folder="0" data-permissions="<?php echo $file_array['permissions']; ?>" data-path="<?php echo $rfm_subfolder.$subdir .$file;?>">
+					<a href="javascript:void('')" class="tip-left edit-button rename-file-paths <?php if($rename_files && !$file_prevent_rename) echo "rename-file";?>" title="<?php echo trans('Rename')?>" data-folder="0" data-permissions="<?php echo $file_array['permissions']; ?>" data-path="<?php echo $rfm_subfolder.$subdir .$file;?>" value="<?php echo $i; ?>">
 					<i class="icon-pencil <?php if(!$rename_files || $file_prevent_rename) echo 'icon-white';?>"></i></a>
 
 					<a href="javascript:void('')" class="tip-left erase-button <?php if($delete_files && !$file_prevent_delete) echo "delete-file";?>" title="<?php echo trans('Erase')?>" data-confirm="<?php echo trans('Confirm_del');?>" data-path="<?php echo $rfm_subfolder.$subdir.$file;?>">
@@ -1428,6 +1429,7 @@ else{
 			</figure>
 		</li>
 			<?php
+			$i++;
 			}
 			}
 	?></div>
