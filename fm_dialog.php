@@ -963,7 +963,11 @@ if(!empty($_POST['searchall'])){ ?>
 												$getposition = $select['folder_position'];
 												$files_name = $select['folder_name'];
 										}
-									echo '/'.$files_name.'/'.$result['folder_name'].'/'.$result['files_name'];
+											if($select['folder_position'] == ''){
+												echo '/'.$files_name.'/'.$result['folder_name'].'/'.$result['files_name'];
+											}else{
+
+											}
 								}else{
 									echo '/'.$result['folder_name']."/".$result['files_name'];
 								} ?>"><h4><?php echo $result['files_name']; ?></h4></a>
@@ -1013,7 +1017,7 @@ if(!empty($_POST['searchall'])){ ?>
 									while ($getposition !=0){
 										$select =$db->findByPK('folder','folder_id',$getposition,'folder_position')->executeAssoc();
 										$getposition = $select['folder_position'];
-										$folder_name[] = $select;
+										$folder_name = $select;
 									}
 									$folder_path_name[] = $folder_name;
 									$path_file = $result['folder_name'];
