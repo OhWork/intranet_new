@@ -958,6 +958,7 @@ if(!empty($_POST['searchall'])){ ?>
 							<a href="source<?php
 								 if($result['folder_position'] != ''){
 									 $getposition = $result['folder_position'];
+/*
 									while ($getposition !=''){
 											$select =$db->findByPK('folder','folder_id',$getposition)->executeAssoc();
 												$getposition = $select['folder_position'];
@@ -966,8 +967,19 @@ if(!empty($_POST['searchall'])){ ?>
 											if($select['folder_position'] == ''){
 												echo '/'.$files_name.'/'.$result['folder_name'].'/'.$result['files_name'];
 											}else{
-
-											}
+*/
+												$i=0;
+												$showsearch = array();
+												while($getposition !=''){
+												$selectelse =$db->findByPK('folder','folder_position',$getposition)->execute();
+													foreach($selectelse as $show){
+														$selectshow = $show['folder_position'];
+													}
+													array_push($showsearch,"blue","yellow");
+													$i++;
+													$getposition = $selectshow;
+												}
+// 											}
 								}else{
 									echo '/'.$result['folder_name']."/".$result['files_name'];
 								} ?>"><h4><?php echo $result['files_name']; ?></h4></a>
