@@ -956,19 +956,18 @@ if(!empty($_POST['searchall'])){ ?>
 					</div>
 						<div class="box">
 							<a href="source<?php
-								 if($result['folder_position'] != 0){
+								 if($result['folder_position'] != ''){
 									 $getposition = $result['folder_position'];
-									while ($getposition !=0){
-										$select =$db->findByPK('folder','folder_id',$getposition,'folder_position')->executeAssoc();
-										$getposition = $select['folder_position'];
-										$folder_name[] = $select;
-									}
-									$folder_path_name[] = $folder_name;
-									$path_file = $result['folder_name'];
-									for($i = count($folder_path_name[0]); $i>=0; $i--){
-								$path_search  = $folder_path_name[0][$i]['folder_name'].'/';
-								echo ($path_search);}
-								echo $result['files_name'];
+									while ($getposition !=''){
+											$select =$db->findByPK('folder','folder_id',$getposition)->executeAssoc();
+												$getposition = $select['folder_position'];
+												$files_name = $select['folder_name'];
+										}
+											if($select['folder_position'] == ''){
+												echo '/'.$files_name.'/'.$result['folder_name'].'/'.$result['files_name'];
+											}else{
+
+											}
 								}else{
 									echo '/'.$result['folder_name']."/".$result['files_name'];
 								} ?>"><h4><?php echo $result['files_name']; ?></h4></a>
@@ -977,25 +976,16 @@ if(!empty($_POST['searchall'])){ ?>
 								?>
 								<a href="admin_index.php?url=fm_dialog.php&?editor=0&type=0&lang=en_EN&popup=0&crossdomain=0&field_id=&relative_url=0&akey=key&fldr=
 									<?php if($result['folder_name'] != ''){
-									 		$getposition = $result['folder_name'];
-										 	while ($getposition !=0){
-												$select =$db->findByPK('folder','folder_id',$getposition,'folder_name')->executeAssoc();
+										$getposition = $result['folder_position'];
+										 	while ($getposition !=''){
+												$select =$db->findByPK('folder','folder_id',$getposition,'folder_position')->executeAssoc();
 												$getposition = $select['folder_position'];
-												$folder_name = $select;
-												print_r($folder_name);
+												$folder_name = $select['folder_name'];
 											}
-										  }
-										  for($i = count($folder_name); $i>0; $i--){
-											$path_search  = $folder_name[$i]['folder_name'].'/';
-											if($folder_name['folder_position'] ==''){
-												echo $path_search;
+											echo $folder_name.'/'.$result['folder_name'];
 											}else{
-													print_r(count($path_search));
-												//for(){
-												echo $path_search.'/'.$result['folder_name'];
-												//}
+											echo $result['folder_name'];
 											}
-										}
 										  ?>">
 								<?php }else{ ?>
 								<a href="index.php?url=fm_dialog.php&?editor=0&type=0&lang=en_EN&popup=0&crossdomain=0&field_id=&relative_url=0&akey=key&fldr=
@@ -1027,7 +1017,7 @@ if(!empty($_POST['searchall'])){ ?>
 									while ($getposition !=0){
 										$select =$db->findByPK('folder','folder_id',$getposition,'folder_position')->executeAssoc();
 										$getposition = $select['folder_position'];
-										$folder_name[] = $select;
+										$folder_name = $select;
 									}
 									$folder_path_name[] = $folder_name;
 									$path_file = $result['folder_name'];
