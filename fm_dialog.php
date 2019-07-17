@@ -969,8 +969,10 @@ if(!empty($_POST['searchall'])){ ?>
 								     for($i = sizeof($folders); $i >= 0; $i--) {
 								         echo $folders[$i].'/';
 								     }
-									     echo $result['folder_name']."/".$result['files_name'];
-								 } ?>"><h4><?php echo $result['files_name']; ?></h4></a>
+									     echo '/'.$result['folder_name']."/".$result['files_name'];
+								 }else{
+									 	echo $result['folder_name']."/".$result['files_name'];
+										} ?>"><h4><?php echo $result['files_name']; ?></h4></a>
 								<?php
 									if(!empty($_SESSION['subzoo_zoo_zoo_id'])){
 								?>
@@ -1035,7 +1037,11 @@ if(!empty($_POST['searchall'])){ ?>
 		<li>
 			<?php  if(!empty($_SESSION['subzoo_zoo_zoo_id'])){ ?>
 			<figure class="<?php if($file=="..") echo "back-";?>directory" data-name="<?php echo $result['folder_name'];?>"  data-type="<?php if($file!=".."){ echo "dir"; } ?>">
-				<a class="folder-link" href="admin_index.php?url=fm_dialog.php&?editor=0&type=0&lang=en_EN&popup=0&crossdomain=0&field_id=&relative_url=0&akey=key&fldr=<?php echo $result['folder_name']?>">
+				<a class="folder-link" href="admin_index.php?url=fm_dialog.php&?editor=0&type=0&lang=en_EN&popup=0&crossdomain=0&field_id=&relative_url=0&akey=key&fldr=<?php
+								for($i = sizeof($folders); $i >= 0; $i--) {
+								         echo $folders[$i].'/';
+								     }
+									     echo '/'.$result['folder_name']?>">
 					<div class="img-precontainer-mini directory">
 						<div class="img-container-mini">
 							<span></span>
@@ -1058,7 +1064,10 @@ if(!empty($_POST['searchall'])){ ?>
 			else{
 				?>
 			<figure class="<?php if($file=="..") echo "back-";?>directory" data-name="<?php echo $result['folder_name'];?>"  data-type="<?php if($file!=".."){ echo "dir"; } ?>">
-				<a class="folder-link" href="index.php?url=fm_dialog.php&?editor=0&type=0&lang=en_EN&popup=0&crossdomain=0&field_id=&relative_url=0&akey=key&fldr=<?php echo $result['folder_name']?>">
+				<a class="folder-link" href="index.php?url=fm_dialog.php&?editor=0&type=0&lang=en_EN&popup=0&crossdomain=0&field_id=&relative_url=0&akey=key&fldr=<?php for($i = sizeof($folders); $i >= 0; $i--) {
+								         echo $folders[$i].'/';
+								     }
+									     echo '/'.$result['folder_name']?>">
 						<div class="img-precontainer-mini directory" style="margin-top: -5px;">
 							<div class="img-container-mini">
 								<span></span>
