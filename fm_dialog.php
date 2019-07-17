@@ -970,7 +970,7 @@ if(!empty($_POST['searchall'])){ ?>
 								         echo $folders[$i].'/';
 								     }
 									     echo $result['folder_name']."/".$result['files_name'];
-								?>"><h4><?php echo $result['files_name']; ?></h4></a>
+								 } ?>"><h4><?php echo $result['files_name']; ?></h4></a>
 								<?php
 									if(!empty($_SESSION['subzoo_zoo_zoo_id'])){
 								?>
@@ -980,7 +980,7 @@ if(!empty($_POST['searchall'])){ ?>
 								         echo $folders[$i].'/';
 								     }
 									     echo $result['folder_name'];
-										  ?>">
+										}  ?>">
 								<?php }else{ ?>
 								<a href="index.php?url=fm_dialog.php&?editor=0&type=0&lang=en_EN&popup=0&crossdomain=0&field_id=&relative_url=0&akey=key&fldr=
 									<?php if($result['folder_name'] != ''){
@@ -989,13 +989,13 @@ if(!empty($_POST['searchall'])){ ?>
 										     }
 											     echo $result['folder_name'];
 												  ?>">
-								<?php } ?>
+								<?php }} ?>
 								<p style="font-size: 12px; color:gray;"><?php echo $result['folder_name']; ?></p></a>
 							<figcaption>
 							<h4><?php echo $result['cdl_count']; ?></h4>
 							</figcaption>
 							<figcaption>
-							<?php if($result['folder_position'] != 0){
+							<?php if($result['folder_position'] != ''){
 									 $getposition = $result['folder_position'];
 									while ($getposition !=0){
 										$select =$db->findByPK('folder','folder_id',$getposition,'folder_position')->executeAssoc();
@@ -1029,7 +1029,6 @@ if(!empty($_POST['searchall'])){ ?>
 <?php
 // End While Files
 // Start While Folder
-
 			$query = $db->specifytable("*","folder","folder_name LIKE '%{$searchall}%'")->execute();
 			 while ($result = mysqli_fetch_assoc($query)) {
 			?>
