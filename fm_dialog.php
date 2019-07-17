@@ -1039,7 +1039,7 @@ if(!empty($_POST['searchall'])){ ?>
 			<figure class="<?php if($file=="..") echo "back-";?>directory" data-name="<?php echo $result['folder_name'];?>"  data-type="<?php if($file!=".."){ echo "dir"; } ?>">
 				<a class="folder-link" href="admin_index.php?url=fm_dialog.php&?editor=0&type=0&lang=en_EN&popup=0&crossdomain=0&field_id=&relative_url=0&akey=key&fldr=<?php
 								for($i = sizeof($folders); $i >= 0; $i--) {
-								         echo $folders[$i].'/';
+								         echo $folders[$i];
 								     }
 									     echo '/'.$result['folder_name']?>">
 					<div class="img-precontainer-mini directory">
@@ -1065,7 +1065,7 @@ if(!empty($_POST['searchall'])){ ?>
 				?>
 			<figure class="<?php if($file=="..") echo "back-";?>directory" data-name="<?php echo $result['folder_name'];?>"  data-type="<?php if($file!=".."){ echo "dir"; } ?>">
 				<a class="folder-link" href="index.php?url=fm_dialog.php&?editor=0&type=0&lang=en_EN&popup=0&crossdomain=0&field_id=&relative_url=0&akey=key&fldr=<?php for($i = sizeof($folders); $i >= 0; $i--) {
-								         echo $folders[$i].'/';
+								         echo $folders[$i];
 								     }
 									     echo '/'.$result['folder_name']?>">
 						<div class="img-precontainer-mini directory" style="margin-top: -5px;">
