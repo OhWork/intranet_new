@@ -1037,11 +1037,6 @@ if(!empty($_POST['searchall'])){ ?>
 		<li>
 			<?php  if(!empty($_SESSION['subzoo_zoo_zoo_id'])){ ?>
 			<figure class="<?php if($file=="..") echo "back-";?>directory" data-name="<?php echo $result['folder_name'];?>"  data-type="<?php if($file!=".."){ echo "dir"; } ?>">
-				<a class="folder-link" href="admin_index.php?url=fm_dialog.php&?editor=0&type=0&lang=en_EN&popup=0&crossdomain=0&field_id=&relative_url=0&akey=key&fldr=<?php
-								for($i = sizeof($folders); $i >= 0; $i--) {
-								         echo $folders[$i];
-								     }
-									     echo '/'.$result['folder_name']?>">
 					<div class="img-precontainer-mini directory">
 						<div class="img-container-mini">
 							<span></span>
@@ -1049,25 +1044,45 @@ if(!empty($_POST['searchall'])){ ?>
 						</div>
 					</div>
 					<div class="box">
+						<?php
+						    $folders = [];
+						    $folder_id = $result['folder_position'];
+						    while ($folder_id != null) {
+						        $selectelse = $db->findByPK('folder','folder_id', $folder_id)->executeAssoc();
+						        array_push($folders, $selectelse['folder_name']);
+						        $folder_id = $selectelse['folder_position'];
+						    }
+                        ?>
+						<a class="folder-link" href="admin_index.php?url=fm_dialog.php&?editor=0&type=0&lang=en_EN&popup=0&crossdomain=0&field_id=&relative_url=0&akey=key&fldr=
+									<?php if($result['folder_name'] != ''){
+										 for($i = sizeof($folders); $i >= 0; $i--) {
+								         echo $folders[$i].'/';
+								     }
+									     echo $result['folder_name'];
+										}  ?>">
 						<h4><?php echo $result['folder_name']; ?></h4>
+						</a>
 						<?php if($result['folder_position'] == ''){ ?>
 						<p style="font-size: 12px; color:gray;"><?php echo "โฟลเดอร์หลัก"; ?></p>
 						<?php }else{
 							$query2 = $db->findByPK("folder","folder_id",$result['folder_position'])->executeAssoc();
 							?>
+							<a class="folder-link" href="admin_index.php?url=fm_dialog.php&?editor=0&type=0&lang=en_EN&popup=0&crossdomain=0&field_id=&relative_url=0&akey=key&fldr=
+									<?php if($result['folder_name'] != ''){
+										 for($i = sizeof($folders); $i >= 0; $i--) {
+								         echo $folders[$i].'/';
+								     }
+										}  ?>">
 							<p style="font-size: 12px; color:gray;"><?php echo $query2['folder_name']; ?></p>
+							</a>
 						<?php } ?>
 					</div>
-				</a>
 			</figure>
 			<?php			}
 			else{
 				?>
 			<figure class="<?php if($file=="..") echo "back-";?>directory" data-name="<?php echo $result['folder_name'];?>"  data-type="<?php if($file!=".."){ echo "dir"; } ?>">
-				<a class="folder-link" href="index.php?url=fm_dialog.php&?editor=0&type=0&lang=en_EN&popup=0&crossdomain=0&field_id=&relative_url=0&akey=key&fldr=<?php for($i = sizeof($folders); $i >= 0; $i--) {
-								         echo $folders[$i];
-								     }
-									     echo '/'.$result['folder_name']?>">
+
 						<div class="img-precontainer-mini directory" style="margin-top: -5px;">
 							<div class="img-container-mini">
 								<span></span>
@@ -1075,9 +1090,36 @@ if(!empty($_POST['searchall'])){ ?>
 							</div>
 						</div>
 					<div class="box">
+						<?php
+						    $folders = [];
+						    $folder_id = $result['folder_position'];
+						    while ($folder_id != null) {
+						        $selectelse = $db->findByPK('folder','folder_id', $folder_id)->executeAssoc();
+						        array_push($folders, $selectelse['folder_name']);
+						        $folder_id = $selectelse['folder_position'];
+						    }
+                        ?>
+						<a class="folder-link" href="index.php?url=fm_dialog.php&?editor=0&type=0&lang=en_EN&popup=0&crossdomain=0&field_id=&relative_url=0&akey=key&fldr=<?php for($i = sizeof($folders); $i >= 0; $i--) {
+								         echo $folders[$i].'/';
+								     }
+									     echo '/'.$result['folder_name']?>">
 						<h4><?php echo $result['folder_name']; ?></h4>
+						</a>
+						<?php if($result['folder_position'] == ''){ ?>
+						<p style="font-size: 12px; color:gray;"><?php echo "โฟลเดอร์หลัก"; ?></p>
+						<?php }else{
+							$query2 = $db->findByPK("folder","folder_id",$result['folder_position'])->executeAssoc();
+							?>
+							<a class="folder-link" href="index.php?url=fm_dialog.php&?editor=0&type=0&lang=en_EN&popup=0&crossdomain=0&field_id=&relative_url=0&akey=key&fldr=
+									<?php if($result['folder_name'] != ''){
+										 for($i = sizeof($folders); $i >= 0; $i--) {
+								         echo $folders[$i].'/';
+								     }
+										}  ?>">
+							<p style="font-size: 12px; color:gray;"><?php echo $query2['folder_name']; ?></p>
+							</a>
+						<?php } ?>
 					</div>
-				</a>
 			</figure>
 				<?php
 					}
