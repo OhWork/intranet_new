@@ -1136,6 +1136,11 @@ a:hover {
 #sidebar {
     min-width: 250px;
     max-width: 250px;
+	-webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -ms-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
 }
 
 #sidebar.active {
@@ -1165,4 +1170,8 @@ a:hover {
 .slidemenu:hover {
 	color:#1DE9B6;
 	border-color:#1DE9B6;
+}
+.animateslidebar {
+  -webkit-animation-delay: 10.0s;
+  animation-delay: 10.0s;
 }
