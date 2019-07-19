@@ -81,40 +81,43 @@
     </nav>
 </div>
 <script>
-	var nav_status;
+    var nav_status;
     $('.nav-link').on('click',function(e){
 		var checkde = e.currentTarget;
-		var idmenushow = checkde.dataset.target;
-		var cutidmenu = idmenushow.substring(1);
-		var idmenu = document.getElementById(cutidmenu);
 		if (checkde.getAttribute('aria-expanded') != 'true') {
+			var idmenushow = checkde.dataset.target;
+			var cutidmenu = idmenushow.substring(1);
+			var idmenu = document.getElementById(cutidmenu);
 			$('.nav-link').attr( 'aria-expanded','false');
 			if($('.sub-menu').hasClass("show")){
 			 $('.sub-menu').addClass("animat-out");
-				if($('.sub-menu').hasClass("animat-out")){
 						setTimeout(function(){
 							if(!idmenu.classList.contains('show')){
 								$( ".sub-menu" ).not(idmenu).removeClass('show');
 								idmenu.parentNode.classList.add("show");
 						        idmenu.parentNode.classList.remove("animat-out");
+						        idmenu.parentNode.parentNode.classList.remove("animat-out");
+								idmenu.parentNode.parentNode.classList.add("show");
 							}
 				        }, 400)
 				        idmenu.classList.remove("animat-out");
 				        if(idmenu.getAttribute('aria-expanded') != 'true'){
+							idmenu.classList.remove('animat-out');
 					        idmenu.parentNode.classList.add("show");
 					        idmenu.parentNode.classList.remove("animat-out");
+					        idmenu.parentNode.parentNode.classList.remove("animat-out");
+							idmenu.parentNode.parentNode.classList.add("show");
 						}
-				}
 		    }
 		    else{
-			    console.log('else di wa');
 			    idmenu.classList.remove('animat-out');
-			    console.log(idmenu.classList);
 		    }
 		    nav_status = 0 ;
 		    $('.nav-link').removeClass("animat-test");
-	    }
-	});
+
+	        }
+		});
+/*
 	function navAnimate(id,sub){
 		var menusum  = sub;
 		var menuid = id;
@@ -159,5 +162,6 @@
 	navAnimate(2,3);
 	navAnimate(3,2);
 	navAnimate(4,9);
+*/
 
 </script>
