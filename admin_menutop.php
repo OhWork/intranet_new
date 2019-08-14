@@ -1,12 +1,12 @@
 
-<nav class="navbar navbar-dark bg-dark">
+<nav class="navbar navbar-expand navbar-dark bg-dark static-top">
                 <a class="navbar-brand brandedit sidebarhead pt-3" href="#">
                         <h3 class="mb-0 mt-1" style="font-weight: bold;">INTRANET</h3>
 	</a>
-	<button id="sidebarCollapse" class="btn btn-link btn-sm text-white order-1 order-sm-0 ml-5" style="float:left;">
+	<button id="sidebarCollapse" class="btn btn-link btn-sm text-white order-1 order-sm-0 ml-5 mt-2">
                         <i class="fas fa-bars"></i>
 	</button>
-	<div class="dropdown" style="color:#ffffff;">
+	<div class="dropdown" style="color:#ffffff;margin-left: auto;">
 		<div style="height:34px;" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 			<div class="rounded-circle" style="height:31px;padding-left:8px;padding-right:8px;padding-top:3px;float:left;background-color:#455A64;margin-right:3px;">
 				<span data-feather="users"></span>

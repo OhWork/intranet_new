@@ -1,9 +1,9 @@
 <?php if (!empty($_SESSION['user_name'])):
         $user_zoo = $_SESSION['subzoo_zoo_zoo_id'];
 ?>
-<nav class="bg-dark printdisplaynone" id="sidebar">
+<nav class="bg-dark printdisplaynone" id="sidebar" style="min-height: calc(100vh - 56px);">
 				<ul class="nav flex-column">
-				  <li class="nav-item">
+				  <li class="nav-item active">
 					<a class="nav-link edittext mucl" href="admin_index.php">
 					  <span data-feather="home"></span>หน้าหลัก <span class="sr-only">(current)</span>
 					</a>
