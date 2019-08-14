@@ -28,6 +28,7 @@
             include_once 'clearsession.php';
         ?>
          <!-- Bootstrap core CSS -->
+         <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
         <link rel="stylesheet" href="CSS/bootstrap.css">
         <!-- Custom styles for this template -->
 		<link rel="stylesheet" href="CSS/datetime-boostrap4.css">
@@ -40,19 +41,22 @@
         <link rel="stylesheet" href="CSS/jquery.mapify.css">
         <link rel="stylesheet" href="CSS/jquery.datetimepicker.css">
         <link rel="stylesheet" href="CSS/animate.css">
+        <link rel="stylesheet" href="CSS/sb-admin.css">
         <link rel="stylesheet" href="CSS/main.css">
         <link rel="stylesheet" href="CSS/print.css" media="print">
         <link rel="stylesheet" href="CSS/font-awesome.css">
         </head>
 
 <body onload="setDefault()">
-	<div class="wrapper">
-			<?php include 'admin_menu.php'; ?>
-			<div class="content">
-				<?php include 'admin_menutop.php';?>
-				<?php include 'admin_content.php';?>
-			</div>
-    </div>
+        <?php include 'admin_menutop.php';?>
+	<div id="wrapper">
+                        <?php include 'admin_menu.php'; ?>
+                        <div id="content-wrapper">
+                        <div class="container-fluid mb-3">
+		<?php include 'admin_content.php';?>
+                        </div>
+                        </div>
+                </div>
     <script>
     feather.replace()
     $(function() { $('#popup').popover()});

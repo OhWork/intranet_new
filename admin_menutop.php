@@ -1,7 +1,10 @@
 
-<nav class="navbar navbar-dark bg-dark pt-3 pb-3">
-	<button type="button" id="sidebarCollapse" class="btn slidemenu">
-		<img src="images/menus_while.png" height="24px" width="24px"/>
+<nav class="navbar navbar-dark bg-dark">
+                <a class="navbar-brand brandedit sidebarhead pt-3" href="#">
+                        <h3 class="mb-0 mt-1" style="font-weight: bold;">INTRANET</h3>
+	</a>
+	<button id="sidebarCollapse" class="btn btn-link btn-sm text-white order-1 order-sm-0 ml-5" style="float:left;">
+                        <i class="fas fa-bars"></i>
 	</button>
 	<div class="dropdown" style="color:#ffffff;">
 		<div style="height:34px;" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

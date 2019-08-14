@@ -6,6 +6,7 @@
 <script src="jquery/datetimepicker-boostrap4.js"></script>
 <script src="jquery/popper.js"></script>
 <script src="jquery/bootstrap.js"></script>
+<script src="jquery/sb-admin.min.js"></script>
 <script src="jquery/jquery-ui.js"></script>
 <script src="jquery/jquery.dataTables.js"></script>
 <!-- <script src="jquery/dropdown.js"></script> -->

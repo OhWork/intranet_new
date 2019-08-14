@@ -2,9 +2,6 @@
         $user_zoo = $_SESSION['subzoo_zoo_zoo_id'];
 ?>
 <nav class="bg-dark printdisplaynone" id="sidebar">
-				<a class="navbar-brand brandedit sidebarhead w-100 mb-2 pt-3" href="#">
-					<h3 class="mb-0 mt-1" style="font-weight: bold;" align="center">INTRANET</h3>
-				</a>
 				<ul class="nav flex-column">
 				  <li class="nav-item">
 					<a class="nav-link edittext mucl" href="admin_index.php">
