@@ -136,12 +136,12 @@
 					</td>
 					<td style="padding-left: 50px;">
 						<?php
-							if($rs['eventconfer_status_ds'] == 1){
-								echo "<img src='images/icons/checked.png' style='width:18px; height: 18px;'/>"." "."สวนสัตว์ดุสิต";
-							}
-						else{
-								echo "<img src='images/icons/unchecked.png' style='width:15px; height: 15px;'>"." "." สวนสัตว์ดุสิต";
-							}
+						//	if($rs['eventconfer_status_ds'] == 1){
+						//		echo "<img src='images/icons/checked.png' style='width:18px; height: 18px;'/>"." "."สวนสัตว์ดุสิต";
+						//	}
+						//else{
+						//		echo "<img src='images/icons/unchecked.png' style='width:15px; height: 15px;'>"." "." สวนสัตว์ดุสิต";
+						//	}
 						?>
 					</td>
 				</tr>
@@ -328,7 +328,7 @@
 			<!--บรรทัดที่ 9-->
 				<tr>
 					<td><b>ผู้ประสานงาน</b></td>
-					<td style="border-bottom: 1.5px;border-bottom-style: dotted;border-bottom-color: #000000;width:270px;padding-left:8px;"><?php echo $rs['eventconferroom_namers'];?></td>
+					<td style="border-bottom: 1.5px;border-bottom-style: dotted;border-bottom-color: #000000;width:270px;padding-left:8px;"><?php echo $rs['eventconfer_namers'];?></td>
 					<td>เบอร์โทร</td>
 					<td style="border-bottom: 1.5px;border-bottom-style: dotted;border-bottom-color: #000000;width:270px;"><center><?php echo $rs['eventconfer_tel'];?></center></td>
 				</tr>
@@ -363,8 +363,8 @@
 		<table style="margin-top:10px;border-left: solid 1px #000;border-top: solid 1px #000;border-right: solid 1px #000;">
 			<!--บรรทัดที่ 10-->
 				<tr>
-					<td style="width:300px; height:21px;border-right: solid 1px #000;"><b>(1.) ผู้อำนวยการสำนัก / ผู้อำนวยการสวนสัตว์</b></td>
-					<td><b>(2.) ผู้อำนวยการองค์การสวนสัตว์/รองผู้อำนวยการองค์การสวนสัตว์</b></td>
+					<td style="width:300px; height:21px;border-right: solid 1px #000;"><b>(๑) ผู้อำนวยการสำนัก / ผู้อำนวยการสวนสัตว์</b></td>
+					<td><b>(๒) ผู้อำนวยการองค์การสวนสัตว์/รองผู้อำนวยการองค์การสวนสัตว์</b></td>
 				</tr>
 		</table>
 		<table style="border-left: solid 1px #000;border-right: solid 1px #000; margin-top:-4px;">
@@ -421,8 +421,8 @@
 		<table style="border-left: solid 1px #000;border-right: solid 1px #000; margin-top:-2.5px">
 			<!--บรรทัดที่ 14-->
 				<tr>
-					<td style="width:300px;border-right: solid 1px #000;"><b>(3.) เจ้าหน้าที่สำนักเทคโนโลยีสารสนเทศ</b></td>
-					<td style="width:371px;"><b>(4.) ผู้อำนวยการสำนักเทคโนโลยีสารสนเทศ</b></td>
+					<td style="width:300px;border-right: solid 1px #000;"><b>(๓) เจ้าหน้าที่สำนักเทคโนโลยีสารสนเทศ</b></td>
+					<td style="width:371px;"><b>(๔) ผู้อำนวยการสำนักเทคโนโลยีสารสนเทศ</b></td>
 				</tr>
 		</table>
 		<table style="border-left: solid 1px #000;border-right: solid 1px #000; margin-top:-5.2px">
@@ -490,25 +490,25 @@
 		<table style="margin-top: -5px;">
 			<!--บรรทัดที่ 20-->
 				<tr>
-					<td style="padding-left: 20px;">1. เพื่อความถูกต้อง ผู้ขอใช้ระบบประชุมทางไกล (Video Conference) ต้องแจ้งผู้ประสานหน่วยงานที่จะเข้าร่วมประชุมด้วยตัวท่านเอง</td>
+					<td style="padding-left: 20px;">๑. เพื่อความถูกต้อง ผู้ขอใช้ระบบประชุมทางไกล (Video Conference) ต้องแจ้งผู้ประสานหน่วยงานที่จะเข้าร่วมประชุมด้วยตัวท่านเอง</td>
 				</tr>
 		</table>
 		<table style="margin-top: -5px;">
 			<!--บรรทัดที่ 20-->
 				<tr>
-					<td style="padding-left: 20px;">2. สำนักเทคโนโลยีสารสนเทศจะจัดเตรียมอุปกรณ์พร้อมติดตั้งระบบและประสานเจ้าหน้าที่ในการติดตั้งระบบของหน่วยงานเกี่ยวข้อง</td>
+					<td style="padding-left: 20px;">๒. สำนักเทคโนโลยีสารสนเทศจะจัดเตรียมอุปกรณ์พร้อมติดตั้งระบบและประสานเจ้าหน้าที่ในการติดตั้งระบบของหน่วยงานเกี่ยวข้อง</td>
 				</tr>
 		</table>
 		<table style="margin-top: -5px;">
 			<!--บรรทัดที่ 20-->
 				<tr>
-					<td style="padding-left: 20px;">3. กรุณาประสานงาน<u>ล่วงหน้าไม่น้อยกว่า 3 วันทำการ</u> เพื่อให้ IT จะได้เตรียมความพร้อม เมื่อส่งเรืองแล้ว ติดตามผลได้ที่ เบอร์โทรศัพท์ 02-280-7697 IP Phone: 1040 email:it@zoothailand.org</td>
+					<td style="padding-left: 20px;">๓. กรุณาประสานงาน<u>ล่วงหน้าไม่น้อยกว่า ๓ วันทำการ</u> เพื่อให้ IT จะได้เตรียมความพร้อม เมื่อส่งเรืองแล้ว ติดตามผลได้ที่ เบอร์โทรศัพท์ ๐๒-๕๘๗๐๐๕๕ IP Phone: ๒๑๒ email:it@zoothailand.org</td>
 				</tr>
 		</table>
 		<table style="margin-left:580px;">
 			<!--บรรทัดที่ 20-->
 				<tr>
-					<td style="border: solid 1px #000;padding-left: 5px;padding-right: 5px;">FM-IT-06 / 0</u></td>
+					<td style="border: solid 1px #000;padding-left: 5px;padding-right: 5px;">FM - IT - 06 /1</u></td>
 				</tr>
 		</table>
     </body>
@@ -516,7 +516,16 @@
 <?php
 $html = ob_get_contents();
 ob_end_clean();
-$pdf = new \Mpdf\Mpdf(['mode' => 'th']);
+try {
+  $pdf = new \Mpdf\Mpdf([
+    'tempDir' => __DIR__ . '/../tmp', // uses the current directory's parent "tmp" subfolder
+    'setAutoTopMargin' => 'stretch',
+    'setAutoBottomMargin' => 'stretch'
+    ,'mode' => 'th']);
+} catch (\Mpdf\MpdfException $e) {
+    print "Creating an mPDF object failed with" . $e->getMessage();
+}
+//$pdf = new \Mpdf\Mpdf(['mode' => 'th']);
 $stylesheet .= file_get_contents('CSS/pdf.css');
 $pdf->WriteHTML($stylesheet,1);
 $pdf->SetDisplayMode('fullpage');

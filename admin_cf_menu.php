@@ -28,30 +28,6 @@
     			      </ul>
     			<?php
         }
-        if ($user_zoo == 10 || $user_zoo == 11) {
-            ?>
-
-    			      <a class="nav-link dropdown-item bnmenusub2 edittext mucl" id="nav-3-animate-2" href="#cfsub2" data-toggle="collapse" data-target="#cfsub2"><span data-feather="chevron-right"></span>สวนสัตว์ดุสิต</a>
-    	                <ul class="sub-menu collapse bnmenusub1" id="cfsub2">
-    	                <?php $rsroomzpo =$db->countTable('conferroom','zoo_zoo_id',11)->execute();
-    			              $rsroomzpo2 =$db->findByPK('conferroom','zoo_zoo_id',11)->execute();
-    			              $countroomzpo = mysqli_fetch_array($rsroomzpo,MYSQLI_NUM);
-    				       if($countroomzpo[0] > 0){
-        				       while ($showroomzpo = mysqli_fetch_array($rsroomzpo2,MYSQLI_ASSOC)){
-    			        ?>
-
-    		                <a class="nav-link bnmenusub2 edittext mucl" href="admin_index.php?url=cf_showroom.php&id=<?php echo $showroomzpo['conferroom_id'];?>">
-        		                <?php echo $showroomzpo['conferroom_name'];?>
-        		            </a>
-
-        		            <?php
-            		          }
-        			     }else{ ?>
-    				             <li class="nav-link dropdown-item"><a class="dropdown-item" href="#">ยังไม่มีข้อมูล</a></li>
-    			      <?php } ?>
-    			      </ul>
-    			       <?php
-        }
         if ($user_zoo == 10 || $user_zoo == 12) {
             ?>
     			      <a class="nav-link dropdown-item bnmenusub2 edittext mucl" id="nav-3-animate-3" href="#cfsub3" data-toggle="collapse" data-target="#cfsub3"><span data-feather="chevron-right"></span>สวนสัตว์เปิดเขาเขียว</a>
@@ -240,29 +216,7 @@
     			      </ul>
     			      <?php
 				        }
-				        if ($user_zoo == 10 || $user_zoo == 11) {
-				            ?>
-    			      <a class="nav-link dropdown-item bnmenusub2 edittext mucl" id="nav-4-animate-2" href="#cfosub2" data-toggle="collapse" data-target="#cfosub2"><span data-feather="chevron-right"></span>สวนสัตว์ดุสิต</a>
-    	                <ul class="sub-menu collapse bnmenusub1" id="cfosub2">
-    	                <?php $rsroomzpo =$db->countTable('conferroom','zoo_zoo_id',11)->execute();
-    			              $rsroomzpo2 =$db->findByPK('conferroom','zoo_zoo_id',11)->execute();
-    			              $countroomzpo = mysqli_fetch_array($rsroomzpo,MYSQLI_NUM);
-    				       if($countroomzpo[0] > 0){
-        				       while ($showroomzpo = mysqli_fetch_array($rsroomzpo2,MYSQLI_ASSOC)){
-    			        ?>
-
-    		                <a class="nav-link bnmenusub2 edittext mucl" href="admin_index.php?url=cf_showroom_online.php&id=<?php echo $showroomzpo['conferroom_id'];?>">
-        		                <?php echo $showroomzpo['conferroom_name'];?>
-        		            </a>
-
-        		            <?php
-            		          }
-        			     }else{ ?>
-    				             <li class="nav-link"><a class="dropdown-item" href="#">ยังไม่มีข้อมูล</a></li>
-    			      <?php } ?>
-    			      </ul>
-    			       <?php
-        }
+				        
         if ($user_zoo == 10 || $user_zoo == 12) {
             ?>
     			      <a class="nav-link dropdown-item bnmenusub2 edittext mucl" id="nav-4-animate-3" href="#cfosub3" data-toggle="collapse" data-target="#cfosub3"><span data-feather="chevron-right"></span>สวนสัตว์เปิดเขาเขียว</a>

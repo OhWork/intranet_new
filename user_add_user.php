@@ -400,7 +400,7 @@ $(document).ready(function() {
     });
 
 
-/*
+/*-
     $('#user_user').focusout(function(){
     var max_length = 16;
 	     var this_length = max_length-$(this).val().length; // หาจำนวนตัวอักษรที่เหลือ
