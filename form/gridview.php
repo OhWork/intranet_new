@@ -430,5 +430,4 @@ class gridView{
 				echo $html;
 	}
 }
-//
 ?>
