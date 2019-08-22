@@ -360,125 +360,125 @@
 					<td style="border-bottom: 1.5px;border-bottom-style: dotted;border-bottom-color: #000000;width:260px;height:23px;"><!--ใส่CODEตรงนี้--></td>
 				</tr>
 		</table>
-		<table style="margin-top:10px;border-left: solid 1px #000;border-top: solid 1px #000;border-right: solid 1px #000;">
+		<table style="margin-top:10px;border-left: solid 1px #000;border-top: solid 1px #000;border-right: solid 1px #000;border-spacing: 0;">
 			<!--บรรทัดที่ 10-->
 				<tr>
-					<td style="width:300px; height:21px;border-right: solid 1px #000;"><b>(๑) ผู้อำนวยการสำนัก / ผู้อำนวยการสวนสัตว์</b></td>
+					<td style="width:300px; height:21px;border-right: solid 1px #000;border-spacing: 0;"><b>(๑) ผู้อำนวยการสำนัก / ผู้อำนวยการสวนสัตว์</b></td>
 					<td><b>(๒) ผู้อำนวยการองค์การสวนสัตว์/รองผู้อำนวยการองค์การสวนสัตว์</b></td>
 				</tr>
 		</table>
-		<table style="border-left: solid 1px #000;border-right: solid 1px #000; margin-top:-4px;">
+		<table style="border-left: solid 1px #000;border-right: solid 1px #000;border-spacing: 0;">
 				<tr>
-					<td style="width:300px;padding-left: 10px; border-right: solid 1px #000;"><b>(ผู้ขอใช้งานระบบ Video Conference)</b></td>
+					<td style="width:300px;padding-left: 10px; border-right: solid 1px #000;border-spacing: 0;"><b>(ผู้ขอใช้งานระบบ Video Conference)</b></td>
 					<td style="padding-left: 100px;"><img src="images/icons/unchecked.png" / style="width:20px; height: 20px;"> อนุมัติ</td>
-					<td style="padding-left: 50px;padding-right: 93px;"><img src="images/icons/unchecked.png" / style="width:20px; height: 20px;"> ไม่อนุมัติ</td>
+					<td style="padding-left: 50px;padding-right: 92.5px;"><img src="images/icons/unchecked.png" / style="width:20px; height: 20px;"> ไม่อนุมัติ</td>
 				</tr>
 		</table>
-		<table style="border-left: solid 1px #000;border-right: solid 1px #000; margin-top:-4px;">
+		<table style="border-left: solid 1px #000;border-right: solid 1px #000;border-spacing: 0;">
 				<tr>
 					<td style="height:10px;width:300px;border-bottom: 1.5px;border-right: solid 1px #000;"><!--ใส่CODEตรงนี้--></td>
-					<td style="height:10px;width:371px;border-bottom: 1.5px;"><!--ใส่CODEตรงนี้--></td>
+					<td style="height:10px;width:366.4px;border-bottom: 1.5px;"><!--ใส่CODEตรงนี้--></td>
 				</tr>
 		</table>
-		<table style="border-left: solid 1px #000;border-right: solid 1px #000; margin-top:-4px;">
+		<table style="border-left: solid 1px #000;border-right: solid 1px #000;border-spacing: 0;">
 				<tr>
 					<td style="padding-left: 9.7px;">ลงชื่อ</td>
-					<td style="width:260px;border-bottom: 1.5px;border-bottom-style: dotted;border-bottom-color: #000000;border-right: solid 1px #000;"><!--ใส่CODEตรงนี้--></td>
+					<td style="width:262px;border-bottom: 1.5px;border-bottom-style: dotted;border-bottom-color: #000000;border-right: solid 1px #000;"><!--ใส่CODEตรงนี้--></td>
 					<td style="padding-left:50px;">ลงชื่อ</td>
-					<td style="width:290.5px;border-bottom: 1.5px;border-bottom-style: dotted;border-bottom-color: #000000;"><!--ใส่CODEตรงนี้--></td>
+					<td style="width:288px;border-bottom: 1.5px;border-bottom-style: dotted;border-bottom-color: #000000;"><!--ใส่CODEตรงนี้--></td>
 				</tr>
 		</table>
-		<table style="border-left: solid 1px #000;border-right: solid 1px #000; margin-top:-5.2px;">
+		<table style="border-left: solid 1px #000;border-right: solid 1px #000;border-spacing: -1px;">
 				<tr>
 					<td style="padding-left: 9.5px;">ตำแหน่ง</td>
-					<td style="width:245.5px;border-bottom: 1.5px;border-bottom-style: dotted;border-bottom-color: #000000;border-right: solid 1px #000;"><!--ใส่CODEตรงนี้--></td>
+					<td style="width:248.5px;border-bottom: 1.5px;border-bottom-style: dotted;border-bottom-color: #000000;border-right: solid 1px #000;"><!--ใส่CODEตรงนี้--></td>
 					<td style="padding-left:50px;">ตำแหน่ง</td>
-					<td style="width:275.5px;border-bottom: 1.5px;border-bottom-style: dotted;border-bottom-color: #000000;"><!--ใส่CODEตรงนี้--></td>
+					<td style="width:275px;border-bottom: 1.5px;border-bottom-style: dotted;border-bottom-color: #000000;"><!--ใส่CODEตรงนี้--></td>
 				</tr>
 		</table>
-		<table style="border-left: solid 1px #000;border-right: solid 1px #000; margin-top:-5.2px;">
+		<table style="border-left: solid 1px #000;border-right: solid 1px #000;border-spacing: 0;">
 				<tr>
 					<td style="padding-left: 10px;">วันที่</td>
 					<td style="width:30px;border-bottom: 1.5px;border-bottom-style: dotted;border-bottom-color: #000000;"><!--ใส่CODEตรงนี้--></td>
 					<td style="padding-left: 10px;">เดือน</td>
 					<td style="width:100px;border-bottom: 1.5px;border-bottom-style: dotted;border-bottom-color: #000000;"><!--ใส่CODEตรงนี้--></td>
 					<td style="padding-left: 10px;">พ.ศ.</td>
-					<td style="width:59px;border-bottom: 1.5px;border-bottom-style: dotted;border-bottom-color: #000000;border-right: solid 1px #000;"><!--ใส่CODEตรงนี้--></td>
+					<td style="width:65px;border-bottom: 1.5px;border-bottom-style: dotted;border-bottom-color: #000000;border-right: solid 1px #000;"><!--ใส่CODEตรงนี้--></td>
 					<td style="padding-left:50px;">วันที่</td>
 					<td style="width:30px;border-bottom: 1.5px;border-bottom-style: dotted;border-bottom-color: #000000;"><!--ใส่CODEตรงนี้--></td>
 					<td style="padding-left: 10px;">เดือน</td>
 					<td style="width:100px;border-bottom: 1.5px;border-bottom-style: dotted;border-bottom-color: #000000;"><!--ใส่CODEตรงนี้--></td>
 					<td style="padding-left: 9.9px;">พ.ศ.</td>
-					<td style="width:90px;border-bottom: 1.5px;border-bottom-style: dotted;border-bottom-color: #000000;"><!--ใส่CODEตรงนี้--></td>
+					<td style="width:91.5px;border-bottom: 1.5px;border-bottom-style: dotted;border-bottom-color: #000000;"><!--ใส่CODEตรงนี้--></td>
 				</tr>
 		</table>
-		<table style="border-left: solid 1px #000;border-right: solid 1px #000;border-bottom: solid 1px #000;margin-top:-7.2px;">
+		<table style="border-left: solid 1px #000;border-right: solid 1px #000;border-bottom: solid 1px #000;border-spacing: 0;">
 				<tr>
 					<td style="width:300px;height:7px; border-right: solid 1px #000;"></td>
-					<td style="width:371px;height:7px;"></td>
+					<td style="width:366.5px;height:7px;"></td>
 				</tr>
 		</table>
-		<table style="border-left: solid 1px #000;border-right: solid 1px #000; margin-top:-2.5px">
+		<table style="border-left: solid 1px #000;border-right: solid 1px #000;border-spacing: 0;">
 			<!--บรรทัดที่ 14-->
 				<tr>
 					<td style="width:300px;border-right: solid 1px #000;"><b>(๓) เจ้าหน้าที่สำนักเทคโนโลยีสารสนเทศ</b></td>
-					<td style="width:371px;"><b>(๔) ผู้อำนวยการสำนักเทคโนโลยีสารสนเทศ</b></td>
+					<td style="width:366.5px;"><b>(๔) ผู้อำนวยการสำนักเทคโนโลยีสารสนเทศ</b></td>
 				</tr>
 		</table>
-		<table style="border-left: solid 1px #000;border-right: solid 1px #000; margin-top:-5.2px">
+		<table style="border-left: solid 1px #000;border-right: solid 1px #000;border-spacing: 0;">
 				<tr>
-					<td style="border-right: solid 1px #000;padding-left: 9.8px;padding-right: 155px;"><img src="images/icons/unchecked.png" / style="width:20px; height: 20px;"> ดำเนินการได้ตามที่ขอ</td>
-					<td style="padding-right: 367.5px;"></td>
+					<td style="border-right: solid 1px #000;padding-left: 9.8px;padding-right: 157px;"><img src="images/icons/unchecked.png" / style="width:20px; height: 20px;"> ดำเนินการได้ตามที่ขอ</td>
+					<td style="padding-right: 365.3px;"></td>
 				</tr>
 		</table>
-		<table style="border-left: solid 1px #000;border-right: solid 1px #000; margin-top:-5.2px">
+		<table style="border-left: solid 1px #000;border-right: solid 1px #000;border-spacing: 0;">
 				<tr>
-					<td style="border-right: solid 1px #000;padding-left: 9.7px;padding-right: 54.5px;"><img src="images/icons/unchecked.png" / style="width:20px; height: 20px;"> ไม่สามารถดำเนินการได้ตามที่ขอ เนื่องจาก</td>
-					<td style="padding-right: 367.5px;"></td>
+					<td style="border-right: solid 1px #000;padding-left: 9.7px;padding-right: 56.5px;"><img src="images/icons/unchecked.png" / style="width:20px; height: 20px;"> ไม่สามารถดำเนินการได้ตามที่ขอ เนื่องจาก</td>
+					<td style="padding-right: 365.3px;"></td>
 				</tr>
 		</table>
-		<table style="border-left: solid 1px #000;border-right: solid 1px #000; margin-top:-5.2px">
+		<table style="border-left: solid 1px #000;border-right: solid 1px #000;border-spacing: 0;">
 				<tr>
 					<td style="height:15px;width:300px;border-bottom: dotted 1.5px #000000;border-right: solid 1px #000;"><!--ใส่CODEตรงนี้--></td>
-					<td style="height:15px;padding-right: 367.5px;"></td>
+					<td style="height:15px;padding-right: 365.5px;"></td>
 				</tr>
 		</table>
-		<table style="border-left: solid 1px #000;border-right: solid 1px #000; margin-top:-5.2px">
+		<table style="border-left: solid 1px #000;border-right: solid 1px #000;border-spacing: 0">
 				<tr>
-					<td style="padding-left: 9.8px;">ลงชื่อ</td>
-					<td style="width:260px;border-bottom: 1.5px;border-bottom-style: dotted;border-bottom-color: #000000;border-right: solid 1px #000;"><!--ใส่CODEตรงนี้--></td>
+					<td style="padding-left: 10px;">ลงชื่อ</td>
+					<td style="width:261px;border-bottom: 1.5px;border-bottom-style: dotted;border-bottom-color: #000000;border-right: solid 1px #000;"><!--ใส่CODEตรงนี้--></td>
 					<td style="padding-left:50px;">ลงชื่อ</td>
-					<td style="width:290.3px;border-bottom: 1.5px;border-bottom-style: dotted;border-bottom-color: #000000;"><!--ใส่CODEตรงนี้--></td>
+					<td style="width:289.5px;border-bottom: 1.5px;border-bottom-style: dotted;border-bottom-color: #000000;"><!--ใส่CODEตรงนี้--></td>
 				</tr>
 		</table>
-		<table style="border-left: solid 1px #000;border-right: solid 1px #000; margin-top:-5.2px">
+		<table style="border-left: solid 1px #000;border-right: solid 1px #000;border-spacing: 0;">
 				<tr>
 					<td style="padding-left: 9.8px;">ตำแหน่ง</td>
-					<td style="width:245.2px;border-bottom: 1.5px;border-bottom-style: dotted;border-bottom-color: #000000;border-right: solid 1px #000;"><!--ใส่CODEตรงนี้--></td>
+					<td style="width:246.2px;border-bottom: 1.5px;border-bottom-style: dotted;border-bottom-color: #000000;border-right: solid 1px #000;"><!--ใส่CODEตรงนี้--></td>
 					<td style="padding-left:50px;">ตำแหน่ง</td>
-					<td style="width:275.5px;border-bottom: 1.5px;border-bottom-style: dotted;border-bottom-color: #000000;"><!--ใส่CODEตรงนี้--></td>
+					<td style="width:274.5px;border-bottom: 1.5px;border-bottom-style: dotted;border-bottom-color: #000000;"><!--ใส่CODEตรงนี้--></td>
 				</tr>
 		</table>
-		<table style="border-left: solid 1px #000;border-right: solid 1px #000; margin-top:-5.2px">
+		<table style="border-left: solid 1px #000;border-right: solid 1px #000;border-spacing: 0;">
 				<tr>
 					<td style="padding-left: 10px;">วันที่</td>
 					<td style="width:30px;border-bottom: 1.5px;border-bottom-style: dotted;border-bottom-color: #000000;"><!--ใส่CODEตรงนี้--></td>
 					<td style="padding-left: 10px;">เดือน</td>
 					<td style="width:100px;border-bottom: 1.5px;border-bottom-style: dotted;border-bottom-color: #000000;"><!--ใส่CODEตรงนี้--></td>
 					<td style="padding-left: 10px;">พ.ศ.</td>
-					<td style="width:59px;border-bottom: 1.5px;border-bottom-style: dotted;border-bottom-color: #000000;border-right: solid 1px #000;"><!--ใส่CODEตรงนี้--></td>
+					<td style="width:64.5px;border-bottom: 1.5px;border-bottom-style: dotted;border-bottom-color: #000000;border-right: solid 1px #000;"><!--ใส่CODEตรงนี้--></td>
 					<td style="padding-left:50px;">วันที่</td>
 					<td style="width:30px;border-bottom: 1.5px;border-bottom-style: dotted;border-bottom-color: #000000;"><!--ใส่CODEตรงนี้--></td>
 					<td style="padding-left: 10px;">เดือน</td>
 					<td style="width:100px;border-bottom: 1.5px;border-bottom-style: dotted;border-bottom-color: #000000;"><!--ใส่CODEตรงนี้--></td>
 					<td style="padding-left: 10px;">พ.ศ.</td>
-					<td style="width:90px;border-bottom: 1.5px;border-bottom-style: dotted;border-bottom-color: #000000;"><!--ใส่CODEตรงนี้--></td>
+					<td style="width:92px;border-bottom: 1.5px;border-bottom-style: dotted;border-bottom-color: #000000;"><!--ใส่CODEตรงนี้--></td>
 				</tr>
 		</table>
-		<table style="border-left: solid 1px #000;border-right: solid 1px #000;border-bottom: solid 1px #000; margin-top:-5.2px">
+		<table style="border-left: solid 1px #000;border-right: solid 1px #000;border-bottom: solid 1px #000;border-spacing: 0;">
 				<tr>
 					<td style="width:300px;height:7px; border-right: solid 1px #000;"></td>
-					<td style="width:371px;height:7px;"></td>
+					<td style="width:366.5px;height:7px;"></td>
 				</tr>
 		</table>
 		<table>
