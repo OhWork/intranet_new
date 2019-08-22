@@ -407,6 +407,15 @@
 <?php
 $html = ob_get_contents();
 ob_end_clean();
+try {
+  $pdf = new \Mpdf\Mpdf([
+    'tempDir' => __DIR__ . '/../tmp', // uses the current directory's parent "tmp" subfolder
+    'setAutoTopMargin' => 'stretch',
+    'setAutoBottomMargin' => 'stretch'
+    ,'mode' => 'th']);
+} catch (\Mpdf\MpdfException $e) {
+    print "Creating an mPDF object failed with" . $e->getMessage();
+}
 $pdf = new \Mpdf\Mpdf(['mode' => 'th']);
 $stylesheet .= file_get_contents('CSS/pdf.css');
 $pdf->WriteHTML($stylesheet,1);
