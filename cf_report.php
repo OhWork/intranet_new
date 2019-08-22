@@ -416,7 +416,7 @@ try {
 } catch (\Mpdf\MpdfException $e) {
     print "Creating an mPDF object failed with" . $e->getMessage();
 }
-$pdf = new \Mpdf\Mpdf(['mode' => 'th']);
+//$pdf = new \Mpdf\Mpdf(['mode' => 'th']);
 $stylesheet .= file_get_contents('CSS/pdf.css');
 $pdf->WriteHTML($stylesheet,1);
 $pdf->SetDisplayMode('fullpage');
