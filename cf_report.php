@@ -273,24 +273,24 @@
 					<td style="border-bottom: 1.5px;border-bottom-style: dotted;border-bottom-color: #000000;width:150px;"><center><?php echo $rs['eventconfer_tel'];?></center></td>
 				</tr>
 		</table>
-		<table style="margin-top:10px;border-left: solid 1px #000;border-top: solid 1px #000;border-right: solid 1px #000;">
+		<table style="margin-top:10px;border-left: solid 1px #000;border-top: solid 1px #000;border-right: solid 1px #000;border-spacing: 0;">
 			<!--บรรทัดที่ 10-->
 				<tr>
 					<td style="width:340px; height:25px;border-right: solid 1px #000;padding-left: 10px;">8. <b><u>ผู้ขอใช้ห้องประชุม / ผู้แทน</u></b></td>
 					<td style="width:340px;padding-left: 10px;padding-right: 10px;">9. <b><u>ผู้บังคับบัญชา</u></b></td>
 				</tr>
 		</table>
-		<table style="border-left: solid 1px #000;border-right: solid 1px #000; margin-top:-6px;">
+		<table style="border-left: solid 1px #000;border-right: solid 1px #000; border-spacing: 0;">
 				<tr>
 					<td style="height:25px;width:50px;padding-left: 10.5px;">ลงชื่อ</td>
 					<td style="width:240px;border-bottom: 1.5px;border-bottom-style: dotted;border-bottom-color: #000000;"><!--ใส่CODEตรงนี้--></td>
-					<td style="width:57px;border-right: solid 1px #000;"></td>
+					<td style="width:56.5px;border-right: solid 1px #000;"></td>
 					<td style="height:25px;width:50px;padding-left:10px;">ลงชื่อ</td>
 					<td style="width:240px;border-bottom: 1.5px;border-bottom-style: dotted;border-bottom-color: #000000;"><!--ใส่CODEตรงนี้--></td>
 					<td style="height:25px;width:57.5px;"></td>
 				</tr>
 		</table>
-		<table style="border-left: solid 1px #000;border-right: solid 1px #000; margin-top:-6px;">
+		<table style="border-left: solid 1px #000;border-right: solid 1px #000; border-spacing: 0;">
 				<tr>
 					<td style="height:25px;width:70px;padding-left: 10.5px;">ตำแหน่ง</td>
 					<td style="width:210px;border-bottom: 1.5px;border-bottom-style: dotted;border-bottom-color: #000000;"><!--ใส่CODEตรงนี้--></td>
@@ -300,17 +300,17 @@
 					<td style="height:25px;width:59px;"></td>
 				</tr>
 		</table>
-		<table style="border-left: solid 1px #000;border-right: solid 1px #000; margin-top:-6px;">
+		<table style="border-left: solid 1px #000;border-right: solid 1px #000; border-spacing: 0;">
 				<tr>
 					<td style="height:25px;width:39.6px;padding-left: 10px;">วันที่</td>
 					<td style="width:238px;border-bottom: 1.5px;border-bottom-style: dotted;border-bottom-color: #000000;"><!--ใส่CODEตรงนี้--></td>
-					<td style="height:25px;width:60px;border-right: solid 1px #000;"></td>
+					<td style="height:25px;width:61px;border-right: solid 1px #000;"></td>
 					<td style="height:25px;width:40.5px;padding-left:10px;">วันที่</td>
 					<td style="width:238px;border-bottom: 1.5px;border-bottom-style: dotted;border-bottom-color: #000000;"><!--ใส่CODEตรงนี้--></td>
-					<td style="height:25px;width:59.5px;"></td>
+					<td style="height:25px;width:60.5px;"></td>
 				</tr>
 		</table>
-		<table style="border-right: solid 1px #000;border-left: solid 1px #000;border-bottom: solid 1px #000; margin-top:-6px;">
+		<table style="border-right: solid 1px #000;border-left: solid 1px #000;border-bottom: solid 1px #000; border-spacing: 0;">
 				<tr style="margin-top:10px;">
 						<td style="width:349.7px;height:7px; border-right: solid 1px #000;"></td>
 					<td style="width:350px;height:7px;"></td>
