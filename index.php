@@ -18,6 +18,7 @@ error_reporting(0);
               include 'database/db_tools.php';
               include 'connect.php';
 			?>
+<link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
 		<link rel="stylesheet" href="CSS/bootstrap.css">
         <link rel="stylesheet" href="CSS/dashboard.css" >
         <link rel="stylesheet" href="CSS/jquery-ui.css">

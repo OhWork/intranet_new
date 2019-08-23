@@ -1,9 +1,8 @@
               <a class="nav-link collapsed nav-link-2 edittext mucl" id="nav-25-animate-4" href="#confer" data-toggle="collapse" data-target="#confer">
-                  <span data-feather="calendar"></span>
-                  ระบบจองห้องประชุม
+                  <i class="far fa-calendar-alt mr-3"></i><span>ระบบจองห้องประชุม</span>
                 </a>
               <!-- sub menu -->
-              <ul class="sub-menu collapse on-sub mmpd" id="confer">
+              <ul class="sub-menu collapse on-sub" id="confer">
                     <a class="nav-link collapsed py-1 nav-link-3 edittext mucl" id="nav-2-animate-1" href="#cf" data-toggle="collapse" data-target="#cf">จัดการห้องประชุม</a>
 	                <ul class="sub-menu collapse bnmenusub1" id="cf">
 		           <?php if ($user_zoo == 10 || $user_zoo == 3) { ?>

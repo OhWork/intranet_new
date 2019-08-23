@@ -1,9 +1,8 @@
                 <a class="nav-link collapsed nav-link-23 edittext mucl" id="nav-29-animate-2" href="#new" data-toggle="collapse" data-target="#new">
-                  <span data-feather="file-text"></span>
-                  ระบบข่าวสาร
+                    <i class="fas fa-newspaper mr-3"></i><span>ระบบข่าวสาร</span>
                 </a>
               <!-- sub menu -->
-              <ul class="sub-menu collapse on-sub mmpd" id="new">
+              <ul class="sub-menu collapse on-sub" id="new">
 	                <a class="nav-link edittext mucl" id="nav-23-animate-1" href="admin_index.php?url=news_show_news.php">
 	                  จัดการข่าว
 	                </a>

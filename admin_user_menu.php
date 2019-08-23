@@ -1,6 +1,6 @@
-<a class="nav-link collapsed nav-link-22 edittext mucl" id="nav-32-animate-5" href="#user" data-toggle="collapse" data-target="#user"><span data-feather="user"></span>ระบบผู้ใช้</a>
+<a class="nav-link collapsed nav-link-22 edittext mucl" id="nav-32-animate-5" href="#user" data-toggle="collapse" data-target="#user"><i class="fas fa-users-cog mr-3"></i><span>ระบบผู้ใช้</span></a>
     <!-- sub menu -->
-    <ul class="sub-menu collapse mmpd" id="user">
+    <ul class="sub-menu collapse" id="user">
 	    <a class="nav-link dropuser edittext mucl" id="nav-22-animate-1" href="admin_index.php?url=user_show_list.php">
 	                  รายการผู้ใช้<span data-feather="chevron-right"></span>
 	    </a>

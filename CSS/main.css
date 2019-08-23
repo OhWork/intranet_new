@@ -1009,9 +1009,6 @@ a:hover {
 .shadow {
   box-shadow: 0 8px 6px -6px black;
 }
-.mmpd {
-	padding-left:25px;
-}
 .mmpd2 {
 	padding-left:10px;
 }
@@ -1134,8 +1131,8 @@ a:hover {
 }
 
 #sidebar {
-    min-width: 250px;
-    max-width: 250px;
+    min-width: 280px;
+    max-width: 280px;
 	-webkit-transition: all 1s ease-in-out;
     -moz-transition: all 1s ease-in-out;
     -ms-transition: all 1s ease-in-out;
@@ -1144,7 +1141,7 @@ a:hover {
 }
 
 #sidebar.active {
-    margin-left: -250px;
+    margin-left: -280px;
 }
 .content {
 	width: 100%;
