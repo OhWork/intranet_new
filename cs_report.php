@@ -55,7 +55,7 @@
     				    </tr>
     				    <tr>
     					<td class='fp row'>
-    						สำนักเทคโนโลยีสารสนเทศ โทร ๐๒-๒๘๐-๗๖๙๗ , IP phone ๑๐๔๐
+    						สำนักเทคโนโลยีสารสนเทศ  เบอร์โทรศัพท์ ๐๒-๕๘๗๐๐๕๕ IP Phone: ๒๑๒
     					</td>
 					</tr>
 					</table>
@@ -345,7 +345,7 @@
 
 					    <table style="margin-left: 600px; margin-top: 30px;">
     					    <tr>
-							 <td class="widthbox30 row"><p>FM-IT-01 /1</p></td>
+							 <td class="widthbox30 row"><p>FM-IT-01 /2</p></td>
     					    </tr>
 					    </table>
     </body>
@@ -353,7 +353,15 @@
 <?php
 $html = ob_get_contents();
 ob_end_clean();
-$pdf = new \Mpdf\Mpdf(['mode' => 'th']);
+try {
+  $pdf = new \Mpdf\Mpdf([
+    'tempDir' => __DIR__ . '/../tmp', // uses the current directory's parent "tmp" subfolder
+    'setAutoTopMargin' => 'stretch',
+    'setAutoBottomMargin' => 'stretch'
+    ,'mode' => 'th']);
+} catch (\Mpdf\MpdfException $e) {
+    print "Creating an mPDF object failed with" . $e->getMessage();
+}
 $stylesheet .= file_get_contents('CSS/pdf.css');
 $pdf->WriteHTML($stylesheet,1);
 $pdf->SetDisplayMode('fullpage');
