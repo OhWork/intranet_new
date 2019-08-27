@@ -1,6 +1,6 @@
-<a class="nav-link collapsed nav-link-16 edittext mucl" id="nav-31-animate-2" href="#trs" data-toggle="collapse" data-target="#trs"><span data-feather="bar-chart"></span>ระบบรายงานจำนวนผู้เข้าชม</a>
+<a class="nav-link collapsed nav-link-16 edittext mucl" id="nav-31-animate-2" href="#trs" data-toggle="collapse" data-target="#trs"><i class="far fa-chart-bar mr-3"></i><span>ระบบรายงานจำนวนผู้เข้าชม</span></a>
     <!-- sub menu -->
-    <ul class="sub-menu collapse mmpd" id="trs">
+    <ul class="sub-menu collapse" id="trs">
 	    <a class="nav-link collapsed py-1 nav-link-17 edittext mucl" id="nav-16-animate-1" href="#trsreport" data-toggle="collapse" data-target="#trsreport">รายงานจำนวนผู้เข้าชมสวนสัตว์<span data-feather="chevron-right"></span></a>
 	        <ul class="sub-menu collapse mmpd2" id="trsreport">
 	            <?php if($user_zoo == 7 || $user_zoo == 10 || $user_zoo == 11){?>

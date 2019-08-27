@@ -1,6 +1,6 @@
-<a class="nav-link collapsed nav-link-1 edittext mucl" id="nav-26-animate-7" href="#cs" data-toggle="collapse" data-target="#cs"><span data-feather="cpu"></span>ระบบแจ้งซ่อมคอมพิวเตอร์</a>
+<a class="nav-link collapsed nav-link-1 edittext mucl" id="nav-26-animate-7" href="#cs" data-toggle="collapse" data-target="#cs"><i class="fas fa-tools mr-3"></i><span>ระบบแจ้งซ่อมคอมพิวเตอร์</span></a>
 <!-- sub menu -->
-<ul class="sub-menu collapse on-sub mmpd" id="cs">
+<ul class="sub-menu collapse on-sub" id="cs">
     <a class="nav-link collapsedv nav-link-15 edittext mucl" id="nav-1-animate-1" href="#cscase" data-toggle="collapse" data-target="#cscase">รายการดำเนินการ<span data-feather="chevron-right"></span></a>
     <ul class="sub-menu collapse mmpd2" id="cscase">
         <a class="nav-link edittext mucl" id="nav-15-animate-1" href="admin_index.php?url=cs_show_fixproblem.php">รายการแจ้งดำเนินการใหม่</a>
