@@ -349,8 +349,12 @@
     		$this->sql = "SELECT * FROM $table,$table2,$table3,$table4 WHERE $column1 = $value1 AND $column2 = $value2 AND $column3 = $value3 AND $column4 = $value4 ORDER BY $order DESC";
     		return $this;
 		}
-        function findByPK56DESC($table,$table2,$table3,$table4,$table5,$column1,$value1,$column2,$value2,$column3,$value3,$column4,$value4,$column5,$value5,$column6,$value6,$order){
+                                function findByPK56DESC($table,$table2,$table3,$table4,$table5,$column1,$value1,$column2,$value2,$column3,$value3,$column4,$value4,$column5,$value5,$column6,$value6,$order){
     		$this->sql = "SELECT * FROM $table,$table2,$table3,$table4,$table5 WHERE $column1 = $value1 AND $column2 = $value2 AND $column3 = $value3 AND $column4 = $value4 AND $column5 = $value5 AND $column6 = $value6 ORDER BY $order DESC";
+    		return $this;
+		}
+                                function findByPK56DESCLIMIT($table,$table2,$table3,$table4,$table5,$column1,$value1,$column2,$value2,$column3,$value3,$column4,$value4,$column5,$value5,$column6,$value6,$order){
+    		$this->sql = "SELECT * FROM $table,$table2,$table3,$table4,$table5 WHERE $column1 = $value1 AND $column2 = $value2 AND $column3 = $value3 AND $column4 = $value4 AND $column5 = $value5 AND $column6 = $value6 ORDER BY $order DESC LIMIT 30";
     		return $this;
 		}
 		function findByPK66DESC($table,$table2,$table3,$table4,$table5,$column1,$value1,$column2,$value2,$column3,$value3,$column4,$value4,$column5,$value5,$column6,$value6,$column7,$value7,$order){
