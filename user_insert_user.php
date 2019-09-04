@@ -81,7 +81,7 @@
             echo $last_id;
         }
     if(!empty($_POST['user_per'])){
-            $link = "admin_index.php";
+            $link = "admin_index.php?url=user_show_list.php";
             header( "Refresh: 2; $link" );
 
         }else{

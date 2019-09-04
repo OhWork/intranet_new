@@ -7,7 +7,6 @@
     <meta name="author" content="">
      <?php    include 'inc_js.php';
               include 'form/main_form.php';
-              include 'form/gridview.php';
               include 'database/db_tools.php';
               include 'connect.php';
       ?>

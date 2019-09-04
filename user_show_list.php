@@ -23,7 +23,7 @@
     $labelsearchipzpo = new label('ค้นหา');
 
 			$rs2 = "user,subzoo,zoo  where ipzpo.subzoo_subzoo_id = subzoo.subzoo_id && subzoo.zoo_zoo_id = zoo.zoo_id ";
-            $rs = $db->findByPK32('user','subzoo','zoo','user.subzoo_subzoo_id','subzoo.subzoo_id','subzoo.zoo_zoo_id','zoo.zoo_id')->execute();  ?> 
+            $rs = $db->findByPK32DESC('user','subzoo','zoo','user.subzoo_subzoo_id','subzoo.subzoo_id','subzoo.zoo_zoo_id','zoo.zoo_id','user_id')->execute();  ?> 
 <div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12' style="margin-top: 16px;">
 	<div class="row">
 		<div class='col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1'></div>

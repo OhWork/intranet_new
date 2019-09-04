@@ -1,9 +1,35 @@
 <?php
 include_once 'change2thaidate.php';
+                include '../database/db_tools.php';
+                //include '../connect.php';
 error_reporting(E_ERROR | E_WARNING | E_PARSE);
 class gridView{
-	public $name,$data,$delete,$edit,$view,$deletetxt,$edittxt,$printtxt,$viewtxt,$header,$width,$pr,$change,$changestatus,$sts,$sts_hrs,$sts_reg,$span,$link,$special,$system,$editdrop,$editdrop2,$editextsup,$editextsup2,$newdesign;
-
+	public    $name,
+                            $data,
+                            $delete,
+                            $edit,
+                            $view,
+                            $deletetxt,
+                            $edittxt,
+                            $printtxt,
+                            $viewtxt,
+                            $header,
+                            $width,
+                            $pr,
+                            $change,
+                            $changestatus,
+                            $sts,
+                            $sts_hrs,
+                            $sts_reg,
+                            $span,
+                            $link,
+                            $special,
+                            $system,
+                            $editdrop,
+                            $editdrop2,
+                            $editextsup,
+                            $editextsup2,
+                            $newdesign;
 
 	function __construct(){
 		$this->deletetxt = 'ลบ';
@@ -67,6 +93,7 @@ class gridView{
 	}
 
 	function renderFromDB($fields, $result){
+                                $db = new db_tools();
 		$html ="";
 		$header ="";
 		$footer ="";
@@ -141,47 +168,28 @@ class gridView{
                 @$status_reg = $r[$this->sts_reg];
                 @$status_plan = $r[$this->sts_plan];
                 @$newdesign = $r[$this->newdesign];
+
 			/* ส่วนตรวจสอบค่าสถานะของแจ้งซ่อมออนไลน์*/
-            @$con = mysqli_connect("localhost","root","","intranet_intranet");
-			@$sql = "SELECT * FROM problem WHERE problem_id = $id"; //ไว้แก้ เปลี่ยนสเตตัส
-			@$sqlhrs = "SELECT * FROM hrctf WHERE hrctf_id = $id"; //ไว้แก้ เปลี่ยนสเตตัส
-                                                @$sqlreg = "SELECT * FROM reguser WHERE reguser_id = $id"; //ไว้แก้ เปลี่ยนสเตตัส
-			@$sqlplan = "SELECT * FROM plan WHERE plan_id = $id"; //ไว้แก้ เปลี่ยนสเตตัส
-			@$sqlnew = "SELECT * FROM news WHERE news_id = $id"; //ไว้แก้ เปลี่ยนสเตตัส
-			@$query= mysqli_query($con,$sql);
-			@$queryhrs= mysqli_query($con,$sqlhrs);
-                                                @$queryreg= mysqli_query($con,$sqlreg);
-			@$queryplan= mysqli_query($con,$sqlplan);
-			@$querynew= mysqli_query($con,$sqlnew);
-			if(!empty($query)){
-			@$rs_c = mysqli_fetch_array($query,MYSQLI_ASSOC);
-			}
-			if(!empty($queryplan)){
-			@$rs_plan = mysqli_fetch_array($queryplan,MYSQLI_ASSOC);
-			}
-			if(!empty($queryhrs)){
-			@$rs_hrs = mysqli_fetch_array($queryhrs,MYSQLI_ASSOC);
-			}
-                                                if(!empty($queryreg)){
-			@$rs_reg = mysqli_fetch_array($queryreg,MYSQLI_ASSOC);
-			}
-			if(!empty($querynew)){
-			@$rs_new = mysqli_fetch_array($querynew,MYSQLI_ASSOC);
-			}
+           // @$con = mysqli_connect("localhost","root","","intranet_intranet");
+                $rs_com = $db->findByPK('problem','problem_id',$id)->executeRow();
+                $rs_hrs = $db->findByPK('hrctf','hrctf_id',$id)->executeRow();
+                $rs_reg = $db->findByPK('reguser','reguser_id',$id)->executeRow();
+                $rs_plan = $db->findByPK('plan','plan_id',$id)->executeRow();
+                $rs_new = $db->findByPK('news','news_id',$id)->executeRow();
                          if(@$status){
-				 if(@$rs_c["problem_status"]=='Y')
+				 if(@$rs_com["problem_status"]=='Y')
 				{
 					$this->changestatus ='btn btn-success editok';
 					$this->span ='glyphicon glyphicon-ok-sign';
 					$this->changetxt = '&nbsp;ดำเนินการแก้ไขแล้ว';
 				}
-				else if(@$rs_c["problem_status"]=='N')
+				else if(@$rs_com["problem_status"]=='N')
 				{
 					$this->changestatus ='btn btn-primary editwait';
 					$this->span ='glyphicon glyphicon-info-sign';
 					$this->changetxt = '&nbsp;รอการดำเนินการ';
 				}
-				else if(@$rs_c["problem_status"]=='S')
+				else if(@$rs_com["problem_status"]=='S')
 				{
 					$this->changestatus ='btn btn-warning editok';
 					$this->span ='glyphicon glyphicon-question-sign';
