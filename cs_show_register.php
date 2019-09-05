@@ -18,135 +18,32 @@ $status = "'N'";
     } );
 } );
 </script>
-<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-	  <!-- Nav tabs -->
-	  <nav class="nav nav-tabs" role="tablist" style="margin-top: 16px;">
-			<a class="nav-item nav-link active" href="#zpo" aria-controls="zpo" role="tab" data-toggle="tab" style="color:#EC7063;" aria-selected="true">องค์การสวนสัตว์</a>
-			<a class="nav-item nav-link" href="#dusitzoo" aria-controls="dusitzoo" role="tab" data-toggle="tab" style="color:#AF7AC5;" aria-selected="false">สวนสัตว์ดุสิต</a>
-			<a class="nav-item nav-link" href="#khaokeawzoo" aria-controls="khaokeawzoo" role="tab" data-toggle="tab" style="color:#5DADE2;" aria-selected="false">สวนสัตว์เปิดเขาเขียว</a>
-			<a class="nav-item nav-link" href="#chiangmaizoo" aria-controls="chiangmaizoo" role="tab" data-toggle="tab" style="color:#48C9B0;" aria-selected="false">สวนสัตว์เชียงใหม่</a>
-			<a class="nav-item nav-link" href="#korachzoo" aria-controls="korachzoo" role="tab" data-toggle="tab"style="color:#58D68D;" aria-selected="false">สวนสัตว์นครราชสีมา</a>
-			<a class="nav-item nav-link" href="#songkhlazoo" aria-controls="songkhlazoo" role="tab" data-toggle="tab" style="color:#F4D03F;" aria-selected="false">สวนสัตว์สงขลา</a>
-			<a class="nav-item nav-link" href="#ubonzoo" aria-controls="ubonzoo" role="tab" data-toggle="tab" style="color:#EB984E;" aria-selected="false">สวนสัตว์อุบลราชธานี</a>
-			<a class="nav-item nav-link" href="#khonkeanzoo" aria-controls="khonkean" role="tab" data-toggle="tab"  style="color:#45B39D;" aria-selected="false">สวนสัตว์ขอนแก่น</a>
-			<a class="nav-item nav-link" href="#khonkeanzoo" aria-controls="khonkean" role="tab" data-toggle="tab"  style="color:#FF6E40;" aria-selected="false">คชอาณาจักร จ.สุรินทร์</a>
-	  </nav>
-	  <!-- Tab panes -->
-	  <div class="tab-content">
-		<div role="tabpanel" class="tab-pane fade show active inf1" role="tabpanel" id="zpo" style="padding-left:16;padding-right:16px;">
+<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3">
+	<div class="row">
+		<div class='col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1'></div>
+		<div class='col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10'>
+			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+				<h4>รายการแจ้งขอใช้ระบบ</h4>
+			</div>
+			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3">
 		   <?php
 				$columns = array('reguser_name_th','reguser_date','subzoo_name','zoo_name');
-				$rs = $db->findByPK34DESC('reguser','subzoo','zoo','reguser.subzoo_subzoo_id','subzoo.subzoo_id','subzoo.zoo_zoo_id','zoo.zoo_id','zoo.zoo_type','1','reguser_status',$status,'reguser_date')->execute();
+				$rs = $db->findByPK33DESC('reguser','subzoo','zoo','reguser.subzoo_subzoo_id','subzoo.subzoo_id','subzoo.zoo_zoo_id','zoo.zoo_id','reguser_status',$status,'reguser_date')->execute();
 				$grid = new gridView();
 				$grid->pr = 'reguser_id';
 				$grid->sts_reg = 'reguser_status';
-				$grid->header = array('<b><center>ชื่อ-สกุล</center></b>','<b><center>วันและเวลา</center></b>','<b><center>ฝ่าย</center></b>','<b><center>สำนัก</center></b>','<b><center>สถานะ</center></b>');
-				$grid->width = array('15%','10%','15%','20%','15%','10%','15%');
+				$grid->header = array('<b><center>ชื่อ-สกุล</center></b>','<b><center>วันและเวลา</center></b>','<b><center>ฝ่าย</center></b>','<b><center>สำนัก</center></b>','<b><center>รายละเอียด</center></b>','<b><center>สถานะ</center></b>');
+				$grid->width = array('15%','10%','15%','20%','5%','12%');
+                                                                $grid->view = '#';
+				$grid->viewtxt =' รายละเอียด';
 				$grid->name = 'table';
 				$grid->change = '#';
 				$grid->renderFromDB($columns,$rs);
 	?>
 		</div>
-		<div role="tabpanel" class="tab-pane fade inf1" role="tabpanel" id="dusitzoo" style="padding-left:16;padding-right:16px;">
-		   <?php
-				$columns = array('reguser_name_th','reguser_date','subzoo_name','zoo_name');
-				$rs = $db->findByPK34DESC('reguser','subzoo','zoo','reguser.subzoo_subzoo_id','subzoo.subzoo_id','subzoo.zoo_zoo_id','zoo.zoo_id','zoo.zoo_id','11','reguser_status',$status,'reguser_date')->execute();
-				$grid = new gridView();
-				$grid->pr = 'reguser_id';
-				$grid->sts_reg = 'reguser_status';
-				$grid->header = array('<b><center>ชื่อ-สกุล</center></b>','<b><center>วันและเวลา</center></b>','<b><center>ฝ่าย</center></b>','<b><center>สำนัก</center></b>','<b><center>สถานะ</center></b>');
-				$grid->width = array('15%','10%','15%','20%','15%','10%','15%');
-				$grid->name = 'table';
-				$grid->change = '#';
-				$grid->renderFromDB($columns,$rs);
-	?>
-	</div>
-		<div role="tabpanel" class="tab-pane fade inf1" role="tabpanel" id="khaokeawzoo" style="padding-left:16;padding-right:16px;">
-		   <?php
-				$columns = array('reguser_name_th','reguser_date','subzoo_name','zoo_name');
-				$rs = $db->findByPK34DESC('reguser','subzoo','zoo','reguser.subzoo_subzoo_id','subzoo.subzoo_id','subzoo.zoo_zoo_id','zoo.zoo_id','zoo.zoo_id','12','reguser_status',$status,'reguser_date')->execute();
-				$grid = new gridView();
-				$grid->pr = 'reguser_id';
-				$grid->sts_reg = 'reguser_status';
-				$grid->header = array('<b><center>ชื่อ-สกุล</center></b>','<b><center>วันและเวลา</center></b>','<b><center>ฝ่าย</center></b>','<b><center>สำนัก</center></b>','<b><center>สถานะ</center></b>');
-				$grid->width = array('15%','10%','15%','20%','15%','10%','15%');
-				$grid->name = 'table';
-				$grid->change = '#';
-				$grid->renderFromDB($columns,$rs);
-	?>
-		</div>
-		<div role="tabpanel" class="tab-pane fade inf1" role="tabpanel" id="chiangmaizoo" style="padding-left:16;padding-right:16px;">
-		   <?php
-				$columns = array('reguser_name_th','reguser_date','subzoo_name','zoo_name');
-				$rs = $db->findByPK34DESC('reguser','subzoo','zoo','reguser.subzoo_subzoo_id','subzoo.subzoo_id','subzoo.zoo_zoo_id','zoo.zoo_id','zoo.zoo_id','13','reguser_status',$status,'reguser_date')->execute();
-				$grid = new gridView();
-				$grid->pr = 'reguser_id';
-				$grid->sts_reg = 'reguser_status';
-				$grid->header = array('<b><center>ชื่อ-สกุล</center></b>','<b><center>วันและเวลา</center></b>','<b><center>ฝ่าย</center></b>','<b><center>สำนัก</center></b>','<b><center>สถานะ</center></b>');
-				$grid->width = array('15%','10%','15%','20%','15%','10%','15%');
-				$grid->name = 'table';
-				$grid->change = '#';
-				$grid->renderFromDB($columns,$rs);
-	?>
-		</div>
-		<div role="tabpanel" class="tab-pane fade inf1" role="tabpanel" id="korachzoo" style="padding-left:16;padding-right:16px;">
-		   <?php
-				$columns = array('reguser_name_th','reguser_date','subzoo_name','zoo_name');
-				$rs = $db->findByPK34DESC('reguser','subzoo','zoo','reguser.subzoo_subzoo_id','subzoo.subzoo_id','subzoo.zoo_zoo_id','zoo.zoo_id','zoo.zoo_id','14','reguser_status',$status,'reguser_date')->execute();
-				$grid = new gridView();
-				$grid->pr = 'reguser_id';
-				$grid->sts_reg = 'reguser_status';
-				$grid->header = array('<b><center>ชื่อ-สกุล</center></b>','<b><center>วันและเวลา</center></b>','<b><center>ฝ่าย</center></b>','<b><center>สำนัก</center></b>','<b><center>สถานะ</center></b>');
-				$grid->width = array('15%','10%','15%','20%','15%','10%','15%');
-				$grid->name = 'table';
-				$grid->change = '#';
-				$grid->renderFromDB($columns,$rs);
-	?>
-		</div>
-		<div role="tabpanel" class="tab-pane fade inf1" role="tabpanel" id="songkhlazoo" style="padding-left:16;padding-right:16px;">
-		   <?php
-				$columns = array('reguser_name_th','reguser_date','subzoo_name','zoo_name');
-				$rs = $db->findByPK34DESC('reguser','subzoo','zoo','reguser.subzoo_subzoo_id','subzoo.subzoo_id','subzoo.zoo_zoo_id','zoo.zoo_id','zoo.zoo_id','15','reguser_status',$status,'reguser_date')->execute();
-				$grid = new gridView();
-				$grid->pr = 'reguser_id';
-				$grid->sts_reg = 'reguser_status';
-				$grid->header = array('<b><center>ชื่อ-สกุล</center></b>','<b><center>วันและเวลา</center></b>','<b><center>ฝ่าย</center></b>','<b><center>สำนัก</center></b>','<b><center>สถานะ</center></b>');
-				$grid->width = array('15%','10%','15%','20%','15%','10%','15%');
-				$grid->name = 'table';
-				$grid->change = '#';
-				$grid->renderFromDB($columns,$rs);
-	?>
-		</div>
-		<div role="tabpanel" class="tab-pane fade inf1" role="tabpanel" id="ubonzoo" style="padding-left:16;padding-right:16px;">
-		   <?php
-				$columns = array('reguser_name_th','reguser_date','subzoo_name','zoo_name');
-				$rs = $db->findByPK34DESC('reguser','subzoo','zoo','reguser.subzoo_subzoo_id','subzoo.subzoo_id','subzoo.zoo_zoo_id','zoo.zoo_id','zoo.zoo_id','16','reguser_status',$status,'reguser_date')->execute();
-				$grid = new gridView();
-				$grid->pr = 'reguser_id';
-				$grid->sts_reg = 'reguser_status';
-				$grid->header = array('<b><center>ชื่อ-สกุล</center></b>','<b><center>วันและเวลา</center></b>','<b><center>ฝ่าย</center></b>','<b><center>สำนัก</center></b>','<b><center>สถานะ</center></b>');
-				$grid->width = array('15%','10%','15%','20%','15%','10%','15%');
-				$grid->name = 'table';
-				$grid->change = '#';
-				$grid->renderFromDB($columns,$rs);
-	?>
-		</div>
-		 <div role="tabpanel" class="tab-pane fade inf1" role="tabpanel" id="khonkeanzoo" style="padding-left:16;padding-right:16px;">
-		   <?php
-				$columns = array('reguser_name_th','reguser_date','subzoo_name','zoo_name');
-				$rs = $db->findByPK34DESC('reguser','subzoo','zoo','reguser.subzoo_subzoo_id','subzoo.subzoo_id','subzoo.zoo_zoo_id','zoo.zoo_id','zoo.zoo_id','17','reguser_status',$status,'reguser_date')->execute();
-				$grid = new gridView();
-				$grid->pr = 'reguser_id';
-				$grid->sts_reg = 'reguser_status';
-				$grid->header = array('<b><center>ชื่อ-สกุล</center></b>','<b><center>วันและเวลา</center></b>','<b><center>ฝ่าย</center></b>','<b><center>สำนัก</center></b>','<b><center>สถานะ</center></b>');
-				$grid->width = array('15%','10%','15%','20%','15%','10%','15%');
-				$grid->name = 'table';
-				$grid->change = '#';
-				$grid->renderFromDB($columns,$rs);
-	?>
-		 </div>
-	  </div>
+                    </div>
+        </div>
 </div>
 <?php
-include_once 'cs_viewdetail.php';
+include_once 'cs_viewregister.php';
 		?>

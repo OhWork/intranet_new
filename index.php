@@ -122,6 +122,26 @@ $('#Modal').on('show.bs.modal', function (event) {
                 }
             });
     })
+    $('#Modal').on('show.bs.modal', function (event) {
+          var button = $(event.relatedTarget) // Button that triggered the modal
+          var recipient = button.data('whatever') // Extract info from data-* attributes
+          var modal = $(this);
+          var dataString = 'id=' + recipient;
+
+            $.ajax({
+                type: "GET",
+                url: "cs_getregister.php",
+                data: dataString,
+                cache: false,
+                success: function (data) {
+                    console.log(data);
+                    modal.find('.ct2').html(data);
+                },
+                error: function(err) {
+                    console.log(err);
+                }
+            });
+    })
     feather.replace()
    $(function(){
      var obj_check=$(".css-require");

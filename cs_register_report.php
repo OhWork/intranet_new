@@ -1,3 +1,13 @@
+<?php
+	ob_start();
+    include_once 'database/db_tools.php';
+    include_once 'connect.php';
+	require_once 'vendor/autoload.php';
+	error_reporting(0);
+
+    $id = $_GET['id'];
+$rs = $db->findByPK33DESC('reguser','subzoo','zoo','reguser.subzoo_subzoo_id','subzoo.subzoo_id','subzoo.zoo_zoo_id','zoo.zoo_id','reguser_id',$id,'reguser_date')->executeAssoc();
+?>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
@@ -54,23 +64,23 @@
 					<table style="width:100%;">
 						<tr>
 							<td style="width:150px;">ข้าพเจ้า(นาย/นาง/นางสาว)</td>
-							<td style="width:250px;border-bottom: dotted 1px #000000;"></td>
+							<td style="width:250px;border-bottom: dotted 1px #000000;"><?php echo $rs['reguser_name_th']; ?></td>
                             <td style="width:50px;">ตำแหน่ง</td>
-                            <td style="width:205px;border-bottom: dotted 1px #000000;"><!--ใส่CODEตรงนี้--></td>
+                            <td style="width:205px;border-bottom: dotted 1px #000000;"><?php echo $rs['reguser_position']; ?></td>
 						</tr>
 					</table>
 					<table style="width:100%;">
 						<tr>
 							<td style="width:100px;">ชื่อภาษาอังกฤษ</td>
-							<td style="width:650px;border-bottom: dotted 1px #000000;"></td>
+							<td style="width:650px;border-bottom: dotted 1px #000000;"><?php echo $rs['reguser_name_en']; ?></td>
 						</tr>
 					</table>
 					<table>
     						<tr>
 							    <td>สำนัก/สวนสัตว์</td>
-                                <td style="width:222px;border-bottom: dotted 1px #000000;"><!--ใส่CODEตรงนี้--></td>
+                                <td style="width:222px;border-bottom: dotted 1px #000000;"><?php echo $rs['zoo_name']; ?></td>
                                 <td>ฝ่าย</td>
-                                <td style="width:200px;border-bottom: dotted 1px #000000;"><!--ใส่CODEตรงนี้--></td>
+                                <td style="width:200px;border-bottom: dotted 1px #000000;"><?php echo $rs['subzoo_name']; ?></td>
 								<td>งาน</td>
                                 <td style="width:200px;border-bottom: dotted 1px #000000;"><!--ใส่CODEตรงนี้--></td>
     						</tr>
@@ -96,7 +106,7 @@
 					<table style="width:100%;">
 						<tr>
 							<td style="width:120px;">เหตุผลการใช้งาน</td>
-							<td style="width:630px;border-bottom: dotted 1px #000000;"></td>
+							<td style="width:630px;border-bottom: dotted 1px #000000;"><?php echo $rs['reguser_reason_detail']; ?></td>
 						</tr>
 					</table>
 					<table style="width:100%;">
@@ -183,7 +193,7 @@
 						<table style="margin-top:20px;">
     					    <tr>
 								<td>ลงชื่อ</td>
-								<td style="width:150px;border-bottom: dotted 1px #000000;"></td>
+								<td style="width:150px;border-bottom: dotted 1px #000000;"><?php echo $rs['reguser_name_th']; ?></td>
 								<td>(ผู้ขอใช้บริการ)</td>
 								<td style="padding-left:180px;">ลงชื่อ</td>
 								<td style="width:150px;border-bottom: dotted 1px #000000;"></td>
@@ -205,7 +215,7 @@
 								<td>ตำแหน่ง</td>
 								<td style="width:250px;border-bottom: dotted 1px #000000;"></td>
 								<td style="padding-left:165px;">ตำแหน่ง</td>
-								<td style="width:250px;border-bottom: dotted 1px #000000;"></td>
+								<td style="width:250px;border-bottom: dotted 1px #000000;"><?php echo $rs['reguser_position']; ?></td>
 							</tr>
 					    </table>
 					    <table>
@@ -232,7 +242,15 @@
 <?php
 $html = ob_get_contents();
 ob_end_clean();
-$pdf = new \Mpdf\Mpdf(['mode' => 'th']);
+try {
+  $pdf = new \Mpdf\Mpdf([
+    'tempDir' => __DIR__ . '/../tmp', // uses the current directory's parent "tmp" subfolder
+    'setAutoTopMargin' => 'stretch',
+    'setAutoBottomMargin' => 'stretch'
+    ,'mode' => 'th']);
+} catch (\Mpdf\MpdfException $e) {
+    print "Creating an mPDF object failed with" . $e->getMessage();
+}
 $stylesheet .= file_get_contents('CSS/pdf.css');
 $pdf->WriteHTML($stylesheet,1);
 $pdf->SetDisplayMode('fullpage');
