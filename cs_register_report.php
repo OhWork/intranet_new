@@ -16,7 +16,7 @@ $rs = $db->findByPK33DESC('reguser','subzoo','zoo','reguser.subzoo_subzoo_id','s
 					<!--บรรทัดที่ 1-->
 					<table align="right" style="width:100%;">
     					<tr>
-        					<td align="right">แบบฟอร์ม ทส.๑๑๐๙/</td>
+        					<td align="right">แบบฟอร์ม ทส...</td>
     					</tr>
 					</table>
 					<table style="width:100%;">
@@ -30,7 +30,7 @@ $rs = $db->findByPK33DESC('reguser','subzoo','zoo','reguser.subzoo_subzoo_id','s
 							<td align="center">แบบฟอร์ม การขอชื่อผู้ใช้และรหัสผ่านสำหรับใช้งานระบบเทคโนโลยีสารสนเทศ</td>
     				    </tr>
     				    <tr>
-							<td align="center">สำนักเทคโนโลยีสารสนเทศ โทร ๐๒-๒๘๐-๗๖๙๗ , IP phone ๑๐๔๐</td>
+							<td align="center">สำนักเทคโนโลยีสารสนเทศ โทร ๐๒-๕๘๗๐๐๕๕ , ภายใน ๒๑๒</td>
 						</tr>
 					</table>
 					<table style="width:100%;height:10px;">
@@ -45,20 +45,20 @@ $rs = $db->findByPK33DESC('reguser','subzoo','zoo','reguser.subzoo_subzoo_id','s
                             <td style="width:60px;">วันที่แจ้ง</td>
                             <td style="width:100px;border-bottom: dotted 1px #000000;"><!--ใส่CODEตรงนี้--></td>
 					</table>
-					<table style="width:100%;">
+					<table tabindex="50" style="width:100%;">
 						<tr>
-							<td style="width:150px;"></b></td>
-							<td>ด้วยข้าพเจ้า มีความประสงค์ที่จะใช้บริการระบบเครือข่ายองค์การสวนสัตว์ จึงขอมี User account</td>
+							<td style="width:50px;"></b></td>
+                                                                                                                <td>ด้วยข้าพเจ้า มีความประสงค์ที่จะใช้บริการระบบเครือข่ายองค์การสวนสัตว์ จึงขอมี User account สำหรับใช้บริการระบบฯ และ</td>
 						</tr>
    					</table>
 					<table style="width:100%;">
 						<tr>
-							<td>สำหรับใช้บริการระบบฯ และจะปฏิบัติตามระเบียบข้อกำหนด และประกาศนโยบายและแนวปฏิบัติในการรักษาความมั่นคงปลอด</td>
+							<td>จะปฏิบัติตามระเบียบข้อกำหนด และประกาศนโยบายและแนวปฏิบัติในการรักษาความมั่นคงปลอดภัยด้านสารสนเทศขององค์การสวนสัตว์</td>
 						</tr>
    					</table>
 					<table style="width:100%;">
 						<tr>
-							<td>ภัยด้ารสารสนเทศขององค์การสวนสัตว์ในพระบรมราชูปถัมภ์ ทุกประการ</td>
+							<td>ในพระบรมราชูปถัมภ์ ทุกประการ</td>
 						</tr>
    					</table>
 					<table style="width:100%;">
@@ -75,33 +75,40 @@ $rs = $db->findByPK33DESC('reguser','subzoo','zoo','reguser.subzoo_subzoo_id','s
 							<td style="width:650px;border-bottom: dotted 1px #000000;"><?php echo $rs['reguser_name_en']; ?></td>
 						</tr>
 					</table>
-					<table>
-    						<tr>
-							    <td>สำนัก/สวนสัตว์</td>
-                                <td style="width:222px;border-bottom: dotted 1px #000000;"><?php echo $rs['zoo_name']; ?></td>
-                                <td>ฝ่าย</td>
-                                <td style="width:200px;border-bottom: dotted 1px #000000;"><?php echo $rs['subzoo_name']; ?></td>
-								<td>งาน</td>
-                                <td style="width:200px;border-bottom: dotted 1px #000000;"><!--ใส่CODEตรงนี้--></td>
-    						</tr>
-					</table>
-					<table style="width:100%;">
+                                                                                <table style="width:100%;">
 						<tr>
 							<td style="width:100px;">รหัสบัตรประชาชน</td>
-							<td style="width:250px;border-bottom: dotted 1px #000000;"></td>
-                            <td style="width:70px;">เบอร์ติดต่อ</td>
-                            <td style="width:250px;border-bottom: dotted 1px #000000;"><!--ใส่CODEตรงนี้--></td>
 						</tr>
 					</table>
+					<table>
+    						<tr>
+							    <td>สำนัก/สถาบัน</td>
+                                                                                                                    <td style="width:200px;border-bottom: dotted 1px #000000;"><?php echo $rs['zoo_name']; ?></td>
+                                                                                                                    <td>ฝ่าย</td>
+                                                                                                                    <td style="width:200px;border-bottom: dotted 1px #000000;"><?php echo $rs['subzoo_name']; ?></td>
+                                                                                                                                                    <td>เบอร์ติดต่อ</td>
+                                                                                                                    <td style="width:120px;border-bottom: dotted 1px #000000;"><!--ใส่CODEตรงนี้--></td>
+    						</tr>
+					</table>
+                                        <table>
+    						<tr>
+							    <td>สวนสัตว์</td>
+                                                                                                                    <td style="width:224px;border-bottom: dotted 1px #000000;"><?php echo $rs['zoo_name']; ?></td>
+                                                                                                                    <td>ฝ่าย</td>
+                                                                                                                    <td style="width:200px;border-bottom: dotted 1px #000000;"><?php echo $rs['subzoo_name']; ?></td>
+                                                                                                                                                    <td>เบอร์ติดต่อ</td>
+                                                                                                                    <td style="width:120px;border-bottom: dotted 1px #000000;"><!--ใส่CODEตรงนี้--></td>
+    						</tr>
+					</table>
+					
 					<table style="width:100%;">
 						<tr>
 							<td>ระบบงานที่ขอใช้ ดังนี้</td>
 						</tr>
    					</table>
-					<table style="width:100%;">
+					<table style="width:100%;font-size: 14px;">
 						<tr>
-							<td style="height:100px;"></td>
-                                                        <td style="padding-left: 50px;">
+                                                                                <td style="padding-left: 40px;width:300px;">
 						<?php
 							if($rs['reguser_internet_use']==1){
 								echo "<img src='images/icons/checked.png' / style='width:18px; height: 18px;'/>"." "."  ระบบ Internet องค์การสวนสัตว์" ;
@@ -111,7 +118,7 @@ $rs = $db->findByPK33DESC('reguser','subzoo','zoo','reguser.subzoo_subzoo_id','s
 							}
 						?>
 					</td>
-                                                                                   <td style="padding-left: 50px;">
+                                                                                   <td style="width:150px;">
 						<?php
 							if($rs['reguser_intranet_use']==1){
 								echo "<img src='images/icons/checked.png' / style='width:18px; height: 18px;'/>"." "."  Zpo data center" ;
@@ -121,7 +128,7 @@ $rs = $db->findByPK33DESC('reguser','subzoo','zoo','reguser.subzoo_subzoo_id','s
 							}
 						?>
 					</td>
-                                                                                   <td style="padding-left: 50px;">
+                                                                                   <td style="width:150px;">
 						<?php
 							if($rs['reguser_eproject_use']==1){
 								echo "<img src='images/icons/checked.png' / style='width:18px; height: 18px;'/>"." "."  ระบบ E-project" ;
@@ -131,7 +138,7 @@ $rs = $db->findByPK33DESC('reguser','subzoo','zoo','reguser.subzoo_subzoo_id','s
 							}
 						?>
 					</td>
-                                                                                   <td style="padding-left: 50px;">
+                                                                                   <td style="width:200px;">
 						<?php
 							if($rs['reguser_animal_use']==1){
 								echo "<img src='images/icons/checked.png' / style='width:18px; height: 18px;'/>"." "."  ระบบทะเบียนสัตว์" ;
@@ -141,7 +148,12 @@ $rs = $db->findByPK33DESC('reguser','subzoo','zoo','reguser.subzoo_subzoo_id','s
 							}
 						?>
 					</td>
-                                                                                   <td style="padding-left: 50px;">
+                                                                                </tr>
+                                                                                </table>
+                                                                                <table style="width:100%;font-size: 14px;">
+                                                                                <tr>
+                                                                                    
+                                                                                   <td style="padding-left: 42px;width:250px;">
 						<?php
 							if($rs['reguser_hrsys_use']==1){
 								echo "<img src='images/icons/checked.png' / style='width:18px; height: 18px;'/>"." "."  ระบบบริหารงานบุคคล" ;
@@ -151,7 +163,7 @@ $rs = $db->findByPK33DESC('reguser','subzoo','zoo','reguser.subzoo_subzoo_id','s
 							}
 						?>
 					</td>
-                                                                                   <td style="padding-left: 50px;">
+                                                                                   <td style="width:200px;">
 						<?php
 							if($rs['reguser_website_use']==1){
 								echo "<img src='images/icons/checked.png' / style='width:18px; height: 18px;'/>"." "."  www.zoothailand.org" ;
@@ -161,7 +173,7 @@ $rs = $db->findByPK33DESC('reguser','subzoo','zoo','reguser.subzoo_subzoo_id','s
 							}
 						?>
 					</td>
-                                                                                   <td style="padding-left: 50px;">
+                                                                                   <td style="width:350px;">
 						<?php
 							if($rs['reguser_esarabun_use']==1){
 								echo "<img src='images/icons/checked.png' / style='width:18px; height: 18px;'/>"." "."  ระบบสารบรรณอิเล็กทรอนิกส์(สรอ.)" ;
@@ -171,7 +183,10 @@ $rs = $db->findByPK33DESC('reguser','subzoo','zoo','reguser.subzoo_subzoo_id','s
 							}
 						?>
 					</td>
-                                                                                   <td style="padding-left: 50px;">
+                                                                                </table>
+                                                                                <table style="width:100%;font-size: 14px;">
+                                                                                <tr>
+                                                                                   <td style="padding-left: 39px;width:350px;">
 						<?php
 							if($rs['reguser_userpasslost']==1){
 								echo "<img src='images/icons/checked.png' / style='width:18px; height: 18px;'/>"." "."  Username และ Password ในกรณีทำหายระบบ" ;
@@ -181,7 +196,11 @@ $rs = $db->findByPK33DESC('reguser','subzoo','zoo','reguser.subzoo_subzoo_id','s
 							}
 						?>
 					</td>
-                                        <td style="padding-left: 50px;">
+                                                                                <td style="width:400px;border-bottom: dotted 1px #000000;"></td>
+                                                                                </table>
+                                                                                <table style="width:100%;font-size: 14px;">
+                                                                                <tr>
+                                                                                        <td style="padding-left: 39px;width:100px;">
 						<?php
 							if($rs['reguser_other']==1){
 								echo "<img src='images/icons/checked.png' / style='width:18px; height: 18px;'/>"." "."  อื่นๆ" ;
@@ -191,9 +210,10 @@ $rs = $db->findByPK33DESC('reguser','subzoo','zoo','reguser.subzoo_subzoo_id','s
 							}
 						?>
 					</td>
+                                                                                <td style="width:650px;border-bottom: dotted 1px #000000;"></td>
 						</tr>
    					</table>
-					<table style="width:100%;">
+					<table style="width:100%;font-size: 14px;">
 						<tr>
 							<td style="width:120px;">เหตุผลการใช้งาน</td>
 							<td style="width:630px;border-bottom: dotted 1px #000000;"><?php echo $rs['reguser_reason_detail']; ?></td>
@@ -201,18 +221,28 @@ $rs = $db->findByPK33DESC('reguser','subzoo','zoo','reguser.subzoo_subzoo_id','s
 					</table>
 					<table style="width:100%;">
 						<tr>
-							<td style="width:250px;">**ช่องทางในการรับ Username และ Password**</td>
-							<td style="width:350px;border-bottom: dotted 1px #000000;"></td>
+							<td style="width:100px;">***ช่องทางในการรับ*** Username และ Password</td>
+							<td style="width:50px;">
+                                                                                                                        <?php
+                                                                                                                                if($rs['reguser_other']==1){
+                                                                                                                                        echo "<img src='images/icons/checked.png' / style='width:18px; height: 18px;'/>"." "."  email" ;
+                                                                                                                                }
+                                                                                                                                else{
+                                                                                                                                        echo "<img src='images/icons/unchecked.png' style='width:15px; height: 15px;'>"." "." email";
+                                                                                                                                }
+                                                                                                                        ?>
+                                                                                                                </td>
+                                                                                                                <td style="width:300px;border-bottom: dotted 1px #000000;"></td>
 						</tr>
 					</table>
 					<table style="width:100%;">
 						<tr>
-							<td>**หมายเหตุ** กรณีที่ไม่ใช่พนักงานหรือลูกจ้าง ขององค์การสวนสัตว์ ผู้ขอ User account จะต้องแนบสำเนาบัตรประจำตัว</td>
+							<td>***หมายเหตุ*** กรณีที่ไม่ใช่พนักงานหรือลูกจ้าง ขององค์การสวนสัตว์ ผู้ขอ User account จะต้องแนบสำเนาบัตรประจำตัวพร้อมลงนาม</td>
 						</tr>
    					</table>
 					<table style="width:100%;">
 						<tr>
-							<td>พร้อมลงนามรับรองสำเนาถูกต้องมาพร้อมด้วยแล้ว</td>
+							<td>รับรองสำเนาถูกต้องมาพร้อมด้วยแล้ว</td>
 						</tr>
    					</table>
 					<table>
@@ -220,17 +250,17 @@ $rs = $db->findByPK33DESC('reguser','subzoo','zoo','reguser.subzoo_subzoo_id','s
 								<td>ลงชื่อ</td>
 								<td style="width:150px;border-bottom: dotted 1px #000000;"></td>
 								<td>(ผู้ขอใช้บริการ)</td>
-								<td style="padding-left:180px;">ลงชื่อ</td>
+								<td style="padding-left:150px;">ลงชื่อ</td>
 								<td style="width:150px;border-bottom: dotted 1px #000000;"></td>
 								<td>(ผู้บังคับบัญชา)</td>
     					    </tr>
 					    </table>
 					    <table>
     					    <tr>
-								<td style="padding-left:32px;">(</td>
+								<td style="padding-left:25px;">(</td>
 								<td style="width:150px;border-bottom: dotted 1px #000000;"></td>
 								<td>)</td>
-								<td style="padding-left:305px;">(</td>
+								<td style="padding-left:245px;">(</td>
     							<td style="width:150px;border-bottom: dotted 1px #000000;"></td>
 								<td>)</td>
 				            </tr>
@@ -238,17 +268,17 @@ $rs = $db->findByPK33DESC('reguser','subzoo','zoo','reguser.subzoo_subzoo_id','s
 					    <table>
     					    <tr>
 								<td>ตำแหน่ง</td>
-								<td style="width:250px;border-bottom: dotted 1px #000000;"></td>
-								<td style="padding-left:165px;">ตำแหน่ง</td>
-								<td style="width:250px;border-bottom: dotted 1px #000000;"></td>
+								<td style="width:220px;border-bottom: dotted 1px #000000;"></td>
+								<td style="padding-left:145px;">ตำแหน่ง</td>
+								<td style="width:220px;border-bottom: dotted 1px #000000;"></td>
 							</tr>
 					    </table>
 					    <table>
     					    <tr>
 								<td>วันที่</td>
-    							<td style="width:275px;border-bottom: dotted 1px #000000;"></td>
-    							<td style="padding-left:165px;">วันที่</td>
-    							<td style="width:280px;border-bottom: dotted 1px #000000;"></td>
+    							<td style="width:240px;border-bottom: dotted 1px #000000;"></td>
+    							<td style="padding-left:145px;">วันที่</td>
+    							<td style="width:240px;border-bottom: dotted 1px #000000;"></td>
 							</tr>
 					    </table>
 						<table style="width:100%;height:10px;">
@@ -270,14 +300,14 @@ $rs = $db->findByPK33DESC('reguser','subzoo','zoo','reguser.subzoo_subzoo_id','s
 								<td>ได้ดำเนินการสร้างชื่อผู้ใช้และรหัสผ่านเพื่อใช้งานระบบฯ ตามที่ท่านร้องขอเรียบร้อยแล้ว และแจ้งให้ผู้ขอรับบริการทาง</td>
 							</tr>
 						</table>
-						<table style="width:100%;height:20px;">
+						<table style="width:100%;">
 							<tr>
-								<td style="border-bottom: dotted 1px #000000;"></td>
+								<td style="border-bottom: dotted 1px #000000;height:20px;"></td>
 							</tr>
 						</table>
-						<table style="width:100%;height:25px;">
+						<table style="width:100%;">
 							<tr>
-								<td style="border-bottom: dotted 1px #000000;"></td>
+								<td style="border-bottom: dotted 1px #000000;height:25px;"></td>
 							</tr>
 						</table>
 						<table style="margin-top:20px;">
@@ -285,17 +315,17 @@ $rs = $db->findByPK33DESC('reguser','subzoo','zoo','reguser.subzoo_subzoo_id','s
 								<td>ลงชื่อ</td>
 								<td style="width:150px;border-bottom: dotted 1px #000000;"><?php echo $rs['reguser_name_th']; ?></td>
 								<td>(ผู้ขอใช้บริการ)</td>
-								<td style="padding-left:180px;">ลงชื่อ</td>
+								<td style="padding-left:150px;">ลงชื่อ</td>
 								<td style="width:150px;border-bottom: dotted 1px #000000;"></td>
 								<td>(ผู้บังคับบัญชา)</td>
     					    </tr>
 					    </table>
 					    <table>
     					    <tr>
-								<td style="padding-left:32px;">(</td>
+								<td style="padding-left:25px;">(</td>
 								<td style="width:150px;border-bottom: dotted 1px #000000;"></td>
 								<td>)</td>
-								<td style="padding-left:305px;">(</td>
+								<td style="padding-left:245px;">(</td>
     							<td style="width:150px;border-bottom: dotted 1px #000000;"></td>
 								<td>)</td>
 				            </tr>
@@ -303,17 +333,17 @@ $rs = $db->findByPK33DESC('reguser','subzoo','zoo','reguser.subzoo_subzoo_id','s
 					    <table>
     					    <tr>
 								<td>ตำแหน่ง</td>
-								<td style="width:250px;border-bottom: dotted 1px #000000;"></td>
-								<td style="padding-left:165px;">ตำแหน่ง</td>
-								<td style="width:250px;border-bottom: dotted 1px #000000;"><?php echo $rs['reguser_position']; ?></td>
+								<td style="width:220px;border-bottom: dotted 1px #000000;"></td>
+								<td style="padding-left:145px;">ตำแหน่ง</td>
+								<td style="width:220px;border-bottom: dotted 1px #000000;"><?php echo $rs['reguser_position']; ?></td>
 							</tr>
 					    </table>
 					    <table>
     					    <tr>
 								<td>วันที่</td>
-    							<td style="width:275px;border-bottom: dotted 1px #000000;"></td>
-    							<td style="padding-left:165px;">วันที่</td>
-    							<td style="width:280px;border-bottom: dotted 1px #000000;"></td>
+    							<td style="width:240px;border-bottom: dotted 1px #000000;"></td>
+    							<td style="padding-left:145px;">วันที่</td>
+    							<td style="width:240px;border-bottom: dotted 1px #000000;"></td>
 							</tr>
 					    </table>
 						<table style="width:100%;height:10px;">
@@ -323,7 +353,7 @@ $rs = $db->findByPK33DESC('reguser','subzoo','zoo','reguser.subzoo_subzoo_id','s
 						</table>
 						<table align="right">
 								<tr>
-									<td style="border: solid 1px #000;padding-left: 5px;padding-right: 5px;">FM-IT-03/2</u></td>
+									<td style="border: solid 1px #000;padding-left: 5px;padding-right: 5px;">FM-IT-03/3</u></td>
 								</tr>
 						</table>
 						
