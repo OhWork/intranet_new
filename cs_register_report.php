@@ -101,6 +101,96 @@ $rs = $db->findByPK33DESC('reguser','subzoo','zoo','reguser.subzoo_subzoo_id','s
 					<table style="width:100%;">
 						<tr>
 							<td style="height:100px;"></td>
+                                                        <td style="padding-left: 50px;">
+						<?php
+							if($rs['reguser_internet_use']==1){
+								echo "<img src='images/icons/checked.png' / style='width:18px; height: 18px;'/>"." "."  ระบบ Internet องค์การสวนสัตว์" ;
+							}
+							else{
+								echo "<img src='images/icons/unchecked.png' style='width:15px; height: 15px;'>"." "." ระบบ Internet องค์การสวนสัตว์";
+							}
+						?>
+					</td>
+                                                                                   <td style="padding-left: 50px;">
+						<?php
+							if($rs['reguser_intranet_use']==1){
+								echo "<img src='images/icons/checked.png' / style='width:18px; height: 18px;'/>"." "."  Zpo data center" ;
+							}
+							else{
+								echo "<img src='images/icons/unchecked.png' style='width:15px; height: 15px;'>"." "." Zpo data center";
+							}
+						?>
+					</td>
+                                                                                   <td style="padding-left: 50px;">
+						<?php
+							if($rs['reguser_eproject_use']==1){
+								echo "<img src='images/icons/checked.png' / style='width:18px; height: 18px;'/>"." "."  ระบบ E-project" ;
+							}
+							else{
+								echo "<img src='images/icons/unchecked.png' style='width:15px; height: 15px;'>"." "." ระบบ E-project";
+							}
+						?>
+					</td>
+                                                                                   <td style="padding-left: 50px;">
+						<?php
+							if($rs['reguser_animal_use']==1){
+								echo "<img src='images/icons/checked.png' / style='width:18px; height: 18px;'/>"." "."  ระบบทะเบียนสัตว์" ;
+							}
+							else{
+								echo "<img src='images/icons/unchecked.png' style='width:15px; height: 15px;'>"." "." ระบบทะเบียนสัตว์";
+							}
+						?>
+					</td>
+                                                                                   <td style="padding-left: 50px;">
+						<?php
+							if($rs['reguser_hrsys_use']==1){
+								echo "<img src='images/icons/checked.png' / style='width:18px; height: 18px;'/>"." "."  ระบบบริหารงานบุคคล" ;
+							}
+							else{
+								echo "<img src='images/icons/unchecked.png' style='width:15px; height: 15px;'>"." "." ระบบบริหารงานบุคคล";
+							}
+						?>
+					</td>
+                                                                                   <td style="padding-left: 50px;">
+						<?php
+							if($rs['reguser_website_use']==1){
+								echo "<img src='images/icons/checked.png' / style='width:18px; height: 18px;'/>"." "."  www.zoothailand.org" ;
+							}
+							else{
+								echo "<img src='images/icons/unchecked.png' style='width:15px; height: 15px;'>"." "." www.zoothailand.org";
+							}
+						?>
+					</td>
+                                                                                   <td style="padding-left: 50px;">
+						<?php
+							if($rs['reguser_esarabun_use']==1){
+								echo "<img src='images/icons/checked.png' / style='width:18px; height: 18px;'/>"." "."  ระบบสารบรรณอิเล็กทรอนิกส์(สรอ.)" ;
+							}
+							else{
+								echo "<img src='images/icons/unchecked.png' style='width:15px; height: 15px;'>"." "." ระบบสารบรรณอิเล็กทรอนิกส์(สรอ.)";
+							}
+						?>
+					</td>
+                                                                                   <td style="padding-left: 50px;">
+						<?php
+							if($rs['reguser_userpasslost']==1){
+								echo "<img src='images/icons/checked.png' / style='width:18px; height: 18px;'/>"." "."  Username และ Password ในกรณีทำหายระบบ" ;
+							}
+							else{
+								echo "<img src='images/icons/unchecked.png' style='width:15px; height: 15px;'>"." "." Username และ Password ในกรณีทำหายระบบ";
+							}
+						?>
+					</td>
+                                        <td style="padding-left: 50px;">
+						<?php
+							if($rs['reguser_other']==1){
+								echo "<img src='images/icons/checked.png' / style='width:18px; height: 18px;'/>"." "."  อื่นๆ" ;
+							}
+							else{
+								echo "<img src='images/icons/unchecked.png' style='width:15px; height: 15px;'>"." "." อื่นๆ";
+							}
+						?>
+					</td>
 						</tr>
    					</table>
 					<table style="width:100%;">
