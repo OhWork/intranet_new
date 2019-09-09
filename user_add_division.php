@@ -18,8 +18,8 @@ $id = $_GET['id'];
   $radiosubzoo = new radioGroup();
   $radiosubzoo->name = 'subzoo_enable';
   if(empty($id)){
-        $radiosubzoo->add('ใช้งาน',1,'checked');
-        $radiosubzoo->add('ไม่ใช้งาน',0,'');    
+        $radiosubzoo->add('ใช้งาน',1,'checked','');
+        $radiosubzoo->add('ไม่ใช้งาน',0,'','');    
   }
   if(!empty($_GET['id'])){
 	$r = $db->findByPK('subzoo','subzoo_id',$id)->executeRow();

@@ -49,7 +49,7 @@
 
 			<?
 			$intRows = 0;
-			$rs = $db->orderASC('subzoo','subzoo_id')->execute();
+			$rs = $db->findPK1ASC('subzoo','subzoo_enable',1,'subzoo_no')->execute();
 // 			$strSQL = "SELECT * FROM subzoo ORDER BY subzoo_id ASC ";
 // 			$objQuery = mysql_query($strSQL) or die ("Error Query [".$strSQL."]");
 			$intRows = 0;
