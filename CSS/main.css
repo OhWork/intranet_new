@@ -226,6 +226,7 @@ a:hover {
 #sidebar {
     min-width: 280px;
     max-width: 280px;
+    margin-left: 0px;
 	-webkit-transition: all 1s ease-in-out;
     -moz-transition: all 1s ease-in-out;
     -ms-transition: all 1s ease-in-out;
@@ -506,13 +507,6 @@ a:hover {
 .default:hover {background: #ddd;}
 /*bootstap color end*/
 .bt3success {background-color: #4CAF50;}
-.inf1 {
-	border: 1px solid #ddd;
-	border-top :0;
-	padding-top : 16px;
-	padding-bottom : 16px;
-	padding-left: 16px;
-}
 .ft {
     float: left;
 }

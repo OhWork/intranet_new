@@ -59,9 +59,9 @@ if ($user_zoo == 10 || $user_zoo == 18) {
     </ul>
        <a class="nav-link collapsed py-1  nav-link-33 edittext mucl" id="nav-1-animate-4" href="#csinternet" data-toggle="collapse" data-target="#csinternet">รายการขอใช้ระบบ</a>
     <ul class="sub-menu collapse mmpd2" id="csinternet">
-        <a class="nav-link edittext mucl" id="nav-33-animate-1" href="admin_index.php?url=cs_show_fixproblem.php">รายการแจ้งดำเนินการใหม่</a>
-        <a class="nav-link edittext mucl" id="nav-33-animate-2" href="admin_index.php?url=cs_show_waitfixproblem.php">รายการระหว่างการดำเนินการ</a>
-        <a class="nav-link edittext mucl" id="nav-33-animate-3" href="admin_index.php?url=cs_show_completefixproblem.php">รายการการดำเนินการเสร็จ</a>
+        <a class="nav-link edittext mucl" id="nav-33-animate-1" href="#">รายการแจ้งดำเนินการใหม่</a>
+        <a class="nav-link edittext mucl" id="nav-33-animate-2" href="#">รายการระหว่างการดำเนินการ</a>
+        <a class="nav-link edittext mucl" id="nav-33-animate-3" href="#">รายการการดำเนินการเสร็จ</a>
     </ul>
     <a class="nav-link collapsed py-1 edittext mucl" id="nav-1-animate-5" href="admin_index.php?url=cs_showupweb.php">รายการขอคำร้องขึ้นเว็บไซต์</a>
     <a class="nav-link collapsed py-1 nav-link-11 edittext mucl" id="nav-1-animate-6" href="#csreport" data-toggle="collapse" data-target="#csreport">รายงาน<span data-feather="chevron-right"></a>

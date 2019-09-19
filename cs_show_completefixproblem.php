@@ -20,12 +20,12 @@
 } );
 </script>
 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3">
-	<div class="row">
-		<div class='col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1'></div>
-		<div class='col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10'>
-			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-				<h4>รายงานดำเนินการเสร็จ</h4>
-			</div>
+        <div class="row">
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 card-header">
+                        <div class="row">
+                                <div>
+                                        <h4>รายงานดำเนินการเสร็จ</h4>
+		</div>
 		  <!-- Nav tabs -->
 		  <nav class="nav nav-tabs" role="tablist" style="margin-top: 16px;width:100%">
 			  <?php if($user_zoo == 10){?>
@@ -83,9 +83,11 @@
 			?>
 		  </nav>
 		  <!-- Tab panes -->
+                  <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3 card-body">
+                                        <div class="table-responsive">
 		  <div class="tab-content">
 			<?php if($user_zoo == 10){?>
-			<div role="tabpanel" class="tab-pane active inf1" id="zpo" style="padding-left:16;padding-right:16px;">
+			<div role="tabpanel" class="tab-pane active" id="zpo">
 			   <?php
 					$columns = array('problem_name','problem_date','subzoo_name','subtypetools_name','typetools_name');
 					$rs = $db->findByPK66DESC('problem','subzoo','typetools','subtypetools','zoo','problem.subzoo_subzoo_id','subzoo.subzoo_id','problem.subzoo_subzoo_id','subzoo.subzoo_id','problem.subtypetools_subtypetools_id','subtypetools.subtypetools_id','subtypetools.typetools_typetools_id','typetools.typetools_id','subzoo.zoo_zoo_id','zoo.zoo_id','zoo.zoo_type','1','problem_status',$status,'problem_status,problem_date')->execute();
@@ -104,9 +106,9 @@
 			<?php }
 				if($user_zoo == 10 || $user_zoo == 11){
 				if($user_zoo == 10){?>
-			<div role="tabpanel" class="tab-pane inf2" id="dusitzoo" style="padding-left:16;padding-right:16px;">
+			<div role="tabpanel" class="tab-pane" id="dusitzoo" >
 			<?php }else if($user_zoo == 11){?>
-			<div role="tabpanel" class="tab-pane active inf2" id="dusitzoo" style="padding-left:16;padding-right:16px;">
+			<div role="tabpanel" class="tab-pane active" id="dusitzoo">
 			<?php
 				}               $columns = array('problem_name','problem_date','subzoo_name','subtypetools_name','typetools_name');
 					$rs = $db->findByPK66DESC('problem','subzoo','typetools','subtypetools','zoo','problem.subzoo_subzoo_id','subzoo.subzoo_id','problem.subzoo_subzoo_id','subzoo.subzoo_id','problem.subtypetools_subtypetools_id','subtypetools.subtypetools_id','subtypetools.typetools_typetools_id','typetools.typetools_id','subzoo.zoo_zoo_id','zoo.zoo_id','zoo.zoo_id','11','problem_status',$status,'problem_status,problem_date')->execute();
@@ -125,9 +127,9 @@
 		<?php }
 				if($user_zoo == 10 || $user_zoo == 12){
 		   if($user_zoo == 10){?>
-			<div role="tabpanel" class="tab-pane inf1" id="khaokeawzoo" style="padding-left:16;padding-right:16px;">
+			<div role="tabpanel" class="tab-pane" id="khaokeawzoo">
 			<?php }else if($user_zoo == 12){?>
-			<div role="tabpanel" class="tab-pane active inf1" id="khaokeawzoo" style="padding-left:16;padding-right:16px;">
+			<div role="tabpanel" class="tab-pane active" id="khaokeawzoo">
 			<?php
 				}
 					$columns = array('problem_name','problem_date','subzoo_name','subtypetools_name','typetools_name');
@@ -147,9 +149,9 @@
 			<?php }
 				if($user_zoo == 10 || $user_zoo == 13){
 					if($user_zoo == 10){?>
-			<div role="tabpanel" class="tab-pane inf1" id="chiangmaizoo" style="padding-left:16;padding-right:16px;">
+			<div role="tabpanel" class="tab-pane" id="chiangmaizoo">
 			<?php }else if($user_zoo == 13){?>
-			<div role="tabpanel" class="tab-pane active inf1" id="chiangmaizoo" style="padding-left:16;padding-right:16px;">
+			<div role="tabpanel" class="tab-pane active" id="chiangmaizoo">
 		   <?php }
 					$columns = array('problem_name','problem_date','subzoo_name','subtypetools_name','typetools_name');
 					$rs = $db->findByPK66DESC('problem','subzoo','typetools','subtypetools','zoo','problem.subzoo_subzoo_id','subzoo.subzoo_id','problem.subzoo_subzoo_id','subzoo.subzoo_id','problem.subtypetools_subtypetools_id','subtypetools.subtypetools_id','subtypetools.typetools_typetools_id','typetools.typetools_id','subzoo.zoo_zoo_id','zoo.zoo_id','zoo.zoo_id','13','problem_status',$status,'problem_status,problem_date')->execute();
@@ -168,9 +170,9 @@
 			<?php }
 				if($user_zoo == 10 || $user_zoo == 14){
 					if($user_zoo == 10){?>
-			<div role="tabpanel" class="tab-pane inf1" id="korachzoo" style="padding-left:16;padding-right:16px;">
+			<div role="tabpanel" class="tab-pane" id="korachzoo">
 			<?php }else if($user_zoo == 14){?>
-			<div role="tabpanel" class="tab-pane active inf1" id="korachzoo" style="padding-left:16;padding-right:16px;">
+			<div role="tabpanel" class="tab-pane active" id="korachzoo" >
 			<?php }            $columns = array('problem_name','problem_date','subzoo_name','subtypetools_name','typetools_name');
 					$rs = $db->findByPK66DESC('problem','subzoo','typetools','subtypetools','zoo','problem.subzoo_subzoo_id','subzoo.subzoo_id','problem.subzoo_subzoo_id','subzoo.subzoo_id','problem.subtypetools_subtypetools_id','subtypetools.subtypetools_id','subtypetools.typetools_typetools_id','typetools.typetools_id','subzoo.zoo_zoo_id','zoo.zoo_id','zoo.zoo_id','14','problem_status',$status,'problem_status,problem_date')->execute();
 					$grid = new gridView();
@@ -188,9 +190,9 @@
 			<?php }
 				if($user_zoo == 10 || $user_zoo == 15){
 			if($user_zoo == 10){?>
-			<div role="tabpanel" class="tab-pane inf1" id="songkhlazoo" style="padding-left:16;padding-right:16px;">
+			<div role="tabpanel" class="tab-pane" id="songkhlazoo">
 			<?php }else if($user_zoo == 15){?>
-			<div role="tabpanel" class="tab-pane active inf1" id="songkhlazoo" style="padding-left:16;padding-right:16px;">
+			<div role="tabpanel" class="tab-pane active" id="songkhlazoo">
 		   <?php }
 					$columns = array('problem_name','problem_date','subzoo_name','subtypetools_name','typetools_name');
 					$rs = $db->findByPK66DESC('problem','subzoo','typetools','subtypetools','zoo','problem.subzoo_subzoo_id','subzoo.subzoo_id','problem.subzoo_subzoo_id','subzoo.subzoo_id','problem.subtypetools_subtypetools_id','subtypetools.subtypetools_id','subtypetools.typetools_typetools_id','typetools.typetools_id','subzoo.zoo_zoo_id','zoo.zoo_id','zoo.zoo_id','15','problem_status',$status,'problem_status,problem_date')->execute();
@@ -209,9 +211,9 @@
 			<?php }
 				if($user_zoo == 10 || $user_zoo == 16){
 			if($user_zoo == 10){?>
-			<div role="tabpanel" class="tab-pane inf1" id="ubonzoo" style="padding-left:16;padding-right:16px;">
+			<div role="tabpanel" class="tab-pane" id="ubonzoo">
 			<?php }else if($user_zoo == 16){?>
-			<div role="tabpanel" class="tab-pane active inf1" id="ubonzoo" style="padding-left:16;padding-right:16px;">
+			<div role="tabpanel" class="tab-pane active" id="ubonzoo">
 			<?php }
 					$columns = array('problem_name','problem_date','subzoo_name','subtypetools_name','typetools_name');
 					$rs = $db->findByPK66DESC('problem','subzoo','typetools','subtypetools','zoo','problem.subzoo_subzoo_id','subzoo.subzoo_id','problem.subzoo_subzoo_id','subzoo.subzoo_id','problem.subtypetools_subtypetools_id','subtypetools.subtypetools_id','subtypetools.typetools_typetools_id','typetools.typetools_id','subzoo.zoo_zoo_id','zoo.zoo_id','zoo.zoo_id','16','problem_status',$status,'problem_status,problem_date')->execute();
@@ -230,9 +232,9 @@
 			<?php }
 				if($user_zoo == 10 || $user_zoo == 17){
 					if($user_zoo == 10){?>
-					<div role="tabpanel" class="tab-pane inf1" id="khonkeanzoo" style="padding-left:16;padding-right:16px;">
+					<div role="tabpanel" class="tab-pane" id="khonkeanzoo">
 			  <?php }else if($user_zoo == 17){?>
-					<div role="tabpanel" class="tab-pane active inf1" id="khonkeanzoo" style="padding-left:16;padding-right:16px;">
+					<div role="tabpanel" class="tab-pane active" id="khonkeanzoo">
 			 <?php }
 					$columns = array('problem_name','problem_date','subzoo_name','subtypetools_name','typetools_name');
 					$rs = $db->findByPK66DESC('problem','subzoo','typetools','subtypetools','zoo','problem.subzoo_subzoo_id','subzoo.subzoo_id','problem.subzoo_subzoo_id','subzoo.subzoo_id','problem.subtypetools_subtypetools_id','subtypetools.subtypetools_id','subtypetools.typetools_typetools_id','typetools.typetools_id','subzoo.zoo_zoo_id','zoo.zoo_id','zoo.zoo_id','17','problem_status',$status,'problem_status,problem_date')->execute();
@@ -251,8 +253,17 @@
 			 <?php }?>
 		</div>
 		</div>
-		<div class='col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1'></div>
-	</div>
+                                </div>
+                                </div>
+		</div>
+                                </div>
+                                </div>
+                                </div>
+                        </div>
+                </div>
+        </div>
+        </div>
+</div>
 </div>
 <?php
 include_once 'cs_viewdetail.php';
