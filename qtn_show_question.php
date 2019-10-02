@@ -17,36 +17,34 @@
 </script>
 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3">
 	<div class="row">
-		<div class="col-xl-1col-lg-1 col-md-1 col-sm-1 col-1"></div>
-		<div class="col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10">
-			<div class="row">
-				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-					<div class="col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10" style="float:left;">
-						<h4>รายการแบบสอบถาม</h4>
-					</div>
-					<div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2" style="float:left;">
-						<a href="admin_index.php?url=qtn_add_question.php" class="btn btn-success col-12">เพิ่มแบบสอบถาม</a>
-					</div>
-				</div>
-				<div class="tab-content col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-2">
-					<div role="tabpanel" class="tab-pane active" id="wait" style="padding-left:16px;padding-right:16px;">
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 card-header">
+                                <div class="row">
+                                        <div>
+                                                <h4>รายการแบบสอบถาม</h4>
+                                        </div>
+                                        <div class="ml-auto">
+			<a href="admin_index.php?url=qtn_add_question.php" class="btn btn-success col-12">เพิ่มแบบสอบถาม</a>
+                                        </div>
+                                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3 card-body">
+                                                <div class="table-responsive">
+                                                        <div role="tabpanel" class="tab-pane active" id="wait">
 					<?php
 						$columns = array('qtn_name');
 						$rs = $db->findAll('qtn')->execute();
 								$grid = new gridView();
 								$grid->pr = 'qtn_id';
 								$grid->header = array('<b><center>แบบสำรวจ</center></b>','<b><center>#</center></b>');
-								$grid->width = array('80%','20%');
+								$grid->width = array('90%','10%');
 					 			$grid->edit = 'admin_index.php?url=qtn_add_question.php';
 					 			$grid->name = 'table';
 					 			$grid->edittxt ='แก้ไข';
 								$grid->renderFromDB($columns,$rs);
 					   ?>
 					   
-					</div>
-				</div>
+                                                        </div>
 			</div>
+                                        </div>
 		</div>
-		<div class='col-xl-1col-lg-1 col-md-1 col-sm-1 col-1'></div>
-	</div>
+                        </div>
+                </div>
 </div>

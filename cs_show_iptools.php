@@ -22,9 +22,17 @@
     $form = new form();
 
             $rs = $db->findByPK44('iptools','subzoo','zoo','typetoolsforip','iptools.subzoo_subzoo_id','subzoo.subzoo_id','subzoo.zoo_zoo_id','zoo.zoo_id','iptools.typetoolsforip_typetoolsforip_id','typetoolsforip.typetoolsforip_id','typetoolsforip.typetoolsforip_id',$id,'iptools_id')->execute();
-            echo "<div class='col-md-12'>"."<h2>รายการ IP address ของอุปกรณ์ต่างๆ</h2>".$rowend;
-
-			$grid = new gridView();
+?>
+<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3">
+        <div class="row">
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 card-header">
+                        <div class="row">
+                                <div>
+                                        <h4>รายการ IP address ของอุปกรณ์ต่างๆ</h4>
+                                </div>
+                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3 card-body">
+                                        <div class="table-responsive">
+		<?php	$grid = new gridView();
 			$grid->pr = 'iptools_id';
 // 			$grid->sts = 'event_status';
 			$grid->header = array('<b><center>IP-Address</center></b>','<b><center>NAT</center></b>','<b><center>Name/System</center></b>','<b><center>Detail</center></b>','<b><center>ฝ่าย</center></b>','<b><center>สังกัด</center></b>','<b><center>#</center></b>');
@@ -37,3 +45,9 @@
 // 			echo pagination($rs2,$limit,$page,$url='admin_index.php?url=admin_cs_index.php&url2=cs_show_ip.php&id='.$id.'&');
 			endif;
 		?>
+                                        </div>
+                                </div>
+                        </div>
+                </div>
+        </div>
+</div>

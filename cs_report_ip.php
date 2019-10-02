@@ -29,13 +29,15 @@
     $form = new form();
     $rs = $db->findByPK34ASC('ipzpo','subzoo','zoo','ipzpo.subzoo_subzoo_id','subzoo.subzoo_id','subzoo.zoo_zoo_id','zoo.zoo_id','status_status_id',1,$type,$id,'ipzpo_id')->execute();   
     ?>
-	<div class='col-md-1'></div>
-	<div class='col-md-10'>
-		<div class='row'>
-			<div class='col-md-12 mt-3'>
-				<h2>IP-address ของ  <?php echo $zoo_name; ?></h2>
-			</div>
-			<div class='col-md-12'>
+<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3">
+	<div class="row">
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 card-header">
+                                <div class="row">
+                                        <div>
+                                                <h4>IP-address ของ  <?php echo $zoo_name; ?></h4>
+		</div>
+                                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3 card-body">
+                                        <div class="table-responsive">
 			<?php	
 			$grid = new gridView();
 			$grid->pr = 'ipzpo_id';
@@ -48,6 +50,8 @@
 			endif;
 			?>
 			</div>
-		</div>
-	</div>
-	<div class='col-md-1'></div>
+                                        </div>
+                                </div>
+                        </div>
+            </div>
+</div>

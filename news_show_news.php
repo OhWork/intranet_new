@@ -14,18 +14,15 @@
     } );
 } );
 </script>
-<div class='col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1'></div>
-<div class='col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10'>
-	<div class='row'>
-		<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-1">
-			<div class='row'>
-				<div class='col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10'></div>
-                <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2">
-					<a href="admin_index.php?url=news_add_news.php" class="btn btn-success col-12">เพิ่มข่าว <span data-feather="plus"></span></a>
-                </div>
-			</div>
-		</div>
-		<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-1">
+<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3">
+        <div class="row">
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 card-header">
+                        <div class="row">
+                                <div class="ml-auto">
+                                    <h4><a href="admin_index.php?url=news_add_news.php" class="btn btn-success col-12">เพิ่มข่าว <span data-feather="plus"></span></a></h4>
+                                </div>
+                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3 card-body">
+                                        <div class="table-responsive">
 			<?php
 		    $rs = $db->findByPK21DESC('news','user','user_user_id','user_id','news_id')->execute();
                                     $columns = array('news_head','news_datestart','news_dateend','user_name');
@@ -42,7 +39,9 @@
 				$grid->editextsup2 ='แก้ไขแก้ไขรายละเอียดข่าว';
 				$grid->renderFromDB($columns,$rs);
 				?>
-		</div>
-	</div>
+                                        </div>
+                                </div>
+                        </div>
+                </div>
+        </div>
 </div>
-<div class='col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1'></div>
