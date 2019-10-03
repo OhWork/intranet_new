@@ -24,33 +24,29 @@
 
 			$rs2 = "user,subzoo,zoo  where ipzpo.subzoo_subzoo_id = subzoo.subzoo_id && subzoo.zoo_zoo_id = zoo.zoo_id ";
             $rs = $db->findByPK32DESC('user','subzoo','zoo','user.subzoo_subzoo_id','subzoo.subzoo_id','subzoo.zoo_zoo_id','zoo.zoo_id','user_id')->execute();  ?> 
-<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12' style="margin-top: 16px;">
-	<div class="row">
-		<div class='col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1'></div>
-		<div class='col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10' style="margin-top: 16px;">
-			<div class="row">
-				<div class='col-12'>
-					<div class="row">
-						<h3>รายชื่อผู้ใช้ระบบ</h3>
-					</div>
-				</div>
-				<div class='col-12'>
-
-			<?php 
-            $grid = new gridView();
-			$grid->pr = 'user_id';
-			$grid->header = array('<b><center>User</center></b>','<b><center>ชื่อ</center></b>','<b><center>นามสกุล</center></b>','<b><center>ฝ่าย</center></b>','<b><center>สังกัด</center></b>','<b><center>#</center></b>');
-			$grid->width = array('12%','15%','15%','25%','25%','8%');
-			$grid->edit = 'admin_index.php?url=user_add_permission.php';
-			$grid->name = 'table';
-			$grid->edittxt ='แก้ไข';
-			$grid->renderFromDB($columns,$rs);
-			endif;
-		?>
-					</div>
-				</div>
-			</div>
+<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3">
+        <div class="row">
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 card-header">
+                        <div class="row">
+                                <div>
+                                        <h4>รายชื่อผู้ใช้ระบบ</h4>
 		</div>
-		<div class='col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1'></div>
+		<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3 card-body">
+                                        <div class="table-responsive">
+			<?php 
+                                                $grid = new gridView();
+                                                            $grid->pr = 'user_id';
+                                                            $grid->header = array('<b><center>User</center></b>','<b><center>ชื่อ</center></b>','<b><center>นามสกุล</center></b>','<b><center>ฝ่าย</center></b>','<b><center>สังกัด</center></b>','<b><center>#</center></b>');
+                                                            $grid->width = array('12%','15%','15%','25%','25%','8%');
+                                                            $grid->edit = 'admin_index.php?url=user_add_permission.php';
+                                                            $grid->name = 'table';
+                                                            $grid->edittxt ='แก้ไข';
+                                                            $grid->renderFromDB($columns,$rs);
+                                                            endif;
+                                                    ?>
+                                        </div>
+		</div>
+                        </div>
 	</div>
+        </div>
 </div>
