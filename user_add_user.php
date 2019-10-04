@@ -43,7 +43,9 @@ if (!empty($_SESSION['user_name'])):
 	$r = $db->findByPK('user','user_id',$id)->executeRow();
 	$txtpass->value = $r['user_pass'];
 	$txtname->value = $r['user_name'];
+                $txtnameen->value = $r['user_nameeng'];
 	$txtlast->value = $r['user_last'];
+                $txtlasten->value = $r['user_lasteng'];
 	$txttel->value = $r['user_tel'];
 	$txtidcard->value = $r['user_idcard'];
 	$zoo = $r['subzoo_zoo_zoo_id'];
