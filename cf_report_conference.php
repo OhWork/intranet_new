@@ -38,7 +38,7 @@
         case 'Monday': $daytxt = "จันทร์"; break;
         case 'Tuesday': $daytxt = "อังคาร"; break;
 		case 'Wednesday': $daytxt = "พุธ"; break;
-		case 'Thursday': $daytxt = "พฤหัส"; break;
+		case 'Thursday': $daytxt = "พฤหัสบดี"; break;
 		case 'Friday': $daytxt = "ศุกร์"; break;
 		case 'Saturday': $daytxt = "เสาร์"; break;
 		case 'Sunday': $daytxt = "อาทิตย์"; break;
@@ -281,10 +281,10 @@
 					<td>
 						<?php
 							if($rs['eventconfer_status_itzpo']==1){
-								echo "<img src='images/icons/checked.png' / style='width:18px; height: 18px;'/>"." "."  สำนักเทคโนโลยีสารสนเทศ" ;
+								echo "<img src='images/icons/checked.png' / style='width:18px; height: 18px;'/>"." "."  สำนักดิจิทัลและสารสนเทศ" ;
 							}
 							else{
-								echo "<img src='images/icons/unchecked.png' style='width:15px; height: 15px;'>"." "." สำนักเทคโนโลยีสารสนเทศ";
+								echo "<img src='images/icons/unchecked.png' style='width:15px; height: 15px;'>"." "." สำนักดิจิทัลและสารสนเทศ";
 							}
 						?>
 					</td>
@@ -342,7 +342,7 @@
 		<table style="margin-left:450px;">
 			<!--บรรทัดที่ 9-->
 				<tr>
-					<td style="border-bottom: 1.5px;border-bottom-style: dotted;border-bottom-color: #000000;width:200px;height:23px;"><!--ใส่CODEตรงนี้--></td>
+					<td style="border-bottom: 1.5px;border-bottom-style: dotted;border-bottom-color: #000000;width:200px;height:20px;"><!--ใส่CODEตรงนี้--></td>
 				</tr>
 		</table>
 		<table style="margin-left:430px;">
@@ -421,8 +421,8 @@
 		<table style="border-left: solid 1px #000;border-right: solid 1px #000;border-spacing: 0;">
 			<!--บรรทัดที่ 14-->
 				<tr>
-					<td style="width:300px;border-right: solid 1px #000;"><b>(๓) เจ้าหน้าที่สำนักเทคโนโลยีสารสนเทศ</b></td>
-					<td style="width:366.5px;"><b>(๔) ผู้อำนวยการสำนักเทคโนโลยีสารสนเทศ</b></td>
+					<td style="width:300px;border-right: solid 1px #000;"><b>(๓) เจ้าหน้าที่สำนักดิจิทัลและสารสนเทศ</b></td>
+					<td style="width:366.5px;"><b>(๔) ผู้อำนวยการสำนักดิจิทัลและสารสนเทศ</b></td>
 				</tr>
 		</table>
 		<table style="border-left: solid 1px #000;border-right: solid 1px #000;border-spacing: 0;">
@@ -496,7 +496,7 @@
 		<table style="margin-top: -5px;">
 			<!--บรรทัดที่ 20-->
 				<tr>
-					<td style="padding-left: 20px;">๒. สำนักเทคโนโลยีสารสนเทศจะจัดเตรียมอุปกรณ์พร้อมติดตั้งระบบและประสานเจ้าหน้าที่ในการติดตั้งระบบของหน่วยงานเกี่ยวข้อง</td>
+					<td style="padding-left: 20px;">๒. สำนักดิจิทัลและสารสนเทศจะจัดเตรียมอุปกรณ์พร้อมติดตั้งระบบและประสานเจ้าหน้าที่ในการติดตั้งระบบของหน่วยงานเกี่ยวข้อง</td>
 				</tr>
 		</table>
 		<table style="margin-top: -5px;">
@@ -505,10 +505,10 @@
 					<td style="padding-left: 20px;">๓. กรุณาประสานงาน<u>ล่วงหน้าไม่น้อยกว่า ๓ วันทำการ</u> เพื่อให้ IT จะได้เตรียมความพร้อม เมื่อส่งเรืองแล้ว ติดตามผลได้ที่ เบอร์โทรศัพท์ ๐๒-๕๘๗๐๐๕๕ IP Phone: ๒๑๒ email:it@zoothailand.org</td>
 				</tr>
 		</table>
-		<table style="margin-left:580px;">
+		<table style="margin-left:570px;">
 			<!--บรรทัดที่ 20-->
 				<tr>
-					<td style="border: solid 1px #000;padding-left: 5px;padding-right: 5px;">FM - IT - 06 /1</u></td>
+					<td style="border: solid 1px #000;padding-left: 5px;padding-right: 5px;">FM - IT - 06 /02</td>
 				</tr>
 		</table>
     </body>

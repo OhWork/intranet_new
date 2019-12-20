@@ -51,9 +51,12 @@
 	));
 
 	$last_id = $db->specifytable2('systemallow_id','systemallow','ORDER BY systemallow_id DESC LIMIT 0 , 1')->executeAssoc();
+        if($last_id == 0){
+        echo "ปัญหาinternetไม่สเถียรกรุณาลองใหม่อีกครั้ง";
+        }else{
 	$data['systemallow_systemallow_id'] = $last_id['systemallow_id'];
  	$rsa = $db->update('user',$data,'user_id',$_POST['user_id']);
-
+        }
 	 //Log
 		if(getenv(HTTP_X_FORWARDED_FOR)){
             $ip = $_SERVER['HTTP_X_FORWARDED_FOR']; // IP proxy

@@ -55,7 +55,7 @@
     				    </tr>
     				    <tr>
     					<td class='fp row'>
-    						สำนักเทคโนโลยีสารสนเทศ  เบอร์โทรศัพท์ ๐๒-๕๘๗๐๐๕๕ IP Phone: ๒๑๒
+    						สำนักดิจิทัลและสารสนเทศ  เบอร์โทรศัพท์ ๐๒-๕๘๗๐๐๕๕ IP Phone: ๒๑๒
     					</td>
 					</tr>
 					</table>
@@ -131,7 +131,7 @@
 					     <table>
 						    <tr><td class="widthbox3 row"><b><u>***หมายเหตุ***</b></u></tr></td>
                             <tr><td class="widthbox3 row">๑. เพื่อความปลอดภัยของข้อมูล ผู้ขอใช้บริการต้องทำการสำรองข้อมูล ให้แล้วเสร็จก่อนนำเครื่องมาใช้บริการ</tr></td>
-                            <tr><td class="widthbox3 row">๒. สำนักเทคโนโลยีสารสนเทศ ไม่รับผิดชอบต่อความเสียหายของข้อมูลทุกกรณี</tr></td>
+                            <tr><td class="widthbox3 row">๒. สำนักดิจิทัลและสารสนเทศ ไม่รับผิดชอบต่อความเสียหายของข้อมูลทุกกรณี</tr></td>
 						</table>
 					<!--บรรทัดที่ 13-->
 					    <table>
@@ -177,7 +177,7 @@
                         <table>
 							<tr>
     							<td class='widthbox row'><b><u>ส่วนที่ ๒ </u></b></td>
-								<td class='widthbox3'><b>สำหรับเจ้าหน้าที่สำนักเทคโนโลยีสารสนเทศ</b></td>
+								<td class='widthbox3'><b>สำหรับเจ้าหน้าที่สำนักดิจิทัลและสารสนเทศ</b></td>
 							    <td class='widthbox23 row'>วันที่รับเรื่อง</td>
                                 <td class='reportunderline widthbox2-2 row'><!--ใส่CODEตรงนี้--><?php echo $show['problem_dateorder'];?></td>
 							</tr>
