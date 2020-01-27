@@ -602,7 +602,7 @@
 	    }
 	});
 	$("#button").on('click',function(e){
-	window.location.href="admin_index.php"
+	window.location.href="admin_index.php?url=news_show_news.php"
 	});
 </script>
 

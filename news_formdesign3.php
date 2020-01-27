@@ -167,6 +167,6 @@ echo $form->open("form_detail","form","col-xl-12 col-lg-12 col-md-12 col-sm-12 c
 			});
 		});
 		$("#button").on('click',function(e){
-	window.location.href="admin_index.php"
+	window.location.href="admin_index.php?url=news_show_news.php"
 	});
 </script>
