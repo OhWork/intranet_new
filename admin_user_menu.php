@@ -13,6 +13,13 @@
 	    <a class="nav-link dropuser edittext mucl" id="nav-22-animate-4" href="admin_index.php?url=user_show_zoo.php">
 			รายการสวนสัตว์<span data-feather="chevron-right"></span>
 	    </a>
+      <?php  if($_SESSION['user_id'] == 1){ ?>
+                    <a class="nav-link dropuser edittext mucl" id="nav-22-animate-5" href="admin_index.php?url=admin_show_listuser.php">
+	        เปลี่ยนพาสเวิร์ด<span data-feather="chevron-right"></span>
+	    </a>
+        <?php
+      }
+                            ?>
 	    <a class="nav-link dropuser edittext mucl" id="nav-22-animate-5" href="admin_index.php?url=user_log_user.php">
 	        Log-การใช้งาน<span data-feather="chevron-right"></span>
 	    </a>

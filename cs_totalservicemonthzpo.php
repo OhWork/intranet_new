@@ -744,7 +744,7 @@ SUM(IF(problem_status = 'Y',1,0)) AS adminfix",
  zoo.zoo_name = 'สำนักบริหารทรัพยากรบุคคล' AND
  problem.subzoo_zoo_zoo_id = zoo.zoo_id AND problem_date ".$qua."
  GROUP BY problem_adminfix")->execute();
- //สำนักเทคโนโลยีสารสนเทศ
+ //สำนักดิจิทัลและสารสนเทศ
  $rs9 = $db->specifytable("subtypetools.subtypetools_name AS STT,
 COUNT(problem.subtypetools_subtypetools_id) AS C_A,
 SUM(IF(problem_status = 'N',1,0)) AS C_N,
@@ -753,27 +753,27 @@ SUM(IF(problem_status = 'S',1,0)) AS C_S",
 'problem,subtypetools,subzoo,zoo',
 "problem.subtypetools_subtypetools_id = subtypetools.subtypetools_id AND
  problem.subzoo_subzoo_id = subzoo.subzoo_id AND
- zoo.zoo_name = 'สำนักเทคโนโลยีสารสนเทศ' AND
+ zoo.zoo_name = 'สำนักดิจิทัลและสารสนเทศ' AND
  problem.subzoo_zoo_zoo_id = zoo.zoo_id AND problem_date ".$qua."
  GROUP BY problem.subtypetools_subtypetools_id")->execute();
  $CY9 = $db->countTableBETWEEN46('problem','subtypetools','subzoo','zoo',
                                 'problem.subtypetools_subtypetools_id','subtypetools.subtypetools_id',
                                 'problem.subzoo_subzoo_id','subzoo.subzoo_id',
-                                'zoo.zoo_name',"'สำนักเทคโนโลยีสารสนเทศ'",
+                                'zoo.zoo_name',"'สำนักดิจิทัลและสารสนเทศ'",
                                 'problem.subzoo_zoo_zoo_id','zoo.zoo_id',
                                 'problem_status',"'Y'",
                                 'problem_date',$qua)->executeRowcount();
 $CS9 = $db->countTableBETWEEN46('problem','subtypetools','subzoo','zoo',
                                 'problem.subtypetools_subtypetools_id','subtypetools.subtypetools_id',
                                 'problem.subzoo_subzoo_id','subzoo.subzoo_id',
-                                'zoo.zoo_name',"'สำนักเทคโนโลยีสารสนเทศ'",
+                                'zoo.zoo_name',"'สำนักดิจิทัลและสารสนเทศ'",
                                 'problem.subzoo_zoo_zoo_id','zoo.zoo_id',
                                 'problem_status',"'S'",
                                 'problem_date',$qua)->executeRowcount();
 $CN9 = $db->countTableBETWEEN46('problem','subtypetools','subzoo','zoo',
                                 'problem.subtypetools_subtypetools_id','subtypetools.subtypetools_id',
                                 'problem.subzoo_subzoo_id','subzoo.subzoo_id',
-                                'zoo.zoo_name',"'สำนักเทคโนโลยีสารสนเทศ'",
+                                'zoo.zoo_name',"'สำนักดิจิทัลและสารสนเทศ'",
                                 'problem.subzoo_zoo_zoo_id','zoo.zoo_id',
                                 'problem_status',"'N'",
                                 'problem_date',$qua)->executeRowcount();
@@ -784,7 +784,7 @@ SUM(IF(problem_status = 'Y',1,0)) AS adminfix",
 "problem.subtypetools_subtypetools_id = subtypetools.subtypetools_id AND
  problem.subzoo_subzoo_id = subzoo.subzoo_id AND
  problem.problem_adminfix = user.user_id AND
- zoo.zoo_name = 'สำนักเทคโนโลยีสารสนเทศ' AND
+ zoo.zoo_name = 'สำนักดิจิทัลและสารสนเทศ' AND
  problem.subzoo_zoo_zoo_id = zoo.zoo_id AND problem_date ".$qua."
  GROUP BY problem_adminfix")->execute();
  //สถาบันบริหารจัดการสวนสัตว์
@@ -1246,12 +1246,12 @@ SUM(IF(problem_status = 'Y',1,0)) AS adminfix",
 				</div>
                         </div>
         </div>
- <!-- สำนักเทคโนโลยีสารสนเทศ -->
+ <!-- สำนักดิจิทัลและสารสนเทศ -->
    <?php if(!empty($rs9)){?>
         <div class='col-md-12 page'>
 			<div class='row'>
 				<div class='col-md-12'>
-					<h4><p>สำนักเทคโนโลยีสารสนเทศ</p></h4>
+					<h4><p>สำนักดิจิทัลและสารสนเทศ</p></h4>
 				</div>
 				<div class='col-md-12'>
 					<p><b><u>สรุป</u></b> จำนวนการขอรับบริการทั้งหมด <?php echo $counttotal9;?> ครั้ง</p>

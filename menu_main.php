@@ -8,6 +8,9 @@
 				<li class="nav-item">
                                     <a class="nav-link edittext mucl" href="https://zoothailand.watchguard.in.th:4100"><i class="fas fa-network-wired mr-2"></i><span>เข้าระบบอินเตอร์เน็ต</span></a>
 				</li>
+                                                                <li class="nav-item">
+				<a class="nav-link collapsed edittext mucl" href="http://saraban.egov.go.th"><i class="fas fa-file-alt mr-2"></i><span>ระบบสารบรรณอิเล็กทรอนิกส์</span></a>
+				</li>
 				<li class="nav-item">
                                     <a class="nav-link edittext mucl" href="http://mail.zoothailand.org"><i class="far fa-envelope mr-2"></i><span>อีเมล์</span></a>
 				</li>
@@ -15,6 +18,12 @@
 					<a class="nav-link edittext mucl" href="index.php?url=fm_dialog.php">
                                                                                 <i class="fas fa-database mr-2"></i>
                                                                                 <span>ระบบฝากไฟล์</span>
+					</a>
+				</li>
+                                                                <li class="nav-item">
+					<a class="nav-link edittext mucl" href="http://192.168.0.1">
+                                                                                <i class="fas fa-database mr-2"></i>
+                                                                                <span>Intranet (เก่า)</span>
 					</a>
 				</li>
 				<li class="nav-item">
@@ -73,8 +82,11 @@
 				<a class="nav-link collapsed edittext mucl" href="#"><span class="edittext" data-feather="check-square"></span>KM</a>
 				</li>
 -->
-<li class="nav-item">
+                                                                <li class="nav-item">
 				<a class="nav-link collapsed edittext mucl" href="index.php?url=qrcode/index.php"><i class="fas fa-qrcode mr-2"></i><span>QR</span></a>
+				</li>
+                                                                <li class="nav-item">
+				<a class="nav-link collapsed edittext mucl" href="http://192.168.0.5:8088/hr-new"><i class="fas fa-user mr-2"></i><span>ระบบบริหารงานบุคลากร</span></a>
 				</li>
             </ul>
         </div>

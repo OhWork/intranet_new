@@ -30,7 +30,7 @@ $rs = $db->findByPK33DESC('reguser','subzoo','zoo','reguser.subzoo_subzoo_id','s
 							<td align="center">แบบฟอร์ม การขอชื่อผู้ใช้และรหัสผ่านสำหรับใช้งานระบบเทคโนโลยีสารสนเทศ</td>
     				    </tr>
     				    <tr>
-							<td align="center">สำนักเทคโนโลยีสารสนเทศ โทร ๐๒-๕๘๗๐๐๕๕ , ภายใน ๒๑๒</td>
+							<td align="center">สำนักดิจิทัลและสารสนเทศ โทร ๐๒-๕๘๗๐๐๕๕ , ภายใน ๒๑๒</td>
 						</tr>
 					</table>
 					<table style="width:100%;height:10px;">
