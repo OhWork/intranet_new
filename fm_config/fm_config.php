@@ -440,7 +440,7 @@ if(@$_SESSION['subzoo_zoo_zoo_id'] ==''){
 	 $config['copy_cut_dirs'] = false;
 	 $config['chmod_files'] = false;
 	 $config['chmod_dirs'] = false;
-	 $config['preview_text_files'] = false;
+	 $config['preview_text_files'] = true;
 	 $config['edit_text_files'] = false;
 	 $config['create_text_files'] = false;
 	 $config['upload_dir'] = 'source/';
