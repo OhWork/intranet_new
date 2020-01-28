@@ -1,6 +1,6 @@
 <?php
 if (!empty($_SESSION['user_name'])):
-  $id = $_SESSION['user_id'];
+  $id = $_GET['id'];
   $form = new form();
   $lboldpass = new label("รหัสผ่านเดิม");
   $lbpass = new label("รหัสผ่าน");
