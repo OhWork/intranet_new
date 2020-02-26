@@ -54,7 +54,7 @@
         </label>
       </div>
       <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
-      <p class="mt-5 mb-3 text-muted text-center">&copy; 2014-2018</p>
+      <p class="mt-5 mb-3 text-muted text-center">&copy; 2014-<?php echo date("Y")?></p>
    <?php echo $form->close();?>
   </body>
 </html>
