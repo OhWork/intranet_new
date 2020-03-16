@@ -90,6 +90,30 @@
 								<div class='col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8'>ยังไม่ลงทะเบียน</div>
 							</div>
 						</div>
+                                                                                                <div class="col-12 mt-2">
+							<div class="row">
+								<div class='col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4 font-weight-bold text-center'><?php echo $lbtime; ?></div>
+								<div class='col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8'><?php echo $r['problem_date']; ?></div>
+							</div>
+						</div>
+						<div class="col-12 mt-2">
+							<div class="row">
+								<div class='col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4 font-weight-bold text-center'><?php echo $lbtypetools; ?></div>
+								<div class='col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8'><?php echo $r['typetools_name']; ?></div>
+							</div>
+						</div>
+						<div class="col-12 mt-2">
+							<div class="row">
+								<div class='col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4 font-weight-bold text-center'><?php echo $lbsubtypetools; ?></div>
+								<div class='col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8'><?php echo $r['subtypetools_name']; ?></div>
+							</div>
+						</div>
+						<div class="col-12 mt-2" style="border-bottom: solid 1px #000000;">
+							<div class="row">
+								<div class='col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4 font-weight-bold text-center'><?php echo $lbdetailbegin; ?></div>
+								<div class='col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8'><?php echo $r['problem_detail']; ?></div>
+							</div>
+						</div>
 <?php
 		}else{
 ?>

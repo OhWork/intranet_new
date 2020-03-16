@@ -19,6 +19,7 @@
 	$dateshow = substr($datestart,8,2);
 	$montshow = substr($datestart,5,2);
 	$yearshow = substr($datestart,0,4);
+                $yeartotal = $yearshow+543;
 	  switch($montshow){
         case 01: $monthtxt = "มกราคม"; break;
         case 02: $monthtxt = "กุมภาพันธ์"; break;
@@ -108,7 +109,7 @@
 					<td>เดือน</td>
 					<td style="width:80px;border-bottom: 1.5px;border-bottom-style: dotted;border-bottom-color: #000000;"><center><?php echo $monthtxt;?></center></td>
 					<td>พ.ศ.</td>
-					<td style="width:70px;border-bottom: 1.5px;border-bottom-style: dotted;border-bottom-color: #000000;"><center><?php echo $yearshow;?></center></td>
+					<td style="width:70px;border-bottom: 1.5px;border-bottom-style: dotted;border-bottom-color: #000000;"><center><?php echo $yeartotal;?></center></td>
 					<td>เวลาเริ่ม</td>
 					<td style="border-bottom: 1.5px;border-bottom-style: dotted;border-bottom-color: #000000;width:110px;"><center><?php echo $timestartshow; ?></center></td>
 					<td>น. เวลาเลิก</td>
