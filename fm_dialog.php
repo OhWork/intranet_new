@@ -825,10 +825,7 @@ $files=$sorted;
 	if (!empty($_SESSION['user_name'])){
 	?>
 	<li class="pull-left"><a id="noac" href="admin_index.php?url=fm_dialog.php"><i class="icon-home"></i></a></li>
-	<?php }else{ ?>
-	<li class="pull-left"><a id="noac" href="index.php?url=fm_dialog.php"><i class="icon-home"></i></a></li>
-	<?php }?>
-	<li><span class="divider">/</span></li>
+                    <li><span class="divider">/</span></li>
 	<?php
 	$bc=explode("/",$subdir);
 	$tmp_path='';
@@ -849,6 +846,31 @@ $files=$sorted;
 	<?php
 	}
 	?>
+	<?php }else{ ?>
+	<li class="pull-left"><a id="noac" href="index.php?url=fm_dialog.php"><i class="icon-home"></i></a></li>
+                        <li><span class="divider">/</span></li>
+	<?php
+	$bc=explode("/",$subdir);
+	$tmp_path='';
+	if(!empty(array_filter($bc))){
+	foreach($bc as $k=>$b){
+		$tmp_path.=$b."/";
+		if($k==count($bc)-2){
+	?> <li class="active"><?php echo $b?></li><?php
+		}elseif($b!=""){ ?>
+		<li><a href="index.php?url=fm_dialog.php&?editor=0&type=0&lang=en_EN&popup=0&crossdomain=0&field_id=&relative_url=0&akey=key&fldr=<?php echo $tmp_path?>"><?php echo $b?></a></li><li><span class="divider"><?php echo "/";?></span></li>
+	<?php }
+	}
+	}else{
+		$rsshownamefol = $db->findByPK('folder','folder_sc',$_SESSION['subzoo_sc'])->executeAssoc();
+		$rsshowsubfol = $db->findByPK('folder','folder_id',$rs['folder_position'])->executeAssoc();
+		?>
+		<li class="active"><?php echo $rsshowsubfol['folder_name'].'/'.$rsshownamefol['folder_name'] ?></li>
+	<?php
+	}
+	?>
+	<?php }?>
+	
 	<li><small class="hidden-phone">(<span id="files_number"><?php echo $current_files_number."</span> ".trans('Files')." - <span id='folders_number'>".$current_folders_number."</span> ".trans('Folders');?>)</small></li>
 	<?php if($show_total_size){ ?>
 	<li><small class="hidden-phone"><span title="<?php echo trans('total size').$MaxSizeTotal;?>"><?php echo trans('total size').": ".makeSize($sizeCurrentFolder).(($MaxSizeTotal !== false && is_int($MaxSizeTotal))? '/'.$MaxSizeTotal.' '.trans('MB'):'');?></span></small>
