@@ -382,13 +382,13 @@ if ($user_zoo == 10 || $user_zoo == 18) {
 		                <ul class="sub-menu collapse bnmenusub1" id="cfreport">
 				         <a class="nav-link collapsed py-1 nav-link-6 edittext mucl" id="nav-5-animate-1" href="#cfreportcon" data-toggle="collapse" data-target="#cfreportcon"><span data-feather="chevron-right"></span>รายงานห้องประชุม</a>
 				          <ul class="sub-menu collapse" id="cfreportcon">
-				          <a class="nav-link edittext mucl" id="nav-6-animate-1" href="admin_index.php?url=cf_totalservicemonthconfer.php"><span data-feather="chevron-right"></span>รายงานห้องประชุมรายห้อง</a>
-				          <a class="nav-link edittext mucl" id="nav-6-animate-2" href="admin_index.php?url=cf_totalservicemonthconferAll.php"><span data-feather="chevron-right"></span>รายงานห้องประชุมรวม</a>
+				          <a class="nav-link edittext mucl" id="nav-6-animate-1" href="admin_index.php?url=cf_totalservicemonthconferroom.php"><span data-feather="chevron-right"></span>รายงานห้องประชุมรายห้อง</a>
+				          <a class="nav-link edittext mucl" id="nav-6-animate-2" href="admin_index.php?url=cf_totalservicemonthconferroomAll.php"><span data-feather="chevron-right"></span>รายงานห้องประชุมรวม</a>
 		               </ul>
 				         <a class="nav-link collapsed py-1 nav-link-7 edittext mucl" id="nav-5-animate-2" href="#cfreportvdocon" data-toggle="collapse" data-target="#cfreportvdocon"><span data-feather="chevron-right"></span>รายงานห้องประชุมออนไลน์</a>
 				         <ul class="sub-menu collapse" id="cfreportvdocon">
-				          <a class="nav-link edittext mucl" id="nav-7-animate-1"href="admin_index.php?url=cf_totalservicemonthconferonline.php"><span data-feather="chevron-right"></span>รายงานห้องประชุมออนไลน์รายห้อง</a>
-				          <a class="nav-link edittext mucl" id="nav-7-animate-2" href="admin_index.php?url=cf_totalservicemonthconferonlineAll.php"><span data-feather="chevron-right"></span>รายงานห้องประชุมออนไลน์รวม</a>
+				          <a class="nav-link edittext mucl" id="nav-7-animate-1"href="admin_index.php?url=cf_totalservicemonthconferroomonline.php"><span data-feather="chevron-right"></span>รายงานห้องประชุมออนไลน์รายห้อง</a>
+				          <a class="nav-link edittext mucl" id="nav-7-animate-2" href="admin_index.php?url=cf_totalservicemonthconferroomonlineAll.php"><span data-feather="chevron-right"></span>รายงานห้องประชุมออนไลน์รวม</a>
 		               </ul>
 				        </ul>
 	                <a class="nav-link collapsed py-1 nav-link-8 edittext mucl" id="nav-2-animate-4" href="#cfsetting" data-toggle="collapse" data-target="#cfsetting"><span data-feather="settings"></span>ตั้งค่า</a>
