@@ -66,7 +66,7 @@
 					<select class='form-control css-require' id="conferroom_id" name="confer">
 	                    <option selected value="">-----โปรดระบุห้องประชุม-----</option>
                 			<?php
-                				$rs = $db->orderASC('confer','conferroom_id')->execute();
+                				$rs = $db->orderASC('conferroom','conferroom_id')->execute();
                 				while($objResult = mysqli_fetch_array($rs,MYSQLI_ASSOC))
                 				{
                 				?>
@@ -76,12 +76,12 @@
                 				?>
         			</select>
         			<?php }
-	        		//องการณ์สวนสัตว์
+	        		//องการค์สวนสัตว์
 					elseif($user_zoo == 3 || $user_zoo == 11 || $user_zoo == 12 || $user_zoo == 13 || $user_zoo == 14 || $user_zoo == 15 ||$user_zoo == 16|| $user_zoo == 17 ||$user_zoo == 18 ){ ?>
 					<select class='form-control css-require' id="conferroom_id" name="confer">
 	                    <option selected value="">-----โปรดระบุห้องประชุม-----</option>
                 			<?php
-                				$rs2 = $db->findByPK('confer','zoo_zoo_id',$user_zoo)->execute();
+                				$rs2 = $db->findByPK('conferroom','zoo_zoo_id',$user_zoo)->execute();
                 				while($objResult2 = mysqli_fetch_array($rs2,MYSQLI_ASSOC))
                 				{
                 				?>
@@ -163,8 +163,8 @@
         case 11: $confertxt = "ห้องประชุมนกเงือก"; break;
         case 12: $confertxt = "ห้องประชุมอาคารสำนักงาน"; break;
     }
-    $rs = $db->findByPK46LimitBETWEENASC('eventconfer','headncf','confer','zoo',
-    'eventconfer.confer_confer_id','confer.conferroom_id',
+    $rs = $db->findByPK46LimitBETWEENASC('eventconfer','headncf','conferroom','zoo',
+    'eventconfer.confer_confer_id','conferroom.conferroom_id',
     'eventconfer.subzoo_zoo_zoo_id','zoo.zoo_id',
     'eventconfer.headncf_headncf_id','headncf.headncf_id',
     'eventconfer_status',"'Y'",
@@ -172,16 +172,16 @@
     'eventconfer_start',$qua,
     'eventconfer_start')->execute();
      $counttotal = $db->countTableBETWEEN46('eventconfer','headncf','confer','zoo',
-    'eventconfer.confer_confer_id','confer.conferroom_id',
+    'eventconfer.confer_confer_id','conferroom.conferroom_id',
     'eventconfer.subzoo_zoo_zoo_id','zoo.zoo_id',
     'eventconfer.headncf_headncf_id','headncf.headncf_id',
     'eventconfer_status',"'Y'",
     'eventconfer.confer_confer_id',$conferrenname,
     'eventconfer_start',$qua)->executeRowcount();
     $countjoin = $db->specifytable('*,
-    SUM(eventconfer_join) AS joinconfer',
-    'eventconfer,zoo,headncf,confer',
-    "eventconfer.confer_conferroom_id = confer.conferroom_id AND
+    SUM(eventconfer_join) AS joinconferroom',
+    'eventconfer,zoo,headncf,conferroom',
+    "eventconfer.confer_conferroom_id = conferroom.conferroom_id AND
                                            eventconfer.subzoo_zoo_zoo_id = zoo.zoo_id AND
                                            eventconfer.headncf_headncf_id = headncf.headncf_id AND
                                            eventconfer_status = 'Y' AND

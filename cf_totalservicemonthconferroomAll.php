@@ -131,24 +131,24 @@
         case 11: $confertxt = "ห้องประชุมนกเงือก"; break;
         case 12: $confertxt = "ห้องประชุมอาคารสำนักงาน"; break;
     }
-    $rs = $db->findByPK45LimitBETWEENASC('eventconfer','headncf','confer','zoo',
-    'eventconfer.confer_confer_id','confer.conferroom_id',
+    $rs = $db->findByPK45LimitBETWEENASC('eventconfer','headncf','conferroom','zoo',
+    'eventconfer.confer_confer_id','conferroom.conferroom_id',
     'eventconfer.subzoo_zoo_zoo_id','zoo.zoo_id',
     'eventconfer.headncf_headncf_id','headncf.headncf_id',
     'eventconfer_status',"'Y'",
     'eventconfer_start',$qua,
     'eventconfer_start')->execute();
 
-    $total = $db->countTableBETWEEN45('eventconfer','headncf','confer','zoo',
-    'eventconfer.confer_confer_id','confer.conferroom_id',
+    $total = $db->countTableBETWEEN45('eventconfer','headncf','conferroom','zoo',
+    'eventconfer.confer_confer_id','conferroom.conferroom_id',
     'eventconfer.subzoo_zoo_zoo_id','zoo.zoo_id',
     'eventconfer.headncf_headncf_id','headncf.headncf_id',
     'eventconfer_status',"'Y'",
     'eventconfer_start',$qua)->executeRowcount();
 
     $countjoin = $db->specifytable('*,
-    SUM(eventconfer_join) AS joinconfer'
-    ,'eventconfer,zoo,headncf,confer',"eventconfer.confer_confer_id = confer.conferroom_id AND
+    SUM(eventconfer_join) AS join conferroom'
+    ,'eventconfer,zoo,headncf,conferroom',"eventconfer.confer_confer_id = confer.conferroom_id AND
                                            eventconfer.subzoo_zoo_zoo_id = zoo.zoo_id AND
                                            eventconfer.headncf_headncf_id = headncf.headncf_id AND
                                            eventconfer_status = 'Y' AND
