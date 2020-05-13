@@ -131,15 +131,15 @@
         case 11: $confertxt = "ห้องประชุมนกเงือก"; break;
         case 12: $confertxt = "ห้องประชุมอาคารสำนักงาน"; break;
     }
-    $rs = $db->findByPK45LimitBETWEENASC('eventconfer','headncf','confer','zoo',
-    'eventconfer.confer_confer_id','confer.conferroom_id',
+    $rs = $db->findByPK45LimitBETWEENASC('eventconfer','headncf','conferroom','zoo',
+    'eventconfer.confer_confer_id','conferroom.conferroom_id',
     'eventconfer.subzoo_zoo_zoo_id','zoo.zoo_id',
     'eventconfer.headncf_headncf_id','headncf.headncf_id',
     'eventconfer_status_online',"'Y'",
     'eventconfer_start',$qua,
     'eventconfer_start')->execute();
-    $counttotal = $db->countTableBETWEEN45('eventconfer','headncf','confer','zoo',
-    'eventconfer.confer_confer_id','confer.conferroom_id',
+    $counttotal = $db->countTableBETWEEN45('eventconfer','headncf','conferroom','zoo',
+    'eventconfer.confer_confer_id','conferroom.conferroom_id',
     'eventconfer.subzoo_zoo_zoo_id','zoo.zoo_id',
     'eventconfer.headncf_headncf_id','headncf.headncf_id',
     'eventconfer_status_online',"'Y'",
@@ -148,7 +148,7 @@
 <div class='col-md-12'>
 	<div class='row'>
 		<div class='col-md-12 reporthead test'>
-			<Center><img src='images/Logo/zpo.png'></center>
+			<Center><img src='images/logo/zpo.png'></center>
 		</div>
 		<div class='col-md-12 test'>
 			<center>รายงานการการขอใช้ระบบประชุมทางไกลองค์การสวนสัตว์(VDO Conference)</center>

@@ -169,7 +169,7 @@
     'eventconfer.subzoo_zoo_zoo_id','zoo.zoo_id',
     'eventconfer.headncf_headncf_id','headncf.headncf_id',
     'eventconfer_status_online',"'Y'",
-    'eventconfer.conferroom_conferroom_id',$conferrenname,
+    'eventconfer.confer_confer_id',$conferrenname,
     'eventconfer_start',$qua,
     'eventconfer_start')->execute();
     $counttotal = $db->countTableBETWEEN46('eventconfer','headncf','conferroom','zoo',
@@ -183,7 +183,7 @@
 <div class='col-md-12'>
 	<div class='row'>
 		<div class='col-md-12 reporthead test'>
-			<Center><img src='images/Logo/zpo.png'></center>
+			<Center><img src='images/logo/zpo.png'></center>
 		</div>
 		<div class='col-md-12 test'>
 			<center>รายงานการการขอใช้ระบบประชุมทางไกลองค์การสวนสัตว์(VDO Conference) ณ <?php echo $confertxt;?></center>
