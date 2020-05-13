@@ -72,7 +72,7 @@ error_reporting(0);
 			</nav>
 			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 showindex" >
 				<div class="row">
-					<div class="col-xl-2 col-lg-2 col-md-2 printdisplaynone" style="height: 100%;">
+					<div class="col-xl-2 col-lg-2 col-md-2 printdisplaynone">
 						<div class="row">
 							<?php include 'menu_main.php'; ?>
 						</div>
@@ -80,23 +80,24 @@ error_reporting(0);
 					<div class="col-xl-10 col-lg-10 col-md-10 col-sm-12 col-12 showindex">
 						<div class="row">
 							<?php include 'content.php'; ?>
+                                                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-5 printdisplaynone">
+                                                        <div class="row d-flex justify-content-center">
+                                                            <div class="indexft"><a href="http://www.zoothailand.org" target="_blank"><img src="images/Logo/zoo-0.png"/></a></div>
+                                                            <div class="indexft"><a href="http://www.dusit.zoothailand.org" target="_blank"><img src="images/Logo/zoo-1.jpg"></a></div>
+                                                            <div class="indexft"><a href="http://www.khaokheow.zoothailand.org"><img src="images/Logo/zoo-2.png"></a></div>
+                                                            <div class="indexft"><a href="http://www.chiangmai.zoothailand.org" target="_blank"><img src="images/Logo/zoo-3.jpg"></a></div>
+                                                            <div class="indexft"><a href="http://www.korat.zoothailand.org" target="_blank"><img src="images/Logo/zoo-4.png"></a></div>
+                                                            <div class="indexft"><a href="http://www.songkhla.zoothailand.org" target="_blank"><img src="images/Logo/zoo-5.png"></a></div>
+                                                            <div class="indexft"><a href="http://www.ubon.zoothailand.org" target="_blank"><img src="images/Logo/zoo-6.png"></a></div>
+                                                            <div class="indexft"><a href="http://www.khonkaen.zoothailand.org" target="_blank"><img src="images/Logo/zoo-7.jpg"></a></div>
+                                                            <div class="indexft"><a href="http://www.surin.zoothailand.org" target="_blank"><img src="images/Logo/zoo-8.jpg"></a></div>
+                                                        </div>
+                                                    </div>
 						</div>
 					</div>
 				</div>
 			</div>
-			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-5 printdisplaynone">
-				<div class="row d-flex justify-content-center">
-                                    <div class="indexft"><a href="http://www.zoothailand.org" target="_blank"><img src="images/Logo/zoo-0.png"/></a></div>
-					<div class="indexft"><a href="http://www.dusit.zoothailand.org" target="_blank"><img src="images/Logo/zoo-1.jpg"></a></div>
-					<div class="indexft"><a href="http://www.khaokheow.zoothailand.org"><img src="images/Logo/zoo-2.png"></a></div>
-                                        <div class="indexft"><a href="http://www.chiangmai.zoothailand.org" target="_blank"><img src="images/Logo/zoo-3.jpg"></a></div>
-                                        <div class="indexft"><a href="http://www.korat.zoothailand.org" target="_blank"><img src="images/Logo/zoo-4.png"></a></div>
-                                        <div class="indexft"><a href="http://www.songkhla.zoothailand.org" target="_blank"><img src="images/Logo/zoo-5.png"></a></div>
-                                        <div class="indexft"><a href="http://www.ubon.zoothailand.org" target="_blank"><img src="images/Logo/zoo-6.png"></a></div>
-                                        <div class="indexft"><a href="http://www.khonkaen.zoothailand.org" target="_blank"><img src="images/Logo/zoo-7.jpg"></a></div>
-                                        <div class="indexft"><a href="http://www.surin.zoothailand.org" target="_blank"><img src="images/Logo/zoo-8.jpg"></a></div>
-				</div>
-			</div>
+			
 </body>
 
 		<script type="text/javascript">
