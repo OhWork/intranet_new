@@ -174,8 +174,8 @@ function autoTab2(obj,typeCheck){
 }  </script>
 <?php echo $form->open("form_reg","frmMain","col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","user_insert_user.php",""); ?>
 <div class="row">
-	<div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3"></div>
-	<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6 usubd">
+	<div class="col-xl-3 col-lg-2 col-md-1"></div>
+	<div class="col-xl-6 col-lg-8 col-md-10 col-sm-12 col-12 usubd">
 		<div class="row">
 			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-2" style="border-bottom:solid 1px #E0E0E0;">
 				<h4>ข้อมูลส่วนตัว</h4>
@@ -189,10 +189,10 @@ function autoTab2(obj,typeCheck){
 			</div>
 			<div id="msg"></div>
 		<?php }else{ ?>
-			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+			<div class="col-xl-3 col-lg-3 col-md-3 col-sm-4 col-4 mt-2">
 				<?php echo $lbuser; ?>
 			</div>
-			<div class="form-group has-feedback col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+			<div class="form-control col-xl-9 col-lg-9 col-md-9 col-sm-8 col-8">
 				<?php echo $r['user_user'];?>
 			</div>
 			<div id="msg"></div>
@@ -357,7 +357,7 @@ function autoTab2(obj,typeCheck){
 			</div>
 		</div>
 	</div>
-	<div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3"></div>
+	<div class="col-xl-3 col-lg-2 col-md-1"></div>
 </div>
 <?php
     echo $form->close();
