@@ -40,7 +40,8 @@ if (!empty($_SESSION['user_name'])):
    $submit = new buttonok("ยืนยัน","btnSubmit","btn btn-success col-md-12","");
     if(!empty($_GET['id'])){
 	$id = $_GET['id'];
-	$r = $db->findByPK('user','user_id',$id)->executeRow();
+	//$r = $db->findByPK('user','user_id',$id)->executeRow();
+                $r = $db->findByPK33('user','subzoo','zoo','subzoo_subzoo_id','subzoo_id','subzoo_zoo_zoo_id','zoo_id','user_id',$id)->executeRow();
 	$txtpass->value = $r['user_pass'];
 	$txtname->value = $r['user_name'];
                 $txtnameen->value = $r['user_nameeng'];
@@ -49,7 +50,7 @@ if (!empty($_SESSION['user_name'])):
 	$txttel->value = $r['user_tel'];
 	$txtidcard->value = $r['user_idcard'];
 	$zoo = $r['subzoo_zoo_zoo_id'];
-    $subzoo = $r['subzoo_subzoo_id'];
+                $subzoo = $r['subzoo_subzoo_id'];
     if($r["user_enable"] == 1){
     	$radiouserenable->add(' ใช้งานได้',1,'checked','');
     	$radiouserenable->add(' ไม่สามารถใช้งานได้',0,'','');
@@ -196,14 +197,16 @@ function autoTab2(obj,typeCheck){
 			</div>
 			<div id="msg"></div>
 		<?php } ?>
+                        <?php if(empty($id)){ ?>                       
 			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 				<label>สังกัด</label>
 			</div>
+                        
 			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 				<select class='form-control css-require' id="ddlZoo" name="subzoo_zoo_zoo_id" onChange = "ListSubzoo(this.value)">
 				<option selected value="">---โปรดระบุ---</option>
 				<?php
-					$rs = $db->findAllASC('zoo','zoo_no')->execute();
+				$rs = $db->findAllASC('zoo','zoo_no')->execute();
 					while($objResult = mysqli_fetch_array($rs,MYSQLI_ASSOC))
 					{
 				?>
@@ -212,13 +215,22 @@ function autoTab2(obj,typeCheck){
 					}
 				?>
 				</select>
-			</div>
+			</div>         
 			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3">
 				<label>ฝ่าย</label>
 			</div>
 			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 form-group has-feedback">
 				<select class='form-control css-require' id="ddlSubzoo" name="subzoo_subzoo_id"></select>
 			</div>
+                           <?php }else{ ?>
+                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+				<label>สังกัด</label> <?php echo $r['zoo_name']; ?>
+			</div>
+                         
+			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3">
+				<label>ฝ่าย</label> <?php echo $r['subzoo_name']; ?>
+			</div>
+                        <?php } ?>
 			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 				<div class="row">
 					<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6">
