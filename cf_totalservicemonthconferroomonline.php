@@ -177,7 +177,7 @@
     'eventconfer.subzoo_zoo_zoo_id','zoo.zoo_id',
     'eventconfer.headncf_headncf_id','headncf.headncf_id',
     'eventconfer_status_online',"'Y'",
-    'eventconfer.conferroom_conferroom_id',$conferrenname,
+    'eventconfer.confer_confer_id',$conferrenname,
     'eventconfer_start',$qua)->executeRowcount();
  ?>
 <div class='col-md-12'>

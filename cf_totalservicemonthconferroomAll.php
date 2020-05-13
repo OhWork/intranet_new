@@ -147,8 +147,8 @@
     'eventconfer_start',$qua)->executeRowcount();
 
     $countjoin = $db->specifytable('*,
-    SUM(eventconfer_join) AS join conferroom'
-    ,'eventconfer,zoo,headncf,conferroom',"eventconfer.confer_confer_id = confer.conferroom_id AND
+    SUM(eventconfer_join) AS joinconfer'
+    ,'eventconfer,zoo,headncf,conferroom',"eventconfer.confer_confer_id = conferroom.conferroom_id AND
                                            eventconfer.subzoo_zoo_zoo_id = zoo.zoo_id AND
                                            eventconfer.headncf_headncf_id = headncf.headncf_id AND
                                            eventconfer_status = 'Y' AND

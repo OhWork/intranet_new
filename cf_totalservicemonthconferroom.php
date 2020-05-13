@@ -171,7 +171,7 @@
     'eventconfer.confer_confer_id',$conferrenname,
     'eventconfer_start',$qua,
     'eventconfer_start')->execute();
-     $counttotal = $db->countTableBETWEEN46('eventconfer','headncf','confer','zoo',
+     $counttotal = $db->countTableBETWEEN46('eventconfer','headncf','conferroom','zoo',
     'eventconfer.confer_confer_id','conferroom.conferroom_id',
     'eventconfer.subzoo_zoo_zoo_id','zoo.zoo_id',
     'eventconfer.headncf_headncf_id','headncf.headncf_id',
@@ -179,9 +179,9 @@
     'eventconfer.confer_confer_id',$conferrenname,
     'eventconfer_start',$qua)->executeRowcount();
     $countjoin = $db->specifytable('*,
-    SUM(eventconfer_join) AS joinconferroom',
+    SUM(eventconfer_join) AS joinconfer',
     'eventconfer,zoo,headncf,conferroom',
-    "eventconfer.confer_conferroom_id = conferroom.conferroom_id AND
+    "eventconfer.confer_confer_id = conferroom.conferroom_id AND
                                            eventconfer.subzoo_zoo_zoo_id = zoo.zoo_id AND
                                            eventconfer.headncf_headncf_id = headncf.headncf_id AND
                                            eventconfer_status = 'Y' AND
