@@ -41,7 +41,7 @@
 			<?php
 				$grid = new gridView();
 				$grid->pr = 'ipzpo_id';
-				$grid->header = array('<b><center>IP-Address</center></b>','<b><center>Name/System</center></b>','<b><center>Type</center></b>','<b><center>Detail</center></b>','<b><center>ComputerName</center></b>','<b><center>Workgroup</center></b>','<b><center>สถานที่</center></b>','<b><center>ฝ่าย</center></b>','<b><center>สังกัด</center></b>','<b><center>#</center></b>');
+				$grid->header = array('<b><center>IP-Address</center></b>','<b><center>ชื่อ/ระบบ</center></b>','<b><center>Type</center></b>','<b><center>รายละเอียด</center></b>','<b><center>ชื่อคอมพิวเตอร์</center></b>','<b><center>กลุ่มเครือข่าย</center></b>','<b><center>สถานที่</center></b>','<b><center>ฝ่าย</center></b>','<b><center>สังกัด</center></b>','<b><center>#</center></b>');
 				$grid->width = array('6%','20%','10%','10%','7%','3%','10%','15%','14%','5%');
 				$grid->edit = 'admin_index.php?url=cs_add_ip.php';
 				$grid->name = 'table';
