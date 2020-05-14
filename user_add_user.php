@@ -189,19 +189,24 @@ function autoTab2(obj,typeCheck){
 			</div>
 			<div id="msg"></div>
 		<?php }else{ ?>
-			<div class="col-xl-3 col-lg-3 col-md-3 col-sm-4 col-4 mt-2">
-				<?php echo $lbuser; ?>
-			</div>
-			<div class="form-control col-xl-9 col-lg-9 col-md-9 col-sm-8 col-8">
-				<?php echo $r['user_user'];?>
-			</div>
-			<div id="msg"></div>
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3">
+                            <div class="row">
+                                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-4 col-4 mt-2">
+                                        <?php echo $lbuser; ?>
+                                </div>
+                                <div class="col-xl-9 col-lg-9 col-md-9 col-sm-8 col-8">
+                                    <div class="form-control col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" style="border-color: green;color: green;">
+                                        <?php echo $r['user_user'];?>
+                                    </div>
+                                </div>
+                                <div id="msg"></div>
+                            </div>
+                        </div>
 		<?php } ?>
                         <?php if(empty($id)){ ?>                       
 			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 				<label>สังกัด</label>
 			</div>
-                        
 			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 				<select class='form-control css-require' id="ddlZoo" name="subzoo_zoo_zoo_id" onChange = "ListSubzoo(this.value)">
 				<option selected value="">---โปรดระบุ---</option>
@@ -222,14 +227,34 @@ function autoTab2(obj,typeCheck){
 			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 form-group has-feedback">
 				<select class='form-control css-require' id="ddlSubzoo" name="subzoo_subzoo_id"></select>
 			</div>
-                           <?php }else{ ?>
-                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-				<label>สังกัด</label> <?php echo $r['zoo_name']; ?>
-			</div>
-                         
+                <?php }else{ ?>
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3">
+                            <div class="row">
+                                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-4 col-4 mt-2">
+                                    <label>สังกัด</label>
+                                </div>
+                                <div class="col-xl-9 col-lg-9 col-md-9 col-sm-8 col-8">
+                                    <div class="form-control col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" style="border-color: green;color: green;"> 
+                                        <?php echo $r['zoo_name']; ?>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3">
-				<label>ฝ่าย</label> <?php echo $r['subzoo_name']; ?>
-			</div>
+                            <div class="row">
+                                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-4 col-4 mt-2">
+                                    <label>ฝ่าย</label>
+                                </div>
+                                <div class="col-xl-9 col-lg-9 col-md-9 col-sm-8 col-8">
+                                    <div class="form-control col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" style="border-color: green;color: green;"> 
+                                        <?php echo $r['subzoo_name']; ?>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3">
+                            <p style="color: red;">แก้ไขข้อมูลด้านล่างนี้เท่านั้น</p>
+                        </div>
                         <?php } ?>
 			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 				<div class="row">
