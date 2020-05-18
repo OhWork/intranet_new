@@ -78,8 +78,7 @@ error_reporting(0);
 						</div>
 					</div>
 					<div class="col-xl-10 col-lg-10 col-md-10 col-sm-12 col-12 showindex">
-						<div class="row">
-							<?php include 'content.php'; ?>
+                                            <?php include 'content.php'; ?>
                                                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-5 printdisplaynone">
                                                         <div class="row d-flex justify-content-center">
                                                             <div class="indexft"><a href="http://www.zoothailand.org" target="_blank"><img src="images/Logo/zoo-0.png"/></a></div>
@@ -93,7 +92,6 @@ error_reporting(0);
                                                             <div class="indexft"><a href="http://www.surin.zoothailand.org" target="_blank"><img src="images/Logo/zoo-8.jpg"></a></div>
                                                         </div>
                                                     </div>
-						</div>
 					</div>
 				</div>
 			</div>
