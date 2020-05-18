@@ -34,8 +34,7 @@
 	'vdo_name' => $_POST['vdo_name'],
                 'vdo_link' => $_POST['vdo_link'],
             'vdo_datereg' => $_POST['vdo_datereg'],
-            'vdo_datestart' => $_POST['vdo_datestart'],
-            'vdo_dateend' => $_POST['vdo_dateend']
+            'vdo_datestart' => $_POST['vdo_datestart']
 	));
         if(getenv(HTTP_X_FORWARDED_FOR)){
             $ip = $_SERVER['HTTP_X_FORWARDED_FOR']; // IP proxy

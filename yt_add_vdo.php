@@ -1,27 +1,49 @@
 <?php
+if (!empty($_SESSION['user_name'])):
+  $id = $_GET['id'];
+  $log_user = $_SESSION['user_name']." ".$_SESSION['user_last'];
    $datetime = date("Y-m-d H:i");
     $form = new form();
     $lbvdoname = new label('ชื่อเรื่อง');
     $lbly = new label('Link youtube');
-    $lbtypeDesign = new label('เลือกรูปแบบข่าวสาร');
-    $lbpic = new label('ภาพหน้าปก');
-    $lbdatestart = new label('วันเริ่ม');
-    $lbdateend = new label('วันสิ้นสุด'); 
-    $txtdetailnews = new textfield('news_detail','','form-control','','');
+    $lbtypeDesign = new label('เลือกชนิด');
+    $lbdatestart = new label('วันเริ่มแสดง');
+    $txtvdoname = new textfield('ipzpo_location','','form-control','','');
+    $txtly = new textfield('vdo_link','','form-control','','');
     $txtdatestart = new datetimepicker('news_datestart','datetimepicker1','','form-control datetimepicker-input','date-form dayinbox col-md-12 form-horizontal control-group controls input-group','input-group date','datetimepicker1','#datetimepicker1','','');
-    $txtdateend = new datetimepicker('news_dateend','datetimepicker2','','form-control datetimepicker-input','date-form dayinbox col-md-12 form-horizontal control-group controls input-group','input-group date','datetimepicker2','#datetimepicker2','','');    $txtheadnews = new textfield('news_head','','form-control','','');
-    
-    
-    
-   echo $form->open("form_reg","frmMain","","ty_insert_vdo.php","");
+    $submit = new buttonok("ยืนยัน","btnSubmit","btn btn-success col-md-12","");
+     echo $form->open("form_reg","frmMain","","ty_insert_vdo.php","");
     ?>
     <div class='row'>
 		<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12'>
 			<h4><?php echo $lbvdoname; ?></h4>
 		</div>
 		<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12'>
-			<?php echo $txtheadnews; ?>
+			<?php echo $txtvdoname; ?>
 		</div>
     </div>
+    <div class='row'>
+		<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12'>
+			<h4><?php echo $lbly; ?></h4>
+		</div>
+		<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12'>
+			<?php echo $txtly; ?>
+		</div>
+    </div>
+    <div class='row'>
+		<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12'>
+			<h4><?php echo $lbdatestart; ?></h4>
+		</div>
+		<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12'>
+			<?php echo $txtdatestart; ?>
+		</div>
+    </div>
+			<input type='hidden' name='log_user' value='<?php echo $log_user; ?>'/>
+                                                <input type='hidden' name='vdo_datereg' value='<?php echo $datetime; ?>'/>
+			<input type='hidden' name='user_id' value='<?php echo $_GET['id'];?>'/>
 <?php
+    echo $submit;
+    
+    echo $form->close();
+    endif;
 ?>
