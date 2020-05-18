@@ -22,7 +22,7 @@
                             </div>
                         </div>
                     </a>
-                    <a class="col-2" href="index.php?url=yt_index.php"> <!-- VDO 2-->
+                    <a class="col-2" href="index.php?url=yt_play_vdo.php"> <!-- VDO 2-->
                         <div class="col-12">
                             <div class="row">
                                 <!--<iframe width="100%" height="120" src="//www.youtube.com/embed/yVJc1O1U96c?rel=0" frameborder="0" allowfullscreen></iframe>-->
@@ -35,7 +35,7 @@
                             </div>
                         </div>
                     </a>
-                    <a class="col-2" href="index.php?url=yt_index.php"> <!-- VDO 3-->
+                    <a class="col-2" href="index.php?url=yt_play_vdo.php"> <!-- VDO 3-->
                         <div class="col-12">
                             <div class="row">
                                 <!--<iframe width="100%" height="120" src="//www.youtube.com/embed/yVJc1O1U96c?rel=0" frameborder="0" allowfullscreen></iframe>-->
@@ -48,7 +48,7 @@
                             </div>
                         </div>
                     </a>
-                    <a class="col-2" href="index.php?url=yt_index.php"> <!-- VDO 4-->
+                    <a class="col-2" href="index.php?url=yt_play_vdo.php"> <!-- VDO 4-->
                         <div class="col-12">
                             <div class="row">
                                 <!--<iframe width="100%" height="120" src="//www.youtube.com/embed/yVJc1O1U96c?rel=0" frameborder="0" allowfullscreen></iframe>-->
@@ -61,7 +61,7 @@
                             </div>
                         </div>
                     </a>
-                    <a class="col-2" href="index.php?url=yt_index.php"> <!-- VDO 5-->
+                    <a class="col-2" href="index.php?url=yt_play_vdo.php"> <!-- VDO 5-->
                         <div class="col-12">
                             <div class="row">
                                 <!--<iframe width="100%" height="120" src="//www.youtube.com/embed/yVJc1O1U96c?rel=0" frameborder="0" allowfullscreen></iframe>-->
@@ -74,7 +74,7 @@
                             </div>
                         </div>
                     </a>
-                    <a class="col-2" href="index.php?url=yt_index.php"> <!-- VDO 6-->
+                    <a class="col-2" href="index.php?url=yt_play_vdo.php"> <!-- VDO 6-->
                         <div class="col-12">
                             <div class="row">
                                 <!--<iframe width="100%" height="120" src="//www.youtube.com/embed/yVJc1O1U96c?rel=0" frameborder="0" allowfullscreen></iframe>-->
@@ -101,7 +101,7 @@
             </div>
             <div class="col-12">
                 <div class="row">
-                    <a class="col-2" href="index.php?url=yt_index.php"> <!-- VDO 1-->
+                    <a class="col-2" href="index.php?url=yt_play_vdo.php"> <!-- VDO 1-->
                         <div class="col-12">
                             <div class="row">
                                 <!--<iframe width="100%" height="120" src="//www.youtube.com/embed/yVJc1O1U96c?rel=0" frameborder="0" allowfullscreen></iframe>-->
@@ -114,7 +114,7 @@
                             </div>
                         </div>
                     </a>
-                    <a class="col-2" href="index.php?url=yt_index.php"> <!-- VDO 2-->
+                    <a class="col-2" href="index.php?url=yt_play_vdo.php"> <!-- VDO 2-->
                         <div class="col-12">
                             <div class="row">
                                 <!--<iframe width="100%" height="120" src="//www.youtube.com/embed/yVJc1O1U96c?rel=0" frameborder="0" allowfullscreen></iframe>-->
@@ -127,7 +127,7 @@
                             </div>
                         </div>
                     </a>
-                    <a class="col-2" href="index.php?url=yt_index.php"> <!-- VDO 3-->
+                    <a class="col-2" href="index.php?url=yt_play_vdo.php"> <!-- VDO 3-->
                         <div class="col-12">
                             <div class="row">
                                 <!--<iframe width="100%" height="120" src="//www.youtube.com/embed/yVJc1O1U96c?rel=0" frameborder="0" allowfullscreen></iframe>-->
@@ -140,7 +140,7 @@
                             </div>
                         </div>
                     </a>
-                    <a class="col-2" href="index.php?url=yt_index.php"> <!-- VDO 4-->
+                    <a class="col-2" href="index.php?url=yt_play_vdo.php"> <!-- VDO 4-->
                         <div class="col-12">
                             <div class="row">
                                 <!--<iframe width="100%" height="120" src="//www.youtube.com/embed/yVJc1O1U96c?rel=0" frameborder="0" allowfullscreen></iframe>-->
@@ -153,7 +153,7 @@
                             </div>
                         </div>
                     </a>
-                    <a class="col-2" href="index.php?url=yt_index.php"> <!-- VDO 5-->
+                    <a class="col-2" href="index.php?url=yt_play_vdo.php"> <!-- VDO 5-->
                         <div class="col-12">
                             <div class="row">
                                 <!--<iframe width="100%" height="120" src="//www.youtube.com/embed/yVJc1O1U96c?rel=0" frameborder="0" allowfullscreen></iframe>-->
@@ -166,7 +166,7 @@
                             </div>
                         </div>
                     </a>
-                    <a class="col-2" href="index.php?url=yt_index.php"> <!-- VDO 6-->
+                    <a class="col-2" href="index.php?url=yt_play_vdo.php"> <!-- VDO 6-->
                         <div class="col-12">
                             <div class="row">
                                 <!--<iframe width="100%" height="120" src="//www.youtube.com/embed/yVJc1O1U96c?rel=0" frameborder="0" allowfullscreen></iframe>-->
