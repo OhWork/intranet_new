@@ -30,11 +30,12 @@
         	'log_ip' => $ipshow
         	));
 	}else{
+                $vdo_link = substr($_POST['vdo_link'], -11);
 	$rs = $db->insert('vdo',array(
 	'vdo_name' => $_POST['vdo_name'],
-                'vdo_link' => $_POST['vdo_link'],
-            'vdo_datereg' => $_POST['vdo_datereg'],
-            'vdo_datestart' => $_POST['vdo_datestart']
+                'vdo_link' => $vdo_link,
+                'vdo_datereg' => $_POST['vdo_datereg'],
+                'vdo_datestart' => $_POST['vdo_datestart']
 	));
         if(getenv(HTTP_X_FORWARDED_FOR)){
             $ip = $_SERVER['HTTP_X_FORWARDED_FOR']; // IP proxy
