@@ -20,6 +20,7 @@
 		$data['systemallow_touristreport'] = $_POST['systemallow_touristreport'];
 		$data['systemallow_drive'] = $_POST['systemallow_drive'];
 		$data['systemallow_hrs'] = $_POST['systemallow_hrs'];
+                                $data['systemallow_vdo'] = $_POST['systemallow_vdo'];
 		$data['systemallow_qtn'] = $_POST['systemallow_qtn'];
 		$rsfix = $db->update('systemallow',$data,'systemallow_id',$_POST['user_id']);
 
@@ -47,6 +48,7 @@
 	'systemallow_touristreport' => $_POST['systemallow_touristreport'],
 	'systemallow_hrs' => $_POST['systemallow_hrs'],
 	'systemallow_qtn' => $_POST['systemallow_qtn'],
+                'systemallow_vdo' => $_POST['systemallow_vdo'],
 	'systemallow_drive' => $_POST['systemallow_drive']
 	));
 

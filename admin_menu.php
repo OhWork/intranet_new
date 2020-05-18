@@ -36,8 +36,8 @@
                 if($_SESSION['user_id'] == 1){
                         include_once 'admin_bn_menu.php';
 	 }
-	if($_SESSION['systemallow_km'] == 1){
-//                      include_once 'admin_km_menu.php';
+	if($_SESSION['systemallow_vdo'] == 1){
+                      include_once 'admin_vdo_menu.php';
 	 }
 	if($_SESSION['systemallow_admin'] == 1){
                         include_once 'admin_user_menu.php';
