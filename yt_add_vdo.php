@@ -11,7 +11,7 @@ if (!empty($_SESSION['user_name'])):
     $lbdatestart = new label('วันเริ่มแสดง');
     $txtvdoname = new textfield('ipzpo_location','','form-control','','');
     $txtly = new textfield('vdo_link','','form-control','','');
-    $txtdatestart = new datetimepicker('news_datestart','datetimepicker1','','form-control datetimepicker-input','date-form dayinbox col-md-12 form-horizontal control-group controls input-group','input-group date','datetimepicker1','#datetimepicker1','','');
+    $txtdatestart = new datetimepicker('touristreport_date','datepicker','','form-control datetimepicker-input','date-form dayinbox col-md-12 form-horizontal control-group controls input-group','input-group date','','#datepicker','','');
     $submit = new buttonok("ยืนยัน","btnSubmit","btn btn-success col-md-12","");
      echo $form->open("form_reg","frmMain","","yt_insert_vdo.php","");
     ?>
@@ -49,3 +49,15 @@ if (!empty($_SESSION['user_name'])):
     echo $form->close();
     endif;
 ?>
+                        <script>
+                            $(function () {
+        $('#datepicker').datetimepicker({
+	        format:'YYYY-MM-DD',
+	        useCurrent: false,
+            sideBySide: true,
+            allowInputToggle: true,
+	        locale:moment.locale('th'),
+	        stepping: 30
+        });
+        });
+                            </script>
