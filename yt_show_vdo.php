@@ -31,7 +31,7 @@
 				$grid->pr = 'news_id';
 				$grid->newdesign = 'typeDesignnews_id';
 				$grid->header = array('<b><center>หัวข้อข่าว</center></b>','<b><center>วันที่เริ่ม</center></b>','<b><center>วันที่สิ้นสุด</center></b>','<b><center>ผู้ลงข่าว</center></b>','<b><center>#</center></b>');
-				$grid->width = array('15%','14%','14%','14%','5%');
+				$grid->width = array('30%','20%','20%','20%','10%');
 				$grid->editdrop = 'admin_index.php?url=news_add_news.php';
 				$grid->name = 'table';
 				$grid->edittxt ='แก้ไขวิดีทัศน์';
