@@ -1194,7 +1194,8 @@ a:hover {
 	border: 1px solid #828282;
 	border-bottom-left-radius: 5px;
 	border-bottom-right-radius: 5px;
-	border-top:none;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
 }
 .view-bn {
 	text-align:right;

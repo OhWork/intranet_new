@@ -5,23 +5,23 @@
 	<div class='row'>
 		<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 ทt-2" style="background-color:#ffffff;">
 			<div class='row'>
-				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3 alltxh">
+				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3 pb-3 alltxh">
 					<div class="row">
 						<div class="col-md-6">
-						<h4>ข่าวสารภายในองค์การสวนสัตว์</h4>
+                                                    <h4>ข่าวสารภายในองค์การสวนสัตว์</h4>
 						</div>
-							<div class="col-md-6 float-right">
-								<form method="post">
-									<div class="row">
-										<div class="col-md-10">
-											<input type="text" name="searchnew" class="form-control">
-										</div>
-										<div class="col-md-2">
-											<input class="btn btn-secondary"type="submit" value="ค้นหา">
-										</div>
-									</div>
-								</form>
+						<div class="col-md-6 float-right">
+                                                    <form method="post">
+							<div class="row">
+                                                            <div class="col-md-10">
+								<input type="text" name="searchnew" class="form-control">
+                                                            </div>
+                                                            <div class="col-md-2">
+								<input class="btn btn-secondary"type="submit" value="ค้นหา">
+                                                            </div>
 							</div>
+                                                    </form>
+						</div>
 					</div>
 				</div>
 				<?php
@@ -104,7 +104,7 @@
 					}
 				}else{
 				?>
-				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3">
+				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3 mb-5">
 					<div class="row">
 						<?php foreach($rs as $show){
 							if($show['typeDesignnews_id'] == 1){
