@@ -73,7 +73,7 @@ a:hover {
 .imgmobile {
 	width : 75px;
 	height : 75px;
-	margin-top : 16;
+	margin-top : 16px;
 }
 .cfbordertop {
 	border-radius: 8px;
@@ -129,9 +129,6 @@ a:hover {
 }
 .total,.warinning,.suscess,.noity{
 	font-size: 8px;
-}
-.summaryimg {
-	width: ;
 }
 .imgmobile {
 	width : 75px;
