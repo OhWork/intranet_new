@@ -1,5 +1,5 @@
 <?php
- 	$rs = $db->findByPK21DESC('vdo','user','user_user_id','user_id','vdo_id')->execute();
+ 	$rs = $db->findByPK21DESC('vdo','user','user_user_id','user_id','vdo_id',6)->execute();
 ?>
 <div class="row">
     <div class="col-12 mt-3"> 
