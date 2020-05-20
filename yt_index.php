@@ -12,7 +12,11 @@
             </div>
             <div class="col-12">
                 <div class="row">
-                    <?php $i = 0; foreach($rs as $show){ ?>
+                    <?php  //foreach($rs as $show){ 
+                                while ($i <= 6) {
+
+  
+}                   ?>
                     <a class="col-2" href="index.php?url=yt_play_vdo.php&id=<?php echo $show['vdo_id']; ?>"> <!-- VDO 1-->
                         <div class="col-12">
                             <div class="row">
@@ -26,7 +30,7 @@
                             </div>
                         </div>
                     </a>
-                    <?php   $i++; } ?>
+                    <?php    $i++; } ?>
                 </div>
             </div>
             <div class="col-12 mt-1"> 
