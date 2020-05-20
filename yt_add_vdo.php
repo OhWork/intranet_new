@@ -8,7 +8,7 @@ if (!empty($_SESSION['user_name'])):
     $lbvdoname = new label('ชื่อเรื่อง หรือ ชื่อคลิบวีดีโอ');
     $lbly = new label('ลิ้งก์จากยูทูปไว้ในช่องนี้ (Link From Youtube)');
     $lbtypeDesign = new label('เลือกชนิด');
-    $txtvdoname = new textfield('ipzpo_location','','form-control','','');
+    $txtvdoname = new textfield('vdo_name','','form-control','','');
     $txtly = new textfield('vdo_link','','form-control','','');
     $txtdatestart = new datetimepicker('touristreport_date','datepicker','','form-control datetimepicker-input','date-form dayinbox col-md-12 form-horizontal control-group controls input-group','input-group date','','#datepicker','','');
     $submit = new buttonok("ยืนยัน","btnSubmit","btn btn-success col-md-12","");
