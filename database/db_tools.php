@@ -252,10 +252,6 @@
 			$this->sql = "SELECT * FROM $table,$table2 WHERE $column = $value ORDER BY $order DESC";
 			return $this;
 		}
-                                function findByPK21DESCLimit($table,$table2,$column,$value,$order,$num){
-			$this->sql = "SELECT * FROM $table,$table2 WHERE $column = $value ORDER BY $order DESC LIMIT $num";
-			return $this;
-		}
 		function findByPKDESCLimit21($table,$table2,$column,$value,$order,$limit){
 			$this->sql = "SELECT * FROM $table,$table2 WHERE $column = $value ORDER BY $order DESC LIMIT $limit";
 			return $this;
