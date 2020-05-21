@@ -20,6 +20,7 @@ if (!empty($_SESSION['user_name'])):
   $lbhrs = new label("ระบบขอหนังสือรับรอง");
   $lbqtn = new label("ระบบจัดการแบบสอบถาม");
     $lbvdo = new label("ระบบจัดการวิดีทัศน์");
+    $lbzlfot = new label("ระบบจัดการสมาชิกสโมสร");
   $lbradiotouristreport = new label("ระบบจัดการคนเข้าชมสวนสัตว์");
   $lbadmin = new label("ระบบจัดการผู้ใช้");
   $txtuser = new textfield('user_user','user_user','form-control css-require','');
@@ -87,6 +88,12 @@ if (!empty($_SESSION['user_name'])):
   if(empty($id)){
         $radiovdo->add('อนุญาต',1,'','');
         $radiovdo->add('ไม่อนุญาต',0,'checked','');
+  }
+    $radiozlfot = new radioGroup();
+  $radiozlfot->name = 'systemallow_zlfot';
+  if(empty($id)){
+        $radiozlfot->add('อนุญาต',1,'','');
+        $radiozlfot->add('ไม่อนุญาต',0,'checked','');
   }
   $radioqtn = new radioGroup();
   $radioqtn->name = 'systemallow_qtn';
@@ -169,6 +176,13 @@ if (!empty($_SESSION['user_name'])):
     	}else if($sa['systemallow_vdo'] == 0){
         $radiovdo->add('อนุญาต',1,'','');
         $radiovdo->add('ไม่อนุญาต',0,'checked','');
+        }
+            if($sa["systemallow_zlfot"] == 1){
+    	$radiozlfot->add('อนุญาต',1,'checked','');
+    	$radiozlfot->add('ไม่อนุญาต',0,'','');
+    	}else if($sa['systemallow_zlfot'] == 0){
+        $radiozlfot->add('อนุญาต',1,'','');
+        $radiozlfot->add('ไม่อนุญาต',0,'checked','');
         }
 if($sa["systemallow_touristreport"] == 1){
     	$radiotouristreport->add('อนุญาต',1,'checked','');
@@ -357,6 +371,12 @@ function autoTab2(obj,typeCheck){
 				<div class="row">
 					<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6" style="padding-top: 8px;"><?php echo $lbvdo; ?></div>
 					<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6" style="padding-top: 8px;"><?php echo $radiovdo; ?></div>
+				</div>
+			</div>
+                                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" style="border-bottom:solid 1px #E0E0E0;">
+				<div class="row">
+					<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6" style="padding-top: 8px;"><?php echo $lbzlfot; ?></div>
+					<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6" style="padding-top: 8px;"><?php echo $radiozlfot; ?></div>
 				</div>
 			</div>
 			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">

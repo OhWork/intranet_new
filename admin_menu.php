@@ -39,6 +39,9 @@
 	if($_SESSION['systemallow_vdo'] == 1){
                       include_once 'admin_vdo_menu.php';
 	 }
+                if($_SESSION['systemallow_zlfot'] == 1){
+                      include_once 'admin_zlfot_menu.php';
+	 }
 	if($_SESSION['systemallow_admin'] == 1){
                         include_once 'admin_user_menu.php';
 	 }

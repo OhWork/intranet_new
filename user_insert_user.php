@@ -23,7 +23,7 @@
 		$data['subzoo_zoo_zoo_id'] = $_POST['subzoo_zoo_zoo_id'];
 		$rsfix = $db->update('user',$data,'user_id',$_POST['user_id']);
 
-		if(getenv(HTTP_X_FORWARDED_FOR)){
+     if(getenv(HTTP_X_FORWARDED_FOR)){
             $ip = $_SERVER['HTTP_X_FORWARDED_FOR']; // IP proxy
         }else{
             $ip = $_SERVER['REMOTE_ADDR'];
