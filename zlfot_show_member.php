@@ -16,30 +16,29 @@
 </script>
 <?php
     if (!empty($_SESSION['user_name'])):
-    $columns = array('user_user','user_name','user_last','subzoo_name','zoo_name');
+    $columns = array('zlfot_code','zlfot_nameth','zlfot_tel','zlfot_datereg','zoo_name');
     $row = "<div class='row'>";
     $rowend = "</div>";
     $form = new form();
     $labelsearchipzpo = new label('ค้นหา');
 
-			$rs2 = "user,subzoo,zoo  where ipzpo.subzoo_subzoo_id = subzoo.subzoo_id && subzoo.zoo_zoo_id = zoo.zoo_id ";
-            $rs = $db->findByPK32DESC('user','subzoo','zoo','user.subzoo_subzoo_id','subzoo.subzoo_id','subzoo.zoo_zoo_id','zoo.zoo_id','user_id')->execute();  ?> 
+            $rs = $db->findByPK33DESC('zlfot','user','zoo','zlfot.zoo_zoo_id','zoo.zoo_id','zlfot.user_user_id','user.user_id','user.subzoo_zoo_zoo_id','zoo.zoo_id','zlfot_id')->execute();  ?> 
 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3">
         <div class="row">
                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 card-header">
                         <div class="row">
                                 <div>
-                                        <h4>รายชื่อผู้ใช้ระบบ</h4>
+                                        <h4>รายสมาชิกสโมสรผู้รักสวนสัตว์</h4>
 		</div>
 		<div class="ml-auto">
-                                        <a href="admin_index.php?url=zlfot_add_member.php" class="btn btn-success col-12"><span data-feather="user-plus"></span></a>
+                                        <a href="admin_index.php?url=zlfot_add_member.php&id=<?php echo $id; ?>" class="btn btn-success col-12"><span data-feather="user-plus"></span></a>
 		</div>
 		<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3 card-body">
                                         <div class="table-responsive">
 			<?php 
                                                         $grid = new gridView();
-                                                                    $grid->pr = 'user_id';
-                                                                    $grid->header = array('<b><center>User</center></b>','<b><center>ชื่อ</center></b>','<b><center>นามสกุล</center></b>','<b><center>ฝ่าย</center></b>','<b><center>สังกัด</center></b>','<b><center>#</center></b>');
+                                                                    $grid->pr = 'zlfot_id';
+                                                                    $grid->header = array('<b><center>รหัส</center></b>','<b><center>ชื่อ - นามสกุล</center></b>','<b><center>เบอร์โทรศัพท์</center></b>','<b><center>วันที่</center></b>','<b><center>จาก</center></b>','<b><center>#</center></b>');
                                                                     $grid->width = array('12%','15%','15%','25%','25%','8%');
                                                                     $grid->edit = 'admin_index.php?url=user_add_user.php';
                                                                     $grid->name = 'table';

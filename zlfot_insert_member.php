@@ -1,0 +1,79 @@
+<?php  ob_start();?>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html" charset="utf-8">
+        <link rel="stylesheet" href="CSS/bootstrap.css">
+        <link rel="stylesheet" href="CSS/main.css">
+	</head>
+<?php
+    include 'database/db_tools.php';
+	include 'connect.php';
+        if($_POST['typezlfot_typezlfot_id'] = '01' || $_POST['typezlfot_typezlfot_id'] =  '02'){
+            $datenow = date("d-M-y");
+            echo $datenow;
+            $dateend1 = date("d-M");
+            $dateend2 = date("y");
+            $dateendsum = $dateend2+1;
+            $dateend = $dateend1."".$dateendsum;
+            echo $dateend;
+        }else if($_POST['typezlfot_typezlfot_id'] = '03'){
+            $datenow = date("d-M-y");
+            echo $datenow;
+            $dateend1 = date("d-M");
+            $dateend2 = date("y");
+            $dateendsum = $dateend2+2;
+            $dateend = $dateend1."".$dateendsum;
+            echo $dateend;
+        }else{
+            $datenow = "ฟรี";
+            $dateend = "ตลอดชีวิต";
+        }
+        $zoo_code = $_POST['zoo_code'];
+        $typecode = $db->findByPK('typezlfot','typezlfot_id',$_POST['typezlfot_typezlfot_id'])->execute();
+         $code1 = $zoo_code;
+         $code2 = $typecode;
+         $code3 = '00001';
+         echo $code1; 
+         echo $code2; 
+         echo $code3;
+        
+	if(!empty($_POST['subzoo_id'])){
+		$data['subzoo_name'] = $_POST['subzoo_name'];
+		$data['subzoo_year'] = $_POST['subzoo_year'];
+		$data['subzoo_no'] = $_POST['subzoo_no'];
+		$data['subzoo_detail'] = $_POST['subzoo_detail'];
+		$data['subzoo_enable'] = $_POST['subzoo_enable'];
+
+		$rsfix = $db->update('subzoo',$data,'subzoo_id',$_POST['subzoo_id']);
+
+	}else{
+	$rs = $db->insert('zlfot',array(
+	'zlfot_code' => $_POST['subzoo_name'],
+	'zlfot_nameth' => $_POST['zlfot_nameth'],
+	'zlfot_nameen' => $_POST['zlfot_nameen'],
+                'zlfot_tel' => $_POST['zlfot_tel'],
+                'zlfot_receipt' => $_POST['zlfot_receipt'],
+	'zlfot_datereg' => $datereg,
+                'zlfot_dateend' => $dateend,
+                'zlfot_email' => $_POST['zlfot_email'],
+	'typezlfot_typezlfot_id' => $_POST['typezlfot_typezlfot_id'],
+	'user_user_id' => $_POST['user_user_id']
+	));
+	}
+
+	if($rs || $rsfix){
+    	if($rs){
+    	    echo "<div class='statusok'>เพิ่มสำเร็จ</div>";
+    	}else if($rsfix){
+            echo "<div class='statusok'>แก้ไขสำเร็จ</div>";
+        }
+            $link = "url=admin_index.php?url=zlfot_show_member.php";
+            header( "Refresh: 2; $link" );
+}else{
+            echo "ข้อมูลไม่เข้าฐานข้อมูล";
+        }
+?>
+</html>
+<?php
+ob_end_flush();
+?>
