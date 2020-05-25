@@ -8,34 +8,33 @@
 <?php
     include 'database/db_tools.php';
 	include 'connect.php';
-        if($_POST['typezlfot_typezlfot_id'] = '01' || $_POST['typezlfot_typezlfot_id'] =  '02'){
+        $typezlfot =  $_POST['typezlfot_typezlfot_id'];
+        $user_id = $_POST['user_user_id'];
+        $typezooexe = $db->findByPK22("user","zoo","user.subzoo_zoo_zoo_id","zoo.zoo_id","user.user_id",$user_id)->executeAssoc();
+        if($typezlfot == '01' || $typezlfot ==  '02'){
             $datenow = date("d-M-y");
-            echo $datenow;
             $dateend1 = date("d-M");
             $dateend2 = date("y");
             $dateendsum = $dateend2+1;
             $dateend = $dateend1."".$dateendsum;
-            echo $dateend;
-        }else if($_POST['typezlfot_typezlfot_id'] = '03'){
+        }else if( $typezlfot == '03'){
             $datenow = date("d-M-y");
-            echo $datenow;
             $dateend1 = date("d-M");
             $dateend2 = date("y");
             $dateendsum = $dateend2+2;
-            $dateend = $dateend1."".$dateendsum;
-            echo $dateend;
+            $dateend = $dateend1.$dateendsum;
         }else{
             $datenow = "ฟรี";
             $dateend = "ตลอดชีวิต";
         }
-        $zoo_code = $_POST['zoo_code'];
-        $typecode = $db->findByPK('typezlfot','typezlfot_id',$_POST['typezlfot_typezlfot_id'])->execute();
-         $code1 = $zoo_code;
-         $code2 = $typecode;
-         $code3 = '00001';
-         echo $code1; 
-         echo $code2; 
-         echo $code3;
+       $typezoo =  $typezooexe['zoo_code'];
+        $codezlfot = $typezoo.$typezlfot;
+        $rs = $db->specifytable("MAX(zlfot_code) AS last_id","zlfot","zlfot_code LIKE '%$codezlfot%'")->executeAssoc();
+        $maxId = substr($rs['last_id'],  -5);
+        $maxId = ($maxId + 1); 
+        $maxId = substr("00000".$maxId, -5);
+        $nextId = $codezlfot.$maxId;
+
         
 	if(!empty($_POST['subzoo_id'])){
 		$data['subzoo_name'] = $_POST['subzoo_name'];
@@ -48,7 +47,7 @@
 
 	}else{
 	$rs = $db->insert('zlfot',array(
-	'zlfot_code' => $_POST['subzoo_name'],
+	'zlfot_code' => $nextId,
 	'zlfot_nameth' => $_POST['zlfot_nameth'],
 	'zlfot_nameen' => $_POST['zlfot_nameen'],
                 'zlfot_tel' => $_POST['zlfot_tel'],
