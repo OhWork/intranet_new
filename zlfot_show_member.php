@@ -16,13 +16,13 @@
 </script>
 <?php
     if (!empty($_SESSION['user_name'])):
-    $columns = array('zlfot_code','zlfot_nameth','zlfot_tel','zlfot_datereg','zoo_name');
+    $columns = array('zlfot_code','zlfot_nameth','zlfot_tel','zlfot_datestart','zoo_name');
     $row = "<div class='row'>";
     $rowend = "</div>";
     $form = new form();
     $labelsearchipzpo = new label('ค้นหา');
 
-            $rs = $db->findByPK33DESC('zlfot','user','zoo','zlfot.zoo_zoo_id','zoo.zoo_id','zlfot.user_user_id','user.user_id','user.subzoo_zoo_zoo_id','zoo.zoo_id','zlfot_id')->execute();  ?> 
+            $rs = $db->findByPK32DESC('zlfot','user','zoo','zlfot.user_user_id','user.user_id','user.subzoo_zoo_zoo_id','zoo.zoo_id','zlfot_id')->execute();  ?> 
 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3">
         <div class="row">
                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 card-header">
@@ -40,9 +40,9 @@
                                                                     $grid->pr = 'zlfot_id';
                                                                     $grid->header = array('<b><center>รหัส</center></b>','<b><center>ชื่อ - นามสกุล</center></b>','<b><center>เบอร์โทรศัพท์</center></b>','<b><center>วันที่</center></b>','<b><center>จาก</center></b>','<b><center>#</center></b>');
                                                                     $grid->width = array('12%','15%','15%','25%','25%','8%');
-                                                                    $grid->edit = 'admin_index.php?url=user_add_user.php';
+                                                                    $grid->edit = 'admin_index.php?url=zlfot_change_status.php';
                                                                     $grid->name = 'table';
-                                                                    $grid->edittxt ='แก้ไข';
+                                                                    $grid->edittxt ='ตรวจสอบ';
                                                                     $grid->renderFromDB($columns,$rs);
                                                                     endif;
                                                             ?>
