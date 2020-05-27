@@ -23,12 +23,6 @@
 		'user_pass =' => md5(md5(md5($_POST['user_pass'])))
 		));
 
-
-       // $db->findByAttributes('user',array(
-	//	'user_user =' => $_POST['user_user'],
-	//	'user_pass =' => $_POST['user_pass']
-	//	));
-
 	$rs = $db->executeRow();
 	$system_id = $rs['systemallow_systemallow_id'];
 	$subzoo_id = $rs['subzoo_subzoo_id'];

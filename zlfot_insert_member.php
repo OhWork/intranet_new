@@ -12,17 +12,19 @@
         $user_id = $_POST['user_user_id'];
         $typezooexe = $db->findByPK22("user","zoo","user.subzoo_zoo_zoo_id","zoo.zoo_id","user.user_id",$user_id)->executeAssoc();
         if($typezlfot == '01' || $typezlfot ==  '02'){
-            $datenow = date("d-M-y");
-            $dateend1 = date("d-M");
-            $dateend2 = date("y");
-            $dateendsum = $dateend2+1;
-            $dateend = $dateend1."".$dateendsum;
+        $datenow = date("d");   
+        $datenow.="/".date("m");   
+        $datenow.= "/".substr((date("Y")+543),0); 
+        $dateend = date("d");   
+        $dateend.="/".date("m");   
+        $dateend.= "/".substr((date("Y")+544),0); 
         }else if( $typezlfot == '03'){
-            $datenow = date("d-M-y");
-            $dateend1 = date("d-M");
-            $dateend2 = date("y");
-            $dateendsum = $dateend2+2;
-            $dateend = $dateend1.$dateendsum;
+        $datenow = date("d");   
+        $datenow.="/".date("m");   
+        $datenow.= "/".substr((date("Y")+543),0); 
+        $dateend = date("d");   
+        $dateend.="/".date("m");   
+        $dateend.= "/".substr((date("Y")+545),0); 
         }else{
             $datenow = "ฟรี";
             $dateend = "ตลอดชีวิต";
@@ -52,9 +54,12 @@
 	'zlfot_nameen' => $_POST['zlfot_nameen'],
                 'zlfot_tel' => $_POST['zlfot_tel'],
                 'zlfot_receipt' => $_POST['zlfot_receipt'],
-	'zlfot_datereg' => $datereg,
+	'zlfot_datereg' => $_POST['zlfot_datereg'],
+                'zlfot_datestart' => $datenow,
                 'zlfot_dateend' => $dateend,
+                'zlfot_status' => $_POST['zlfot_status'],
                 'zlfot_email' => $_POST['zlfot_email'],
+                'zlfot_detail' => $_POST['zlfot_detail'],
 	'typezlfot_typezlfot_id' => $_POST['typezlfot_typezlfot_id'],
 	'user_user_id' => $_POST['user_user_id']
 	));
