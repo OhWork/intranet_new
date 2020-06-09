@@ -6,7 +6,7 @@
                                     <a class="nav-link edittext mucl" href="index.php"><i class="fas fa-home mr-2"></i><span>หน้าหลัก</span> <span class="sr-only">(current)</span></a>
 				</li>
 				<li class="nav-item">
-                                    <a class="nav-link edittext mucl" href="https://zoothailand.watchguard.in.th:4100"><i class="fas fa-network-wired mr-2"></i><span>เข้าระบบอินเตอร์เน็ต</span></a>
+                                    <a class="nav-link edittext mucl" href="https://zoo.technology.co.th"><i class="fas fa-network-wired mr-2"></i><span>เข้าระบบอินเตอร์เน็ต</span></a>
 				</li>
                                                                 <li class="nav-item">
 				<a class="nav-link collapsed edittext mucl" href="http://saraban.egov.go.th"><i class="fas fa-file-alt mr-2"></i><span>ระบบสารบรรณอิเล็กทรอนิกส์</span></a>

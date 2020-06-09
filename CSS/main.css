@@ -1238,3 +1238,11 @@ a:hover {
   -webkit-animation-delay: 10.0s;
   animation-delay: 10.0s;
 }
+/*zlfot*/
+.zloft_bt{
+    padding: 28px 48px;
+}
+.zloft_bt2{
+    padding: 20px 42px;
+    font-size: 24px;
+}

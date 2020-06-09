@@ -24,48 +24,38 @@
                 $zoo = $_GET['zoo'];
                   $form = new form();
                 $txtcode = new textfield('zlfot_code','','form-control','','');
-	$button = new buttonok('ค้นหา','','btn btn-primary col-12','submit');
+	$button = new buttonok('ค้นหา','','btn btn-primary col-12 zloft_bt','submit');
 	echo $form->open('','','col-12','','');
 ?>
-<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 printdisplaynone' style="margin-top:16px;" id="maincontent">
+<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 printdisplaynone' id="maincontent">
     <div class='row'>
-		<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12' style="margin-top: 10px;">
+		<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12'>
 			<div class='row'>
-				<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12'>
-					<div class='row'>
-						<div class='col-xl-2 col-lg-2 col-md-1'><h4>ตรวจสอบสมาชิก</h4></div>
-						<div class='col-xl-6 col-lg-4 col-md-5 col-sm-12 col-12'>
-							<?php echo $txtcode ?>
-						</div>
-					<div class='col-xl-3 col-lg-4 col-md-5'>
-							<a href="admin_index.php?url=zlfot_add_member.php" class="btn btn-success col-md-12">สมัครสมาชิก</a>
-						
-						<div class='col-xl-1 col-lg-2 col-md-1'></div>
-					</div>
-				</div>
-			</div>
-		</div>
-        <div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12'>
-            <div class='row'>
-                <div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12'>
-					<div class='row'>
-						<div class='col-md-3'></div>
-
-						<div class='col-md-3'></div>
-					</div>
-				</div>
-                <div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12' style="margin-top: 20px;">
-
-				</div>
-            </div>
-        </div>
-		<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12'style="margin-top: 20px;">
-			<div class='row'>
-				<div class='col-xl-5 col-lg-5 col-md-4 col-sm-4 col-4'></div>
-				<div class='col-xl-2 col-lg-2 col-md-4 col-sm-4 col-4'>
+                            <div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mb-3'>
+                                <h4>ตรวจสอบรายชื่อสมาชิกสมาชิก</h4>
+                            </div>
+                            <div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mb-3'>
+				<div class='row'>
+                                    <div class='col-xl-2 col-lg-4 col-md-5'>
+                                        <p class="pt-4 mb-0">กรุณากรอกหมายเลขบัตรสมาชิก</p>
+                                    </div>
+                                    <div class='col-xl-3 col-lg-4 col-md-5 col-sm-12 col-12'>
+                                        <div class='row'>
+                                            <div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12'>
+                                                <p class="mb-0" style="color:#b3b3b3">เช่น 000-000-00000</p>
+                                            </div>
+                                            <div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12'>
+                                                <?php echo $txtcode ?>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class=''>
 					<?php echo $button ?>
+                                    </div>
+                                    <div class='ml-auto mr-3'>
+					<a href="admin_index.php?url=zlfot_add_member.php" class="btn btn-outline-success col-md-12 zloft_bt2"><i class="fas fa-user-plus mr-2"></i>เพิ่มสมาชิก</a>
+                                    </div>
 				</div>
-				<div class='col-xl-5 col-lg-5 col-md-4 col-sm-4 col-4'></div>
 			</div>
 		</div>
 	</div>
