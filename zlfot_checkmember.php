@@ -27,38 +27,99 @@
 	$button = new buttonok('ค้นหา','','btn btn-primary col-12 zloft_bt','submit');
 	echo $form->open('','','col-12','','');
 ?>
-<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 printdisplaynone' id="maincontent">
-    <div class='row'>
-		<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12'>
-			<div class='row'>
-                            <div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mb-3'>
-                                <h4>ตรวจสอบรายชื่อสมาชิกสมาชิก</h4>
-                            </div>
-                            <div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mb-3'>
-				<div class='row'>
-                                    <div class='col-xl-2 col-lg-4 col-md-5'>
-                                        <p class="pt-4 mb-0">กรุณากรอกหมายเลขบัตรสมาชิก</p>
+<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" id="maincontent" style="background-color: #FFFFFF;">
+    <div class="row">
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 pb-5" style="border-bottom: 5px solid #F5F5F5;">
+            <div class="row">
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mb-3 mt-3">
+                    <h4>ตรวจสอบรายชื่อสมาชิกสมาชิก</h4>
+                </div>
+                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mb-3">
+				<div class="row">
+                                    <div class="col-xl-3 col-lg-4 col-md-5">
+                                        <p class="pt-4 pl-3 mb-0">กรุณากรอกหมายเลขบัตรสมาชิก</p>
                                     </div>
-                                    <div class='col-xl-3 col-lg-4 col-md-5 col-sm-12 col-12'>
-                                        <div class='row'>
-                                            <div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12'>
+                                    <div class="col-xl-3 col-lg-4 col-md-5 col-sm-12 col-12">
+                                        <div class="row">
+                                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                                                 <p class="mb-0" style="color:#b3b3b3">เช่น 000-000-00000</p>
                                             </div>
-                                            <div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12'>
+                                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                                                 <?php echo $txtcode ?>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class=''>
+                                    <div class="mt-4">
 					<?php echo $button ?>
                                     </div>
-                                    <div class='ml-auto mr-3'>
-					<a href="admin_index.php?url=zlfot_add_member.php" class="btn btn-outline-success col-md-12 zloft_bt2"><i class="fas fa-user-plus mr-2"></i>เพิ่มสมาชิก</a>
+                                    <div class="ml-auto mr-3">
+					<a href="admin_index.php?url=zlfot_add_member.php" class="btn btn-success col-md-12 zloft_bt2"><i class="fas fa-horse mr-2"></i>สมัครสมาชิก<i class="fas fa-hippo ml-2"></i></a>
                                     </div>
 				</div>
-			</div>
-		</div>
-	</div>
+                            </div>
+                        </div>
+                </div>
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-5 mb-5">
+                    <div class="row">
+                        <div class="col-xl-3 col-lg-3 col-md-1"></div>
+                        <div class="col-xl-6 col-lg-6 col-md-10 col-sm-12 col-12">
+                            <div class="row">
+                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                    <div class="row">
+                                        <div class="col-xl-3 col-lg-3 col-md-4 col-sm-4 col-4">
+                                            <p>หมายเลขสมาชิก :</p>
+                                        </div>
+                                        <div class="col-xl-9 col-lg-9 col-md-8 col-sm-8 col-8">
+                                            <p><!--ใส่ Code ตรงนี้--></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                    <div class="row">
+                                        <div class="col-xl-3 col-lg-3 col-md-4 col-sm-4 col-4">
+                                            <p>ชื่อ-นามสกุล :</p>
+                                        </div>
+                                        <div class="col-xl-9 col-lg-9 col-md-8 col-sm-8 col-8">
+                                            <p><!--ใส่ Code ตรงนี้--></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                    <div class="row">
+                                        <div class="col-xl-3 col-lg-3 col-md-4 col-sm-4 col-4">
+                                            <p>หมายเลขโทรศัพท์ :</p>
+                                        </div>
+                                        <div class="col-xl-9 col-lg-9 col-md-8 col-sm-8 col-8">
+                                            <p><!--ใส่ Code ตรงนี้--></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                    <div class="row">
+                                        <div class="col-xl-3 col-lg-3 col-md-4 col-sm-4 col-4">
+                                            <p>วันที่สมัคร :</p>
+                                        </div>
+                                        <div class="col-xl-9 col-lg- col-md-8 col-sm-8 col-8">
+                                            <p><!--ใส่ Code ตรงนี้--></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                    <div class="row">
+                                        <div class="col-xl-3 col-lg-3 col-md-4 col-sm-4 col-4">
+                                            <p>วันที่บัตรหมดอายุ :</p>
+                                        </div>
+                                        <div class="col-xl-9 col-lg-9 col-md-8 col-sm-8 col-8">
+                                            <p><!--ใส่ Code ตรงนี้--></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-3 col-md-1"></div>
+                    </div>
+                </div>
+    </div>
 </div>
 <?php
 	echo $form->close();
@@ -69,14 +130,17 @@ isset($_POST['zlfot_code'])?$zlfot_code  = $_POST['zlfot_code']:$zlfot_code='';
    $rs = $db->findByPK33('zlfot','user','zoo','zlfot.user_user_id','user.user_id','user.subzoo_zoo_zoo_id','zoo.zoo_id','zlfot_code',$zlfot_code)->execute();
 
 $columns = array('zlfot_code','zlfot_nameth','zlfot_tel','zlfot_datestart','zlfot_dateend');
-
-                                                        $grid = new gridView();
-                                                                    $grid->pr = 'zlfot_id';
-                                                                    $grid->header = array('<b><center>รหัส</center></b>','<b><center>ชื่อ - นามสกุล</center></b>','<b><center>เบอร์โทรศัพท์</center></b>','<b><center>วันที่สมัคร</center></b>','<b><center>หมดอายุ</center></b>');
-                                                                    $grid->width = array('12%','15%','15%','25%','25%','8%');
-                                                                    $grid->name = 'table';
-                                                                    $grid->renderFromDB($columns,$rs);
+?>
+    <div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-5'> 
+<?php
+        $grid = new gridView();
+            $grid->pr = 'zlfot_id';
+            $grid->header = array('<b><center>รหัส</center></b>','<b><center>ชื่อ - นามสกุล</center></b>','<b><center>เบอร์โทรศัพท์</center></b>','<b><center>วันที่สมัคร</center></b>','<b><center>วันหมดอายุ</center></b>');
+            $grid->width = array('20%','30%','20%','15%','15%');
+            $grid->name = 'table';
+            $grid->renderFromDB($columns,$rs);
 }
 ?>
+    </div>     
 <?php endif;?>
 
