@@ -1243,7 +1243,7 @@ a:hover {
     padding: 6px 16px;
 }
 .zloft_bt2{
-    padding: 24px 60px;
+    padding: 16px 40px;
     border-radius: 45px;
 }
 .zloft_bt2:hover{
@@ -1252,4 +1252,7 @@ a:hover {
 }
 .zloft-f{
     font-size: 32px;
+}
+.zloft-f2{
+    font-size: 24px;
 }
