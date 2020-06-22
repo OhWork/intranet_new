@@ -1241,9 +1241,18 @@ a:hover {
 /*zlfot*/
 .zloft_bt{
     padding: 6px 16px;
+    background-color: #ffffff;
+    border-color: #ced4da;
+    color:#007bff;
+}
+.zloft_bt:hover{
+    background-color: #007bff;
+    border-color: #007bff;
+    color:#ffffff;
 }
 .zloft_bt2{
     padding: 16px 40px;
+    border-radius: 0.35rem;
 }
 .zloft_bt2:hover{
     background-color: #464a4e;
