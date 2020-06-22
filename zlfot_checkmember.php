@@ -23,7 +23,7 @@
 	$user_zoo = $_SESSION['subzoo_zoo_zoo_id'];
                 $zoo = $_GET['zoo'];
                   $form = new form();
-                $txtcode = new textfield('zlfot_code','','form-control','','');
+                $txtcode = new textfield('zlfot_code','','form-control zlfot_inp','','');
 	$button = new buttonok('','','btn btn-primary col-12 zloft_bt fas fa-search','submit');
 	echo $form->open('','','col-12','','');
 ?>

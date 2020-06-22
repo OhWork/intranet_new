@@ -1244,6 +1244,9 @@ a:hover {
     background-color: #ffffff;
     border-color: #ced4da;
     color:#007bff;
+    border-bottom-left-radius: 0px;
+    border-top-left-radius: 0px;
+    border-left: none;
 }
 .zloft_bt:hover{
     background-color: #007bff;
@@ -1263,4 +1266,8 @@ a:hover {
 }
 .zloft-f2{
     font-size: 24px;
+}
+.zlfot_inp {
+    border-bottom-right-radius: 0px;
+    border-top-right-radius: 0px;
 }
