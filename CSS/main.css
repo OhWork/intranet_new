@@ -1243,11 +1243,13 @@ a:hover {
     padding: 6px 16px;
 }
 .zloft_bt2{
-    padding: 20px 42px;
-    font-size: 24px;
+    padding: 24px 60px;
     border-radius: 45px;
 }
 .zloft_bt2:hover{
     background-color: #464a4e;
     border-color: #464a4e;
+}
+.zloft-f{
+    font-size: 32px;
 }
