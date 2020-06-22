@@ -53,7 +53,7 @@
 					<?php echo $button ?>
                                     </div>
                                     <div class="ml-auto mr-3">
-                                        <a href="admin_index.php?url=zlfot_add_member.php" class="btn btn-success col-md-12 zloft_bt2" title="เพิ่มสมาชิกสโมสรผู้รักสวนสัตว์"><i class="fas fa-plus zloft-f2"></i><i class="far fa-id-card zloft-f ml-1"></i></a>
+                                        <a href="admin_index.php?url=zlfot_add_member.php" class="btn btn-success col-md-12 zloft_bt2" title="เพิ่มสมาชิกสโมสรผู้รักสวนสัตว์"><i class="fas fa-plus zloft-f2"></i><i class="far fa-id-card zloft-f ml-2"></i></a>
                                     </div>
 				</div>
                             </div>
