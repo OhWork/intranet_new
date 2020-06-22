@@ -37,19 +37,16 @@
                             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mb-3">
 				<div class="row">
                                     <div class="col-xl-3 col-lg-4 col-md-5">
-                                        <p class="pt-4 pl-3 mb-0">กรุณากรอกหมายเลขบัตรสมาชิก</p>
+                                        <p class="pt-4 pl-3 mb-0" style="color: #4e555b">กรุณากรอกหมายเลขบัตรสมาชิก</p>
                                     </div>
                                     <div class="col-xl-3 col-lg-4 col-md-5 col-sm-12 col-12">
                                         <div class="row">
-                                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                                                <p class="mb-0" style="color:#b3b3b3">เช่น 000-000-00000</p>
-                                            </div>
-                                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 pr-0">
+                                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 pr-0 mt-3">
                                                 <?php echo $txtcode ?>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="mt-4">
+                                    <div class="mt-3">
                                         <button type="submit" id="" class="btn btn-primary col-12 zloft_bt" name="submit" value=""><i class="fas fa-search"></i></button>
                                     </div>
                                     <div class="ml-auto mr-3">
