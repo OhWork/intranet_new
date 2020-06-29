@@ -56,6 +56,16 @@
                             </div>
                         </div>
                 </div>
+        
+
+<?php
+	echo $form->close();
+	if (isset($_POST['submit'])) {
+    //ปี
+isset($_POST['zlfot_code'])?$zlfot_code  = $_POST['zlfot_code']:$zlfot_code='';
+
+   $rs = $db->findByPK33('zlfot','user','zoo','zlfot.user_user_id','user.user_id','user.subzoo_zoo_zoo_id','zoo.zoo_id','zlfot_code',$zlfot_code)->executeAssoc();
+?>
                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-5 mb-5">
                     <div class="row">
                         <div class="col-xl-3 col-lg-3 col-md-1"></div>
@@ -67,7 +77,7 @@
                                             <p>หมายเลขสมาชิก :</p>
                                         </div>
                                         <div class="col-xl-9 col-lg-9 col-md-8 col-sm-8 col-8">
-                                            <p><!--ใส่ Code ตรงนี้--></p>
+                                            <p><?php echo $rs['zlfot_code']; ?></p>
                                         </div>
                                     </div>
                                 </div>
@@ -77,7 +87,7 @@
                                             <p>ชื่อ-นามสกุล :</p>
                                         </div>
                                         <div class="col-xl-9 col-lg-9 col-md-8 col-sm-8 col-8">
-                                            <p><!--ใส่ Code ตรงนี้--></p>
+                                            <p><?php echo $rs['zlfot_nameth']; ?></p>
                                         </div>
                                     </div>
                                 </div>
@@ -87,7 +97,7 @@
                                             <p>หมายเลขโทรศัพท์ :</p>
                                         </div>
                                         <div class="col-xl-9 col-lg-9 col-md-8 col-sm-8 col-8">
-                                            <p><!--ใส่ Code ตรงนี้--></p>
+                                            <p><?php echo $rs['zlfot_tel']; ?></p>
                                         </div>
                                     </div>
                                 </div>
@@ -97,7 +107,7 @@
                                             <p>วันที่สมัคร :</p>
                                         </div>
                                         <div class="col-xl-9 col-lg- col-md-8 col-sm-8 col-8">
-                                            <p><!--ใส่ Code ตรงนี้--></p>
+                                            <p><?php echo $rs['zlfot_datestart']; ?></p>
                                         </div>
                                     </div>
                                 </div>
@@ -107,7 +117,7 @@
                                             <p>วันที่บัตรหมดอายุ :</p>
                                         </div>
                                         <div class="col-xl-9 col-lg-9 col-md-8 col-sm-8 col-8">
-                                            <p><!--ใส่ Code ตรงนี้--></p>
+                                            <p><?php echo $rs['zlfot_dateend']; ?></p>
                                         </div>
                                     </div>
                                 </div>
@@ -116,28 +126,13 @@
                         <div class="col-xl-3 col-lg-3 col-md-1"></div>
                     </div>
                 </div>
-    </div>
-</div>
+        
 <?php
-	echo $form->close();
-	if (isset($_POST['submit'])) {
-    //ปี
-isset($_POST['zlfot_code'])?$zlfot_code  = $_POST['zlfot_code']:$zlfot_code='';
-
-   $rs = $db->findByPK33('zlfot','user','zoo','zlfot.user_user_id','user.user_id','user.subzoo_zoo_zoo_id','zoo.zoo_id','zlfot_code',$zlfot_code)->execute();
-
-$columns = array('zlfot_code','zlfot_nameth','zlfot_tel','zlfot_datestart','zlfot_dateend');
-?>
-    <div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-5'> 
-<?php
-        $grid = new gridView();
-            $grid->pr = 'zlfot_id';
-            $grid->header = array('<b><center>รหัส</center></b>','<b><center>ชื่อ - นามสกุล</center></b>','<b><center>เบอร์โทรศัพท์</center></b>','<b><center>วันที่สมัคร</center></b>','<b><center>วันหมดอายุ</center></b>');
-            $grid->width = array('20%','30%','20%','15%','15%');
-            $grid->name = 'table';
-            $grid->renderFromDB($columns,$rs);
 }
 ?>
+        
+    </div>
+</div>
     </div>     
 <?php endif;?>
 
