@@ -21,8 +21,7 @@
     $rowend = "</div>";
     $form = new form();
     $labelsearchipzpo = new label('ค้นหา');
-
-            $rs = $db->findByPK32DESC('zlfot','user','zoo','zlfot.user_user_id','user.user_id','user.subzoo_zoo_zoo_id','zoo.zoo_id','zlfot_id')->execute();  ?> 
+    $rs = $db->conditions("zlfot","DATEDIFF(zlfot_dateend,CURRENT_DATE()) <=30")->execute();  ?>     
 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3">
         <div class="row">
                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 card-header">

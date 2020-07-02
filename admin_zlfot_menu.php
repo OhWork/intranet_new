@@ -18,7 +18,7 @@
                                 <a class="nav-link edittext mucl" id="nav-2-animate-1" href="admin_index.php?url=zlfot_show_member.php">
 	                  รายชื่อสมาชิกที่สมบูรณ์
 	                </a>
-                                <a class="nav-link edittext mucl" id="nav-3-animate-1" href="admin_index.php?url=๒.php">
+                                <a class="nav-link edittext mucl" id="nav-3-animate-1" href="admin_index.php?url=zlfot_show_expire.php">
 	                  รายการบัตรใกล้หมดอายุ
 	                </a>
 	                <a class="nav-link collapsed py-1 nav-link-24 edittext mucl" id="nav-23-animate-1" href="#zlfotsetting2" data-toggle="collapse" data-target="#zlfotsetting1">
