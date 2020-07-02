@@ -12,19 +12,19 @@
         $user_id = $_POST['user_user_id'];
         $typezooexe = $db->findByPK22("user","zoo","user.subzoo_zoo_zoo_id","zoo.zoo_id","user.user_id",$user_id)->executeAssoc();
         if($typezlfot == '01' || $typezlfot ==  '02'){
-        $datenow = date("d");   
+        $datenow = date("Y");   
         $datenow.="/".date("m");   
-        $datenow.= "/".substr((date("Y")+543),0); 
-        $dateend = date("d");   
+        $datenow.= "/".date("d"); 
+        $dateend = substr((date("Y")+1),0);   
         $dateend.="/".date("m");   
-        $dateend.= "/".substr((date("Y")+544),0); 
+        $dateend.= "/".date("d"); 
         }else if( $typezlfot == '03'){
-        $datenow = date("d");   
+        $datenow = date("Y");   
         $datenow.="/".date("m");   
-        $datenow.= "/".substr((date("Y")+543),0); 
-        $dateend = date("d");   
+        $datenow.= "/".date("d"); 
+        $dateend = substr((date("Y")+3),0);   
         $dateend.="/".date("m");   
-        $dateend.= "/".substr((date("Y")+545),0); 
+        $dateend.= "/".date("d"); 
         }else{
             $datenow = "ฟรี";
             $dateend = "ตลอดชีวิต";

@@ -129,6 +129,11 @@ isset($_POST['zlfot_code'])?$zlfot_code  = $_POST['zlfot_code']:$zlfot_code='';
         
 <?php
 }
+	 function DateDiff($strDate1,$strDate2)
+	 {
+				return (strtotime($strDate2) - strtotime($strDate1))/  ( 60 * 60 * 24 );  // 1 day = 60*60*24
+	 }
+echo "Date Diff =  ".DateDiff("2563-07-01","2563-08-31")."<br>";
 ?>
         
     </div>
