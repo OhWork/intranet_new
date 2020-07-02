@@ -103,9 +103,9 @@
 					<div class="row">
 						<div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
                                                                                                 <?php 
-                                                                                                    $thai_date = date("d");   
-                                                                                                    $thai_date.="/".date("m");   
-                                                                                                    $thai_date.= "/".substr((date("Y")+543),0);    ?>
+                                                                                                    $thai_date = substr((date("Y")+543),0);
+                                                                                                    $thai_date.="-".date("m");   
+                                                                                                    $thai_date.= "-".date("d");   ;    ?>
                                                                                                 <input type='hidden' name='zoo_code' value='<?php echo $zoo_code; ?>'/>
                                                                                                 <input type='hidden' name='zlfot_status' value='R'>
                                                                                                 <input type='hidden' name='zlfot_datereg' value='<?php echo $thai_date; ?>'/>

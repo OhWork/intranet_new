@@ -46,24 +46,28 @@
                                                                     $columns = array('zlfot_code','zlfot_nameth','zlfot_tel','zlfot_datestart','zoo_name');
                                                         $rs = $db->findByPK33DESC('zlfot','user','zoo','zlfot.user_user_id','user.user_id','user.subzoo_zoo_zoo_id','zoo.zoo_id','zlfot_status','"R"','zlfot_id')->execute();
                                                         $edittxt = 'ยืนยันการตรวจสอบ';
+                                                        $link = "admin_index.php?url=zlfot_checkdetailfirst.php";
                                                         }else if($type == "665f644e43731ff9db3d341da5c827e1"){
                                                         $columns = array('zlfot_code','zlfot_nameth','zlfot_tel','zlfot_datestart','zoo_name');
                                                         $rs = $db->findByPK33DESC('zlfot','user','zoo','zlfot.user_user_id','user.user_id','user.subzoo_zoo_zoo_id','zoo.zoo_id','zlfot_status','"P"','zlfot_id')->execute();
                                                         $edittxt = 'ยืนยันการพิมพ์บัตร';
+                                                        $link = "admin_index.php?url=zlfot_checkdetailsecond.php";
                                                         }else if($type == "38026ed22fc1a91d92b5d2ef93540f20"){
                                                         $columns = array('zlfot_code','zlfot_nameth','zlfot_tel','zlfot_datestart','zoo_name');
                                                         $rs = $db->findByPK33DESC('zlfot','user','zoo','zlfot.user_user_id','user.user_id','user.subzoo_zoo_zoo_id','zoo.zoo_id','zlfot_status','"S"','zlfot_id')->execute();
-                                                        $edittxt = 'ตรวจสอบ';
+                                                        $edittxt = 'ยืนยันการจัดส่ง';
+                                                        $link = "admin_index.php?url=zlfot_checkdetailthird.php";
                                                           }else if($type == "011ecee7d295c066ae68d4396215c3d0"){
                                                         $columns = array('zlfot_code','zlfot_nameth','zlfot_tel','zlfot_datestart','zoo_name');
-                                                        $rs = $db->findByPK33DESC('zlfot','user','zoo','zlfot.user_user_id','user.user_id','user.subzoo_zoo_zoo_id','zoo.zoo_id','zlfot_status','"C"','zlfot_id')->execute();
-                                                        $edittxt = 'ตรวจสอบ';
+                                                        $rs = $db->findByPK33DESC('zlfot','user','zoo','zlfot.user_user_id','user.user_id','user.subzoo_zoo_zoo_id','zoo.zoo_id','zlfot_status','"T"','zlfot_id')->execute();
+                                                        $edittxt = 'ยืนยันใบเสร็จ';
+                                                        $link = "admin_index.php?url=zlfot_checkdetailfouth.php";
                                                           }
                                                         $grid = new gridView();
                                                                     $grid->pr = 'zlfot_id';
                                                                     $grid->header = array('<b><center>รหัส</center></b>','<b><center>ชื่อ - นามสกุล</center></b>','<b><center>เบอร์โทรศัพท์</center></b>','<b><center>วันที่</center></b>','<b><center>จาก</center></b>','<b><center>#</center></b>');
                                                                     $grid->width = array('12%','15%','15%','25%','25%','8%');
-                                                                    $grid->edit = 'admin_index.php?url=zlfot_checkdetailfirst.php';
+                                                                    $grid->edit = $link;
                                                                     $grid->name = 'table';
                                                                     $grid->edittxt = $edittxt;
                                                                     $grid->renderFromDB($columns,$rs);

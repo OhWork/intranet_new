@@ -13,18 +13,18 @@
         $typezooexe = $db->findByPK22("user","zoo","user.subzoo_zoo_zoo_id","zoo.zoo_id","user.user_id",$user_id)->executeAssoc();
         if($typezlfot == '01' || $typezlfot ==  '02'){
         $datenow = date("Y");   
-        $datenow.="/".date("m");   
-        $datenow.= "/".date("d"); 
+        $datenow.="-".date("m");   
+        $datenow.= "-".date("d"); 
         $dateend = substr((date("Y")+1),0);   
-        $dateend.="/".date("m");   
-        $dateend.= "/".date("d"); 
+        $dateend.="-".date("m");   
+        $dateend.= "-".date("d"); 
         }else if( $typezlfot == '03'){
         $datenow = date("Y");   
-        $datenow.="/".date("m");   
-        $datenow.= "/".date("d"); 
+        $datenow.="-".date("m");   
+        $datenow.= "-".date("d"); 
         $dateend = substr((date("Y")+3),0);   
-        $dateend.="/".date("m");   
-        $dateend.= "/".date("d"); 
+        $dateend.="-".date("m");   
+        $dateend.= "-".date("d"); 
         }else{
             $datenow = "ฟรี";
             $dateend = "ตลอดชีวิต";
@@ -44,7 +44,6 @@
 		$data['subzoo_no'] = $_POST['subzoo_no'];
 		$data['subzoo_detail'] = $_POST['subzoo_detail'];
 		$data['subzoo_enable'] = $_POST['subzoo_enable'];
-
 		$rsfix = $db->update('subzoo',$data,'subzoo_id',$_POST['subzoo_id']);
 
 	}else{

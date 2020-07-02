@@ -36,8 +36,22 @@
     	    echo "<div class='statusok'>เพิ่มสำเร็จ</div>";
     	}else if($rsfix){
             echo "<div class='statusok'>แก้ไขสำเร็จ</div>";
-        }
-            $link = "admin_index.php?url=cs_show_fixproblem.php";
+                    }
+                    switch ($_POST['zlfot_status']){
+                          case "P":
+                             $link = "admin_index.php?url=zlfot_show_checkmember.php&type=665f644e43731ff9db3d341da5c827e1";
+                            break;
+                          case "S":
+                            $link = "admin_index.php?url=zlfot_show_checkmember.php&type=38026ed22fc1a91d92b5d2ef93540f20";
+                            break;
+                          case "T":
+                            $link = "admin_index.php?url=zlfot_show_checkmember.php&type=011ecee7d295c066ae68d4396215c3d0";
+                            break;
+                        case "C":
+                            $link = "admin_index.php?url=zlfot_show_member.php";
+                            break;
+                    }
+           
             header( "Refresh: 2; $link" );
 }
 ?>

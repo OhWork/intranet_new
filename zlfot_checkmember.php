@@ -61,10 +61,9 @@
 <?php
 	echo $form->close();
 	if (isset($_POST['submit'])) {
-    //ปี
-isset($_POST['zlfot_code'])?$zlfot_code  = $_POST['zlfot_code']:$zlfot_code='';
 
-   $rs = $db->findByPK33('zlfot','user','zoo','zlfot.user_user_id','user.user_id','user.subzoo_zoo_zoo_id','zoo.zoo_id','zlfot_code',$zlfot_code)->executeAssoc();
+                isset($_POST['zlfot_code'])?$zlfot_code  = $_POST['zlfot_code']:$zlfot_code='';
+                $rs = $db->findByPK44('zlfot','user','typezlfot','zoo','zlfot.user_user_id','user.user_id','user.subzoo_zoo_zoo_id','zoo.zoo_id','zlfot.typezlfot_typezlfot_id','typezlfot.typezlfot_id','zlfot_code',$zlfot_code)->executeAssoc();
 ?>
                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-5 mb-5">
                     <div class="row">
@@ -78,6 +77,16 @@ isset($_POST['zlfot_code'])?$zlfot_code  = $_POST['zlfot_code']:$zlfot_code='';
                                         </div>
                                         <div class="col-xl-9 col-lg-9 col-md-8 col-sm-8 col-8">
                                             <p><?php echo $rs['zlfot_code']; ?></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                    <div class="row">
+                                        <div class="col-xl-3 col-lg-3 col-md-4 col-sm-4 col-4">
+                                            <p>ประเภท :</p>
+                                        </div>
+                                        <div class="col-xl-9 col-lg-9 col-md-8 col-sm-8 col-8">
+                                            <p><?php echo $rs['typezlfot_name']; ?></p>
                                         </div>
                                     </div>
                                 </div>
@@ -128,12 +137,7 @@ isset($_POST['zlfot_code'])?$zlfot_code  = $_POST['zlfot_code']:$zlfot_code='';
                 </div>
         
 <?php
-}
-	 function DateDiff($strDate1,$strDate2)
-	 {
-				return (strtotime($strDate2) - strtotime($strDate1))/  ( 60 * 60 * 24 );  // 1 day = 60*60*24
-	 }
-echo "Date Diff =  ".DateDiff("2563-07-01","2563-08-31")."<br>";
+        }
 ?>
         
     </div>

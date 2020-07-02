@@ -15,7 +15,7 @@
             echo  "วันที่หมดอายุ ".$rs['zlfot_dateend']."</br>";
             echo  "โดย ".$rs['user_name']." ".$rs['user_last']."</br>";
             echo "หน่วยงาน ".$rs['zoo_name']; 
-           ?> <input type='hidden' name='zlfot_status' value='S'> 
+           ?> <input type='hidden' name='zlfot_status' value='C'> 
                <input type='hidden' name='zlfot_id' value=<?php echo $id; ?>> <?php
             echo $button;
              echo $form->close();

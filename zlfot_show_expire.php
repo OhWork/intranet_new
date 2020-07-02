@@ -27,7 +27,7 @@
                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 card-header">
                         <div class="row">
                                 <div>
-                                        <h4>รายสมาชิกสโมสรผู้รักสวนสัตว์ที่กำลังจะหมดอาย</h4>
+                                        <h4>รายสมาชิกสโมสรผู้รักสวนสัตว์ที่กำลังจะหมดอายุ</h4>
 		</div>
 		<div class="ml-auto">
                                         <a href="admin_index.php?url=zlfot_add_member.php&id=<?php echo $id; ?>" class="btn btn-success col-12"><span data-feather="user-plus"></span></a>
