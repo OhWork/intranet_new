@@ -3,7 +3,6 @@
     $id =  $_GET['id'];
     $form = new form();
     $button = new buttonok("ยืนยันการตรวจสอบ","","btn btn-success btn-block col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","");
-    $button2 = new buttonok("แก้ไขข้อมูล","","btn btn-warning btn-block col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","");
     $rs = $db->findByPK44('zlfot','typezlfot','user','zoo','zlfot.user_user_id','user.user_id','zlfot.typezlfot_typezlfot_id','typezlfot.typezlfot_id','user.subzoo_zoo_zoo_id','zoo.zoo_id','zlfot_id',$id)->executeRow();
     echo $form->open("form_reg","frmMain","col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3","zlfot_insert_updatestatus.php","");
 	?>
@@ -125,7 +124,9 @@
                                                             <?php echo $button; ?>
 							</div>
                                                         <div class="col-xl-3 col-lg-4 col-md-4">
-                                                            <?php echo $button2; ?>
+                                                             <a class="btn btn-warning btn-block col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" href="#">
+						แก้ไขข้อมูล
+						</a>
                                                         </div>
                                                         <div class="col-xl-3 col-lg-2 col-md-2"></div>
 						</div>

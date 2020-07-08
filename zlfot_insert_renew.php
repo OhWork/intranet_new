@@ -36,10 +36,12 @@
                    $datenow = date("Y");   
                    $datenow.="-".date("m");   
                    $datenow.= "-".date("d"); 
-                        if($_POST['zlfot_dateend'] > $datenow){
-                            echo "ต่ออายุ";
-                        }else if($_POST['zlfot_dateend'] < $datenow){
-                             echo "อยู่ระหว่าง";
+                        if($datenow > $_POST['zlfot_dateend'] ){
+                            echo $datenow;
+                            echo "อยู่ระหว่าง";
+                        }else if($datenow < $_POST['zlfot_dateend']){
+                            echo $datenow;
+                             echo "ต่ออายุ";
                         }
 		$data['subzoo_name'] = $_POST['subzoo_name'];
 		$data['subzoo_year'] = $_POST['subzoo_year'];

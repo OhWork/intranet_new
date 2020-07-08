@@ -10,9 +10,8 @@
     	$radiotypezlfot->add($type['typezlfot_name'],$type['typezlfot_code'],'','');
            }
     $button = new buttonok("ต่ออายุ","","btn btn-success btn-block col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","");
-    $button2 = new buttonok("แก้ไขข้อมูล","","btn btn-warning btn-block col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","");
     $rs = $db->findByPK44('zlfot','typezlfot','user','zoo','zlfot.user_user_id','user.user_id','zlfot.typezlfot_typezlfot_id','typezlfot.typezlfot_id','user.subzoo_zoo_zoo_id','zoo.zoo_id','zlfot_id',$id)->executeRow();
-    echo $form->open("form_reg","frmMain","col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3","zlfot_insert_updatestatus.php","");
+    echo $form->open("form_reg","frmMain","col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3","zlfot_insert_renew.php","");
 	?>
 	<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 		<div class="row">
@@ -107,7 +106,9 @@
 						<div class="row">
 							<div class="col-xl-5 col-lg-4 col-md-2"></div>
 							<div class="col-xl-2 col-lg-4 col-md-4 col-sm-12 col-12">
-                                                            <?php echo $button2; ?>
+                                                            <a class="btn btn-warning btn-block col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" href="#">
+						แก้ไขข้อมูล
+						</a>
 							</div>
                                                         <div class="col-xl-5 col-lg-4 col-md-2"></div>
 						</div>
