@@ -11,8 +11,19 @@
 	include 'connect.php';
 	if(!empty($_POST['zlfot_id'])){
 
-		$data['zlfot_status'] = $_POST['zlfot_status'];
-		$rsfix = $db->update('zlfot',$data,'zlfot_id',$_POST['zlfot_id']);
+		
+                                    if($_POST['zlfot_status'] == 'T'){
+                                        $data['zlfot_post'] = $_POST['zlfot_post'];
+                                         $data['zlfot_status'] = $_POST['zlfot_status'];
+                                          $rsfix = $db->update('zlfot',$data,'zlfot_id',$_POST['zlfot_id']);
+                                    }else if($_POST['zlfot_status'] == 'C'){
+                                         $data['zlfot_status'] = $_POST['zlfot_status'];
+                                           $rsfix = $db->update('zlfot',$data,'zlfot_id',$_POST['zlfot_id']);
+                                    }else{
+                                        $data['zlfot_status'] = $_POST['zlfot_status'];
+                                           $rsfix = $db->update('zlfot',$data,'zlfot_id',$_POST['zlfot_id']);
+                                    }
+                               
             //Log
 		if(getenv(HTTP_X_FORWARDED_FOR)){
             $ip = $_SERVER['HTTP_X_FORWARDED_FOR']; // IP proxy
