@@ -38,13 +38,21 @@
         $nextId = $codezlfot.$maxId;
 
         
-	if(!empty($_POST['subzoo_id'])){
+	if(!empty($_POST['zlfot_id'])){
+                   $datenow = date("Y");   
+                   $datenow.="-".date("m");   
+                   $datenow.= "-".date("d"); 
+                        if($_POST['zlfot_dateend'] > $datenow){
+                            echo "ต่ออายุ";
+                        }else if($_POST['zlfot_dateend'] < $datenow){
+                             echo "อยู่ระหว่าง";
+                        }
 		$data['subzoo_name'] = $_POST['subzoo_name'];
 		$data['subzoo_year'] = $_POST['subzoo_year'];
 		$data['subzoo_no'] = $_POST['subzoo_no'];
 		$data['subzoo_detail'] = $_POST['subzoo_detail'];
 		$data['subzoo_enable'] = $_POST['subzoo_enable'];
-		$rsfix = $db->update('subzoo',$data,'subzoo_id',$_POST['subzoo_id']);
+		$rsfix = $db->update('zlfot',$data,'zlfot_id',$_POST['zlfot_id']);
 
 	}else{
 	$rs = $db->insert('zlfot',array(
@@ -65,17 +73,7 @@
 	));
 	}
 
-	if($rs || $rsfix){
-    	if($rs){
-    	    echo "<div class='statusok'>เพิ่มสำเร็จ</div>";
-    	}else if($rsfix){
-            echo "<div class='statusok'>แก้ไขสำเร็จ</div>";
-        }
-            $link = "url=admin_index.php?url=zlfot_show_member.php";
-            header( "Refresh: 2; $link" );
-}else{
-            echo "ข้อมูลไม่เข้าฐานข้อมูล";
-        }
+
 ?>
 </html>
 <?php
