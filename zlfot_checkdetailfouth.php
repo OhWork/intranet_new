@@ -3,7 +3,7 @@
           $id =  $_GET['id'];
         $form = new form();
         $lbreciptfin = new label('เลขใบเสร็จสุดท้าย');
-        $txtreciptfin = new textfield('zlfot_reciptfin','','form-control','','');
+        $txtreciptfin = new textfield('zlfot_receiptfin','','form-control','','');
         $button = new buttonok("ตรวจสอบเรียบร้อย","","btn btn-success btn-block bt3success col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","");
             $rs = $db->findByPK44('zlfot','typezlfot','user','zoo','zlfot.user_user_id','user.user_id','zlfot.typezlfot_typezlfot_id','typezlfot.typezlfot_id','user.subzoo_zoo_zoo_id','zoo.zoo_id','zlfot_id',$id)->executeRow();
             echo $form->open("form_reg","frmMain","col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3","zlfot_insert_updatestatus.php","");

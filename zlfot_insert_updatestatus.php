@@ -17,6 +17,7 @@
                                          $data['zlfot_status'] = $_POST['zlfot_status'];
                                           $rsfix = $db->update('zlfot',$data,'zlfot_id',$_POST['zlfot_id']);
                                     }else if($_POST['zlfot_status'] == 'C'){
+                                        $data['zlfot_receiptfin'] = $_POST['zlfot_receiptfin'];
                                          $data['zlfot_status'] = $_POST['zlfot_status'];
                                            $rsfix = $db->update('zlfot',$data,'zlfot_id',$_POST['zlfot_id']);
                                     }else{
