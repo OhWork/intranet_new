@@ -62,7 +62,7 @@
 								<p>ที่อยู่</p>
 							</div>
 							<div class="col-xl-8 col-lg-8 col-md-6 col-sm-12 col-12">
-								<?php echo $rs['zlfot_address']; ?>
+								<p><?php echo $rs['zlfot_address']; ?></p>
 							</div>
 						</div>
 					</div>
