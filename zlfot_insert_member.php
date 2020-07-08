@@ -52,6 +52,7 @@
 	'zlfot_nameth' => $_POST['zlfot_nameth'],
 	'zlfot_nameen' => $_POST['zlfot_nameen'],
                 'zlfot_tel' => $_POST['zlfot_tel'],
+               	'zlfot_address' => $_POST['zlfot_address'],
                 'zlfot_receipt' => $_POST['zlfot_receipt'],
 	'zlfot_datereg' => $_POST['zlfot_datereg'],
                 'zlfot_datestart' => $datenow,
