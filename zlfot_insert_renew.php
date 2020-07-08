@@ -1,10 +1,4 @@
 <?php  ob_start();?>
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html" charset="utf-8">
-        <link rel="stylesheet" href="CSS/bootstrap.css">
-        <link rel="stylesheet" href="CSS/main.css">
-	</head>
 <?php
     include 'database/db_tools.php';
 	include 'connect.php';
