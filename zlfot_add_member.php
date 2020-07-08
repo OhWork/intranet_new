@@ -3,6 +3,7 @@
      $id = $_SESSION['subzoo_zoo_zoo_id'];
 
     $form = new form();
+    $lbdatestart = new label('วันที่สมัคร');
     $lbnameth = new label('ชื่อ - นามสกุล (ไทย)');
     $lbnameen = new label('ชื่อ - นามสกุล (อังกฤษ)');
     $lbcode = new label('เลขที่สมาชิก');
@@ -23,6 +24,7 @@
      $txttel->functions = "onkeyup='autoTab2(this,2)'";
      $txtaddress = new textArea('zlfot_address','form-control','','','5','5','');
      $txtdetail = new textArea('zlfot_detail','form-control','','','5','5','');
+     $txtdatestart = new datetimepicker('zlfot_datestart','datetimepicker1','','form-control datetimepicker-input','date-form dayinbox col-md-12 form-horizontal control-group controls input-group','input-group date','datetimepicker1','#datetimepicker1','','');
     $radiotypezlfot = new radioGroup();
     $radiotypezlfot->name = 'typezlfot_typezlfot_id';
            $rstype = $db->findAll('typezlfot')->execute();
@@ -56,6 +58,12 @@
 				</div>
 				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 showmsg">
 					<?php echo $radiotypezlfot;?>
+				</div>
+                                                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-1 showmsg">
+					<?php echo $lbdatestart; ?>
+				</div>
+				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 showmsg">
+    				<?php echo $txtdatestart; ?>
 				</div>
 				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-1 showmsg">
 					<?php echo $lbnameth; ?>
@@ -127,3 +135,24 @@
 <?php echo $form->close();
               endif;
               ?>
+<script>
+	$(function () {
+        $('#datetimepicker1').datetimepicker({
+	        format:'YYYY-MM-DD',
+	        useCurrent: false,
+	        ignoreReadonly: true,
+            sideBySide: true,
+            allowInputToggle: true,
+	        locale:moment.locale('th'),
+	        stepping: 30
+        });
+       $("#datetimepicker1").on("change.datetimepicker", function (e) {
+            $('#datetimepicker2').datetimepicker('minDate', e.date);
+             var widget = $(this).find(".bootstrap-datetimepicker-widget");
+        });
+	$("#maincontent").on("click", function (e) {
+		 		var widget = $(this).find(".bootstrap-datetimepicker-widget");
+                    widget.hide();
+		});
+    });
+    </script>

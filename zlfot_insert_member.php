@@ -12,16 +12,10 @@
         $user_id = $_POST['user_user_id'];
         $typezooexe = $db->findByPK22("user","zoo","user.subzoo_zoo_zoo_id","zoo.zoo_id","user.user_id",$user_id)->executeAssoc();
         if($typezlfot == '01' || $typezlfot ==  '02'){
-        $datenow = date("Y");   
-        $datenow.="-".date("m");   
-        $datenow.= "-".date("d"); 
         $dateend = substr((date("Y")+1),0);   
         $dateend.="-".date("m");   
         $dateend.= "-".date("d"); 
         }else if( $typezlfot == '03'){
-        $datenow = date("Y");   
-        $datenow.="-".date("m");   
-        $datenow.= "-".date("d"); 
         $dateend = substr((date("Y")+3),0);   
         $dateend.="-".date("m");   
         $dateend.= "-".date("d"); 
@@ -55,7 +49,7 @@
                	'zlfot_address' => $_POST['zlfot_address'],
                 'zlfot_receipt' => $_POST['zlfot_receipt'],
 	'zlfot_datereg' => $_POST['zlfot_datereg'],
-                'zlfot_datestart' => $datenow,
+                'zlfot_datestart' => $_POST['zlfot_datestart'],
                 'zlfot_dateend' => $dateend,
                 'zlfot_status' => $_POST['zlfot_status'],
                 'zlfot_email' => $_POST['zlfot_email'],
