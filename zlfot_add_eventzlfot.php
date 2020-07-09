@@ -3,11 +3,11 @@
      //$id = $_SESSION['subzoo_zoo_zoo_id'];
 
    $form = new form();
-  $lbevent = new label("ชื่อ :");
-  $lbeventno = new label("ลำดับ :");
+  $lbevent = new label("ชื่อกิจกรรม");
+  $lbeventno = new label("เพิ่มลำดับ");
   $lbeventenable = new label("สถานะการใช้งาน :");
-  $txtevent = new textfield('eventzlfot_name','','','');
-  $txteventno = new textfield('eventzlfot_no','','','');
+  $txtevent = new textfield('eventzlfot_name','','col-12','');
+  $txteventno = new textfield('eventzlfot_no','','col-12','');
   $radioeventenable = new radioGroup();
   $radioeventenable->name = 'eventzlfot_enable';
   if(empty($id)){
@@ -16,6 +16,7 @@
     	}
         
   $submit = new buttonok("ยืนยัน","","btn btn-success col-md-12","");
+  $submit2 = new buttonok("ย้อนกลับ","","btn btn-danger col-md-12","");
     echo $form->open("form_reg","","col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","zlfot_insert_event.php","");
 ?>
 <div class="row">
@@ -32,24 +33,29 @@
 				<?php echo $txtevent ?>
 			</div>
 			<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12'>
-				<?php echo $lbeventno ?>
-			</div>
-			<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 form-group has-feedback'>
-				<?php echo $txteventno ?>
-			</div>
+                            <div class="row">
+                                <div class='col-xl-2 col-lg-2 col-md-3 col-sm-3 col-3'>
+                                    <?php echo $lbeventno ?>
+                                </div>
+                                <div class='col-xl-2 col-lg-2 col-md-2 col-sm-3 col-3 form-group has-feedback'>
+                                    <?php echo $txteventno ?>
+                                </div>
+                                <div class='col-xl-8 col-lg-8 col-md-7 col-sm-6 col-6'></div>
+                            </div>
+                        </div>
 			<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12'>
 				<div class="row">
 					<div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3" style="padding-top: 14px;"><?php echo $lbeventenable; ?></div>
 					<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4" style="padding-top: 14px;"><?php echo $radioeventenable; ?></div>
 					<div class="col-xl-5 col-lg-5 col-md-5 col-sm-5 col-5"></div>
 				</div>
-		    </div>
+                        </div>
 			<input type='hidden' name='eventzlfot_id' value='<?php echo $_GET['id'];?>'/>
 			<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3' style="margin-bottom: 16px;">
 				<div class='row'>
-					<div class='col-md-4'></div>
-					<div class='col-md-4'><?php echo $submit ?></div>
-					<div class='col-md-4'></div>
+					<div class='col-md-8'></div>
+					<div class='col-md-2 pr-0'><?php echo $submit ?></div>
+					<div class='col-md-2'><?php echo $submit2 ?></div>
 				</div>
 			</div>
 		</div>
