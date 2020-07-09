@@ -37,7 +37,7 @@
                                         <div class="table-responsive">
 			<?php 
                                                         $grid = new gridView();
-                                                                    $grid->pr = 'zlfot_id';
+                                                                    $grid->pr = 'eventzlfot_id';
                                                                     $grid->header = array('<b><center>ชื่อกิจกรรม</center></b>','<b><center>วันที่จัด</center></b>','<b><center>#</center></b>');
                                                                     $grid->width = array('12%','15%','15%','25%','25%','8%');
                                                                     $grid->edit = 'admin_index.php?url=zlfot_add_event.php';
