@@ -8,9 +8,9 @@
     $lbdate = new label("วันที่จัดกิจกรรม");
   $lbeventno = new label("เพิ่มลำดับ");
   $lbeventenable = new label("สถานะการใช้งาน :");
-  $txtevent = new textfield('eventzlfot_name','','col-12','');
-  $txteventno = new textfield('eventzlfot_no','','col-12','');
-  $txtplace = new textfield('eventzlfot_place','','col-12','');
+  $txtevent = new textfield('eventzlfot_name','','col-12 form-control','');
+  $txteventno = new textfield('eventzlfot_no','','col-12 form-control','');
+  $txtplace = new textfield('eventzlfot_place','','col-12 form-control','');
   $txtdate = new datetimepicker('eventzlfot_date','datetimepicker1','','form-control datetimepicker-input','date-form dayinbox col-md-12 form-horizontal control-group controls input-group','input-group date','datetimepicker1','#datetimepicker1','','');
   $radioeventenable = new radioGroup();
   $radioeventenable->name = 'eventzlfot_enable';
@@ -35,18 +35,22 @@
 			<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 form-group has-feedback'>
 				<?php echo $txtevent; ?>
 			</div>
-                                                <div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3'>
-                        <div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3'>
+                        <div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12'>
 				<?php echo $lbplace; ?>
 			</div>
 			<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 form-group has-feedback'>
 				<?php echo $txtplace; ?>
 			</div>
 			<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12'>
+                                <?php echo $lbdate; ?>
+                        </div>
+                        <div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12'>
                             <div class="row">
-                                <?php 
-                                echo $lbdate;
-                                echo $txtdate; ?>
+                                <?php echo $txtdate; ?>
+                            </div>
+                        </div>
+                        <div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12'>
+                            <div class="row">
                                 <?php  if(!empty($_GET['id'])){ ?>
                                 <div class='col-xl-2 col-lg-2 col-md-3 col-sm-3 col-3'>
                                     <?php echo $lbeventno; ?>
@@ -69,10 +73,16 @@
 			<input type='hidden' name='eventzlfot_id' value='<?php echo $_GET['id'];?>'/>
 			<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3' style="margin-bottom: 16px;">
 				<div class='row'>
-					<div class='col-md-8'></div>
-					<div class='col-md-2 pr-0'><?php echo $submit ?></div>
-                                        <div class='col-md-2 btn btn-warning col-md-12'><a href="admin_index.php?url=zlfot_add_member.php">ย้อนกลับ</a></div>
-				</div>
+					<div class='col-xl-8 col-lg-8 col-md-6'></div>
+                                        <div class='col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12'>
+                                            <div class='row'>
+                                                <div class='col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 pr-0'><?php echo $submit ?></div>
+                                                <div class="col-xl-6 col-lg-3 col-md-6 col-sm-12 col-12 pr-0">
+                                                    <a class="btn btn-danger col-12" href="admin_index.php?url=zlfot_add_member.php">ย้อนกลับ</a
+                                                </div>
+                                            </div>
+                                        </div>
+                                </div>
 			</div>
 		</div>
 	</div>
