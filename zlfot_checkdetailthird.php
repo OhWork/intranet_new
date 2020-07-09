@@ -2,7 +2,7 @@
     if (!empty($_SESSION['user_name'])):
           $id =  $_GET['id'];
         $form = new form();
-            $lbpost = new label('เลขไปรษณีย์');
+            $lbpost = new label('เลขส่ง');
     $txtpost = new textfield('zlfot_post','','form-control','','');
         $button = new buttonok("บันทึก","","btn btn-success btn-block bt3success col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","");
             $rs = $db->findByPK44('zlfot','typezlfot','user','zoo','zlfot.user_user_id','user.user_id','zlfot.typezlfot_typezlfot_id','typezlfot.typezlfot_id','user.subzoo_zoo_zoo_id','zoo.zoo_id','zlfot_id',$id)->executeRow();
