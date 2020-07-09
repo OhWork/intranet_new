@@ -7,6 +7,7 @@
     $lbnameth = new label('ชื่อ - นามสกุล (ไทย)');
     $lbnameen = new label('ชื่อ - นามสกุล (อังกฤษ)');
     $lbcode = new label('เลขที่สมาชิก');
+    $lbevent = new label('สถานที่ขาย');
     $lbtel = new label('เบอร์โทรศัพท์');
     $lbaddress = new label('ที่อยู่');
     $lbdatereg = new label('วันที่สมัคร');
@@ -25,6 +26,9 @@
      $txtaddress = new textArea('zlfot_address','form-control','','','5','5','');
      $txtdetail = new textArea('zlfot_detail','form-control','','','5','5','');
      $txtdatestart = new datetimepicker('zlfot_datestart','datetimepicker1','','form-control datetimepicker-input','date-form dayinbox col-md-12 form-horizontal control-group controls input-group','input-group date','datetimepicker1','#datetimepicker1','','');
+     $selectevent = new SelectFromDB();
+  $selectevent->name = 'eventzlfot_eventzlfot_id';
+  $selectevent->lists = 'โปรดระบุ กิจกรรม';
     $radiotypezlfot = new radioGroup();
     $radiotypezlfot->name = 'typezlfot_typezlfot_id';
            $rstype = $db->findAll('typezlfot')->execute();
@@ -53,13 +57,20 @@
                                                                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-1 showmsg">
 					<?php echo $lbzoo."   ".$zoo;  ?>
 				</div>
-                                                             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-1 showmsg">
+                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-1 showmsg">
 					<?php echo $lbtype; ?>
 				</div>
 				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 showmsg">
 					<?php echo $radiotypezlfot;?>
 				</div>
-                                                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-1 showmsg">
+                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-1 showmsg">
+					<?php echo $lbevent; ?>
+                                </div> <a href="admin_index.php?url=zlfot_add_eventzlfot.php"><i class="fas fa-plus zloft-f2"></i></a>
+				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 showmsg">
+					<?php echo $selectevent->selectFromTB('eventzlfot','eventzlfot_id','eventzlfot_name',$r['eventzlfot_eventzlfot_id']);;?>
+                                    
+				</div>
+                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-1 showmsg">
 					<?php echo $lbdatestart; ?>
 				</div>
 				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 showmsg">
@@ -71,7 +82,7 @@
 				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 showmsg">
     				<?php echo $txtnameth; ?>
 				</div>
-                                                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-1 showmsg">
+                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-1 showmsg">
 					<?php echo $lbnameen; ?>
 				</div>
 				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 showmsg">

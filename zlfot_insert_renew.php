@@ -16,7 +16,7 @@
         $datenow = date("Y");   
         $datenow.="-".date("m");   
         $datenow.= "-".date("d"); 
-        $dateend = substr((date("Y")+3),0);   
+        $dateend = substr((date("Y")+2),0);   
         $dateend.="-".date("m");   
         $dateend.= "-".date("d"); 
         }else{
