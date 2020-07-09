@@ -16,7 +16,7 @@
         $dateend.="-".date("m");   
         $dateend.= "-".date("d"); 
         }else if( $typezlfot == '03'){
-        $dateend = substr((date("Y")+3),0);   
+        $dateend = substr((date("Y")+2),0);   
         $dateend.="-".date("m");   
         $dateend.= "-".date("d"); 
         }else{

@@ -37,7 +37,7 @@
            }
      if($id >= 1 && $id <= 10){
             $zoo_code = '001';
-            $zoo = "องค์การสวนสัตว์ ในพระบรมราชูปถัมภ์";
+            $zoo = "องค์การสวนสัตว์แห่งประเทศไทย";
     }else{
          $rszoo =$db->findByPK('zoo','zoo_id',$id)->executeAssoc();
              $zoo_code = $rszoo['zoo_code'];
@@ -121,13 +121,9 @@
 				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3" style="margin-bottom:16px;">
 					<div class="row">
 						<div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
-                                                                                                <?php 
-                                                                                                    $thai_date = substr((date("Y")+543),0);
-                                                                                                    $thai_date.="-".date("m");   
-                                                                                                    $thai_date.= "-".date("d");   ;    ?>
                                                                                                 <input type='hidden' name='zoo_code' value='<?php echo $zoo_code; ?>'/>
                                                                                                 <input type='hidden' name='zlfot_status' value='R'>
-                                                                                                <input type='hidden' name='zlfot_datereg' value='<?php echo $thai_date; ?>'/>
+                                                                                                <input type='hidden' name='zlfot_datereg' value='<?php echo date("Y-m-d"); ?>'/>
     						<input type='hidden' name='user_user_id' value='<?php echo $_SESSION['user_id']; ?>'/>
 						</div>
 						<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6">
