@@ -1,7 +1,7 @@
 <?php
     if (!empty($_SESSION['user_name'])):
         $zoo = $_SESSION['subzoo_zoo_zoo_id']
-      $id = $_GET['id'];
+       $id = $_GET['id'];
 
    $form = new form();
   $lbevent = new label("ชื่อกิจกรรม");

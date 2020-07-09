@@ -15,16 +15,19 @@
     $lbtype = new label('ประเภทสมาชิก');
      $lbzoo = new label('สมัครจาก');
      $lbreceipt = new label('เลขที่ใบเสร็จ');
+     $lbbd = new label('วันเกิด');
     $lbemail = new label('อีเมล');
     $lbdetail = new label('หมายเหตุ');
     $txtnameth = new textfield('zlfot_nameth','','form-control','','');
     $txtnameen = new textfield('zlfot_nameen','','form-control','','');
     $txtreceipt = new textfield('zlfot_receipt','','form-control','','');
+     $txtbd = new textfield('zlfot_bd','','form-control','','');
      $txtemail = new textfield('zlfot_email','','form-control','','');
      $txttel = new textfield('zlfot_tel','data2','form-control','');
      $txttel->functions = "onkeyup='autoTab2(this,2)'";
      $txtaddress = new textArea('zlfot_address','form-control','','','5','5','');
      $txtdetail = new textArea('zlfot_detail','form-control','','','5','5','');
+     $txtbd = new datetimepicker('zlfot_bd','datetimepicker1','','form-control datetimepicker-input','date-form dayinbox col-md-12 form-horizontal control-group controls input-group','input-group date','datetimepicker1','#datetimepicker1','','');
      $txtdatestart = new datetimepicker('zlfot_datestart','datetimepicker1','','form-control datetimepicker-input','date-form dayinbox col-md-12 form-horizontal control-group controls input-group','input-group date','datetimepicker1','#datetimepicker1','','');
      $selectevent = new SelectFromDB();
   $selectevent->name = 'eventzlfot_eventzlfot_id';
@@ -52,7 +55,7 @@
 		<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6" style="padding-top:16px;background-color:#ffffff;border:solid 1px #E0E0E0;border-radius:7px;">
 			<div class="row">
 				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 alltxh">
-					<h4>สมัครสมาชิกสโมสรผู้รักสวนสัตว์</h4>
+					<h4>สมัครสมาชิกสโมสรผู้รักสวนสัตว์แห่งประเทศไทย</h4>
 				</div>
                                                                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-1 showmsg">
 					<?php echo $lbzoo."   ".$zoo;  ?>
@@ -87,6 +90,12 @@
 				</div>
 				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 showmsg">
     				<?php echo $txtnameen; ?>
+				</div>
+                                                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-1 showmsg">
+					<?php echo $lbbd; ?>
+				</div>
+				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 showmsg">
+    				<?php echo $txtbd; ?>
 				</div>
 				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-1 showmsg">
 					<?php echo $lbtel; ?>
