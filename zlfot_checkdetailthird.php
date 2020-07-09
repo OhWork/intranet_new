@@ -14,9 +14,36 @@
 	<div class="col-xl-8 col-lg-8 col-md-10 col-sm-12 col-12" style="padding-top:16px;background-color:#ffffff;border:solid 1px #E0E0E0;border-radius:7px;font-size: 18px;">
             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mb-4">
 		<div class="row">
-                    <h2>เลขพัสดุ</h2>
+                    <h2>การนำส่งบัตรสมาชิก</h2>
 		</div>
             </div>
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mb-5">
+		<div class="row">
+                    <div class="col-xl-3 col-lg-3 col-md-2"></div>
+                    <div class="col-xl-6 col-lg-6 col-md-8 col-sm-12 col-12">
+                        <div class="row">
+                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                <label>ข้อมูลการจัดส่ง</label>
+                            </div>
+                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                <?php echo $rs['zlfot_code']; ?> <?php echo $rs['zlfot_nameth']; ?>
+                            </div>
+                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                <p><?php echo $rs['zlfot_address']; ?></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-2"></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-2 col-lg-2 col-md-1"></div>
+    </div>
+</div>
+<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-2">
+    <div class="row">
+	<div class="col-xl-2 col-lg-2 col-md-1"></div>
+	<div class="col-xl-8 col-lg-8 col-md-10 col-sm-12 col-12" style="padding-top:16px;background-color:#ffffff;border:solid 1px #E0E0E0;border-radius:7px;font-size: 18px;">
             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 		<div class="row">
                     <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
