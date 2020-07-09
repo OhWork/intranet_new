@@ -64,17 +64,18 @@
 					<?php echo $radiotypezlfot;?>
 				</div>
                                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-1 showmsg">
-					<?php echo $lbevent; ?>
-                                </div> <a href="admin_index.php?url=zlfot_add_eventzlfot.php"><i class="fas fa-plus zloft-f2"></i></a>
+					<?php echo $lbevent; ?> <a class="text-success" style="float: right;" href="admin_index.php?url=zlfot_add_eventzlfot.php">เพิ่มกิจกรรม <i class="fas fa-plus zloft-f2"></i></a>
+                                </div>
 				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 showmsg">
 					<?php echo $selectevent->selectFromTB('eventzlfot','eventzlfot_id','eventzlfot_name',$r['eventzlfot_eventzlfot_id']);;?>
-                                    
 				</div>
                                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-1 showmsg">
-					<?php echo $lbdatestart; ?>
+					<?php echo $lbdatestart; ?>  
 				</div>
 				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 showmsg">
-    				<?php echo $txtdatestart; ?>
+                                    <div class="row">
+                                        <?php echo $txtdatestart; ?>
+                                    </div>
 				</div>
 				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-1 showmsg">
 					<?php echo $lbnameth; ?>

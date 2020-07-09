@@ -1,6 +1,6 @@
 <?php
     if (!empty($_SESSION['user_name'])):
-        $zoo = $_SESSION['subzoo_zoo_zoo_id']
+        $zoo = $_SESSION['subzoo_zoo_zoo_id'];
       $id = $_GET['id'];
 
    $form = new form();
@@ -30,26 +30,26 @@
 				<h4>เพิ่มกิจกรรม</h4>
 			</div>
 			<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3'>
-				<?php echo $lbevent ?>
+				<?php echo $lbevent; ?>
 			</div>
 			<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 form-group has-feedback'>
-				<?php echo $txtevent ?>
+				<?php echo $txtevent; ?>
 			</div>
-                                                <div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3'>
-				<?php echo $lbplace ?>
+                        <div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3'>
+				<?php echo $lbplace; ?>
 			</div>
 			<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 form-group has-feedback'>
-				<?php echo $txtplace ?>
+				<?php echo $txtplace; ?>
 			</div>
 			<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12'>
                             <div class="row">
                                 <?php echo $lbdatestart; ?>
                                 <?php  if(!empty($_GET['id'])){ ?>
                                 <div class='col-xl-2 col-lg-2 col-md-3 col-sm-3 col-3'>
-                                    <?php echo $lbeventno ?>
+                                    <?php echo $lbeventno; ?>
                                 </div>
                                 <div class='col-xl-2 col-lg-2 col-md-2 col-sm-3 col-3 form-group has-feedback'>
-                                    <?php echo $txteventno ?>
+                                    <?php echo $txteventno; ?>
                                 </div>
                                 <div class='col-xl-8 col-lg-8 col-md-7 col-sm-6 col-6'></div>
                             </div>
