@@ -1,5 +1,6 @@
 <?php
     if (!empty($_SESSION['user_name'])):
+        $zoo = $_SESSION['subzoo_zoo_zoo_id']
       $id = $_GET['id'];
 
    $form = new form();
@@ -61,6 +62,7 @@
 					<div class="col-xl-5 col-lg-5 col-md-5 col-sm-5 col-5"></div>
 				</div>
                         </div>
+                    <input type='hidden' name='zoo_zoo_id' value='<?php echo $zoo;?>'/>
 			<input type='hidden' name='eventzlfot_id' value='<?php echo $_GET['id'];?>'/>
 			<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3' style="margin-bottom: 16px;">
 				<div class='row'>
