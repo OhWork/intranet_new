@@ -57,7 +57,7 @@
 				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 alltxh">
 					<h4>สมัครสมาชิกสโมสรผู้รักสวนสัตว์แห่งประเทศไทย</h4>
 				</div>
-                                                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-1 showmsg">
+                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-1 showmsg">
 					<?php echo $lbzoo."   ".$zoo;  ?>
 				</div>
                                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-1 showmsg">
@@ -84,25 +84,27 @@
 					<?php echo $lbnameth; ?>
 				</div>
 				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 showmsg">
-    				<?php echo $txtnameth; ?>
+                                        <?php echo $txtnameth; ?>
 				</div>
                                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-1 showmsg">
 					<?php echo $lbnameen; ?>
 				</div>
 				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 showmsg">
-    				<?php echo $txtnameen; ?>
+                                        <?php echo $txtnameen; ?>
 				</div>
-                                                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-1 showmsg">
+                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-1 showmsg">
 					<?php echo $lbbd; ?>
 				</div>
 				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 showmsg">
-    				<?php echo $txtbd; ?>
+                                    <div class="row">
+                                        <?php echo $txtbd; ?>
+                                    </div>
 				</div>
 				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-1 showmsg">
 					<?php echo $lbtel; ?>
 				</div>
 				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 showmsg">
-    				<?php echo $txttel; ?>
+                                        <?php echo $txttel; ?>
 				</div>
 				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-1 showmsg">
 					<?php echo $lbaddress; ?>
@@ -114,15 +116,15 @@
 					<?php echo $lbreceipt; ?>
 				</div>
 				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 showmsg">
-    				<?php echo $txtreceipt; ?>
+                                        <?php echo $txtreceipt; ?>
 				</div>
-                                                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-1 showmsg">
+                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-1 showmsg">
 					<?php echo $lbemail ?>
 				</div>
 				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 showmsg">
-    				<?php echo $txtemail; ?>
+                                        <?php echo $txtemail; ?>
                                 </div>
-                            				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-1 showmsg">
+                            	<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-1 showmsg">
 					<?php echo $lbdetail; ?>
 				</div>
 				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 showmsg">
