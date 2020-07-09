@@ -1,13 +1,16 @@
 <?php
     if (!empty($_SESSION['user_name'])):
-     //$id = $_SESSION['subzoo_zoo_zoo_id'];
+      $id = $_GET['id'];
 
    $form = new form();
   $lbevent = new label("ชื่อกิจกรรม");
+   $lbplace = new label("สถานที่จัดกิจกรรม");
   $lbeventno = new label("เพิ่มลำดับ");
   $lbeventenable = new label("สถานะการใช้งาน :");
   $txtevent = new textfield('eventzlfot_name','','col-12','');
   $txteventno = new textfield('eventzlfot_no','','col-12','');
+  $txteventno = new textfield('eventzlfot_place','','col-12','');
+  $txtdatestart = new datetimepicker('eventzlfot_date','datetimepicker1','','form-control datetimepicker-input','date-form dayinbox col-md-12 form-horizontal control-group controls input-group','input-group date','datetimepicker1','#datetimepicker1','','');
   $radioeventenable = new radioGroup();
   $radioeventenable->name = 'eventzlfot_enable';
   if(empty($id)){
@@ -16,7 +19,6 @@
     	}
         
   $submit = new buttonok("ยืนยัน","","btn btn-success col-md-12","");
-  $submit2 = new buttonok("ย้อนกลับ","","btn btn-danger col-md-12","");
     echo $form->open("form_reg","","col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","zlfot_insert_event.php","");
 ?>
 <div class="row">
@@ -32,8 +34,16 @@
 			<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 form-group has-feedback'>
 				<?php echo $txtevent ?>
 			</div>
+                                                <div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3'>
+				<?php echo $lbplace ?>
+			</div>
+			<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 form-group has-feedback'>
+				<?php echo $txtplace ?>
+			</div>
 			<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12'>
                             <div class="row">
+                                <?php echo $lbdatestart; ?>
+                                <?php  if(!empty($_GET['id'])){ ?>
                                 <div class='col-xl-2 col-lg-2 col-md-3 col-sm-3 col-3'>
                                     <?php echo $lbeventno ?>
                                 </div>
@@ -42,6 +52,7 @@
                                 </div>
                                 <div class='col-xl-8 col-lg-8 col-md-7 col-sm-6 col-6'></div>
                             </div>
+                                <?php } ?>
                         </div>
 			<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12'>
 				<div class="row">
@@ -55,7 +66,7 @@
 				<div class='row'>
 					<div class='col-md-8'></div>
 					<div class='col-md-2 pr-0'><?php echo $submit ?></div>
-					<div class='col-md-2'><?php echo $submit2 ?></div>
+                                        <div class='col-md-2 btn btn-warning col-md-12'><a href="admin_index.php?url=zlfot_add_member.php">ย้อนกลับ</a></div>
 				</div>
 			</div>
 		</div>
@@ -65,3 +76,24 @@
 <?php echo $form->close();
               endif;
               ?>
+<script>
+	$(function () {
+        $('#datetimepicker1').datetimepicker({
+	        format:'YYYY-MM-DD',
+	        useCurrent: false,
+	        ignoreReadonly: true,
+            sideBySide: true,
+            allowInputToggle: true,
+	        locale:moment.locale('th'),
+	        stepping: 30
+        });
+       $("#datetimepicker1").on("change.datetimepicker", function (e) {
+            $('#datetimepicker2').datetimepicker('minDate', e.date);
+             var widget = $(this).find(".bootstrap-datetimepicker-widget");
+        });
+	$("#maincontent").on("click", function (e) {
+		 		var widget = $(this).find(".bootstrap-datetimepicker-widget");
+                    widget.hide();
+		});
+    });
+    </script>
