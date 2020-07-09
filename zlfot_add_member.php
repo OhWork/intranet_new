@@ -7,16 +7,16 @@
     $lbnameth = new label('ชื่อ - นามสกุล (ไทย)');
     $lbnameen = new label('ชื่อ - นามสกุล (อังกฤษ)');
     $lbcode = new label('เลขที่สมาชิก');
-    $lbevent = new label('สถานที่ขาย');
+    $lbevent = new label('สถานที่รับสมัคร');
     $lbtel = new label('เบอร์โทรศัพท์');
     $lbaddress = new label('ที่อยู่');
-    $lbdatereg = new label('วันที่สมัคร');
+    $lbdatereg = new label('วันที่รับสมัคร');
     $lbdateend  = new label('วันที่หมดอายุ');
     $lbtype = new label('ประเภทสมาชิก');
      $lbzoo = new label('สมัครจาก');
      $lbreceipt = new label('เลขที่ใบเสร็จ');
      $lbbd = new label('วันเกิด');
-    $lbemail = new label('อีเมล');
+    $lbemail = new label('อีเมล์');
     $lbdetail = new label('หมายเหตุ');
     $txtnameth = new textfield('zlfot_nameth','','form-control','','');
     $txtnameen = new textfield('zlfot_nameen','','form-control','','');
@@ -28,7 +28,7 @@
      $txtaddress = new textArea('zlfot_address','form-control','','','5','5','');
      $txtdetail = new textArea('zlfot_detail','form-control','','','5','5','');
      $txtbd = new datetimepicker('zlfot_bd','datetimepicker1','','form-control datetimepicker-input','date-form dayinbox col-md-12 form-horizontal control-group controls input-group','input-group date','datetimepicker1','#datetimepicker1','','');
-     $txtdatestart = new datetimepicker('zlfot_datestart','datetimepicker1','','form-control datetimepicker-input','date-form dayinbox col-md-12 form-horizontal control-group controls input-group','input-group date','datetimepicker1','#datetimepicker1','','');
+     $txtdatestart = new datetimepicker('zlfot_datestart','datetimepicker2','','form-control datetimepicker-input','date-form dayinbox col-md-12 form-horizontal control-group controls input-group','input-group date','datetimepicker2','#datetimepicker2','','');
      $selectevent = new SelectFromDB();
   $selectevent->name = 'eventzlfot_eventzlfot_id';
   $selectevent->lists = 'โปรดระบุ กิจกรรม';
@@ -163,13 +163,14 @@
 	        locale:moment.locale('th'),
 	        stepping: 30
         });
-       $("#datetimepicker1").on("change.datetimepicker", function (e) {
-            $('#datetimepicker2').datetimepicker('minDate', e.date);
-             var widget = $(this).find(".bootstrap-datetimepicker-widget");
+        $('#datetimepicker2').datetimepicker({
+	        format:'YYYY-MM-DD',
+	        useCurrent: false,
+	        ignoreReadonly: true,
+            sideBySide: true,
+            allowInputToggle: true,
+	        locale:moment.locale('th'),
+	        stepping: 30
         });
-	$("#maincontent").on("click", function (e) {
-		 		var widget = $(this).find(".bootstrap-datetimepicker-widget");
-                    widget.hide();
-		});
     });
     </script>
