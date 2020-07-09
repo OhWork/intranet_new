@@ -42,7 +42,7 @@
                                                                     $grid->width = array('12%','15%','15%','25%','25%','8%');
                                                                     $grid->edit = 'admin_index.php?url=zlfot_add_event.php';
                                                                     $grid->name = 'table';
-                                                                    $grid->edittxt ='ตรวจสอบ';
+                                                                    $grid->edittxt ='แก้ไข';
                                                                     $grid->renderFromDB($columns,$rs);
                                                                     endif;
                                                             ?>
