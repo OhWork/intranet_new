@@ -40,9 +40,10 @@
 		$_SESSION['systemallow_touristreport'] = $rsallow['systemallow_touristreport'];
 		$_SESSION['systemallow_km'] = $rsallow['systemallow_km'];
 		$_SESSION['systemallow_hrs'] = $rsallow['systemallow_hrs'];
-                                $_SESSION['systemallow_vdo'] = $rsallow['systemallow_vdo'];
-                                $_SESSION['systemallow_zlfot'] = $rsallow['systemallow_zlfot'];
+                $_SESSION['systemallow_vdo'] = $rsallow['systemallow_vdo'];
+                $_SESSION['systemallow_zlfot'] = $rsallow['systemallow_zlfot'];
 		$_SESSION['systemallow_qtn'] = $rsallow['systemallow_qtn'];
+                $_SESSION['systemallow_ts'] = $rsallow['systemallow_ts'];
 		$_SESSION['subzoo_sc'] = $rssubzoo['subzoo_sc'];
 		$_SESSION['subzoo_enable'] = $rssubzoo['subzoo_enable'];
 		$_SESSION['subzoo_subzoo_id'] = $rs['subzoo_subzoo_id'];
