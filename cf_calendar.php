@@ -17,7 +17,7 @@
      headerToolbar: {
         left: 'prev,next today',
         center: 'title',
-        right: 'dayGridMonth,timeGridWeek,timeGridDay,listWeek'
+        right: 'timeGridDay,timeGridWeek,dayGridMonth'
       },
                eventClick:  function(info) {
                    //console.log('modal', info);
@@ -124,16 +124,17 @@
                    return false;
                 },
                 views: {
-				listDay: { buttonText: 'วัน' },
-				listWeek: { buttonText: 'อาทิตย์' },
-				month: { buttonText: 'เดือน' }
+                                                                toDay: { buttonText: 'วันนี้' },
+				timeGridDay: { buttonText: 'วัน' },
+				timeGridWeek: { buttonText: 'สัปดาห์' },
+				dayGridMonth: { buttonText: 'เดือน' }
 			},
 
                 events:
                 {
                     url: 'cf_zpo_room.php?gData=' + id,
                 },
-			eventRender: function (event, element, view) {
+			eventClassNames: function (event, element, view) {
 					if (event.status_confer == 'W'){
 				        element.find('div.fc-content').prepend("<img class='mb-1 mr-1' src='images/yellow.png' width='10px' height='10px'>");
 				    }
