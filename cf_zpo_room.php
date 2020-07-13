@@ -13,7 +13,6 @@ if(isset($_GET['gData']) && $_GET['gData']|=""){
         $status = null;
         if(($rs->eventconfer_status=='Y')){
             $statusconfer = " อนุมัติ";
-            
             if($rs->eventconfer_status_online == 'Y'){
             	$statusconferonline = " อนุมัติ";
             }
@@ -84,8 +83,8 @@ if(isset($_GET['gData']) && $_GET['gData']|=""){
             }
         }
         }
- 
-            
+        
+        
         if($rs->headncf_name != 'ประชุมภายใน' && $rs->headncf_name != 'ประชุมภายนอก'){
 	        $rs->eventconfer_story = '-';
         }
