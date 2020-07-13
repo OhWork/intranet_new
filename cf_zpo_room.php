@@ -73,11 +73,11 @@ if(isset($_GET['gData']) && $_GET['gData']|=""){
             if($rs->eventconfer_status=='Y'){
             	$eventcolor = "#51c900";
             } else if($rs->eventconfer_status=='W'){
-            	$eventcolor = "#e30000";
+            	$eventcolor = "#f7f68b";
             }else if($rs->eventconfer_status=='C'){
             	$eventcolor = "#f0911d";
             }else if($rs->eventconfer_status=='N' ){
-            	$eventcolor = "#f0211d";
+            	$eventcolor = "#e30000";
             }
         }
 
