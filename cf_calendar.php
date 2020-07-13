@@ -14,19 +14,19 @@
          var calendar = new FullCalendar.Calendar(calendarEl, {
             //plugins: [ 'interaction','dayGrid', 'timeGrid', 'list' ], // plugin ที่เราจะใช้งาน
             defaultView: 'dayGridMonth', // ค้าเริ่มร้นเมื่อโหลดแสดงปฏิทิน
-            header: {
-                left: 'prev,next today',
-                center: 'title',
-                right: 'dayGridMonth,timeGridWeek,timeGridDay,listMonth'
-            }, 
+     headerToolbar: {
+        left: 'prev,next today',
+        center: 'title',
+        right: 'dayGridMonth,timeGridWeek,timeGridDay,listWeek'
+      },
                eventClick:  function(info) {
-                   console.log('modal', info);
+                   //console.log('modal', info);
                     $('#modalTitle').html(info.event.title);
                     $('#modalStatus').html(info.event.stat);
                     $('#modalBody').html(info.event.extendedProps.description);
                     $('#modalFooter').html(info.event.extendedProps.statusfootermodal);
                     $('#fullCalModal').modal();
-                   if(info.zoo_zoo_id == 3){
+                   if(info.zoo_zoo_id === 3){
            console.log('insidezoo3', info);
 	                   if (event.status_confer === 'W' && event.status_online === 'W'){
 				$('#confer').removeClass('col-md-5');
