@@ -134,23 +134,23 @@
                 {
                     url: 'cf_zpo_room.php?gData=' + id,
                 },
-			eventClassNames: function (event, element, view) {
-					if (event.status_confer == 'W'){
-				        element.find('div.fc-content').prepend("<img class='mb-1 mr-1' src='images/yellow.png' width='10px' height='10px'>");
-				    }
-			        else if(event.status_confer == 'N'){
-				        element.find('div.fc-content').prepend("<img class='mb-1 mr-1' src='images/red.png' width='10px' height='10px'>");
-			        }
-			        else if(event.status_confer == 'Y'){
-				        if(event.status_online == 'Y'){
-					       element.find('div.fc-content').prepend("<img class='mb-1 mr-1' src='images/imgvdo.jpg' width='10px' height='10px'>");
-				        }
-				        element.find('div.fc-content').prepend("<img class='mb-1 mr-1' src='images/green.png' width='10px' height='10px'>");
-			        }
-			        else if(event.status_confer == 'C'){
-				        element.find('div.fc-content').prepend("<img class='mb-1 mr-1' src='images/orange.png' width='10px' height='10px'>");
-			        }
-			    },
+		//	eventRender: function (event, element, view) {
+		//			if (event.status_confer == 'W'){
+		//		        element.find('div.fc-content').prepend("<img class='mb-1 mr-1' src='images/yellow.png' width='10px' height='10px'>");
+		//		    }
+		//	        else if(event.status_confer == 'N'){
+		//		        element.find('div.fc-content').prepend("<img class='mb-1 mr-1' src='images/red.png' width='10px' height='10px'>");
+			    //    }
+			   //      else if(event.status_confer == 'Y'){
+			//	        if(event.status_online == 'Y'){
+			//		       element.find('div.fc-content').prepend("<img class='mb-1 mr-1' src='images/imgvdo.jpg' width='10px' height='10px'>");
+			//	       }
+			//	        element.find('div.fc-content').prepend("<img class='mb-1 mr-1' src='images/green.png' width='10px' height='10px'>");
+			   //     }
+			//        else if(event.status_confer == 'C'){
+				//       element.find('div.fc-content').prepend("<img class='mb-1 mr-1' src='images/orange.png' width='10px' height='10px'>");
+			      //}
+			    //},
                   eventTimeFormat: { // รูปแบบการแสดงของเวลา เช่น '14:30' 
                 hour: '2-digit',
                 minute: '2-digit',

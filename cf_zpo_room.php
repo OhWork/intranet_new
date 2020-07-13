@@ -13,7 +13,7 @@ if(isset($_GET['gData']) && $_GET['gData']|=""){
         $status = null;
         if(($rs->eventconfer_status=='Y')){
             $statusconfer = " อนุมัติ";
-
+            
             if($rs->eventconfer_status_online == 'Y'){
             	$statusconferonline = " อนุมัติ";
             }
@@ -59,6 +59,27 @@ if(isset($_GET['gData']) && $_GET['gData']|=""){
             	$statusconferonline = " ";
             }
         }
+        //เงื่อนไขจุดสี
+        if($rs->eventconfer_status=='Y' && $rs->eventconfer_status_online == 'Y'){
+            	$eventcolor = "#51c900";
+            }
+            else if($rs->eventconfer_status=='Y' && $rs->eventconfer_status_online == 'N'){
+            	$eventcolor = "#51c900";
+            }
+            else if($rs->eventconfer_status=='Y' && $rs->eventconfer_status_online == 'Y'){
+            	$eventcolor = "#51c900";
+            }else if($rs->eventconfer_status=='W' && $rs->eventconfer_status_online == 'W'){
+            	$eventcolor = "#f2f218";
+            }
+            else if($rs->eventconfer_status=='Y' && $rs->eventconfer_status_online == 'W'){
+            	$eventcolor = "#f2f218";
+            }
+            else if($rs->eventconfer_status=='C'){
+            	$eventcolor = "#f0911d";
+            }
+            else if($rs->eventconfer_status=='N'){
+            	$eventcolor = "#f0211d";
+            }
         if($rs->headncf_name != 'ประชุมภายใน' && $rs->headncf_name != 'ประชุมภายนอก'){
 	        $rs->eventconfer_story = '-';
         }
@@ -152,6 +173,7 @@ if(isset($_GET['gData']) && $_GET['gData']|=""){
 									,
              "color"=> $bgColor,
              "textColor" => $textColor,
+            "borderColor" => $eventcolor,
              "zoo_name" =>$rs->zoo_name,
              "zoo_zoo_id" =>$rs->zoo_zoo_id,
 
