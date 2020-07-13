@@ -26,7 +26,7 @@
                     $('#modalBody').html(info.event.extendedProps.description);
                     $('#modalFooter').html(info.event.extendedProps.statusfootermodal);
                     $('#fullCalModal').modal();
-                   if(info.zoo_zoo_id === 3){
+                   if(event.zoo_zoo_id === 3){
            console.log('insidezoo3', info);
 	                   if (event.status_confer === 'W' && event.status_online === 'W'){
 				$('#confer').removeClass('col-md-5');

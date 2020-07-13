@@ -68,21 +68,19 @@ if(isset($_GET['gData']) && $_GET['gData']|=""){
             }
             else if($rs->eventconfer_status=='Y' && $rs->eventconfer_status_online == 'Y'){
             	$eventcolor = "#51c900";
-        }else if($rs->eventconfer_status_conferonline == 0){
-            if($rs->eventconfer_status=='Y' && $rs->eventconfer_status_online == 'W'){
-            	$eventcolor = "#51c900";
             }
-            else if($rs->eventconfer_status=='W' && $rs->eventconfer_status_online == 'W'){
+        }else if($rs->eventconfer_status_conferonline == 0){
+            if($rs->eventconfer_status=='Y'){
+            	$eventcolor = "#51c900";
+            } else if($rs->eventconfer_status=='W'){
             	$eventcolor = "#e30000";
-            }else if($rs->eventconfer_status=='N' && $rs->eventconfer_status_online == 'W'){
-            	$eventcolor = "#f7f68b";
             }else if($rs->eventconfer_status=='C'){
             	$eventcolor = "#f0911d";
-            }else if($rs->eventconfer_status=='N'){
+            }else if($rs->eventconfer_status=='N' ){
             	$eventcolor = "#f0211d";
             }
         }
-        }
+
         
         
         if($rs->headncf_name != 'ประชุมภายใน' && $rs->headncf_name != 'ประชุมภายนอก'){
