@@ -7,36 +7,41 @@
 <!DOCTYPE html>
 <input type='hidden' id='id' name="id" value="<?php echo $id;?>">
         <script>
-        $(document).ready(function() {
+         document.addEventListener('DOMContentLoaded', function() {
          $('.print').hide();
          var id = $('#id').val();
-            $('#calendar').fullCalendar({
-                header: {
-                    left: '',
-                    center: 'prev title next',
-                    right: 'listDay,listWeek,month'
-                },
-               eventClick:  function(event, jsEvent, view) {
-                    $('#modalTitle').html(event.title);
-                    $('#modalStatus').html(event.stat);
-                    $('#modalBody').html(event.description);
-                    $('#modalFooter').html(event.statusfootermodal);
+         var calendarEl = document.getElementById('calendar');
+         var calendar = new FullCalendar.Calendar(calendarEl, {
+            //plugins: [ 'interaction','dayGrid', 'timeGrid', 'list' ], // plugin ที่เราจะใช้งาน
+            defaultView: 'dayGridMonth', // ค้าเริ่มร้นเมื่อโหลดแสดงปฏิทิน
+            header: {
+                left: 'prev,next today',
+                center: 'title',
+                right: 'dayGridMonth,timeGridWeek,timeGridDay,listMonth'
+            }, 
+               eventClick:  function(info) {
+                   console.log('modal', info);
+                    $('#modalTitle').html(info.event.title);
+                    $('#modalStatus').html(info.event.stat);
+                    $('#modalBody').html(info.event.extendedProps.description);
+                    $('#modalFooter').html(info.event.extendedProps.statusfootermodal);
                     $('#fullCalModal').modal();
-                   if(event.zoo_zoo_id == 3){
-	                   if (event.status_confer == 'W' && event.status_online == 'W'){
-						   $('#confer').removeClass('col-md-5');
-						   $('#confer').addClass('col-md-6');
-						   $('#txtconfer').removeClass('col-md-8');
-						   $('#txtconfer').addClass('col-md-7');
-						   $('#statusconferrence').addClass('text-warning');
-						   $('#comment').hide();
-						   $('#txtconferonline').hide();
-						   $('#statusconferrenceonline').hide();
-		                   $('.reportconferzpo').hide();
-		                   $('.reportconfersongkla').hide();
-		                   $('.reportconferonline').hide();
+                   if(info.zoo_zoo_id == 3){
+           console.log('insidezoo3', info);
+	                   if (event.status_confer === 'W' && event.status_online === 'W'){
+				$('#confer').removeClass('col-md-5');
+				$('#confer').addClass('col-md-6');
+				$('#txtconfer').removeClass('col-md-8');
+				$('#txtconfer').addClass('col-md-7');
+				$('#statusconferrence').addClass('text-warning');
+				$('#comment').hide();
+                    		$('#txtconferonline').hide();
+                               	$('#statusconferrenceonline').hide();
+		                $('.reportconferzpo').hide();
+		                $('.reportconfersongkla').hide();
+		                $('.reportconferonline').hide();
 	                   }
-	                   else if((event.status_confer == 'N')){
+	                   else if((event.status_confer === 'N')){
 						   $('#statusconferrence').addClass('text-danger');
 						   $('#txtconferonline').hide();
 						   $('#statusconferrenceonline').hide();
@@ -44,8 +49,8 @@
 		                   $('.reportconfersongkla').hide();
 		                   $('.reportconferonline').hide();;
 	                   }
-	                   else if((event.status_confer == 'Y' && event.status_online == 'W') || (event.status_confer == 'Y' && event.status_online == 'N') || (event.status_confer == 'Y' && event.status_online == 'C')){
-						   $('#statusconferrence').addClass('text-success');
+	                   else if((event.status_confer === 'Y' && event.status_online === 'W') || (event.status_confer === 'Y' && event.status_online === 'N') || (event.status_confer === 'Y' && event.status_online === 'C')){
+				   $('#statusconferrence').addClass('text-success');
 		                   $('.reportconferzpo').show();
 		                   $('.reportconfersongkla').hide();
 		                   $('#comment').hide();
@@ -54,7 +59,7 @@
 		                   $('.reportconferonline').hide();
 
 	                   }
-	                  else if(event.status_confer == 'Y' && event.status_online == 'Y'){
+	                  else if(event.status_confer === 'Y' && event.status_online === 'Y'){
 						   $('#statusconferrence').addClass('text-success');
 						   $('#statusconferrenceonline').addClass('text-success');
 						   $('#comment').hide();
@@ -62,7 +67,7 @@
 		                   $('.reportconfersongkla').hide();
 		                   $('.reportconferonline').show();
 	                   }
-	                    else if(event.status_confer == 'C'){
+	                    else if(event.status_confer === 'C'){
 						  $('#statusconferrence').addClass('textor');
 		                   $('#txtconferonline').hide();
 						   $('#statusconferrenceonline').hide();
@@ -70,8 +75,7 @@
 		                   $('.reportconfersongkla').hide();
 		                   $('.reportconferonline').hide();
 	                   }
-				   }
-				   else if(event.zoo_zoo_id == 15){
+				   }else if(event.zoo_zoo_id == 15){
 				   	if (event.status_confer == 'W' && event.status_online == 'W'){
 						   $('#confer').removeClass('col-md-5');
 						   $('#confer').addClass('col-md-6');
@@ -84,16 +88,14 @@
 		                   $('.reportconferzpo').hide();
 		                   $('.reportconfersongkla').hide();
 		                   $('.reportconferonline').hide();
-	                   }
-	                   else if((event.status_confer == 'N')){
+	                   }else if((event.status_confer == 'N')){
 						   $('#statusconferrence').addClass('text-danger');
 						   $('#txtconferonline').hide();
 						   $('#statusconferrenceonline').hide();
 		                   $('.reportconferzpo').hide();
 		                   $('.reportconfersongkla').hide();
 		                   $('.reportconferonline').hide();;
-	                   }
-	                   else if((event.status_confer == 'Y' && event.status_online == 'W') || (event.status_confer == 'Y' && event.status_online == 'N') || (event.status_confer == 'Y' && event.status_online == 'C')){
+	                   }else if((event.status_confer == 'Y' && event.status_online == 'W') || (event.status_confer == 'Y' && event.status_online == 'N') || (event.status_confer == 'Y' && event.status_online == 'C')){
 						   $('#statusconferrence').addClass('text-success');
 		                   $('.reportconferzpo').hide();
 		                   $('.reportconfersongkla').show();
@@ -102,16 +104,14 @@
 						   $('#statusconferrenceonline').hide();
 		                   $('.reportconferonline').hide();
 
-	                   }
-	                  else if(event.status_confer == 'Y' && event.status_online == 'Y'){
+	                   }else if(event.status_confer == 'Y' && event.status_online == 'Y'){
 						   $('#statusconferrence').addClass('text-success');
 						   $('#statusconferrenceonline').addClass('text-success');
 						   $('#comment').hide();
 		                   $('.reportconferzpo').hide();
 		                   $('.reportconfersongkla').show();
 		                   $('.reportconferonline').show();
-	                   }
-	                    else if(event.status_confer == 'C'){
+	                   }else if(event.status_confer == 'C'){
 						  $('#statusconferrence').addClass('textor');
 		                   $('#txtconferonline').hide();
 						   $('#statusconferrenceonline').hide();
@@ -131,9 +131,9 @@
 
                 events:
                 {
-                    url: 'zoo/zpo_room1.php?gData=' + id,
+                    url: 'cf_zpo_room.php?gData=' + id,
                 },
-				eventRender: function (event, element, view) {
+			eventRender: function (event, element, view) {
 					if (event.status_confer == 'W'){
 				        element.find('div.fc-content').prepend("<img class='mb-1 mr-1' src='images/yellow.png' width='10px' height='10px'>");
 				    }
@@ -150,12 +150,16 @@
 				        element.find('div.fc-content').prepend("<img class='mb-1 mr-1' src='images/orange.png' width='10px' height='10px'>");
 			        }
 			    },
-                  timeFormat: 'H:mm',
-//                   nextDayThreshold:'00:00',
+                  eventTimeFormat: { // รูปแบบการแสดงของเวลา เช่น '14:30' 
+                hour: '2-digit',
+                minute: '2-digit',
+                meridiem: false
+            },
+                    firstDay : 1,
                   displayEventTime: true,
                   displayEventEnd: true,
-                  locale: 'th',
-
+                  locale: 'th', 
+                   
             });
             var conferid = $('#conferroom_id').val();
             var disbledid = document.getElementById(<?php echo $r['conferroom_id'];?>);
@@ -165,6 +169,7 @@
  				disbledid.classList.add('disabled');
 				disbledid.classList.add('colorcfmenu');
 			}
+                        calendar.render();
          });
      </script>
 			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" style="margin-top: 16px;">

@@ -8,18 +8,11 @@
 <script src="jquery/bootstrap.js"></script>
 <script src="jquery/sb-admin.min.js"></script>
 <script src="jquery/jquery-ui.js"></script>
-<script src="jquery/jquery.dataTables.js"></script>
-<!-- <script src="jquery/dropdown.js"></script> -->
 <script src="jquery/dropdown2.js"></script>
-<!-- <script src="jquery/collapse.js"></script> -->
-<!-- <script src="jquery/carousel.js"></script> -->
 <script src="jquery/checksubmit.js"></script>
 <script src="jquery/getpassword.js"></script>
-<!-- <script src="jquery/autocomplete.js"></script> -->
-<!-- ปิดไว้ก่อนกุงง -->
-<!-- <script src="jquery/modal.js"></script> -->
+<script src="jquery/dataTables.bootstrap4.min.js"></script>
 <script src="jquery/tooltip.js"></script>
-<!-- <script src="jquery/popover.js"></script> -->
 <script src="jquery/button.js"></script>
 <!-- <script src="jquery/tab.js"></script> -->
 <script src="jquery/jquery.quicksearch.js"></script>
@@ -38,7 +31,6 @@
 <!-- <script src="jquery/jquery.datetimepicker.js"></script> -->
 <!-- <script src="jquery/bootstrap-datepicker-thai.js"></script> -->
 <script src="jquery/jquery.validate.js"></script>
-<!-- <script src="jquery/jquery.fancybox.min.js"></script> -->
 <script src="jquery/select2.min.js"></script>
 <script src="jquery/feather-icon/feather.min.js"></script>
 <script src="jquery/util.js"></script>

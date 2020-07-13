@@ -2,8 +2,8 @@
 header("Content-type:application/json; charset=UTF-8");
 header("Cache-Control: no-store, no-cache, must-revalidate");
 header("Cache-Control: post-check=0, pre-check=0", false);
-    include "../database/db_tools.php";
-	include "../connect.php";
+    include "database/db_tools.php";
+	include "connect.php";
 if(isset($_GET['gData']) && $_GET['gData']|=""){
 	$id = $_GET['gData'];
 	$result = $db->findByPK44('eventconfer','headncf','zoo','conferroom','headncf_headncf_id','headncf_id','subzoo_zoo_zoo_id','zoo_id','confer_confer_id','conferroom_id','confer_confer_id',$id)->execute();
@@ -113,11 +113,6 @@ if(isset($_GET['gData']) && $_GET['gData']|=""){
 							</div>
 							<input type='hidden' id ='event_id' value=".$rs->eventconfer_id.">"
 							,
-/*
-             "url"=> "cf_report.php?id=".$rs->eventconfer_id,
-             "url2"=> "cf_report_conference.php?id=".$rs->eventconfer_id,
-             "stat" => $status,
-*/
 			 "statusfootermodal"=> "<div class='col-md-12'>
 										<div class='row'>
 											<div class='col-md-12' style='padding-top:10px;padding-left:0;padding-right:0;'>

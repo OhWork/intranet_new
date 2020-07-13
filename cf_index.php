@@ -9,12 +9,11 @@
         <link rel="stylesheet" href="CSS/bootstrap.css">
         <link rel="stylesheet" href="CSS/bootstrap-datetimepicker-standalone.css">
         <link rel="stylesheet" href="CSS/bootstrap-datetimepicker.css">
-<!--         <link rel="stylesheet" href="CSS/datepicker.css"> -->
-		<link rel="stylesheet" href="CSS/dataTables.bootstrap4.css">
-		<link rel="stylesheet" href="CSS/fullcalendar.min.css">
+	<link rel="stylesheet" href="CSS/dataTables.bootstrap4.css">
+	<link rel="stylesheet" href="CSS/fullcalendar.min.css">
         <link rel="stylesheet" href="CSS/jquery.fancybox.css">
-		<link rel="stylesheet" href="CSS/select2.min.css">
-		<link rel="stylesheet" href="CSS/main.css">
+	<link rel="stylesheet" href="CSS/select2.min.css">
+	<link rel="stylesheet" href="CSS/main.css">
         <link rel="stylesheet" href="CSS/fullcalendar.print.min.css" media="print">
         <link rel="stylesheet" href="CSS/print.css" media="print">
         <link rel="stylesheet" href="CSS/font-awesome.css">
