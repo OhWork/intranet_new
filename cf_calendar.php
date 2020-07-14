@@ -14,113 +14,116 @@
          var calendar = new FullCalendar.Calendar(calendarEl, {
             //plugins: [ 'interaction','dayGrid', 'timeGrid', 'list' ], // plugin ที่เราจะใช้งาน
             defaultView: 'dayGridMonth', // ค้าเริ่มร้นเมื่อโหลดแสดงปฏิทิน
+            themeSystem: 'bootstrap',
      headerToolbar: {
         left: 'prev,next today',
         center: 'title',
         right: 'timeGridDay,timeGridWeek,dayGridMonth'
       },
-               eventClick:  function(info) {
+               eventClick: function(info) {
                    //console.log('modal', info);
                     $('#modalTitle').html(info.event.title);
                     $('#modalStatus').html(info.event.stat);
                     $('#modalBody').html(info.event.extendedProps.description);
                     $('#modalFooter').html(info.event.extendedProps.statusfootermodal);
                     $('#fullCalModal').modal();
-                   if(event.zoo_zoo_id === 3){
-           console.log('insidezoo3', info);
-	                   if (event.status_confer === 'W' && event.status_online === 'W'){
-				$('#confer').removeClass('col-md-5');
-				$('#confer').addClass('col-md-6');
-				$('#txtconfer').removeClass('col-md-8');
-				$('#txtconfer').addClass('col-md-7');
-				$('#statusconferrence').addClass('text-warning');
-				$('#comment').hide();
-                    		$('#txtconferonline').hide();
-                               	$('#statusconferrenceonline').hide();
-		                $('.reportconferzpo').hide();
-		                $('.reportconfersongkla').hide();
-		                $('.reportconferonline').hide();
-	                   }
-	                   else if((event.status_confer === 'N')){
-						   $('#statusconferrence').addClass('text-danger');
-						   $('#txtconferonline').hide();
-						   $('#statusconferrenceonline').hide();
-		                   $('.reportconferzpo').hide();
-		                   $('.reportconfersongkla').hide();
-		                   $('.reportconferonline').hide();;
-	                   }
-	                   else if((event.status_confer === 'Y' && event.status_online === 'W') || (event.status_confer === 'Y' && event.status_online === 'N') || (event.status_confer === 'Y' && event.status_online === 'C')){
-				   $('#statusconferrence').addClass('text-success');
-		                   $('.reportconferzpo').show();
-		                   $('.reportconfersongkla').hide();
-		                   $('#comment').hide();
-		                   $('#txtconferonline').hide();
-						   $('#statusconferrenceonline').hide();
-		                   $('.reportconferonline').hide();
-
-	                   }
-	                  else if(event.status_confer === 'Y' && event.status_online === 'Y'){
-						   $('#statusconferrence').addClass('text-success');
-						   $('#statusconferrenceonline').addClass('text-success');
-						   $('#comment').hide();
-		                   $('.reportconferzpo').show();
-		                   $('.reportconfersongkla').hide();
-		                   $('.reportconferonline').show();
-	                   }
-	                    else if(event.status_confer === 'C'){
-						  $('#statusconferrence').addClass('textor');
-		                   $('#txtconferonline').hide();
-						   $('#statusconferrenceonline').hide();
-		                   $('.reportconferzpo').hide();
-		                   $('.reportconfersongkla').hide();
-		                   $('.reportconferonline').hide();
-	                   }
-				   }else if(event.zoo_zoo_id == 15){
-				   	if (event.status_confer == 'W' && event.status_online == 'W'){
-						   $('#confer').removeClass('col-md-5');
-						   $('#confer').addClass('col-md-6');
-						   $('#txtconfer').removeClass('col-md-8');
-						   $('#txtconfer').addClass('col-md-7');
-						   $('#statusconferrence').addClass('text-warning');
-						   $('#comment').hide();
-						   $('#txtconferonline').hide();
-						   $('#statusconferrenceonline').hide();
-		                   $('.reportconferzpo').hide();
-		                   $('.reportconfersongkla').hide();
-		                   $('.reportconferonline').hide();
-	                   }else if((event.status_confer == 'N')){
-						   $('#statusconferrence').addClass('text-danger');
-						   $('#txtconferonline').hide();
-						   $('#statusconferrenceonline').hide();
-		                   $('.reportconferzpo').hide();
-		                   $('.reportconfersongkla').hide();
-		                   $('.reportconferonline').hide();;
-	                   }else if((event.status_confer == 'Y' && event.status_online == 'W') || (event.status_confer == 'Y' && event.status_online == 'N') || (event.status_confer == 'Y' && event.status_online == 'C')){
-						   $('#statusconferrence').addClass('text-success');
-		                   $('.reportconferzpo').hide();
-		                   $('.reportconfersongkla').show();
-		                   $('#comment').hide();
-		                   $('#txtconferonline').hide();
-						   $('#statusconferrenceonline').hide();
-		                   $('.reportconferonline').hide();
-
-	                   }else if(event.status_confer == 'Y' && event.status_online == 'Y'){
-						   $('#statusconferrence').addClass('text-success');
-						   $('#statusconferrenceonline').addClass('text-success');
-						   $('#comment').hide();
-		                   $('.reportconferzpo').hide();
-		                   $('.reportconfersongkla').show();
-		                   $('.reportconferonline').show();
-	                   }else if(event.status_confer == 'C'){
-						  $('#statusconferrence').addClass('textor');
-		                   $('#txtconferonline').hide();
-						   $('#statusconferrenceonline').hide();
-		                   $('.reportconferzpo').hide();
-		                   $('.reportconfersongkla').hide();
-		                   $('.reportconferonline').hide();
-	                   }
-				   }
-
+                    if(event.zoo_zoo_id === 3){
+                        console.log('insidezoo3',info);
+	                if (event.status_confer === 'W' && event.status_online === 'W'){
+                            $('#confer').removeClass('col-md-5');
+                            $('#confer').addClass('col-md-6');
+                            $('#txtconfer').removeClass('col-md-8');
+                            $('#txtconfer').addClass('col-md-7');
+                            $('#statusconferrence').addClass('text-warning');
+                            $('#comment').hide();
+                            $('#txtconferonline').hide();
+                            $('#statusconferrenceonline').hide();
+		            $('.reportconferzpo').hide();
+		            $('.reportconfersongkla').hide();
+		            $('.reportconferonline').hide();
+	                }
+	                else if((event.status_confer === 'N')){
+                            $('#statusconferrence').addClass('text-danger');
+                            $('#txtconferonline').hide();
+                            $('#statusconferrenceonline').hide();
+		            $('.reportconferzpo').hide();
+		            $('.reportconfersongkla').hide();
+		            $('.reportconferonline').hide();;
+	                }
+	                else if((event.status_confer === 'Y' && event.status_online === 'W') || (event.status_confer === 'Y' && event.status_online === 'N') || (event.status_confer === 'Y' && event.status_online === 'C')){
+                            $('#statusconferrence').addClass('text-success');
+		            $('.reportconferzpo').show();
+		            $('.reportconfersongkla').hide();
+		            $('#comment').hide();
+		            $('#txtconferonline').hide();
+                            $('#statusconferrenceonline').hide();
+		            $('.reportconferonline').hide();
+	                }
+	                else if(event.status_confer === 'Y' && event.status_online === 'Y'){
+                            $('#statusconferrence').addClass('text-success');
+                            $('#statusconferrenceonline').addClass('text-success');
+                            $('#comment').hide();
+		            $('.reportconferzpo').show();
+		            $('.reportconfersongkla').hide();
+		            $('.reportconferonline').show();
+	                }
+	                else if(event.status_confer === 'C'){
+                            $('#statusconferrence').addClass('textor');
+		            $('#txtconferonline').hide();
+                            $('#statusconferrenceonline').hide();
+		            $('.reportconferzpo').hide();
+		            $('.reportconfersongkla').hide();
+		            $('.reportconferonline').hide();
+	                }
+                    }
+                    else if(event.zoo_zoo_id == 15){
+			if (event.status_confer == 'W' && event.status_online == 'W'){
+                            $('#confer').removeClass('col-md-5');
+                            $('#confer').addClass('col-md-6');
+                            $('#txtconfer').removeClass('col-md-8');
+                            $('#txtconfer').addClass('col-md-7');
+                            $('#statusconferrence').addClass('text-warning');
+                            $('#comment').hide();
+                            $('#txtconferonline').hide();
+                            $('#statusconferrenceonline').hide();
+		            $('.reportconferzpo').hide();
+		            $('.reportconfersongkla').hide();
+		            $('.reportconferonline').hide();
+	                }
+                        else if((event.status_confer == 'N')){
+                            $('#statusconferrence').addClass('text-danger');
+                            $('#txtconferonline').hide();
+                            $('#statusconferrenceonline').hide();
+		            $('.reportconferzpo').hide();
+		            $('.reportconfersongkla').hide();
+		            $('.reportconferonline').hide();;
+	                }
+                        else if((event.status_confer == 'Y' && event.status_online == 'W') || (event.status_confer == 'Y' && event.status_online == 'N') || (event.status_confer == 'Y' && event.status_online == 'C')){
+                            $('#statusconferrence').addClass('text-success');
+		            $('.reportconferzpo').hide();
+		            $('.reportconfersongkla').show();
+		            $('#comment').hide();
+		            $('#txtconferonline').hide();
+                            $('#statusconferrenceonline').hide();
+		            $('.reportconferonline').hide();
+                        }
+                        else if(event.status_confer == 'Y' && event.status_online == 'Y'){
+                            $('#statusconferrence').addClass('text-success');
+                            $('#statusconferrenceonline').addClass('text-success');
+                            $('#comment').hide();
+		            $('.reportconferzpo').hide();
+		            $('.reportconfersongkla').show();
+		            $('.reportconferonline').show();
+	                }
+                        else if(event.status_confer == 'C'){
+                            $('#statusconferrence').addClass('textor');
+		            $('#txtconferonline').hide();
+                            $('#statusconferrenceonline').hide();
+		            $('.reportconferzpo').hide();
+		            $('.reportconfersongkla').hide();
+		            $('.reportconferonline').hide();
+	                }
+                    }
                    return false;
                 },
                 views: {

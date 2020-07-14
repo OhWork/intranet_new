@@ -10,7 +10,7 @@
 					$rs = $db->findByPK('conferroom','conferroom_id',$id)->executeAssoc();
 					if($rs['zoo_zoo_id']== 3 || $rs['zoo_zoo_id']== 15){
 				?>
-                	<div class="modal-footer" id="modalFooter"></div>
+                <div class="modal-footer" id="modalFooter"></div>
                 <?php
 	            	}
                 ?>

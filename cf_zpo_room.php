@@ -91,8 +91,8 @@ if(isset($_GET['gData']) && $_GET['gData']|=""){
             "title"=>$rs->headncf_name,
             "end"=>$rs->eventconfer_end,
             "start"=>$rs->eventconfer_start,
-            'status_confer'=> $rs->eventconfer_status,
-            'status_online'=> $rs->eventconfer_status_online,
+            "status_confer"=> $rs->eventconfer_status,
+            "status_online"=> $rs->eventconfer_status_online,
             "description"=> "<div class='col-md-12'>
 								<div class='row'>
 									<div class='col-md-4'><p style='color:green;'>ชื่อประธาน</p></div>
@@ -138,42 +138,40 @@ if(isset($_GET['gData']) && $_GET['gData']|=""){
 							<input type='hidden' id ='event_id' value=".$rs->eventconfer_id.">"
 							,
 			 "statusfootermodal"=> "<div class='col-md-12'>
-										<div class='row'>
-											<div class='col-md-12' style='padding-top:10px;padding-left:0;padding-right:0;'>
-												<div class='row'>
-													<div id='confer' class='col-md-5' style='padding-right:0;padding-top:4px;'>
-														<div class='row'>
-															<p id='txtconfer' class='col-md-8' style='text-align:left;padding-right:0;'>สถานะห้องประชุม :</p>
-															<p id='statusconferrence' class='col-md-4' style='text-align:left;padding-left:0;padding-right:0;'><u><b>".$statusconfer."</b></u></p>
-														</div>
-													</div>
-													<div class='col-md-7' style='padding-left:0;padding-right:0;'>
-														<p id='comment' class='col-md-12' style='text-align:left;padding-left:0;padding-right:0;padding-top:4px;'>เนื่องจาก : ".$rs->eventconfer_comment."</p>
-														<div class='col-md-12 reportconferzpo' style='text-align: center;'>
-															<a class='btn btn-info' id='zpo' style='padding-left:5px;padding-top:5px;padding-right:5px;padding-bottom:5px;float:right;' href='cf_report.php?id=".$rs->eventconfer_id."'>พิมพ์ใบจองห้องประชุม</a>
-														</div>
-														<div class='col-md-12 reportconfersongkla' style='text-align: center;'>
-															<a class='btn btn-info' id='songkla'style='padding-left:5px;padding-top:5px;padding-right:5px;padding-bottom:5px;float:right;' href='cf_report_songkra.php?id=".$rs->eventconfer_id."'>พิมพ์ใบจองห้องประชุม</a>
-														</div>
-													</div>
-												</div>
-											</div>
-											<div class='col-md-12' style='padding-top:10px;padding-left:0;padding-right:0;'>
-												<div class='row'>
-													<div class='col-md-6' style='padding-right:0;padding-top:4px;'>
-														<div class='row'>
-															<p id='txtconferonline' class='col-md-8' style='text-align:left;padding-right:0;'>สถานะระบบห้องประชุม :</p>
-															<p id='statusconferrenceonline' class='col-md-4' style='text-align:left;padding-left:0;padding-right:0;'><u><b>".$statusconferonline."</b></u></p>
-														</div>
-													</div>
-													<div class='col-md-6 reportconferonline'>
-														<a class='btn btn-info' style='padding-left:5px;padding-top:5px;padding-right:5px;padding-bottom:5px;float:right;'href='cf_report_conference.php?id=".$rs->eventconfer_id."'>พิมพ์ใบจองห้องประชุม</a>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>"
-									,
+						<div class='row'>
+                                                    <div class='col-md-12' style='padding-top:10px;padding-left:0;padding-right:0;'>
+							<div class='row'>
+                                                            <div id='confer' class='col-md-5' style='padding-right:0;padding-top:4px;'>
+								<div class='row'>
+                                                                    <p id='txtconfer' class='col-md-8' style='text-align:left;padding-right:0;'>สถานะห้องประชุม :</p>
+                                                                    <p id='statusconferrence' class='col-md-4' style='text-align:left;padding-left:0;padding-right:0;'><u><b>".$statusconfer."</b></u></p>
+								</div>
+                                                            </div>
+                                                            <div class='col-md-7' style='padding-left:0;padding-right:0;'>
+                                                                <p id='comment' class='col-md-12' style='text-align:left;padding-left:0;padding-right:0;padding-top:4px;'>เนื่องจาก : ".$rs->eventconfer_comment."</p>
+                                                            <div class='col-md-12 reportconferzpo' style='text-align: center;'>
+                                                                <a class='btn btn-info' id='zpo' style='padding-left:5px;padding-top:5px;padding-right:5px;padding-bottom:5px;float:right;' href='cf_report.php?id=".$rs->eventconfer_id."'>พิมพ์ใบจองห้องประชุม</a>
+                                                            </div>
+                                                            <div class='col-md-12 reportconfersongkla' style='text-align: center;'>
+								<a class='btn btn-info' id='songkla'style='padding-left:5px;padding-top:5px;padding-right:5px;padding-bottom:5px;float:right;' href='cf_report_songkra.php?id=".$rs->eventconfer_id."'>พิมพ์ใบจองห้องประชุม</a>
+                                                            </div>
+							</div>
+                                                    </div>
+						</div>
+						<div class='col-md-12' style='padding-top:10px;padding-left:0;padding-right:0;'>
+                                                    <div class='row'>
+							<div class='col-md-6' style='padding-right:0;padding-top:4px;'>
+                                                            <div class='row'>
+								<p id='txtconferonline' class='col-md-8' style='text-align:left;padding-right:0;'>สถานะระบบห้องประชุม :</p>
+								<p id='statusconferrenceonline' class='col-md-4' style='text-align:left;padding-left:0;padding-right:0;'><u><b>".$statusconferonline."</b></u></p>
+                                                            </div>
+							</div>
+							<div class='col-md-6 reportconferonline'>
+                                                            <a class='btn btn-info' style='padding-left:5px;padding-top:5px;padding-right:5px;padding-bottom:5px;float:right;'href='cf_report_conference.php?id=".$rs->eventconfer_id."'>พิมพ์ใบจองห้องประชุม</a>
+							</div>
+                                                    </div>
+						</div>
+                                                </div>",
              "color"=> $bgColor,
              "textColor" => $textColor,
             "borderColor" => $eventcolor,
