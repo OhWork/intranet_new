@@ -1,9 +1,9 @@
 <?php
   $form = new form();
   $id = $_GET['id'];
-  $lbpostoffice = new label("ชื่อที่ทำการไปรษณีย์");
+  $lbtzlfotname = new label("ชื่อชนิดบัตร");
   $lbzooenable = new label("สถานะการใช้งาน");
-  $txtpostoffice = new textfield('zoo_name','','form-control css-require','');
+  $txttzlfotname = new textfield('zoo_name','','form-control css-require','');
   $radiozooenable = new radioGroup();
   $radiozooenable->name = 'zoo_enable';
   if(empty($id)){
@@ -30,13 +30,13 @@ echo $form->open("form_reg","form","col-xl-12 col-lg-12 col-md-12 col-sm-12 col-
 	<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6 usubd">
 		<div class="row">
 			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-2" style="border-bottom:solid 1px #E0E0E0;">
-				<h4>เพิ่มที่ทำการไปรษณีย์</h4>
+				<h4>เพิ่มชนิดบัตรสโมสรผู้รักสวนสัตว์</h4>
 			</div>
 			<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3'>
-				<?php echo $lbpostoffice; ?>
+				<?php echo $lbtzlfotname; ?>
 			</div>
 			<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 form-group has-feedback'>
-				<?php echo $txtzoo; ?>
+				<?php echo $txttzlfotname; ?>
 			</div>
 			<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12'>
 				<div class="row">
