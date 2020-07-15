@@ -31,7 +31,6 @@
                     var stat_confer = info.event.extendedProps.status_confer;
                     var stat_online = info.event.extendedProps.status_online;
                     if(idzoo == 3){
-	                    console.log(idzoo);
 	                if (stat_confer == 'W' && stat_online == 'W'){
                             $('#confer').removeClass('col-md-5');
                             $('#confer').addClass('col-md-6');
