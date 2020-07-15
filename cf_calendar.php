@@ -15,21 +15,24 @@
             //plugins: [ 'interaction','dayGrid', 'timeGrid', 'list' ], // plugin ที่เราจะใช้งาน
             defaultView: 'dayGridMonth', // ค้าเริ่มร้นเมื่อโหลดแสดงปฏิทิน
             themeSystem: 'bootstrap',
-     headerToolbar: {
-        left: 'prev,next today',
-        center: 'title',
-        right: 'timeGridDay,timeGridWeek,dayGridMonth'
-      },
+	     headerToolbar: {
+	        left: 'prev,next today',
+	        center: 'title',
+	        right: 'timeGridDay,timeGridWeek,dayGridMonth'
+	     },
                eventClick: function(info) {
-                   //console.log('modal', info);
+//                    console.log('modal', info);
                     $('#modalTitle').html(info.event.title);
                     $('#modalStatus').html(info.event.stat);
                     $('#modalBody').html(info.event.extendedProps.description);
                     $('#modalFooter').html(info.event.extendedProps.statusfootermodal);
                     $('#fullCalModal').modal();
-                    if(event.zoo_zoo_id === 3){
-                        console.log('insidezoo3',info);
-	                if (event.status_confer === 'W' && event.status_online === 'W'){
+                    var idzoo = info.event.extendedProps.zoo_zoo_id;
+                    var stat_confer = info.event.extendedProps.status_confer;
+                    var stat_online = info.event.extendedProps.status_online;
+                    if(idzoo == 3){
+	                    console.log(idzoo);
+	                if (stat_confer == 'W' && stat_online == 'W'){
                             $('#confer').removeClass('col-md-5');
                             $('#confer').addClass('col-md-6');
                             $('#txtconfer').removeClass('col-md-8');
@@ -42,7 +45,7 @@
 		            $('.reportconfersongkla').hide();
 		            $('.reportconferonline').hide();
 	                }
-	                else if((event.status_confer === 'N')){
+	                else if((stat_confer == 'N')){
                             $('#statusconferrence').addClass('text-danger');
                             $('#txtconferonline').hide();
                             $('#statusconferrenceonline').hide();
@@ -50,8 +53,8 @@
 		            $('.reportconfersongkla').hide();
 		            $('.reportconferonline').hide();;
 	                }
-	                else if((event.status_confer === 'Y' && event.status_online === 'W') || (event.status_confer === 'Y' && event.status_online === 'N') || (event.status_confer === 'Y' && event.status_online === 'C')){
-                            $('#statusconferrence').addClass('text-success');
+	                else if((stat_confer == 'Y' && stat_online == 'W') || (stat_confer == 'Y' && stat_online == 'N') || (stat_confer == 'Y' && stat_online == 'C')){
+                    $('#statusconferrence').addClass('text-success');
 		            $('.reportconferzpo').show();
 		            $('.reportconfersongkla').hide();
 		            $('#comment').hide();
@@ -59,7 +62,7 @@
                             $('#statusconferrenceonline').hide();
 		            $('.reportconferonline').hide();
 	                }
-	                else if(event.status_confer === 'Y' && event.status_online === 'Y'){
+	                else if(stat_confer == 'Y' && stat_online == 'Y'){
                             $('#statusconferrence').addClass('text-success');
                             $('#statusconferrenceonline').addClass('text-success');
                             $('#comment').hide();
@@ -67,7 +70,7 @@
 		            $('.reportconfersongkla').hide();
 		            $('.reportconferonline').show();
 	                }
-	                else if(event.status_confer === 'C'){
+	                else if(stat_confer == 'C'){
                             $('#statusconferrence').addClass('textor');
 		            $('#txtconferonline').hide();
                             $('#statusconferrenceonline').hide();
@@ -76,8 +79,8 @@
 		            $('.reportconferonline').hide();
 	                }
                     }
-                    else if(event.zoo_zoo_id == 15){
-			if (event.status_confer == 'W' && event.status_online == 'W'){
+                    else if(idzoo == 15){
+			if (stat_confer == 'W' && stat_online == 'W'){
                             $('#confer').removeClass('col-md-5');
                             $('#confer').addClass('col-md-6');
                             $('#txtconfer').removeClass('col-md-8');
@@ -90,7 +93,7 @@
 		            $('.reportconfersongkla').hide();
 		            $('.reportconferonline').hide();
 	                }
-                        else if((event.status_confer == 'N')){
+                        else if((stat_confer == 'N')){
                             $('#statusconferrence').addClass('text-danger');
                             $('#txtconferonline').hide();
                             $('#statusconferrenceonline').hide();
@@ -98,7 +101,7 @@
 		            $('.reportconfersongkla').hide();
 		            $('.reportconferonline').hide();;
 	                }
-                        else if((event.status_confer == 'Y' && event.status_online == 'W') || (event.status_confer == 'Y' && event.status_online == 'N') || (event.status_confer == 'Y' && event.status_online == 'C')){
+                        else if((stat_confer == 'Y' && stat_online == 'W') || (stat_confer == 'Y' && stat_online == 'N') || (stat_confer == 'Y' && stat_online == 'C')){
                             $('#statusconferrence').addClass('text-success');
 		            $('.reportconferzpo').hide();
 		            $('.reportconfersongkla').show();
@@ -107,7 +110,7 @@
                             $('#statusconferrenceonline').hide();
 		            $('.reportconferonline').hide();
                         }
-                        else if(event.status_confer == 'Y' && event.status_online == 'Y'){
+                        else if(stat_confer == 'Y' && stat_online == 'Y'){
                             $('#statusconferrence').addClass('text-success');
                             $('#statusconferrenceonline').addClass('text-success');
                             $('#comment').hide();
@@ -115,7 +118,7 @@
 		            $('.reportconfersongkla').show();
 		            $('.reportconferonline').show();
 	                }
-                        else if(event.status_confer == 'C'){
+                        else if(stat_confer == 'C'){
                             $('#statusconferrence').addClass('textor');
 		            $('#txtconferonline').hide();
                             $('#statusconferrenceonline').hide();
@@ -127,7 +130,7 @@
                    return false;
                 },
                 views: {
-                                                                toDay: { buttonText: 'วันนี้' },
+                toDay: { buttonText: 'วันนี้' },
 				timeGridDay: { buttonText: 'วัน' },
 				timeGridWeek: { buttonText: 'สัปดาห์' },
 				dayGridMonth: { buttonText: 'เดือน' }
@@ -154,7 +157,7 @@
 				//       element.find('div.fc-content').prepend("<img class='mb-1 mr-1' src='images/orange.png' width='10px' height='10px'>");
 			      //}
 			    //},
-                  eventTimeFormat: { // รูปแบบการแสดงของเวลา เช่น '14:30' 
+                  eventTimeFormat: { // รูปแบบการแสดงของเวลา เช่น '14:30'
                 hour: '2-digit',
                 minute: '2-digit',
                 meridiem: false
@@ -162,8 +165,8 @@
                     firstDay : 1,
                   displayEventTime: true,
                   displayEventEnd: true,
-                  locale: 'th', 
-                   
+                  locale: 'th',
+
             });
             var conferid = $('#conferroom_id').val();
             var disbledid = document.getElementById(<?php echo $r['conferroom_id'];?>);
