@@ -93,7 +93,7 @@
                             
                             
                             <label for="province">จังหวัด</label>
-<select name="province_id" id="province" class="form-control">
+<select name="zlfotmember_province_id" id="province" class="form-control">
 <option value="">เลือกจังหวัด</option>
 <?php 
 $rs = $db->findAll('provinces')->execute();									
@@ -104,13 +104,13 @@ while($objResult = mysqli_fetch_array($rs,MYSQLI_ASSOC)){ ?>
 </div>
 <div class="form-group col-md-4">
 <label for="district">อำเภอ</label>
-<select name="district_id" id="district" class="form-control">
+<select name="zlfotmember_districts" id="district" class="form-control">
 <option value="">เลือกอำเภอ</option>
 </select>
 </div>
 <div class="form-group col-md-4">
 <label for="subdistrict">ตำบล</label>
-<select name="subdistrict_id" id="subdistrict" class="form-control">
+<select name="zlfotmember_subdistricts" id="subdistrict" class="form-control">
 <option value="">เลือกตำบล</option>
 </select>
                             

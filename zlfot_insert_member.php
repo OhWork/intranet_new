@@ -20,13 +20,16 @@
 
 	}else{
 	$rs = $db->insert('zlfotmember',array(
-	'zlfotmember_nameth' => $_POST['zlfot_nameth'],
-	'zlfotmember_nameen' => $_POST['zlfot_nameen'],
-                'zlfotmember_tel' => $_POST['zlfot_tel'],
-               	'zlfotmember_address' => $_POST['zlfot_address'],
-                'zlfotmember_subdistrict' => $_POST['zlfotmember_subdistrict'],
+	'zlfotmember_nameth' => $_POST['zlfotmember_nameth'],
+	'zlfotmember_nameen' => $_POST['zlfotmember_nameen'],
+                'zlfotmember_tel' => $_POST['zlfotmember_tel'],
+               	'zlfotmember_address' => $_POST['zlfotmember_address'],
+                'zlfotmember_subdistrict' => $_POST['zlfotmember_subdistricts_id'],
+            'zlfotmember_subdistrict' => $_POST['zlfotmember_subdistricts_id'],
+            'zlfotmember_districts_id' => $_POST['zlfotmember_districts_id'],
+            'zlfotmember_province_id' => $_POST['zlfotmember_province_id'],
 	'zlfot_datereg' => $_POST['zlfot_datereg'],
-                'zlfot_datestart' => $_POST['zlfot_datestart'],
+                
                 'zlfot_dateend' => $dateend,
                 'zlfot_status' => $_POST['zlfot_status'],
                 'zlfot_email' => $_POST['zlfot_email'],
