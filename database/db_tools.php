@@ -293,7 +293,7 @@
 			$this->sql = "SELECT * FROM $table,$table2,$table3 WHERE $column1 = $value1 && $column2 = $value2 ORDER BY $order DESC";
 			return $this;
 		}
-                                function findByPK33($table1,$table2,$table3,$column1,$value1,$column2,$value2,$column3,$value3){
+                function findByPK33($table1,$table2,$table3,$column1,$value1,$column2,$value2,$column3,$value3){
 			$this->sql = "SELECT * FROM $table1,$table2,$table3 WHERE $column1 = $value1 && $column2 = $value2 && $column3 = $value3";
 			return $this;
 		}

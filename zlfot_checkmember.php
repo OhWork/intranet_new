@@ -23,7 +23,7 @@
 	$user_zoo = $_SESSION['subzoo_zoo_zoo_id'];
                 $zoo = $_GET['zoo'];
                   $form = new form();
-                $txtcode = new textfield('zlfot_code','','form-control zlfot_inp','','');
+                $txtcode = new textfield('zlfotmember_nameth','','form-control zlfot_inp','','');
 	$button = new buttonok('','','btn btn-primary col-12 zloft_bt fas fa-search','submit');
 	echo $form->open('','','col-12','','');
 ?>
@@ -60,9 +60,15 @@
 	echo $form->close();
 	if (isset($_POST['submit'])) {
 
-                isset($_POST['zlfot_code'])?$zlfot_code  = $_POST['zlfot_code']:$zlfot_code='';
-                $rs = $db->findByPK44('zlfotmember','user','typezlfot','zoo','zlfot.user_user_id','user.user_id','user.subzoo_zoo_zoo_id','zoo.zoo_id','zlfot.typezlfot_typezlfot_id','typezlfot.typezlfot_id','zlfot_code',$zlfot_code)->executeAssoc();
-                    if($rs['zlfotmember_id']){
+            
+                isset($_POST['zlfotmember_nameth'])?$zlfotmember_nameth  = $_POST['zlfotmember_nameth']:$zlfotmember_nameth='';
+                $rs = $db->findByPK33('zlfotmember','user','zoo','zlfotmember.user_user_id','user.user_id','user.subzoo_zoo_zoo_id','zoo.zoo_id','zlfotmember_nameth',$zlfotmember_nameth)->executeAssoc();
+                if($rs){
+    echo "มา";
+}else{
+    echo "NO";
+}    
+                if($rs['zlfotmember_id']){
                 ?>
                                      <div class="ml-auto mr-3">
                                         <a href="admin_index.php?url=zlfot_add_card.php&id=<?php echo $rs['zlfotmember_id'];?>" class="btn btn-success col-md-12 zloft_bt2" title="เพิ่มสมาชิกสโมสรผู้รักสวนสัตว์"><i class="fas fa-plus zloft-f2"></i><i class="far fa-id-card zloft-f ml-2"></i></a>
@@ -79,7 +85,7 @@
                                             <p>หมายเลขสมาชิก :</p>
                                         </div>
                                         <div class="col-xl-9 col-lg-9 col-md-8 col-sm-8 col-8">
-                                            <p><?php echo $rs['zlfot_code']; ?></p>
+                                            <p><?php //echo $rs['zlfot_code']; ?></p>
                                         </div>
                                     </div>
                                 </div>
@@ -89,7 +95,7 @@
                                             <p>ประเภท :</p>
                                         </div>
                                         <div class="col-xl-9 col-lg-9 col-md-8 col-sm-8 col-8">
-                                            <p><?php echo $rs['typezlfot_name']; ?></p>
+                                            <p><?php //echo $rs['typezlfot_name']; ?></p>
                                         </div>
                                     </div>
                                 </div>
@@ -109,7 +115,7 @@
                                             <p>หมายเลขโทรศัพท์ :</p>
                                         </div>
                                         <div class="col-xl-9 col-lg-9 col-md-8 col-sm-8 col-8">
-                                            <p><?php echo $rs['zlfotmembedr_tel']; ?></p>
+                                            <p><?php echo $rs['zlfotmember_tel']; ?></p>
                                         </div>
                                     </div>
                                 </div>
@@ -119,7 +125,7 @@
                                             <p>วันที่สมัคร :</p>
                                         </div>
                                         <div class="col-xl-9 col-lg- col-md-8 col-sm-8 col-8">
-                                            <p><?php echo $rs['zlfot_datestart']; ?></p>
+                                            <p><?php //echo $rs['zlfot_datestart']; ?></p>
                                         </div>
                                     </div>
                                 </div>
@@ -129,7 +135,7 @@
                                             <p>วันที่บัตรหมดอายุ :</p>
                                         </div>
                                         <div class="col-xl-9 col-lg-9 col-md-8 col-sm-8 col-8">
-                                            <p><?php echo $rs['zlfot_dateend']; ?></p>
+                                            <p><?php //echo $rs['zlfot_dateend']; ?></p>
                                         </div>
                                     </div>
                                 </div>
