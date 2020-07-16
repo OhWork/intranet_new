@@ -18,7 +18,7 @@
 	     headerToolbar: {
 	        left: 'prev,next today',
 	        center: 'title',
-	        right: 'timeGridDay,timeGridWeek,dayGridMonth'
+	        right: 'timeGridDay,timeGridWeek,dayGridMonth,listWeek'
 	     },
                eventClick: function(info) {
 //                    console.log('modal', info);
@@ -132,7 +132,8 @@
                 toDay: { buttonText: 'วันนี้' },
 				timeGridDay: { buttonText: 'วัน' },
 				timeGridWeek: { buttonText: 'สัปดาห์' },
-				dayGridMonth: { buttonText: 'เดือน' }
+				dayGridMonth: { buttonText: 'เดือน' },
+                                listWeek: { buttonText: 'กำหนดการ' }
 			},
 
                 events:
