@@ -6,29 +6,27 @@
     $lbdatestart = new label('วันที่สมัคร');
     $lbnameth = new label('ชื่อ - นามสกุล (ไทย)');
     $lbnameen = new label('ชื่อ - นามสกุล (อังกฤษ)');
-    $lbcode = new label('เลขที่สมาชิก');
-    $lbevent = new label('สถานที่รับสมัคร');
+    $lbsubdistrict = new label('แขวง/ตำบล');
+    $lbdistrict = new label('เขต/อำเภอ');
+    $lbprovince = new label('จังหวัด');
     $lbtel = new label('เบอร์โทรศัพท์');
     $lbaddress = new label('ที่อยู่');
     $lbdatereg = new label('วันที่รับสมัคร');
-    $lbdateend  = new label('วันที่หมดอายุ');
-    $lbtype = new label('ประเภทสมาชิก');
-     $lbzoo = new label('สมัครจาก');
-     $lbreceipt = new label('เลขที่ใบเสร็จ');
+     $lbline = new label('Line');
      $lbbd = new label('วันเกิด');
     $lbemail = new label('อีเมล์');
     $lbdetail = new label('หมายเหตุ');
-    $txtnameth = new textfield('zlfot_nameth','','form-control','','');
-    $txtnameen = new textfield('zlfot_nameen','','form-control','','');
-    $txtreceipt = new textfield('zlfot_receipt','','form-control','','');
-     $txtbd = new textfield('zlfot_bd','','form-control','','');
-     $txtemail = new textfield('zlfot_email','','form-control','','');
-     $txttel = new textfield('zlfot_tel','data2','form-control','');
+    $txtnameth = new textfield('zlfotmember_nameth','','form-control','','');
+    $txtnameen = new textfield('zlfotmember_nameen','','form-control','','');
+    $txtline = new textfield('zlfotmember_line','','form-control','','');
+     $txtbd = new textfield('zlfotmember_bd','','form-control','','');
+     $txtemail = new textfield('zlfotmember_email','','form-control','','');
+     $txttel = new textfield('zlfotmember_tel','data2','form-control','');
      $txttel->functions = "onkeyup='autoTab2(this,2)'";
-     $txtaddress = new textArea('zlfot_address','form-control','','','5','5','');
-     $txtdetail = new textArea('zlfot_detail','form-control','','','5','5','');
-     $txtbd = new datetimepicker('zlfot_bd','datetimepicker1','','form-control datetimepicker-input','date-form dayinbox col-md-12 form-horizontal control-group controls input-group','input-group date','datetimepicker1','#datetimepicker1','','');
-     $txtdatestart = new datetimepicker('zlfot_datestart','datetimepicker2','','form-control datetimepicker-input','date-form dayinbox col-md-12 form-horizontal control-group controls input-group','input-group date','datetimepicker2','#datetimepicker2','','');
+     $txtaddress = new textArea('zlfotmember_address','form-control','','','5','5','');
+     $txtdetail = new textArea('zlfotmember_detail','form-control','','','5','5','');
+     $txtbd = new datetimepicker('zlfotmember_bd','datetimepicker1','','form-control datetimepicker-input','date-form dayinbox col-md-12 form-horizontal control-group controls input-group','input-group date','datetimepicker1','#datetimepicker1','','');
+    
      $selectevent = new SelectFromDB();
   $selectevent->name = 'eventzlfot_eventzlfot_id';
   $selectevent->lists = 'โปรดระบุ กิจกรรม';
@@ -59,26 +57,6 @@
 				</div>
                                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-1 showmsg">
 					<?php echo $lbzoo."   ".$zoo;  ?>
-				</div>
-                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-1 showmsg">
-					<?php echo $lbtype; ?>
-				</div>
-				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 showmsg">
-					<?php echo $radiotypezlfot;?>
-				</div>
-                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-1 showmsg">
-					<?php echo $lbevent; ?> <a class="text-success" style="float: right;" href="admin_index.php?url=zlfot_add_eventzlfot.php">เพิ่มกิจกรรม <i class="fas fa-plus zloft-f2"></i></a>
-                                </div>
-				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 showmsg">
-					<?php echo $selectevent->selectFromTB('eventzlfot','eventzlfot_id','eventzlfot_name',$r['eventzlfot_eventzlfot_id']);;?>
-				</div>
-                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-1 showmsg">
-					<?php echo $lbdatestart; ?>  
-				</div>
-				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 showmsg">
-                                    <div class="row">
-                                        <?php echo $txtdatestart; ?>
-                                    </div>
 				</div>
 				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-1 showmsg">
 					<?php echo $lbnameth; ?>
@@ -112,11 +90,37 @@
 				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 showmsg">
 					<?php echo $txtaddress; ?>
 				</div>
+                            
+                            
+                            <label for="province">จังหวัด</label>
+<select name="province_id" id="province" class="form-control">
+<option value="">เลือกจังหวัด</option>
+<?php 
+$rs = $db->findAll('provinces')->execute();									
+while($objResult = mysqli_fetch_array($rs,MYSQLI_ASSOC)){ ?>
+<option value="<?=$objResult["id"];?>"><?=$objResult["name_in_thai"];?></option>
+<?php } ?>
+</select>
+</div>
+<div class="form-group col-md-4">
+<label for="district">อำเภอ</label>
+<select name="district_id" id="district" class="form-control">
+<option value="">เลือกอำเภอ</option>
+</select>
+</div>
+<div class="form-group col-md-4">
+<label for="subdistrict">ตำบล</label>
+<select name="subdistrict_id" id="subdistrict" class="form-control">
+<option value="">เลือกตำบล</option>
+</select>
+                            
+                            
+                            
 				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-1 showmsg">
-					<?php echo $lbreceipt; ?>
+					<?php echo $lbline; ?>
 				</div>
 				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 showmsg">
-                                        <?php echo $txtreceipt; ?>
+                                        <?php echo $txtline; ?>
 				</div>
                                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-1 showmsg">
 					<?php echo $lbemail ?>
@@ -175,4 +179,37 @@
 	        stepping: 30
         });
     });
+    
+    $(function(){
+var provinceObject = $('#province');
+var districtObject = $('#district');
+var subdistrictObject = $('#subdistrict');
+// on change province
+provinceObject.on('change', function(){
+var provinceId = $(this).val();
+districtObject.html('<option value="">เลือกอำเภอ</option>');
+subdistrictObject.html('<option value="">เลือกตำบล</option>');
+$.get('zlfot_get_district.php?province_id=' + provinceId, function(data){
+var result = JSON.parse(data);
+$.each(result, function(index, item){
+districtObject.append(
+$('<option></option>').val(item.id).html(item.name_in_thai)
+);
+});
+});
+});
+// on change district
+districtObject.on('change', function(){
+var districtId = $(this).val();
+subdistrictObject.html('<option value="">เลือกตำบล</option>');
+$.get('zlfot_get_subdistrict.php?district_id=' + districtId, function(data){
+var result = JSON.parse(data);
+$.each(result, function(index, item){
+subdistrictObject.append(
+$('<option></option>').val(item.id).html(item.name_in_thai)
+);
+});
+});
+});
+});
     </script>
