@@ -7,7 +7,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html" charset="utf-8">
-        <link rel="stylesheet" href="CSS/bootstrap.css">
+        <link rel="stylesheet" href="CSS/bootstrap.min.css">
         <link rel="stylesheet" href="CSS/main.css">
           <title>ระบบintranet</title>
 		  <?php
@@ -66,25 +66,27 @@
 		</div>
 		<script>
 
+                        //$("#myModal")._config.backdrop = 'static'; 
+//			$("#myModal").modal({backdrop: 'static', keyboard: false});
 
-			$("#myModal").modal({backdrop: 'static', keyboard: false});
+//			setTimeout(function(){
+//				window.location.href = 'admin_index.php';
+//			}, 5000);
+//			var timeLeft = 4;
+//			var elem = document.getElementById('showcountdown');
+//			var timerId = setInterval(countdown, 1000);
 
-			setTimeout(function(){
-				window.location.href = 'admin_index.php';
-			}, 5000);
-			var timeLeft = 4;
-			var elem = document.getElementById('showcountdown');
-			var timerId = setInterval(countdown, 1000);
+			//function countdown() {
+			    //if (timeLeft == -1) {
+			     //   clearTimeout(timerId);
+			    //} else {
+			     //   elem.innerHTML = timeLeft + ' seconds remaining';
+			   //     timeLeft--;
+			  //  }
+			//}
 
-			function countdown() {
-			    if (timeLeft == -1) {
-			        clearTimeout(timerId);
-			    } else {
-			        elem.innerHTML = timeLeft + ' seconds remaining';
-			        timeLeft--;
-			    }
-			}
-
+			alert('ยินดีต้อนรับเข้าสู่ระบบ');
+			window.location.href = 'admin_index.php';
 
 		</script>
 		<?php
