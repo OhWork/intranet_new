@@ -11,6 +11,7 @@
 <script src="jquery/dropdown2.js"></script>
 <script src="jquery/checksubmit.js"></script>
 <script src="jquery/getpassword.js"></script>
+<script src="jquery/datatables.min.js"></script>
 <script src="jquery/dataTables.bootstrap4.min.js"></script>
 <script src="jquery/tooltip.js"></script>
 <script src="jquery/button.js"></script>
