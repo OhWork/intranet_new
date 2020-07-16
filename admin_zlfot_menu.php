@@ -4,8 +4,10 @@
               <!-- sub menu -->
               <ul class="sub-menu collapse on-sub" id="zlfot">
 	                <a class="nav-link edittext mucl" id="nav-1-animate-1" href="admin_index.php?url=zlfot_checkmember.php">
-	                  <span data-feather="search"></span>ค้นหาการเป็นสมาชิก
-                                 <a class="nav-link collapsed py-1 nav-link-24 edittext mucl" id="nav-2-animate-1" href="#zlfotsetting1" data-toggle="collapse" data-target="#zlfotsetting1">
+                            <span data-feather="search"></span>ค้นหาการเป็นสมาชิก</a>
+                        <a class="nav-link edittext mucl" id="nav-1-animate-1" href="admin_index.php?url=zlfot_addmember.php">
+                            <span data-feather="user-plus"></span>สมัครสมาชิก</a>
+                         <a class="nav-link collapsed py-1 nav-link-24 edittext mucl" id="nav-2-animate-1" href="#zlfotsetting1" data-toggle="collapse" data-target="#zlfotsetting1">
     	                <span data-feather="credit-card"></span>
 	                  รายการดำเนินการ
 	                </a>

@@ -3,7 +3,7 @@
     $id =  $_GET['id'];
     $form = new form();
     $button = new buttonok("ยืนยันการตรวจสอบ","","btn btn-success btn-block col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","");
-    $rs = $db->findByPK44('zlfot','typezlfot','user','zoo','zlfot.user_user_id','user.user_id','zlfot.typezlfot_typezlfot_id','typezlfot.typezlfot_id','user.subzoo_zoo_zoo_id','zoo.zoo_id','zlfot_id',$id)->executeRow();
+    $rs = $db->findByPK34('zlfotmember','user','zoo','zlfotmember.user_user_id','user.user_id','user.subzoo_zoo_zoo_id','zoo.zoo_id','zlfotmember_id',$id)->executeRow();
     echo $form->open("form_reg","frmMain","col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3","zlfot_insert_updatestatus.php","");
 	?>
 	<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">

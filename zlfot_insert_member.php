@@ -8,28 +8,6 @@
 <?php
     include 'database/db_tools.php';
 	include 'connect.php';
-        $typezlfot =  $_POST['typezlfot_typezlfot_id'];
-        $user_id = $_POST['user_user_id'];
-        $typezooexe = $db->findByPK22("user","zoo","user.subzoo_zoo_zoo_id","zoo.zoo_id","user.user_id",$user_id)->executeAssoc();
-        if($typezlfot == '01' || $typezlfot ==  '02'){
-        $dateend = substr((date("Y")+1),0);   
-        $dateend.="-".date("m");   
-        $dateend.= "-".date("d"); 
-        }else if( $typezlfot == '03'){
-        $dateend = substr((date("Y")+2),0);   
-        $dateend.="-".date("m");   
-        $dateend.= "-".date("d"); 
-        }else{
-            $datenow = "ฟรี";
-            $dateend = "ตลอดชีวิต";
-        }
-       $typezoo =  $typezooexe['zoo_code'];
-        $codezlfot = $typezoo.$typezlfot;
-        $rs = $db->specifytable("MAX(zlfot_code) AS last_id","zlfot","zlfot_code LIKE '%$codezlfot%'")->executeAssoc();
-        $maxId = substr($rs['last_id'],  -5);
-        $maxId = ($maxId + 1); 
-        $maxId = substr("00000".$maxId, -5);
-        $nextId = $codezlfot.$maxId;
 
         
 	if(!empty($_POST['subzoo_id'])){
@@ -41,13 +19,12 @@
 		$rsfix = $db->update('subzoo',$data,'subzoo_id',$_POST['subzoo_id']);
 
 	}else{
-	$rs = $db->insert('zlfot',array(
-	'zlfot_code' => $nextId,
-	'zlfot_nameth' => $_POST['zlfot_nameth'],
-	'zlfot_nameen' => $_POST['zlfot_nameen'],
-                'zlfot_tel' => $_POST['zlfot_tel'],
-               	'zlfot_address' => $_POST['zlfot_address'],
-                'zlfot_receipt' => $_POST['zlfot_receipt'],
+	$rs = $db->insert('zlfotmember',array(
+	'zlfotmember_nameth' => $_POST['zlfot_nameth'],
+	'zlfotmember_nameen' => $_POST['zlfot_nameen'],
+                'zlfotmember_tel' => $_POST['zlfot_tel'],
+               	'zlfotmember_address' => $_POST['zlfot_address'],
+                'zlfotmember_subdistrict' => $_POST['zlfotmember_subdistrict'],
 	'zlfot_datereg' => $_POST['zlfot_datereg'],
                 'zlfot_datestart' => $_POST['zlfot_datestart'],
                 'zlfot_dateend' => $dateend,
