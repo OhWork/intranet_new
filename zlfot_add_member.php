@@ -26,24 +26,6 @@
      $txtaddress = new textArea('zlfotmember_address','form-control','','','5','5','');
      $txtdetail = new textArea('zlfotmember_detail','form-control','','','5','5','');
      $txtbd = new datetimepicker('zlfotmember_bd','datetimepicker1','','form-control datetimepicker-input','date-form dayinbox col-md-12 form-horizontal control-group controls input-group','input-group date','datetimepicker1','#datetimepicker1','','');
-    
-     $selectevent = new SelectFromDB();
-  $selectevent->name = 'eventzlfot_eventzlfot_id';
-  $selectevent->lists = 'โปรดระบุ กิจกรรม';
-    $radiotypezlfot = new radioGroup();
-    $radiotypezlfot->name = 'typezlfot_typezlfot_id';
-           $rstype = $db->findAll('typezlfot')->execute();
-           foreach($rstype as $type){
-    	$radiotypezlfot->add($type['typezlfot_name'],$type['typezlfot_code'],'','');
-           }
-     if($id >= 1 && $id <= 10){
-            $zoo_code = '001';
-            $zoo = "องค์การสวนสัตว์แห่งประเทศไทย";
-    }else{
-         $rszoo =$db->findByPK('zoo','zoo_id',$id)->executeAssoc();
-             $zoo_code = $rszoo['zoo_code'];
-            $zoo = $rszoo['zoo_name'];
-    }
     $button = new buttonok("ส่งใบสมัคร","","btn btn-success btn-block bt3success col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","");
     echo $form->open("form_reg","","col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","zlfot_insert_member.php","");
  ?>
