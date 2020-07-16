@@ -72,7 +72,7 @@
 				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 showmsg">
 					<?php echo $txtaddress; ?>
 				</div>
-                            
+                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12>           
                             
                             <label for="province">จังหวัด</label>
 <select name="zlfotmember_province_id" id="province" class="form-control">
@@ -86,13 +86,13 @@ while($objResult = mysqli_fetch_array($rs,MYSQLI_ASSOC)){ ?>
 </div>
 <div class="form-group col-md-4">
 <label for="district">อำเภอ</label>
-<select name="zlfotmember_districts" id="district" class="form-control">
+<select name="zlfotmember_districts_id" id="district" class="form-control">
 <option value="">เลือกอำเภอ</option>
 </select>
 </div>
 <div class="form-group col-md-4">
 <label for="subdistrict">ตำบล</label>
-<select name="zlfotmember_subdistricts" id="subdistrict" class="form-control">
+<select name="zlfotmember_subdistricts_id" id="subdistrict" class="form-control">
 <option value="">เลือกตำบล</option>
 </select>
                             
