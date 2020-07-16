@@ -137,8 +137,6 @@ while($objResult = mysqli_fetch_array($rs,MYSQLI_ASSOC)){ ?>
 				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3" style="margin-bottom:16px;">
 					<div class="row">
 						<div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
-                                                <input type='hidden' name='zoo_code' value='<?php echo $zoo_code; ?>'/>
-                                                <input type='hidden' name='zlfotmember_status' value='R'>
                                                 <input type='hidden' name='zlfotmember_datereg' value='<?php echo date("Y-m-d"); ?>'/>
     						<input type='hidden' name='user_user_id' value='<?php echo $_SESSION['user_id']; ?>'/>
 						</div>

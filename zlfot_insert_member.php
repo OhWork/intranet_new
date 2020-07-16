@@ -34,8 +34,6 @@
                 'zlfot_status' => $_POST['zlfot_status'],
                 'zlfot_email' => $_POST['zlfot_email'],
                 'zlfot_detail' => $_POST['zlfot_detail'],
-                 'eventzlfot_eventzlfot_id' => $_POST['eventzlfot_eventzlfot_id'],
-	'typezlfot_typezlfot_id' => $_POST['typezlfot_typezlfot_id'],
 	'user_user_id' => $_POST['user_user_id']
 	));
 	}
