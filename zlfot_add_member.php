@@ -12,7 +12,7 @@
     $lbtel = new label('เบอร์โทรศัพท์');
     $lbaddress = new label('ที่อยู่');
     $lbdatereg = new label('วันที่รับสมัคร');
-     $lbline = new label('Line');
+     $lbline = new label('Line-ID');
      $lbbd = new label('วันเกิด');
     $lbemail = new label('อีเมล์');
     $lbdetail = new label('หมายเหตุ');
@@ -23,7 +23,7 @@
      $txtemail = new textfield('zlfotmember_email','','form-control','','');
      $txttel = new textfield('zlfotmember_tel','data2','form-control','');
      $txttel->functions = "onkeyup='autoTab2(this,2)'";
-     $txtaddress = new textArea('zlfotmember_address','form-control','','','5','5','');
+     $txtaddress = new textArea('zlfotmember_address','form-control','','','5','3','');
      $txtdetail = new textArea('zlfotmember_detail','form-control','','','5','5','');
      $txtbd = new datetimepicker('zlfotmember_bd','datetimepicker1','','form-control datetimepicker-input','date-form dayinbox col-md-12 form-horizontal control-group controls input-group','input-group date','datetimepicker1','#datetimepicker1','','');
     $button = new buttonok("ส่งใบสมัคร","","btn btn-success btn-block bt3success col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","");
@@ -61,56 +61,69 @@
                                     </div>
 				</div>
 				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-1 showmsg">
-					<?php echo $lbtel; ?>
-				</div>
-				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 showmsg">
-                                        <?php echo $txttel; ?>
-				</div>
-				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-1 showmsg">
 					<?php echo $lbaddress; ?>
 				</div>
 				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 showmsg">
 					<?php echo $txtaddress; ?>
 				</div>
-                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12>           
-                            
-                            <label for="province">จังหวัด</label>
-<select name="zlfotmember_province_id" id="province" class="form-control">
-<option value="">เลือกจังหวัด</option>
-<?php 
-$rs = $db->findAll('provinces')->execute();									
-while($objResult = mysqli_fetch_array($rs,MYSQLI_ASSOC)){ ?>
-<option value="<?=$objResult["id"];?>"><?=$objResult["name_in_thai"];?></option>
-<?php } ?>
-</select>
-</div>
-<div class="form-group col-md-4">
-<label for="district">อำเภอ</label>
-<select name="zlfotmember_districts_id" id="district" class="form-control">
-<option value="">เลือกอำเภอ</option>
-</select>
-</div>
-<div class="form-group col-md-4">
-<label for="subdistrict">ตำบล</label>
-<select name="zlfotmember_subdistricts_id" id="subdistrict" class="form-control">
-<option value="">เลือกตำบล</option>
-</select>
-                            
-                            
-                            
-				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-1 showmsg">
-					<?php echo $lbline; ?>
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-1">           
+                    <label for="province">จังหวัด</label>
+					<select name="zlfotmember_province_id" id="province" class="form-control">
+					<option value="">เลือกจังหวัด</option>
+					<?php 
+						$rs = $db->findAll('provinces')->execute();									
+						while($objResult = mysqli_fetch_array($rs,MYSQLI_ASSOC)){ ?>
+						<option value="<?=$objResult["id"];?>"><?=$objResult["name_in_thai"];?></option>
+					<?php } ?>
+					</select>
 				</div>
-				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 showmsg">
-                                        <?php echo $txtline; ?>
+				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-1"> 
+					<div class="row">
+						<div class="form-group col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6 mb-0">
+							<label for="district">อำเภอ</label>
+							<select name="zlfotmember_districts_id" id="district" class="form-control">
+							<option value="">เลือกอำเภอ</option>
+							</select>
+						</div>
+						<div class="form-group col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6 mb-0">
+							<label for="subdistrict">ตำบล</label>
+							<select name="zlfotmember_subdistricts_id" id="subdistrict" class="form-control">
+							<option value="">เลือกตำบล</option>
+							</select>
+						</div>
+                    </div>        
+                </div>
+				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-1"> 
+					<div class="row">
+						<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6 mt-1">
+							<div class="row">
+								<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 showmsg">
+									<?php echo $lbtel; ?>
+								</div>
+								<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 showmsg">
+									 <?php echo $txttel; ?>
+								</div>
+							</div>
+						</div>
+						<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6 mt-1">
+							<div class="row">
+								<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 showmsg">
+									<?php echo $lbline; ?>
+								</div>
+								<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 showmsg">
+									<?php echo $txtline; ?>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
-                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-1 showmsg">
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-1 showmsg">
 					<?php echo $lbemail ?>
 				</div>
 				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 showmsg">
-                                        <?php echo $txtemail; ?>
-                                </div>
-                            	<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-1 showmsg">
+                    <?php echo $txtemail; ?>
+                </div>
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-1 showmsg">
 					<?php echo $lbdetail; ?>
 				</div>
 				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 showmsg">
@@ -127,9 +140,7 @@ while($objResult = mysqli_fetch_array($rs,MYSQLI_ASSOC)){ ?>
 						</div>
 						<div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3"></div>
 					</div>
-				</div>
-                                                        
-
+				</div> 
 			</div>
 		</div>
 		<div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3"></div>
