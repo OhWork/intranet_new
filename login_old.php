@@ -26,21 +26,20 @@
   <body>
    <?php
 	$form = new form();
-	$text_user = new textfield('user_user','inputLogin','form-control','Email address');
+	$text_user = new textfield('user_user','inputEmail','form-control','Email address');
 	$text_pass = new pass('user_pass','form-control','Password','inputPassword');
 	$submit = new buttonok('Login','','btn btn-lg btn-primary btn-block col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12','');
-	echo $form->open('formLogin','','form-signin','','');
+	echo $form->open('','','form-signin','check_login.php','');
     ?>
 
       <div class="text-center mb-4">
 <!--         <img class="mb-4" src="https://getbootstrap.com/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72"> -->
         <h1 class="h3 mb-3 font-weight-normal">เข้าสู่ระบบ</h1>
       </div>
-      <p id="alert_y" class="alert alert-success">Login success</p>
-       <p id="alert_n" class="alert alert-danger">Username หรือ Password ผิดพลาด กรุณาลองใหม่</p>
+
       <div class="form-label-group">
         <?php echo $text_user; ?>
-        <label for="inputLogin">User</label>
+        <label for="inputEmail">User</label>
       </div>
 
       <div class="form-label-group">
@@ -59,26 +58,3 @@
    <?php echo $form->close();?>
   </body>
 </html>
-<script>
- $("#formLogin").submit(function(){ // เมื่อมีการ submit ฟอร์ม ล็อกอิน
-        // ส่งข้อมูลไปตรวจสอบที่ไฟล์ check_login.php แบบ post ด้วย ajax
-        $.post("check_login.php",$("#formLogin").serialize(),function(data){
-            if(data==1){ // ตรวจสอบผลลัพธ์
-                $("#alert_y").removeClass("show").addClass("hidden");
-                $("#alert_n").removeClass("hidden").addClass("show");
-                setTimeout(function(){
-                window.location='admin_index.php';
-                }, 5000);
-            }else if(data==0){
-                /// คำสั่งหรือแจ้งเตือนกรณีล็อกอินไม่ผ่าน
-                $("#formLogin")[0].reset();
-                 $("#alert_y").removeClass("hidden").addClass("show");
-                $("#alert_n").removeClass("show").addClass("hidden");   
-            }else{
-              $("#alert_y").removeClass("hidden").addClass("hidden");
-                $("#alert_n").removeClass("hidden").addClass("hidden");     
-            }
-        });
-        return false;
-    });
-    </script>

@@ -3,21 +3,13 @@
 	ob_start();
 	date_default_timezone_set('Asia/Bangkok');
 	$date = date("Y-m-d H:i");
-?>
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html" charset="utf-8">
-        <link rel="stylesheet" href="CSS/bootstrap.min.css">
-        <link rel="stylesheet" href="CSS/main.css">
-          <title>ระบบintranet</title>
-		  <?php
-		  include_once 'inc_js.php';
-		  ?>
-	</head>
-<?php
 	include_once 'database/db_tools.php';
 	include_once 'connect.php';
-
+header("Content-type:text/html; charset=UTF-8");              
+header("Cache-Control: no-store, no-cache, must-revalidate");             
+header("Cache-Control: post-check=0, pre-check=0", false);   
+if($_POST['user_user']!="" && $_POST['user_pass']!=""){
+// ส่วนของการเชิ่อมต่อกับฐานข้อมูล   
 	$db->findByAttributes('user',array(
 		'user_user =' => $_POST['user_user'],
 		'user_pass =' => md5(md5(md5($_POST['user_pass'])))
@@ -27,9 +19,10 @@
 	$system_id = $rs['systemallow_systemallow_id'];
 	$subzoo_id = $rs['subzoo_subzoo_id'];
          $rsallow = $db->findByPK('systemallow','systemallow_id',$system_id)->executeAssoc();
-        $rssubzoo = $db->findByPK('subzoo','subzoo_id',$subzoo_id)->executeAssoc();
-	if($rs){
-    	$_SESSION['user_id'] = $rs['user_id'];
+        $rssubzoo = $db->findByPK('subzoo','subzoo_id',$subzoo_id)->executeAssoc(); 
+ 
+    if($rs>0){
+                $_SESSION['user_id'] = $rs['user_id'];
 		$_SESSION['user_name'] = $rs['user_name'];
 		$_SESSION['user_last'] = $rs['user_last'];
 		$_SESSION['systemallow_admin'] = $rsallow['systemallow_admin'];
@@ -48,52 +41,9 @@
 		$_SESSION['subzoo_enable'] = $rssubzoo['subzoo_enable'];
 		$_SESSION['subzoo_subzoo_id'] = $rs['subzoo_subzoo_id'];
 		$_SESSION['subzoo_zoo_zoo_id'] = $rs['subzoo_zoo_zoo_id'];
-		?>
-		<div class="modal" id="myModal">
-		  <div class="modal-dialog">
-		    <div class="modal-content">
-
-		      <!-- Modal body -->
-		      <div class="modal-body">
-		        ยินดีต้อนรับเข้าสู่ระบบ
-		      </div>
-		       <div class="modal-footer">
-			       <div id="showcountdown"></div>
-			       <a href="admin_index.php"><button type="button" class="btn btn-primary">Ok</button></a>
-		       </div>
-		    </div>
-		  </div>
-		</div>
-		<script>
-
-                        //$("#myModal")._config.backdrop = 'static'; 
-//			$("#myModal").modal({backdrop: 'static', keyboard: false});
-
-//			setTimeout(function(){
-//				window.location.href = 'admin_index.php';
-//			}, 5000);
-//			var timeLeft = 4;
-//			var elem = document.getElementById('showcountdown');
-//			var timerId = setInterval(countdown, 1000);
-
-			//function countdown() {
-			    //if (timeLeft == -1) {
-			     //   clearTimeout(timerId);
-			    //} else {
-			     //   elem.innerHTML = timeLeft + ' seconds remaining';
-			   //     timeLeft--;
-			  //  }
-			//}
-
-			alert('ยินดีต้อนรับเข้าสู่ระบบ');
-			window.location.href = 'admin_index.php';
-
-		</script>
-		<?php
-		//header('location: admin_index.php');
-		$log_user = $_SESSION['user_name']." ".$_SESSION['user_last'];
+                	$log_user = $_SESSION['user_name']." ".$_SESSION['user_last'];
 		 //Log
-		if(@getenv(HTTP_X_FORWARDED_FOR)){
+        if(@getenv(HTTP_X_FORWARDED_FOR)){
             $ip = $_SERVER['HTTP_X_FORWARDED_FOR']; // IP proxy
         }else{
             $ip = $_SERVER['REMOTE_ADDR'];
@@ -106,17 +56,11 @@
     	'log_action_by' => $log_user,
     	'log_ip' => $ipshow
     	));
-	}else{
-		?>
-		<script>
-			alert('ไอดีหรือรหัสผิดพลาด กรุณาลองใหม่');
-			window.location.href = 'login.php';
-		</script>
-		<?php
-		//header('location: admin_index.php');
-		$login_confirm = 0;
-		echo "<div class='loginwrong'>ไอดีหรือรหัสผิดพลาด กรุณาลองใหม่</div>";
-	}
-
+        echo "1";  // เมื่อล็อกอินผ่าน
+    }else{
+        echo "0";   
+    }
+}else{
+    echo "0";   
+}
 ?>
-</html>
