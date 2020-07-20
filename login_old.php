@@ -29,7 +29,7 @@
 	$text_user = new textfield('user_user','inputEmail','form-control','Email address');
 	$text_pass = new pass('user_pass','form-control','Password','inputPassword');
 	$submit = new buttonok('Login','','btn btn-lg btn-primary btn-block col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12','');
-	echo $form->open('','','form-signin','check_login.php','');
+	echo $form->open('','','form-signin','check_login_old.php','');
     ?>
 
       <div class="text-center mb-4">

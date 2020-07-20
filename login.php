@@ -62,21 +62,20 @@
 <script>
  $("#formLogin").submit(function(){ // เมื่อมีการ submit ฟอร์ม ล็อกอิน
         // ส่งข้อมูลไปตรวจสอบที่ไฟล์ check_login.php แบบ post ด้วย ajax
+
         $.post("check_login.php",$("#formLogin").serialize(),function(data){
             if(data==1){ // ตรวจสอบผลลัพธ์
-                $("#alert_y").removeClass("show").addClass("hidden");
-                $("#alert_n").removeClass("hidden").addClass("show");
+
+                //$("#alert_y").removeClass("show").addClass("hidden");
+               // $("#alert_n").removeClass("hidden").addClass("show");
                 setTimeout(function(){
                 window.location='admin_index.php';
                 }, 5000);
-            }else if(data==0){
+            }else{
                 /// คำสั่งหรือแจ้งเตือนกรณีล็อกอินไม่ผ่าน
                 $("#formLogin")[0].reset();
-                 $("#alert_y").removeClass("hidden").addClass("show");
-                $("#alert_n").removeClass("show").addClass("hidden");   
-            }else{
-              $("#alert_y").removeClass("hidden").addClass("hidden");
-                $("#alert_n").removeClass("hidden").addClass("hidden");     
+                 //$("#alert_y").removeClass("hidden").addClass("show");
+                //$("#alert_n").removeClass("show").addClass("hidden");   
             }
         });
         return false;
