@@ -1253,20 +1253,6 @@ a:hover {
     border-color: #007bff;
     color:#ffffff;
 }
-.zloft_bt2{
-    padding: 16px 40px;
-    border-radius: 0.35rem;
-}
-.zloft_bt2:hover{
-    background-color: #464a4e;
-    border-color: #464a4e;
-}
-.zloft-f{
-    font-size: 32px;
-}
-.zloft-f2{
-    font-size: 24px;
-}
 .zlfot_inp {
     border-bottom-right-radius: 0px;
     border-top-right-radius: 0px;
