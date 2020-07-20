@@ -76,7 +76,7 @@
 					<div class="row">
 						<div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
                                                                                                 <input type='hidden' name='zoo_code' value='<?php echo $zoo_code; ?>'/>
-                                                                                                <input type='hidden' name='zlfotmeber_zlfotmember_id' value='<?php echo $member_id; ?>'/>
+                                                                                                <input type='hidden' name='zlfotmember_zlfotmember_id' value='<?php echo $member_id; ?>'/>
                                                                                                 <input type='hidden' name='zlfotcard_stsfw' value='R'>
                                                                                                 <input type='hidden' name='zlfotcard_datereg' value='<?php echo date("Y-m-d"); ?>'/>
     						<input type='hidden' name='user_user_id' value='<?php echo $_SESSION['user_id']; ?>'/>

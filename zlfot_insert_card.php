@@ -48,9 +48,10 @@
                 'zlfotcard_datestart' => $_POST['zlfotcard_datestart'],
                 'zlfotcard_dateend' => $dateend,
                 'zlfotcard_detail' => $_POST['zlfotcard_detail'],
+            'zlfotcard_stsfw' => $_POST['zlfotcard_stsfw'],
                  'eventzlfot_eventzlfot_id' => $_POST['eventzlfot_eventzlfot_id'],
 	'typezlfot_typezlfot_id' => $_POST['typezlfot_typezlfot_id'],
-            'zlfotmeber_zlfotmember_id' => $_POST['zlfotmeber_zlfotmember_id'],
+            'zlfotmember_zlfotmember_id' => $_POST['zlfotmember_zlfotmember_id'],
 	'user_user_id' => $_POST['user_user_id']
 	));
 	}
