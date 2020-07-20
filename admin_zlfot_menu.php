@@ -12,10 +12,10 @@
 	                  รายการดำเนินการ
 	                </a>
 	                 <ul class="sub-menu collapse" id="zlfotsetting1">
-                                          <a class="nav-link edittext mucl" id="nav-24-animate-1" href="admin_index.php?url=zlfot_show_checkmember.php&type=28c8edde3d61a0411511d3b1866f0636"><span data-feather="chevron-right"></span>รอการตรวจสอบ</a>
-                                          <a class="nav-link edittext mucl" id="nav-24-animate-2" href="admin_index.php?url=zlfot_show_checkmember.php&type=665f644e43731ff9db3d341da5c827e1"><span data-feather="chevron-right"></span>รอการพิมพ์</a>
-                                          <a class="nav-link edittext mucl" id="nav-24-animate-3" href="admin_index.php?url=zlfot_show_checkmember.php&type=38026ed22fc1a91d92b5d2ef93540f20"><span data-feather="chevron-right"></span>รอจัดส่ง</a>
-                                          <a class="nav-link edittext mucl" id="nav-24-animate-4" href="admin_index.php?url=zlfot_show_checkmember.php&type=011ecee7d295c066ae68d4396215c3d0"><span data-feather="chevron-right"></span>รอการบันทึกใบเสร็จ</a> 
+                                          <a class="nav-link edittext mucl" id="nav-24-animate-1" href="admin_index.php?url=zlfot_show_checkmember.php&type=1"><span data-feather="chevron-right"></span>รอการตรวจสอบ</a>
+                                          <a class="nav-link edittext mucl" id="nav-24-animate-2" href="admin_index.php?url=zlfot_show_checkmember.php&type=2"><span data-feather="chevron-right"></span>รอการพิมพ์</a>
+                                          <a class="nav-link edittext mucl" id="nav-24-animate-3" href="admin_index.php?url=zlfot_show_checkmember.php&type=3"><span data-feather="chevron-right"></span>รอจัดส่ง</a>
+                                          <a class="nav-link edittext mucl" id="nav-24-animate-4" href="admin_index.php?url=zlfot_show_checkmember.php&type=4"><span data-feather="chevron-right"></span>รอการบันทึกใบเสร็จ</a> 
 		 </ul>
                                 <a class="nav-link edittext mucl" id="nav-2-animate-1" href="admin_index.php?url=zlfot_show_member.php">
 	                  รายชื่อสมาชิกที่สมบูรณ์
