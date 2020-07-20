@@ -69,7 +69,7 @@
                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-1">           
                     <label for="province">จังหวัด</label>
 					<select name="zlfotmember_province_id" id="province" class="form-control">
-					<option value="">เลือกจังหวัด</option>
+					<option value="">กรุณาเลือกจังหวัด</option>
 					<?php 
 						$rs = $db->findAll('provinces')->execute();									
 						while($objResult = mysqli_fetch_array($rs,MYSQLI_ASSOC)){ ?>
@@ -80,15 +80,15 @@
 				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-1"> 
 					<div class="row">
 						<div class="form-group col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6 mb-0">
-							<label for="district">อำเภอ</label>
+							<label for="district">เขต/อำเภอ</label>
 							<select name="zlfotmember_districts_id" id="district" class="form-control">
-							<option value="">เลือกอำเภอ</option>
+							<option value="">กรุณาเลือกเขต/อำเภอ</option>
 							</select>
 						</div>
 						<div class="form-group col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6 mb-0">
-							<label for="subdistrict">ตำบล</label>
+							<label for="subdistrict">เลือกแขวง/ตำบล</label>
 							<select name="zlfotmember_subdistricts_id" id="subdistrict" class="form-control">
-							<option value="">เลือกตำบล</option>
+							<option value="">กรุณาเลือกแขวง/ตำบล</option>
 							</select>
 						</div>
                     </div>        
