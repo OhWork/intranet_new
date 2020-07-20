@@ -40,6 +40,7 @@
 -->
         <link rel="stylesheet" href="CSS/jquery.mapify.css">
         <link rel="stylesheet" href="CSS/jquery.datetimepicker.css">
+        <link rel="stylesheet" href="CSS/jquery-ui.css">
         <link rel="stylesheet" href="CSS/animate.css">
         <link rel="stylesheet" href="CSS/sb-admin.css">
         <link rel="stylesheet" href="CSS/main.css">
