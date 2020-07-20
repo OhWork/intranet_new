@@ -36,7 +36,7 @@
 <!--         <img class="mb-4" src="https://getbootstrap.com/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72"> -->
         <h1 class="h3 mb-3 font-weight-normal">เข้าสู่ระบบ</h1>
       </div>
-      <p id="alert_y" class="alert alert-success">Login success</p>
+      <p id="alert_y" class="alert alert-success">Login success<div id="showcountdown"></div></p>
        <p id="alert_n" class="alert alert-danger">Username หรือ Password ผิดพลาด กรุณาลองใหม่</p>
       <div class="form-label-group">
         <?php echo $text_user; ?>
@@ -71,7 +71,7 @@
                 $("#alert_n").hide();
                 setTimeout(function(){
                 window.location='admin_index.php';
-                }, 1000);
+                }, 500);
             }else{
                 /// คำสั่งหรือแจ้งเตือนกรณีล็อกอินไม่ผ่าน
                 $("#formLogin")[0].reset();
