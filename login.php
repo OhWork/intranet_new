@@ -68,14 +68,14 @@
         $.post("check_login.php",$("#formLogin").serialize(),function(data){
             if(data==1){ // ตรวจสอบผลลัพธ์
                    $("#alert_y").show();
-                $("#alert_y").removeClass("show").addClass("hidden");
-                $("#alert_n").removeClass("hidden").addClass("show");
+                $("#alert_n").hide();
                 setTimeout(function(){
                 window.location='admin_index.php';
-                }, 5000);
+                }, 1000);
             }else{
                 /// คำสั่งหรือแจ้งเตือนกรณีล็อกอินไม่ผ่าน
                 $("#formLogin")[0].reset();
+                  $("#alert_y").hide();
                  $("#alert_n").show();
             }
         });
