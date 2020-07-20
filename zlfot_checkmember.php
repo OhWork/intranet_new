@@ -75,26 +75,6 @@
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                         <div class="row">
                             <div class="col-xl-3 col-lg-3 col-md-4 col-sm-4 col-4">
-                                <p>หมายเลขสมาชิก :</p>
-                            </div>
-                            <div class="col-xl-9 col-lg-9 col-md-8 col-sm-8 col-8">
-                                <p><?php //echo $rs['zlfot_code']; ?></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                        <div class="row">
-                            <div class="col-xl-3 col-lg-3 col-md-4 col-sm-4 col-4">
-                                <p>ประเภท :</p>
-                            </div>
-                            <div class="col-xl-9 col-lg-9 col-md-8 col-sm-8 col-8">
-                                <p><?php //echo $rs['typezlfot_name']; ?></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                        <div class="row">
-                            <div class="col-xl-3 col-lg-3 col-md-4 col-sm-4 col-4">
                                 <p>ชื่อ-นามสกุล :</p>
                             </div>
                             <div class="col-xl-9 col-lg-9 col-md-8 col-sm-8 col-8">
@@ -115,7 +95,7 @@
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                         <div class="row">
                             <div class="col-xl-3 col-lg-3 col-md-4 col-sm-4 col-4">
-                                <p>วันที่สมัคร :</p>
+                                <p>อีเมล์ :</p>
                             </div>
                             <div class="col-xl-9 col-lg- col-md-8 col-sm-8 col-8">
                                 <p><?php //echo $rs['zlfot_datestart']; ?></p>
@@ -125,10 +105,20 @@
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                         <div class="row">
                             <div class="col-xl-3 col-lg-3 col-md-4 col-sm-4 col-4">
-                                <p>วันที่บัตรหมดอายุ :</p>
+                                <p>Lineid :</p>
+                            </div>
+                            <div class="col-xl-9 col-lg- col-md-8 col-sm-8 col-8">
+                                <p><?php //echo $rs['zlfot_datestart']; ?></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                        <div class="row">
+                            <div class="col-xl-3 col-lg-3 col-md-4 col-sm-4 col-4">
+                                <p>ที่อยู่ :</p>
                             </div>
                             <div class="col-xl-9 col-lg-9 col-md-8 col-sm-8 col-8">
-                                <p><?php //echo $rs['zlfot_dateend']; ?></p>
+                                <p><?php  echo $rs['zlfotcard_address']; ?></p>
                             </div>
                         </div>
                     </div>
