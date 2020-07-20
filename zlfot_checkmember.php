@@ -29,7 +29,7 @@
 ?>
 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" id="maincontent" style="background-color: #FFFFFF;">
     
-        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 pb-5" style="border-bottom: 5px solid #F5F5F5;">
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 pb-5">
             <div class="row">
                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mb-3 mt-3">
                     <h4>ตรวจสอบรายชื่อสมาชิกสมาชิก</h4>
@@ -66,9 +66,15 @@
         if($rs){
                 if($rs['zlfotmember_id']){
                 ?>
-                                     <div class="ml-auto mr-3">
-                                        <a href="admin_index.php?url=zlfot_add_card.php&id=<?php echo $rs['zlfotmember_id'];?>" class="btn btn-success col-md-12 zloft_bt2" title="เพิ่มสมาชิกสโมสรผู้รักสวนสัตว์"><i class="fas fa-plus zloft-f2"></i><i class="far fa-id-card zloft-f ml-2"></i></a>
-                                    </div>
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                    <div class="row">
+                        <div class="col-xl-5 col-lg-5 col-md-4"></div>
+                        <div class="col-xl-2 col-lg-2 col-md-4">
+                            <a href="admin_index.php?url=zlfot_add_card.php&id=<?php echo $rs['zlfotmember_id'];?>" class="btn btn-success col-md-12 zloft_bt2" title="เพิ่มบัตรสมาชิกสโมสรผู้รักสวนสัตว์"><i class="fas fa-plus zloft-f2"></i><i class="far fa-id-card zloft-f ml-2"></i></a>
+                        </div>
+                        <div class="col-xl-5 col-lg-5 col-md-4"></div>
+                    </div>
+                </div>
                     <?php } ?>
                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-5 mb-5">
                     <div class="row">
