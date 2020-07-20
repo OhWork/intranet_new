@@ -72,6 +72,12 @@
 				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 showmsg">
                                         <?php echo $txtreceipt; ?>
 				</div>
+                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-1 showmsg">
+					<?php echo $lbdetail; ?>
+				</div>
+				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 showmsg">
+					<?php echo $txtdetail; ?>
+				</div>
 				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3" style="margin-bottom:16px;">
 					<div class="row">
 						<div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
