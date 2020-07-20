@@ -41,21 +41,16 @@
 		$rsfix = $db->update('subzoo',$data,'subzoo_id',$_POST['subzoo_id']);
 
 	}else{
-	$rs = $db->insert('zlfot',array(
-	'zlfot_code' => $nextId,
-	'zlfot_nameth' => $_POST['zlfot_nameth'],
-	'zlfot_nameen' => $_POST['zlfot_nameen'],
-                'zlfot_tel' => $_POST['zlfot_tel'],
-               	'zlfot_address' => $_POST['zlfot_address'],
-                'zlfot_receipt' => $_POST['zlfot_receipt'],
-	'zlfot_datereg' => $_POST['zlfot_datereg'],
-                'zlfot_datestart' => $_POST['zlfot_datestart'],
-                'zlfot_dateend' => $dateend,
-                'zlfot_status' => $_POST['zlfot_status'],
-                'zlfot_email' => $_POST['zlfot_email'],
-                'zlfot_detail' => $_POST['zlfot_detail'],
+	$rs = $db->insert('zlfotcard',array(
+	'zlfotcard_code' => $nextId,
+                'zlfotcard_receipt' => $_POST['zlfotcard_receipt'],
+	'zlfotcard_datereg' => $_POST['zlfotcard_datereg'],
+                'zlfotcard_datestart' => $_POST['zlfotcard_datestart'],
+                'zlfotcard_dateend' => $dateend,
+                'zlfotcard_detail' => $_POST['zlfotcard_detail'],
                  'eventzlfot_eventzlfot_id' => $_POST['eventzlfot_eventzlfot_id'],
 	'typezlfot_typezlfot_id' => $_POST['typezlfot_typezlfot_id'],
+            'zlfotmeber_zlfotmember_id' => $_POST['zlfotmeber_zlfotmember_id'],
 	'user_user_id' => $_POST['user_user_id']
 	));
 	}

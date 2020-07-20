@@ -1,7 +1,7 @@
 <?php
     if (!empty($_SESSION['user_name'])):
      $id = $_SESSION['subzoo_zoo_zoo_id'];
-
+    $member_id = $_GET['id'];
     $form = new form();
     $lbdatestart = new label('วันที่สมัคร');
     $lbcode = new label('เลขที่สมาชิก');
@@ -12,9 +12,9 @@
      $lbzoo = new label('สมัครจาก');
      $lbreceipt = new label('เลขที่ใบเสร็จ');
     $lbdetail = new label('หมายเหตุ');
-     $txtdetail = new textArea('zlfot_detail','form-control','','','5','5','');
-     $txtbd = new datetimepicker('zlfot_bd','datetimepicker1','','form-control datetimepicker-input','date-form dayinbox col-md-12 form-horizontal control-group controls input-group','input-group date','datetimepicker1','#datetimepicker1','','');
-     $txtdatestart = new datetimepicker('zlfot_datestart','datetimepicker2','','form-control datetimepicker-input','date-form dayinbox col-md-12 form-horizontal control-group controls input-group','input-group date','datetimepicker2','#datetimepicker2','','');
+      $txtreceipt = new textfield('zlfotcard_receipt','','col-12 form-control','');
+     $txtdetail = new textArea('zlfotcard_detail','form-control','','','5','5','');
+     $txtdatestart = new datetimepicker('zlfotcard_datestart','datetimepicker2','','form-control datetimepicker-input','date-form dayinbox col-md-12 form-horizontal control-group controls input-group','input-group date','datetimepicker2','#datetimepicker2','','');
      $selectevent = new SelectFromDB();
   $selectevent->name = 'eventzlfot_eventzlfot_id';
   $selectevent->lists = 'โปรดระบุ กิจกรรม';
@@ -33,16 +33,16 @@
             $zoo = $rszoo['zoo_name'];
     }
     $button = new buttonok("เพิ่มบัตรสมัคร","","btn btn-success btn-block bt3success col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","");
-    echo $form->open("form_reg","","col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","zlfot_insert_member.php","");
+    echo $form->open("form_reg","","col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","zlfot_insert_card.php","");
  ?>
  <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" style="padding-top:8px;" id="maincontent">
 	<div class="row">
 		<div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3"></div>
 		<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6" style="padding-top:16px;background-color:#ffffff;border:solid 1px #E0E0E0;border-radius:7px;">
 			<div class="row">
-				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 alltxh">
+		<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 alltxh">
 					<h4>สมัครสมาชิกสโมสรผู้รักสวนสัตว์แห่งประเทศไทย</h4>
-				</div>
+		</div>
                                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-1 showmsg">
 					<?php echo $lbzoo."   ".$zoo;  ?>
 				</div>
@@ -76,8 +76,9 @@
 					<div class="row">
 						<div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
                                                                                                 <input type='hidden' name='zoo_code' value='<?php echo $zoo_code; ?>'/>
-                                                                                                <input type='hidden' name='zlfot_status' value='R'>
-                                                                                                <input type='hidden' name='zlfot_datereg' value='<?php echo date("Y-m-d"); ?>'/>
+                                                                                                <input type='hidden' name='zlfotmeber_zlfotmember_id' value='<?php echo $member_id; ?>'/>
+                                                                                                <input type='hidden' name='zlfotcard_stsfw' value='R'>
+                                                                                                <input type='hidden' name='zlfotcard_datereg' value='<?php echo date("Y-m-d"); ?>'/>
     						<input type='hidden' name='user_user_id' value='<?php echo $_SESSION['user_id']; ?>'/>
 						</div>
 						<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6">
