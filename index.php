@@ -11,7 +11,7 @@ error_reporting(0);
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-<title>องค์การสวนสัตว์</title>
+<title>องค์การสวนสัตว์แห่งประเทศไทย</title>
 	        <?php include 'inc_js.php';
               include 'form/main_form.php';
               include 'form/gridview.php';
@@ -42,21 +42,12 @@ error_reporting(0);
 	</head>
 <body>
 			<nav class="navbar navbar-expand-lg navbar-dark bg-dark printdisplaynone">
-				<a class="navbar-brand brandedit" href="#"><h4>องค์การสวนสัตว์ ในพระบรมราชูปถัมภ์</h4></a>
+				<a class="navbar-brand brandedit" href="#"><h4>องค์การสวนสัตว์แห่งประเทศไทย</h4></a>
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 				</button>
 				<div class="collapse navbar-collapse" id="navbarCollapse">
 					<ul class="navbar-nav mr-auto">
-<!--           <li class="nav-item active">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" href="#">Disabled</a>
-          </li> -->
 					</ul>
 					<div class="form-inline">
 						<a class="btn lgn" style="border:none;padding-top:10px;padding-bottom:10px;padding-right:0;border-right:1px solid #1DE9B6;border-radius:0px;" href="http://www.zoothailand.org/ewt_news.php?nid=246">

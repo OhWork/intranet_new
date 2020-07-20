@@ -23,12 +23,12 @@
 	$user_zoo = $_SESSION['subzoo_zoo_zoo_id'];
                 $zoo = $_GET['zoo'];
                   $form = new form();
-                $txtcode = new textfield('zlfotmember_nameth','','form-control zlfot_inp','','');
+                $txtname = new textfield('zlfotmember_nameth','zlfotmember_nameth','form-control zlfot_inp','','');
 	$button = new buttonok('','','btn btn-primary col-12 zloft_bt fas fa-search','submit');
 	echo $form->open('','','col-12','','');
 ?>
 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" id="maincontent" style="background-color: #FFFFFF;">
-    <div class="row">
+    
         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 pb-5" style="border-bottom: 5px solid #F5F5F5;">
             <div class="row">
                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mb-3 mt-3">
@@ -37,12 +37,12 @@
                             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mb-3">
 				<div class="row">
                                     <div class="col-xl-3 col-lg-4 col-md-5">
-                                        <p class="pt-4 pl-3 mb-0" style="color: #4e555b">กรุณากรอกหมายเลขบัตรสมาชิก</p>
+                                        <p class="pt-4 pl-3 mb-0" style="color: #4e555b">กรุณากรอกชื่อสมาชิก</p>
                                     </div>
                                     <div class="col-xl-3 col-lg-4 col-md-5 col-sm-12 col-12">
                                         <div class="row">
                                             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 pr-0 mt-3">
-                                                <?php echo $txtcode ?>
+                                                <?php echo $txtname ?>
                                             </div>
                                         </div>
                                     </div>
@@ -58,16 +58,12 @@
 
 <?php
 	echo $form->close();
-	if (isset($_POST['submit'])) {
+	if (isset($_POST['submit'])){
 
             
                 isset($_POST['zlfotmember_nameth'])?$zlfotmember_nameth  = $_POST['zlfotmember_nameth']:$zlfotmember_nameth='';
-                $rs = $db->findByPK33('zlfotmember','user','zoo','zlfotmember.user_user_id','user.user_id','user.subzoo_zoo_zoo_id','zoo.zoo_id','zlfotmember_nameth',$zlfotmember_nameth)->executeAssoc();
-                if($rs){
-    echo "มา";
-}else{
-    echo "NO";
-}    
+                $rs = $db->findByPK('zlfotmember','zlfotmember_nameth',"'$zlfotmember_nameth'")->executeAssoc();  
+        if($rs){
                 if($rs['zlfotmember_id']){
                 ?>
                                      <div class="ml-auto mr-3">
@@ -144,13 +140,42 @@
                         <div class="col-xl-3 col-lg-3 col-md-1"></div>
                     </div>
                 </div>
-        
 <?php
+        }else{
+        echo 'ไม่พบข้อมูล';
         }
+        }
+        
 ?>
         
-    </div>
-</div>
-    </div>     
+    
+</div>     
 <?php endif;?>
+<script>
+        $( "#zlfotmember_nameth" ).autocomplete({ // ใช้งาน autocomplete กับ input text id=tags
+            minLength: 0, // กำหนดค่าสำหรับค้นหาอย่างน้อยเป็น 0 สำหรับใช้กับปุ่ใแสดงทั้งหมด
+            source: "zlfot_get_member.php", // กำหนดให้ใช้ค่าจากการค้นหาในฐานข้อมูล
+            open:function(){ // เมื่อมีการแสดงรายการ autocomplete
+                var valInput=$(this).val(); // ดึงค่าจาก text box id=tags มาเก็บที่ตัวแปร
+                if(valInput!=""){ // ถ้าไม่ใช่ค่าว่าง
+                    $(".ui-menu-item a").each(function(){ // วนลูปเรียกดูค่าทั้งหมดใน รายการ autocomplete
+                        var matcher = new RegExp("("+valInput+")", "ig" ); // ตรวจสอบค่าที่ตรงกันในแต่ละรายการ กับคำค้นหา
+                        var s=$(this).text();
+                        var newText=s.replace(matcher, "<b>$1</b>");    //      แทนค่าที่ตรงกันเป็นตัวหนา
+                        $(this).html(newText); // แสดงรายการ autocomplete หลังจากปรับรูปแบบแล้ว
+                    });
+                }
+            },
+            select: function( event, ui ) {
+                // สำหรับทดสอบแสดงค่า เมื่อเลือกรายการ
+              //console.log( ui.item ?
+               //   "Selected: " + ui.item.label :
+                //  "Nothing selected, input was " + this.value);
+                $("#ipzpo_address").val(ui.item.id); // เก็บ id ไว้ใน hiden element ไว้นำค่าไปใช้งาน
+                //setTimeout(function(){
+                 // $("#h_input_q").parents("form").submit(); // เมื่อเลือกรายการแล้วให้ส่งค่าฟอร์ม ทันที
+           //},500);
+            }
+        });
+</script>
 
