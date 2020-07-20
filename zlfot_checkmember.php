@@ -65,6 +65,7 @@
                 $rs = $db->findByPK('zlfotmember','zlfotmember_nameth',"'$zlfotmember_nameth'")->executeAssoc();  
         if($rs){
                 if($rs['zlfotmember_id']){
+                   $member_id =  $rs['zlfotmember_id'];
                 ?>
                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                     <div class="row">
@@ -146,7 +147,20 @@
                         <div class="col-xl-3 col-lg-3 col-md-1"></div>
                     </div>
                 </div>
+    <p>ประวัติการเป็นสมาชิก</p>
 <?php
+                                                         $columns = array('zlfotmember_nameth','zlfot_nameth','zlfot_tel','zlfot_datestart','zoo_name');
+                                                         $rs = $db->findByPK34DESC('zlfotmember','zlfotcard','typezlfot','zlfotcard.zlfotmember_zlfotmember_id','zlfotmember.zlfotmember_id','zlfotcard.typezlfot_typezloft_id','typezloft.typezlfot_id','zlfotmember_zlfotmember_id',$member_id,'zlfotcard_stsfw','"C"','zlfotcard_id')->execute();
+                                                        $grid = new gridView();
+                                                                    //$grid->pr = 'zlfotmember_id';
+                                                                    $grid->header = array('<b><center>รหัส</center></b>','<b><center>ชื่อ - นามสกุล</center></b>','<b><center>เบอร์โทรศัพท์</center></b>','<b><center>วันที่</center></b>','<b><center>จาก</center></b>','<b><center>#</center></b>');
+                                                                    $grid->width = array('12%','15%','15%','25%','25%','8%');
+                                                                    //$grid->edit = 'admin_index.php?url=zlfot_member.php';
+                                                                    $grid->name = 'table';
+                                                                    //$grid->edittxt ='รายละเอียด';
+                                                                    $grid->renderFromDB($columns,$rs);
+
+
         }else{
         echo 'ไม่พบข้อมูล';
         }

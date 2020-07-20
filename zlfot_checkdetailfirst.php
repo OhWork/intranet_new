@@ -3,7 +3,7 @@
     $id =  $_GET['id'];
     $form = new form();
     $button = new buttonok("ยืนยันการตรวจสอบ","","btn btn-success btn-block col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","");
-    $rs = $db->findByPK34('zlfotmember','user','zoo','zlfotmember.user_user_id','user.user_id','user.subzoo_zoo_zoo_id','zoo.zoo_id','zlfotmember_id',$id)->executeRow();
+    $rs = $db->findByPK34('zlfotmember','zlfotcard','user','zoo','zlfotmember.user_user_id','user.user_id','user.subzoo_zoo_zoo_id','zoo.zoo_id','zlfotmember_id',$id)->executeRow();
     echo $form->open("form_reg","frmMain","col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3","zlfot_insert_updatestatus.php","");
 	?>
 	<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
@@ -31,7 +31,7 @@
 								<p>รหัสบัตรสมาชิก</p>
 							</div>
 							<div class="col-xl-8 col-lg-8 col-md-6 col-sm-12 col-12">
-								<?php echo $rs['zlfot_code']; ?>
+								<?php echo $rs['zlfotcard_code']; ?>
 							</div>
 						</div>
 					</div>
@@ -41,7 +41,7 @@
 								<p>ชื่อภาษาไทย</p>
 							</div>
 							<div class="col-xl-8 col-lg-8 col-md-6 col-sm-12 col-12">
-								<?php echo $rs['zlfot_nameth']; ?>
+								<?php echo $rs['zlfotmember_nameth']; ?>
 							</div>
 						</div>
 					</div>
@@ -51,7 +51,7 @@
 								<p>ชื่อภาษาอังกฤษ</p>
 							</div>
 							<div class="col-xl-8 col-lg-8 col-md-6 col-sm-12 col-12">
-								<?php echo $rs['zlfot_nameen']; ?>
+								<?php echo $rs['zlfotmember_nameen']; ?>
 							</div>
 						</div>
 					</div>
@@ -61,7 +61,7 @@
 								<p>ที่อยู่</p>
 							</div>
 							<div class="col-xl-8 col-lg-8 col-md-6 col-sm-12 col-12">
-								<p><?php echo $rs['zlfot_address']; ?></p>
+								<p><?php echo $rs['zlfotmmember_address']; ?></p>
 							</div>
 						</div>
 					</div>
@@ -71,7 +71,7 @@
 								<p>วันที่ลงทะเบียนเข้าสู่ระบบ</p>
 							</div>
 							<div class="col-xl-8 col-lg-8 col-md-6 col-sm-12 col-12">
-								<?php echo $rs['zlfot_datereg']; ?>
+								<?php echo $rs['zlfotmember_datereg']; ?>
 							</div>
 						</div>
 					</div>
@@ -81,7 +81,7 @@
 								<p>วันที่สมัคร</p>
 							</div>
 							<div class="col-xl-8 col-lg-8 col-md-6 col-sm-12 col-12">
-								<?php echo $rs['zlfot_datestart']; ?>
+								<?php echo $rs['zlfotmember_datestart']; ?>
 							</div>
 						</div>
 					</div>
@@ -91,7 +91,7 @@
 								<p>วันที่หมดอายุ</p>
 							</div>
 							<div class="col-xl-8 col-lg-8 col-md-6 col-sm-12 col-12">
-								<?php echo $rs['zlfot_dateend']; ?>
+								<?php echo $rs['zlfotmember_dateend']; ?>
 							</div>
 						</div>
 					</div>
