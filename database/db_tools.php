@@ -345,6 +345,10 @@
 			$this->sql = "SELECT * FROM $table1,$table2,$table3,$table4,$table5 WHERE $column1 = $value1 && $column2 = $value2 && $column3 = $value3 && $column4 = $value4 && $column5 = $value5";
 			return $this;
 		}
+                                 function findByPK55DESC($table1,$table2,$table3,$table4,$table5,$column1,$value1,$column2,$value2,$column3,$value3,$column4,$value4,$column5,$value5,$order){
+			$this->sql = "SELECT * FROM $table1,$table2,$table3,$table4,$table5 WHERE $column1 = $value1 && $column2 = $value2 && $column3 = $value3 && $column4 = $value4 && $column5 = $value5 ORDER BY $order DESC";
+			return $this;
+		}
 		function findByPK34ASC($table,$table2,$table3,$column1,$value1,$column2,$value2,$column3,$value3,$column4,$value4,$order){
     		$this->sql = "SELECT * FROM $table,$table2,$table3 WHERE $column1 = $value1 AND $column2 = $value2 AND $column3 = $value3 AND $column4 = $value4 ORDER BY $order ASC";
     		return $this;
