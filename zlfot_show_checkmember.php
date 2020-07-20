@@ -68,7 +68,7 @@
                                                         $link = "admin_index.php?url=zlfot_checkdetailfouth.php";
                                                           }
                                                         $grid = new gridView();
-                                                                    $grid->pr = 'zlfot_id';
+                                                                    $grid->pr = 'zlfotcard_id';
                                                                     $grid->header = $header;
                                                                     $grid->width = array('12%','15%','15%','25%','25%','8%');
                                                                     $grid->edit = $link;
