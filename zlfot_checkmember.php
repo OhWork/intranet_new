@@ -64,18 +64,7 @@
 ?>
 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mb-3" style="background-color: #FFFFFF;">
     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mb-3 mt-3">
-        <h4 style="color: #4e555b">ต่ออายุบัตรสโมสรผู้รักสวนสัตว์</h4>
-    </div>
-    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-        <div class="row">
-            <div class="col-xl-3 col-lg-4 col-md-5">
-                <p class="pt-2 pl-3 mb-0" style="color: #4e555b">เพิ่มบัตรสมาชิกสโมสรผู้รักสวนสัตว์</p>
-            </div>
-            <div class="col-xl-2 col-lg-2 col-md-4">
-                <a href="admin_index.php?url=zlfot_add_card.php&id=<?php echo $rs['zlfotmember_id'];?>" class="btn btn-success col-md-12" title="เพิ่มบัตรสมาชิกสโมสรผู้รักสวนสัตว์"><i class="fas fa-plus"></i><i class="far fa-id-card ml-2"></i></a>
-            </div>
-            <div class="col-xl-7 col-lg-6 col-md-3"></div>
-        </div>
+        <h4 style="color: #4e555b">ประวัติสมาชิกสโมสรผู้รักสวนสัตว์</h4>
     </div>
 <?php } ?>
     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-5 mb-5">
@@ -151,7 +140,10 @@
 </div>
 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mb-3" style="background-color: #FFFFFF;">
     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mb-3 mt-3">
+        <div class="row">
         <h4 style="color: #4e555b">ประวัติการเป็นสมาชิก</h4>
+        <a href="admin_index.php?url=zlfot_add_card.php&id=<?php echo $rs['zlfotmember_id'];?>" class="btn btn-success pl-4 pr-4 ml-auto" title="เพิ่มบัตรสมาชิกสโมสรผู้รักสวนสัตว์"><i class="fas fa-plus"></i><i class="far fa-id-card ml-2"></i></a>
+        </div>
     </div>
     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 <?php
