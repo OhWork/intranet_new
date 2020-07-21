@@ -10,6 +10,7 @@
             $lbdate = new label('วันที่จัดส่ง');
     $txtpost = new textfield('sendcard_code','','form-control','','');
     $txtdate = new datetimepicker('sendcard_date','datetimepicker1','','form-control datetimepicker-input','date-form dayinbox col-md-12 form-horizontal control-group controls input-group','input-group date','datetimepicker1','#datetimepicker1','','');
+    $txtdate2 = new datetimepicker('sendcard_date','datetimepicker2','','form-control datetimepicker-input','date-form dayinbox col-md-12 form-horizontal control-group controls input-group','input-group date','datetimepicker2','#datetimepicker2','','');
         $button = new buttonok("บันทึก","","btn btn-success btn-block bt3success col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","");
                $rs = $db->findByPK88('zlfotmember','zlfotcard','typezlfot','subdistricts','districts','provinces','user','zoo',
                 'zlfotmember.user_user_id','user.user_id',
@@ -115,7 +116,21 @@
                     </div>
                 </div>
             </div>
-            <div id="nocompleteSettings" style="display:none"></div>
+            <div id="nocompleteSettings" style="display:none">
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                    <div class="row">
+                        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
+                            <p><?php echo $lbdate; ?></p>
+                        </div>
+                        <div class="col-xl-8 col-lg-8 col-md-6 col-sm-12 col-12">
+                            <div class="row">
+                                <?php echo $txtdate2; ?>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mb-4">
 		<div class="row">
                 <input type='hidden' name='zlfotcard_stsfw' value='T'> 
@@ -146,6 +161,15 @@
   }
 	$(function () {
         $('#datetimepicker1').datetimepicker({
+	        format:'YYYY-MM-DD',
+	        useCurrent: false,
+	        ignoreReadonly: true,
+            sideBySide: true,
+            allowInputToggle: true,
+	        locale:moment.locale('th'),
+	        stepping: 30
+        });
+        $('#datetimepicker2').datetimepicker({
 	        format:'YYYY-MM-DD',
 	        useCurrent: false,
 	        ignoreReadonly: true,
