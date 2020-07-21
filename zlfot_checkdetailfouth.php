@@ -9,8 +9,8 @@
             echo $form->open("form_reg","frmMain","col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3","zlfot_insert_updatestatus.php","");
             echo $lbreciptfin;
             echo $txtreciptfin;
-           ?> <input type='hidden' name='zlfot_status' value='C'> 
-               <input type='hidden' name='zlfot_id' value=<?php echo $id; ?>> <?php
+           ?> <input type='hidden' name='zlfotcard_stsfw' value='C'> 
+               <input type='hidden' name='zlfotcard_id' value=<?php echo $id; ?>> <?php
             echo $button;
              echo $form->close();
              endif;
