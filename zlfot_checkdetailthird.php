@@ -74,6 +74,16 @@
     <div class="row">
 	<div class="col-xl-2 col-lg-2 col-md-1"></div>
 	<div class="col-xl-8 col-lg-8 col-md-10 col-sm-12 col-12" style="padding-top:16px;background-color:#ffffff;border:solid 1px #E0E0E0;border-radius:7px;font-size: 18px;">
+            <div class="btn-group btn-group-toggle col-12" data-toggle="buttons">
+	<label class="btn btn-success active col-6">
+		<input type="radio" name="problem_status" value="Y" onchange="swapConfig(this)" id="complete" autocomplete="off" checked> ดำเนินการจัดส่ง
+	</label>
+	<label class="btn btn-danger col-6">
+	<input type="radio" name="problem_status" value="S" onchange="swapConfig(this)" id="nocomplete" autocomplete="off"> มารับด้วยตนเอง
+	</label>
+	</div>
+            
+            <div id="completeSettings">
             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 		<div class="row">
                     <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
@@ -101,6 +111,8 @@
                 </div>
                 
             </div>
+            </div>
+            <div id="nocompleteSettings" style="display:none"></div>
             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mb-4">
 		<div class="row">
                 <input type='hidden' name='zlfotcard_stsfw' value='T'> 
@@ -121,6 +133,14 @@
              
              ?>
 <script>
+    function swapConfig(x) {
+    var radioName = document.getElementsByName(x.name);
+    for(i = 0 ; i < radioName.length; i++){
+      document.getElementById(radioName[i].id.concat("Settings")).style.display="none";
+    }
+    document.getElementById(x.id.concat("Settings")).style.display="initial";
+
+  }
 	$(function () {
         $('#datetimepicker1').datetimepicker({
 	        format:'YYYY-MM-DD',
