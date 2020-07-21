@@ -1,7 +1,7 @@
 <?php
 	$id = $_GET['id'];
 
-	$r = $db->findByPKLimit('conferroom','conferroom_id',$id,100)->executeRow();
+	$r = $db->findByPK('conferroom','conferroom_id',$id)->executeRow();
 	$confer = $r['conferroom_name'];
 ?>
 <!DOCTYPE html>
