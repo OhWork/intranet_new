@@ -64,25 +64,21 @@
     	}else if($rsfix){
             echo "<div class='statusok'>แก้ไขสำเร็จ</div>";
                     }
-                    switch ($_POST['zlfot_status']){
+                    switch ($_POST['zlfotcard_stsfw']){
                           case "P":
                              $link = "admin_index.php?url=zlfot_show_checkmember.php&type=2";
-                              header( "Refresh: 2; $link" );
                             break;
                           case "S":
                             $link = "admin_index.php?url=zlfot_show_checkmember.php&type=3";
-                              header( "Refresh: 2; $link" );
                             break;
                           case "T":
                             $link = "admin_index.php?url=zlfot_show_checkmember.php&type=4";
-                              header( "Refresh: 2; $link" );
                             break;
                         case "C":
                             $link = "admin_index.php?url=zlfot_show_member.php";
-                            header( "Refresh: 2; $link" );
                             break;
                     }
-            
+            header( "Refresh: 2; $link" );
 }
 ?>
 </html>
