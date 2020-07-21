@@ -12,6 +12,7 @@
                 'zlfotmember.zlfotmember_districts_id','districts.districts_id',
                 'zlfotmember.zlfotmember_subdistricts_id','subdistricts.subdistricts_id',
                 'zlfotmember_id',$id)->executeRow(); 
+                $member_id = $rs['zlfotmember_id'];
     echo $form->open("form_reg","frmMain","col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3","zlfot_insert_updatestatus.php","");
 	?>
 	<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mb-3" style="background-color: #FFFFFF;">
@@ -114,7 +115,6 @@
     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mb-3 mt-3">
         <div class="row">
         <h4 style="color: #4e555b">ประวัติการเป็นสมาชิก</h4>
-        <a href="admin_index.php?url=zlfot_add_card.php&id=<?php echo $rs['zlfotmember_id'];?>" class="btn btn-success pl-4 pr-4 ml-auto" title="เพิ่มบัตรสมาชิกสโมสรผู้รักสวนสัตว์"><i class="fas fa-plus"></i><i class="far fa-id-card ml-2"></i></a>
         </div>
     </div>
     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
