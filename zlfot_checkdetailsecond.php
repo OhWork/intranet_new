@@ -17,7 +17,7 @@
 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
     <div class="row">
 	<div class="col-xl-2 col-lg-2 col-md-1"></div>
-	<div class="col-xl-8 col-lg-8 col-md-10 col-sm-12 col-12" style="padding-top:16px;background-color:#ffffff;border:solid 1px #E0E0E0;border-radius:7px;font-size: 18px;">
+	<div class="col-xl-8 col-lg-8 col-md-10 col-sm-12 col-12" style="padding-top:16px;background-color:#ffffff;border:solid 1px #E0E0E0;font-size: 18px;">
             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mb-4">
 		<div class="row">
                     <h4>ข้อมูลที่ใช้พิมพ์บัตรสมาชิก</h4>
