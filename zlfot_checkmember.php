@@ -4,6 +4,9 @@
                 "ordering": false,
                 "lengthMenu": false,
                 "searching": false,
+                "paging":   false,
+                "ordering": false,
+                "info":     false,
 
                 "language": {
                     "lengthMenu": "แสดง _MENU_ แถวต่อหน้า",
@@ -21,9 +24,9 @@
 	include_once 'connect.php';
     date_default_timezone_set('Asia/Bangkok');
 	$user_zoo = $_SESSION['subzoo_zoo_zoo_id'];
-                $zoo = $_GET['zoo'];
-                  $form = new form();
-                $txtname = new textfield('zlfotmember_nameth','zlfotmember_nameth','form-control zlfot_inp','','');
+        $zoo = $_GET['zoo'];
+        $form = new form();
+        $txtname = new textfield('zlfotmember_nameth','zlfotmember_nameth','form-control zlfot_inp','','');
 	$button = new buttonok('','','btn btn-primary col-12 zloft_bt fas fa-search','submit');
 	echo $form->open('','','col-12','','');
 ?>
@@ -73,116 +76,116 @@
 <?php } ?>
     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-5 mb-5">
         <div class="row">
-            <div class="col-xl-3 col-lg-3 col-md-1"></div>
-            <div class="col-xl-6 col-lg-6 col-md-10 col-sm-12 col-12">
+            <div class="col-xl-2 col-lg-2 col-md-1"></div>
+            <div class="col-xl-8 col-lg-8 col-md-10 col-sm-12 col-12">
                 <div class="row">
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                         <div class="row">
-                            <div class="col-xl-3 col-lg-3 col-md-4 col-sm-4 col-4">
+                            <div class="col-xl-3 col-lg-3 col-md-4 col-sm-4 col-4 pt-2">
                                 <p>ชื่อ-นามสกุล :</p>
                             </div>
-                            <div class="col-xl-9 col-lg-9 col-md-8 col-sm-8 col-8">
+                            <div class="col-xl-9 col-lg-9 col-md-8 col-sm-8 col-8 form-control">
                                 <p><?php echo $rs['zlfotmember_nameth']; ?></p>
                             </div>
                         </div>
                     </div>
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                         <div class="row">
-                            <div class="col-xl-3 col-lg-3 col-md-4 col-sm-4 col-4">
+                            <div class="col-xl-3 col-lg-3 col-md-4 col-sm-4 col-4 pt-2">
                                 <p>ชื่อ-นามสกุล(ภาษาอังกฤษ) :</p>
                             </div>
-                            <div class="col-xl-9 col-lg-9 col-md-8 col-sm-8 col-8">
+                            <div class="col-xl-9 col-lg-9 col-md-8 col-sm-8 col-8 form-control">
                                 <p><?php echo $rs['zlfotmember_nameen']; ?></p>
                             </div>
                         </div>
                     </div>
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                         <div class="row">
-                            <div class="col-xl-3 col-lg-3 col-md-4 col-sm-4 col-4">
+                            <div class="col-xl-3 col-lg-3 col-md-4 col-sm-4 col-4 pt-2">
                                 <p>เบอร์โทรศัพท์ :</p>
                             </div>
-                            <div class="col-xl-9 col-lg-9 col-md-8 col-sm-8 col-8">
+                            <div class="col-xl-9 col-lg-9 col-md-8 col-sm-8 col-8 form-control">
                                 <p><?php echo $rs['zlfotmember_tel']; ?></p>
                             </div>
                         </div>
                     </div>
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                         <div class="row">
-                            <div class="col-xl-3 col-lg-3 col-md-4 col-sm-4 col-4">
+                            <div class="col-xl-3 col-lg-3 col-md-4 col-sm-4 col-4 pt-2">
                                 <p>วันเกิด :</p>
                             </div>
-                            <div class="col-xl-9 col-lg-9 col-md-8 col-sm-8 col-8">
+                            <div class="col-xl-9 col-lg-9 col-md-8 col-sm-8 col-8 form-control">
                                 <p><?php echo $rs['zlfotmember_bd']; ?></p>
                             </div>
                         </div>
                     </div>
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                         <div class="row">
-                            <div class="col-xl-3 col-lg-3 col-md-4 col-sm-4 col-4">
+                            <div class="col-xl-3 col-lg-3 col-md-4 col-sm-4 col-4 pt-2">
                                 <p>อีเมล์ :</p>
                             </div>
-                            <div class="col-xl-9 col-lg- col-md-8 col-sm-8 col-8">
+                            <div class="col-xl-9 col-lg- col-md-8 col-sm-8 col-8 form-control">
                                 <p><?php echo $rs['zlfotmember_email']; ?></p>
                             </div>
                         </div>
                     </div>
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                         <div class="row">
-                            <div class="col-xl-3 col-lg-3 col-md-4 col-sm-4 col-4">
+                            <div class="col-xl-3 col-lg-3 col-md-4 col-sm-4 col-4 pt-2">
                                 <p>LINE ID :</p>
                             </div>
-                            <div class="col-xl-9 col-lg- col-md-8 col-sm-8 col-8">
+                            <div class="col-xl-9 col-lg- col-md-8 col-sm-8 col-8 form-control">
                                 <p><?php echo $rs['zlfotmember_line']; ?></p>
                             </div>
                         </div>
                     </div>
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                         <div class="row">
-                            <div class="col-xl-3 col-lg-3 col-md-4 col-sm-4 col-4">
+                            <div class="col-xl-3 col-lg-3 col-md-4 col-sm-4 col-4 pt-2">
                                 <p>ที่อยู่ :</p>
                             </div>
-                            <div class="col-xl-9 col-lg-9 col-md-8 col-sm-8 col-8">
+                            <div class="col-xl-9 col-lg-9 col-md-8 col-sm-8 col-8 form-control">
                                 <p><?php  echo $rs['zlfotmember_address']; ?></p>
                             </div>
                         </div>
                     </div>
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                         <div class="row">
-                            <div class="col-xl-3 col-lg-3 col-md-4 col-sm-4 col-4">
+                            <div class="col-xl-3 col-lg-3 col-md-4 col-sm-4 col-4 pt-2">
                                 <p>แขวง/ตำบล :</p>
                             </div>
-                            <div class="col-xl-9 col-lg-9 col-md-8 col-sm-8 col-8">
+                            <div class="col-xl-9 col-lg-9 col-md-8 col-sm-8 col-8 form-control">
                                 <p><?php  echo $rs['subdistricts_nameth']; ?></p>
                             </div>
                         </div>
                     </div>
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                         <div class="row">
-                            <div class="col-xl-3 col-lg-3 col-md-4 col-sm-4 col-4">
+                            <div class="col-xl-3 col-lg-3 col-md-4 col-sm-4 col-4 pt-2">
                                 <p>เขต/อำเภอ :</p>
                             </div>
-                            <div class="col-xl-9 col-lg-9 col-md-8 col-sm-8 col-8">
+                            <div class="col-xl-9 col-lg-9 col-md-8 col-sm-8 col-8 form-control">
                                 <p><?php  echo $rs['districts_nameth']; ?></p>
                             </div>
                         </div>
                     </div>
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                         <div class="row">
-                            <div class="col-xl-3 col-lg-3 col-md-4 col-sm-4 col-4">
+                            <div class="col-xl-3 col-lg-3 col-md-4 col-sm-4 col-4 pt-2">
                                 <p>จังหวัด :</p>
                             </div>
-                            <div class="col-xl-9 col-lg-9 col-md-8 col-sm-8 col-8">
+                            <div class="col-xl-9 col-lg-9 col-md-8 col-sm-8 col-8 form-control">
                                 <p><?php  echo $rs['provinces_nameth']; ?></p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-xl-3 col-lg-3 col-md-1"></div>
+            <div class="col-xl-2 col-lg-2 col-md-1"></div>
         </div>
     </div>
 </div>
-<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mb-3" style="background-color: #FFFFFF;">
+<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mb-3 pb-3" style="background-color: #FFFFFF;">
     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mb-3 mt-3">
         <div class="row">
         <h4 style="color: #4e555b">ประวัติการเป็นสมาชิก</h4>
@@ -191,17 +194,15 @@
     </div>
     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 <?php
-                                                         $columns = array('zlfotcard_code','typezlfot_name','zlfotcard_datestart','zlfotcard_dateend');
-                                                         $rs = $db->findByPK34DESC('zlfotmember','zlfotcard','typezlfot','zlfotcard.zlfotmember_zlfotmember_id','zlfotmember.zlfotmember_id','zlfotcard.typezlfot_typezlfot_id','typezlfot.typezlfot_id','zlfotmember_zlfotmember_id',$member_id,'zlfotcard_stsfw','"C"','zlfotcard_id')->execute();
-                                                        $grid = new gridView();
-                                                                    $grid->header = array('<b><center>รหัสสมาชิก</center></b>','<b><center>ประเภทสมาชิก</center></b>','<b><center>วันที่สมัคร</center></b>','<b><center>วันที่หมดอายุ</center></b>');
-                                                                    $grid->width = array('25%','25%','25%','25%');
-                                                                    $grid->name = 'table';
-                                                                    $grid->renderFromDB($columns,$rs);
-
-
+    $columns = array('zlfotcard_code','typezlfot_name','zlfotcard_datestart','zlfotcard_dateend');
+    $rs = $db->findByPK34DESC('zlfotmember','zlfotcard','typezlfot','zlfotcard.zlfotmember_zlfotmember_id','zlfotmember.zlfotmember_id','zlfotcard.typezlfot_typezlfot_id','typezlfot.typezlfot_id','zlfotmember_zlfotmember_id',$member_id,'zlfotcard_stsfw','"C"','zlfotcard_id')->execute();
+    $grid = new gridView();
+        $grid->header = array('<b><center>รหัสสมาชิก</center></b>','<b><center>ประเภทสมาชิก</center></b>','<b><center>วันที่สมัคร</center></b>','<b><center>วันที่หมดอายุ</center></b>');
+        $grid->width = array('25%','25%','25%','25%');
+        $grid->name = 'table';
+        $grid->renderFromDB($columns,$rs);
         }else{
-            ?>
+?>
         <div class="alert alert-danger" role="alert">
   ไม่พบข้อมูล
 </div>

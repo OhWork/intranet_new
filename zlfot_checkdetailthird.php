@@ -26,7 +26,7 @@
 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
     <div class="row">
 	<div class="col-xl-2 col-lg-2 col-md-1"></div>
-	<div class="col-xl-8 col-lg-8 col-md-10 col-sm-12 col-12" style="padding-top:16px;background-color:#ffffff;border:solid 1px #E0E0E0;border-radius:7px;font-size: 18px;">
+	<div class="col-xl-8 col-lg-8 col-md-10 col-sm-12 col-12" style="padding-top:16px;background-color:#ffffff;border:solid 1px #E0E0E0;font-size: 18px;">
             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mb-4">
 		<div class="row">
                     <h2>การจัดส่งบัตรสมาชิก</h2>
@@ -41,22 +41,13 @@
                                 <label>ข้อมูลการจัดส่ง</label>
                             </div>
                             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                                <?php echo $rs['zlfotcard_code']; ?> <?php echo $rs['zlfotmember_nameth']; ?>
+                                <p class="mb-0"><?php echo $rs['zlfotcard_code']; ?> ชื่อผู้รับ : <?php echo $rs['zlfotmember_nameth']; ?></p>
                             </div>
                             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                                <?php echo $rs['zlfotmember_tel']; ?>
+                                <p class="mb-0">เบอร์ติดต่อ : <?php echo $rs['zlfotmember_tel']; ?></p>
                             </div>
                             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                                <p><?php echo $rs['zlfotmember_address']; ?></p>
-                            </div>
-                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                                <p><?php echo $rs['subdistricts_nameth']; ?></p>
-                            </div>
-                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                                <p><?php echo $rs['districts_nameth']; ?></p>
-                            </div>
-                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                                <p><?php echo $rs['provinces_nameth']; ?></p>
+                                <p class="mb-0"> ที่อยู่ : <?php echo $rs['zlfotmember_address']; ?> แขวง/ตำบล <?php echo $rs['subdistricts_nameth']; ?> <?php echo $rs['districts_nameth']; ?> <?php echo $rs['provinces_nameth']; ?></p>
                             </div>
                             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                                 <p><?php echo $rs['subdistricts_code']; ?></p>
@@ -73,44 +64,56 @@
 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-2">
     <div class="row">
 	<div class="col-xl-2 col-lg-2 col-md-1"></div>
-	<div class="col-xl-8 col-lg-8 col-md-10 col-sm-12 col-12" style="padding-top:16px;background-color:#ffffff;border:solid 1px #E0E0E0;border-radius:7px;font-size: 18px;">
-            <div class="btn-group btn-group-toggle col-12" data-toggle="buttons">
-	<label class="btn btn-success active col-6">
-		<input type="radio" name="sendcard_status" value="Y" onchange="swapConfig(this)" id="complete" autocomplete="off" checked> ดำเนินการจัดส่ง
-	</label>
-	<label class="btn btn-danger col-6">
-	<input type="radio" name="sendcard_status" value="N" onchange="swapConfig(this)" id="nocomplete" autocomplete="off"> มารับด้วยตนเอง
-	</label>
-	</div>
-            
-            <div id="completeSettings">
-            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-		<div class="row">
-                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
-                        <p><?php echo $lbpost; ?></p>
-                    </div>
-                    <div class="col-xl-8 col-lg-8 col-md-6 col-sm-12 col-12">
-                        <?php echo $selectpostoffice->selectFromTB('postoffice','postoffice_id','postoffice_name',''); ?>
-                    </div>
-                </div>
+	<div class="col-xl-8 col-lg-8 col-md-10 col-sm-12 col-12" style="padding-top:16px;background-color:#ffffff;border:solid 1px #E0E0E0;font-size: 18px;">
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mb-3">
                 <div class="row">
-                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
-                        <p><?php echo $lbpostcode; ?></p>
+                    <div class="col-xl-3 col-lg-2 col-md-1"></div>
+                    <div class="col-xl-6 col-lg-2 col-md-1 col-sm-12 col-12">
+                        <div class="btn-group btn-group-toggle col-12" data-toggle="buttons">
+                            <label class="btn btn-success active col-6">
+                                <input type="radio" name="sendcard_status" value="Y" onchange="swapConfig(this)" id="complete" autocomplete="off" checked> ดำเนินการจัดส่ง
+                            </label>
+                            <label class="btn btn-danger col-6">
+                                <input type="radio" name="sendcard_status" value="N" onchange="swapConfig(this)" id="nocomplete" autocomplete="off"> มารับด้วยตนเอง
+                            </label>
+                        </div>
                     </div>
-                    <div class="col-xl-8 col-lg-8 col-md-6 col-sm-12 col-12">
-                        <?php echo $txtpost; ?>
-                    </div>
+                    <div class="col-xl-3 col-lg-2 col-md-1"></div>
                 </div>
-                <div class="row">
-                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
-                        <p><?php echo $lbdate; ?></p>
-                    </div>
-                    <div class="col-xl-8 col-lg-8 col-md-6 col-sm-12 col-12">
-                        <?php echo $txtdate; ?>
-                    </div>
-                </div>
-                
             </div>
+            <div id="completeSettings">
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                    <div class="row">
+                        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
+                            <p><?php echo $lbpost; ?></p>
+                        </div>
+                        <div class="col-xl-8 col-lg-8 col-md-6 col-sm-12 col-12">
+                            <?php echo $selectpostoffice->selectFromTB('postoffice','postoffice_id','postoffice_name',''); ?>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                    <div class="row">
+                        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
+                            <p><?php echo $lbpostcode; ?></p>
+                        </div>
+                        <div class="col-xl-8 col-lg-8 col-md-6 col-sm-12 col-12">
+                            <?php echo $txtpost; ?>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                    <div class="row">
+                        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
+                            <p><?php echo $lbdate; ?></p>
+                        </div>
+                        <div class="col-xl-8 col-lg-8 col-md-6 col-sm-12 col-12">
+                            <div class="row">
+                                <?php echo $txtdate; ?>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div id="nocompleteSettings" style="display:none"></div>
             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mb-4">
