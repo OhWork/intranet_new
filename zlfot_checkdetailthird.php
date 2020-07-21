@@ -76,10 +76,10 @@
 	<div class="col-xl-8 col-lg-8 col-md-10 col-sm-12 col-12" style="padding-top:16px;background-color:#ffffff;border:solid 1px #E0E0E0;border-radius:7px;font-size: 18px;">
             <div class="btn-group btn-group-toggle col-12" data-toggle="buttons">
 	<label class="btn btn-success active col-6">
-		<input type="radio" name="problem_status" value="Y" onchange="swapConfig(this)" id="complete" autocomplete="off" checked> ดำเนินการจัดส่ง
+		<input type="radio" name="sendcard_status" value="Y" onchange="swapConfig(this)" id="complete" autocomplete="off" checked> ดำเนินการจัดส่ง
 	</label>
 	<label class="btn btn-danger col-6">
-	<input type="radio" name="problem_status" value="S" onchange="swapConfig(this)" id="nocomplete" autocomplete="off"> มารับด้วยตนเอง
+	<input type="radio" name="sendcard_status" value="N" onchange="swapConfig(this)" id="nocomplete" autocomplete="off"> มารับด้วยตนเอง
 	</label>
 	</div>
             
