@@ -16,7 +16,7 @@
                                          $data['zlfotcard_stsfw'] = $_POST['zlfot_stsfw'];
                                           $rsfix = $db->update('zlfotcard',$data,'zlfotcard_id',$_POST['zlfotcard_id']);
                                           if($_POST['sendcard_status'] =='Y'){
-                                          $rs = $db->insert('postoffice',array(
+                                          $rs = $db->insert('sendcard',array(
                                                     'sendcard_post' => $_POST['sendcard_post'],
                                                     'sendcard_status' => $_POST['sendcard_status'],
                                                     'sendcard_date' => $_POST['sendcard_date'],
@@ -24,7 +24,7 @@
                                                     'postoffice_postoffice_id' => $_POST['postoffice_postoffice_id']
                                                     ));
                                           }else if($_POST['sendcard_status'] =='N'){
-                                              $rs = $db->insert('postoffice',array(
+                                              $rs = $db->insert('sendcard',array(
                                                     'sendcard_status' => $_POST['sendcard_status'],
                                                     'sendcard_date' => $_POST['sendcard_date'],
                                                     'zlfotmember_zlfotmember_id' => $_POST['zlfotcard_id'],
