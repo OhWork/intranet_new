@@ -2,7 +2,7 @@
     if (!empty($_SESSION['user_name'])):
           $id =  $_GET['id'];
         $form = new form();
-        $button = new buttonok("ดำเนินการพิมพ์","","btn btn-success btn-block bt3success col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","");
+        $button = new buttonok("ดำเนินการพิมพ์เรียบร้อย","","btn btn-success btn-block bt3success col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","");
                $rs = $db->findByPK88('zlfotmember','zlfotcard','typezlfot','subdistricts','districts','provinces','user','zoo',
                 'zlfotmember.user_user_id','user.user_id',
                 'zlfotcard.zlfotmember_zlfotmember_id','zlfotmember.zlfotmember_id',
@@ -20,7 +20,7 @@
 	<div class="col-xl-8 col-lg-8 col-md-10 col-sm-12 col-12" style="padding-top:16px;background-color:#ffffff;border:solid 1px #E0E0E0;border-radius:7px;font-size: 18px;">
             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mb-4">
 		<div class="row">
-                    <h2>พิมพ์บัตรสมาชิก</h2>
+                    <h4>ข้อมูลที่ใช้พิมพ์บัตรสมาชิก</h4>
 		</div>
             </div>
             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mb-5">
@@ -50,11 +50,11 @@
 		<div class="row">
                 <input type='hidden' name='zlfotcard_stsfw' value='S'> 
                 <input type='hidden' name='zlfotcard_id' value=<?php echo $id; ?>>
-                    <div class="col-xl-3 col-lg-2 col-md-2"></div>
-                    <div class="col-xl-3 col-lg-4 col-md-4 col-sm-12 col-12">
+                    <div class="col-xl-4 col-lg-4 col-md-3"></div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
                         <?php echo $button; ?>
                     </div>
-                    <div class="col-xl-3 col-lg-4 col-md-4"></div>
+                    <div class="col-xl-4 col-lg-4 col-md-3"></div>
                 </div>
             </div>   
         </div>

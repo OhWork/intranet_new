@@ -284,13 +284,13 @@ class gridView{
 			if($this->view !=""){
 				$body .="
 				<td>
-				<button type='button' class='btn btn-info editdetial' data-toggle='modal' data-target='#Modal' data-whatever='{$id}'><div class='edittext'>{$this->viewtxt}</div></button></td>";
+				<button type='button' class='btn btn-info editdetial col-12' data-toggle='modal' data-target='#Modal' data-whatever='{$id}'><div class='edittext'>{$this->viewtxt}</div></button></td>";
 			}
 /* 				add delete */
 			if($this->delete !=""){
 				$body.="
 					<td>
-						<a href='{$this->delete}?id={$id}' class='btn btn-danger deletebox' OnClick='return chkdel();' >{$this->deletetxt}</a>
+						<a href='{$this->delete}?id={$id}' class='btn btn-danger deletebox col-12' OnClick='return chkdel();' >{$this->deletetxt}</a>
 					</td>";
 			}
 /* 				add edit */
@@ -298,7 +298,7 @@ class gridView{
 
 				$body .="
 				<td>
-					<a href='{$this->edit}&id={$id}'class='btn btn-warning editbox'><div class='edittext'>{$this->edittxt}</div></a>
+					<a href='{$this->edit}&id={$id}'class='btn btn-warning editbox col-12'><div class='edittext'>{$this->edittxt}</div></a>
 				</td>";
 			}
 			if($this->change !=""){
