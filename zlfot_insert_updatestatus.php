@@ -13,9 +13,24 @@
 
 		
                                     if($_POST['zlfotcard_stsfw'] == 'T'){
-                                        $data['zlfot_post'] = $_POST['zlfot_post'];
                                          $data['zlfotcard_stsfw'] = $_POST['zlfot_stsfw'];
-                                          $rsfix = $db->update('zlfot',$data,'zlfotcard_id',$_POST['zlfotcard_id']);
+                                          $rsfix = $db->update('zlfotcard',$data,'zlfotcard_id',$_POST['zlfotcard_id']);
+                                          if($_POST['sendcard_status'] =='Y'){
+                                          $rs = $db->insert('postoffice',array(
+                                                    'sendcard_post' => $_POST['sendcard_post'],
+                                                    'sendcard_status' => $_POST['sendcard_status'],
+                                                    'sendcard_date' => $_POST['sendcard_date'],
+                                                     'zlfotmember_zlfotmember_id' => $_POST['zlfotcard_id'],
+                                                    'postoffice_postoffice_id' => $_POST['postoffice_postoffice_id']
+                                                    ));
+                                          }else if($_POST['sendcard_status'] =='N'){
+                                              $rs = $db->insert('postoffice',array(
+                                                    'sendcard_status' => $_POST['sendcard_status'],
+                                                    'sendcard_date' => $_POST['sendcard_date'],
+                                                    'zlfotmember_zlfotmember_id' => $_POST['zlfotcard_id'],
+                                                    'postoffice_postoffice_id' => $_POST['postoffice_postoffice_id']
+                                                    ));
+                                          }
                                     }else if($_POST['zlfot_stsfw'] == 'C'){
                                         $data['zlfot_receiptfin'] = $_POST['zlfot_receiptfin'];
                                          $data['zlfotcard_stsfw'] = $_POST['zlfotcard_stsfw'];
@@ -52,19 +67,22 @@
                     switch ($_POST['zlfot_status']){
                           case "P":
                              $link = "admin_index.php?url=zlfot_show_checkmember.php&type=2";
+                              header( "Refresh: 2; $link" );
                             break;
                           case "S":
                             $link = "admin_index.php?url=zlfot_show_checkmember.php&type=3";
+                              header( "Refresh: 2; $link" );
                             break;
                           case "T":
                             $link = "admin_index.php?url=zlfot_show_checkmember.php&type=4";
+                              header( "Refresh: 2; $link" );
                             break;
                         case "C":
                             $link = "admin_index.php?url=zlfot_show_member.php";
+                            header( "Refresh: 2; $link" );
                             break;
                     }
-           
-            header( "Refresh: 2; $link" );
+            
 }
 ?>
 </html>
