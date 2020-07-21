@@ -49,21 +49,21 @@
                                                         $edittxt = 'ยืนยันการตรวจสอบ';
                                                         $link = "admin_index.php?url=zlfot_checkdetailfirst.php";
                                                         }else if($type == "2"){
-                                                        $columns = array('zlfot_code','typezlfot_name','zlfot_nameth','zlfot_datestart','zlfot_dateend','zoo_name');
-                                                                    $header = array('<b><center>รหัส</center></b>','<b><center>ประเภทบัตร</center></b>','<b><center>ชื่อ - นามสกุล</center></b>','<b><center>วันที่สมัคร</center></b>','<b><center>วันที่หมดอายุ</center></b>','<b><center>จาก</center></b>','<b><center>#</center></b>');
-                                                        $rs = $db->findByPK44DESC('zlfot','typezlfot','user','zoo','zlfot.user_user_id','user.user_id','zlfot.typezlfot_typezlfot_id','typezlfot.typezlfot_code','user.subzoo_zoo_zoo_id','zoo.zoo_id','zlfot_status','"P"','zlfot_id')->execute();
+                                                        $columns = array('zlfotcard_code','typezlfot_name','zlfotmember_nameth','zlfotcard_datestart','zlfotcard_dateend','zoo_name');
+                                                        $header = array('<b><center>รหัส</center></b>','<b><center>ประเภทบัตร</center></b>','<b><center>ชื่อ - นามสกุล</center></b>','<b><center>วันที่สมัคร</center></b>','<b><center>วันที่หมดอายุ</center></b>','<b><center>จาก</center></b>','<b><center>#</center></b>');
+                                                        $rs = $db->findByPK55DESC('zlfotmember','zlfotcard','typezlfot','user','zoo','zlfotcard.user_user_id','user.user_id','zlfotcard.zlfotmember_zlfotmember_id','zlfotmember.zlfotmember_id','zlfotcard.typezlfot_typezlfot_id','typezlfot.typezlfot_code','user.subzoo_zoo_zoo_id','zoo.zoo_id','zlfotcard_stsfw','"P"','zlfotcard_id')->execute();
                                                         $edittxt = 'ยืนยันการพิมพ์บัตร';
                                                         $link = "admin_index.php?url=zlfot_checkdetailsecond.php";
                                                         }else if($type == "3"){
-                                                        $columns = array('zlfot_code','typezlfot_name','zlfot_nameth','zlfot_datestart','zlfot_dateend','zoo_name');
-                                                                    $header = array('<b><center>รหัส</center></b>','<b><center>ประเภทบัตร</center></b>','<b><center>ชื่อ - นามสกุล</center></b>','<b><center>วันที่สมัคร</center></b>','<b><center>วันที่หมดอายุ</center></b>','<b><center>จาก</center></b>','<b><center>#</center></b>');
-                                                        $rs = $db->findByPK44DESC('zlfot','typezlfot','user','zoo','zlfot.user_user_id','user.user_id','zlfot.typezlfot_typezlfot_id','typezlfot.typezlfot_code','user.subzoo_zoo_zoo_id','zoo.zoo_id','zlfot_status','"S"','zlfot_id')->execute();
+                                                        $columns = array('zlfotcard_code','typezlfot_name','zlfotmember_nameth','zlfotcard_datestart','zlfotcard_dateend','zoo_name');
+                                                        $header = array('<b><center>รหัส</center></b>','<b><center>ประเภทบัตร</center></b>','<b><center>ชื่อ - นามสกุล</center></b>','<b><center>วันที่สมัคร</center></b>','<b><center>วันที่หมดอายุ</center></b>','<b><center>จาก</center></b>','<b><center>#</center></b>');
+                                                        $rs = $db->findByPK55DESC('zlfotmember','zlfotcard','typezlfot','user','zoo','zlfotcard.user_user_id','user.user_id','zlfotcard.zlfotmember_zlfotmember_id','zlfotmember.zlfotmember_id','zlfotcard.typezlfot_typezlfot_id','typezlfot.typezlfot_code','user.subzoo_zoo_zoo_id','zoo.zoo_id','zlfotcard_stsfw','"S"','zlfotcard_id')->execute();
                                                         $edittxt = 'ยืนยันการจัดส่ง';
                                                         $link = "admin_index.php?url=zlfot_checkdetailthird.php";
                                                           }else if($type == "4"){
-                                                        $columns = array('zlfot_code','typezlfot_name','zlfot_nameth','zlfot_datestart','zlfot_dateend','zoo_name');
-                                                                    $header = array('<b><center>รหัส</center></b>','<b><center>ประเภทบัตร</center></b>','<b><center>ชื่อ - นามสกุล</center></b>','<b><center>วันที่สมัคร</center></b>','<b><center>วันที่หมดอายุ</center></b>','<b><center>จาก</center></b>','<b><center>#</center></b>');
-                                                        $rs = $db->findByPK44DESC('zlfot','typezlfot','user','zoo','zlfot.user_user_id','user.user_id','zlfot.typezlfot_typezlfot_id','typezlfot.typezlfot_code','user.subzoo_zoo_zoo_id','zoo.zoo_id','zlfot_status','"T"','zlfot_id')->execute();
+$columns = array('zlfotcard_code','typezlfot_name','zlfotmember_nameth','zlfotcard_datestart','zlfotcard_dateend','zoo_name');
+                                                        $header = array('<b><center>รหัส</center></b>','<b><center>ประเภทบัตร</center></b>','<b><center>ชื่อ - นามสกุล</center></b>','<b><center>วันที่สมัคร</center></b>','<b><center>วันที่หมดอายุ</center></b>','<b><center>จาก</center></b>','<b><center>#</center></b>');
+                                                        $rs = $db->findByPK55DESC('zlfotmember','zlfotcard','typezlfot','user','zoo','zlfotcard.user_user_id','user.user_id','zlfotcard.zlfotmember_zlfotmember_id','zlfotmember.zlfotmember_id','zlfotcard.typezlfot_typezlfot_id','typezlfot.typezlfot_code','user.subzoo_zoo_zoo_id','zoo.zoo_id','zlfotcard_stsfw','"T"','zlfotcard_id')->execute();
                                                         $edittxt = 'ยืนยันใบเสร็จ';
                                                         $link = "admin_index.php?url=zlfot_checkdetailfouth.php";
                                                           }

@@ -14,7 +14,7 @@
 	                 <ul class="sub-menu collapse" id="zlfotsetting1">
                                           <a class="nav-link edittext mucl" id="nav-24-animate-1" href="admin_index.php?url=zlfot_show_checkmember.php&type=1"><span data-feather="chevron-right"></span>รอการตรวจสอบ</a>
                                           <a class="nav-link edittext mucl" id="nav-24-animate-2" href="admin_index.php?url=zlfot_show_checkmember.php&type=2"><span data-feather="chevron-right"></span>รอการพิมพ์</a>
-                                          <a class="nav-link edittext mucl" id="nav-24-animate-3" href="admin_index.php?url=zlfot_show_checkmember.php&type=3"><span data-feather="chevron-right"></span>รอจัดส่ง</a>
+                                          <a class="nav-link edittext mucl" id="nav-24-animate-3" href="admin_index.php?url=zlfot_show_checkmember.php&type=3"><span data-feather="chevron-right"></span>รอการจัดส่ง</a>
                                           <a class="nav-link edittext mucl" id="nav-24-animate-4" href="admin_index.php?url=zlfot_show_checkmember.php&type=4"><span data-feather="chevron-right"></span>รอการบันทึกใบเสร็จ</a> 
 		 </ul>
                                 <a class="nav-link edittext mucl" id="nav-2-animate-1" href="admin_index.php?url=zlfot_show_member.php">
@@ -28,7 +28,8 @@
 	                  ตั้งค่า
 	                </a>
 	                 <ul class="sub-menu collapse" id="zlfotsetting2">
-				          <a class="nav-link edittext mucl" id="nav-24-animate-1" href="admin_index.php?url=zlfot_show_event.php"><span data-feather="chevron-right"></span>รายการอีเว้นทั้งหมด</a>
+				          <a class="nav-link edittext mucl" id="nav-24-animate-1" href="admin_index.php?url=zlfot_show_event.php"><span data-feather="chevron-right"></span>รายการกิจกรรม</a>
+                                          <a class="nav-link edittext mucl" id="nav-24-animate-1" href="admin_index.php?url=zlfot_show_postoffice.php"><span data-feather="chevron-right"></span>รายการที่ทำการไปรษณีย์</a>
 		             </ul>
               </ul>
               <!-- end sub menu -->

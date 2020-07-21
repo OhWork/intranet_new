@@ -16,13 +16,20 @@
 </script>
 <?php
     if (!empty($_SESSION['user_name'])):
-    $columns = array('zlfotmember_nameth','zlfot_nameth','zlfot_tel','zlfot_datestart','zoo_name');
+    $columns = array('zlfotmember_nameth','zlfotmember_tel');
     $row = "<div class='row'>";
     $rowend = "</div>";
     $form = new form();
     $labelsearchipzpo = new label('ค้นหา');
 
-            $rs = $db->findAll('zlfotmember')->execute();  ?> 
+                $rs = $db->findByPK87('zlfotmember','zlfotcard','typezlfot','subdistricts','districts','provinces','user','zoo',
+                'zlfotmember.user_user_id','user.user_id',
+                'zlfotcard.zlfotmember_zlfotmember_id','zlfotmember.zlfotmember_id',
+                'zlfotcard.typezlfot_typezlfot_id','typezlfot.typezlfot_id',
+                'user.subzoo_zoo_zoo_id','zoo.zoo_id',
+                'zlfotmember.zlfotmember_provinces_id','provinces.provinces_id',
+                'zlfotmember.zlfotmember_districts_id','districts.districts_id',
+                'zlfotmember.zlfotmember_subdistricts_id','subdistricts.subdistricts_id')->execute();   ?> 
 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3">
         <div class="row">
                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 card-header">
@@ -38,8 +45,8 @@
 			<?php 
                                                         $grid = new gridView();
                                                                     $grid->pr = 'zlfotmember_id';
-                                                                    $grid->header = array('<b><center>รหัส</center></b>','<b><center>ชื่อ - นามสกุล</center></b>','<b><center>เบอร์โทรศัพท์</center></b>','<b><center>วันที่</center></b>','<b><center>จาก</center></b>','<b><center>#</center></b>');
-                                                                    $grid->width = array('12%','15%','15%','25%','25%','8%');
+                                                                    $grid->header = array('<b><center>ชื่อ - นามสกุล</center></b>','<b><center>เบอร์โทรศัพท์</center></b>','<b><center>#</center></b>');
+                                                                    $grid->width = array('40%','40%','20%');
                                                                     $grid->edit = 'admin_index.php?url=zlfot_member.php';
                                                                     $grid->name = 'table';
                                                                     $grid->edittxt ='รายละเอียด';

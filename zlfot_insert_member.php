@@ -11,22 +11,30 @@
 
         
 	if(!empty($_POST['zlfotmember_id'])){
-		$data['subzoo_name'] = $_POST['subzoo_name'];
+		$data['zlfotmember_nameth'] = $_POST['zlfotmember_nameth'];
 		$data['subzoo_year'] = $_POST['subzoo_year'];
-		$data['subzoo_no'] = $_POST['subzoo_no'];
-		$data['subzoo_detail'] = $_POST['subzoo_detail'];
-		$data['subzoo_enable'] = $_POST['subzoo_enable'];
-		$rsfix = $db->update('zlfotmember',$data,'subzoo_id',$_POST['subzoo_id']);
+		$data['zlfotmember_nameen'] = $_POST['zlfotmember_nameen'];
+		$data['zlfotmember_tel'] = $_POST['zlfotmember_tel'];
+		$data['zlfotmember_bd'] = $_POST['zlfotmember_bd'];
+                $data['zlfotmember_address'] = $_POST['zlfotmember_address'];
+                $data['zlfotmember_subdistricts_id'] = $_POST['zlfotmember_subdistricts_id'];
+                $data['zlfotmember_districts_id'] = $_POST['zlfotmember_districts_id'];
+                $data['zlfotmember_provinces_id'] = $_POST['zlfotmember_provinces_id'];
+                $data['zlfotmember_line'] = $_POST['zlfotmember_line'];
+                $data['zlfotmember_email'] = $_POST['zlfotmember_email'];
+                $data['zlfotmember_detail'] = $_POST['zlfotmember_detail'];
+		$rsfix = $db->update('zlfotmember',$data,'zlfotmember_id',$_POST['zlfotmember_id']);
 
 	}else{
 	$rs = $db->insert('zlfotmember',array(
 	'zlfotmember_nameth' => $_POST['zlfotmember_nameth'],
 	'zlfotmember_nameen' => $_POST['zlfotmember_nameen'],
         'zlfotmember_tel' => $_POST['zlfotmember_tel'],
+        'zlfotmember_bd' => $_POST['zlfotmember_bd'],
         'zlfotmember_address' => $_POST['zlfotmember_address'],
         'zlfotmember_subdistricts_id' => $_POST['zlfotmember_subdistricts_id'],
         'zlfotmember_districts_id' => $_POST['zlfotmember_districts_id'],
-        'zlfotmember_province_id' => $_POST['zlfotmember_province_id'],
+        'zlfotmember_provinces_id' => $_POST['zlfotmember_provinces_id'],
 	'zlfotmember_datereg' => $_POST['zlfotmember_datereg'],
         'zlfotmember_line' => $_POST['zlfotmember_line'],
         'zlfotmember_email' => $_POST['zlfotmember_email'],

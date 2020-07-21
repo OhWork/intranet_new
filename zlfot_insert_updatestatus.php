@@ -9,20 +9,20 @@
 <?php
     include 'database/db_tools.php';
 	include 'connect.php';
-	if(!empty($_POST['zlfot_id'])){
+	if(!empty($_POST['zlfotcard_id'])){
 
 		
-                                    if($_POST['zlfot_status'] == 'T'){
+                                    if($_POST['zlfotcard_stsfw'] == 'T'){
                                         $data['zlfot_post'] = $_POST['zlfot_post'];
-                                         $data['zlfot_status'] = $_POST['zlfot_status'];
-                                          $rsfix = $db->update('zlfot',$data,'zlfot_id',$_POST['zlfot_id']);
-                                    }else if($_POST['zlfot_status'] == 'C'){
+                                         $data['zlfotcard_stsfw'] = $_POST['zlfot_stsfw'];
+                                          $rsfix = $db->update('zlfot',$data,'zlfotcard_id',$_POST['zlfotcard_id']);
+                                    }else if($_POST['zlfot_stsfw'] == 'C'){
                                         $data['zlfot_receiptfin'] = $_POST['zlfot_receiptfin'];
-                                         $data['zlfot_status'] = $_POST['zlfot_status'];
-                                           $rsfix = $db->update('zlfot',$data,'zlfot_id',$_POST['zlfot_id']);
+                                         $data['zlfotcard_stsfw'] = $_POST['zlfotcard_stsfw'];
+                                           $rsfix = $db->update('zlfotcard',$data,'zlfotcard_id',$_POST['zlfotcard_id']);
                                     }else{
-                                        $data['zlfot_status'] = $_POST['zlfot_status'];
-                                           $rsfix = $db->update('zlfot',$data,'zlfot_id',$_POST['zlfot_id']);
+                                        $data['zlfotcard_stsfw'] = $_POST['zlfotcard_stsfw'];
+                                           $rsfix = $db->update('zlfotcard',$data,'zlfotcard_id',$_POST['zlfotcard_id']);
                                     }
                                
             //Log
@@ -51,13 +51,13 @@
                     }
                     switch ($_POST['zlfot_status']){
                           case "P":
-                             $link = "admin_index.php?url=zlfot_show_checkmember.php&type=665f644e43731ff9db3d341da5c827e1";
+                             $link = "admin_index.php?url=zlfot_show_checkmember.php&type=2";
                             break;
                           case "S":
-                            $link = "admin_index.php?url=zlfot_show_checkmember.php&type=38026ed22fc1a91d92b5d2ef93540f20";
+                            $link = "admin_index.php?url=zlfot_show_checkmember.php&type=3";
                             break;
                           case "T":
-                            $link = "admin_index.php?url=zlfot_show_checkmember.php&type=011ecee7d295c066ae68d4396215c3d0";
+                            $link = "admin_index.php?url=zlfot_show_checkmember.php&type=4";
                             break;
                         case "C":
                             $link = "admin_index.php?url=zlfot_show_member.php";

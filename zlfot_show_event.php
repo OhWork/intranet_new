@@ -31,7 +31,7 @@
                                         <h4>รายการอีเว้น</h4>
 		</div>
 		<div class="ml-auto">
-                                        <a href="admin_index.php?url=zlfot_add_event.php&id=<?php echo $id; ?>" class="btn btn-success col-12"><span data-feather="plus"></span></a>
+                                        <a href="admin_index.php?url=zlfot_add_eventzlfot.php&id=<?php echo $id; ?>" class="btn btn-success col-12"><span data-feather="plus"></span></a>
 		</div>
 		<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3 card-body">
                                         <div class="table-responsive">
@@ -40,7 +40,7 @@
                                                                     $grid->pr = 'eventzlfot_id';
                                                                     $grid->header = array('<b><center>ชื่อกิจกรรม</center></b>','<b><center>วันที่จัด</center></b>','<b><center>#</center></b>');
                                                                     $grid->width = array('12%','15%','15%','25%','25%','8%');
-                                                                    $grid->edit = 'admin_index.php?url=zlfot_add_event.php';
+                                                                    $grid->edit = 'admin_index.php?url=zlfot_add_eventzlfot.php';
                                                                     $grid->name = 'table';
                                                                     $grid->edittxt ='แก้ไข';
                                                                     $grid->renderFromDB($columns,$rs);

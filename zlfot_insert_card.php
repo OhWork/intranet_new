@@ -62,7 +62,7 @@
     	}else if($rsfix){
             echo "<div class='statusok'>แก้ไขสำเร็จ</div>";
            }
-            $link = "url=admin_index.php?url=zlfot_show_checkmember.php&type=28c8edde3d61a0411511d3b1866f0636";
+            $link = "url=admin_index.php?url=zlfot_show_checkmember.php&type=1";
             header( "Refresh: 2; $link" );
         }else{
             echo "ข้อมูลไม่เข้าฐานข้อมูล";

@@ -4,7 +4,7 @@
                 "ordering": false,
                 "lengthMenu": false,
                 "searching": false,
-                "lengthMenu": [[10, 25, 50, -1], [10, 25, 50, "ทุกหน้า"]],
+
                 "language": {
                     "lengthMenu": "แสดง _MENU_ แถวต่อหน้า",
                     "zeroRecords": "ไม่พบข้อมูล",
@@ -32,7 +32,7 @@
     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 pb-5">
         <div class="row">
             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mb-3 mt-3">
-                <h4 style="color: #4e555b">ตรวจสอบรายชื่อสมาชิกสมาชิก</h4>
+                <h4 style="color: #4e555b">ค้นหาสมาชิก</h4>
             </div>
             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mb-3">
 		<div class="row">
@@ -57,7 +57,11 @@
 <?php
     if (isset($_POST['submit'])){
     isset($_POST['zlfotmember_nameth'])?$zlfotmember_nameth  = $_POST['zlfotmember_nameth']:$zlfotmember_nameth='';
-        $rs = $db->findByPK('zlfotmember','zlfotmember_nameth',"'$zlfotmember_nameth'")->executeAssoc();  
+        $rs = $db->findByPK44('zlfotmember','subdistricts','districts','provinces',
+                'zlfotmember.zlfotmember_provinces_id','provinces.provinces_id',
+                'zlfotmember.zlfotmember_districts_id','districts.districts_id',
+                'zlfotmember.zlfotmember_subdistricts_id','subdistricts.subdistricts_id',
+                'zlfotmember_nameth',"'$zlfotmember_nameth'")->executeAssoc();  
         if($rs){
             if($rs['zlfotmember_id']){
                 $member_id =  $rs['zlfotmember_id'];
@@ -85,7 +89,17 @@
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                         <div class="row">
                             <div class="col-xl-3 col-lg-3 col-md-4 col-sm-4 col-4">
-                                <p>หมายเลขโทรศัพท์ :</p>
+                                <p>ชื่อ-นามสกุล(ภาษาอังกฤษ) :</p>
+                            </div>
+                            <div class="col-xl-9 col-lg-9 col-md-8 col-sm-8 col-8">
+                                <p><?php echo $rs['zlfotmember_nameen']; ?></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                        <div class="row">
+                            <div class="col-xl-3 col-lg-3 col-md-4 col-sm-4 col-4">
+                                <p>เบอร์โทรศัพท์ :</p>
                             </div>
                             <div class="col-xl-9 col-lg-9 col-md-8 col-sm-8 col-8">
                                 <p><?php echo $rs['zlfotmember_tel']; ?></p>
@@ -95,20 +109,30 @@
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                         <div class="row">
                             <div class="col-xl-3 col-lg-3 col-md-4 col-sm-4 col-4">
-                                <p>อีเมล์ :</p>
+                                <p>วันเกิด :</p>
                             </div>
-                            <div class="col-xl-9 col-lg- col-md-8 col-sm-8 col-8">
-                                <p><?php //echo $rs['zlfot_datestart']; ?></p>
+                            <div class="col-xl-9 col-lg-9 col-md-8 col-sm-8 col-8">
+                                <p><?php echo $rs['zlfotmember_bd']; ?></p>
                             </div>
                         </div>
                     </div>
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                         <div class="row">
                             <div class="col-xl-3 col-lg-3 col-md-4 col-sm-4 col-4">
-                                <p>Lineid :</p>
+                                <p>อีเมล์ :</p>
                             </div>
                             <div class="col-xl-9 col-lg- col-md-8 col-sm-8 col-8">
-                                <p><?php //echo $rs['zlfot_datestart']; ?></p>
+                                <p><?php echo $rs['zlfotmember_email']; ?></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                        <div class="row">
+                            <div class="col-xl-3 col-lg-3 col-md-4 col-sm-4 col-4">
+                                <p>LINE ID :</p>
+                            </div>
+                            <div class="col-xl-9 col-lg- col-md-8 col-sm-8 col-8">
+                                <p><?php echo $rs['zlfotmember_line']; ?></p>
                             </div>
                         </div>
                     </div>
@@ -118,7 +142,37 @@
                                 <p>ที่อยู่ :</p>
                             </div>
                             <div class="col-xl-9 col-lg-9 col-md-8 col-sm-8 col-8">
-                                <p><?php  echo $rs['zlfotcard_address']; ?></p>
+                                <p><?php  echo $rs['zlfotmember_address']; ?></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                        <div class="row">
+                            <div class="col-xl-3 col-lg-3 col-md-4 col-sm-4 col-4">
+                                <p>แขวง/ตำบล :</p>
+                            </div>
+                            <div class="col-xl-9 col-lg-9 col-md-8 col-sm-8 col-8">
+                                <p><?php  echo $rs['subdistricts_nameth']; ?></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                        <div class="row">
+                            <div class="col-xl-3 col-lg-3 col-md-4 col-sm-4 col-4">
+                                <p>เขต/อำเภอ :</p>
+                            </div>
+                            <div class="col-xl-9 col-lg-9 col-md-8 col-sm-8 col-8">
+                                <p><?php  echo $rs['districts_nameth']; ?></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                        <div class="row">
+                            <div class="col-xl-3 col-lg-3 col-md-4 col-sm-4 col-4">
+                                <p>จังหวัด :</p>
+                            </div>
+                            <div class="col-xl-9 col-lg-9 col-md-8 col-sm-8 col-8">
+                                <p><?php  echo $rs['provinces_nameth']; ?></p>
                             </div>
                         </div>
                     </div>
@@ -140,17 +194,18 @@
                                                          $columns = array('zlfotcard_code','typezlfot_name','zlfotcard_datestart','zlfotcard_dateend');
                                                          $rs = $db->findByPK34DESC('zlfotmember','zlfotcard','typezlfot','zlfotcard.zlfotmember_zlfotmember_id','zlfotmember.zlfotmember_id','zlfotcard.typezlfot_typezlfot_id','typezlfot.typezlfot_id','zlfotmember_zlfotmember_id',$member_id,'zlfotcard_stsfw','"C"','zlfotcard_id')->execute();
                                                         $grid = new gridView();
-                                                                    //$grid->pr = 'zlfotmember_id';
                                                                     $grid->header = array('<b><center>รหัสสมาชิก</center></b>','<b><center>ประเภทสมาชิก</center></b>','<b><center>วันที่สมัคร</center></b>','<b><center>วันที่หมดอายุ</center></b>');
                                                                     $grid->width = array('25%','25%','25%','25%');
-                                                                    //$grid->edit = 'admin_index.php?url=zlfot_member.php';
                                                                     $grid->name = 'table';
-                                                                    //$grid->edittxt ='รายละเอียด';
                                                                     $grid->renderFromDB($columns,$rs);
 
 
         }else{
-        echo 'ไม่พบข้อมูล';
+            ?>
+        <div class="alert alert-danger" role="alert">
+  ไม่พบข้อมูล
+</div>
+        <?php
         }
         }
         

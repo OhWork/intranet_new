@@ -3,9 +3,9 @@
         $zoo = $_SESSION['subzoo_zoo_zoo_id'];
       $id = $_GET['id'];
    $form = new form();
-  $lbevent = new label("ชื่อกิจกรรม");
-   $lbplace = new label("สถานที่จัดกิจกรรม");
-    $lbdate = new label("วันที่จัดกิจกรรม");
+  $lbevent = new label("ชื่องานกิจกรรม");
+   $lbplace = new label("สถานที่จัดงานกิจกรรม");
+    $lbdate = new label("วันที่จัดงานกิจกรรม");
   $lbeventno = new label("เพิ่มลำดับ");
   $lbeventenable = new label("สถานะการใช้งาน :");
   $txtevent = new textfield('eventzlfot_name','','col-12 form-control','');
@@ -27,7 +27,7 @@
 	<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6 usubd">
 		<div class="row">
 			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-2" style="border-bottom:solid 1px #E0E0E0;">
-				<h4>เพิ่มกิจกรรม</h4>
+				<h4>เพิ่มงานกิจกรรม</h4>
 			</div>
 			<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3'>
 				<?php echo $lbevent; ?>

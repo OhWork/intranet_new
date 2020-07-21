@@ -68,12 +68,12 @@
 				</div>
                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-1">           
                     <label for="province">จังหวัด</label>
-					<select name="zlfotmember_province_id" id="province" class="form-control">
+					<select name="zlfotmember_provinces_id" id="province" class="form-control">
 					<option value="">กรุณาเลือกจังหวัด</option>
 					<?php 
 						$rs = $db->findAll('provinces')->execute();									
 						while($objResult = mysqli_fetch_array($rs,MYSQLI_ASSOC)){ ?>
-						<option value="<?=$objResult["id"];?>"><?=$objResult["name_in_thai"];?></option>
+						<option value="<?=$objResult["provinces_id"];?>"><?=$objResult["provinces_nameth"];?></option>
 					<?php } ?>
 					</select>
 				</div>
@@ -178,13 +178,14 @@ var subdistrictObject = $('#subdistrict');
 // on change province
 provinceObject.on('change', function(){
 var provinceId = $(this).val();
-districtObject.html('<option value="">เลือกอำเภอ</option>');
-subdistrictObject.html('<option value="">เลือกตำบล</option>');
+districtObject.html('<option value="">เลือกเขต/อำเภอ</option>');
+
+subdistrictObject.html('<option value="">เลือกแขวง/ตำบล</option>');
 $.get('zlfot_get_district.php?province_id=' + provinceId, function(data){
 var result = JSON.parse(data);
 $.each(result, function(index, item){
 districtObject.append(
-$('<option></option>').val(item.id).html(item.name_in_thai)
+$('<option></option>').val(item.districts_id).html(item.districts_nameth)
 );
 });
 });
@@ -192,12 +193,12 @@ $('<option></option>').val(item.id).html(item.name_in_thai)
 // on change district
 districtObject.on('change', function(){
 var districtId = $(this).val();
-subdistrictObject.html('<option value="">เลือกตำบล</option>');
+subdistrictObject.html('<option value="">เลือกแขวง/ตำบล</option>');
 $.get('zlfot_get_subdistrict.php?district_id=' + districtId, function(data){
 var result = JSON.parse(data);
 $.each(result, function(index, item){
 subdistrictObject.append(
-$('<option></option>').val(item.id).html(item.name_in_thai)
+$('<option></option>').val(item.subdistricts_id).html(item.subdistricts_nameth)
 );
 });
 });
