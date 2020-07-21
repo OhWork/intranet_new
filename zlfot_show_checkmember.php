@@ -46,29 +46,33 @@
                                                         $columns = array('zlfotcard_code','typezlfot_name','zlfotmember_nameth','zlfotcard_datestart','zlfotcard_dateend','zoo_name');
                                                         $header = array('<b><center>รหัส</center></b>','<b><center>ประเภทบัตร</center></b>','<b><center>ชื่อ - นามสกุล</center></b>','<b><center>วันที่สมัคร</center></b>','<b><center>วันที่หมดอายุ</center></b>','<b><center>จาก</center></b>','<b><center>#</center></b>');
                                                         $rs = $db->findByPK55DESC('zlfotmember','zlfotcard','typezlfot','user','zoo','zlfotcard.user_user_id','user.user_id','zlfotcard.zlfotmember_zlfotmember_id','zlfotmember.zlfotmember_id','zlfotcard.typezlfot_typezlfot_id','typezlfot.typezlfot_code','user.subzoo_zoo_zoo_id','zoo.zoo_id','zlfotcard_stsfw','"R"','zlfotcard_id')->execute();
+                                                        $pr= 'zlfotmember_id';
                                                         $edittxt = 'ยืนยันการตรวจสอบ';
                                                         $link = "admin_index.php?url=zlfot_checkdetailfirst.php";
                                                         }else if($type == "2"){
                                                         $columns = array('zlfotcard_code','typezlfot_name','zlfotmember_nameth','zlfotcard_datestart','zlfotcard_dateend','zoo_name');
                                                         $header = array('<b><center>รหัส</center></b>','<b><center>ประเภทบัตร</center></b>','<b><center>ชื่อ - นามสกุล</center></b>','<b><center>วันที่สมัคร</center></b>','<b><center>วันที่หมดอายุ</center></b>','<b><center>จาก</center></b>','<b><center>#</center></b>');
                                                         $rs = $db->findByPK55DESC('zlfotmember','zlfotcard','typezlfot','user','zoo','zlfotcard.user_user_id','user.user_id','zlfotcard.zlfotmember_zlfotmember_id','zlfotmember.zlfotmember_id','zlfotcard.typezlfot_typezlfot_id','typezlfot.typezlfot_code','user.subzoo_zoo_zoo_id','zoo.zoo_id','zlfotcard_stsfw','"P"','zlfotcard_id')->execute();
+                                                       $pr= 'zlfotmember_id';
                                                         $edittxt = 'ยืนยันการพิมพ์บัตร';
                                                         $link = "admin_index.php?url=zlfot_checkdetailsecond.php";
                                                         }else if($type == "3"){
                                                         $columns = array('zlfotcard_code','typezlfot_name','zlfotmember_nameth','zlfotcard_datestart','zlfotcard_dateend','zoo_name');
                                                         $header = array('<b><center>รหัส</center></b>','<b><center>ประเภทบัตร</center></b>','<b><center>ชื่อ - นามสกุล</center></b>','<b><center>วันที่สมัคร</center></b>','<b><center>วันที่หมดอายุ</center></b>','<b><center>จาก</center></b>','<b><center>#</center></b>');
                                                         $rs = $db->findByPK55DESC('zlfotmember','zlfotcard','typezlfot','user','zoo','zlfotcard.user_user_id','user.user_id','zlfotcard.zlfotmember_zlfotmember_id','zlfotmember.zlfotmember_id','zlfotcard.typezlfot_typezlfot_id','typezlfot.typezlfot_code','user.subzoo_zoo_zoo_id','zoo.zoo_id','zlfotcard_stsfw','"S"','zlfotcard_id')->execute();
+                                                       $pr= 'zlfotmember_id';
                                                         $edittxt = 'ยืนยันการจัดส่ง';
                                                         $link = "admin_index.php?url=zlfot_checkdetailthird.php";
                                                           }else if($type == "4"){
 $columns = array('zlfotcard_code','typezlfot_name','zlfotmember_nameth','zlfotcard_datestart','zlfotcard_dateend','zoo_name');
                                                         $header = array('<b><center>รหัส</center></b>','<b><center>ประเภทบัตร</center></b>','<b><center>ชื่อ - นามสกุล</center></b>','<b><center>วันที่สมัคร</center></b>','<b><center>วันที่หมดอายุ</center></b>','<b><center>จาก</center></b>','<b><center>#</center></b>');
                                                         $rs = $db->findByPK55DESC('zlfotmember','zlfotcard','typezlfot','user','zoo','zlfotcard.user_user_id','user.user_id','zlfotcard.zlfotmember_zlfotmember_id','zlfotmember.zlfotmember_id','zlfotcard.typezlfot_typezlfot_id','typezlfot.typezlfot_code','user.subzoo_zoo_zoo_id','zoo.zoo_id','zlfotcard_stsfw','"T"','zlfotcard_id')->execute();
+                                                        $pr= 'zlfotmember_id';
                                                         $edittxt = 'ยืนยันใบเสร็จ';
                                                         $link = "admin_index.php?url=zlfot_checkdetailfouth.php";
                                                           }
                                                         $grid = new gridView();
-                                                                    $grid->pr = 'zlfotcard_id';
+                                                                    $grid->pr = $pr;
                                                                     $grid->header = $header;
                                                                     $grid->width = array('12%','15%','15%','25%','25%','8%');
                                                                     $grid->edit = $link;
