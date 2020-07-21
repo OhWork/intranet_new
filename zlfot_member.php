@@ -1,3 +1,26 @@
+<script>
+            $(document).ready(function() {
+
+                $('#table').DataTable( {
+                "ordering": false,
+                "language": {
+                    "infoEmpty": "ไม่พบข้อมูล",
+                }
+    } );
+                    $('#table1').DataTable( {
+                "ordering": false,
+                "language": {
+                    "infoEmpty": "ไม่พบข้อมูล",
+                }
+    } );
+                    $('#table2').DataTable( {
+                "ordering": false,
+                "language": {
+                    "infoEmpty": "ไม่พบข้อมูล",
+                }
+    } );
+} );
+</script>
 <?php
     if (!empty($_SESSION['user_name'])):
     $id =  $_GET['id'];
@@ -111,6 +134,9 @@
         </div>
     </div>
 </div>
+
+
+
 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mb-3" style="background-color: #FFFFFF;">
     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mb-3 mt-3">
         <div class="row">
@@ -130,6 +156,57 @@
 
  ?>
     </div>
+    
+    <div class="btn-group btn-group-toggle col-12" data-toggle="buttons">
+                            <label class="btn btn-success active col-6">
+                                <input type="radio" name="sendcard_status" value="Y" onchange="swapConfig(this)" id="complete" autocomplete="off" checked> ดำเนินการจัดส่ง
+                            </label>
+                            <label class="btn btn-danger col-6">
+                                <input type="radio" name="sendcard_status" value="N" onchange="swapConfig(this)" id="nocomplete" autocomplete="off"> มารับด้วยตนเอง
+                            </label>
+                        </div>
+    
+         <div id="completeSettings">
+           <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mb-3 mt-3">
+        <div class="row">
+        <h4 style="color: #4e555b">ประวัติการจัดส่ง</h4>
+        </div>
+    </div>
+    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+<?php
+                                                         $columns = array('sendcard_date','postoffice_name','sendcard_code');
+                                                         $rs = $db->findByPK34('zlfotmember','sendcard','postoffice','sendcard.zlfotmember_zlfotmember_id','zlfotmember.zlfotmember_id','sendcard.postoffice_postoffice_id','postoffice.postoffice_id','zlfotmember_zlfotmember_id',$member_id,'sendcard_status','"Y"')->execute();
+                                                        $grid = new gridView();
+                                                                    $grid->header = array('<b><center>วันที่จัดส่ง</center></b>','<b><center>ไปรษณีย์</center></b>','<b><center>เลขที่</center></b>');
+                                                                    $grid->width = array('25%','25%','25%','25%');
+                                                                    $grid->name = 'table1';
+                                                                    $grid->renderFromDB($columns,$rs);
+
+
+ ?>
+    </div>
+    </div>
+    
+    <div id="nocompleteSettings" style="display:none">
+           <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mb-3 mt-3">
+        <div class="row">
+        <h4 style="color: #4e555b">ประวัติการจัดส่ง</h4>
+        </div>
+    </div>
+    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+<?php
+                                                         $columns = array('sendcard_date');
+                                                         $rs = $db->findByPK23('zlfotmember','sendcard','sendcard.zlfotmember_zlfotmember_id','zlfotmember.zlfotmember_id','zlfotmember_zlfotmember_id',$member_id,'sendcard_status','"N"')->execute();
+                                                        $grid = new gridView();
+                                                                    $grid->header = array('<b><center>วันที่มารับ</center></b>');
+                                                                    $grid->width = array('25%','25%','25%','25%');
+                                                                    $grid->name = 'table2';
+                                                                    $grid->renderFromDB($columns,$rs);
+
+
+ ?>
+    </div>
+    </div>
 					<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mb-4">
 						<div class="row">
                                                         <div class="col-xl-3 col-lg-4 col-md-4">
@@ -145,5 +222,17 @@
 		</div>
 	</div>
 <?php echo $form->close();
+?>
+<script>
+    function swapConfig(x) {
+    var radioName = document.getElementsByName(x.name);
+    for(i = 0 ; i < radioName.length; i++){
+      document.getElementById(radioName[i].id.concat("Settings")).style.display="none";
+    }
+    document.getElementById(x.id.concat("Settings")).style.display="initial";
+
+  }
+  </script>
+  <?php
 endif;
 ?> 
