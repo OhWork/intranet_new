@@ -2,7 +2,7 @@
     if (!empty($_SESSION['user_name'])):
           $id =  $_GET['id'];
         $form = new form();
-        $lbreciptfin = new label('เลขที่ใบเสร็จ');
+        $lbreciptfin = new label('เลขที่ใบเสร็จการเงิน(เล่มที่/เลขที่)');
         $txtreciptfin = new textfield('zlfotcard_receiptfin','','form-control','กรุณากรอกเลขใบเสร็จ','');
         $button = new buttonok("บันทึกใบเสร็จ","","btn btn-success btn-block bt3success col-12","");
             echo $form->open("form_reg","frmMain","col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3","zlfot_insert_updatestatus.php","");
