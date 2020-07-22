@@ -136,6 +136,7 @@
 					<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mb-4">
 						<div class="row">
 							<input type='hidden' name='zlfotcard_stsfw' value='P'> 
+                                                        <input type='hidden' name='zlfotcard_status' value='Y'> 
 							<input type='hidden' name='zlfotcard_id' value=<?php echo $id; ?>> 
 							<div class="col-xl-3 col-lg-2 col-md-2"></div>
 							<div class="col-xl-3 col-lg-4 col-md-4 col-sm-12 col-12">

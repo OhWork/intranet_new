@@ -36,6 +36,9 @@
                                         $data['zlfotcard_receiptfin'] = $_POST['zlfotcard_receiptfin'];
                                          $data['zlfotcard_stsfw'] = $_POST['zlfotcard_stsfw'];
                                            $rsfix = $db->update('zlfotcard',$data,'zlfotcard_id',$_POST['zlfotcard_id']);
+                                    }else if($_POST['zlfotcard_stsfw'] == 'P'){
+                                         $data['zlfotcard_status'] = $_POST['zlfotcard_status'];
+                                           $rsfix = $db->update('zlfotcard',$data,'zlfotcard_id',$_POST['zlfotcard_id']);
                                     }else{
                                         $data['zlfotcard_stsfw'] = $_POST['zlfotcard_stsfw'];
                                            $rsfix = $db->update('zlfotcard',$data,'zlfotcard_id',$_POST['zlfotcard_id']);
