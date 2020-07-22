@@ -2,6 +2,8 @@
     if (!empty($_SESSION['user_name'])):
      $id = $_SESSION['subzoo_zoo_zoo_id'];
     $member_id = $_GET['id'];
+    $checkcard = $db->findByPK12('zlfotcard','zlfotcard_status','"Y"','zlfotmember_zlfotmember_id',$member_id)->executeAssoc();
+    $checkdateend = $checkcard['zlfotcard_dateend'];
     $form = new form();
     $lbdatestart = new label('วันที่สมัคร');
     $lbcode = new label('เลขที่สมาชิก');
@@ -14,7 +16,8 @@
     $lbdetail = new label('หมายเหตุ');
       $txtreceipt = new textfield('zlfotcard_receipt','','col-12 form-control','');
      $txtdetail = new textArea('zlfotcard_detail','form-control','','','5','5','');
-     $txtdatestart = new datetimepicker('zlfotcard_datestart','datetimepicker2','','form-control datetimepicker-input','date-form dayinbox col-md-12 form-horizontal control-group controls input-group','input-group date','datetimepicker2','#datetimepicker2','','');
+     $txtdatestart = new datetimepicker('zlfotcard_datestart','datetimepicker1','','form-control datetimepicker-input','date-form dayinbox col-md-12 form-horizontal control-group controls input-group','input-group date','datetimepicker2','#datetimepicker1','','');
+     $txtdatenewstart = new datetimepicker('zlfotcard_datenewstart','datetimepicker2','','form-control datetimepicker-input','date-form dayinbox col-md-12 form-horizontal control-group controls input-group','input-group date','datetimepicker2','#datetimepicker2','','');
      $selectevent = new SelectFromDB();
   $selectevent->name = 'eventzlfot_eventzlfot_id';
   $selectevent->lists = 'โปรดระบุ กิจกรรม';
@@ -41,7 +44,18 @@
 		<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6" style="padding-top:16px;background-color:#ffffff;border:solid 1px #E0E0E0;border-radius:7px;">
 			<div class="row">
 		<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 alltxh">
-					<h4>สมัครสมาชิกสโมสรผู้รักสวนสัตว์แห่งประเทศไทย</h4>
+                    <?php
+                       if($checkcard){
+                           ?>
+                                           <h4>ต่ออายุสมัครสมาชิกสโมสรผู้รักสวนสัตว์แห่งประเทศไทย</h4> 
+                           <?php
+                                           }else{
+                            ?>  
+                                        <h4>สมัครสมาชิกสโมสรผู้รักสวนสัตว์แห่งประเทศไทย</h4>
+                             <?php    
+                                        }
+                                        ?>
+					
 		</div>
                                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-1 showmsg">
 					<?php echo $lbzoo."   ".$zoo;  ?>
@@ -63,7 +77,19 @@
 				</div>
 				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 showmsg">
                                     <div class="row">
-                                        <?php echo $txtdatestart; ?>
+                                        <?php 
+                                        if(date("Y-m-d") <= $checkdateend){
+                                            echo "ไม่ต้องเพิ่มวัน";
+                                            ?>
+                                            <input type='hidden' name='zlfotcard_dateend' value='<?php echo $checkdateend; ?>'/>
+                                            <?php
+                                        }else if(date("Y-m-d") >= $checkdateend){
+                                             echo $txtdatestart;
+                                        }else{
+                                        echo $txtdatenewstart;
+                                        }
+                                        
+                                        ?>
                                     </div>
 				</div>
 				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-1 showmsg">
@@ -84,6 +110,7 @@
                                                                                                 <input type='hidden' name='zoo_code' value='<?php echo $zoo_code; ?>'/>
                                                                                                 <input type='hidden' name='zlfotmember_zlfotmember_id' value='<?php echo $member_id; ?>'/>
                                                                                                 <input type='hidden' name='zlfotcard_stsfw' value='R'>
+                                                                                                <input type='hidden' name='zlfotcard_id'  value='<?php echo $checkcard; ?>'/>
                                                                                                 <input type='hidden' name='zlfotcard_datereg' value='<?php echo date("Y-m-d"); ?>'/>
     						<input type='hidden' name='user_user_id' value='<?php echo $_SESSION['user_id']; ?>'/>
 						</div>
