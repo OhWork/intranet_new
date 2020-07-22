@@ -25,7 +25,7 @@
         }
        $typezoo =  $typezooexe['zoo_code'];
         $codezlfot = $typezoo.$typezlfot;
-        $rs = $db->specifytable("MAX(zlfot_code) AS last_id","zlfot","zlfot_code LIKE '%$codezlfot%'")->executeAssoc();
+        $rs = $db->specifytable("MAX(zlfotcard_code) AS last_id","zlfotcard","zlfotcard_code LIKE '%$codezlfot%'")->executeAssoc();
         $maxId = substr($rs['last_id'],  -5);
         $maxId = ($maxId + 1); 
         $maxId = substr("00000".$maxId, -5);
