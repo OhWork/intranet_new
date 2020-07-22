@@ -7,12 +7,12 @@
     $form = new form();
     $lbdatestart = new label('วันที่สมัคร');
     $lbcode = new label('เลขที่สมาชิก');
-    $lbevent = new label('สถานที่รับสมัคร');
+    $lbevent = new label('ชื่องานกิจกรรม');
     $lbdatereg = new label('วันที่รับสมัคร');
     $lbdateend  = new label('วันที่หมดอายุ');
     $lbtype = new label('ประเภทสมาชิก');
-     $lbzoo = new label('สมัครจาก');
-     $lbreceipt = new label('เลขที่ใบเสร็จ');
+     $lbzoo = new label('หน่วยงานที่ส่งข้อมูล');
+     $lbreceipt = new label('เลขที่ใบเสร็จสโมสรฯ (เล่มที่/เลขที่)');
     $lbdetail = new label('หมายเหตุ');
       $txtreceipt = new textfield('zlfotcard_receipt','','col-12 form-control','');
      $txtdetail = new textArea('zlfotcard_detail','form-control','','','5','5','');
@@ -67,7 +67,7 @@
 					<?php echo $radiotypezlfot;?>
 				</div>
                                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-1 showmsg">
-					<?php echo $lbevent; ?> <a class="text-success" style="float: right;" href="admin_index.php?url=zlfot_add_eventzlfot.php">เพิ่มกิจกรรม <i class="fas fa-plus zloft-f2"></i></a>
+					<?php echo $lbevent; ?> <a class="text-success" style="float: right;" href="admin_index.php?url=zlfot_add_eventzlfot.php">เพิ่มงานกิจกรรม <i class="fas fa-plus zloft-f2"></i></a>
                                 </div>
 				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 showmsg">
 					<?php echo $selectevent->selectFromTB('eventzlfot','eventzlfot_id','eventzlfot_name',$r['eventzlfot_eventzlfot_id']);;?>

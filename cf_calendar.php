@@ -207,7 +207,7 @@
 									<div class="col-xl-12 col-lg-12 col-md-6 col-sm-6 col-6 mt-1">
 										<div class="row">
 											<div class='col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3'>
-                                                                                            <button class="btn btn-primary btn-circle" style="background-color:#f7f68b;border: none;"></button>
+                                                                                            <button class="btn btn-primary btn-circle" style="background-color:#F6E05E;border: none;"></button>
 											</div>
 											<div class='col-xl-9 col-lg-9 col-md-9 col-sm-9 col-9 pl-0 pr-0'>
 												<p>รอการอนุมัติ</p>
@@ -230,7 +230,7 @@
 												<button class="btn btn-primary btn-circle" style="background-color:#51c900;border: none;"></button>
 											</div>
 											<div class='col-xl-9 col-lg-9 col-md-9 col-sm-9 col-9 pl-0 pr-0'>
-												<p>อนุมัติ</p>
+												<p>อนุมัติห้องประชุม</p>
 											</div>
 										</div>
 									</div>
