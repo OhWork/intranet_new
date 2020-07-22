@@ -21,7 +21,7 @@
                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3 mb-3">
                     <div class="row">
                         <div class="col-xl-3 col-lg-3 col-md-2"></div>
-                        <div class="col-xl-6 col-lg-6 col-md-8 col-sm-12 col-12"
+                        <div class="col-xl-6 col-lg-6 col-md-8 col-sm-12 col-12">
                         <input type='hidden' name='zlfotcard_stsfw' value='C'> 
                         <input type='hidden' name='zlfotcard_id' value=<?php echo $id; ?>> 
                             <?php echo $button;?>

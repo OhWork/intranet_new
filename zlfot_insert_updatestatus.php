@@ -14,6 +14,7 @@
 		
                                     if($_POST['zlfotcard_stsfw'] == 'T'){
                                           $data['zlfotcard_stsfw'] = $_POST['zlfotcard_stsfw'];
+                                            $data['sendcard_sendcard_id'] = $_POST['zlfotmember_id'];
                                           $rsfix = $db->update('zlfotcard',$data,'zlfotcard_id',$_POST['zlfotcard_id']);
                                           if($_POST['sendcard_status'] =='Y'){
                                            $db->insert('sendcard',array(
@@ -74,7 +75,7 @@
                           case "T":
                             $link = "admin_index.php?url=zlfot_show_checkmember.php&type=4";
                             break;
-                        case "C":
+                           case "C":
                             $link = "admin_index.php?url=zlfot_show_member.php";
                             break;
                     }
