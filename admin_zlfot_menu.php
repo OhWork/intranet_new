@@ -23,14 +23,22 @@
                                 <a class="nav-link edittext mucl" id="nav-3-animate-1" href="admin_index.php?url=zlfot_show_expire.php">
 	                  รายการบัตรใกล้หมดอายุ
 	                </a>
-	                <a class="nav-link collapsed py-1 nav-link-24 edittext mucl" id="nav-23-animate-1" href="#zlfotsetting2" data-toggle="collapse" data-target="#zlfotsetting2">
+                                 <a class="nav-link collapsed py-1 nav-link-24 edittext mucl" id="nav-23-animate-1" href="#zlfotsetting2" data-toggle="collapse" data-target="#zlfotsetting2">
+    	                <span data-feather="report"></span>
+	                  รายงาน
+	                </a>
+	                 <ul class="sub-menu collapse" id="zlfotsetting2">
+				          <a class="nav-link edittext mucl" id="nav-24-animate-1" href="#"><span data-feather="chevron-right"></span>รายงาน1</a>
+                                          <a class="nav-link edittext mucl" id="nav-24-animate-1" href="#"><span data-feather="chevron-right"></span>รายงาน2</a>
+		  </ul>
+	                <a class="nav-link collapsed py-1 nav-link-24 edittext mucl" id="nav-23-animate-1" href="#zlfotsetting3" data-toggle="collapse" data-target="#zlfotsetting3">
     	                <span data-feather="settings"></span>
 	                  ตั้งค่า
 	                </a>
-	                 <ul class="sub-menu collapse" id="zlfotsetting2">
-				          <a class="nav-link edittext mucl" id="nav-24-animate-1" href="admin_index.php?url=zlfot_show_event.php"><span data-feather="chevron-right"></span>รายการกิจกรรม</a>
+	                 <ul class="sub-menu collapse" id="zlfotsetting3">
+                                        <a class="nav-link edittext mucl" id="nav-24-animate-1" href="admin_index.php?url=zlfot_show_event.php"><span data-feather="chevron-right"></span>รายการกิจกรรม</a>
                                           <a class="nav-link edittext mucl" id="nav-24-animate-1" href="admin_index.php?url=zlfot_show_postoffice.php"><span data-feather="chevron-right"></span>รายการที่ทำการไปรษณีย์</a>
-		             </ul>
+		  </ul>
               </ul>
               <!-- end sub menu -->
               </li>
