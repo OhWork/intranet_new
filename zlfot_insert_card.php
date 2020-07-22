@@ -9,6 +9,7 @@
     include 'database/db_tools.php';
 	include 'connect.php';
         $typezlfot =  $_POST['typezlfot_typezlfot_id'];
+        $dateendnew =  $_POST['zlfotcard_dateend'];
         $user_id = $_POST['user_user_id'];
         $typezooexe = $db->findByPK22("user","zoo","user.subzoo_zoo_zoo_id","zoo.zoo_id","user.user_id",$user_id)->executeAssoc();
         if($typezlfot == '01' || $typezlfot ==  '02'){
@@ -32,13 +33,9 @@
         $nextId = $codezlfot.$maxId;
 
         
-	if(!empty($_POST['subzoo_id'])){
-		$data['subzoo_name'] = $_POST['subzoo_name'];
-		$data['subzoo_year'] = $_POST['subzoo_year'];
-		$data['subzoo_no'] = $_POST['subzoo_no'];
-		$data['subzoo_detail'] = $_POST['subzoo_detail'];
-		$data['subzoo_enable'] = $_POST['subzoo_enable'];
-		$rsfix = $db->update('subzoo',$data,'subzoo_id',$_POST['subzoo_id']);
+	if(!empty($_POST['zlfotmember_zlfotmember_id'])){
+		$data['zlfotcard_status'] = $_POST['zlfotcard_status'];
+		$rsfix = $db->update('zlfotcard',$data,'zlfotcard_id',$_POST['zlfotmember_zlfotmember_id']);
 
 	}else{
 	$rs = $db->insert('zlfotcard',array(
