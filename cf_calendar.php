@@ -206,40 +206,50 @@
 									</div>
 									<div class="col-xl-12 col-lg-12 col-md-6 col-sm-6 col-6 mt-1">
 										<div class="row">
-											<div class='col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4'>
-												<img class="float-right" src='images/yellow.png' width='25px' height='25px'>
+											<div class='col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3'>
+                                                                                            <button class="btn btn-primary btn-circle" style="background-color:#f7f68b;border: none;"></button>
 											</div>
-											<div class='col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8'>
+											<div class='col-xl-9 col-lg-9 col-md-9 col-sm-9 col-9 pl-0 pr-0'>
 												<p>รอการอนุมัติ</p>
 											</div>
 										</div>
 									</div>
 									<div class="col-xl-12 col-lg-12 col-md-6 col-sm-6 col-6 mt-1">
 										<div class="row">
-											<div class='col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4'>
-												<img class="float-right" src='images/red.png' width='25px' height='25px'>
+											<div class='col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3'>
+												<button class="btn btn-primary btn-circle" style="background-color:#e30000;border: none;"></button>
 											</div>
-											<div class='col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8'>
+											<div class='col-xl-9 col-lg-9 col-md-9 col-sm-9 col-9 pl-0 pr-0'>
 												<p>ไม่อนุมัติ</p>
 											</div>
 										</div>
 									</div>
 									<div class="col-xl-12 col-lg-12 col-md-6 col-sm-6 col-6 mt-1">
 										<div class="row">
-											<div class='col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4'>
-												<img class="float-right" src='images/green.png' width='25px' height='25px'>
+											<div class='col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3'>
+												<button class="btn btn-primary btn-circle" style="background-color:#51c900;border: none;"></button>
 											</div>
-											<div class='col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8'>
+											<div class='col-xl-9 col-lg-9 col-md-9 col-sm-9 col-9 pl-0 pr-0'>
 												<p>อนุมัติ</p>
+											</div>
+										</div>
+									</div>
+                                                                        <div class="col-xl-12 col-lg-12 col-md-6 col-sm-6 col-6 mt-1">
+										<div class="row">
+											<div class='col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3'>
+												<button class="btn btn-primary btn-circle" style="background-color:#275FEA;border: none;"></button>
+											</div>
+											<div class='col-xl-9 col-lg-9 col-md-9 col-sm-9 col-9 pl-0 pr-0'>
+												<p>อนุมัติการประชุมออนไลน์</p>
 											</div>
 										</div>
 									</div>
 									<div class="col-xl-12 col-lg-12 col-md-6 col-sm-6 col-6 mt-1">
 										<div class="row">
-											<div class='col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4'>
-												<img  class="float-right" src='images/orange.png' width='25px' height='25px'>
+											<div class='col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3'>
+												<button class="btn btn-primary btn-circle" style="background-color:#f0911d;border: none;"></button>
 											</div>
-											<div class='col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8'>
+											<div class='col-xl-9 col-lg-9 col-md-9 col-sm-9 col-9 pl-0 pr-0'>
 												<p>ยกเลิก</p>
 											</div>
 										</div>
