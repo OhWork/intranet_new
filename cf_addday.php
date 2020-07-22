@@ -453,15 +453,20 @@
 									</div>
 								</div>
 								<div class='col-md-12 checkvdocon' style="margin-bottom: 5px;">
-									<div class="cc-selector">
-										<?php echo $novdocon; ?>
-										<?php echo $lbnovdocon; ?>
-										<?php echo $okvdocon;   ?>
-										<?php echo $lbokvdocon; ?>
-									</div>
-									<div style="padding-top:4px;padding-left:8px;">
-										<?php echo $lbvdocon; ?>
-									</div>
+                                                                    <div class="row">
+                                                                        <div class='col-12'>
+                                                                            <div class="row">
+                                                                                <div class="cc-selector ml-3">
+                                                                                        <?php echo $novdocon; ?>
+                                                                                        <?php echo $lbnovdocon; ?>
+                                                                                        <?php echo $okvdocon;   ?>
+                                                                                        <?php echo $lbokvdocon; ?>
+                                                                                </div>
+                                                                                <div style="padding-top:4px;">
+                                                                                        <?php echo $lbvdocon; ?>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
 									<div class='col-md-12 inzoo'>
 										<div class='col-md-12 text-danger font-weight-bold mt-1' style="text-align:center;">**โปรดเลือกสวนที่เข้าร่วมประชุม**</div>
 										<div class='col-md-12'>
@@ -545,6 +550,7 @@
 											</div>
 										</div>
 									</div>
+                                                                    </div>
 								</div>
 								<div class='col-md-12'>
 									<?php echo $lbname; ?>

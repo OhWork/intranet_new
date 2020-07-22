@@ -1257,3 +1257,11 @@ a:hover {
     border-bottom-right-radius: 0px;
     border-top-right-radius: 0px;
 }
+.btn-circle {
+    width: 25px;
+    height: 25px;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 12px;
+    line-height: 1.42857;
+}}
