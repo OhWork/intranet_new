@@ -460,7 +460,7 @@
 										<?php echo $lbokvdocon; ?>
 									</div>
 									<div style="padding-top:4px;padding-left:8px;">
-										<? echo $lbvdocon; ?>
+										<?php echo $lbvdocon; ?>
 									</div>
 									<div class='col-md-12 inzoo'>
 										<div class='col-md-12 text-danger font-weight-bold mt-1' style="text-align:center;">**โปรดเลือกสวนที่เข้าร่วมประชุม**</div>
