@@ -60,7 +60,9 @@ if(isset($_GET['gData']) && $_GET['gData']|=""){
         }
         //เงื่อนไขจุดสี
         if($rs->eventconfer_status_conferonline == 1){
-             if($rs->eventconfer_status=='Y' && $rs->eventconfer_status_online == 'W'){
+            if($rs->eventconfer_status=='W' && $rs->eventconfer_status_online == 'W'){
+            	$eventcolor = "#f7f68b";
+            }else if($rs->eventconfer_status=='Y' && $rs->eventconfer_status_online == 'W'){
             	$eventcolor = "#f7f68b";
             }
             else if($rs->eventconfer_status=='Y' && $rs->eventconfer_status_online == 'N'){
