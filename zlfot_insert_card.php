@@ -12,8 +12,6 @@
         $datestart = $_POST['zlfotcard_datenewstart'];
         $checkcard =  $_POST['checkcard_id'];
         $user_id = $_POST['user_user_id'];
-        
-        
         $typezooexe = $db->findByPK22("user","zoo","user.subzoo_zoo_zoo_id","zoo.zoo_id","user.user_id",$user_id)->executeAssoc();
         if($typezlfot == '01' || $typezlfot ==  '02'){
         $dateend = substr((date("Y")+1),0);   
@@ -36,33 +34,6 @@
 		$typezooexe = $db->findByPK22("user","zoo","user.subzoo_zoo_zoo_id","zoo.zoo_id","user.user_id",$user_id)->executeAssoc();
                 $checkmember = $db->findByPK12('zlfotcard','zlfotcard_status','"Y"','zlfotmember_zlfotmember_id',$checkcard)->executeAssoc();
                 $dateendchange = $checkmember['zlfotcard_dateend'];
-        
-                if(date("Y-m-d") < $dateendchange){
-                    $datestartnew = substr(($dateendchange),0,4);   
-                    $datestartnew.="-".substr(($dateendchange),5, -3);   
-                    $day = substr(($dateendchange),8, 2);
-                    $dayplus = $day+1;
-                    $datestartnew.= "-".$dayplus;
-                }else if(date("Y-m-d") >= $dateendchange){
-                    $datestartnew = $checkmember['zlfotcard_datestart'];
-                    
-                if($typezlfot == '01' || $typezlfot ==  '02'){
-                    $dateend = substr(($datestartnew+1),0,4);   
-                    $dateend.="-".substr(($datestartnew),5, -3); 
-                    $dateend.= "-".substr(($datestartnew),8, 2);
-                }else if( $typezlfot == '03'){
-                    $dateend = substr(($datestartnew+2),0,4);   
-                    $dateend.="-".substr(($datestartnew),5, -3);   
-                    $dateend.= "-".substr(($datestartnew),8, 2); 
-                }
-                }
-                $typezoo =  $typezooexe['zoo_code'];
-                $codezlfot = $typezoo.$typezlfot;
-                $rs = $db->specifytable("MAX(zlfotcard_code) AS last_id","zlfotcard","zlfotcard_code LIKE '%$codezlfot%'")->executeAssoc();
-                $maxId = substr($rs['last_id'],  -5);
-                $maxId = ($maxId + 1); 
-                $maxId = substr("00000".$maxId, -5);
-                $nextId = $codezlfot.$maxId;
         }
 	if(!empty($_POST['zlfotmember_zlfotmember_id'])){
             
