@@ -12,14 +12,16 @@
         $datestart = $_POST['zlfotcard_datenewstart'];
         $checkcard =  $_POST['checkcard_id'];
         $user_id = $_POST['user_user_id'];
+        
+        
         $typezooexe = $db->findByPK22("user","zoo","user.subzoo_zoo_zoo_id","zoo.zoo_id","user.user_id",$user_id)->executeAssoc();
         if($typezlfot == '01' || $typezlfot ==  '02'){
         $dateend = substr((date("Y")+1),0);   
-        $dateend.="-".date("m");   
+        $dateend.= "-".date("m");   
         $dateend.= "-".date("d");  
         }else if( $typezlfot == '03'){
         $dateend = substr((date("Y")+2),0);   
-        $dateend.="-".date("m");   
+        $dateend.= "-".date("m");   
         $dateend.= "-".date("d"); 
         }
         $typezoo =  $typezooexe['zoo_code'];
@@ -34,7 +36,7 @@
 		$typezooexe = $db->findByPK22("user","zoo","user.subzoo_zoo_zoo_id","zoo.zoo_id","user.user_id",$user_id)->executeAssoc();
                 $checkmember = $db->findByPK12('zlfotcard','zlfotcard_status','"Y"','zlfotmember_zlfotmember_id',$checkcard)->executeAssoc();
                 $dateendchange = $checkmember['zlfotcard_dateend'];
-        }
+        
                 if(date("Y-m-d") < $dateendchange){
                     $datestartnew = substr(($dateendchange),0,4);   
                     $datestartnew.="-".substr(($dateendchange),5, -3);   
@@ -43,7 +45,27 @@
                     $datestartnew.= "-".$dayplus;
                 }else if(date("Y-m-d") >= $dateendchange){
                     $datestartnew = $checkmember['zlfotcard_datestart'];
-                    }
+                    
+                if($typezlfot == '01' || $typezlfot ==  '02'){
+                    $dateend = substr(($datestartnew+1),0,4);   
+                    $dateend.="-".substr(($datestartnew),5, -3); 
+                    $dateend.= "-".substr(($datestartnew),8, 2);
+                }else if( $typezlfot == '03'){
+                    $dateend = substr(($datestartnew+2),0,4);   
+                    $dateend.="-".substr(($datestartnew),5, -3);   
+                    $dateend.= "-".substr(($datestartnew),8, 2); 
+                }
+                }
+                $typezoo =  $typezooexe['zoo_code'];
+                $codezlfot = $typezoo.$typezlfot;
+                $rs = $db->specifytable("MAX(zlfotcard_code) AS last_id","zlfotcard","zlfotcard_code LIKE '%$codezlfot%'")->executeAssoc();
+                $maxId = substr($rs['last_id'],  -5);
+                $maxId = ($maxId + 1); 
+                $maxId = substr("00000".$maxId, -5);
+                $nextId = $codezlfot.$maxId;
+        }
+	if(!empty($_POST['zlfotmember_zlfotmember_id'])){
+            
                 if($typezlfot == '01' || $typezlfot ==  '02'){
                     $dateend = substr(($datestartnew+1),0,4);   
                     $dateend.="-".substr(($datestartnew),5, -3); 
@@ -60,8 +82,6 @@
                 $maxId = ($maxId + 1); 
                 $maxId = substr("00000".$maxId, -5);
                 $nextId = $codezlfot.$maxId;
-
-	if(!empty($_POST['zlfotmember_zlfotmember_id'])){
 		$data['zlfotcard_status'] = $_POST['zlfotcard_status'];
 		$rsfix = $db->update('zlfotcard',$data,'zlfotcard_id',$_POST['zlfotmember_zlfotmember_id']);
 
@@ -105,7 +125,7 @@
             echo "<div class='statusok'>ต่ออายุสำเร็จ</div>";
            }
             $link = "url=admin_index.php?url=zlfot_show_checkmember.php&type=1";
-            header( "Refresh: 2; $link" );
+            //header( "Refresh: 2; $link" );
         }else{
             echo "ข้อมูลไม่เข้าฐานข้อมูล";
         }
