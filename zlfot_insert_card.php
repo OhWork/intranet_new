@@ -14,13 +14,13 @@
         $user_id = $_POST['user_user_id'];
         $typezooexe = $db->findByPK22("user","zoo","user.subzoo_zoo_zoo_id","zoo.zoo_id","user.user_id",$user_id)->executeAssoc();
         if($typezlfot == '01' || $typezlfot ==  '02'){
-        $dateend = substr((date("Y")+1),0);   
-        $dateend.= "-".date("m");   
-        $dateend.= "-".date("d");  
+        $dateendnew = substr((date("Y")+1),0);   
+        $dateendnew.= "-".date("m");   
+        $dateendnew.= "-".date("d");  
         }else if( $typezlfot == '03'){
-        $dateend = substr((date("Y")+2),0);   
-        $dateend.= "-".date("m");   
-        $dateend.= "-".date("d"); 
+        $dateendnew = substr((date("Y")+2),0);   
+        $dateendnew.= "-".date("m");   
+        $dateendnew.= "-".date("d"); 
         }
         $typezoo =  $typezooexe['zoo_code'];
         $codezlfot = $typezoo.$typezlfot;
@@ -29,13 +29,10 @@
         $maxId = ($maxId + 1); 
         $maxId = substr("00000".$maxId, -5);
         $nextId = $codezlfot.$maxId;
-
 	if(!empty($checkcard)){
 		$typezooexe = $db->findByPK22("user","zoo","user.subzoo_zoo_zoo_id","zoo.zoo_id","user.user_id",$user_id)->executeAssoc();
                 $checkmember = $db->findByPK12('zlfotcard','zlfotcard_status','"Y"','zlfotmember_zlfotmember_id',$checkcard)->executeAssoc();
                 $dateendchange = $checkmember['zlfotcard_dateend'];
-        }
-	if(!empty($_POST['zlfotmember_zlfotmember_id'])){
             
                 if($typezlfot == '01' || $typezlfot ==  '02'){
                     $dateend = substr(($datestartnew+1),0,4);   
@@ -77,7 +74,7 @@
                 'zlfotcard_receipt' => $_POST['zlfotcard_receipt'],
                 'zlfotcard_datereg' => $_POST['zlfotcard_datereg'],
                 'zlfotcard_datestart' => $datestart,
-                'zlfotcard_dateend' => $dateend,
+                'zlfotcard_dateend' => $dateendnew,
                 'zlfotcard_detail' => $_POST['zlfotcard_detail'],
                 'zlfotcard_stsfw' => $_POST['zlfotcard_stsfw'],
                  'eventzlfot_eventzlfot_id' => $_POST['eventzlfot_eventzlfot_id'],
