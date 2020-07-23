@@ -34,7 +34,7 @@
              $zoo_code = $rszoo['zoo_code'];
             $zoo = $rszoo['zoo_name'];
     }
-    $button = new buttonok("เพิ่มบัตรสมัคร","","btn btn-success btn-block bt3success col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","");
+    $button = new buttonok("เพิ่มบัตรสมาชิก","","btn btn-success btn-block bt3success col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","");
     echo $form->open("form_reg","","col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","zlfot_insert_card.php","");
  ?>
  <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" style="padding-top:8px;" id="maincontent">
@@ -75,33 +75,39 @@
 					<?php echo $lbdatestart; ?>  
 				</div>
 				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 showmsg">
-                                    <div class="row">
                                         <?php 
                                         $checkdateend = $checkcard['zlfotcard_dateend'];
                                         if($checkdateend){
                                             if(date("Y-m-d") < $checkdateend){
                                                 ?>
-                                                <div class="alert alert-success" role="alert">ไม่ต้องระบุวัน เนื่องจากไม่เลยวันหมดอายุ</div>
+                                                <div class="alert alert-success col-12" role="alert">ไม่ต้องระบุวัน เนื่องจากไม่เลยวันหมดอายุ</div>
                                                 <input type='hidden' name='zlfotcard_dateend' value='<?php echo $checkdateend; ?>'/>
                                                 <input type='hidden' name='checkcard_id' value='<?php echo $checkcard_id; ?>'/>
                                                 <input type='hidden' name='changestatus' value='<?php echo $checkcard['zlfotcard_id']; ?>'/>
-                                                <input type='hidden' name='zlfotcard_status' value='N'>
+                                                <input type='hidden' name='zlfotcard_status' value='N'/>
                                                 <?php
                                                 $checkcard_id = $checkcard['zlfotmember_zlfotmember_id'];
-                                            }else if(date("Y-m-d") >= $checkdateend){
-                                                 echo $txtdatestart;
-                                                 $checkcard_id = $checkcard['zlfotmember_zlfotmember_id'];
-                                                 ?>
-                                                 <input type='hidden' name='checkcard_id' value='<?php echo $checkcard_id; ?>'/>
-                                                <input type='hidden' name='changestatus' value='<?php echo $checkcard['zlfotcard_id']; ?>'/>
-                                                <input type='hidden' name='zlfotcard_status' value='N'>
-                                                <div class="alert alert-danger" role="alert">เนื่องจากเลยกำหนดการต่ออายุ</div> <?php
+                                            }else if(date("Y-m-d") >= $checkdateend){ ?>
+                                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                                    <div class="row">
+                                                        <?php $checkcard_id = $checkcard['zlfotmember_zlfotmember_id'];?>
+                                                        <input type='hidden' name='checkcard_id' value='<?php echo $checkcard_id; ?>'/>
+                                                       <input type='hidden' name='changestatus' value='<?php echo $checkcard['zlfotcard_id']; ?>'/>
+                                                       <input type='hidden' name='zlfotcard_status' value='N'/>
+                                                       <div class="alert alert-danger col-12" role="alert">เนื่องจากเลยกำหนดการต่ออายุ กรุณาเลือกวันที่ต่ออายุสมาชิกสโมสรฯ</div>
+                                                       <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 pl-0 pr-0">
+                                                            <div class="row">
+                                                                <?php echo $txtdatestart;?>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                        <?php
                                             }
                                         }else{
                                         echo $txtdatenewstart;
                                         }
                                         ?>
-                                    </div>
 				</div>
 				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-1 showmsg">
 					<?php echo $lbreceipt; ?>
