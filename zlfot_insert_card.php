@@ -35,8 +35,6 @@
 		$typezooexe = $db->findByPK22("user","zoo","user.subzoo_zoo_zoo_id","zoo.zoo_id","user.user_id",$user_id)->executeAssoc();
                 $checkmember = $db->findByPK12('zlfotcard','zlfotcard_status','"Y"','zlfotmember_zlfotmember_id',$checkcard)->executeAssoc();
                 $dateendchange = $checkmember['zlfotcard_dateend'];
-               //echo $dateendchange;
-            echo   substr(("2021-07-23"),8, 2);
         }
                 if(date("Y-m-d") < $dateendchange){
                     $datestartnew = substr(($dateendchange),0,4);   
