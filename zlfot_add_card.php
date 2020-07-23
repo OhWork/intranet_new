@@ -104,8 +104,13 @@
                                                 </div>
                                         <?php
                                             }
-                                        }else{
-                                        echo $txtdatenewstart;
+                                        }else{ ?>
+                                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 pl-0 pr-0">
+                                            <div class="row">
+                                        <?php echo $txtdatenewstart; ?>
+                                            </div>
+                                        </div>
+                                        <?php
                                         }
                                         ?>
 				</div>
