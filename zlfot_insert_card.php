@@ -17,7 +17,6 @@
         $dateend = substr((date("Y")+1),0);   
         $dateend.="-".date("m");   
         $dateend.= "-".date("d");  
-            //$dateend = $dateendyear."-".$dateendmonth."-".$dateendday;
         }else if( $typezlfot == '03'){
         $dateend = substr((date("Y")+2),0);   
         $dateend.="-".date("m");   
@@ -70,7 +69,7 @@
                 'zlfotcard_code' => $nextId,
                 'zlfotcard_receipt' => $_POST['zlfotcard_receipt'],
                 'zlfotcard_datereg' => $_POST['zlfotcard_datereg'],
-                'zlfotcard_datestart' => $datestartnew,
+                'zlfotcard_datestart' => $_POST['zlfotcard_datenewstart'],
                 'zlfotcard_dateend' => $dateend,
                 'zlfotcard_detail' => $_POST['zlfotcard_detail'],
                 'zlfotcard_stsfw' => $_POST['zlfotcard_stsfw'],
