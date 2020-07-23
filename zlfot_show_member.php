@@ -45,8 +45,8 @@
 			<?php 
                                                         $grid = new gridView();
                                                                     $grid->pr = 'zlfotmember_id';
-                                                                    $grid->header = array('<b><center>รหัส</center></b>','<b><center>ประเภทบัตร</center></b>','<b><center>ชื่อ - นามสกุล</center></b>','<b><center>วันที่สมัคร</center></b>','<b><center>วันที่หมดอายุ</center></b>','<b><center>จาก</center></b>','<b><center>#</center></b>');
-                                                                    $grid->width = array('10%','15%','25%','10%','10%','15%','15%');
+                                                                    $grid->header = array('<b><center>ชื่อ - นามสกุล</center></b>','<b><center>เบอร์ติดต่อ</center></b>','<b><center>#</center></b>');
+                                                                    $grid->width = array('40%','40%','20%');
                                                                     $grid->edit = 'admin_index.php?url=zlfot_member.php';
                                                                     $grid->name = 'table';
                                                                     $grid->edittxt ='รายละเอียด';
