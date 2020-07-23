@@ -14,14 +14,14 @@
         $user_id = $_POST['user_user_id'];
         $typezooexe = $db->findByPK22("user","zoo","user.subzoo_zoo_zoo_id","zoo.zoo_id","user.user_id",$user_id)->executeAssoc();
         if($typezlfot == '01' || $typezlfot ==  '02'){
-            $dateend = substr(($datestart+1),0,4);   
-            $dateend.="-".substr(($datestart),5, -3);   
-            $dateend.= "-".substr(($datestart),8, 2); 
+        $dateend = substr((date("Y")+1),0);   
+        $dateend.="-".date("m");   
+        $dateend.= "-".date("d");  
             //$dateend = $dateendyear."-".$dateendmonth."-".$dateendday;
         }else if( $typezlfot == '03'){
-            $dateend = substr(($datestart+2),0,4);   
-            $dateend.="-".substr(($datestart),5, -3);   
-            $dateend.= "-".substr(($datestart),8, 2); 
+        $dateend = substr((date("Y")+2),0);   
+        $dateend.="-".date("m");   
+        $dateend.= "-".date("d"); 
         }
         $typezoo =  $typezooexe['zoo_code'];
         $codezlfot = $typezoo.$typezlfot;
