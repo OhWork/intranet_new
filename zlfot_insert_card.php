@@ -125,7 +125,7 @@
             echo "<div class='statusok'>ต่ออายุสำเร็จ</div>";
            }
             $link = "url=admin_index.php?url=zlfot_show_checkmember.php&type=1";
-            //header( "Refresh: 2; $link" );
+            header( "Refresh: 2; $link" );
         }else{
             echo "ข้อมูลไม่เข้าฐานข้อมูล";
         }
