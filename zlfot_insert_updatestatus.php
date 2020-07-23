@@ -10,13 +10,22 @@
     include 'database/db_tools.php';
 	include 'connect.php';
 	if(!empty($_POST['zlfotcard_id'])){
-
-		
-                                    if($_POST['zlfotcard_stsfw'] == 'T'){
-                                          $data['zlfotcard_stsfw'] = $_POST['zlfotcard_stsfw'];
-                                            $data['sendcard_sendcard_id'] = $_POST['zlfotmember_id'];
-                                          $rsfix = $db->update('zlfotcard',$data,'zlfotcard_id',$_POST['zlfotcard_id']);
-                                          if($_POST['sendcard_status'] =='Y'){
+                                        
+             switch ($_POST['zlfotcard_stsfw']){
+                          case "P":
+                               $data['zlfotcard_status'] = $_POST['zlfotcard_status'];
+                               $data['zlfotcard_stsfw'] = $_POST['zlfotcard_stsfw'];
+                               $rsfix = $db->update('zlfotcard',$data,'zlfotcard_id',$_POST['zlfotcard_id']);
+                            break;
+                          case "S":
+                            $data['zlfotcard_stsfw'] = $_POST['zlfotcard_stsfw'];
+                            $rsfix = $db->update('zlfotcard',$data,'zlfotcard_id',$_POST['zlfotcard_id']);
+                            break;
+                          case "T":
+                               $data['zlfotcard_stsfw'] = $_POST['zlfotcard_stsfw'];
+                               $data['sendcard_sendcard_id'] = $_POST['zlfotmember_id'];
+                               $rsfix = $db->update('zlfotcard',$data,'zlfotcard_id',$_POST['zlfotcard_id']);
+                               if($_POST['sendcard_status'] =='Y'){
                                            $db->insert('sendcard',array(
                                                     'sendcard_code' => $_POST['sendcard_code'],
                                                     'sendcard_status' => $_POST['sendcard_status'],
@@ -32,21 +41,18 @@
                                                     'postoffice_postoffice_id' => $_POST['postoffice_postoffice_id']
                                                     ));
                                         }
-                                    }else if($_POST['zlfotcard_stsfw'] == 'C'){
-                                        $data['zlfotcard_receiptfin'] = $_POST['zlfotcard_receiptfin'];
-                                        $data['zlfotcard_stsfw'] = $_POST['zlfotcard_stsfw'];
-                                        $rsfix = $db->update('zlfotcard',$data,'zlfotcard_id',$_POST['zlfotcard_id']);
-                                    }else if($_POST['zlfotcard_stsfw'] == 'P'){
-                                        $data['zlfotcard_status'] = $_POST['zlfotcard_status'];
-                                        $data['zlfotcard_stsfw'] = $_POST['zlfotcard_stsfw'];
-                                        $rsfix = $db->update('zlfotcard',$data,'zlfotcard_id',$_POST['zlfotcard_id']);
-                                    }else{
-                                        $data['zlfotcard_stsfw'] = $_POST['zlfotcard_stsfw'];
-                                           $rsfix = $db->update('zlfotcard',$data,'zlfotcard_id',$_POST['zlfotcard_id']);
-                                    }
-                               
+                            break;
+                           case "C":
+                            $data['zlfotcard_receiptfin'] = $_POST['zlfotcard_receiptfin'];
+                            $data['zlfotcard_stsfw'] = $_POST['zlfotcard_stsfw'];
+                            $rsfix = $db->update('zlfotcard',$data,'zlfotcard_id',$_POST['zlfotcard_id']);
+                            break;
+                    }
+            
+            
+          
             //Log
-		if(getenv(HTTP_X_FORWARDED_FOR)){
+	if(getenv(HTTP_X_FORWARDED_FOR)){
             $ip = $_SERVER['HTTP_X_FORWARDED_FOR']; // IP proxy
         }else{
             $ip = $_SERVER['REMOTE_ADDR'];

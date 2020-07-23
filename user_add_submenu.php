@@ -90,7 +90,7 @@ $id = $_GET['id'];
 				<div class="row">
 					<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4"></div>
 					<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
-						<input type='hidden' name='submenu_id' value="<?php echo $_GET['id']; ?>"/>
+						<input type='hidden' name='submenu_id' value="<?php echo $_GET['id'];?>"/>
 						<?php echo $submit; ?>
 					</div>
 					<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4"></div>
