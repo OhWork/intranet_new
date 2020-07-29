@@ -119,11 +119,11 @@
 		<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3">
 			<?php echo $lbtypeDesign; ?>
 		</div>
-		<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-2 test">
-			<?php echo $radiotypedesign; ?>
+		<!-- <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-2 test">
+			<?php //echo $radiotypedesign; ?>
 		</div>
-		<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-1">
-			<div class="row">
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-1">
+                    <div class="row">
 				<div class="" style="margin-left:32px;">
 					<label for='1'><img style="width:50px;height:50px;" src="images/news/typeDesign/new2.png"></label>
 				</div>
@@ -139,7 +139,39 @@
 				<div class="" style="margin-left:50px;">
 					<label for='5'><img style="width:50px;height:50px;" src="images/news/typeDesign/new5.png"></label>
 				</div>
-			</div>
+                        
+                    </div>
+		</div>-->
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-1">
+                    <div class="row">
+                        <div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1"></div>
+                        <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2">
+                            <input type="radio" name="typeDesignnews_id" value="1" id="1" />
+                            <label for='1'><img style="width:50px;height:50px;" src="images/news/typeDesign/new2.png"></label>
+                            <p>รูปแบบที่ 1</p>
+                        </div>
+                        <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2">
+                            <input type="radio" name="typeDesignnews_id" value="2" id="2" />
+                            <label for='1'><img style="width:50px;height:50px;" src="images/news/typeDesign/new1.png"></label>
+                            <p>รูปแบบที่ 2</p>
+                        </div>
+                        <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2">
+                            <input type="radio" name="typeDesignnews_id" value="3" id="3" />
+                            <label for='1'><img style="width:50px;height:50px;" src="images/news/typeDesign/new3.png"></label>
+                            <p>รูปแบบที่ 3</p>
+                        </div>
+                        <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2">
+                            <input type="radio" name="typeDesignnews_id" value="4" id="4" />
+                            <label for='1'><img style="width:50px;height:50px;" src="images/news/typeDesign/new4.png"></label>
+                            <p>รูปแบบที่ 4</p>
+                        </div>
+                        <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2">
+                            <input type="radio" name="typeDesignnews_id" value="5" id="5" />
+                            <label for='1'><img style="width:50px;height:50px;" src="images/news/typeDesign/new5.png"></label>
+                            <p>รูปแบบที่ 5</p>
+                        </div>
+                        <div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1"></div>
+                    </div>
 		</div>
 		<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3">
 			<div class="row">
