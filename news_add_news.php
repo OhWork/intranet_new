@@ -179,8 +179,7 @@
 					<label>ผู้เขียนข่าว </label>
 				</div>
 				<div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8">
-					<?php echo $txtname." ".$txtlast;
-					?>
+					<?php echo $txtname." ".$txtlast; ?>
 				</div>
 			</div>
 		</div>
