@@ -15,16 +15,13 @@
                           case "P":
                                $data['zlfotcard_status'] = $_POST['zlfotcard_status'];
                                $data['zlfotcard_stsfw'] = $_POST['zlfotcard_stsfw'];
-                               $rsfix = $db->update('zlfotcard',$data,'zlfotcard_id',$_POST['zlfotcard_id']);
                             break;
                           case "S":
                             $data['zlfotcard_stsfw'] = $_POST['zlfotcard_stsfw'];
-                            $rsfix = $db->update('zlfotcard',$data,'zlfotcard_id',$_POST['zlfotcard_id']);
                             break;
                           case "T":
                                $data['zlfotcard_stsfw'] = $_POST['zlfotcard_stsfw'];
                                $data['sendcard_sendcard_id'] = $_POST['zlfotmember_id'];
-                               $rsfix = $db->update('zlfotcard',$data,'zlfotcard_id',$_POST['zlfotcard_id']);
                                if($_POST['sendcard_status'] =='Y'){
                                            $db->insert('sendcard',array(
                                                     'sendcard_code' => $_POST['sendcard_code'],
@@ -45,10 +42,10 @@
                            case "C":
                             $data['zlfotcard_receiptfin'] = $_POST['zlfotcard_receiptfin'];
                             $data['zlfotcard_stsfw'] = $_POST['zlfotcard_stsfw'];
-                            $rsfix = $db->update('zlfotcard',$data,'zlfotcard_id',$_POST['zlfotcard_id']);
+                            
                             break;
                     }
-            
+            $rsfix = $db->update('zlfotcard',$data,'zlfotcard_id',$_POST['zlfotcard_id']);
             
           
             //Log
