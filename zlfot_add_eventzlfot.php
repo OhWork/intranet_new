@@ -78,7 +78,7 @@
                                             <div class='row'>
                                                 <div class='col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 pr-0'><?php echo $submit ?></div>
                                                 <div class="col-xl-6 col-lg-3 col-md-6 col-sm-12 col-12 pr-0">
-                                                    <a class="btn btn-danger col-12" href="admin_index.php?url=zlfot_add_member.php">ย้อนกลับ</a
+                                                    <a class="btn btn-danger col-12" href="admin_index.php?url=zlfot_add_member.php">ย้อนกลับ</a>
                                                 </div>
                                             </div>
                                         </div>
