@@ -36,10 +36,7 @@
                         <div class="row">
                                 <div>
                                         <h4>รายสมาชิกสโมสรผู้รักสวนสัตว์</h4>
-		</div>
-		<div class="ml-auto">
-                                        <a href="admin_index.php?url=zlfot_add_member.php&id=<?php echo $id; ?>" class="btn btn-success col-12"><span data-feather="user-plus"></span></a>
-		</div>
+                                </div>
 		<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3 card-body">
                                         <div class="table-responsive">
 			<?php 
