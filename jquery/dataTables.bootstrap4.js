@@ -46,9 +46,9 @@ var DataTable = $.fn.dataTable;
 /* Set the defaults for DataTables initialisation */
 $.extend( true, DataTable.defaults, {
 	dom:
-		"<'row'<'col-sm-12 col-md-6 printdisplaynone'l><'col-sm-12 col-md-6 printdisplaynone'f>>" +
-		"<'row'<'col-sm-12 txgrid gridfp'tr>>" +
-		"<'row'<'col-sm-12 col-md-5 printdisplaynone'i><'col-sm-12 col-md-7 printdisplaynone'p>>",
+		"<'row ml-3 mr-3'<'col-sm-12 col-md-6 printdisplaynone'l><'col-sm-12 col-md-6 printdisplaynone'f>>" +
+		"<'col-sm-12 txgrid gridfp'tr>" +
+		"<'row ml-3 mr-3'<'col-sm-12 col-md-5 printdisplaynone'i><'col-sm-12 col-md-7 printdisplaynone'p>>",
 	renderer: 'bootstrap'
 } );
 
