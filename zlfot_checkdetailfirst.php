@@ -23,7 +23,14 @@
                                                     <h2>รอการตรวจสอบความถูกต้อง</h2>
 						</div>
 					</div>
+                                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+						<div class="row">
+							<div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
+                                                            <p><b>ข้อมูลลูกค้า</b></p>
+							</div>
 
+						</div>
+					</div>
 					<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 						<div class="row">
 							<div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
@@ -54,7 +61,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 pb-3" style="border-bottom: solid 1px #737357">
 						<div class="row">
 							<div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
 								<p>วันที่ลงทะเบียนเข้าสู่ระบบ</p>
@@ -64,10 +71,10 @@
 							</div>
 						</div>
 					</div>
-                                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-4">
 						<div class="row">
 							<div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
-								<p>ข้อมูลบัตร</p>
+								<p><b>ข้อมูลบัตร</b></p>
 							</div>
 
 						</div>
