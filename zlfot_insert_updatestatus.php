@@ -39,8 +39,6 @@
                                         }
                             break;
                            case "C":
-
-						  echo "C";
                             $data['zlfotcard_receiptfin'] = $_POST['zlfotcard_receiptfin'];
                             $data['zlfotcard_stsfw'] = $_POST['zlfotcard_stsfw'];
 

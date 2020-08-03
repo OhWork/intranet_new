@@ -135,7 +135,7 @@
 		<div class="row">
                 <input type='hidden' name='zlfotcard_stsfw' value='T'> 
                 <input type='hidden' name='zlfotmember_id' value="<?php echo $member_id; ?>"/>
-                <input type='hidden' name='zlfotcard_id' value="<?php echo $id; ?>"/>
+                <input type='hidden' name='zlfotcard_id' value=<?php echo $rs['zlfotcard_id'];?>>
                     <div class="col-xl-9 col-lg-8 col-md-8"></div>
                     <div class="col-xl-3 col-lg-4 col-md-4 col-sm-12 col-12">
                         <?php echo $button;?>
