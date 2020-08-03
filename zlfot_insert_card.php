@@ -34,7 +34,7 @@
 	if(!empty($checkcard)){
 	$typezooexe = $db->findByPK22("user","zoo","user.subzoo_zoo_zoo_id","zoo.zoo_id","user.user_id",$user_id)->executeAssoc();
                 $checkmember = $db->findByPK12('zlfotcard','zlfotcard_status','"Y"','zlfotmember_zlfotmember_id',$checkcard)->executeAssoc();
-                $datestartnew = $_POST['zlfotcard_datenewstart'];
+                $datestartnew = $_POST['zlfotcard_datestart'];
                 if($typezlfot == '01' || $typezlfot ==  '02'){
                     $dateend = substr(($datestartnew+1),0,4);
                     $dateend.="-".substr(($datestartnew),5, -3);

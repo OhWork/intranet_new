@@ -92,7 +92,6 @@
                                                     <div class="row">
                                                         <?php $checkcard_id = $checkcard['zlfotmember_zlfotmember_id'];?>
                                                         <input type='hidden' name='checkcard_id' value='<?php echo $checkcard_id; ?>'/>
-                                                        <input type='hidden' name='zlfotcard_datenewstart' value='<?php echo $checkdateend; ?>'/>
                                                        <input type='hidden' name='changestatus' value='<?php echo $checkcard['zlfotcard_id']; ?>'/>
                                                        <input type='hidden' name='zlfotcard_status' value='N'/>
                                                        <div class="alert alert-danger col-12" role="alert">เนื่องจากเลยกำหนดการต่ออายุ กรุณาเลือกวันที่ต่ออายุสมาชิกสโมสรฯ</div>
