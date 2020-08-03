@@ -8,51 +8,50 @@
 <?php
         include 'database/db_tools.php';
 	include 'connect.php';
-        $typezlfot =  $_POST['typezlfot_typezlfot_id'];
+	    $typezlfot =  $_POST['typezlfot_typezlfot_id'];
         $datestart = $_POST['zlfotcard_datenewstart'];
         $checkcard =  $_POST['checkcard_id'];
         $user_id = $_POST['user_user_id'];
         $typezooexe = $db->findByPK22("user","zoo","user.subzoo_zoo_zoo_id","zoo.zoo_id","user.user_id",$user_id)->executeAssoc();
         if($typezlfot == '01' || $typezlfot ==  '02'){
-        $dateendnew = substr((date("Y")+1),0);   
-        $dateendnew.= "-".date("m");   
-        $dateendnew.= "-".date("d");  
+        $dateendnew = substr((date("Y")+1),0);
+        $dateendnew.= "-".date("m");
+        $dateendnew.= "-".date("d");
         }else if( $typezlfot == '03'){
-        $dateendnew = substr((date("Y")+2),0);   
-        $dateendnew.= "-".date("m");   
-        $dateendnew.= "-".date("d"); 
+        $dateendnew = substr((date("Y")+2),0);
+        $dateendnew.= "-".date("m");
+        $dateendnew.= "-".date("d");
         }
         $typezoo =  $typezooexe['zoo_code'];
         $codezlfot = $typezoo.$typezlfot;
         $rs = $db->specifytable("MAX(zlfotcard_code) AS last_id","zlfotcard","zlfotcard_code LIKE '%$codezlfot%'")->executeAssoc();
         $maxId = substr($rs['last_id'],  -5);
-        $maxId = ($maxId + 1); 
+        $maxId = ($maxId + 1);
         $maxId = substr("00000".$maxId, -5);
         $nextId = $codezlfot.$maxId;
 	if(!empty($checkcard)){
-		$typezooexe = $db->findByPK22("user","zoo","user.subzoo_zoo_zoo_id","zoo.zoo_id","user.user_id",$user_id)->executeAssoc();
+				$typezooexe = $db->findByPK22("user","zoo","user.subzoo_zoo_zoo_id","zoo.zoo_id","user.user_id",$user_id)->executeAssoc();
                 $checkmember = $db->findByPK12('zlfotcard','zlfotcard_status','"Y"','zlfotmember_zlfotmember_id',$checkcard)->executeAssoc();
                 $dateendchange = $checkmember['zlfotcard_dateend'];
-            
+
                 if($typezlfot == '01' || $typezlfot ==  '02'){
-                    $dateend = substr(($datestartnew+1),0,4);   
-                    $dateend.="-".substr(($datestartnew),5, -3); 
+                    $dateend = substr(($datestartnew+1),0,4);
+                    $dateend.="-".substr(($datestartnew),5, -3);
                     $dateend.= "-".substr(($datestartnew),8, 2);
                 }else if( $typezlfot == '03'){
-                    $dateend = substr(($datestartnew+2),0,4);   
-                    $dateend.="-".substr(($datestartnew),5, -3);   
-                    $dateend.= "-".substr(($datestartnew),8, 2); 
+                    $dateend = substr(($datestartnew+2),0,4);
+                    $dateend.="-".substr(($datestartnew),5, -3);
+                    $dateend.= "-".substr(($datestartnew),8, 2);
                 }
                 $typezoo =  $typezooexe['zoo_code'];
                 $codezlfot = $typezoo.$typezlfot;
                 $rs = $db->specifytable("MAX(zlfotcard_code) AS last_id","zlfotcard","zlfotcard_code LIKE '%$codezlfot%'")->executeAssoc();
                 $maxId = substr($rs['last_id'],  -5);
-                $maxId = ($maxId + 1); 
+                $maxId = ($maxId + 1);
                 $maxId = substr("00000".$maxId, -5);
                 $nextId = $codezlfot.$maxId;
 		$data['zlfotcard_status'] = $_POST['zlfotcard_status'];
 		$rsfix = $db->update('zlfotcard',$data,'zlfotcard_id',$_POST['zlfotmember_zlfotmember_id']);
-
                 $rs = $db->insert('zlfotcard',array(
                 'zlfotcard_code' => $nextId,
                 'zlfotcard_receipt' => $_POST['zlfotcard_receipt'],
@@ -77,6 +76,9 @@
                 'zlfotcard_dateend' => $dateendnew,
                 'zlfotcard_detail' => $_POST['zlfotcard_detail'],
                 'zlfotcard_stsfw' => $_POST['zlfotcard_stsfw'],
+                'zlfotcard_status' => 1,
+                'sendcard_sendcard_id' => 1,
+                'zlfotcard_receiptfin' => 1,
                  'eventzlfot_eventzlfot_id' => $_POST['eventzlfot_eventzlfot_id'],
                 'typezlfot_typezlfot_id' => $_POST['typezlfot_typezlfot_id'],
                 'zlfotmember_zlfotmember_id' => $_POST['zlfotmember_zlfotmember_id'],

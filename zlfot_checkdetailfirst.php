@@ -3,7 +3,6 @@
     $id =  $_GET['id'];
     $form = new form();
     $button = new buttonok("ยืนยันการตรวจสอบ","","btn btn-success btn-block col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12","");
- 
     $rs = $db->findByPK88('zlfotmember','zlfotcard','typezlfot','subdistricts','districts','provinces','user','zoo',
                 'zlfotmember.user_user_id','user.user_id',
                 'zlfotcard.zlfotmember_zlfotmember_id','zlfotmember.zlfotmember_id',
@@ -12,7 +11,7 @@
                 'zlfotmember.zlfotmember_provinces_id','provinces.provinces_id',
                 'zlfotmember.zlfotmember_districts_id','districts.districts_id',
                 'zlfotmember.zlfotmember_subdistricts_id','subdistricts.subdistricts_id',
-                'zlfotmember_id',$id)->executeRow();  
+                'zlfotmember_id',$id)->executeRow();
     echo $form->open("form_reg","frmMain","col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3","zlfot_insert_updatestatus.php","");
 	?>
 	<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
@@ -24,7 +23,7 @@
                                                     <h2>รอการตรวจสอบความถูกต้อง</h2>
 						</div>
 					</div>
-					
+
 					<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 						<div class="row">
 							<div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
@@ -70,7 +69,7 @@
 							<div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
 								<p>ข้อมูลบัตร</p>
 							</div>
-							
+
 						</div>
 					</div>
                                         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
@@ -135,9 +134,9 @@
 					</div>
 					<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mb-4">
 						<div class="row">
-							<input type='hidden' name='zlfotcard_stsfw' value='P'/> 
-                                                                                                                <input type='hidden' name='zlfotcard_status' value='Y'/> 
-							<input type='hidden' name='zlfotcard_id' value='<?php echo $id;?>' /> 
+							<input type='hidden' name='zlfotcard_stsfw' value='P'/>
+                            <input type='hidden' name='zlfotcard_status' value='Y'/>
+							<input type='hidden' name='zlfotcard_id' value='<?php echo $rs['zlfotcard_id'];?>' />
 							<div class="col-xl-3 col-lg-2 col-md-2"></div>
 							<div class="col-xl-3 col-lg-4 col-md-4 col-sm-12 col-12">
                                                             <?php echo $button; ?>
@@ -156,4 +155,4 @@
 	</div>
 <?php echo $form->close();
 endif;
-?> 
+?>

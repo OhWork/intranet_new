@@ -10,7 +10,6 @@
     include 'database/db_tools.php';
 	include 'connect.php';
 	if(!empty($_POST['zlfotcard_id'])){
-                                        
              switch ($_POST['zlfotcard_stsfw']){
                           case "P":
                                $data['zlfotcard_status'] = $_POST['zlfotcard_status'];
@@ -40,14 +39,16 @@
                                         }
                             break;
                            case "C":
+
+						  echo "C";
                             $data['zlfotcard_receiptfin'] = $_POST['zlfotcard_receiptfin'];
                             $data['zlfotcard_stsfw'] = $_POST['zlfotcard_stsfw'];
-                            
+
                             break;
                     }
             $rsfix = $db->update('zlfotcard',$data,'zlfotcard_id',$_POST['zlfotcard_id']);
-            
-          
+
+
             //Log
 	if(getenv(HTTP_X_FORWARDED_FOR)){
             $ip = $_SERVER['HTTP_X_FORWARDED_FOR']; // IP proxy
@@ -86,7 +87,7 @@
                             $link = "admin_index.php?url=zlfot_show_member.php";
                             break;
                     }
-            header( "Refresh: 2; $link" );
+//             header( "Refresh: 2; $link" );
 }
 ?>
 </html>
