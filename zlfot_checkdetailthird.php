@@ -48,7 +48,7 @@
                                 <p class="mb-0">เบอร์ติดต่อ : <?php echo $rs['zlfotmember_tel']; ?></p>
                             </div>
                             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                                <p class="mb-0"> ที่อยู่ : <?php echo $rs['zlfotmember_address']; ?> แขวง/ตำบล <?php echo $rs['subdistricts_nameth']; ?> <?php echo $rs['districts_nameth']; ?> <?php echo $rs['provinces_nameth']; ?></p>
+                                <p class="mb-0"> ที่อยู่ : <?php echo $rs['zlfotmember_address']; ?> แขวง/ตำบล <?php echo $rs['subdistricts_nameth']; ?> เขต/อำเถอ <?php echo $rs['districts_nameth']; ?> จังหวัด <?php echo $rs['provinces_nameth']; ?></p>
                             </div>
                             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                                 <p><?php echo $rs['subdistricts_code']; ?></p>
