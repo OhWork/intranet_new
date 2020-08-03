@@ -61,6 +61,7 @@
                 'zlfotcard_dateend' => $dateend,
                 'zlfotcard_detail' => $_POST['zlfotcard_detail'],
                 'zlfotcard_stsfw' => $_POST['zlfotcard_stsfw'],
+                 'zlfotcard_status' => $_POST['zlfotcard_status'],
                 'eventzlfot_eventzlfot_id' => $_POST['eventzlfot_eventzlfot_id'],
                 'typezlfot_typezlfot_id' => $_POST['typezlfot_typezlfot_id'],
                 'zlfotmember_zlfotmember_id' => $_POST['zlfotmember_zlfotmember_id'],
