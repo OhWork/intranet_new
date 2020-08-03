@@ -57,7 +57,7 @@
                 'zlfotcard_code' => $nextId,
                 'zlfotcard_receipt' => $_POST['zlfotcard_receipt'],
                 'zlfotcard_datereg' => $_POST['zlfotcard_datereg'],
-                'zlfotcard_datestart' => $_POST['zlfotcard_datenewstart'],
+                'zlfotcard_datestart' => $_POST['zlfotcard_datestart'],
                 'zlfotcard_dateend' => $dateend,
                 'zlfotcard_detail' => $_POST['zlfotcard_detail'],
                 'zlfotcard_stsfw' => $_POST['zlfotcard_stsfw'],
