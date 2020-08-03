@@ -81,7 +81,7 @@
                                             if(date("Y-m-d") < $checkdateend){
                                                 ?>
                                                 <div class="alert alert-success col-12" role="alert">ไม่ต้องระบุวัน เนื่องจากไม่เลยวันหมดอายุ</div>
-                                                <input type='hidden' name='zlfotcard_dateend' value='<?php echo $checkdateend; ?>'/>
+                                                <input type='hidden' name='zlfotcard_datenewstart' value='<?php echo $checkdateend; ?>'/>
                                                 <input type='hidden' name='checkcard_id' value='<?php echo $checkcard_id; ?>'/>
                                                 <input type='hidden' name='changestatus' value='<?php echo $checkcard['zlfotcard_id']; ?>'/>
                                                 <input type='hidden' name='zlfotcard_status' value='N'/>
@@ -133,7 +133,7 @@
       
                                                 <input type='hidden' name='zoo_code' value='<?php echo $zoo_code; ?>'/>
                                                 <input type='hidden' name='zlfotmember_zlfotmember_id' value='<?php echo $member_id; ?>'/>
-                                                
+                                                <input type='hidden' name='zlfotcard_status' value='N'/>
                                                 <input type='hidden' name='zlfotcard_stsfw' value='R'>
                                                 <input type='hidden' name='zlfotcard_datereg' value='<?php echo date("Y-m-d"); ?>'/>
     						<input type='hidden' name='user_user_id' value='<?php echo $_SESSION['user_id']; ?>'/>
