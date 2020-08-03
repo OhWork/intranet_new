@@ -57,7 +57,7 @@
 								<p>ที่อยู่</p>
 							</div>
 							<div class="col-xl-8 col-lg-8 col-md-6 col-sm-12 col-12">
-								<p><?php echo $rs['zlfotmember_address']; ?>  แขวง/ตำบล <?php echo $rs['subdistricts_nameth']; ?> เขต/อำเถอ <?php echo $rs['districts_nameth']; ?> จังหวัด <?php echo $rs['provinces_nameth']; ?></p>
+								<p><?php echo $rs['zlfotmember_address']; ?> แขวง/ตำบล <?php echo $rs['subdistricts_nameth']; ?> เขต/อำเถอ <?php echo $rs['districts_nameth']; ?> จังหวัด <?php echo $rs['provinces_nameth']; ?></p>
 							</div>
 						</div>
 					</div>
