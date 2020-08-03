@@ -43,7 +43,7 @@
                                 <label>ข้อมูลการจัดส่ง</label>
                             </div>
                             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                                <p class="mb-0"><?php echo $rs['zlfotcard_code']; ?> ชื่อผู้รับ : <?php echo $rs['zlfotmember_nameth']; ?></p>
+                                <p class="mb-0"><?php if($checkcard){ echo $checkcard['zlfotcard_code']; }else{ echo $rs['zlfotcard_code']; } ?> ชื่อผู้รับ : <?php echo $rs['zlfotmember_nameth']; ?></p>
                             </div>
                             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                                 <p class="mb-0">เบอร์ติดต่อ : <?php echo $rs['zlfotmember_tel']; ?></p>
