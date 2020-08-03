@@ -12,6 +12,7 @@
                 'zlfotmember.zlfotmember_districts_id','districts.districts_id',
                 'zlfotmember.zlfotmember_subdistricts_id','subdistricts.subdistricts_id',
                 'zlfotmember_id',$id)->executeRow();
+                  $checkcard = $db->findByPK13('zlfotcard','zlfotcard_status','"N"','zlfotcard_stsfw','"R"','zlfotmember_zlfotmember_id',$id)->executeAssoc();
     echo $form->open("form_reg","frmMain","col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3","zlfot_insert_updatestatus.php","");
 	?>
 	<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
@@ -95,7 +96,13 @@
 								<p>รหัสบัตรสมาชิก</p>
 							</div>
 							<div class="col-xl-8 col-lg-8 col-md-6 col-sm-12 col-12">
-								<?php echo $rs['zlfotcard_code']; ?>
+					<?php 
+                                                                                        if($checkcard){
+                                                                                             echo $checkcard['zlfotcard_code']; 
+                                                                                        }else{
+                                                                                                echo $rs['zlfotcard_code']; 
+                                                                                        }
+                                                                                         ?>
 							</div>
 						</div>
 					</div>
@@ -105,7 +112,14 @@
 								<p>วันที่สมัคร</p>
 							</div>
 							<div class="col-xl-8 col-lg-8 col-md-6 col-sm-12 col-12">
-								<?php echo $rs['zlfotcard_datestart']; ?>
+                                                                                      <?php 
+                                                                                        if($checkcard){
+                                                                                             echo $checkcard['zlfotcard_datestart']; 
+                                                                                        }else{
+                                                                                                echo $rs['zlfotcard_datestart']; 
+                                                                                        }
+                                                                                         ?>
+                                                                        
 							</div>
 						</div>
 					</div>
@@ -115,7 +129,12 @@
 								<p>วันที่หมดอายุ</p>
 							</div>
 							<div class="col-xl-8 col-lg-8 col-md-6 col-sm-12 col-12">
-								<?php echo $rs['zlfotcard_dateend']; ?>
+								<?php 
+                                                                                    if($checkcard){
+                                                                                             echo $checkcard['zlfotcard_dateend']; 
+                                                                                        }else{
+                                                                                                echo $rs['zlfotcard_dateend']; 
+                                                                                        } ?>
 							</div>
 						</div>
 					</div>
@@ -143,10 +162,17 @@
 						<div class="row">
 							<input type='hidden' name='zlfotcard_stsfw' value='P'/>
                                                     <input type='hidden' name='zlfotcard_status' value='Y'/>
-							<input type='hidden' name='zlfotcard_id' value='<?php echo $rs['zlfotcard_id'];?>' />
+                                                    <?php
+                                                    if($checkcard){
+                                                        ?>
+                                                    <input type='hidden' name='zlfotcard_id' value='<?php echo $checkcard['zlfotcard_id'];?>' />
+                                                   <?php  }else{?>
+			<input type='hidden' name='zlfotcard_id' value='<?php echo $rs['zlfotcard_id'];?>' />
+                                                   <?php } ?>
 							<div class="col-xl-3 col-lg-2 col-md-2"></div>
 							<div class="col-xl-3 col-lg-4 col-md-4 col-sm-12 col-12">
-                                                            <?php echo $button; ?>
+                                                  
+                                                    <?php        echo $button; ?>
 							</div>
                                                         <div class="col-xl-3 col-lg-4 col-md-4">
                                                              <a class="btn btn-warning btn-block col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" href="#">

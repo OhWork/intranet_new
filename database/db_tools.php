@@ -281,6 +281,10 @@
 			$this->sql = "SELECT * FROM $table WHERE $column1 = $value1 && $column2 = $value2";
 			return $this;
 		}
+                                function findByPK13($table,$column1,$value1,$column2,$value2,$column3,$value3){
+			$this->sql = "SELECT * FROM $table WHERE $column1 = $value1 && $column2 = $value2 && $column3 = $value3";
+			return $this;
+		}
                                 function findByPK31($table,$table2,$table3,$column1,$value1){
 			$this->sql = "SELECT * FROM $table,$table2,$table3 WHERE $column1 = $value1";
 			return $this;
