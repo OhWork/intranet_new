@@ -14,7 +14,7 @@
                 'zlfotmember.zlfotmember_districts_id','districts.districts_id',
                 'zlfotmember.zlfotmember_subdistricts_id','subdistricts.subdistricts_id',
                 'zlfotmember_id',$id)->executeRow();  
-                 $checkcard = $db->findByPK13('zlfotcard','zlfotcard_status','"N"','zlfotcard_stsfw','"R"','zlfotmember_zlfotmember_id',$id)->executeAssoc();
+                 $checkcard = $db->findByPK13('zlfotcard','zlfotcard_status','"Y"','zlfotcard_stsfw','"T"','zlfotmember_zlfotmember_id',$id)->executeAssoc();
             echo $form->open("form_reg","frmMain","col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3","zlfot_insert_updatestatus.php","");
 ?>
 <div class="row">
