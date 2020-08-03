@@ -32,10 +32,14 @@
 // 		}
 
 	}else{
-
-	    $target_dir = 'temp/';
+		$target_dir = 'temp/';
 	    $target_file = $target_dir.basename($_FILES['news_cover']['name']);
 	    $target_dir_save = 'images/news/'.basename($_FILES['news_cover']['name']);
+/*
+	    echo $target_file;
+	    echo $target_dir_save;
+	    chmod(basename($_FILES['news_cover']['name']), 0755);
+*/
 	    move_uploaded_file($_FILES['news_cover']['tmp_name'], $target_dir_save);
 
 

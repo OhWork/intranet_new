@@ -64,7 +64,7 @@
                 'zlfotmember.zlfotmember_provinces_id','provinces.provinces_id',
                 'zlfotmember.zlfotmember_districts_id','districts.districts_id',
                 'zlfotmember.zlfotmember_subdistricts_id','subdistricts.subdistricts_id',
-                'zlfotmember_nameth',"'$zlfotmember_nameth'")->executeAssoc();  
+                'zlfotmember_nameth',"'$zlfotmember_nameth'")->executeAssoc();
         if($rs){
             if($rs['zlfotmember_id']){
                 $member_id =  $rs['zlfotmember_id'];
@@ -206,7 +206,7 @@
 <?php
     $columns = array('zlfotcard_code','typezlfot_name','zlfotcard_datestart','zlfotcard_dateend','zlfotcard_detail');
     $rs = $db->findByPK34DESC('zlfotmember','zlfotcard','typezlfot','zlfotcard.zlfotmember_zlfotmember_id','zlfotmember.zlfotmember_id','zlfotcard.typezlfot_typezlfot_id','typezlfot.typezlfot_id','zlfotmember_zlfotmember_id',$member_id,'zlfotcard_stsfw','"C"','zlfotcard_id')->execute();
-    $grid = new gridView();
+    	$grid = new gridView();
         $grid->header = array('<b><center>รหัสสมาชิก</center></b>','<b><center>ประเภทสมาชิก</center></b>','<b><center>วันที่สมัคร</center></b>','<b><center>วันที่หมดอายุ</center></b>','<b><center>หมายเหตุ</center></b>');
         $grid->width = array('15%','15%','15%','15%','40%');
         $grid->name = 'table';
@@ -226,10 +226,10 @@
         <?php
         }
         }
-        
-?>   
+
+?>
 </div>
-</div> 
+</div>
 <?php endif;
     echo $form->close();?>
 <script>

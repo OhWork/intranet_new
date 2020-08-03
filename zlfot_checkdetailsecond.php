@@ -11,7 +11,7 @@
                 'zlfotmember.zlfotmember_provinces_id','provinces.provinces_id',
                 'zlfotmember.zlfotmember_districts_id','districts.districts_id',
                 'zlfotmember.zlfotmember_subdistricts_id','subdistricts.subdistricts_id',
-                'zlfotmember_id',$id)->executeRow();  
+                'zlfotmember_id',$id)->executeRow();
             echo $form->open("form_reg","frmMain","col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3","zlfot_insert_updatestatus.php","");
  ?>
 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
@@ -33,7 +33,7 @@
                             </div>
                             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 
-                                <?php 
+                                <?php
                                 $datestart = new DateTime($rs['zlfotcard_datestart']);
                                 $dateend = new DateTime($rs['zlfotcard_dateend']);
                                 echo $datestart->format('d-M-Y'); ?> - <?php echo $dateend->format('d-M-Y'); ?>
@@ -48,19 +48,19 @@
             </div>
             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mb-4">
 		<div class="row">
-                <input type='hidden' name='zlfotcard_stsfw' value='S'> 
-                <input type='hidden' name='zlfotcard_id' value=<?php echo $id; ?>>
+                <input type='hidden' name='zlfotcard_stsfw' value='S'>
+                <input type='hidden' name='zlfotcard_id' value=<?php echo $rs['zlfotcard_id'];?>>
                     <div class="col-xl-4 col-lg-4 col-md-3"></div>
                     <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
                         <?php echo $button; ?>
                     </div>
                     <div class="col-xl-4 col-lg-4 col-md-3"></div>
                 </div>
-            </div>   
+            </div>
         </div>
         <div class="col-xl-2 col-lg-2 col-md-1"></div>
     </div>
 </div>
             <?php echo $form->close();
             endif;
-            ?> 
+            ?>

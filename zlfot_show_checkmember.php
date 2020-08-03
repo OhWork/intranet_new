@@ -20,7 +20,7 @@
 
     $labelsearchipzpo = new label('ค้นหา');
 
-              ?> 
+              ?>
 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3">
         <div class="row">
                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 card-header">
@@ -37,11 +37,11 @@
                                             ?><h4>รอการบันทึกใบเสร็จ</h4><?php
                                                     }
                                                     ?>
-                                        
+
 		</div>
 		<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3 card-body">
                                         <div class="table-responsive">
-			<?php 
+			<?php
                                                    if($type == "1"){
                                                         $columns = array('zlfotcard_code','typezlfot_name','zlfotmember_nameth','zlfotcard_datestart','zlfotcard_dateend','zoo_name');
                                                         $header = array('<b><center>รหัส</center></b>','<b><center>ประเภทบัตร</center></b>','<b><center>ชื่อ - นามสกุล</center></b>','<b><center>วันที่สมัคร</center></b>','<b><center>วันที่หมดอายุ</center></b>','<b><center>จาก</center></b>','<b><center>#</center></b>');
@@ -79,8 +79,6 @@ $columns = array('zlfotcard_code','typezlfot_name','zlfotmember_nameth','zlfotca
                                                                     $grid->name = 'table';
                                                                     $grid->edittxt = $edittxt;
                                                                     $grid->renderFromDB($columns,$rs);
-
-
                                                                     endif;
                                                             ?>
                                         </div>

@@ -69,7 +69,7 @@
 				}
 			}
 			$this->sql = "UPDATE $table SET $rows WHERE $field = $value";
-			return mysqli_query($con,$this->sql);
+			return mysqli_query($con,$this->sql) or die(mysql_error());
 		}
 		function update2con($table, $data, $field, $value ,$field2 ,$value2){
     		$con = $this->connect();

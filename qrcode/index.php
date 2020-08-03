@@ -22,8 +22,9 @@
  * Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA
  */
 ?>
-<div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2"></div>
-<div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8 mt-3">
+<div class="row">
+<div class="col-xl-2 col-lg-2 col-md-2"></div>
+<div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-12 mt-3">
 	<div class="row">
 		<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 			<h4>ระบบจัดการQRCode</h4>
@@ -126,4 +127,5 @@
 		</div>
 	</div>
 </div>
-<div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2"></div>
+<div class="col-xl-2 col-lg-2 col-md-2"></div>
+</div>
