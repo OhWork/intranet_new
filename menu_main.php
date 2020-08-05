@@ -88,6 +88,9 @@
                                                                 <li class="nav-item">
 				<a class="nav-link collapsed edittext mucl" href="http://192.168.0.5:8088/hr-new"><i class="fas fa-user mr-2"></i><span>ระบบบริหารงานบุคลากร</span></a>
 				</li>
+                                <li class="nav-item">
+				<a class="nav-link collapsed edittext mucl" href="index.php?url=ts_index.php"><i class="fas fa-user mr-2"></i><span>ระบบจองรถยนต์ภายในองค์การสวนสัตว์</span></a>
+				</li>
             </ul>
         </div>
     </nav>
