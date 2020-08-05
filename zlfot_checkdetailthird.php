@@ -21,6 +21,7 @@
                 'zlfotmember.zlfotmember_districts_id','districts.districts_id',
                 'zlfotmember.zlfotmember_subdistricts_id','subdistricts.subdistricts_id',
                 'zlfotmember_id',$id)->executeRow();  
+               $checkcard = $db->findByPK13('zlfotcard','zlfotcard_status','"Y"','zlfotcard_stsfw','"S"','zlfotmember_zlfotmember_id',$id)->executeAssoc();
               $member_id = $rs['zlfotmember_zlfotmember_id'];
             echo $form->open("form_reg","frmMain","col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3","zlfot_insert_updatestatus.php","");
             ?>
@@ -42,13 +43,13 @@
                                 <label>ข้อมูลการจัดส่ง</label>
                             </div>
                             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                                <p class="mb-0"><?php echo $rs['zlfotcard_code']; ?> ชื่อผู้รับ : <?php echo $rs['zlfotmember_nameth']; ?></p>
+                                <p class="mb-0"><?php if($checkcard){ echo $checkcard['zlfotcard_code']; }else{ echo $rs['zlfotcard_code']; } ?> ชื่อผู้รับ : <?php echo $rs['zlfotmember_nameth']; ?></p>
                             </div>
                             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                                 <p class="mb-0">เบอร์ติดต่อ : <?php echo $rs['zlfotmember_tel']; ?></p>
                             </div>
                             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                                <p class="mb-0"> ที่อยู่ : <?php echo $rs['zlfotmember_address']; ?> แขวง/ตำบล <?php echo $rs['subdistricts_nameth']; ?> <?php echo $rs['districts_nameth']; ?> <?php echo $rs['provinces_nameth']; ?></p>
+                                <p class="mb-0"> ที่อยู่ : <?php echo $rs['zlfotmember_address']; ?> แขวง/ตำบล <?php echo $rs['subdistricts_nameth']; ?> เขต/อำเถอ <?php echo $rs['districts_nameth']; ?> จังหวัด <?php echo $rs['provinces_nameth']; ?></p>
                             </div>
                             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                                 <p><?php echo $rs['subdistricts_code']; ?></p>
@@ -135,7 +136,11 @@
 		<div class="row">
                 <input type='hidden' name='zlfotcard_stsfw' value='T'> 
                 <input type='hidden' name='zlfotmember_id' value="<?php echo $member_id; ?>"/>
-                <input type='hidden' name='zlfotcard_id' value=<?php echo $rs['zlfotcard_id'];?>>
+                <?php if($checkcard){  ?>
+               <input type='hidden' name='zlfotcard_id' value='<?php echo $checkcard['zlfotcard_id'];?>' />
+                <?php  }else{?>
+	<input type='hidden' name='zlfotcard_id' value='<?php echo $rs['zlfotcard_id'];?>' />
+                <?php } ?>
                     <div class="col-xl-9 col-lg-8 col-md-8"></div>
                     <div class="col-xl-3 col-lg-4 col-md-4 col-sm-12 col-12">
                         <?php echo $button;?>

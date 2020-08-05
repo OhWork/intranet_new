@@ -14,6 +14,7 @@
                 'zlfotmember.zlfotmember_districts_id','districts.districts_id',
                 'zlfotmember.zlfotmember_subdistricts_id','subdistricts.subdistricts_id',
                 'zlfotmember_id',$id)->executeRow();  
+                 $checkcard = $db->findByPK13('zlfotcard','zlfotcard_status','"Y"','zlfotcard_stsfw','"T"','zlfotmember_zlfotmember_id',$id)->executeAssoc();
             echo $form->open("form_reg","frmMain","col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3","zlfot_insert_updatestatus.php","");
 ?>
 <div class="row">
@@ -32,7 +33,11 @@
                         <div class="col-xl-3 col-lg-3 col-md-2"></div>
                         <div class="col-xl-6 col-lg-6 col-md-8 col-sm-12 col-12">
                         <input type='hidden' name='zlfotcard_stsfw' value='C'> 
-                        <input type='hidden' name='zlfotcard_id' value=<?php echo $rs['zlfotcard_id'];?>>
+                                        <?php if($checkcard){  ?>
+                                            <input type='hidden' name='zlfotcard_id' value='<?php echo $checkcard['zlfotcard_id'];?>' />
+                                        <?php  }else{?>
+                                        <input type='hidden' name='zlfotcard_id' value='<?php echo $rs['zlfotcard_id'];?>' />
+                                          <?php } ?>
                             <?php echo $button;?>
                         </div>
                         <div class="col-xl-3 col-lg-3 col-md-2"></div>
