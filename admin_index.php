@@ -9,13 +9,11 @@
             include_once 'form/gridview.php';
             include_once 'clearsession.php';
             $cache_active = true;
-            $cache_folder = 'database/cache';
+            $cache_folder = 'database/cache/';
             function callback($buffer){
                 return $buffer;
             }
-        $page_cache = acmeCache::fetch('page_cache', 10);
-        if(!$page_cache){
-	ob_start("callback");
+
 	error_reporting(E_ERROR | E_WARNING | E_PARSE);
 	if(empty($_SESSION['user_name'])){
 	  header( "Refresh: 0; login.php" );
@@ -74,12 +72,4 @@
     </script>
 </body>
 </html>
-<?php 
-    $page_cache= ob_get_contents();
-    ob_end_flush();
-        acmeCache::save('page_cache',$page_cache);
-        }else{
-            echo $page_cache;
-            echo 'Cache Data';
-} 
-?>
+

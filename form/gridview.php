@@ -1,6 +1,6 @@
 <?php
 include_once 'change2thaidate.php';
-                include '../database/db_tools.php';
+//include_once '../database/db_tools.php';
                 //include '../connect.php';
 error_reporting(E_ERROR | E_WARNING | E_PARSE);
 class gridView{

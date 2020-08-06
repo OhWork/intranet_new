@@ -22,7 +22,11 @@
     $form = new form();
     $labelsearchipzpo = new label('ค้นหา');
         $rs2 = "user,subzoo,zoo  where ipzpo.subzoo_subzoo_id = subzoo.subzoo_id && subzoo.zoo_zoo_id = zoo.zoo_id ";
-            $rs = $db->findByPK32DESC('user','subzoo','zoo','user.subzoo_subzoo_id','subzoo.subzoo_id','subzoo.zoo_zoo_id','zoo.zoo_id','user_id')->execute();  ?> 
+            $rs = $db->findByPK32DESC('user','subzoo','zoo','user.subzoo_subzoo_id','subzoo.subzoo_id','subzoo.zoo_zoo_id','zoo.zoo_id','user_id')->execute();
+            $page_cache = acmeCache::fetch('cache_showlist', 10);
+        if(!$page_cache){
+	ob_start("callback");
+            ?> 
 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3">
         <div class="row">
                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 card-header">
@@ -44,7 +48,7 @@
                                                                     $grid->name = 'table';
                                                                     $grid->edittxt ='แก้ไข';
                                                                     $grid->renderFromDB($columns,$rs);
-                                                                    endif;
+
                                                             ?>
                                         </div>
 		</div>
@@ -52,3 +56,13 @@
 	</div>
         </div>
 </div>
+<?php 
+    $page_cache= ob_get_contents();
+    ob_end_flush();
+        acmeCache::save('cache_showlist',$page_cache);
+        }else{
+            echo $page_cache;
+            echo 'Cache Data';
+}
+                                                                    endif;
+?>
