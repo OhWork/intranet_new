@@ -34,13 +34,13 @@
         <div class="row">
                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 card-header">
                         <div class="row">
-                                <div>
-                                        <h4>รายการรถยนตร์</h4>
-                                </div>
-                            <div class="col-md-2">
-                                        <a href="admin_index.php?url=ts_add_car.php" class="btn btn-success col-12">เพิ่มรถยนตร์</a>
-		</div>
-		<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3 card-body">
+                            <div class="col-4">
+                                <h4>รายการรถยนตร์</h4>
+                            </div>
+                            <div class="col-2 ml-auto">
+                                 <a href="admin_index.php?url=ts_add_car.php" class="btn btn-success col-12">เพิ่มรถยนตร์ <i class="fas fa-car-alt"></i></a>
+							</div>
+							<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 card-body">
                                         <div class="table-responsive">
 			<?php 
                                                         $grid = new gridView();
@@ -54,8 +54,8 @@
                                                                     endif;
                                                             ?>
                                         </div>
-		</div>
+							</div>
                         </div>
-	</div>
+				</div>
         </div>
 </div>
