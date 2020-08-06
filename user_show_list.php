@@ -48,7 +48,6 @@
                                                                     $grid->name = 'table';
                                                                     $grid->edittxt ='แก้ไข';
                                                                     $grid->renderFromDB($columns,$rs);
-
                                                             ?>
                                         </div>
 		</div>
