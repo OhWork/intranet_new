@@ -3,7 +3,7 @@ if (!empty($_SESSION['user_name'])):
   $id = $_GET['id'];
   $log_user = $_SESSION['user_name']." ".$_SESSION['user_last'];
   $form = new form();
-  $lbuser = new label("ชื่อผู้ใช้ (ID)");
+  $lbuser = new label("ชื่อ - นามสกุล");
   $lbpass = new label("รหัสผ่าน");
   $lbpasscon = new label("ยืนยันรหัสผ่าน");
   $lbname = new label("ชื่อ");
