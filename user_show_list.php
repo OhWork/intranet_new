@@ -35,7 +35,7 @@
                                         <h4>รายชื่อผู้ใช้ระบบ</h4>
 		</div>
 		<div class="ml-auto">
-                                        <a href="admin_index.php?url=user_add_user.php" class="btn btn-success col-12"><span data-feather="user-plus"></span></a>
+                                        <a href="admin_index.php?url=user_add_user.php" class="btn btn-success col-12"><i class="fas fa-user-plus"></i></a>
 		</div>
 		<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3 card-body">
                                         <div class="table-responsive">

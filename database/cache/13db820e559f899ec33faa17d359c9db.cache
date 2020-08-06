@@ -1,0 +1,741 @@
+ 
+<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3">
+        <div class="row">
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 card-header">
+                        <div class="row">
+                                <div>
+                                        <h4>รายชื่อผู้ใช้ระบบ</h4>
+		</div>
+		<div class="ml-auto">
+                                        <a href="admin_index.php?url=user_add_user.php" class="btn btn-success col-12"><i class="fas fa-user-plus"></i></a>
+		</div>
+		<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3 card-body">
+                                        <div class="table-responsive">
+			
+				<table id='table' class='table table-hover table-striped table-bordered edittable tablefp' border='0' border=collapse: collapse;' style='width:100%'>
+					<thead class='headrow'><tr>
+							<td width='12%'><b><center>User</center></b></td><td width='15%'><b><center>ชื่อ</center></b></td><td width='15%'><b><center>นามสกุล</center></b></td><td width='25%'><b><center>ฝ่าย</center></b></td><td width='25%'><b><center>สังกัด</center></b></td><td width='8%'><b><center>#</center></b></td>
+						</tr>
+					</thead>
+					<tbody class='sizerow'>
+						<tr data-href=&id=258><td><center>somchaiit</center></td><td><center>สมชาย</center></td><td><center>.</center></td><td><center>พัฒนาระบบสารสนเทศเพื่อการบริหาร</center></td><td><center>สำนักดิจิทัลและสารสนเทศ</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=258'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=257><td><center>Danudet92</center></td><td><center>ดนูเดช</center></td><td><center>จันทร์หอม</center></td><td><center>การศึกษา</center></td><td><center>สวนสัตว์อุบลราชธานี</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=257'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=256><td><center>ApiwatW.</center></td><td><center>อภิวัฒน์</center></td><td><center>วงศ์มณีวรรณ</center></td><td><center>การตลาด</center></td><td><center>สำนักพัฒนาธุรกิจ</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=256'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=255><td><center>Rungtiwa</center></td><td><center>รุ่งทิวา</center></td><td><center>เรือนน้อย</center></td><td><center>ประชุมและพิธีการ</center></td><td><center>สำนักบริหารกลาง</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=255'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=254><td><center>warisara44</center></td><td><center>วริศรา</center></td><td><center>ยานนาวา</center></td><td><center>พัฒนาธุรกิจและประชาสัมพันธ์</center></td><td><center>สวนสัตว์เปิดเขาเขียว</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=254'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=253><td><center>ampa3637</center></td><td><center>อำภา</center></td><td><center>ห่อไธสง</center></td><td><center>อนุรักษ์ วิจัย และสุขภาพสัตว์</center></td><td><center>สวนสัตว์เปิดเขาเขียว</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=253'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=252><td><center>Kanchana</center></td><td><center>กาญจนา</center></td><td><center>คงเจริญสุข</center></td><td><center>เลขานุการ</center></td><td><center>สำนักบริหารกลาง</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=252'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=251><td><center>sirinna97</center></td><td><center>ศิรินนา</center></td><td><center>หอมงาม</center></td><td><center>บริหารงานทั่วไป</center></td><td><center>สวนสัตว์เปิดเขาเขียว</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=251'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=250><td><center>sukanya8444</center></td><td><center>สุกัญญา</center></td><td><center>บุญสุวรรณ์</center></td><td><center>บริหารงานทั่วไป</center></td><td><center>สวนสัตว์เปิดเขาเขียว</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=250'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=249><td><center>pakgira20</center></td><td><center>ภัคจิรา</center></td><td><center>พวงพิศ</center></td><td><center>บริหารงานทั่วไป</center></td><td><center>สวนสัตว์เปิดเขาเขียว</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=249'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=248><td><center>supaporn84</center></td><td><center>สุภาภรณ์</center></td><td><center>จันทร์บาง</center></td><td><center>บริหารงานทั่วไป</center></td><td><center>สวนสัตว์เปิดเขาเขียว</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=248'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=247><td><center>urai8444</center></td><td><center>อุไร</center></td><td><center>จันทร์สัมฤทธิ์</center></td><td><center>บริหารงานทั่วไป</center></td><td><center>สวนสัตว์เปิดเขาเขียว</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=247'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=246><td><center>kanitha41</center></td><td><center>ชนิษฐา</center></td><td><center>ภาภูตานนท์</center></td><td><center>บริหารงานทั่วไป</center></td><td><center>สวนสัตว์เปิดเขาเขียว</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=246'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=245><td><center>suchada39</center></td><td><center>สุชาดา</center></td><td><center>พันธ์วร</center></td><td><center>บำรุงสัตว์</center></td><td><center>สวนสัตว์เปิดเขาเขียว</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=245'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=244><td><center>piti4432</center></td><td><center>ปิติ</center></td><td><center>หงษ์แก้ว</center></td><td><center>การศึกษา</center></td><td><center>สวนสัตว์เปิดเขาเขียว</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=244'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=243><td><center>Ratchapin</center></td><td><center>รัชพิน</center></td><td><center>ปุญญภิญโญ</center></td><td><center>การศึกษา</center></td><td><center>สวนสัตว์เปิดเขาเขียว</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=243'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=242><td><center>Chotirate</center></td><td><center>โชติรส</center></td><td><center>บุญหมั่น</center></td><td><center>การศึกษา</center></td><td><center>สวนสัตว์เปิดเขาเขียว</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=242'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=241><td><center>Arirat20</center></td><td><center>ตรีรัตน์</center></td><td><center>ทับทิม</center></td><td><center>การศึกษา</center></td><td><center>สวนสัตว์เปิดเขาเขียว</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=241'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=240><td><center>wanlapa82</center></td><td><center>วัลภา</center></td><td><center>งามสม</center></td><td><center>การศึกษา</center></td><td><center>สวนสัตว์เปิดเขาเขียว</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=240'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=239><td><center>pattama14</center></td><td><center>ปัทมา</center></td><td><center>นาคปรารภ</center></td><td><center>การศึกษา</center></td><td><center>สวนสัตว์เปิดเขาเขียว</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=239'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=238><td><center>tanawut63</center></td><td><center>ธนาวุฒิ</center></td><td><center>เพชรน้อย</center></td><td><center>การศึกษา</center></td><td><center>สวนสัตว์เปิดเขาเขียว</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=238'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=237><td><center>Orathai2499</center></td><td><center>อรทัย</center></td><td><center>เชยสุนทร</center></td><td><center>การศึกษา</center></td><td><center>สวนสัตว์เปิดเขาเขียว</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=237'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=236><td><center>srisak18</center></td><td><center>นายศรีศักดิ์</center></td><td><center>สุขชุ่ม</center></td><td><center>บำรุงสัตว์</center></td><td><center>สวนสัตว์เปิดเขาเขียว</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=236'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=235><td><center>tharadol</center></td><td><center>ธราดล</center></td><td><center>ภวภูตานนท์</center></td><td><center>การศึกษา</center></td><td><center>สวนสัตว์เปิดเขาเขียว</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=235'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=234><td><center>preeda60</center></td><td><center>ปรีดา</center></td><td><center>ภัทราวุธ</center></td><td><center>อนุรักษ์ วิจัย และสุขภาพสัตว์</center></td><td><center>สวนสัตว์เปิดเขาเขียว</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=234'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=233><td><center>kanpichaya08</center></td><td><center>กัญญ์พิชญา</center></td><td><center>บุญมี</center></td><td><center>พัฒนาธุรกิจและประชาสัมพันธ์</center></td><td><center>สวนสัตว์เปิดเขาเขียว</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=233'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=232><td><center>pongpan78</center></td><td><center>พงษ์พันธุ์</center></td><td><center>นวนศรี</center></td><td><center>พัฒนาธุรกิจและประชาสัมพันธ์</center></td><td><center>สวนสัตว์เปิดเขาเขียว</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=232'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=231><td><center>warisara</center></td><td><center>วริสรา</center></td><td><center>บ้านนาวา</center></td><td><center>พัฒนาธุรกิจและประชาสัมพันธ์</center></td><td><center>สวนสัตว์เปิดเขาเขียว</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=231'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=230><td><center>supaporn39</center></td><td><center>สุภาพร</center></td><td><center>สุทธการ</center></td><td><center>พัฒนาธุรกิจและประชาสัมพันธ์</center></td><td><center>สวนสัตว์เปิดเขาเขียว</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=230'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=229><td><center>chairat212</center></td><td><center>ชัยรัตน์</center></td><td><center>เชื้อเงิน</center></td><td><center>พัฒนาธุรกิจและประชาสัมพันธ์</center></td><td><center>สวนสัตว์เปิดเขาเขียว</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=229'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=228><td><center>kememaree</center></td><td><center>เขมรีย์</center></td><td><center>สุวัตถิพงศ์</center></td><td><center>การตลาด</center></td><td><center>สำนักพัฒนาธุรกิจ</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=228'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=227><td><center>Kornthip</center></td><td><center>กรทิพย์</center></td><td><center>สุทธิปริยากร</center></td><td><center>สิทธิประโยชน์</center></td><td><center>สำนักพัฒนาธุรกิจ</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=227'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=226><td><center>Laphasnan</center></td><td><center>ลภัสนันท์</center></td><td><center>อินทร์พิมพ์</center></td><td><center>บำรุงสัตว์</center></td><td><center>สวนสัตว์ขอนแก่น</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=226'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=225><td><center>kwuanluthai</center></td><td><center>ขวัญฤทัย</center></td><td><center>ระแวง</center></td><td><center>บำรุงสัตว์</center></td><td><center>สวนสัตว์ขอนแก่น</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=225'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=224><td><center>wasana68</center></td><td><center>วาสนา</center></td><td><center>ช่วงชัย</center></td><td><center>บำรุงสัตว์</center></td><td><center>สวนสัตว์ขอนแก่น</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=224'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=223><td><center>Natnicha</center></td><td><center>ณัฐนิชาท์</center></td><td><center>จันทมาศ</center></td><td><center>บำรุงสัตว์</center></td><td><center>สวนสัตว์ขอนแก่น</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=223'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=222><td><center>Suttidol</center></td><td><center>สุทธิดล</center></td><td><center>บุตรธนู</center></td><td><center>บำรุงสัตว์</center></td><td><center>สวนสัตว์ขอนแก่น</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=222'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=221><td><center>chakrit3</center></td><td><center>ชาคริต</center></td><td><center>เมาะราษี</center></td><td><center>บริหารงานทั่วไป</center></td><td><center>สวนสัตว์ขอนแก่น</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=221'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=220><td><center>vachiravit</center></td><td><center>วชิราวิทย์</center></td><td><center>สมสา</center></td><td><center>บำรุงสัตว์</center></td><td><center>สวนสัตว์ขอนแก่น</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=220'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=219><td><center>Thanawan</center></td><td><center>ธนวันต์</center></td><td><center>ไชยนันทน์</center></td><td><center>บริหารงานทั่วไป</center></td><td><center>สวนสัตว์ขอนแก่น</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=219'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=218><td><center>methas00</center></td><td><center>เมธัส</center></td><td><center>พัฒนกุล</center></td><td><center>อนุรักษ์ วิจัย และสุขภาพสัตว์</center></td><td><center>สวนสัตว์ขอนแก่น</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=218'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=217><td><center>pornpan9</center></td><td><center>พรพรรณ</center></td><td><center>แก่นท้าว</center></td><td><center>อนุรักษ์ วิจัย และสุขภาพสัตว์</center></td><td><center>สวนสัตว์ขอนแก่น</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=217'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=216><td><center>nutawut25</center></td><td><center>ณัฐวุฒิ</center></td><td><center>อรสูญ</center></td><td><center>อนุรักษ์ วิจัย และสุขภาพสัตว์</center></td><td><center>สวนสัตว์ขอนแก่น</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=216'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=215><td><center>chavin882</center></td><td><center>ชวิน</center></td><td><center>ไชยสงคราม</center></td><td><center>อนุรักษ์ วิจัย และสุขภาพสัตว์</center></td><td><center>สวนสัตว์ขอนแก่น</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=215'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=214><td><center>Sittinun</center></td><td><center>สิทธินันท์</center></td><td><center>ยะลา</center></td><td><center>อนุรักษ์ วิจัย และสุขภาพสัตว์</center></td><td><center>สวนสัตว์ขอนแก่น</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=214'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=213><td><center>pronthip</center></td><td><center>พรทิพย์</center></td><td><center>กุลประดิษฐ์</center></td><td><center>อนุรักษ์ วิจัย และสุขภาพสัตว์</center></td><td><center>สวนสัตว์ขอนแก่น</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=213'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=212><td><center>suttiluck</center></td><td><center>สุทธิลักษณ์</center></td><td><center>มีวีระสม</center></td><td><center>อนุรักษ์ วิจัย และสุขภาพสัตว์</center></td><td><center>สวนสัตว์ขอนแก่น</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=212'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=211><td><center>sukanya9</center></td><td><center>สุกัญญา</center></td><td><center>เฟื่องคำ</center></td><td><center>บริหารงานทั่วไป</center></td><td><center>สวนสัตว์ขอนแก่น</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=211'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=210><td><center>nipaporn</center></td><td><center>นิภาพร</center></td><td><center>สายบัว</center></td><td><center>บริหารงานทั่วไป</center></td><td><center>สวนสัตว์ขอนแก่น</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=210'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=209><td><center>kannika4</center></td><td><center>กรรณิการ์</center></td><td><center>ชุมวางวาปี</center></td><td><center>บริหารงานทั่วไป</center></td><td><center>สวนสัตว์ขอนแก่น</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=209'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=208><td><center>kwanruthai</center></td><td><center>ขวัญฤทัย</center></td><td><center>บุญวิเศษ</center></td><td><center>บริหารงานทั่วไป</center></td><td><center>สวนสัตว์ขอนแก่น</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=208'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=207><td><center>bantita1</center></td><td><center>บัณทิตา</center></td><td><center>บุปผาโสภา</center></td><td><center>บริหารงานทั่วไป</center></td><td><center>สวนสัตว์ขอนแก่น</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=207'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=206><td><center>kanda303</center></td><td><center>กานดา</center></td><td><center>พลศรีลา</center></td><td><center>อนุรักษ์ วิจัย และสุขภาพสัตว์</center></td><td><center>สวนสัตว์ขอนแก่น</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=206'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=205><td><center>rungtip14</center></td><td><center>รุ่งทิพย์</center></td><td><center>อินทะศรี</center></td><td><center>อนุรักษ์ วิจัย และสุขภาพสัตว์</center></td><td><center>สวนสัตว์ขอนแก่น</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=205'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=204><td><center>siriwan43</center></td><td><center>สิริวรรณ</center></td><td><center>กิมแกมแก้ว</center></td><td><center>อนุรักษ์ วิจัย และสุขภาพสัตว์</center></td><td><center>สวนสัตว์ขอนแก่น</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=204'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=203><td><center>Chatree49</center></td><td><center>ชาตรี</center></td><td><center>เมาะราษี</center></td><td><center>อนุรักษ์ วิจัย และสุขภาพสัตว์</center></td><td><center>สวนสัตว์ขอนแก่น</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=203'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=202><td><center>tonahongsa</center></td><td><center>ดุษฎี</center></td><td><center>โทณะหงสา</center></td><td><center>อนุรักษ์ วิจัย และสุขภาพสัตว์</center></td><td><center>สวนสัตว์ขอนแก่น</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=202'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=201><td><center>Yanyong50</center></td><td><center>นายยรรยง</center></td><td><center>วีระวัฒนตระกูล</center></td><td><center>อนุรักษ์ วิจัย และสุขภาพสัตว์</center></td><td><center>สวนสัตว์ขอนแก่น</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=201'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=200><td><center>piyaporn</center></td><td><center>ปิยะพร</center></td><td><center>อรสูญ</center></td><td><center>อนุรักษ์ วิจัย และสุขภาพสัตว์</center></td><td><center>สวนสัตว์ขอนแก่น</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=200'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=199><td><center>phichet03</center></td><td><center>พิเชษฐ์</center></td><td><center>เอกโชติ</center></td><td><center>อนุรักษ์ วิจัย และสุขภาพสัตว์</center></td><td><center>สวนสัตว์ขอนแก่น</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=199'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=198><td><center>Sarunya77</center></td><td><center>ศรัญญา</center></td><td><center>แซ่เจ๊ง</center></td><td><center>บริหารงานทั่วไป</center></td><td><center>สวนสัตว์ขอนแก่น</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=198'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=197><td><center>panjamaporn</center></td><td><center>ปัญจมาภรณ์</center></td><td><center>ปลื้มจิตร</center></td><td><center>บริหารงานทั่วไป</center></td><td><center>สวนสัตว์ขอนแก่น</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=197'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=196><td><center>Napassara</center></td><td><center>นภัสร์สรา</center></td><td><center>ดุนขุนทด</center></td><td><center>บริหารงานทั่วไป</center></td><td><center>สวนสัตว์นครราชสีมา</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=196'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=195><td><center>korranan</center></td><td><center>กรณรรน</center></td><td><center>ไม่โศก</center></td><td><center>พัฒนาทรัพยากรบุคคล</center></td><td><center>สำนักบริหารทรัพยากรบุคคล</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=195'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=194><td><center>saowapa1</center></td><td><center>เสาวภา</center></td><td><center>สำเภา</center></td><td><center>ธุรการ</center></td><td><center>สำนักดิจิทัลและสารสนเทศ</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=194'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=193><td><center>preeda20</center></td><td><center>ปรีดา</center></td><td><center>ภัตตาวุธ</center></td><td><center>อนุรักษ์ วิจัย และสุขภาพสัตว์</center></td><td><center>สวนสัตว์เปิดเขาเขียว</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=193'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=192><td><center>attapon.s</center></td><td><center>อรรถพร</center></td><td><center>ศรีเหรัญ</center></td><td><center>ผู้อำนวยการสวนสัตว์/ผู้ช่วยผู้อำนวยการสวนสัตว์</center></td><td><center>สวนสัตว์เปิดเขาเขียว</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=192'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=191><td><center>mallika63</center></td><td><center>มัลลิกา</center></td><td><center>เอี่ยมนุ้ย</center></td><td><center>โครงการวิจัยและจัดแสดงหมีแพนด้าในประเทศไทย</center></td><td><center>สวนสัตว์เชียงใหม่</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=191'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=190><td><center>wilaiwan</center></td><td><center>วิไลวรรณ</center></td><td><center>แสงเพชร</center></td><td><center>ธุรการ</center></td><td><center>สำนักตรวจสอบ</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=190'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=189><td><center>nuttapol</center></td><td><center>ณัฐพล</center></td><td><center>สาครนาวิน</center></td><td><center>ธุรการ</center></td><td><center>สำนักดิจิทัลและสารสนเทศ</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=189'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=188><td><center>sawitree33</center></td><td><center>สาวิตรี</center></td><td><center>เดชบุญมี</center></td><td><center>พัฒนาสวนสัตว์</center></td><td><center>สวนสัตว์เชียงใหม่</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=188'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=187><td><center>thikhamphorn</center></td><td><center>ทีฆัมพร</center></td><td><center>ติปัญโญ</center></td><td><center>การศึกษา</center></td><td><center>สวนสัตว์เชียงใหม่</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=187'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=186><td><center>preemvara</center></td><td><center>ภีมวรา</center></td><td><center>ขัตต์ยาน</center></td><td><center>พัฒนาธุรกิจและประชาสัมพันธ์</center></td><td><center>สวนสัตว์เชียงใหม่</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=186'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=185><td><center>jiratchaya</center></td><td><center>จิรัชยา</center></td><td><center>ปันใต้</center></td><td><center>บริหารงานทั่วไป</center></td><td><center>สวนสัตว์เชียงใหม่</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=185'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=184><td><center>patcharee58</center></td><td><center>นางสาวพัชรี</center></td><td><center>นนทะวงษ์</center></td><td><center>บริหารความเสี่ยงและควบคุมภายใน</center></td><td><center>สำนักยุทธศาสตร์และแผน</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=184'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=183><td><center>montra123</center></td><td><center>มนตรา</center></td><td><center>ฐานโพธิ์</center></td><td><center>พัฒนาธุรกิจและประชาสัมพันธ์</center></td><td><center>สวนสัตว์เปิดเขาเขียว</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=183'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=182><td><center>sirintra</center></td><td><center>ศิรินทรา</center></td><td><center>รัตนาภูผา</center></td><td><center>อำนวยการ</center></td><td><center>สถาบันบริหารจัดการสวนสัตว์</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=182'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=181><td><center>ratchada</center></td><td><center>รัชดา</center></td><td><center>เทียมเมือง</center></td><td><center>ศูนย์การเรียนรู้ตลอดชีวิต</center></td><td><center>สถาบันบริหารจัดการสวนสัตว์</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=181'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=180><td><center>thanchanok</center></td><td><center>ธัญย์ชนก</center></td><td><center>อินถนอมกิจ</center></td><td><center>อำนวยการ</center></td><td><center>สถาบันบริหารจัดการสวนสัตว์</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=180'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=179><td><center>maxanantaya</center></td><td><center>อนันตยา</center></td><td><center>โคตรวงค์</center></td><td><center>วางแผน</center></td><td><center>สำนักยุทธศาสตร์และแผน</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=179'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=177><td><center>Nutjakarn</center></td><td><center>ณัทจากาณ</center></td><td><center>ปิดตาลาคะ</center></td><td><center>องค์การสวนสัตว์</center></td><td><center>รองผู้อำนวยการองค์การสวนสัตว์</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=177'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=176><td><center>narisara</center></td><td><center>นริศรา</center></td><td><center>แก้วทิพยรัตน์</center></td><td><center>งบประมาณ</center></td><td><center>สำนักการเงินและทรัพย์สิน</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=176'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=175><td><center>patumporn</center></td><td><center>นางสาวปทุมพร</center></td><td><center>กาศสาริกรรม</center></td><td><center>ผู้อำนวยการ/ผู้ช่วยผู้อำนวยการ</center></td><td><center>สำนักการเงินและทรัพย์สิน</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=175'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=174><td><center>paramee.p</center></td><td><center>ปารมี</center></td><td><center>เพลาจันทร์</center></td><td><center>การบัญชี</center></td><td><center>สำนักการเงินและทรัพย์สิน</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=174'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=173><td><center>sukunlaya</center></td><td><center>สุกัลยา</center></td><td><center>มูลพงษ์</center></td><td><center>งบประมาณ</center></td><td><center>สำนักการเงินและทรัพย์สิน</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=173'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=172><td><center>saovaluk</center></td><td><center>เสาวลักษณ์</center></td><td><center>สุวรรณโภชน์</center></td><td><center>งบประมาณ</center></td><td><center>สำนักการเงินและทรัพย์สิน</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=172'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=171><td><center>bawornphun</center></td><td><center>บวรพันธุ์</center></td><td><center>ช้างแก้ว</center></td><td><center>การเงิน</center></td><td><center>สำนักการเงินและทรัพย์สิน</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=171'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=170><td><center>sukanya1</center></td><td><center>สุกัญญา</center></td><td><center>หงส์พันธุ์</center></td><td><center>งบประมาณ</center></td><td><center>สำนักการเงินและทรัพย์สิน</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=170'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=169><td><center>atthaporn</center></td><td><center>นายอรรถพล</center></td><td><center>แป้นขำ</center></td><td><center>การศึกษา</center></td><td><center>สวนสัตว์นครราชสีมา</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=169'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=168><td><center>jittraporn</center></td><td><center>นางจิตราภรณ์</center></td><td><center>กริชสูงเนิน</center></td><td><center>บริหารงานทั่วไป</center></td><td><center>สวนสัตว์นครราชสีมา</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=168'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=167><td><center>juthamard</center></td><td><center>จุฑามาศ</center></td><td><center>ถ่ายสูงเนิน</center></td><td><center>บริหารงานทั่วไป</center></td><td><center>สวนสัตว์นครราชสีมา</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=167'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=166><td><center>suwijuk1</center></td><td><center>สุวิจักขณ์</center></td><td><center>อาจปรุ</center></td><td><center>บริหารงานทั่วไป</center></td><td><center>สวนสัตว์นครราชสีมา</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=166'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=165><td><center>yuwalee1</center></td><td><center>ยุวลี</center></td><td><center>ลมไธสง</center></td><td><center>บริหารงานทั่วไป</center></td><td><center>สวนสัตว์นครราชสีมา</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=165'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=164><td><center>ounrean1</center></td><td><center>อุ่นเรือน</center></td><td><center>โคมกระโทก</center></td><td><center>บริหารงานทั่วไป</center></td><td><center>สวนสัตว์นครราชสีมา</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=164'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=163><td><center>duangphit</center></td><td><center>ดวงพิศ</center></td><td><center>ศรีหราช</center></td><td><center>บริหารงานทั่วไป</center></td><td><center>สวนสัตว์นครราชสีมา</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=163'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=162><td><center>jureerat</center></td><td><center>จุรีรัตน์</center></td><td><center>ปัญญาพูนตระกูล</center></td><td><center>บริหารงานทั่วไป</center></td><td><center>สวนสัตว์นครราชสีมา</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=162'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=161><td><center>pornwalee</center></td><td><center>พรวลี</center></td><td><center>ภู่ดี</center></td><td><center>บำรุงสัตว์</center></td><td><center>สวนสัตว์นครราชสีมา</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=161'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=160><td><center>ratcharita</center></td><td><center>รัชลิตา</center></td><td><center>โทสูงเนิน</center></td><td><center>อนุรักษ์ วิจัย และสุขภาพสัตว์</center></td><td><center>สวนสัตว์นครราชสีมา</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=160'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=159><td><center>vison001</center></td><td><center>วิสรณ์</center></td><td><center>แรมสูงเนิน</center></td><td><center>อนุรักษ์ วิจัย และสุขภาพสัตว์</center></td><td><center>สวนสัตว์นครราชสีมา</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=159'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=158><td><center>wirongrong</center></td><td><center>วิรงรอง</center></td><td><center>ช่างเพชร</center></td><td><center>อนุรักษ์ วิจัย และสุขภาพสัตว์</center></td><td><center>สวนสัตว์นครราชสีมา</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=158'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=157><td><center>sawitree</center></td><td><center>สาวิตรี</center></td><td><center>นามศิริ</center></td><td><center>พัฒนาสวนสัตว์</center></td><td><center>สวนสัตว์นครราชสีมา</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=157'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=156><td><center>thuscha1</center></td><td><center>นางสาวทัชชา</center></td><td><center>สุขวัฒก์</center></td><td><center>บริหารงานทั่วไป</center></td><td><center>สวนสัตว์นครราชสีมา</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=156'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=155><td><center>watcharee</center></td><td><center>วัชรี</center></td><td><center>ศรีสังข์</center></td><td><center>พัฒนาธุรกิจและประชาสัมพันธ์</center></td><td><center>สวนสัตว์นครราชสีมา</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=155'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=154><td><center>wirairat</center></td><td><center>วิไลรัตน์</center></td><td><center>ภาคทร้พย์ศรี</center></td><td><center>ธุรการ</center></td><td><center>สำนักบริหารทรัพยากรบุคคล</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=154'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=153><td><center>prapun01</center></td><td><center>ประพันธ์</center></td><td><center>กลับมา</center></td><td><center>ธุรการ</center></td><td><center>สำนักบริหารทรัพยากรบุคคล</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=153'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=152><td><center>somchay2</center></td><td><center>สมชาย</center></td><td><center>ม่วงเฉย</center></td><td><center>บริหารทรัพยากรบุคคล</center></td><td><center>สำนักบริหารทรัพยากรบุคคล</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=152'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=151><td><center>surachai</center></td><td><center>สุรชัย</center></td><td><center>เพียงพรทิพย์</center></td><td><center>เลขานุการ</center></td><td><center>รองผู้อำนวยการองค์การสวนสัตว์</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=151'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=150><td><center>tunyawat</center></td><td><center>ตุลยวัฒน์</center></td><td><center>แสนพันธมิตร</center></td><td><center>ธุรการ</center></td><td><center>สถาบันบริหารจัดการสวนสัตว์</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=150'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=149><td><center>salinie1</center></td><td><center>สาลินี</center></td><td><center>ชื่นใจ</center></td><td><center>พัฒนาธุรกิจและประชาสัมพันธ์</center></td><td><center>สวนสัตว์เชียงใหม่</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=149'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=148><td><center>kanittha</center></td><td><center>ขนิษฐา</center></td><td><center>มฤคสนธิ</center></td><td><center>บริหารงานกลาง</center></td><td><center>สำนักบริหารกลาง</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=148'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=147><td><center>suparat1</center></td><td><center>ศุภรัตน์</center></td><td><center>สวัสดิ์คุ้ม</center></td><td><center>โครงการระหว่างประเทศ</center></td><td><center>สำนักอนุรักษ์และวิจัย</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=147'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=146><td><center>waleemas</center></td><td><center>วลีมาศ</center></td><td><center>ใจรัก</center></td><td><center>พัฒนาสุขภาพสัตว์</center></td><td><center>สำนักอนุรักษ์และวิจัย</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=146'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=145><td><center>suppawit</center></td><td><center>ศุภวิชญ์</center></td><td><center>พนมวชิรวัฒน์</center></td><td><center>อนุรักษ์</center></td><td><center>สำนักอนุรักษ์และวิจัย</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=145'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=144><td><center>chaianan</center></td><td><center>ชัยอนันต์</center></td><td><center>โภคสวัสดิ์</center></td><td><center>อนุรักษ์</center></td><td><center>สำนักอนุรักษ์และวิจัย</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=144'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=143><td><center>wichit11</center></td><td><center>วิชิต</center></td><td><center>กองคำ</center></td><td><center>ผู้เชี่ยวชาญสวนสัตว์</center></td><td><center>สำนักอนุรักษ์และวิจัย</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=143'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=142><td><center>Yongchai</center></td><td><center>ยงชัย</center></td><td><center>อุตระ</center></td><td><center>ผู้อำนวยการ/ผู้ช่วยผู้อำนวยการ</center></td><td><center>สำนักอนุรักษ์และวิจัย</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=142'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=141><td><center>artitaya</center></td><td><center>อาทิตยา</center></td><td><center>สุขทวี</center></td><td><center>วิเคราะห์และประเมินผล</center></td><td><center>สำนักยุทธศาสตร์และแผน</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=141'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=140><td><center>amnart01</center></td><td><center>อำนาจ</center></td><td><center>เปียกลิ่น</center></td><td><center>พัฒนาธุรกิจและประชาสัมพันธ์</center></td><td><center>สวนสัตว์สงขลา</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=140'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=139><td><center>suwit007</center></td><td><center>สุวิทย์</center></td><td><center>วงจันทร์</center></td><td><center>พัฒนาธุรกิจและประชาสัมพันธ์</center></td><td><center>สวนสัตว์สงขลา</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=139'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=138><td><center>sirikhwan</center></td><td><center>ศิริขวัญ</center></td><td><center>อุปมนต์</center></td><td><center>พัฒนาธุรกิจและประชาสัมพันธ์</center></td><td><center>สวนสัตว์สงขลา</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=138'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=137><td><center>phuwadol</center></td><td><center>ภูวดล</center></td><td><center>สุวรรณะ</center></td><td><center>อนุรักษ์ วิจัย และสุขภาพสัตว์</center></td><td><center>สวนสัตว์สงขลา</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=137'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=136><td><center>chatta001</center></td><td><center>เชษฐา</center></td><td><center>สุริยันวงศ์</center></td><td><center>การศึกษา</center></td><td><center>สวนสัตว์สงขลา</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=136'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=135><td><center>uthai001</center></td><td><center>อุทัย</center></td><td><center>พูลยรัตน์</center></td><td><center>บำรุงสัตว์</center></td><td><center>สวนสัตว์สงขลา</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=135'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=134><td><center>jaratsri</center></td><td><center>จรัสศรี</center></td><td><center>ราชนารินทร์</center></td><td><center>บริหารงานทั่วไป</center></td><td><center>สวนสัตว์สงขลา</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=134'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=133><td><center>somporn1</center></td><td><center>สมพร</center></td><td><center>ย่องกิ้ม</center></td><td><center>พัฒนาสวนสัตว์</center></td><td><center>สวนสัตว์สงขลา</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=133'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=132><td><center>naris001</center></td><td><center>นริศ</center></td><td><center>แก้วสลับนิล</center></td><td><center>ผู้อำนวยการสวนสัตว์/ผู้ช่วยผู้อำนวยการสวนสัตว์</center></td><td><center>สวนสัตว์สงขลา</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=132'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=131><td><center>phichet1</center></td><td><center>พิเชษฐ์</center></td><td><center>ทัปนวัชร์</center></td><td><center>ผู้อำนวยการสวนสัตว์/ผู้ช่วยผู้อำนวยการสวนสัตว์</center></td><td><center>สวนสัตว์สงขลา</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=131'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=130><td><center>chalermvudh</center></td><td><center>เฉลิมวุฒิ</center></td><td><center>เกษตรสมบูรณ์</center></td><td><center>ผู้อำนวยการสวนสัตว์/ผู้ช่วยผู้อำนวยการสวนสัตว์</center></td><td><center>สวนสัตว์สงขลา</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=130'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=129><td><center>pongsakorn</center></td><td><center>พงศกร</center></td><td><center>อรุณมิตร</center></td><td><center>บริหารทรัพยากรบุคคล</center></td><td><center>สำนักบริหารทรัพยากรบุคคล</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=129'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=128><td><center>rarinkik</center></td><td><center>ระริน</center></td><td><center>อินยะฤทธิ์</center></td><td><center>บริหารทรัพยากรบุคคล</center></td><td><center>สำนักบริหารทรัพยากรบุคคล</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=128'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=127><td><center>amonpun1</center></td><td><center>อมรพันธุ์</center></td><td><center>นรลักษณ์</center></td><td><center>พัฒนาทรัพยากรบุคคล</center></td><td><center>สำนักบริหารทรัพยากรบุคคล</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=127'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=126><td><center>puthipong</center></td><td><center>พุฒิพงษ์</center></td><td><center>วัฒนโยธิน</center></td><td><center>ธุรการ</center></td><td><center>สำนักบริหารทรัพยากรบุคคล</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=126'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=125><td><center>pathamawadee</center></td><td><center>ปฐมาวดี</center></td><td><center>วัฒนา</center></td><td><center>ตรวจสอบการดำเนินงาน</center></td><td><center>สำนักตรวจสอบ</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=125'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=124><td><center>chotirote</center></td><td><center>โชติรส</center></td><td><center>บุญหมั่น</center></td><td><center>การศึกษา</center></td><td><center>สวนสัตว์เปิดเขาเขียว</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=124'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=123><td><center>utaiwan1</center></td><td><center>อุทัยวรรณ</center></td><td><center>เกตุสมบูรณ์</center></td><td><center>บริหารงานทั่วไป</center></td><td><center>สวนสัตว์เปิดเขาเขียว</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=123'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=122><td><center>sukonthorn</center></td><td><center>สุคนธร</center></td><td><center>บุญมาเจริญ</center></td><td><center>พัสดุ</center></td><td><center>สำนักการเงินและทรัพย์สิน</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=122'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=121><td><center>julalakk</center></td><td><center>จุฬาลักษณ์</center></td><td><center>แก้วทองคำ</center></td><td><center>คดีและวินัย</center></td><td><center>สำนักกฎหมาย</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=121'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=120><td><center>patcharee</center></td><td><center>พัชรี</center></td><td><center>มลธุรัช</center></td><td><center>นิติกรรมและสัญญา</center></td><td><center>สำนักกฎหมาย</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=120'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=119><td><center>kunchira</center></td><td><center>กุลจิรา</center></td><td><center>วังบุญคง</center></td><td><center>ธุรการ</center></td><td><center>สำนักกฎหมาย</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=119'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=118><td><center>ratthasak</center></td><td><center>รัฐศักดิ์</center></td><td><center>ศรีดี</center></td><td><center>วางแผน</center></td><td><center>สำนักยุทธศาสตร์และแผน</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=118'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=117><td><center>sudarat78</center></td><td><center>สุดารัตน์</center></td><td><center>ลาภกระโทก</center></td><td><center>บำรุงสัตว์</center></td><td><center>สวนสัตว์นครราชสีมา</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=117'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=116><td><center>wanida77</center></td><td><center>วนิดา</center></td><td><center>แผลงปัญญา</center></td><td><center>พัฒนาธุรกิจและประชาสัมพันธ์</center></td><td><center>สวนสัตว์นครราชสีมา</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=116'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=115><td><center>benjawan</center></td><td><center>เบญจวรรณ</center></td><td><center>สื่อกลาง</center></td><td><center>การศึกษา</center></td><td><center>สวนสัตว์นครราชสีมา</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=115'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=114><td><center>prasit704</center></td><td><center>นายประสิทธิ์</center></td><td><center>ศรีวงศ์</center></td><td><center>บำรุงสัตว์</center></td><td><center>สวนสัตว์เชียงใหม่</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=114'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=113><td><center>aemwika45</center></td><td><center>เอมวิกา</center></td><td><center>พร้อมใจรักธ์</center></td><td><center>อนุรักษ์ วิจัย และสุขภาพสัตว์</center></td><td><center>สวนสัตว์เชียงใหม่</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=113'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=112><td><center>sutham01</center></td><td><center>สุธรรม</center></td><td><center>หล้าติ๊บ</center></td><td><center>อนุรักษ์ วิจัย และสุขภาพสัตว์</center></td><td><center>สวนสัตว์เชียงใหม่</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=112'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=111><td><center>kannikar</center></td><td><center>กรรณิการ์</center></td><td><center>จันทรังษี</center></td><td><center>พัฒนาธุรกิจและประชาสัมพันธ์</center></td><td><center>สวนสัตว์เชียงใหม่</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=111'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=110><td><center>sutharat</center></td><td><center>สุฑารัตน์</center></td><td><center>แสนสุขขีรัตนกุล</center></td><td><center>พัฒนาธุรกิจและประชาสัมพันธ์</center></td><td><center>สวนสัตว์เชียงใหม่</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=110'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=109><td><center>preeyanuch</center></td><td><center>ปรียานุช</center></td><td><center>หารโสด</center></td><td><center>อนุรักษ์ วิจัย และสุขภาพสัตว์</center></td><td><center>สวนสัตว์เปิดเขาเขียว</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=109'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=108><td><center>nirada988</center></td><td><center>นิรดา</center></td><td><center>ประเสริฐศรี</center></td><td><center>บริหารงานทั่วไป</center></td><td><center>สวนสัตว์เปิดเขาเขียว</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=108'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=107><td><center>suchada29</center></td><td><center>สุชาดา</center></td><td><center>เริงพิทักษ์</center></td><td><center>บริหารงานทั่วไป</center></td><td><center>สวนสัตว์เปิดเขาเขียว</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=107'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=106><td><center>kemjira97</center></td><td><center>เขมจิรา</center></td><td><center>แต้มแก้ว</center></td><td><center>บริหารงานทั่วไป</center></td><td><center>สวนสัตว์เปิดเขาเขียว</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=106'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=105><td><center>burintip</center></td><td><center>บุรินทิพย์</center></td><td><center>ยะปัญญา</center></td><td><center>โครงการส่วนจัดแสดงหิมะเทียม</center></td><td><center>สวนสัตว์เชียงใหม่</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=105'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=104><td><center>wanchai92</center></td><td><center>วันชัย</center></td><td><center>ตันวัฒนะ</center></td><td><center>ผู้อำนวยการ/ผู้ช่วยผู้อำนวยการ</center></td><td><center>สำนักยุทธศาสตร์และแผน</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=104'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=103><td><center>sarunrat</center></td><td><center>ศรัณรัตน์</center></td><td><center>เทศฤทธิ์</center></td><td><center>ธุรการ</center></td><td><center>สำนักพัฒนาธุรกิจ</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=103'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=102><td><center>narong96</center></td><td><center>ณรงค์</center></td><td><center>รุ่งเรือง</center></td><td><center>ประชาสัมพันธ์</center></td><td><center>สำนักพัฒนาธุรกิจ</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=102'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=101><td><center>thanyaporn</center></td><td><center>นางสาวธัญญาภรณ์</center></td><td><center>แย้มปลื้ม</center></td><td><center>เลขานุการ</center></td><td><center>รองผู้อำนวยการองค์การสวนสัตว์</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=101'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=100><td><center>adilok78</center></td><td><center>อดิลก</center></td><td><center>อุตมะ</center></td><td><center>บริหารงานทั่วไป</center></td><td><center>สวนสัตว์เชียงใหม่</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=100'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=99><td><center>ornsinee</center></td><td><center>อรสินี</center></td><td><center>ขัดเรือง</center></td><td><center>บำรุงสัตว์</center></td><td><center>สวนสัตว์เชียงใหม่</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=99'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=98><td><center>aunyapa93</center></td><td><center>อันญาดา</center></td><td><center>ดุลฤทธิ์เดช</center></td><td><center>อนุรักษ์ วิจัย และสุขภาพสัตว์</center></td><td><center>สวนสัตว์เปิดเขาเขียว</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=98'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=97><td><center>mitree199</center></td><td><center>ไมตรี</center></td><td><center>อินโปธา</center></td><td><center>บำรุงสัตว์</center></td><td><center>สวนสัตว์เชียงใหม่</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=97'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=96><td><center>thirayu044</center></td><td><center>ถิรายุ</center></td><td><center>ชูเชาวน์</center></td><td><center>บำรุงสัตว์</center></td><td><center>สวนสัตว์เชียงใหม่</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=96'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=95><td><center>puttipong</center></td><td><center>พุฒิพงษ์</center></td><td><center>ยุบลพริ้ง</center></td><td><center>บริหารงานทั่วไป</center></td><td><center>โครงการคชอาณาจักร(สุรินทร์)</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=95'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=94><td><center>alisa690</center></td><td><center>อลิษา</center></td><td><center>สีสันงาม</center></td><td><center>พัฒนาสวนสัตว์</center></td><td><center>โครงการคชอาณาจักร(สุรินทร์)</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=94'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=93><td><center>angkana131</center></td><td><center>อังคณา</center></td><td><center>สรสิทธิ์</center></td><td><center>บริหารงานทั่วไป</center></td><td><center>โครงการคชอาณาจักร(สุรินทร์)</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=93'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=92><td><center>choenkwan</center></td><td><center>เชิญขวัญ</center></td><td><center>พาบุตตะ</center></td><td><center>อนุรักษ์ วิจัย และสุขภาพสัตว์</center></td><td><center>โครงการคชอาณาจักร(สุรินทร์)</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=92'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=91><td><center>jaruwan4466</center></td><td><center>จารุวรรณ</center></td><td><center>มากพงศ์</center></td><td><center>บริหารงานทั่วไป</center></td><td><center>โครงการคชอาณาจักร(สุรินทร์)</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=91'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=90><td><center>tipyawaree</center></td><td><center>ทิพยวารี</center></td><td><center>ดอกยี่สุ่น</center></td><td><center>บริหารงานทั่วไป</center></td><td><center>โครงการคชอาณาจักร(สุรินทร์)</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=90'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=89><td><center>anongnart</center></td><td><center>อนงค์นาฎ</center></td><td><center>คล้ายมี</center></td><td><center>การศึกษา</center></td><td><center>โครงการคชอาณาจักร(สุรินทร์)</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=89'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=88><td><center>jakkritsooza</center></td><td><center>จักรกฤษณ์</center></td><td><center>กลมค้างพลู</center></td><td><center>พัฒนาธุรกิจและประชาสัมพันธ์</center></td><td><center>โครงการคชอาณาจักร(สุรินทร์)</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=88'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=87><td><center>jenjeera</center></td><td><center>เจนจีรา</center></td><td><center>แดงสกุล</center></td><td><center>บริหารงานทั่วไป</center></td><td><center>โครงการคชอาณาจักร(สุรินทร์)</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=87'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=86><td><center>natthachai</center></td><td><center>ณัฏฐชัย</center></td><td><center>ช้อยเพ็ง</center></td><td><center>อนุรักษ์ วิจัย และสุขภาพสัตว์</center></td><td><center>สวนสัตว์เชียงใหม่</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=86'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=85><td><center>songkran</center></td><td><center>นายสงกรานต์</center></td><td><center>ยาแดง</center></td><td><center>อนุรักษ์ วิจัย และสุขภาพสัตว์</center></td><td><center>สวนสัตว์เชียงใหม่</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=85'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=84><td><center>wisitsak</center></td><td><center>วิสิฐศักดิ์</center></td><td><center>บุญเพิ่มพูล</center></td><td><center>บำรุงสัตว์</center></td><td><center>สวนสัตว์เชียงใหม่</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=84'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=83><td><center>prontip54</center></td><td><center>นางพรทิพย์</center></td><td><center>บุตรน้ำคำ</center></td><td><center>โครงการส่วนจัดแสดงหิมะเทียม</center></td><td><center>สวนสัตว์เชียงใหม่</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=83'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=82><td><center>weeranut</center></td><td><center>วีรนุช</center></td><td><center>มีดี</center></td><td><center>บริหารงานทั่วไป</center></td><td><center>สวนสัตว์เปิดเขาเขียว</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=82'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=81><td><center>nongnaphat</center></td><td><center>นางสาวนงนภัส</center></td><td><center>พูลสง่า</center></td><td><center>อนุรักษ์ วิจัย และสุขภาพสัตว์</center></td><td><center>สวนสัตว์เชียงใหม่</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=81'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=66><td><center>Kanpichaya </center></td><td><center>กัญญ์พิชญา</center></td><td><center>บุญมี</center></td><td><center>บริหารงานทั่วไป</center></td><td><center>สวนสัตว์เปิดเขาเขียว</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=66'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=65><td><center>Anantaya</center></td><td><center>อนันตญ</center></td><td><center>การุญ</center></td><td><center>บริหารงานทั่วไป</center></td><td><center>สวนสัตว์เปิดเขาเขียว</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=65'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=64><td><center>paphavee</center></td><td><center>ปภาวี</center></td><td><center>สินถาวร</center></td><td><center>บริหารงานทั่วไป</center></td><td><center>สวนสัตว์เปิดเขาเขียว</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=64'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=63><td><center>Niramol</center></td><td><center>นิรมล</center></td><td><center>ชื่นศิริ</center></td><td><center>บริหารงานทั่วไป</center></td><td><center>สวนสัตว์เปิดเขาเขียว</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=63'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=62><td><center>kanisorn.wut</center></td><td><center>คณิศร</center></td><td><center>วุฒิเมธีกุล</center></td><td><center>สวัสดิการและแรงงานสัมพันธ์</center></td><td><center>สำนักบริหารทรัพยากรบุคคล</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=62'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=61><td><center>onprapa</center></td><td><center>อรปภา</center></td><td><center>รัชเวทย์</center></td><td><center>สวัสดิการและแรงงานสัมพันธ์</center></td><td><center>สำนักบริหารทรัพยากรบุคคล</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=61'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=59><td><center>mikemike</center></td><td><center>จิรวัฒน์</center></td><td><center>คุณเวียน</center></td><td><center>ธุรการ</center></td><td><center>สำนักดิจิทัลและสารสนเทศ</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=59'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=58><td><center>smith034</center></td><td><center>วัชรากร</center></td><td><center>ตรวจสอบแบบเร่งด่วน</center></td><td><center>ธุรการ</center></td><td><center>สำนักดิจิทัลและสารสนเทศ</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=58'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=57><td><center>thanapat</center></td><td><center>ปอน</center></td><td><center>ปอน</center></td><td><center>ธุรการ</center></td><td><center>สำนักดิจิทัลและสารสนเทศ</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=57'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=56><td><center>atcharapan.s</center></td><td><center>นางสาวอัจฉราพรรณ</center></td><td><center>ศรีสุรักษ์</center></td><td><center>บริหารงานทั่วไป</center></td><td><center>สวนสัตว์อุบลราชธานี</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=56'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=55><td><center>onuma</center></td><td><center> นางสาวอรอุมา</center></td><td><center>สายงาม</center></td><td><center>บริหารงานทั่วไป</center></td><td><center>สวนสัตว์อุบลราชธานี</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=55'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=54><td><center>tadsaneeya</center></td><td><center>นางทัศณียา</center></td><td><center>ประภัสสร</center></td><td><center>บริหารงานทั่วไป</center></td><td><center>สวนสัตว์ขอนแก่น</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=54'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=53><td><center>achara</center></td><td><center>มุก</center></td><td><center>มุก</center></td><td><center>ธุรการ</center></td><td><center>สำนักดิจิทัลและสารสนเทศ</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=53'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=52><td><center>natcha</center></td><td><center>น้ำ</center></td><td><center>น้ำ</center></td><td><center>ธุรการ</center></td><td><center>สำนักดิจิทัลและสารสนเทศ</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=52'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=51><td><center>nantawan78</center></td><td><center>นางนันทวัน</center></td><td><center>ค่ายมั่น</center></td><td><center>ผู้อำนวยการ/ผู้ช่วยผู้อำนวยการ</center></td><td><center>สำนักดิจิทัลและสารสนเทศ</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=51'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=50><td><center>meetingsection</center></td><td><center>นางรุ่งทิวา</center></td><td><center>เรือนน้อย</center></td><td><center>ประชุมและพิธีการ</center></td><td><center>สำนักบริหารกลาง</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=50'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=49><td><center>ismz</center></td><td><center>บพิธ</center></td><td><center>ภูพิชญ์พงษ์</center></td><td><center>พัฒนาระบบสารสนเทศเพื่อการบริหาร</center></td><td><center>สำนักดิจิทัลและสารสนเทศ</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=49'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=48><td><center>babejang</center></td><td><center>เทอดศักดิ์</center></td><td><center>คล้ายมี</center></td><td><center>พัฒนาสวนสัตว์</center></td><td><center>โครงการคชอาณาจักร(สุรินทร์)</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=48'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=47><td><center>warangrut</center></td><td><center>วรางรัตน์</center></td><td><center>คงสุวรรณ</center></td><td><center>บริหารงานทั่วไป</center></td><td><center>สวนสัตว์สงขลา</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=47'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=46><td><center>nitchakarn</center></td><td><center>ณิชกานต์</center></td><td><center>จันทรัตน์</center></td><td><center>บริหารงานทั่วไป</center></td><td><center>สวนสัตว์สงขลา</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=46'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=45><td><center>patitta</center></td><td><center>ปทิตา</center></td><td><center>สุขราวี</center></td><td><center>บริหารงานทั่วไป</center></td><td><center>สวนสัตว์ดุสิต</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=45'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=44><td><center>umaporn</center></td><td><center>อุมาพร</center></td><td><center>ฮวดโพธิ์พันธ์</center></td><td><center>บริหารงานทั่วไป</center></td><td><center>สวนสัตว์ดุสิต</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=44'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=43><td><center>supaporn</center></td><td><center>สุภาพร</center></td><td><center>ฝุ่นจันทึก</center></td><td><center>บริหารงานทั่วไป</center></td><td><center>สวนสัตว์นครราชสีมา</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=43'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=42><td><center>supunit</center></td><td><center>สุพรรณ์</center></td><td><center>เครือทอง</center></td><td><center>บริหารงานทั่วไป</center></td><td><center>สวนสัตว์เชียงใหม่</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=42'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=41><td><center>sureeit</center></td><td><center>สุรี</center></td><td><center>เลิศพงษ์กุล</center></td><td><center>บริหารงานทั่วไป</center></td><td><center>สวนสัตว์เชียงใหม่</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=41'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=40><td><center>achait</center></td><td><center>อัชฌา</center></td><td><center>ชิงชัย</center></td><td><center>บริหารงานทั่วไป</center></td><td><center>สวนสัตว์เชียงใหม่</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=40'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=39><td><center>kobnong_2438</center></td><td><center>ธัญลักษณ์</center></td><td><center>สมสา</center></td><td><center>บริหารงานทั่วไป</center></td><td><center>สวนสัตว์ขอนแก่น</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=39'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=38><td><center>boonviset.2405</center></td><td><center>ศรินยา</center></td><td><center>บุญวิเศษ</center></td><td><center>พัฒนาธุรกิจและประชาสัมพันธ์</center></td><td><center>สวนสัตว์ขอนแก่น</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=38'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=37><td><center>taykkoz</center></td><td><center>ทิพรดา</center></td><td><center>ชลธารมุนี</center></td><td><center>บริหารงานทั่วไป</center></td><td><center>สวนสัตว์เปิดเขาเขียว</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=37'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=36><td><center>darnklang35</center></td><td><center>สนทยา</center></td><td><center>เดิ่นกลาง</center></td><td><center>บริหารงานทั่วไป</center></td><td><center>สวนสัตว์อุบลราชธานี</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=36'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=35><td><center>nai_fun-kakawkun</center></td><td><center>เริ่งนุช</center></td><td><center>กลุ่มกระโทก</center></td><td><center>บริหารงานทั่วไป</center></td><td><center>สวนสัตว์อุบลราชธานี</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=35'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=34><td><center>dkamonzoo</center></td><td><center>ดาวกมล</center></td><td><center>จงจำ</center></td><td><center>บริหารงานทั่วไป</center></td><td><center>สวนสัตว์อุบลราชธานี</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=34'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=33><td><center>dew_nattaya</center></td><td><center>ณัฐธยาน์</center></td><td><center>จองกลาง</center></td><td><center>บริหารงานทั่วไป</center></td><td><center>สวนสัตว์อุบลราชธานี</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=33'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=32><td><center>kanokwan</center></td><td><center>กนกวรรณ</center></td><td><center>ชดช้อย</center></td><td><center>พัฒนาธุรกิจและประชาสัมพันธ์</center></td><td><center>สวนสัตว์สงขลา</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=32'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=31><td><center>sutat</center></td><td><center>สุทัศน์</center></td><td><center>ศรีชัย</center></td><td><center>วางแผน</center></td><td><center>สำนักยุทธศาสตร์และแผน</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=31'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=30><td><center>wanapol</center></td><td><center>วณพล</center></td><td><center>อินทร์สุวรรณ์</center></td><td><center>พัฒนาธุรกิจและประชาสัมพันธ์</center></td><td><center>สวนสัตว์เปิดเขาเขียว</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=30'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=29><td><center>massapong</center></td><td><center>มาศพงศ์</center></td><td><center>นวนศรี</center></td><td><center>พัฒนาธุรกิจและประชาสัมพันธ์</center></td><td><center>สวนสัตว์เปิดเขาเขียว</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=29'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=28><td><center>kendoman</center></td><td><center>สุวิทย์</center></td><td><center>วงจันทร์</center></td><td><center>พัฒนาธุรกิจและประชาสัมพันธ์</center></td><td><center>สวนสัตว์สงขลา</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=28'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=27><td><center>kiattichai</center></td><td><center>นายเกียรติชัย</center></td><td><center>คำเคน</center></td><td><center>พัฒนาสวนสัตว์</center></td><td><center>สวนสัตว์อุบลราชธานี</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=27'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=26><td><center>babyfrog</center></td><td><center>ภูดิศ</center></td><td><center>เนตาสิทธิ์</center></td><td><center>พัฒนาธุรกิจและประชาสัมพันธ์</center></td><td><center>สวนสัตว์เชียงใหม่</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=26'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=25><td><center>narisa</center></td><td><center>นริศา</center></td><td><center>ไชยชวคุปต์</center></td><td><center>พัฒนาธุรกิจและประชาสัมพันธ์</center></td><td><center>สวนสัตว์นครราชสีมา</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=25'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=24><td><center>airada</center></td><td><center>ไอรดา</center></td><td><center>จำปาแดง</center></td><td><center>พัฒนาธุรกิจและประชาสัมพันธ์</center></td><td><center>สวนสัตว์นครราชสีมา</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=24'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=22><td><center>siriporn</center></td><td><center>ศิริพร</center></td><td><center>พลพิทักษ์</center></td><td><center>พัฒนาธุรกิจและประชาสัมพันธ์</center></td><td><center>สวนสัตว์ขอนแก่น</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=22'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=21><td><center>Nataphong</center></td><td><center>ณฐพงษ์</center></td><td><center>เผ่าชวด</center></td><td><center>พัฒนาธุรกิจและประชาสัมพันธ์</center></td><td><center>สวนสัตว์ขอนแก่น</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=21'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=19><td><center>anukorn</center></td><td><center>อณุกร</center></td><td><center>น้อยมี</center></td><td><center>พัฒนาธุรกิจและประชาสัมพันธ์</center></td><td><center>สวนสัตว์ขอนแก่น</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=19'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=18><td><center>komphat_nan</center></td><td><center>คมพัชร์</center></td><td><center>แน่นอุดร</center></td><td><center>บริหารทรัพยากรบุคคล</center></td><td><center>สำนักบริหารทรัพยากรบุคคล</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=18'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=17><td><center>konkaen</center></td><td><center>ทดสอบ</center></td><td><center>สวนสัตว์ขอนแก่น</center></td><td><center>บริหารงานทั่วไป</center></td><td><center>สวนสัตว์ขอนแก่น</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=17'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=16><td><center>ubon</center></td><td><center>ทดสอบ</center></td><td><center>สวนสัตว์อุบลราชธานี</center></td><td><center>บริหารงานทั่วไป</center></td><td><center>สวนสัตว์อุบลราชธานี</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=16'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=15><td><center>songkhla</center></td><td><center>ทดสอบ</center></td><td><center>สวนสัตว์สงขลา</center></td><td><center>บริหารงานทั่วไป</center></td><td><center>สวนสัตว์สงขลา</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=15'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=14><td><center>korat</center></td><td><center>ทดสอบ</center></td><td><center>สวนสัตว์นครราชสีมา</center></td><td><center>บริหารงานทั่วไป</center></td><td><center>สวนสัตว์นครราชสีมา</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=14'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=13><td><center>khaokheow</center></td><td><center>ทดสอบ</center></td><td><center>สวนสัตว์เปิดเขาเขียว</center></td><td><center>บริหารงานทั่วไป</center></td><td><center>สวนสัตว์เปิดเขาเขียว</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=13'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=9><td><center>chiangmai</center></td><td><center>ทดสอบ</center></td><td><center>สวนสัตว์เชียงใหม่</center></td><td><center>บริหารงานทั่วไป</center></td><td><center>สวนสัตว์เชียงใหม่</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=9'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=8><td><center>dusit</center></td><td><center>ทดสอบ</center></td><td><center>สวนสัตว์ดุสิต</center></td><td><center>บริหารงานทั่วไป</center></td><td><center>สวนสัตว์ดุสิต</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=8'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=7><td><center>fonthip</center></td><td><center>ฝนทิพย์</center></td><td><center>ธารรำลึก</center></td><td><center>ธุรการ</center></td><td><center>สำนักตรวจสอบ</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=7'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=6><td><center>piamsuk</center></td><td><center>เปี่ยมสุข</center></td><td><center>ศิลานิล</center></td><td><center>พัฒนาระบบสารสนเทศเพื่อการบริหาร</center></td><td><center>สำนักดิจิทัลและสารสนเทศ</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=6'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=5><td><center>khachonjoke</center></td><td><center>ขจรเกียรติ</center></td><td><center>แย้มศิริ</center></td><td><center>พัฒนาระบบสารสนเทศการศึกษาและการตลาด</center></td><td><center>สำนักดิจิทัลและสารสนเทศ</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=5'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=3><td><center>rabbitnuch</center></td><td><center>ภูริตา</center></td><td><center>พริ้งสกุล</center></td><td><center>ธุรการ</center></td><td><center>สำนักดิจิทัลและสารสนเทศ</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=3'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=2><td><center>suwasak</center></td><td><center>สุวศักดิ์</center></td><td><center>ทองรอด</center></td><td><center>พัฒนาระบบเครือข่ายและความปลอดภัยคอมพิวเตอร์</center></td><td><center>สำนักดิจิทัลและสารสนเทศ</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=2'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td><tr data-href=&id=1><td><center>choatchaw</center></td><td><center>โชติเชาว์</center></td><td><center>ปาลคำ</center></td><td><center>พัฒนาระบบเครือข่ายและความปลอดภัยคอมพิวเตอร์</center></td><td><center>สำนักดิจิทัลและสารสนเทศ</center></td>
+				<td>
+					<a href='admin_index.php?url=user_add_user.php&id=1'class='btn btn-warning editbox col-12'><div class='edittext'>แก้ไข</div></a>
+				</td></td>
+					</tbody>
+                    <tfoot class='footerrow'>
+                        <tr>
+                        
+                        </tr>
+                    </tfoot>
+				</table>                                        </div>
+		</div>
+                        </div>
+	</div>
+        </div>
+</div>
