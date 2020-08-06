@@ -227,7 +227,32 @@ function autoTab2(obj,typeCheck){
 			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 form-group has-feedback">
 				<select class='form-control css-require' id="ddlSubzoo" name="subzoo_subzoo_id"></select>
 			</div>
-                <?php }else{ ?>
+                <?php }else if($_SESSION['user_id'] == 1){ ?>
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+				<label>สังกัด</label>
+			</div>
+			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+				<select class='form-control css-require' id="ddlZoo" name="subzoo_zoo_zoo_id" onChange = "ListSubzoo(this.value)">
+				<option selected value="">---โปรดระบุ---</option>
+				<?php
+				$rs = $db->findAllASC('zoo','zoo_no')->execute();
+					while($objResult = mysqli_fetch_array($rs,MYSQLI_ASSOC))
+					{
+				?>
+					<option value="<?=$objResult["zoo_id"];?>"><?=$objResult["zoo_name"];?></option>
+				<?php
+					}
+				?>
+				</select>
+			</div>         
+			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3">
+				<label>ฝ่าย</label>
+			</div>
+			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 form-group has-feedback">
+				<select class='form-control css-require' id="ddlSubzoo" name="subzoo_subzoo_id"></select>
+			</div>
+                    
+               <?php }else{ ?>
                         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3">
                             <div class="row">
                                 <div class="col-xl-3 col-lg-3 col-md-3 col-sm-4 col-4 mt-2">
