@@ -16,7 +16,13 @@ error_reporting(0);
               include 'form/main_form.php';
               include 'form/gridview.php';
               include 'database/db_tools.php';
+              include 'database/cache_kit.php';
               include 'connect.php';
+              $cache_active = true;
+              $cache_folder = 'database/cache/';
+                function callback($buffer){
+                    return $buffer;
+                }
 			?>
 <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
 		<link rel="stylesheet" href="CSS/bootstrap.css">

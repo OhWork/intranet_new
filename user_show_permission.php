@@ -24,7 +24,7 @@
 
             $rs2 = "user,subzoo,zoo  where ipzpo.subzoo_subzoo_id = subzoo.subzoo_id && subzoo.zoo_zoo_id = zoo.zoo_id ";
             $rs = $db->findByPK32DESC('user','subzoo','zoo','user.subzoo_subzoo_id','subzoo.subzoo_id','subzoo.zoo_zoo_id','zoo.zoo_id','user_id')->execute();
-            $page_cache = acmeCache::fetch('cache_showpermission', 10);
+            $page_cache = acmeCache::fetch('cache_showpermission', 86400);
             if(!$page_cache){
             ob_start("callback");
         ?> 
@@ -62,5 +62,5 @@
             echo $page_cache;
             echo 'Cache Data';
 }
-                                                                    endif;
+endif;
 ?>

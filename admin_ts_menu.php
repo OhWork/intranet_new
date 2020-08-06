@@ -23,10 +23,11 @@
 	                </a>
 	                <a class="nav-link collapsed py-1 nav-link-24 edittext mucl" id="nav-23-animate-1" href="#zlfotsetting2" data-toggle="collapse" data-target="#zlfotsetting2">
     	                <span data-feather="settings"></span>
-	                  ตั้งค่า
+	                  จัดการข้อมูล
 	                </a>
 	                 <ul class="sub-menu collapse" id="zlfotsetting2">
-				          <a class="nav-link edittext mucl" id="nav-24-animate-1" href="admin_index.php?url=zlfot_show_event.php"><span data-feather="chevron-right"></span>รายการอีเว้นทั้งหมด</a>
+				          <a class="nav-link edittext mucl" id="nav-24-animate-1" href="admin_index.php?url=zlfot_show_event.php"><span data-feather="chevron-right"></span>รายการรถยนตร์</a>
+                                          <a class="nav-link edittext mucl" id="nav-24-animate-2" href="admin_index.php?url=zlfot_show_event.php"><span data-feather="chevron-right"></span>รายการคนขับรถยนตร์</a>
 		             </ul>
               </ul>
               <!-- end sub menu -->
