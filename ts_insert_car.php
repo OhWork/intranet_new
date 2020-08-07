@@ -40,7 +40,7 @@
     	}else if($rsfix){
             echo "<div class='statusok'>แก้ไขสำเร็จ</div>";
         }
-            $link = "url=admin_index.php?url=user_show_zoo.php";
+            $link = "url=admin_index.php?url=ts_show_car.php";
             header( "Refresh: 2; $link" );
 }
 ?>
