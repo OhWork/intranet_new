@@ -22,7 +22,7 @@ if (!empty($_SESSION['user_name'])):
   $selecttypecar->name = 'typecar_typecar_id';
   $selecttypecar->lists = 'โปรดระบุ ชนิดของรถยนตร์';
   $radiocarstatus = new radioGroup();
-  $radiocarstatus->name = 'typecar_typecar_id';
+  $radiocarstatus->name = 'car_status';
   if(empty($id)){
     	$radiocarstatus->add('ใช้งานได้',1,'','');
     	$radiocarstatus->add('ยกเลิกการใช้งาน',0,'checked','');
