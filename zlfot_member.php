@@ -156,11 +156,11 @@
     </div>
     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 <?php
-                                                         $columns = array('zlfotcard_code','typezlfot_name','zlfotcard_datestart','zlfotcard_dateend','zlfotcard_detail');
+                                                         $columns = array('zlfotcard_code','typezlfot_name','zlfotcard_datestart','zlfotcard_dateend','zlfotcard_receipt','zlfotcard_receiptfin','zlfotcard_detail');
                                                          $rs = $db->findByPK34DESC('zlfotmember','zlfotcard','typezlfot','zlfotcard.zlfotmember_zlfotmember_id','zlfotmember.zlfotmember_id','zlfotcard.typezlfot_typezlfot_id','typezlfot.typezlfot_id','zlfotmember_zlfotmember_id',$member_id,'zlfotcard_stsfw','"C"','zlfotcard_id')->execute();
                                                         $grid = new gridView();
-                                                                    $grid->header = array('<b><center>รหัสสมาชิก</center></b>','<b><center>ประเภทสมาชิก</center></b>','<b><center>วันที่สมัคร</center></b>','<b><center>วันที่หมดอายุ</center></b>','<b><center>หมายเหตุ</center></b>');
-                                                                    $grid->width = array('15%','15%','15%','15%','40%');
+                                                                    $grid->header = array('<b><center>รหัสสมาชิก</center></b>','<b><center>ประเภทสมาชิก</center></b>','<b><center>วันที่สมัคร</center></b>','<b><center>วันที่หมดอายุ</center></b>','<b><center>เลขที่ใบเสร็จสโมสรฯ (เล่มที่/เลขที่)</center></b>','<b><center>เลขที่ใบเสร็จการเงิน (เล่มที่/เลขที่)</center></b>','<b><center>หมายเหตุ</center></b>');
+                                                                    $grid->width = array('10%','10%','10%','10%','20%','20%','20%');
                                                                     $grid->name = 'table';
                                                                     $grid->renderFromDB($columns,$rs);
 

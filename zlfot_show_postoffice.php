@@ -31,7 +31,7 @@
                                         <h4>รายการที่ทำการไปรษณีย์</h4>
 		</div>
 		<div class="ml-auto">
-                                        <a href="admin_index.php?url=zlfot_add_postoffice.php&id=<?php echo $id; ?>" class="btn btn-success col-12"><span data-feather="plus"></span></a>
+                                        <a href="admin_index.php?url=zlfot_add_postoffice.php&id=<?php echo $id; ?>" class="btn btn-success col-12"><i class="fas fa-plus"></i></a>
 		</div>
 		<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3 card-body">
                                         <div class="table-responsive">

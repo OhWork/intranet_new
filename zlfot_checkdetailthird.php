@@ -5,7 +5,7 @@
         $selectpostoffice = new SelectFromDB();
         $selectpostoffice->name = 'postoffice_postoffice_id';
         $selectpostoffice->lists = 'โปรดระบุ';
-            $lbpost = new label('ยี้ห้อ?');
+            $lbpost = new label('หน่วยงานที่จัดส่ง');
             $lbpostcode = new label('เลขที่จัดส่ง');
             $lbdate = new label('วันที่จัดส่ง');
     $txtpost = new textfield('sendcard_code','','form-control','','');

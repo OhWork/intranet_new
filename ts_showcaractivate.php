@@ -27,7 +27,7 @@
                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 card-header">
                         <div class="row">
                             <div class="col-4">
-                                <h4>รายการรถยนตร์</h4>
+                                <h4>รายการรถยนตร์ที่สามารถจองได้</h4>
                             </div>
 							<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 card-body">
                                         <div class="table-responsive">
@@ -36,7 +36,7 @@
                                                                     $grid->pr = 'car_id';
                                                                     $grid->header = array('<b><center>ประเภทรถ</center></b>','<b><center>ทะเบียนรถ</center></b>','<b><center>ยี้ห้อ</center></b>','<b><center>รุ่น</center></b>','<b><center>ที่นั่ง</center></b>','<b><center>#</center></b>');
                                                                     $grid->width = array('15%','15%','20%','20%','15%','10%');
-                                                                    $grid->edit = 'index.php?url=ts_reservecar.php';
+                                                                    $grid->edit = 'index.php?url=ts_calendarcar.php';
                                                                     $grid->name = 'table';
                                                                     $grid->edittxt ='จอง';
                                                                     $grid->renderFromDB($columns,$rs);
