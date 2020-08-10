@@ -18,7 +18,7 @@
                                           <a class="nav-link edittext mucl" id="nav-24-animate-4" href="admin_index.php?url=zlfot_show_checkmember.php&type=4"><span data-feather="chevron-right"></span>รอการบันทึกใบเสร็จ</a> 
 		 </ul>
                                 <a class="nav-link edittext mucl" id="nav-2-animate-1" href="admin_index.php?url=zlfot_show_member.php">
-	                  รายชื่อสมาชิกที่สมบูรณ์
+	                  รายชื่อสมาชิก
 	                </a>
                                 <a class="nav-link edittext mucl" id="nav-3-animate-1" href="admin_index.php?url=zlfot_show_expire.php">
 	                  รายการบัตรใกล้หมดอายุ

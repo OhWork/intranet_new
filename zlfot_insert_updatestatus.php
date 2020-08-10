@@ -27,6 +27,7 @@
                                                     'sendcard_status' => $_POST['sendcard_status'],
                                                     'sendcard_date' => $_POST['sendcard_date'],
                                                      'zlfotmember_zlfotmember_id' => $_POST['zlfotmember_id'],
+                                                     'zlfotcard_zlfotcard_id' => $_POST['zlfotcard_id'],
                                                     'postoffice_postoffice_id' => $_POST['postoffice_postoffice_id']
                                                     ));
                                           }else if($_POST['sendcard_status'] =='N'){
@@ -34,6 +35,7 @@
                                                     'sendcard_status' => $_POST['sendcard_status'],
                                                     'sendcard_date' => $_POST['sendcard_date'],
                                                     'zlfotmember_zlfotmember_id' => $_POST['zlfotmember_id'],
+                                                    'zlfotcard_zlfotcard_id' => $_POST['zlfotcard_id'],
                                                     'postoffice_postoffice_id' => $_POST['postoffice_postoffice_id']
                                                     ));
                                         }

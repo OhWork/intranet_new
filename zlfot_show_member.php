@@ -22,14 +22,7 @@
     $form = new form();
     $labelsearchipzpo = new label('ค้นหา');
 
-                $rs = $db->findByPK87('zlfotmember','zlfotcard','typezlfot','subdistricts','districts','provinces','user','zoo',
-                'zlfotmember.user_user_id','user.user_id',
-                'zlfotcard.zlfotmember_zlfotmember_id','zlfotmember.zlfotmember_id',
-                'zlfotcard.typezlfot_typezlfot_id','typezlfot.typezlfot_id',
-                'user.subzoo_zoo_zoo_id','zoo.zoo_id',
-                'zlfotmember.zlfotmember_provinces_id','provinces.provinces_id',
-                'zlfotmember.zlfotmember_districts_id','districts.districts_id',
-                'zlfotmember.zlfotmember_subdistricts_id','subdistricts.subdistricts_id')->execute();   ?> 
+                $rs = $db->findAll('zlfotmember')->execute();   ?> 
 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3">
         <div class="row">
                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 card-header">

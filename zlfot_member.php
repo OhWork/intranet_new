@@ -202,13 +202,18 @@
             </div>
             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 <?php
-                $columns = array('sendcard_date','postoffice_name','sendcard_code');
-                $rs = $db->findByPK34('zlfotmember','sendcard','postoffice','sendcard.zlfotmember_zlfotmember_id','zlfotmember.zlfotmember_id','sendcard.postoffice_postoffice_id','postoffice.postoffice_id','zlfotmember_zlfotmember_id',$member_id,'sendcard_status','"Y"')->execute();
+                $columns = array('zlfotcard_code','sendcard_date','postoffice_name','sendcard_code');
+                $rs = $db->findByPK45('zlfotmember','zlfotcard','sendcard','postoffice','sendcard.zlfotmember_zlfotmember_id','zlfotmember.zlfotmember_id','sendcard.zlfotcard_zlfotcard_id','zlfotcard.zlfotcard_id','sendcard.postoffice_postoffice_id','postoffice.postoffice_id','sendcard.zlfotmember_zlfotmember_id',$member_id,'sendcard.sendcard_status','"Y"')->execute();
                 $grid = new gridView();
-                $grid->header = array('<b><center>วันที่จัดส่ง</center></b>','<b><center>ไปรษณีย์</center></b>','<b><center>เลขที่</center></b>');
-                $grid->width = array('25%','25%','25%','25%');
+                $grid->header = array('<b><center>รหัสสมาชิก</center></b>','<b><center>วันที่จัดส่ง</center></b>','<b><center>ไปรษณีย์</center></b>','<b><center>เลขที่</center></b>');
+                $grid->width = array('20%','20%','20%','20%','20%');
                 $grid->name = 'table1';
                 $grid->renderFromDB($columns,$rs);
+                if($rs){
+                    echo 'have';
+                }else{
+                    echo 'don';
+                }
  ?>
             </div>
         </div>
@@ -220,11 +225,11 @@
             </div>
             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 <?php
-                $columns = array('sendcard_date');
-                $rs = $db->findByPK23('zlfotmember','sendcard','sendcard.zlfotmember_zlfotmember_id','zlfotmember.zlfotmember_id','zlfotmember_zlfotmember_id',$member_id,'sendcard_status','"N"')->execute();
+                $columns = array('zlfotcard_code','sendcard_date');
+                $rs = $db->findByPK34('zlfotmember','zlfotcard','sendcard','sendcard.zlfotcard_zlfotcard_id','zlfotcard.zlfotcard_id','sendcard.zlfotmember_zlfotmember_id','zlfotmember.zlfotmember_id','sendcard.zlfotmember_zlfotmember_id',$member_id,'sendcard.sendcard_status','"N"')->execute();
                 $grid = new gridView();
-                $grid->header = array('<b><center>วันที่มารับ</center></b>');
-                $grid->width = array('25%','25%','25%','25%');
+                $grid->header = array('<b><center>รหัสสมาชิก</center></b>','<b><center>วันที่มารับ</center></b>');
+                $grid->width = array('20%','20%','20%','20%','20%');
                 $grid->name = 'table2';
                 $grid->renderFromDB($columns,$rs);
  ?>
