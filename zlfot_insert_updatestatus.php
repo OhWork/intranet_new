@@ -25,7 +25,7 @@
                                            $db->insert('sendcard',array(
                                                     'sendcard_code' => $_POST['sendcard_code'],
                                                     'sendcard_status' => $_POST['sendcard_status'],
-                                                    'sendcard_date' => $_POST['sendcard_date'],
+                                                    'sendcard_date' => $_POST['sendcard_date1'],
                                                      'zlfotmember_zlfotmember_id' => $_POST['zlfotmember_id'],
                                                      'zlfotcard_zlfotcard_id' => $_POST['zlfotcard_id'],
                                                     'postoffice_postoffice_id' => $_POST['postoffice_postoffice_id']
@@ -33,7 +33,7 @@
                                           }else if($_POST['sendcard_status'] =='N'){
                                             $db->insert('sendcard',array(
                                                     'sendcard_status' => $_POST['sendcard_status'],
-                                                    'sendcard_date' => $_POST['sendcard_date'],
+                                                    'sendcard_date' => $_POST['sendcard_date2'],
                                                     'zlfotmember_zlfotmember_id' => $_POST['zlfotmember_id'],
                                                     'zlfotcard_zlfotcard_id' => $_POST['zlfotcard_id'],
                                                     'postoffice_postoffice_id' => $_POST['postoffice_postoffice_id']
