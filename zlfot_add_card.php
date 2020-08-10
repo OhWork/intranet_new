@@ -66,7 +66,7 @@
 					<?php echo $radiotypezlfot;?>
 				</div>
                                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-1 showmsg">
-					<?php echo $lbevent; ?> <a class="text-success" style="float: right;" href="admin_index.php?url=zlfot_add_eventzlfot.php">เพิ่มงานกิจกรรม <i class="fas fa-plus zloft-f2"></i></a>
+					<?php echo $lbevent; ?> <a class="text-success" style="float: right;" href="admin_index.php?url=zlfot_show_event.php">เพิ่มงานกิจกรรม <i class="fas fa-plus zloft-f2"></i></a>
                                 </div>
 				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 showmsg">
 					<?php echo $selectevent->selectFromTB('eventzlfot','eventzlfot_id','eventzlfot_name',$r['eventzlfot_eventzlfot_id']);;?>

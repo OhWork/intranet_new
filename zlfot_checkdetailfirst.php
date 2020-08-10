@@ -167,7 +167,7 @@
                                                         ?>
                                                     <input type='hidden' name='zlfotcard_id' value='<?php echo $checkcard['zlfotcard_id'];?>' />
                                                    <?php  }else{?>
-			<input type='hidden' name='zlfotcard_id' value='<?php echo $rs['zlfotcard_id'];?>' />
+                                                    <input type='hidden' name='zlfotcard_id' value='<?php echo $rs['zlfotcard_id'];?>' />
                                                    <?php } ?>
 							<div class="col-xl-3 col-lg-2 col-md-2"></div>
 							<div class="col-xl-3 col-lg-4 col-md-4 col-sm-12 col-12">

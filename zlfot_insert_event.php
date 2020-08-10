@@ -35,7 +35,7 @@
     	}else if($rsfix){
             echo "<div class='statusok'>แก้ไขสำเร็จ</div>";
         }
- $link = "url=admin_index.php?url=zlfot_add_member.php";
+ $link = "url=admin_index.php?url=zlfot_show_event.php";
             header( "Refresh: 2; $link" );
         }
 ?>
