@@ -209,11 +209,6 @@
                 $grid->width = array('20%','20%','20%','20%','20%');
                 $grid->name = 'table1';
                 $grid->renderFromDB($columns,$rs);
-                if($rs){
-                    echo 'have';
-                }else{
-                    echo 'don';
-                }
  ?>
             </div>
         </div>
