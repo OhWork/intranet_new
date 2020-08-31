@@ -1,4 +1,5 @@
 <?php
+	error_reporting(0);
     include 'database/db_tools.php';
     include 'connect.php';
     $id = $_GET['id'];
@@ -94,7 +95,9 @@
 			</div>
      </div>
 
-		<?php if(!empty($rs['problem_status'] == 'S')){ ?>
+		<?php
+			if(!empty($rs['problem_status'] == 'S')){
+			?>
 		<div class="modal-header" style="padding-top:0;">
 			<h4 class="modal-title" id="exampleModalLabel">อยู่ระหว่างการดำเนินการ</h4>
         </div>
@@ -118,7 +121,7 @@
 							</label>
 							</div>
 						</div>
-					</div>	
+					</div>
 					<div class='col-md-12'>
 						<div class="row">
 							<div class='col-md-4' style="padding: 0 4;"><label class="text-md-left font-weight-bold">หมายเลขเครื่อง</label></div>
@@ -126,10 +129,10 @@
 							<label class='text-left'>
 								<?php if(empty($rs['problem_serial'])){?>
 										<p style="color:red;margin-bottom:8px;">ไม่ระบุ</p>
-								<?php }else{ 
+								<?php }else{
 										echo $rs['problem_serial'];
 									  }
-								?>        
+								?>
 							</label>
 							</div>
 						</div>
@@ -141,7 +144,7 @@
 							<label class='text-left'>
 								<?php if(empty($rs['problem_serialorganize'])){?>
 								<p style="color:red;margin-bottom:8px;">ไม่ระบุ</p>
-								<?php }else{ 
+								<?php }else{
 										echo $rs['problem_serialorganize'];
 									  }
 								?>
@@ -156,7 +159,7 @@
 							<label class='text-left'>
 								<?php if(empty($rs['problem_place'])){?>
 								<p style="color:red;margin-bottom:8px;">ไม่ระบุ</p>
-								<?php }else{ 
+								<?php }else{
 										echo $rs['problem_place'];
 									  }
 								?>

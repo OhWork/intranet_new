@@ -66,7 +66,7 @@
                         </div>
                 </div>
     <script>
-    feather.replace()
+//     feather.replace()
     $(function() { $('#popup').popover()});
     <?php include 'jquery/system/cs.js';?>
     </script>

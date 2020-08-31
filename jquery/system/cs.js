@@ -51,7 +51,7 @@ $('#Modal').on('show.bs.modal', function (event) {
                 data: dataString,
                 cache: false,
                 success: function (data) {
-                    console.log(data);
+//                     console.log(data);
                     modal.find('.ct').html(data);
                 },
                 error: function(err) {

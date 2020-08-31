@@ -14,7 +14,6 @@
         'problem.subzoo_subzoo_id','subzoo.subzoo_id',
         'problem.problem_adminfix','user.user_id',
         'problem_id',$id)->executeAssoc();
-
 ?>
 
 		<div class="modal-body">
@@ -90,12 +89,15 @@
 					<div class='col-md-4' style="padding: 0 4;"><label class="text-md-left font-weight-bold">รายละเอียด</label></div>
 					<div class='col-md-8'>
 					<label class='text-left'>
-							<?php if(empty($fix['problem_detail'])){?>
+							<?php
+								echo $fix['problem_detail'];
+								if(empty($fix['problem_detail'])){?>
 											<p style="color:red;margin-bottom:8px;">ไม่ระบุ</p>
 									<?php }else{
 											echo $fix['problem_detail'];
 										  }
 									?>
+
 					</label>
 					</div>
 				</div>
@@ -148,7 +150,7 @@
 				</div>
 			</div>
 			<div class='col-md-12'>
-				<div class="row">	
+				<div class="row">
 					<div class='col-md-4' style="padding: 0 4;"><label class="text-md-left font-weight-bold">รายละเอียดการซ่อม</label></div>
 					<div class='col-md-8'>
 					<label class='text-left'>
@@ -163,7 +165,7 @@
 				</div>
 			</div>
 			<div class='col-md-12'>
-				<div class="row">		
+				<div class="row">
 					<div class='col-md-4' style="padding: 0 4;"><label class="text-md-left font-weight-bold">หมายเลขเครื่อง</label></div>
 					<div class='col-md-8'>
 					<label class='text-left'>
@@ -178,7 +180,7 @@
 				</div>
 			</div>
 			<div class='col-md-12'>
-				<div class="row">	
+				<div class="row">
 					<div class='col-md-4' style="padding: 0 4;"><label class="text-md-left font-weight-bold">รหัสครุภัณฑ์</label></div>
 					<div class='col-md-8'>
 					<label class='text-left'>
@@ -208,7 +210,7 @@
 				</div>
 			</div>
 			<div class='col-md-12'>
-				<div class="row">	
+				<div class="row">
 					<div class='col-md-4' style="padding: 0 4;"><label class="text-md-left font-weight-bold">ผู้รับเรื่อง</label></div>
 					<div class='col-md-8'><label class='text-left'><?php echo $rs['user_name']." ".$rs['user_last'];?></label></div>
 				</div>
