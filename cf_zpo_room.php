@@ -78,7 +78,7 @@ if(isset($_GET['gData']) && $_GET['gData']|=""){
             	$eventcolor = "#275FEA";
             }
             else if($rs->eventconfer_status=='Y' && $rs->eventconfer_status_online == 'C'){
-            	$eventcolor = "#f0911d";
+            	$eventcolor = "#51c900";
             }
             
         }else if($rs->eventconfer_status_conferonline == 0){
