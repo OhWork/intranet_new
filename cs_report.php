@@ -42,7 +42,7 @@
 					</table>
 					<table align="center">
     					<tr>
-                            <td><img style='width:90px;' src='images/Logo/ZPO.png'></td>
+                            <td><img style='width:90px;' src='images/logo/ZPOT.png'></td>
 
     					</tr>
 					</table>

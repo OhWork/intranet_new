@@ -17,7 +17,7 @@
 		</table>
 		<table>
 				<tr>
-					<td><img src="images/Logo/ZPO.png" alt="ZPO" width="62" height="62" /></td>
+					<td><img src="images/logo/ZPOT.png" alt="ZPO" width="62" height="62" /></td>
 					<td style="font-size:16px;padding-left:210px;padding-top:40px;">สวนสัตว์สงขลา</td>
 				</tr>
 				<tr>

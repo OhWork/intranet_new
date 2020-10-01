@@ -26,7 +26,7 @@
 	    <table style="margin:auto;">
 			<!--บรรทัดที่ 1-->
 				<tr>
-					<td><img src="images/Logo/ZPO.png" alt="ZPO" width="62" height="62" /></td>
+					<td><img src="images/logo/ZPOT.png" alt="ZPO" width="62" height="62" /></td>
 				</tr>
 		</table>
 		<table style="margin:auto;">

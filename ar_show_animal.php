@@ -19,7 +19,7 @@
     $selectzoo = new SelectFromDB();
     $selectzoo->name = 'animal_id';
     $selectzoo->lists = 'โปรดระบุ';
-    $columns = array('animal_name','animal_cm','animal_sc');
+    $columns = array('animal_nameth','animal_namecm','animal_namesc');
     $button = new buttonok('ค้นหา','','btn btn-primary','submit');
     $form = new form();
 echo $form->open('form_reg','myform','col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12','',''); ?>
@@ -35,7 +35,7 @@ echo $form->open('form_reg','myform','col-xl-12 col-lg-12 col-md-12 col-sm-12 co
 					$grid->pr = 'animal_id';
 					$grid->header = array('<b><center>ชื่อสัตว์</center></b>','<b><center>ชื่อสามัญ</center></b>','<b><center>ชื่อวิทยาศาสตร์</center></b>','<b><center>#</center></b>');
 					$grid->width = array('30%','30%','30%','10%');
-					$grid->edit = 'admin_index.php?url=user_add_zoo.php';
+					$grid->edit = 'admin_index.php?url=ar_add_animal.php';
 					$grid->name = 'table';
 					$grid->edittxt ='แก้ไข';
 					$grid->renderFromDB($columns,$rs);

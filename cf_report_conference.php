@@ -54,7 +54,7 @@
 		<table style="">
 			<!--บรรทัดที่ 1-->
 				<tr>
-					<td><img src='images/Logo/ZPO.png'/ style="width:75px; height: 75px;"></td>
+					<td><img src='images/logo/ZPOT.png'/ style="width:75px; height: 75px;"></td>
 					<td style="padding-top: 37px;">แบบฟอร์มการขอใช้ระบบประชุมทางไกลองค์การสวนสัตว์ (Video Conference)</td>
 					<td>ที่............/................</td>
 				</tr>
