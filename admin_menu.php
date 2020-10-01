@@ -27,6 +27,9 @@
 	if($_SESSION['systemallow_touristreport'] == 1){
                         include_once 'admin_trs_menu.php';
 	}
+	if($_SESSION['systemallow_ar'] == 1){
+		include_once 'admin_ar_menu.php';
+}
 	if($_SESSION['systemallow_hrs'] == 1){
 //                      include_once 'admin_hrs_menu.php';
 	}

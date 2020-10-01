@@ -23,6 +23,7 @@ if (!empty($_SESSION['user_name'])):
     $lbts = new label("ระบบจัดการรถยนต์ภายในองค์การสวนสัตว์");
     $lbzlfot = new label("ระบบจัดการสมาชิกสโมสร");
   $lbradiotouristreport = new label("ระบบจัดการคนเข้าชมสวนสัตว์");
+  $lbradioanimalreport = new label("ระบบจัดการรายงานบัญชีสัตว์");
   $lbadmin = new label("ระบบจัดการผู้ใช้");
   $txtuser = new textfield('user_user','user_user','form-control css-require','');
   $txtpass = new pass('user_pass','form-control css-require','','user_pass');
@@ -77,6 +78,12 @@ if (!empty($_SESSION['user_name'])):
   if(empty($id)){
         $radiotouristreport->add('อนุญาต',1,'','');
         $radiotouristreport->add('ไม่อนุญาต',0,'checked','');
+  }
+  $radioanimalreport = new radioGroup();
+  $radioanimalreport->name = 'systemallow_ar';
+  if(empty($id)){
+        $radioanimalreport->add('อนุญาต',1,'','');
+        $radioanimalreport->add('ไม่อนุญาต',0,'checked','');
   }
   $radiohrs = new radioGroup();
   $radiohrs->name = 'systemallow_hrs';
@@ -197,7 +204,14 @@ if (!empty($_SESSION['user_name'])):
     	}else if($sa['systemallow_ts'] == 0){
         $radiots->add('อนุญาต',1,'','');
         $radiots->add('ไม่อนุญาต',0,'checked','');
-        }
+		}
+		if($sa["systemallow_ar"] == 1){
+			$radioanimalreport->add('อนุญาต',1,'checked','');
+			$radioanimalreport->add('ไม่อนุญาต',0,'','');
+			}else if($sa['systemallow_ar'] == 0){
+			$radioanimalreport->add('อนุญาต',1,'','');
+			$radioanimalreport->add('ไม่อนุญาต',0,'checked','');
+			}
 if($sa["systemallow_touristreport"] == 1){
     	$radiotouristreport->add('อนุญาต',1,'checked','');
     	$radiotouristreport->add('ไม่อนุญาต',0,'','');
@@ -367,6 +381,12 @@ function autoTab2(obj,typeCheck){
 				<div class="row">
 					<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6" style="padding-top: 8px;"><?php echo $lbradiotouristreport; ?></div>
 					<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6" style="padding-top: 8px;"><?php echo $radiotouristreport; ?></div>
+				</div>
+			</div>
+			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" style="border-bottom:solid 1px #E0E0E0;">
+				<div class="row">
+					<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6" style="padding-top: 8px;"><?php echo $lbradioanimalreport; ?></div>
+					<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6" style="padding-top: 8px;"><?php echo $radioanimalreport; ?></div>
 				</div>
 			</div>
 			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" style="border-bottom:solid 1px #E0E0E0;">

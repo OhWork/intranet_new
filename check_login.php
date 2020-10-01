@@ -31,6 +31,7 @@ if($_POST['user_user']!="" && $_POST['user_pass']!=""){
 		$_SESSION['systemallow_service'] = $rsallow['systemallow_service'];
 		$_SESSION['systemallow_confer'] = $rsallow['systemallow_confer'];
 		$_SESSION['systemallow_touristreport'] = $rsallow['systemallow_touristreport'];
+		$_SESSION['systemallow_ar'] = $rsallow['systemallow_ar'];
 		$_SESSION['systemallow_km'] = $rsallow['systemallow_km'];
 		$_SESSION['systemallow_hrs'] = $rsallow['systemallow_hrs'];
                 $_SESSION['systemallow_vdo'] = $rsallow['systemallow_vdo'];

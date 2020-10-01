@@ -18,11 +18,12 @@
 		$data['systemallow_confer'] = $_POST['systemallow_confer'];
 		$data['systemallow_admin'] = $_POST['systemallow_admin'];
 		$data['systemallow_touristreport'] = $_POST['systemallow_touristreport'];
-                $data['systemallow_ts'] = $_POST['systemallow_ts'];
+		$data['systemallow_ts'] = $_POST['systemallow_ts'];
+		$data['systemallow_ar'] = $_POST['systemallow_ar'];
 		$data['systemallow_drive'] = $_POST['systemallow_drive'];
 		$data['systemallow_hrs'] = $_POST['systemallow_hrs'];
-                 $data['systemallow_vdo'] = $_POST['systemallow_vdo'];
-                $data['systemallow_zlfot'] = $_POST['systemallow_zlfot'];
+        $data['systemallow_vdo'] = $_POST['systemallow_vdo'];
+        $data['systemallow_zlfot'] = $_POST['systemallow_zlfot'];
 		$data['systemallow_qtn'] = $_POST['systemallow_qtn'];
 		$rsfix = $db->update('systemallow',$data,'systemallow_id',$_POST['user_id']);
 
@@ -48,6 +49,7 @@
 	'systemallow_confer' => $_POST['systemallow_confer'],
 	'systemallow_admin' => $_POST['systemallow_admin'],
 	'systemallow_touristreport' => $_POST['systemallow_touristreport'],
+	'systemallow_ar' => $_POST['systemallow_ar'],
         'systemallow_ts' => $_POST['systemallow_ts'],
 	'systemallow_hrs' => $_POST['systemallow_hrs'],
 	'systemallow_qtn' => $_POST['systemallow_qtn'],
