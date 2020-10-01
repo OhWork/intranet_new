@@ -3,17 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/xampp/htdocs/intranet_new/login.php</file>
             <file>file:/C:/xampp/htdocs/intranet_new/index.php</file>
-            <file>file:/C:/xampp/htdocs/intranet_new/zlfot_add_card.php</file>
-            <file>file:/C:/xampp/htdocs/intranet_new/zlfot_checkmember.php</file>
-            <file>file:/C:/xampp/htdocs/intranet_new/main.php</file>
-            <file>file:/C:/xampp/htdocs/intranet_new/zlfot_add_member.php</file>
-            <file>file:/C:/xampp/htdocs/intranet_new/check_login.php</file>
-            <file>file:/C:/xampp/htdocs/intranet_new/check_login_old.php</file>
-            <file>file:/C:/xampp/htdocs/intranet_new/zlfot_show_member.php</file>
-            <file>file:/C:/xampp/htdocs/intranet_new/zlfot_insert_member.php</file>
-            <file>file:/C:/xampp/htdocs/intranet_new/zlfot_show_checkmember.php</file>
+            <file>file:/C:/xampp/htdocs/intranet_new/cf_zpo_room.php</file>
+            <file>file:/C:/xampp/htdocs/intranet_new/qtn_add_question.php</file>
+            <file>file:/C:/xampp/htdocs/intranet_new/cf_calendar.php</file>
         </group>
     </open-files>
 </project-private>
