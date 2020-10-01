@@ -605,7 +605,7 @@ SUM(IF(problem_status = 'Y',1,0)) AS adminfix",
 <div class='col-xs-12'>
 	<div class='row'>
 		<div class='col-md-12'>
-			<Center><img src='images/logo/ZPO.png'></center>
+			<Center><img src='images/logo/ZPOT.png'></center>
 		</div>
 		<div class='col-md-12'>
 			<p><Center>รายงานการซ่อม/บริการคอมพิวเตอร์ของ<?php echo $zoo_name; ?></p>

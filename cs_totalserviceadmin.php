@@ -180,7 +180,7 @@
 <div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12'>
 	<div class="row">
 		<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 totalimghead reporthead'>
-			<center><img src='images/Logo/ZPO.png'></center>
+			<center><img src='images/logo/ZPOT.png'></center>
 		</div>
 		<div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 tsvhrow1'>
 			<center>รายงานการซ่อม/บริการคอมพิวเตอร์ขององค์การสวนสัตว์</center>

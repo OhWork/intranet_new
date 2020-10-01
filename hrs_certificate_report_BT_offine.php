@@ -18,7 +18,7 @@
 		<!--บรรทัดที่ 1-->
 		<table align="left">
     		<tr>
-                <td><img style='width:90px;' src='images/Logo/ZPO.png'></td>
+                <td><img style='width:90px;' src='images/logo/ZPOT.png'></td>
 				<td style="font-size: 24px;padding-left:170px;"><b>บันทึกข้อความ</b></td>
 			</tr>
 		</table>

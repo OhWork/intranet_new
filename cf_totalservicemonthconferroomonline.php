@@ -183,7 +183,7 @@
 <div class='col-md-12'>
 	<div class='row'>
 		<div class='col-md-12 reporthead test'>
-			<Center><img src='images/logo/zpo.png'></center>
+			<Center><img src='images/logo/ZPOT.png'></center>
 		</div>
 		<div class='col-md-12 test'>
 			<center>รายงานการการขอใช้ระบบประชุมทางไกลองค์การสวนสัตว์(VDO Conference) ณ <?php echo $confertxt;?></center>

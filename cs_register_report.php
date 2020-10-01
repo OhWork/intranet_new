@@ -21,7 +21,7 @@ $rs = $db->findByPK33DESC('reguser','subzoo','zoo','reguser.subzoo_subzoo_id','s
 					</table>
 					<table style="width:100%;">
     					<tr>
-                            <td align="center"><img style='width:90px;' src='images/Logo/ZPO.png'></td>
+                            <td align="center"><img style='width:90px;' src='images/logo/ZPOT.png'></td>
     					</tr>
 					</table>
 					<!--บรรทัดที่ 2-->
