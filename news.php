@@ -5,7 +5,7 @@
 	<div class='row'>
 		<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" style="background-color:#ffffff;">
 				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3 alltxh">
-					<h4>ข่าวสารภายในองค์การสวนสัตว์</h4>
+					<h4>ข่าวสารภายใน</h4>
 				</div>
 				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3">
 						<?php foreach($rs as $show){

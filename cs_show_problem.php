@@ -18,7 +18,7 @@
     $id = $_GET['id'];
     if($id == 1){
         $type = 'zoo.zoo_type';
-        $zoo_name = 'องค์การสวนสัตว์';
+        $zoo_name = 'องค์การสวนสัตว์แห่งประเทศไทย ในพระบรมราชูปถัมภ์';
     }else{
         $type = 'zoo.zoo_id';
     $zrs = $db->findByPK('zoo','zoo_id',$id)->executeAssoc();
