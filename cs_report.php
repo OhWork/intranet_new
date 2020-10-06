@@ -28,7 +28,7 @@
       //subtypetools
     $subtypetoolsmain = $show['subtypetools_subtypetools_id'];
     $subtypetools = $db->findByPK('subtypetools','subtypetools_id',$subtypetoolsmain)->executeAssoc();
-	ob_start();
+	//ob_start();
 	?>
 <html>
     <head>
@@ -361,7 +361,7 @@ try {
     'setAutoBottomMargin' => 'stretch'
     ,'mode' => 'th']);
 } catch (\Mpdf\MpdfException $e) {
-    print "Creating an mPDF object failed with" . $e->getMessage();
+    print "Creating an mPDF object failed with".$e->getMessage();
 }
 $stylesheet .= file_get_contents('CSS/pdf.css');
 $pdf->WriteHTML($stylesheet,1);
