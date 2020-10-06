@@ -32,8 +32,8 @@
     $selectadmin2->lists = 'โปรดระบุ';
 
     $txtnotclear = new textfield('problem_notclear','','form-control css-require','','');
-    $txttime = new textfield('problem_dateend','datetimepicker','form-control css-require','','');
-    $txtorder = new textfield('problem_dateorder','datetimepicker2','form-control css-require','','');
+    $txttime = new textfield('problem_dateend','','form-control css-require','','');
+    $txtorder = new textfield('problem_dateorder','','form-control css-require','','');
     $txtserialNo = new textfield('problem_serial','','form-control css-require','','');
     $txtplace = new textfield('problem_place','','form-control css-require','','');
     $txtserialorganize = new textfield('problem_serialorganize','','form-control css-require','','');
@@ -47,7 +47,7 @@
 		$r = $db->findByPK55('problem','subzoo','typetools','subtypetools','zoo','problem.subzoo_subzoo_id','subzoo.subzoo_id','problem.subzoo_zoo_zoo_id','zoo.zoo_id','problem_id',$id,'problem.subtypetools_subtypetools_id','subtypetools.subtypetools_id','subtypetools.typetools_typetools_id','typetools.typetools_id')->executeRow();
 		 $year = date("Y")+543;
           $md = date("m-d");
-          $time = date("H:i");
+		  $time = date("H:i");
 		  $selectadmin->value = $r['problem_adminfix'];
 		  $selectadmin2->value = $r['problem_adminfix'];
           $txtnocompletedetail->value = $r['problem_detailwaitcomplete'];
@@ -171,6 +171,7 @@
 						</div>
 						<div id="completeSettings">
 <?php
+
     $txttime->value = $year."-".$md." ".$time;
 ?>
 						<div class="col-12 mt-3">

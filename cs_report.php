@@ -2,7 +2,7 @@
 	ob_start();
     include_once 'database/db_tools.php';
     include_once 'connect.php';
-	require_once 'vendor/autoload.php';
+	require_once __DIR__ . '/vendor/autoload.php';
 	error_reporting(0);
 
     $id = $_GET['id'];
@@ -28,7 +28,8 @@
       //subtypetools
     $subtypetoolsmain = $show['subtypetools_subtypetools_id'];
     $subtypetools = $db->findByPK('subtypetools','subtypetools_id',$subtypetoolsmain)->executeAssoc();
-    ?>
+	ob_start();
+	?>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
