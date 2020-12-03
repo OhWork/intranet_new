@@ -29,7 +29,7 @@
 			<!-- Nav tabs -->
 			<nav class="nav nav-tabs" role="tablist" style="margin-top: 16px;width:100%">
 				<?php if($user_zoo == 10){?>
-					<a class="nav-item nav-link active" href="#zpo" aria-controls="zpo" role="tab" data-toggle="tab" style="color:#EC7063;" aria-selected="true">องค์การสวนสัตว์</a>
+					<a class="nav-item nav-link active" href="#zpo" aria-controls="zpo" role="tab" data-toggle="tab" style="color:#EC7063;" aria-selected="true">องค์การสวนสัตว์แห่งประเทศไทย</a>
 				<?php }
 					if($user_zoo == 10 || $user_zoo == 11){
 					if($user_zoo == 10){?>

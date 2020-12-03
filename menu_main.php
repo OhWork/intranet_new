@@ -29,15 +29,15 @@
 				<li class="nav-item">
 					<a class="nav-link edittext mucl" id="confer" href="index.php?url=cf_listcfr.php"><i class="far fa-calendar-alt mr-2"></i><span>ระบบจองห้องประชุม</span></a>
 				</li>
-                                <li class="nav-item">
+                                <!-- <li class="nav-item">
 					<a class="nav-link edittext mucl" id="confer" href="index.php?url=ts_showcaractivate.php"><i class="far fa-calendar-alt mr-2"></i><span>ระบบจองรถยนตร์</span></a>
-				</li>
+				</li> -->
 				<li class="nav-item">
 					<a class="nav-link collapsed nav-link-1 edittext mucl" href="#cs" data-toggle="collapse" data-target="#cs"><i class="fas fa-tools mr-2"></i><span>ระบบแจ้งซ่อมคอมพิวเตอร์</span></a>
 					<ul class="sub-menu collapse on-sub mmpd" id="cs">
 	                <!-- sub menu -->
 						<a class="nav-link edittext mucls" id="nav-1-animate-1" href="index.php?url=cs_add_problem.php">แบบฟอร์มแจ้งซ่อมคอมพิวเตอร์</a>
-						<a class="nav-link edittext mucls" id="nav-1-animate-2" href="index.php?url=cs_register.php">แบบฟอร์มขอใช้ระบบ</a>
+						<!-- <a class="nav-link edittext mucls" id="nav-1-animate-2" href="index.php?url=cs_register.php">แบบฟอร์มขอใช้ระบบ</a> -->
 						<a class="nav-link edittext mucls" id="nav-1-animate-3"  href="index.php?url=cs_add_upweb.php">แบบฟอร์มขอให้อัพไฟล์ (กรณีไม่สามารถทำไดั)</a>
 						<a class="nav-link collapsed nav-link-4 edittext mucl mucls" id="nav-1-animate-4" href="#csshowprom" data-toggle="collapse" data-target="#csshowprom">รายการแจ้งซ่อมคอมพิวเตอร์</a>
 						<ul class="sub-menu collapse mmpd2" id="csshowprom">
@@ -51,7 +51,7 @@
 							<a class="nav-link edittext mucl" id="nav-4-animate-8" href="index.php?url=cs_show_problem.php&id=17">สวนสัตว์ขอนแก่น</a>
 							<a class="nav-link edittext mucl" id="nav-4-animate-9" href="index.php?url=cs_show_problem.php&id=18">โครงการคชอาณาจักร</a>
 	    </ul>
-						<a class="nav-link edittext mucls" id="nav-1-animate-5" href="index.php?url=cs_show_register.php">รายการขอใช้ระบบ</a>
+						<!-- <a class="nav-link edittext mucls" id="nav-1-animate-5" href="index.php?url=cs_show_register.php">รายการขอใช้ระบบ</a> -->
 
 					</ul>
 				</li>

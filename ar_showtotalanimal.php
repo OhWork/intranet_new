@@ -55,11 +55,11 @@
 					<div class='row'>
 						<div class='col-xl-2 col-lg-2 col-md-1'></div>
 						<div class='col-xl-6 col-lg-4 col-md-5 col-sm-12 col-12'>
-							<h4>รายงานจำนวนผู้เข้าชม <?php echo @$zoo_name ?></h4>
+							<h4>รายงานจำนวนสัตว์ <?php echo @$zoo_name ?></h4>
 						</div>
 						<?php	if(($user_zoo) >= 11 && ($user_zoo <= 18)){ ?>
 						<div class='col-xl-3 col-lg-4 col-md-5'>
-							<a href="admin_index.php?url=trs_add_trs.php" class="btn btn-success col-md-12">เพิ่มจำนวนผู้เข้าชม <span data-feather="plus"></span></a>
+							<a href="admin_index.php?url=ar_add_ar.php" class="btn btn-success col-md-12">เพิ่มจำนวนสัตว์ <span data-feather="plus"></span></a>
 						<?php  }else{  ?>
 						<div class='col-xl-3 col-lg-4 col-md-5 pt-1 pl-0'>
 							<p class="col-md-12 loginwrong"><b>สามารถเพิ่มข้อมูลได้เฉพาะสวนสัตว์เท่านั้น</b></p>

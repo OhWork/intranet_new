@@ -55,8 +55,8 @@
 			<!--บรรทัดที่ 1-->
 				<tr>
 					<td><img src='images/logo/ZPOT.png'/ style="width:75px; height: 75px;"></td>
-					<td style="padding-top: 37px;">แบบฟอร์มการขอใช้ระบบประชุมทางไกลองค์การสวนสัตว์ (Video Conference)</td>
-					<td>ที่............/................</td>
+					<td style="padding-top: 37px;">แบบฟอร์มการขอใช้ระบบประชุมทางไกลองค์การสวนสัตว์แห่งประเทศไทย ในพระบรมราชูปถัมภ์ (Video Conference)</td>
+					<td>ที่......./.......</td>
 				</tr>
 		</table>
 		<table>
@@ -68,7 +68,7 @@
 		<table>
 			<!--บรรทัดที่ 3-->
 				<tr>
-					<td><b>เรียน ผู้อำนวยการองค์การสวนสัตว์</b></td>
+					<td><b>เรียน ผู้อำนวยการองค์การสวนสัตว์แห่งประเทศไทย</b></td>
 				</tr>
 		</table>
 		<table>
@@ -365,7 +365,7 @@
 			<!--บรรทัดที่ 10-->
 				<tr>
 					<td style="width:300px; height:21px;border-right: solid 1px #000;border-spacing: 0;"><b>(๑) ผู้อำนวยการสำนัก / ผู้อำนวยการสวนสัตว์</b></td>
-					<td><b>(๒) ผู้อำนวยการองค์การสวนสัตว์/รองผู้อำนวยการองค์การสวนสัตว์</b></td>
+					<td style="width:366.5px;"><b>(๒) ผู้อำนวยการองค์การสวนสัตว์แห่งประเทศไทย</b></td>
 				</tr>
 		</table>
 		<table style="border-left: solid 1px #000;border-right: solid 1px #000;border-spacing: 0;">
@@ -491,7 +491,7 @@
 		<table style="margin-top: -5px;">
 			<!--บรรทัดที่ 20-->
 				<tr>
-					<td style="padding-left: 20px;">๑. เพื่อความถูกต้อง ผู้ขอใช้ระบบประชุมทางไกล (Video Conference) ต้องแจ้งผู้ประสานหน่วยงานที่จะเข้าร่วมประชุมด้วยตัวท่านเอง</td>
+					<td style="padding-left: 20px;">๑. เพื่อความถูกต้อง ผู้ขอใช้ระบบประชุมทางไกลองค์การสวนสัตว์แห่งประเทศไทย ในพระบรมราชูปถัมภ์ (Video Conference) ต้องแจ้งผู้ประสานหน่วยงานที่จะเข้าร่วมประชุมด้วยตัวท่านเอง</td>
 				</tr>
 		</table>
 		<table style="margin-top: -5px;">
@@ -509,7 +509,7 @@
 		<table style="margin-left:570px;">
 			<!--บรรทัดที่ 20-->
 				<tr>
-					<td style="border: solid 1px #000;padding-left: 5px;padding-right: 5px;">FM - IT - 06 /02</td>
+					<td style="border: solid 1px #000;padding-left: 5px;padding-right: 5px;">FM - IT - 06 /00</td>
 				</tr>
 		</table>
     </body>

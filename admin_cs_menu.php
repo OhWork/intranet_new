@@ -10,7 +10,7 @@
     <a class="nav-link collapsed py-1 nav-link-9 edittext mucl" id="nav-1-animate-2" href="#csip" data-toggle="collapse" data-target="#csip">IP-Address<span data-feather="chevron-right"></span></a>
     <ul class="sub-menu collapse mmpd2" id="csip">
         <?php if ($user_zoo == 10) { ?>
-            <a class="nav-link edittext mucl" id="nav-9-animate-1" href="admin_index.php?url=cs_show_ip.php&id=1">องค์การสวนสัตว์</a>
+            <a class="nav-link edittext mucl" id="nav-9-animate-1" href="admin_index.php?url=cs_show_ip.php&id=1">องค์การสวนสัตว์แห่งประเทศไทย</a>
         <?php
         }
         if ($user_zoo == 10 || $user_zoo == 11) {
@@ -57,19 +57,19 @@ if ($user_zoo == 10 || $user_zoo == 18) {
     <ul class="sub-menu collapse mmpd2" id="csipacc">
         <a class="nav-link edittext mucl" id="nav-10-animate-1" href="admin_index.php?url=cs_show_iptools.php&id=1">Server</a>
     </ul>
-       <a class="nav-link collapsed py-1  nav-link-33 edittext mucl" id="nav-1-animate-4" href="#csinternet" data-toggle="collapse" data-target="#csinternet">รายการขอใช้ระบบ</a>
+       <!-- <a class="nav-link collapsed py-1  nav-link-33 edittext mucl" id="nav-1-animate-4" href="#csinternet" data-toggle="collapse" data-target="#csinternet">รายการขอใช้ระบบ</a>
     <ul class="sub-menu collapse mmpd2" id="csinternet">
         <a class="nav-link edittext mucl" id="nav-33-animate-1" href="#">รายการแจ้งดำเนินการใหม่</a>
         <a class="nav-link edittext mucl" id="nav-33-animate-2" href="#">รายการระหว่างการดำเนินการ</a>
         <a class="nav-link edittext mucl" id="nav-33-animate-3" href="#">รายการการดำเนินการเสร็จ</a>
-    </ul>
+    </ul> -->
     <a class="nav-link collapsed py-1 edittext mucl" id="nav-1-animate-5" href="admin_index.php?url=cs_showupweb.php">รายการขอคำร้องขึ้นเว็บไซต์</a>
     <a class="nav-link collapsed py-1 nav-link-11 edittext mucl" id="nav-1-animate-6" href="#csreport" data-toggle="collapse" data-target="#csreport">รายงาน<span data-feather="chevron-right"></a>
     <ul class="sub-menu collapse mmpd2" id="csreport">
         <a class="nav-link collapsed py-1 bnmenusub2 nav-link-12 edittext mucl" id="nav-11-animate-1" href="#csreportcom" data-toggle="collapse" data-target="#csreportcom">รายงานการซ่อม<span data-feather="chevron-right"></span></a>
         <ul class="sub-menu collapse mmpd2 " id="csreportcom">
             <?php if ($user_zoo == 10) { ?>
-                <a class="dropdown-item edittext mucl" id="nav-12-animate-1" href="admin_index.php?url=cs_totalservicemonthzpo.php">องค์การสวนสัตว์</a>
+                <a class="dropdown-item edittext mucl" id="nav-12-animate-1" href="admin_index.php?url=cs_totalservicemonthzpo.php">องค์การสวนสัตว์แห่งประเทศไทย</a>
             <?php
             }
             if ($user_zoo == 10 || $user_zoo == 11) {
@@ -115,7 +115,7 @@ if ($user_zoo == 10 || $user_zoo == 16) {
         <a class="nav-link collapsed py-1 nav-link-13 edittext mucl" id="nav-11-animate-2" href="#csreportip" data-toggle="collapse" data-target="#csreportip">รายงานสรุปไอพีที่ใช้<span data-feather="chevron-right"></span></a>
         <ul class="sub-menu collapse mmpd2" id="csreportip">
             <?php if ($user_zoo == 10) { ?>
-                <a class="dropdown-item edittext mucl" id="nav-13-animate-1" href="admin_index.php?url=cs_report_ip.php&id=1">องค์การสวนสัตว์</a>
+                <a class="dropdown-item edittext mucl" id="nav-13-animate-1" href="admin_index.php?url=cs_report_ip.php&id=1">องค์การสวนสัตว์แห่งประเทศไทย</a>
             <?php
             }
             if ($user_zoo == 10 || $user_zoo == 11) {
